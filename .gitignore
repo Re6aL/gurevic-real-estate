@@ -1,0 +1,12 @@
+# секреты — НИКОГДА не коммитить (токены Notion и т.п.)
+*.env
+*.token
+secrets/
+tools/.env
+tools/*.env
+
+# служебное
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

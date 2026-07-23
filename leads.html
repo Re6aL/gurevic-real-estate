@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявки и переписки — Gurevic Real Estate (демо)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo-mark.png">
+  <style>
+    .admin { max-width: 900px; margin: 0 auto; padding: 30px 22px 80px; }
+    .admin h1 { color: var(--navy); font-size: 1.7rem; margin-bottom: 6px; }
+    .lead-card { background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:20px; margin-top:18px; }
+    .lead-meta { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:.9rem; margin-bottom:12px; }
+    .lead-meta b { color:var(--navy); }
+    .lead-meta .ts { margin-left:auto; color:var(--muted); font-size:.82rem; }
+    .tr { display:flex; flex-direction:column; gap:8px; margin-top:12px; padding-top:12px; border-top:1px dashed var(--line); }
+    .tr .msg { max-width:80%; }
+    .tr .msg.bot { align-self:flex-start; background:#eef2f6; border-radius:12px; padding:8px 12px; font-size:.88rem; }
+    .tr .msg.user { align-self:flex-end; background:var(--navy); color:#fff; border-radius:12px; padding:8px 12px; font-size:.88rem; }
+    .toolbar { display:flex; gap:10px; margin:16px 0; flex-wrap:wrap; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Gurevic Real Estate">
+      <img class="logo-mark" src="img/logo-mark.png" alt="" width="128" height="120">
+      <img class="logo-word" src="img/logo-word.png" alt="Gurevic Real Estate" width="376" height="120">
+    </a>
+  </div>
+</header>
+
+<div class="admin">
+  <h1>Заявки и переписки бота</h1>
+  <div class="demo-note">
+    ⚠ Это демо-панель. Она показывает только заявки, оставленные <b>в этом самом браузере</b>
+    (данные лежат в localStorage). Чтобы риелтор видел заявки со всех устройств, нужен бэкенд —
+    заявки должны уходить на сервер или в Telegram-бота (см. deliverLead() в js/chat.js).
+  </div>
+  <div class="toolbar">
+    <button class="btn btn-outline" onclick="location.reload()">↻ Обновить</button>
+    <button class="btn btn-reset" onclick="if(confirm('Очистить все заявки в этом браузере?')){localStorage.removeItem('gurevic_leads');location.reload();}">Очистить</button>
+  </div>
+  <div id="leads"></div>
+</div>
+
+<script>
+  const F = { goal:'Цель', type:'Тип', budget:'Бюджет', location:'Район', name:'Имя', contact:'Контакт', message:'Сообщение' };
+  const leads = JSON.parse(localStorage.getItem('gurevic_leads') || '[]').reverse();
+  const box = document.getElementById('leads');
+  if (!leads.length) {
+    box.innerHTML = '<div class="empty-state">Пока нет заявок. Оставьте заявку через чат или форму на сайте — она появится здесь.</div>';
+  } else {
+    box.innerHTML = leads.map(l => {
+      const meta = Object.keys(F).filter(k => l[k]).map(k => `<span><b>${F[k]}:</b> ${l[k]}</span>`).join('');
+      const tr = (l.transcript || []).map(m =>
+        `<div class="msg ${m.who}">${m.text}</div>`).join('');
+      const when = new Date(l.ts).toLocaleString('ru-RU');
+      return `<div class="lead-card">
+        <div class="lead-meta">${meta}<span class="ts">${when} · ${l.page || ''}</span></div>
+        ${tr ? `<div class="tr">${tr}</div>` : '<div style="color:var(--muted);font-size:.85rem">Переписка не записана (заявка через форму).</div>'}
+      </div>`;
+    }).join('');
+  }
+</script>
+</body>
+</html>
