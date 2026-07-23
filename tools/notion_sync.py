@@ -73,41 +73,93 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_JS = os.path.join(PROJECT_ROOT, "js", "data.js")
 
 # ------------------------------------------------------------------
-# СООТВЕТСТВИЕ ПОЛЕЙ: поле на сайте  ->  имя колонки в Notion.
-# Поменяйте правую часть под реальные названия колонок вашей базы.
-# Тип колонки в Notion распознаётся автоматически (title/number/select/…).
+# СООТВЕТСТВИЕ ПОЛЕЙ: поле на сайте -> имя колонки в базе «Objekati».
+# Приватные колонки CRM (Owner Name, Provizija, List Nep., Documents
+# Folder, Person, Cadastral Municipality) НА САЙТ НЕ ПОПАДАЮТ.
 # ------------------------------------------------------------------
 FIELD_MAP = {
-    "title":     "Название",       # заголовок объекта (тип Title)
-    "type":      "Тип",            # Квартира/Дом/Участок/Коммерческая/Отель (Select)
-    "deal":      "Сделка",         # Продажа/Аренда (Select)
-    "location":  "Район",          # Select или Text
-    "price":     "Цена",           # Number (€)
-    "area":      "Площадь",        # Number (м²)
-    "landArea":  "Участок",        # Number (м²), для домов/участков
-    "rooms":     "Спальни",        # Text/Select ("2 спальни", "студия")
-    "short":     "Краткое",        # короткое описание (Text)
-    "desc":      "Описание",       # полное описание (Text)
-    "features":  "Особенности",    # Multi-select -> список чипов
-    "status":    "Статус",         # напр. Активно/Продано (Select) — фильтр ниже
-    "lat":       "Широта",         # Number (необязательно) — точка на карте
-    "lng":       "Долгота",        # Number (необязательно)
-    "invest":    "Инвестиции",     # Checkbox -> объект попадает в блок «Под инвестиции»
-    "isComplex": "Комплекс",       # Checkbox -> блок «Жилые комплексы»
+    "title":     "Aktualnost",     # Title — название объекта
+    "objectId":  "Object ID",      # BD-26-019S — используется как id
+    "type":      "Property Type",  # House/Apartment/Land/Commercial/…/Hotel/Gradnja
+    "price":     "Cijena",         # Number (€)
+    "area":      "Interjer (m²)",  # Number (м²)
+    "landArea":  "Land (m²)",      # Number (м²)
+    "rooms":     "Sp. sobe",       # Number — спальни
+    "location":  "Location",       # полный адрес — публикуем ТОЛЬКО район
+    "mapLink":   "Map Link",       # Google Maps short-link → координаты
+    "status":    "Status",         # Adding/Available/For Re-evaluation/Reserved/Sold
 }
 
-# Русские названия типов/сделок в Notion -> ключи сайта
-TYPE_RU2KEY = {
-    "квартира": "apartment", "апартаменты": "apartment",
-    "дом": "house", "вилла": "house", "дом / вилла": "house",
-    "участок": "land", "земля": "land",
-    "коммерческая": "commercial", "коммерция": "commercial",
-    "отель": "hotel",
+# Property Type (англ.) -> ключ типа на сайте (+ инвест-блок для Hotel/Gradnja)
+TYPE_EN2KEY = {
+    "apartment": "apartment", "house": "house", "land": "land",
+    "commercial": "commercial", "industrial": "commercial",
+    "office": "commercial", "retail": "commercial",
+    "hotel": "hotel", "gradnja": "land",
 }
-DEAL_RU2KEY = {"продажа": "sale", "sale": "sale", "аренда": "rent", "rent": "rent"}
+INVEST_KINDS = {"hotel": "Отель — готовый бизнес", "gradnja": "Девелопмент"}
 
-# Публиковать только объекты с таким статусом (пусто = публиковать все)
-PUBLISH_STATUSES = {"активно", "актуально", "в продаже", "published", ""}
+# Публикуем только эти статусы
+PUBLISH_STATUSES = {"available"}
+
+# Детект района из адресной строки (публикуем район, а не точный адрес)
+DISTRICTS = [
+    (("bečići", "becici", "beċići"), "Бечичи"),
+    (("rafailovići", "rafailovici"), "Рафаиловичи"),
+    (("pržno", "przno"), "Пржно"),
+    (("sveti stefan", "sv. stefan", "sveti-stefan"), "Свети-Стефан"),
+    (("rozino",), "Будва — Розино"),
+    (("boreti",), "Бечичи"),
+    (("lapčići", "lapcici"), "Лапчичи"),
+    (("tudorovići", "tudorovici"), "Тудоровичи"),
+    (("budva",), "Будва — центр"),
+]
+
+def detect_district(location_str):
+    s = (location_str or "").lower()
+    for keys, ru in DISTRICTS:
+        if any(k in s for k in keys):
+            return ru
+    return "Будва — центр"
+
+
+# ---- Map Link (maps.app.goo.gl) -> координаты, с кэшем ----
+COORD_CACHE_FILE = os.path.join(os.path.dirname(SECRETS_FILE), "maplink_cache.json")
+_RE_AT = re.compile(r"@(-?\d+\.\d+),(-?\d+\.\d+)")
+_RE_3D4D = re.compile(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)")
+_RE_Q = re.compile(r"[?&]q=(-?\d+\.\d+)(?:%2C|,)(-?\d+\.\d+)")
+
+def _load_coord_cache():
+    try:
+        return json.load(open(COORD_CACHE_FILE, encoding="utf-8"))
+    except Exception:
+        return {}
+
+def _save_coord_cache(cache):
+    os.makedirs(os.path.dirname(COORD_CACHE_FILE), exist_ok=True)
+    json.dump(cache, open(COORD_CACHE_FILE, "w", encoding="utf-8"))
+
+def resolve_map_link(url, cache):
+    """Следует редиректу goo.gl-ссылки и достаёт [lat, lng]. None при неудаче."""
+    if not url:
+        return None
+    if url in cache:
+        return cache[url]
+    coords = None
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            final = r.geturl()
+            html = r.read(200000).decode("utf-8", "ignore")
+        for rx in (_RE_AT, _RE_3D4D, _RE_Q):
+            m = rx.search(final) or rx.search(html)
+            if m:
+                coords = [round(float(m.group(1)), 6), round(float(m.group(2)), 6)]
+                break
+    except Exception:
+        coords = None
+    cache[url] = coords
+    return coords
 
 
 # ============ Notion API (переиспользуемая часть) ============
@@ -181,52 +233,90 @@ def slugify(text, fallback):
 
 
 # ============ маппинг Notion -> объект сайта ============
-def page_to_listing(page):
+TYPE_RU = {
+    "apartment": "Квартира", "house": "Дом", "land": "Участок",
+    "commercial": "Коммерческое помещение", "hotel": "Отель",
+}
+
+def rooms_ru(n):
+    n = int(n)
+    if n == 1:
+        return "1 спальня"
+    if 2 <= n <= 4:
+        return f"{n} спальни"
+    return f"{n} спален"
+
+
+def page_to_listing(page, coord_cache):
     props = page.get("properties", {})
     g = lambda key: prop_value(props, FIELD_MAP[key]) if FIELD_MAP.get(key) else None
 
     status = (g("status") or "").strip().lower()
     if PUBLISH_STATUSES and status not in PUBLISH_STATUSES:
-        return None  # объект не для публикации
+        return None  # публикуем только Available
 
-    title = g("title") or "Без названия"
-    type_ru = (g("type") or "").strip().lower()
-    deal_ru = (g("deal") or "").strip().lower()
+    obj_id = (g("objectId") or "").strip()
+    type_en = (g("type") or "").strip().lower()
+    tkey = TYPE_EN2KEY.get(type_en, "apartment")
+    district = detect_district(g("location"))
+    area = g("area")
+    land = g("landArea")
+    rooms_n = g("rooms")
+    price = g("price")
+
+    title = (g("title") or "").strip()
+    if not title:
+        # автозаголовок, если риелтор не заполнил Aktualnost
+        bits = [TYPE_RU.get(tkey, "Объект")]
+        if area:
+            bits.append(f"{int(area)} м²")
+        title = " ".join(bits) + f" — {district}"
 
     listing = {
-        "id": slugify(title, page["id"][:8]),
+        "id": slugify(obj_id or title, page["id"][:8]),
+        "objectId": obj_id or None,
         "title": title,
-        "type": TYPE_RU2KEY.get(type_ru, "apartment"),
-        "deal": DEAL_RU2KEY.get(deal_ru, "sale"),
-        "location": g("location") or "Будва — центр",
+        "type": tkey,
+        "deal": "sale",              # в CRM нет колонки аренды — всё продажа
+        "location": district,        # только район; точный адрес не публикуем
+        "price": int(price) if price else 0,
     }
-    price = g("price")
-    if price is not None:
-        listing["price"] = int(price)
-    for k in ("area", "landArea"):
-        v = g(k)
-        if v is not None:
-            listing[k] = v
-    for k in ("rooms", "short", "desc"):
-        v = g(k)
-        if v:
-            listing[k] = v
-    feats = g("features")
-    if feats:
-        listing["features"] = feats
-    if g("invest"):
+    if not price:
+        listing["priceNote"] = "Цена по запросу"
+    if area:
+        listing["area"] = area
+    if land:
+        listing["landArea"] = land
+    if rooms_n:
+        listing["rooms"] = rooms_ru(rooms_n)
+
+    if type_en in INVEST_KINDS:
         listing["invest"] = True
-        listing["investKind"] = "Инвестиция"
-    if g("isComplex"):
-        listing["isComplex"] = True
-    lat, lng = g("lat"), g("lng")
-    if lat is not None and lng is not None:
-        listing["coords"] = [lat, lng]
-    # hue для плейсхолдер-фото (пока нет реальных фото)
+        listing["investKind"] = INVEST_KINDS[type_en]
+
+    coords = resolve_map_link(g("mapLink"), coord_cache)
+    if coords:
+        listing["coords"] = coords
+
+    # авто-описания (в CRM нет текстов; фото добавим позже из презентаций)
+    p_bits = []
+    if area:
+        p_bits.append(f"площадь {int(area)} м²")
+    if land:
+        p_bits.append(f"участок {int(land)} м²")
+    if rooms_n:
+        p_bits.append(rooms_ru(rooms_n))
+    params_txt = (", ".join(p_bits)) or "параметры уточняются"
+    listing["short"] = f"{TYPE_RU.get(tkey, 'Объект')} в районе {district}: {params_txt}."
+    listing["desc"] = (
+        f"{title}.\n\n{TYPE_RU.get(tkey, 'Объект')} в районе {district} ({params_txt})."
+        + (f" Идентификатор объекта: {obj_id}." if obj_id else "")
+        + "\n\nФотографии и подробное описание предоставим по запросу — свяжитесь с нами"
+        " в чате или по телефону, и риелтор пришлёт полную презентацию объекта."
+    )
+    listing["features"] = []
+    listing["photos"] = 4
     listing["hue"] = (abs(hash(listing["id"])) % 360)
-    listing.setdefault("features", [])
-    listing.setdefault("desc", listing.get("short", title))
-    listing.setdefault("short", "")
     return listing
 
 
@@ -245,7 +335,9 @@ def render_data_js(listings):
 
 def sync_once(token, db, dry_run=False):
     pages = notion_query_all(token, db)
-    listings = [x for x in (page_to_listing(p) for p in pages) if x]
+    cache = _load_coord_cache()
+    listings = [x for x in (page_to_listing(p, cache) for p in pages) if x]
+    _save_coord_cache(cache)
     ts = time.strftime("%H:%M:%S")
     print(f"[{ts}] Notion: страниц {len(pages)}, к публикации {len(listings)}")
     out = render_data_js(listings)

@@ -80,7 +80,7 @@
         <h1>${l.title}</h1>
         <div class="card-loc" style="margin-top:4px">${l.location}, Черногория</div>
       </div>
-      <div class="obj-price"><b>${fmtPrice(l)}</b>${l.area ? `<span>${Math.round(l.price / l.area).toLocaleString('ru-RU')} €/м²</span>` : ''}</div>
+      <div class="obj-price"><b>${fmtPrice(l)}</b>${(l.price > 0 && l.area) ? `<span>${Math.round(l.price / l.area).toLocaleString('ru-RU')} €/м²</span>` : ''}</div>
     </div>
 
     <div class="gallery">

@@ -57,8 +57,9 @@ function applyFilters() {
   if (state.priceMax) items = items.filter(l => l.price <= +state.priceMax * 1000);
   if (state.areaMin) items = items.filter(l => (l.area || 0) >= +state.areaMin);
   if (state.areaMax) items = items.filter(l => (l.area || 0) <= +state.areaMax);
-  if (state.sort === 'price-asc') items.sort((a, b) => a.price - b.price);
-  if (state.sort === 'price-desc') items.sort((a, b) => b.price - a.price);
+  // объекты «цена по запросу» (price 0) — всегда в конце
+  if (state.sort === 'price-asc') items.sort((a, b) => (a.price || Infinity) - (b.price || Infinity));
+  if (state.sort === 'price-desc') items.sort((a, b) => (b.price || 0) - (a.price || 0));
   return items;
 }
 
@@ -73,10 +74,21 @@ function renderListings() {
     : '<div class="empty-state">По выбранным условиям объектов нет.<br>Сбросьте фильтры или напишите нам в чат — подберём вручную.</div>';
 }
 
+// если раздел пуст (в CRM пока нет таких объектов) — прячем секцию и пункт меню
+function hideEmptySection(sectionId, empty) {
+  const sec = document.getElementById(sectionId);
+  if (sec) sec.style.display = empty ? 'none' : '';
+  document.querySelectorAll(`.nav a[href$="#${sectionId}"]`).forEach(a => {
+    a.style.display = empty ? 'none' : '';
+  });
+}
+
 function renderInvest() {
   const grid = document.getElementById('invest-cards');
   if (!grid) return;
-  grid.innerHTML = LISTINGS.filter(l => l.invest).map(l => cardHTML(l).replace(
+  const items = LISTINGS.filter(l => l.invest);
+  hideEmptySection('invest', !items.length);
+  grid.innerHTML = items.map(l => cardHTML(l).replace(
     '<div class="card-price">',
     `<div class="invest-kind">${l.investKind}</div><div class="card-price">`
   )).join('');
@@ -85,7 +97,9 @@ function renderInvest() {
 function renderComplexes() {
   const grid = document.getElementById('complex-cards');
   if (!grid) return;
-  grid.innerHTML = LISTINGS.filter(l => l.isComplex).map(l => {
+  const items = LISTINGS.filter(l => l.isComplex);
+  hideEmptySection('complexes', !items.length);
+  grid.innerHTML = items.map(l => {
     const n = (l.units || []).length;
     const avail = (l.units || []).filter(u => u.status === 'available').length;
     // добавляем строку «доступно вариантов» перед кнопкой
@@ -94,6 +108,27 @@ function renderComplexes() {
       `<div class="card-params" style="color:var(--gold-dark);font-weight:700">🏢 вариантов в комплексе: ${n} · свободно: ${avail}</div><div class="card-actions">`
     );
   }).join('');
+}
+
+// ---------- герой: слайд-шоу с медленным зумом + зум при прокрутке ----------
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let idx = 0;
+  slides[0].classList.add('active');
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 7000);
+
+  // плавное увеличение картинки при прокрутке вниз
+  const bg = document.getElementById('hero-bg');
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    const p = Math.min(window.scrollY / Math.max(hero.offsetHeight, 1), 1.2);
+    bg.style.transform = `scale(${1 + p * 0.18})`;
+  }, { passive: true });
 }
 
 function initFilters() {
@@ -147,8 +182,9 @@ function initFilters() {
 }
 
 // ---------- поле цены: ввод в тысячах (авто-«000») + ползунок-вилка ----------
-const PRICE_MAX_K = 3500; // потолок ползунка = 3,5 млн €
-const PRICE_STEP_K = 50;
+// Потолок ползунка = €1 млн; крайнее правое положение = «без ограничения».
+// Руками в поле можно вписать и больше — ползунок просто встанет вправо.
+const PRICE_MAX_K = 1000;
 
 function initPriceControl() {
   const fMin = document.getElementById('f-price-min');
@@ -159,9 +195,23 @@ function initPriceControl() {
   const cap = document.getElementById('price-caption');
   if (!fMin || !sMin) return;
 
+  // ползунок скрыт; открывается кнопкой-иконкой, закрывается кликом вне
+  const slider = document.getElementById('price-slider');
+  const toggle = document.getElementById('slider-toggle');
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    slider.classList.toggle('open');
+    toggle.classList.toggle('active', slider.classList.contains('open'));
+  });
+  document.addEventListener('click', e => {
+    if (!slider.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      slider.classList.remove('open');
+      toggle.classList.remove('active');
+    }
+  });
+
   const thouMin = document.getElementById('thou-min');
   const thouMax = document.getElementById('thou-max');
-  const fmt = k => k.toLocaleString('ru-RU');
 
   // подгоняем ширину поля под введённое число, чтобы «000» шло сразу после цифр
   function autoWidth(inp) {
@@ -169,53 +219,49 @@ function initPriceControl() {
     inp.style.width = Math.min(7, Math.max(1, len)) + 'ch';
   }
 
-  // единый пересчёт состояния из значений ползунка (в тысячах)
-  function apply(minK, maxK) {
-    minK = Math.max(0, Math.min(PRICE_MAX_K, minK));
-    maxK = Math.max(0, Math.min(PRICE_MAX_K, maxK));
-    if (minK > maxK) [minK, maxK] = [maxK, minK];
-    sMin.value = minK; sMax.value = maxK;
+  // общее: ползунок, заливка, подпись и фильтр. noMax = верх не ограничен.
+  function updateVisuals(minK, maxK, noMax) {
+    const cMin = Math.max(0, Math.min(PRICE_MAX_K, minK));
+    const cMax = noMax ? PRICE_MAX_K : Math.max(0, Math.min(PRICE_MAX_K, maxK));
+    sMin.value = cMin; sMax.value = cMax;
+    fill.style.left = (cMin / PRICE_MAX_K * 100) + '%';
+    fill.style.width = (Math.max(0, cMax - cMin) / PRICE_MAX_K * 100) + '%';
 
-    // текстовые поля (в тысячах); пусто = без границы
-    fMin.value = minK > 0 ? minK : '';
-    fMax.value = maxK < PRICE_MAX_K ? maxK : '';
-    thouMin.classList.toggle('empty', !fMin.value);
-    thouMax.classList.toggle('empty', !fMax.value);
-    autoWidth(fMin); autoWidth(fMax);
-
-    // заливка между ползунками
-    fill.style.left = (minK / PRICE_MAX_K * 100) + '%';
-    fill.style.width = ((maxK - minK) / PRICE_MAX_K * 100) + '%';
-
-    // подпись (полные евро с разделителем тысяч)
-    const noMax = maxK >= PRICE_MAX_K;
     const eur = k => '€' + (k * 1000).toLocaleString('ru-RU');
     cap.textContent = (minK === 0 && noMax) ? '— без ограничения'
       : `${eur(minK)} – ${noMax ? 'без ограничения' : eur(maxK)}`;
 
-    // состояние фильтра — в тысячах (applyFilters домножает на 1000)
     state.priceMin = minK > 0 ? minK : '';
     state.priceMax = noMax ? '' : maxK;
+    thouMin.classList.toggle('empty', !fMin.value);
+    thouMax.classList.toggle('empty', !fMax.value);
+    autoWidth(fMin); autoWidth(fMax);
     renderListings();
   }
 
-  // ползунки
-  sMin.addEventListener('input', () => apply(+sMin.value, +sMax.value));
-  sMax.addEventListener('input', () => apply(+sMin.value, +sMax.value));
+  // движение ползунков → переписываем и текстовые поля
+  function fromSlider() {
+    let minK = +sMin.value, maxK = +sMax.value;
+    if (minK > maxK) [minK, maxK] = [maxK, minK];
+    const noMax = maxK >= PRICE_MAX_K;
+    fMin.value = minK > 0 ? minK : '';
+    fMax.value = noMax ? '' : maxK;
+    updateVisuals(minK, maxK, noMax);
+  }
+  sMin.addEventListener('input', fromSlider);
+  sMax.addEventListener('input', fromSlider);
 
-  // текстовый ввод (цифры = тысячи)
-  const onType = () => {
+  // ручной ввод (цифры = тысячи; можно больше потолка ползунка — просто встанет вправо)
+  function fromInput() {
     const minK = parseInt(fMin.value.replace(/\D/g, ''), 10) || 0;
-    const maxK = fMax.value.trim() === '' ? PRICE_MAX_K : (parseInt(fMax.value.replace(/\D/g, ''), 10) || 0);
-    autoWidth(fMin); autoWidth(fMax);
-    thouMin.classList.toggle('empty', !fMin.value);
-    thouMax.classList.toggle('empty', !fMax.value);
-    apply(minK, maxK);
-  };
-  fMin.addEventListener('input', onType);
-  fMax.addEventListener('input', onType);
+    const noMax = fMax.value.trim() === '';
+    const maxK = noMax ? Infinity : (parseInt(fMax.value.replace(/\D/g, ''), 10) || 0);
+    updateVisuals(minK, noMax ? PRICE_MAX_K : maxK, noMax);
+  }
+  fMin.addEventListener('input', fromInput);
+  fMax.addEventListener('input', fromInput);
 
-  apply(0, PRICE_MAX_K); // старт: без ограничений
+  fromInput(); // старт: без ограничений
 }
 
 // ---------- дропдаун контактов в шапке ----------
@@ -247,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderListings();
   renderComplexes();
   renderInvest();
+  initHeroSlideshow();
   initHeaderContact();
   initContactForm();
 });

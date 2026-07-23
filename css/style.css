@@ -128,7 +128,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .contact-dropdown a b { display: block; color: var(--navy); font-weight: 700; font-size: .9rem; }
 .contact-dropdown a span { display: block; color: var(--muted); font-size: .78rem; }
 
-/* ---------- герой ---------- */
+/* ---------- герой (слайд-шоу с медленным зумом) ---------- */
 .hero {
   position: relative;
   min-height: 460px;
@@ -136,13 +136,22 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
   color: #fff; text-align: center;
   padding: 90px 0 130px;
   background: var(--navy);
+  overflow: hidden;
 }
+.hero-bg { position: absolute; inset: 0; z-index: 0; will-change: transform; transition: transform .2s linear; }
+.hero-slide {
+  position: absolute; inset: 0;
+  background-position: center 60%; background-size: cover;
+  opacity: 0; transition: opacity 1.6s ease;
+  will-change: transform, opacity;
+}
+.hero-slide.active { opacity: 1; animation: kenburns 13s ease-out forwards; }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.09); } }
 .hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,39,59,.72) 0%, rgba(20,39,59,.55) 45%, rgba(20,39,59,.78) 100%),
-              url('../BG_images/01.jpg') center 60% / cover no-repeat;
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(20,39,59,.72) 0%, rgba(20,39,59,.55) 45%, rgba(20,39,59,.78) 100%);
 }
-.hero .container { position: relative; z-index: 1; }
+.hero .container { position: relative; z-index: 2; }
 .hero h1 { font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.14; text-shadow: 0 2px 20px rgba(0,0,0,.35); }
 .hero h1 .accent { color: var(--gold-2); }
 .hero p { margin-top: 16px; font-size: 1.1rem; opacity: .94; max-width: 660px; margin-inline: auto; }
@@ -205,25 +214,47 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .thou.empty i { display: none; }
 .price-inputs .dash { color: var(--muted); }
 
-.price-slider { position: relative; height: 28px; margin-top: 12px; }
-.ps-track { position: absolute; top: 12px; left: 2px; right: 2px; height: 4px; background: var(--line); border-radius: 2px; }
-.ps-fill { position: absolute; height: 100%; background: var(--gold); border-radius: 2px; }
+/* кнопка-иконка, открывающая ползунок */
+.slider-toggle {
+  width: 42px; height: 42px; flex: none;
+  border: 1px solid var(--line); border-radius: 9px; background: #fff; color: var(--muted);
+  display: flex; align-items: center; justify-content: center; transition: .15s;
+}
+.slider-toggle svg { width: 20px; height: 20px; }
+.slider-toggle:hover { border-color: var(--gold); color: var(--gold-dark); }
+.slider-toggle.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+/* ползунок-вилка: скрыт, открывается оверлеем ПОД полем — ничего не сдвигает */
+.price-field { position: relative; }
+.price-slider {
+  display: none;
+  position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 30;
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: var(--shadow-hover);
+  padding: 20px 16px 8px;
+}
+.price-slider.open { display: block; }
+.ps-track { position: relative; height: 2px; background: var(--line); margin: 8px 2px 0; }
+.ps-fill { position: absolute; top: 0; height: 100%; background: var(--navy); }
 .price-slider input[type=range] {
-  position: absolute; top: 0; left: 0; width: 100%; height: 28px; margin: 0;
+  position: absolute; left: 8px; right: 8px; width: calc(100% - 16px); top: 18px; height: 24px; margin: 0;
   -webkit-appearance: none; appearance: none; background: none; pointer-events: none;
 }
+/* минималистичные прямоугольные ручки */
 .price-slider input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; appearance: none; pointer-events: auto;
-  width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--gold-dark);
-  box-shadow: 0 1px 5px rgba(0,0,0,.35); cursor: grab;
+  width: 12px; height: 20px; border-radius: 2px; background: var(--navy); border: none;
+  cursor: grab;
 }
-.price-slider input[type=range]::-webkit-slider-thumb:active { cursor: grabbing; }
+.price-slider input[type=range]::-webkit-slider-thumb:hover { background: var(--gold-dark); }
+.price-slider input[type=range]::-webkit-slider-thumb:active { cursor: grabbing; background: var(--gold-dark); }
 .price-slider input[type=range]::-moz-range-thumb {
-  pointer-events: auto; width: 18px; height: 18px; border-radius: 50%;
-  background: #fff; border: 2px solid var(--gold-dark); box-shadow: 0 1px 5px rgba(0,0,0,.35); cursor: grab;
+  pointer-events: auto; width: 12px; height: 20px; border-radius: 2px;
+  background: var(--navy); border: none; cursor: grab;
 }
-.price-slider input[type=range]::-webkit-slider-runnable-track { height: 28px; background: none; }
-.price-slider input[type=range]::-moz-range-track { height: 28px; background: none; }
+.price-slider input[type=range]::-webkit-slider-runnable-track { height: 24px; background: none; }
+.price-slider input[type=range]::-moz-range-track { height: 24px; background: none; }
+.ps-scale { display: flex; justify-content: space-between; margin-top: 14px; font-size: .72rem; color: var(--muted); }
 
 /* иконочная сортировка */
 .sort-icons { display: flex; gap: 6px; }
@@ -279,6 +310,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
   display: flex; flex-direction: column; border: 1px solid #eef1f4;
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+/* зум «фото» при наведении (как на stewartcorealty) */
+.card > a { overflow: hidden; }
+.card > a .ph { transition: transform .7s cubic-bezier(.2,.6,.2,1); }
+.card:hover > a .ph { transform: scale(1.07); }
 
 .ph {
   position: relative; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;

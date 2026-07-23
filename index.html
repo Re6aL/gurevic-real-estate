@@ -22,6 +22,7 @@
       <a href="#catalog">Каталог</a>
       <a href="#complexes">Комплексы</a>
       <a href="#invest">Инвестиции</a>
+      <a href="map.html">Карта</a>
       <a href="#about">О нас</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -55,6 +56,11 @@
 
 <!-- ======================= ГЕРОЙ ======================= -->
 <section class="hero">
+  <div class="hero-bg" id="hero-bg">
+    <div class="hero-slide" style="background-image:url('BG_images/01.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('BG_images/02.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('BG_images/03.jpg')"></div>
+  </div>
   <div class="container">
     <h1>Недвижимость у моря —<br>от студии до <span class="accent">готового отеля</span></h1>
     <p>Продажа, аренда и инвестиционные проекты на Будванской ривьере.
@@ -86,11 +92,15 @@
           <span class="thou empty" id="thou-min"><span class="cur">€</span><input id="f-price-min" type="text" inputmode="numeric" placeholder="0"><i>&nbsp;000</i></span>
           <span class="dash">—</span>
           <span class="thou empty" id="thou-max"><span class="cur">€</span><input id="f-price-max" type="text" inputmode="numeric" placeholder="макс"><i>&nbsp;000</i></span>
+          <button class="slider-toggle" id="slider-toggle" type="button" title="Задать вилку ползунком">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 8h10M18 8h2M4 16h2M10 16h10"/><rect x="14" y="5.5" width="4" height="5" rx="1"/><rect x="6" y="13.5" width="4" height="5" rx="1"/></svg>
+          </button>
         </div>
         <div class="price-slider" id="price-slider">
           <div class="ps-track"><div class="ps-fill" id="ps-fill"></div></div>
-          <input type="range" id="ps-min" min="0" max="3500" step="10" value="0">
-          <input type="range" id="ps-max" min="0" max="3500" step="10" value="3500">
+          <input type="range" id="ps-min" min="0" max="1000" step="10" value="0">
+          <input type="range" id="ps-max" min="0" max="1000" step="10" value="1000">
+          <div class="ps-scale"><span>€0</span><span>€500 000</span><span>€1 млн+</span></div>
         </div>
       </div>
       <div class="filter-field">
