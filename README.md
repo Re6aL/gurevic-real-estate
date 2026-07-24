@@ -95,6 +95,12 @@ Workflow уже поддерживает структуру Dropbox `/<папк�
 `files.content.read`. Используйте refresh token, а не постоянный access token.
 После настройки запустите **Actions → Sync public listings from Notion → Run workflow**.
 
+Чтобы получить refresh token один раз, в Dropbox App Console добавьте Redirect URI
+`http://127.0.0.1:8765/callback`. Затем локально задайте временные переменные
+`DROPBOX_APP_KEY` и `DROPBOX_APP_SECRET`, запустите
+`python tools/dropbox_authorize.py` и поместите выведенный token только в
+GitHub Secret `DROPBOX_REFRESH_TOKEN`.
+
 До настройки Secrets workflow корректно пропускает запуск и не пытается
 подключаться к Notion.
 
