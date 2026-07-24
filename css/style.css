@@ -71,7 +71,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 
 /* ---------- шапка ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 60;
+  position: sticky; top: 0; z-index: 1100;
   background: var(--navy);
   color: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,.28);
@@ -128,7 +128,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .contact-dropdown a b { display: block; color: var(--navy); font-weight: 700; font-size: .9rem; }
 .contact-dropdown a span { display: block; color: var(--muted); font-size: .78rem; }
 
-/* ---------- герой (слайд-шоу с медленным зумом) ---------- */
+/* ---------- герой (слайд-шоу + сглаженный zoom при прокрутке) ---------- */
 .hero {
   position: relative;
   min-height: 460px;
@@ -138,15 +138,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
   background: var(--navy);
   overflow: hidden;
 }
-.hero-bg { position: absolute; inset: 0; z-index: 0; will-change: transform; transition: transform .2s linear; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; will-change: transform; }
 .hero-slide {
   position: absolute; inset: 0;
   background-position: center 60%; background-size: cover;
   opacity: 0; transition: opacity 1.6s ease;
-  will-change: transform, opacity;
+  will-change: opacity;
 }
-.hero-slide.active { opacity: 1; animation: kenburns 13s ease-out forwards; }
-@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.09); } }
+.hero-slide.active { opacity: 1; }
 .hero::before {
   content: ''; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(180deg, rgba(20,39,59,.72) 0%, rgba(20,39,59,.55) 45%, rgba(20,39,59,.78) 100%);
@@ -584,4 +583,24 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
   .hero { padding: 60px 0 110px; min-height: 400px; }
   .logo .logo-sub { display: none; }
   .site-header .container { gap: 12px; }
+}
+@media (max-width: 480px) {
+  .site-header .container {
+    height: 72px;
+    padding-inline: 14px;
+    justify-content: space-between;
+  }
+  .logo { min-width: 0; gap: 0; }
+  .logo .logo-mark { height: 44px; }
+  .logo .logo-word { display: none; }
+  .header-contact { margin-left: auto; }
+  .header-phone {
+    gap: 6px;
+    padding: 10px 13px;
+    font-size: .86rem;
+  }
+  .contact-dropdown {
+    width: min(260px, calc(100vw - 28px));
+    min-width: 0;
+  }
 }

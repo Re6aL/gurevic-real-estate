@@ -110,7 +110,7 @@ function renderComplexes() {
   }).join('');
 }
 
-// ---------- герой: слайд-шоу с медленным зумом + зум при прокрутке ----------
+// ---------- герой: слайд-шоу + сглаженный zoom при прокрутке ----------
 function initHeroSlideshow() {
   const slides = document.querySelectorAll('.hero-slide');
   if (!slides.length) return;
@@ -122,13 +122,30 @@ function initHeroSlideshow() {
     slides[idx].classList.add('active');
   }, 7000);
 
-  // плавное увеличение картинки при прокрутке вниз
+  // Плавно догоняем целевой масштаб, не пересчитывая layout страницы.
   const bg = document.getElementById('hero-bg');
   const hero = document.querySelector('.hero');
-  window.addEventListener('scroll', () => {
-    const p = Math.min(window.scrollY / Math.max(hero.offsetHeight, 1), 1.2);
-    bg.style.transform = `scale(${1 + p * 0.18})`;
-  }, { passive: true });
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let currentScale = 1;
+  let targetScale = 1;
+  let frame = 0;
+
+  function animateScale() {
+    currentScale += (targetScale - currentScale) * 0.12;
+    if (Math.abs(targetScale - currentScale) < 0.0005) currentScale = targetScale;
+    bg.style.transform = `scale(${currentScale.toFixed(4)})`;
+    frame = currentScale === targetScale ? 0 : requestAnimationFrame(animateScale);
+  }
+
+  function updateScale() {
+    const progress = Math.min(Math.max(window.scrollY / Math.max(hero.offsetHeight, 1), 0), 1);
+    targetScale = reduceMotion.matches ? 1 : 1 + progress * 0.08;
+    if (!frame) frame = requestAnimationFrame(animateScale);
+  }
+
+  window.addEventListener('scroll', updateScale, { passive: true });
+  reduceMotion.addEventListener('change', updateScale);
+  updateScale();
 }
 
 function initFilters() {
