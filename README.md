@@ -78,6 +78,23 @@ GitHub Pages публикует сайт.
 `listings/<Object ID>/` отдельным workflow: сайт будет получать только готовые
 публичные URL, а ключ доступа к хранилищу останется в GitHub Secrets.
 
+### Фотографии из Dropbox
+
+Workflow уже поддерживает структуру Dropbox `/<папка>/<Object ID>/`.
+Например: `/Website photos/BD-26-019S/00-cover.jpg`. Изображения не должны
+превышать 15 MB; первые восемь файлов в естественном порядке имени попадут на
+сайт. `00-cover.jpg` станет обложкой.
+
+В GitHub откройте **Settings → Secrets and variables → Actions** и добавьте:
+
+- Secrets: `DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET`, `DROPBOX_REFRESH_TOKEN`;
+- Variable: `DROPBOX_MEDIA_ROOT` — путь к корневой папке, например
+  `/Website photos`.
+
+Для Dropbox App требуются только scopes `files.metadata.read` и
+`files.content.read`. Используйте refresh token, а не постоянный access token.
+После настройки запустите **Actions → Sync public listings from Notion → Run workflow**.
+
 До настройки Secrets workflow корректно пропускает запуск и не пытается
 подключаться к Notion.
 

@@ -4,6 +4,7 @@
 secrets/
 tools/.env
 tools/*.env
+tools/dropbox.env
 *.pem
 *.key
 *.p12

@@ -29,9 +29,22 @@ jobs:
         run: |
           if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_DB_ID" ]; then
             echo "Notion secrets are not configured yet; skipping sync."
+          else
+            python tools/notion_sync.py
+          fi
+
+      - name: Sync public photos from Dropbox
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          DROPBOX_MEDIA_ROOT: ${{ vars.DROPBOX_MEDIA_ROOT }}
+        run: |
+          if [ -z "$DROPBOX_APP_KEY" ] || [ -z "$DROPBOX_APP_SECRET" ] || [ -z "$DROPBOX_REFRESH_TOKEN" ] || [ -z "$DROPBOX_MEDIA_ROOT" ]; then
+            echo "Dropbox is not configured yet; skipping photo sync."
             exit 0
           fi
-          python tools/notion_sync.py
+          python tools/dropbox_sync.py
 
       - name: Commit published catalogue changes
         run: |
