@@ -4,6 +4,10 @@
 secrets/
 tools/.env
 tools/*.env
+*.pem
+*.key
+*.p12
+*.pfx
 
 # служебное
 __pycache__/

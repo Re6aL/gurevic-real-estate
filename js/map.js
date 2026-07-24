@@ -31,7 +31,6 @@
       <div style="min-width:180px">
         <b style="color:var(--navy)">${fmtPrice(l)}</b><br>
         ${l.title}<br>
-        <span style="color:#6b7a89;font-size:.85em">📍 ${l.location}</span><br>
         <a href="object.html?id=${l.id}">Смотреть объект →</a>
       </div>`;
   }
@@ -43,11 +42,10 @@
     if (l.rooms) params.push(l.rooms);
     return `
       <div class="mini-card" data-id="${l.id}">
-        <div class="ph" style="--h:${l.hue}"><span>📷</span></div>
-        <div class="mc-body">
-          <div class="mc-price">${fmtPrice(l)}</div>
-          <div class="mc-title">${l.title}</div>
-          <div class="mc-loc">📍 ${l.location}</div>
+        ${listingImageHTML(l, 'mini-card-image', 'Фото объекта')}
+          <div class="mc-body">
+            <div class="mc-price">${fmtPrice(l)}</div>
+            <div class="mc-title">${l.title}</div>
           <div class="mc-params">${params.join(' · ')}</div>
         </div>
       </div>`;

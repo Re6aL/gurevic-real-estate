@@ -21,6 +21,26 @@ function ph(hue, label, cls = '') {
   return `<div class="ph ${cls}" style="--h:${hue}"><span>📷 ${label}</span></div>`;
 }
 
+// Реальное фото из синхронизации Notion; при его отсутствии остаётся заглушка.
+const LISTING_PLACEHOLDERS = {
+  apartment: 'img/placeholders/apartment.png',
+  house: 'img/placeholders/house.png',
+  land: 'img/placeholders/land.png',
+  commercial: 'img/placeholders/complex.png',
+  hotel: 'img/placeholders/complex.png',
+};
+
+function listingPlaceholderImage(l) {
+  return LISTING_PLACEHOLDERS[l.type] || LISTING_PLACEHOLDERS.apartment;
+}
+
+function listingImageHTML(l, cls = '', alt = 'Фото объекта') {
+  const src = Array.isArray(l.images) && l.images[0];
+  return src
+    ? `<img class="listing-image ${cls}" src="${src}" alt="${alt}" loading="lazy">`
+    : `<img class="listing-image ${cls} listing-illustration" src="${listingPlaceholderImage(l)}" alt="Иллюстрация: ${DICT.type[l.type] || 'объект недвижимости'}" loading="lazy">`;
+}
+
 function cardHTML(l) {
   const badges = [`<span class="badge ${l.deal === 'rent' ? 'deal-rent' : ''}">${DICT.deal[l.deal]}</span>`];
   if (l.isComplex) badges.push('<span class="badge invest">Комплекс</span>');
@@ -30,7 +50,7 @@ function cardHTML(l) {
   <article class="card">
     <a href="object.html?id=${l.id}" style="position:relative; display:block;">
       <div class="badge-row">${badges.join('')}</div>
-      ${ph(l.hue, 'Фото-плейсхолдер — заменить реальным')}
+      ${listingImageHTML(l, 'card-image')}
     </a>
     <div class="card-body">
       <div class="card-price">${fmtPrice(l)}</div>
@@ -157,9 +177,29 @@ function initFilters() {
     if (k === 'hotel') return; // отели живут в блоке инвестиций
     typeSel.insertAdjacentHTML('beforeend', `<option value="${k}">${v}</option>`);
   });
-  LOCATIONS.forEach(loc => {
-    locSel.insertAdjacentHTML('beforeend', `<option value="${loc}">${loc}</option>`);
-  });
+  // Районы не захардкожены: строим список только из опубликованных объектов.
+  // При смене сделки/типа пустые пункты остаются для ориентира, но выбрать их нельзя.
+  function updateLocationOptions() {
+    const catalogue = LISTINGS.filter(l => !l.invest && !l.isComplex);
+    const locations = [...new Set(catalogue.map(l => l.location).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, 'ru'));
+    const counts = new Map();
+    catalogue
+      .filter(l => (!state.deal || l.deal === state.deal) && (!state.type || l.type === state.type))
+      .forEach(l => counts.set(l.location, (counts.get(l.location) || 0) + 1));
+
+    locSel.innerHTML = '<option value="">Любой</option>';
+    locations.forEach(loc => {
+      const count = counts.get(loc) || 0;
+      const selected = state.location === loc;
+      locSel.insertAdjacentHTML('beforeend',
+        `<option value="${loc}"${!count && !selected ? ' disabled' : ''}${selected ? ' selected' : ''}>${loc}${count ? ` · ${count}` : ' · нет предложений'}</option>`
+      );
+    });
+    if (state.location && !locations.includes(state.location)) state.location = '';
+  }
+
+  updateLocationOptions();
 
   // вкладки сделки
   document.querySelectorAll('.deal-tab').forEach(tab => {
@@ -170,12 +210,19 @@ function initFilters() {
       }
       document.querySelectorAll('.deal-tab').forEach(t => t.classList.toggle('active', t === tab));
       state.deal = tab.dataset.deal;
+      if (!LISTINGS.some(l => !l.invest && !l.isComplex && l.deal === state.deal && (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
+      updateLocationOptions();
       renderListings();
     });
   });
 
   // селекты и поля от/до
-  typeSel.addEventListener('change', () => { state.type = typeSel.value; renderListings(); });
+  typeSel.addEventListener('change', () => {
+    state.type = typeSel.value;
+    if (!LISTINGS.some(l => !l.invest && !l.isComplex && l.deal === state.deal && (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
+    updateLocationOptions();
+    renderListings();
+  });
   locSel.addEventListener('change', () => { state.location = locSel.value; renderListings(); });
   const bind = (id, key) => document.getElementById(id)
     .addEventListener('input', e => { state[key] = e.target.value; renderListings(); });

@@ -41,6 +41,7 @@ import sys
 import time
 import urllib.request
 import urllib.error
+import urllib.parse
 
 NOTION_VERSION = "2022-06-28"
 API = "https://api.notion.com/v1"
@@ -87,6 +88,9 @@ FIELD_MAP = {
     "rooms":     "Sp. sobe",       # Number — спальни
     "location":  "Location",       # полный адрес — публикуем ТОЛЬКО район
     "mapLink":   "Map Link",       # Google Maps short-link → координаты
+    # Точное название колонки с фото задаётся через NOTION_PHOTOS_FIELD.
+    # Значение намеренно не хранится в репозитории.
+    "images":    os.environ.get("NOTION_PHOTOS_FIELD", ""),
     "status":    "Status",         # Adding/Available/For Re-evaluation/Reserved/Sold
 }
 
@@ -104,6 +108,7 @@ PUBLISH_STATUSES = {"available"}
 
 # Детект района из адресной строки (публикуем район, а не точный адрес)
 DISTRICTS = [
+    (("lastva grbaljska", "lastve grbaljskoj", "lustve grbaljskoj"), "Ластва Грбальска"),
     (("bečići", "becici", "beċići"), "Бечичи"),
     (("rafailovići", "rafailovici"), "Рафаиловичи"),
     (("pržno", "przno"), "Пржно"),
@@ -115,8 +120,9 @@ DISTRICTS = [
     (("budva",), "Будва — центр"),
 ]
 
-def detect_district(location_str):
-    s = (location_str or "").lower()
+def detect_district(*texts):
+    """Определяет район по адресу и названию, не публикуя точный адрес."""
+    s = " ".join(str(x or "") for x in texts).lower()
     for keys, ru in DISTRICTS:
         if any(k in s for k in keys):
             return ru
@@ -232,6 +238,46 @@ def slugify(text, fallback):
     return s or fallback
 
 
+IMAGE_DIR = os.path.join(PROJECT_ROOT, "img", "listings")
+IMAGE_LIMIT = 6
+IMAGE_MAX_BYTES = 12 * 1024 * 1024
+IMAGE_EXTENSIONS = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp"}
+
+
+def download_images(urls, listing_id):
+    """Сохраняет фото из Notion как публичные файлы сайта.
+
+    Notion выдаёт временные URL, поэтому в js/data.js сохраняются только
+    относительные пути к скачанным изображениям, а не исходные ссылки.
+    """
+    if not urls:
+        return []
+    target_dir = os.path.join(IMAGE_DIR, listing_id)
+    os.makedirs(target_dir, exist_ok=True)
+    paths = []
+    for index, url in enumerate(urls[:IMAGE_LIMIT], start=1):
+        try:
+            parsed = urllib.parse.urlparse(url)
+            if parsed.scheme != "https":
+                continue
+            req = urllib.request.Request(url, headers={"User-Agent": "GurevicEstateSync/1.0"})
+            with urllib.request.urlopen(req, timeout=20) as response:
+                content_type = response.headers.get_content_type().lower()
+                if content_type not in IMAGE_EXTENSIONS:
+                    continue
+                data = response.read(IMAGE_MAX_BYTES + 1)
+            if len(data) > IMAGE_MAX_BYTES:
+                continue
+            filename = f"photo-{index}{IMAGE_EXTENSIONS[content_type]}"
+            destination = os.path.join(target_dir, filename)
+            with open(destination, "wb") as image_file:
+                image_file.write(data)
+            paths.append(f"img/listings/{listing_id}/{filename}")
+        except Exception as exc:  # отдельное фото не должно срывать публикацию каталога
+            print(f"[warn] фото {listing_id}/{index} не скачано: {exc}")
+    return paths
+
+
 # ============ маппинг Notion -> объект сайта ============
 TYPE_RU = {
     "apartment": "Квартира", "house": "Дом", "land": "Участок",
@@ -258,13 +304,13 @@ def page_to_listing(page, coord_cache):
     obj_id = (g("objectId") or "").strip()
     type_en = (g("type") or "").strip().lower()
     tkey = TYPE_EN2KEY.get(type_en, "apartment")
-    district = detect_district(g("location"))
+    title = (g("title") or "").strip()
+    district = detect_district(g("location"), title)
     area = g("area")
     land = g("landArea")
     rooms_n = g("rooms")
     price = g("price")
 
-    title = (g("title") or "").strip()
     if not title:
         # автозаголовок, если риелтор не заполнил Aktualnost
         bits = [TYPE_RU.get(tkey, "Объект")]
@@ -298,6 +344,10 @@ def page_to_listing(page, coord_cache):
     if coords:
         listing["coords"] = coords
 
+    images = download_images(g("images") or [], listing["id"])
+    if images:
+        listing["images"] = images
+
     # авто-описания (в CRM нет текстов; фото добавим позже из презентаций)
     p_bits = []
     if area:
@@ -315,7 +365,7 @@ def page_to_listing(page, coord_cache):
         " в чате или по телефону, и риелтор пришлёт полную презентацию объекта."
     )
     listing["features"] = []
-    listing["photos"] = 4
+    listing["photos"] = len(images) or 4
     listing["hue"] = (abs(hash(listing["id"])) % 360)
     return listing
 

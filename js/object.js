@@ -17,9 +17,11 @@
 
   document.title = `${l.title} — Gurevic Real Estate`;
 
-  const thumbs = Array.from({ length: l.photos || 4 }, (_, i) =>
-    `<div class="ph ph--thumb ${i === 0 ? 'active' : ''}" style="--h:${(l.hue + i * 14) % 360}" data-i="${i}"><span>фото ${i + 1}</span></div>`
-  ).join('');
+  const images = Array.isArray(l.images) ? l.images : [];
+  const fallbackImage = listingPlaceholderImage(l);
+  const thumbs = images.length
+    ? images.map((src, i) => `<button class="gallery-image-thumb ${i === 0 ? 'active' : ''}" type="button" data-i="${i}"><img src="${src}" alt="Фото ${i + 1} объекта" loading="lazy"></button>`).join('')
+    : `<div class="gallery-image-thumb active listing-illustration"><img src="${fallbackImage}" alt="Иллюстрация объекта"></div>`;
 
   const params = [
     ['Сделка', DICT.deal[l.deal]],
@@ -84,7 +86,7 @@
     </div>
 
     <div class="gallery">
-      <div id="gallery-main">${ph((l.hue), 'ГЛАВНОЕ ФОТО — плейсхолдер, заменить реальными фотографиями объекта', 'ph--tall')}</div>
+      <div id="gallery-main">${images.length ? `<img class="gallery-main-image" src="${images[0]}" alt="Главное фото объекта">` : `<img class="gallery-main-image listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`}</div>
       <div class="gallery-thumbs">${thumbs}</div>
     </div>
 
@@ -124,13 +126,15 @@
     </section>` : ''}
   `;
 
-  // переключение «фото» в галерее
-  root.querySelectorAll('.ph--thumb').forEach(t => {
+  // Переключение фото в галерее.
+  root.querySelectorAll('.gallery-image-thumb').forEach(t => {
     t.addEventListener('click', () => {
-      root.querySelectorAll('.ph--thumb').forEach(x => x.classList.remove('active'));
+      root.querySelectorAll('.gallery-image-thumb').forEach(x => x.classList.remove('active'));
       t.classList.add('active');
       document.getElementById('gallery-main').innerHTML =
-        ph((l.hue + (+t.dataset.i) * 14) % 360, `ФОТО ${+t.dataset.i + 1} — плейсхолдер, заменить реальным`, 'ph--tall');
+        images.length
+          ? `<img class="gallery-main-image" src="${images[+t.dataset.i]}" alt="Фото ${+t.dataset.i + 1} объекта">`
+          : `<img class="gallery-main-image listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`;
     });
   });
 })();

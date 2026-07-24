@@ -189,6 +189,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
   font-size: .93rem; font-family: inherit; background: #fff; color: var(--ink);
 }
 .filter-field select:focus, .filter-field input:focus { outline: none; border-color: var(--gold); }
+.filter-field select option:disabled { color: var(--muted); opacity: .48; }
 
 /* парные поля от/до */
 .range-pair { display: flex; align-items: center; gap: 6px; }
@@ -311,8 +312,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 /* зум «фото» при наведении (как на stewartcorealty) */
 .card > a { overflow: hidden; }
-.card > a .ph { transition: transform .7s cubic-bezier(.2,.6,.2,1); }
-.card:hover > a .ph { transform: scale(1.07); }
+.card > a .ph, .card > a .listing-image { transition: transform .7s cubic-bezier(.2,.6,.2,1); }
+.card:hover > a .ph, .card:hover > a .listing-image { transform: scale(1.07); }
 
 .ph {
   position: relative; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;
@@ -327,6 +328,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .ph--tall { aspect-ratio: 16/9; border-radius: 14px; font-size: 1rem; }
 .ph--thumb { aspect-ratio: 4/3; border-radius: 8px; font-size: .7rem; cursor: pointer; opacity: .85; }
 .ph--thumb:hover, .ph--thumb.active { opacity: 1; outline: 2px solid var(--gold); }
+.listing-image { width: 100%; aspect-ratio: 16/10; display: block; object-fit: cover; background: var(--bg-soft); }
+.listing-illustration { filter: saturate(.84) contrast(.96); }
+.card > a:has(.listing-illustration)::after {
+  content: 'Иллюстрация'; position: absolute; right: 10px; bottom: 10px; z-index: 2;
+  padding: 4px 8px; border-radius: 999px; background: rgba(20,39,59,.82); color: #fff;
+  font-size: .66rem; font-weight: 700; letter-spacing: .04em;
+}
 
 .badge-row { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; gap: 6px; z-index: 2; flex-wrap: wrap; }
 .badge {
@@ -456,6 +464,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 
 .gallery { display: grid; grid-template-columns: 3fr 1fr; gap: 12px; margin: 14px 0 8px; }
 .gallery-thumbs { display: grid; gap: 10px; grid-auto-rows: min-content; max-height: 420px; overflow-y: auto; padding-right: 4px; }
+.gallery-main-image { width: 100%; aspect-ratio: 16/9; display: block; object-fit: cover; border-radius: 14px; background: var(--bg-soft); }
+.gallery-image-thumb { border: 0; padding: 0; border-radius: 8px; overflow: hidden; background: none; opacity: .85; }
+.gallery-image-thumb img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.gallery-image-thumb:hover, .gallery-image-thumb.active { opacity: 1; outline: 2px solid var(--gold); }
 
 .obj-layout { display: grid; grid-template-columns: 1fr 340px; gap: 34px; margin-top: 22px; align-items: start; }
 .obj-desc h2 { font-size: 1.3rem; color: var(--navy); margin: 24px 0 10px; }

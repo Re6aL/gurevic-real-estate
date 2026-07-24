@@ -1,0 +1,47 @@
+name: Sync public listings from Notion
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notion-sync-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Secrets are available only to scheduled and manually started trusted runs.
+    # This workflow deliberately has no pull_request trigger.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+
+      - name: Update public catalogue data
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_DB_ID" ]; then
+            echo "Notion secrets are not configured yet; skipping sync."
+            exit 0
+          fi
+          python tools/notion_sync.py
+
+      - name: Commit published catalogue changes
+        run: |
+          git add js/data.js
+          if [ -d img/listings ]; then git add img/listings; fi
+          if git diff --cached --quiet; then
+            echo "Catalogue is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync public listings from Notion"
+          git push
