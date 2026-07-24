@@ -137,10 +137,13 @@ function initHeroSlideshow() {
   let idx = 0;
   slides[0].classList.add('active');
   setInterval(() => {
-    slides[idx].classList.remove('active');
+    const previous = slides[idx];
+    previous.classList.remove('active');
+    previous.classList.add('leaving');
     idx = (idx + 1) % slides.length;
     slides[idx].classList.add('active');
-  }, 7000);
+    window.setTimeout(() => previous.classList.remove('leaving'), 3000);
+  }, 12000);
 
   // Плавно догоняем целевой масштаб, не пересчитывая layout страницы.
   const bg = document.getElementById('hero-bg');

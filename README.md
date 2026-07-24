@@ -184,3 +184,9 @@ python tools/notion_sync.py --watch 300 # ПОСТОЯННОЕ обновлен�
 - Реальные фото и объекты, карта (Leaflet + OpenStreetMap — бесплатно).
 - Мультиязычность (ru / en / me).
 - Доставка лидов в Telegram-бота (у нас уже есть инфраструктура ботов).
+
+## Фотографии первого экрана
+
+Два добавленных кадра Будвы распространяются по Unsplash License:
+[Vlad Lypo — Budva old town](https://unsplash.com/photos/PXmpSACeC1A) и
+[Alexander — Budva coast](https://unsplash.com/photos/qAzVlr4jRs0).
