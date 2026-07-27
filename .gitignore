@@ -5,6 +5,7 @@ secrets/
 tools/.env
 tools/*.env
 tools/dropbox.env
+tools/dropbox-token.txt
 *.pem
 *.key
 *.p12

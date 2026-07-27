@@ -101,6 +101,9 @@ Workflow уже поддерживает структуру Dropbox `/<папк�
 `python tools/dropbox_authorize.py` и поместите выведенный token только в
 GitHub Secret `DROPBOX_REFRESH_TOKEN`.
 
+В Windows вместо команд можно дважды нажать `connect-dropbox.cmd`: он спросит
+App key и App secret в отдельном окне и сам запустит авторизацию.
+
 До настройки Secrets workflow корректно пропускает запуск и не пытается
 подключаться к Notion.
 
