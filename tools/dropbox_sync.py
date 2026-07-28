@@ -127,11 +127,13 @@ def download_file(token, path, destination):
         detail = exc.read().decode("utf-8", "replace")[:300]
         fail(f"{path}: Dropbox download failed ({exc.code}: {detail})")
     if len(data) > MAX_BYTES:
-        fail(f"{path}: image is larger than {MAX_BYTES // 1024 // 1024} MB")
+        print(f"[warn] {path}: image is larger than {MAX_BYTES // 1024 // 1024} MB; skipped")
+        return False
     if not is_supported_image(data):
         fail(f"{path}: file contents are not a supported JPEG, PNG or WebP image")
     with open(destination, "wb") as output:
         output.write(data)
+    return True
 
 
 def sync(root, dry_run=False):
@@ -159,11 +161,18 @@ def sync(root, dry_run=False):
         listing_id = listing["id"]
         public_paths = []
         with tempfile.TemporaryDirectory(prefix="gurevic-dropbox-") as staging:
-            for index, item in enumerate(files[:MAX_IMAGES], start=1):
+            for item in files:
+                if len(public_paths) >= MAX_IMAGES:
+                    break
                 ext = os.path.splitext(item["name"])[1].lower()
+                index = len(public_paths) + 1
                 filename = f"{index:02d}{ext}"
-                download_file(token, item["path_display"], os.path.join(staging, filename))
+                if not download_file(token, item["path_display"], os.path.join(staging, filename)):
+                    continue
                 public_paths.append(f"img/listings/{listing_id}/{filename}")
+            if not public_paths:
+                print(f"[warn] {object_id}: no usable images after validation")
+                continue
             if not dry_run:
                 target = os.path.join(IMAGE_ROOT, listing_id)
                 os.makedirs(target, exist_ok=True)
