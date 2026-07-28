@@ -34,9 +34,16 @@ def fail(message):
 
 
 def request_json(url, payload, headers=None):
-    data = urllib.parse.urlencode(payload).encode() if isinstance(payload, dict) else json.dumps(payload).encode()
+    headers = headers or {}
+    content_type = headers.get("Content-Type", "")
+    if content_type == "application/json":
+        data = json.dumps(payload).encode()
+    elif isinstance(payload, dict):
+        data = urllib.parse.urlencode(payload).encode()
+    else:
+        data = json.dumps(payload).encode()
     req = urllib.request.Request(url, data=data, method="POST")
-    for key, value in (headers or {}).items():
+    for key, value in headers.items():
         req.add_header(key, value)
     try:
         with urllib.request.urlopen(req, timeout=30) as response:

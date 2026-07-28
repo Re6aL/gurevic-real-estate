@@ -15,8 +15,15 @@ try {
   $python = Get-Command py -ErrorAction SilentlyContinue
   if ($python) {
     & py $oauthScript
-  } else {
+  } elseif (Get-Command python -ErrorAction SilentlyContinue) {
     & python $oauthScript
+  } else {
+    # Codex Desktop bundles Python even when Windows itself has no Python on PATH.
+    $bundledPython = Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+    if (-not (Test-Path -LiteralPath $bundledPython)) {
+      throw 'Python was not found. Install Python 3 or open this project in Codex Desktop and run the launcher again.'
+    }
+    & $bundledPython $oauthScript
   }
 } finally {
   if ($ptr -ne [IntPtr]::Zero) { [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($ptr) }

@@ -31,8 +31,12 @@ class Callback(BaseHTTPRequestHandler):
         if urllib.parse.urlparse(self.path).path != "/callback" or query.get("state", [""])[0] != STATE:
             self.send_response(400)
             self.end_headers()
-            self.wfile.write(b"Invalid Dropbox OAuth response.")
-            result["error"] = "Invalid OAuth response or state mismatch."
+            self.wfile.write(
+                b"This is an old or unrelated authorization link. "
+                b"Return to the newest Dropbox authorization tab and try again."
+            )
+            # A previous browser tab can arrive after the helper has been started
+            # again. Ignore it instead of abandoning the active OAuth session.
             return
         if "error" in query:
             result["error"] = query["error"][0]
