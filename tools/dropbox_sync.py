@@ -105,6 +105,14 @@ def write_listings(source, match, listings):
         target.write(updated)
 
 
+def is_supported_image(data):
+    return (
+        data.startswith(b"\xff\xd8\xff")
+        or data.startswith(b"\x89PNG\r\n\x1a\n")
+        or (len(data) >= 12 and data.startswith(b"RIFF") and data[8:12] == b"WEBP")
+    )
+
+
 def download_file(token, path, destination):
     req = urllib.request.Request("https://content.dropboxapi.com/2/files/download", method="POST")
     req.add_header("Authorization", f"Bearer {token}")
@@ -112,7 +120,7 @@ def download_file(token, path, destination):
     try:
         with urllib.request.urlopen(req, timeout=45) as response:
             content_type = response.headers.get_content_type().lower()
-            if not content_type.startswith("image/"):
+            if not (content_type.startswith("image/") or content_type == "application/octet-stream"):
                 fail(f"{path}: unsupported content type {content_type}")
             data = response.read(MAX_BYTES + 1)
     except urllib.error.HTTPError as exc:
@@ -120,6 +128,8 @@ def download_file(token, path, destination):
         fail(f"{path}: Dropbox download failed ({exc.code}: {detail})")
     if len(data) > MAX_BYTES:
         fail(f"{path}: image is larger than {MAX_BYTES // 1024 // 1024} MB")
+    if not is_supported_image(data):
+        fail(f"{path}: file contents are not a supported JPEG, PNG or WebP image")
     with open(destination, "wb") as output:
         output.write(data)
 
