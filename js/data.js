@@ -99,8 +99,17 @@ const LISTINGS =
     "short": "Квартира в районе Будва — центр: площадь 44 м², 1 спальня.",
     "desc": "Stan u staroj zgradi u Rozino.\n\nКвартира в районе Будва — центр (площадь 44 м², 1 спальня). Идентификатор объекта: BD-26-019S.\n\nФотографии и подробное описание предоставим по запросу — свяжитесь с нами в чате или по телефону, и риелтор пришлёт полную презентацию объекта.",
     "features": [],
-    "photos": 4,
-    "hue": 340
+    "photos": 7,
+    "hue": 340,
+    "images": [
+      "img/listings/bd-26-019s/01.jpeg",
+      "img/listings/bd-26-019s/02.png",
+      "img/listings/bd-26-019s/03.png",
+      "img/listings/bd-26-019s/04.png",
+      "img/listings/bd-26-019s/05.png",
+      "img/listings/bd-26-019s/06.png",
+      "img/listings/bd-26-019s/07.jpeg"
+    ]
   },
   {
     "id": "bd-26-018k",
@@ -692,8 +701,18 @@ const LISTINGS =
     "short": "Квартира в районе Будва — центр: площадь 43 м².",
     "desc": "Квартира 43 м² — Будва — центр.\n\nКвартира в районе Будва — центр (площадь 43 м²). Идентификатор объекта: BD-25-009S.\n\nФотографии и подробное описание предоставим по запросу — свяжитесь с нами в чате или по телефону, и риелтор пришлёт полную презентацию объекта.",
     "features": [],
-    "photos": 4,
-    "hue": 238
+    "photos": 8,
+    "hue": 238,
+    "images": [
+      "img/listings/bd-25-009s/01.jpeg",
+      "img/listings/bd-25-009s/02.jpeg",
+      "img/listings/bd-25-009s/03.jpeg",
+      "img/listings/bd-25-009s/04.jpeg",
+      "img/listings/bd-25-009s/05.jpeg",
+      "img/listings/bd-25-009s/06.jpeg",
+      "img/listings/bd-25-009s/07.jpeg",
+      "img/listings/bd-25-009s/08.jpeg"
+    ]
   },
   {
     "id": "br-25-001k",
