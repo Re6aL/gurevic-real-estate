@@ -30,11 +30,15 @@
     <button class="gallery-nav gallery-nav--next" type="button" data-gallery-dir="1" aria-label="Следующее фото">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
     </button>
+    <button class="gallery-play" type="button" aria-label="Возобновить слайд-шоу" title="Возобновить слайд-шоу" hidden>
+      <span class="gallery-play-icon" aria-hidden="true"></span>
+      <span>Слайд-шоу</span>
+    </button>
     <span class="gallery-counter" aria-live="polite">1 / ${images.length}</span>` : '';
   const lightbox = images.length ? `
     <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true"
          aria-label="Просмотр фотографий" aria-hidden="true">
-      <button class="photo-lightbox-close" type="button" aria-label="Закрыть просмотр">×</button>
+      <button class="photo-lightbox-close" type="button" aria-label="Закрыть просмотр"></button>
       ${images.length > 1 ? `
         <button class="photo-lightbox-nav photo-lightbox-prev" type="button" data-lightbox-dir="-1" aria-label="Предыдущее фото">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg>
@@ -161,6 +165,7 @@
     const galleryMain = document.getElementById('gallery-main');
     const galleryThumbs = root.querySelector('.gallery-thumbs');
     const counter = galleryMain.querySelector('.gallery-counter');
+    const playButton = galleryMain.querySelector('.gallery-play');
     const lightbox = document.getElementById('photo-lightbox');
     const lightboxImage = lightbox.querySelector('.photo-lightbox-image');
     const lightboxCounter = lightbox.querySelector('.photo-lightbox-counter');
@@ -178,6 +183,14 @@
       window.clearInterval(timer);
       timer = 0;
       galleryMain.classList.add('is-manual');
+      if (playButton) playButton.hidden = false;
+    }
+
+    function startSlideshow() {
+      window.clearInterval(timer);
+      galleryMain.classList.remove('is-manual');
+      if (playButton) playButton.hidden = true;
+      timer = window.setInterval(() => showPhoto(currentIndex + 1, 1, false), 5500);
     }
 
     function syncThumbHeight() {
@@ -287,6 +300,11 @@
       });
     });
     galleryMain.addEventListener('click', event => {
+      if (event.target.closest('.gallery-play')) {
+        startSlideshow();
+        galleryMain.focus({ preventScroll: true });
+        return;
+      }
       if (event.target.closest('.gallery-main-image')) openLightbox();
     });
     galleryMain.addEventListener('keydown', event => {
@@ -357,7 +375,7 @@
     });
 
     if (images.length > 1 && !reduceMotion.matches) {
-      timer = window.setInterval(() => showPhoto(currentIndex + 1, 1, false), 5500);
+      startSlideshow();
     }
     const resizeObserver = window.ResizeObserver ? new ResizeObserver(syncThumbHeight) : null;
     resizeObserver?.observe(galleryMain);
