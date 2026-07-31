@@ -10,7 +10,9 @@ No credential or Dropbox URL is written into js/data.js or committed to git.
 
 import argparse
 import base64
+import io
 import json
+import math
 import os
 import re
 import shutil
@@ -20,12 +22,20 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+try:
+    from PIL import Image, ImageOps, UnidentifiedImageError
+except ImportError:
+    Image = ImageOps = None
+    UnidentifiedImageError = OSError
+
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_JS = os.path.join(PROJECT_ROOT, "js", "data.js")
 IMAGE_ROOT = os.path.join(PROJECT_ROOT, "img", "listings")
 MAX_IMAGES = 8
 MAX_BYTES = 15 * 1024 * 1024
+MAX_PUBLIC_BYTES = 900 * 1024
+MAX_PUBLIC_SIDE = 2200
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
 
@@ -113,6 +123,46 @@ def is_supported_image(data):
     )
 
 
+def optimize_for_web(data, path, destination):
+    if Image is None:
+        fail("Pillow is required for public image optimization.")
+    try:
+        with Image.open(io.BytesIO(data)) as source:
+            image = ImageOps.exif_transpose(source)
+            image.thumbnail((MAX_PUBLIC_SIDE, MAX_PUBLIC_SIDE), Image.Resampling.LANCZOS)
+            if image.mode in ("RGBA", "LA") or (image.mode == "P" and "transparency" in image.info):
+                rgba = image.convert("RGBA")
+                flattened = Image.new("RGB", rgba.size, "white")
+                flattened.paste(rgba, mask=rgba.getchannel("A"))
+                image = flattened
+            else:
+                image = image.convert("RGB")
+
+            encoded = b""
+            for quality in (84, 80, 76, 72, 68, 64, 60):
+                buffer = io.BytesIO()
+                image.save(buffer, "JPEG", quality=quality, optimize=True, progressive=True)
+                encoded = buffer.getvalue()
+                if len(encoded) <= MAX_PUBLIC_BYTES:
+                    break
+
+            if len(encoded) > MAX_PUBLIC_BYTES:
+                ratio = min(0.92, math.sqrt(MAX_PUBLIC_BYTES / len(encoded)) * 0.94)
+                resized = image.resize(
+                    (max(1, round(image.width * ratio)), max(1, round(image.height * ratio))),
+                    Image.Resampling.LANCZOS,
+                )
+                buffer = io.BytesIO()
+                resized.save(buffer, "JPEG", quality=68, optimize=True, progressive=True)
+                encoded = buffer.getvalue()
+
+        with open(destination, "wb") as output:
+            output.write(encoded)
+        return len(encoded)
+    except (UnidentifiedImageError, OSError, ValueError) as exc:
+        fail(f"{path}: image cannot be decoded ({exc})")
+
+
 def download_file(token, path, destination):
     req = urllib.request.Request("https://content.dropboxapi.com/2/files/download", method="POST")
     req.add_header("Authorization", f"Bearer {token}")
@@ -131,9 +181,7 @@ def download_file(token, path, destination):
         return False
     if not is_supported_image(data):
         fail(f"{path}: file contents are not a supported JPEG, PNG or WebP image")
-    with open(destination, "wb") as output:
-        output.write(data)
-    return True
+    return optimize_for_web(data, path, destination)
 
 
 def sync(root, dry_run=False):
@@ -164,9 +212,8 @@ def sync(root, dry_run=False):
             for item in files:
                 if len(public_paths) >= MAX_IMAGES:
                     break
-                ext = os.path.splitext(item["name"])[1].lower()
                 index = len(public_paths) + 1
-                filename = f"{index:02d}{ext}"
+                filename = f"{index:02d}.jpg"
                 if not download_file(token, item["path_display"], os.path.join(staging, filename)):
                     continue
                 public_paths.append(f"img/listings/{listing_id}/{filename}")

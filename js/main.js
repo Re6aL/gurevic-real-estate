@@ -246,6 +246,81 @@ function initFilters() {
   });
 
   document.getElementById('btn-apply').addEventListener('click', renderListings);
+
+  // Компактный поиск по внутреннему ID объекта. Поле появляется только по запросу.
+  const idSearch = document.getElementById('id-search');
+  const idToggle = document.getElementById('id-search-toggle');
+  const idInput = document.getElementById('f-object-id');
+  const idResults = document.getElementById('id-search-results');
+  if (idSearch && idToggle && idInput && idResults) {
+    const normalizeId = value => String(value || '').toUpperCase()
+      .replace(/[^A-ZА-ЯЁ0-9]/g, '')
+      .replace(/[СC]/g, 'C');
+
+    function formatId(value) {
+      const raw = normalizeId(value).slice(0, 8);
+      if (raw.length < 2) return raw;
+      if (raw.length === 2) return `${raw}-`;
+      if (raw.length < 4) return `${raw.slice(0, 2)}-${raw.slice(2)}`;
+      if (raw.length === 4) return `${raw.slice(0, 2)}-${raw.slice(2, 4)}-`;
+      return `${raw.slice(0, 2)}-${raw.slice(2, 4)}-${raw.slice(4)}`;
+    }
+
+    function matchingListings() {
+      const query = normalizeId(idInput.value);
+      if (!query) return [];
+      return LISTINGS
+        .filter(listing => listing.objectId && normalizeId(listing.objectId).startsWith(query))
+        .slice(0, 7);
+    }
+
+    function renderIdResults() {
+      const matches = matchingListings();
+      idResults.innerHTML = matches.length
+        ? matches.map(listing => `
+          <button type="button" class="id-search-result" role="option" data-listing-id="${listing.id}">
+            <b>${listing.objectId}</b><span>${listing.title}</span>
+          </button>`).join('')
+        : (idInput.value ? '<div class="id-search-empty">Подходящих объектов нет</div>' : '');
+    }
+
+    function setSearchOpen(open) {
+      idSearch.classList.toggle('open', open);
+      idToggle.setAttribute('aria-expanded', String(open));
+      if (open) {
+        window.setTimeout(() => idInput.focus(), 40);
+      } else {
+        idInput.value = '';
+        idResults.innerHTML = '';
+      }
+    }
+
+    idToggle.addEventListener('click', event => {
+      event.stopPropagation();
+      setSearchOpen(!idSearch.classList.contains('open'));
+    });
+    idInput.addEventListener('input', () => {
+      idInput.value = formatId(idInput.value);
+      renderIdResults();
+    });
+    idInput.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        setSearchOpen(false);
+        idToggle.focus();
+      }
+      if (event.key === 'Enter') {
+        const first = matchingListings()[0];
+        if (first) location.href = `object.html?id=${first.id}`;
+      }
+    });
+    idResults.addEventListener('click', event => {
+      const result = event.target.closest('[data-listing-id]');
+      if (result) location.href = `object.html?id=${result.dataset.listingId}`;
+    });
+    document.addEventListener('click', event => {
+      if (!idSearch.contains(event.target)) setSearchOpen(false);
+    });
+  }
 }
 
 // ---------- поле цены: ввод в тысячах (авто-«000») + ползунок-вилка ----------

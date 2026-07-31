@@ -88,6 +88,7 @@ FIELD_MAP = {
     "rooms":     "Sp. sobe",       # Number — спальни
     "location":  "Location",       # полный адрес — публикуем ТОЛЬКО район
     "mapLink":   "Map Link",       # Google Maps short-link → координаты
+    "features":  "Особенности",    # Multi-select — публичные преимущества объекта
     # Точное название колонки с фото задаётся через NOTION_PHOTOS_FIELD.
     # Значение намеренно не хранится в репозитории.
     "images":    os.environ.get("NOTION_PHOTOS_FIELD", ""),
@@ -364,7 +365,10 @@ def page_to_listing(page, coord_cache):
         + "\n\nФотографии и подробное описание предоставим по запросу — свяжитесь с нами"
         " в чате или по телефону, и риелтор пришлёт полную презентацию объекта."
     )
-    listing["features"] = []
+    raw_features = g("features") or []
+    if isinstance(raw_features, str):
+        raw_features = re.split(r"[,;\n]+", raw_features)
+    listing["features"] = [str(feature).strip() for feature in raw_features if str(feature).strip()]
     listing["photos"] = len(images) or 4
     listing["hue"] = (abs(hash(listing["id"])) % 360)
     return listing

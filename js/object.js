@@ -19,9 +19,18 @@
 
   const images = Array.isArray(l.images) ? l.images : [];
   const fallbackImage = listingPlaceholderImage(l);
+  const features = Array.isArray(l.features) ? l.features.filter(Boolean) : [];
   const thumbs = images.length
-    ? images.map((src, i) => `<button class="gallery-image-thumb ${i === 0 ? 'active' : ''}" type="button" data-i="${i}"><img src="${src}" alt="Фото ${i + 1} объекта" loading="lazy"></button>`).join('')
+    ? images.map((src, i) => `<button class="gallery-image-thumb ${i === 0 ? 'active' : ''}" type="button" data-i="${i}" aria-label="Показать фото ${i + 1} из ${images.length}"><img src="${src}" alt="Фото ${i + 1} объекта" loading="lazy"></button>`).join('')
     : `<div class="gallery-image-thumb active listing-illustration"><img src="${fallbackImage}" alt="Иллюстрация объекта"></div>`;
+  const galleryControls = images.length > 1 ? `
+    <button class="gallery-nav gallery-nav--prev" type="button" data-gallery-dir="-1" aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg>
+    </button>
+    <button class="gallery-nav gallery-nav--next" type="button" data-gallery-dir="1" aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+    </button>
+    <span class="gallery-counter" aria-live="polite">1 / ${images.length}</span>` : '';
 
   const params = [
     ['Сделка', DICT.deal[l.deal]],
@@ -59,12 +68,15 @@
     </div>` : '';
 
   const [lat, lng] = objCoords(l);
+  const mapNote = l.coords
+    ? `📍 ${l.location}, Черногория — геолокация объекта из базы`
+    : `📍 ${l.location}, Черногория — район указан приблизительно; точный адрес уточняйте у риелтора`;
   const mapBlock = `
     <h2>Расположение на карте</h2>
     <div class="obj-map">
       <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed"></iframe>
-      <div class="map-note">📍 ${l.location}, Черногория — точка приблизительная (демо-координаты района; заменить точными координатами объекта)</div>
+      <div class="map-note">${mapNote}</div>
     </div>`;
 
   const similar = LISTINGS
@@ -86,7 +98,10 @@
     </div>
 
     <div class="gallery">
-      <div id="gallery-main">${images.length ? `<img class="gallery-main-image" src="${images[0]}" alt="Главное фото объекта">` : `<img class="gallery-main-image listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`}</div>
+      <div id="gallery-main" class="gallery-main" tabindex="${images.length > 1 ? '0' : '-1'}">
+        ${images.length ? `<img class="gallery-main-image is-current" src="${images[0]}" alt="Фото 1 объекта">` : `<img class="gallery-main-image is-current listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`}
+        ${galleryControls}
+      </div>
       <div class="gallery-thumbs">${thumbs}</div>
     </div>
 
@@ -94,8 +109,8 @@
       <div class="obj-desc">
         <h2>Описание</h2>
         ${l.desc.split('\n\n').map(p => `<p>${p}</p>`).join('')}
-        <h2>Особенности</h2>
-        <div class="features">${l.features.map(f => `<span class="feature-chip">${f}</span>`).join('')}</div>
+        ${features.length ? `<h2>Особенности</h2>
+        <div class="features">${features.map(f => `<span class="feature-chip">${f}</span>`).join('')}</div>` : ''}
         ${unitsBlock}
         ${mapBlock}
       </div>
@@ -126,15 +141,129 @@
     </section>` : ''}
   `;
 
-  // Переключение фото в галерее.
-  root.querySelectorAll('.gallery-image-thumb').forEach(t => {
-    t.addEventListener('click', () => {
-      root.querySelectorAll('.gallery-image-thumb').forEach(x => x.classList.remove('active'));
-      t.classList.add('active');
-      document.getElementById('gallery-main').innerHTML =
-        images.length
-          ? `<img class="gallery-main-image" src="${images[+t.dataset.i]}" alt="Фото ${+t.dataset.i + 1} объекта">`
-          : `<img class="gallery-main-image listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`;
+  // Галерея: автоматическое слайд-шоу до первого ручного действия пользователя.
+  if (images.length > 1) {
+    const galleryMain = document.getElementById('gallery-main');
+    const galleryThumbs = root.querySelector('.gallery-thumbs');
+    const counter = galleryMain.querySelector('.gallery-counter');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let currentIndex = 0;
+    let timer = 0;
+    let transitionLocked = false;
+    let touchStartX = null;
+
+    function stopSlideshow() {
+      window.clearInterval(timer);
+      timer = 0;
+      galleryMain.classList.add('is-manual');
+    }
+
+    function syncThumbHeight() {
+      if (window.innerWidth <= 960) {
+        galleryThumbs.style.height = '';
+        return;
+      }
+      galleryThumbs.style.height = `${galleryMain.getBoundingClientRect().height}px`;
+    }
+
+    function setActiveThumb(index) {
+      root.querySelectorAll('.gallery-image-thumb').forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === index);
+        if (i === index) {
+          if (window.innerWidth <= 960) {
+            const left = thumb.offsetLeft;
+            const right = left + thumb.offsetWidth;
+            if (left < galleryThumbs.scrollLeft) galleryThumbs.scrollLeft = left;
+            else if (right > galleryThumbs.scrollLeft + galleryThumbs.clientWidth) {
+              galleryThumbs.scrollLeft = right - galleryThumbs.clientWidth;
+            }
+          } else {
+            const top = thumb.offsetTop;
+            const bottom = top + thumb.offsetHeight;
+            if (top < galleryThumbs.scrollTop) galleryThumbs.scrollTop = top;
+            else if (bottom > galleryThumbs.scrollTop + galleryThumbs.clientHeight) {
+              galleryThumbs.scrollTop = bottom - galleryThumbs.clientHeight;
+            }
+          }
+        }
+      });
+      counter.textContent = `${index + 1} / ${images.length}`;
+    }
+
+    function showPhoto(index, direction = 1, manual = false) {
+      if (manual) stopSlideshow();
+      const nextIndex = (index + images.length) % images.length;
+      if (nextIndex === currentIndex || transitionLocked) {
+        setActiveThumb(nextIndex);
+        return;
+      }
+
+      const current = galleryMain.querySelector('.gallery-main-image.is-current');
+      const next = document.createElement('img');
+      next.className = `gallery-main-image is-next ${direction < 0 ? 'from-left' : 'from-right'}`;
+      next.src = images[nextIndex];
+      next.alt = `Фото ${nextIndex + 1} объекта`;
+
+      const animate = () => {
+        transitionLocked = true;
+        galleryMain.insertBefore(next, galleryMain.firstChild);
+        if (reduceMotion.matches) {
+          current.remove();
+          next.className = 'gallery-main-image is-current';
+          transitionLocked = false;
+        } else {
+          requestAnimationFrame(() => {
+            next.classList.add('is-active');
+            current.classList.add(direction < 0 ? 'leave-right' : 'leave-left');
+          });
+          window.setTimeout(() => {
+            current.remove();
+            next.className = 'gallery-main-image is-current';
+            transitionLocked = false;
+          }, 620);
+        }
+        currentIndex = nextIndex;
+        setActiveThumb(currentIndex);
+      };
+
+      if (next.complete) animate();
+      else next.addEventListener('load', animate, { once: true });
+    }
+
+    root.querySelectorAll('.gallery-image-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => showPhoto(+thumb.dataset.i, +thumb.dataset.i >= currentIndex ? 1 : -1, true));
     });
-  });
+    galleryMain.querySelectorAll('.gallery-nav').forEach(button => {
+      button.addEventListener('click', () => {
+        const direction = +button.dataset.galleryDir;
+        showPhoto(currentIndex + direction, direction, true);
+      });
+    });
+    galleryMain.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowLeft' ? -1 : 1;
+      showPhoto(currentIndex + direction, direction, true);
+    });
+    galleryMain.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    galleryMain.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(delta) < 45) return;
+      const direction = delta < 0 ? 1 : -1;
+      showPhoto(currentIndex + direction, direction, true);
+    }, { passive: true });
+
+    if (!reduceMotion.matches) {
+      timer = window.setInterval(() => showPhoto(currentIndex + 1, 1, false), 5500);
+    }
+    const resizeObserver = window.ResizeObserver ? new ResizeObserver(syncThumbHeight) : null;
+    resizeObserver?.observe(galleryMain);
+    window.addEventListener('resize', syncThumbHeight);
+    galleryMain.querySelector('.gallery-main-image').addEventListener('load', syncThumbHeight, { once: true });
+    syncThumbHeight();
+  }
 })();

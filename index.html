@@ -67,7 +67,7 @@
     <h1>Жизнь у моря —<br><span class="accent">ваша новая история</span></h1>
     <p>Продажа, аренда и инвестиционные проекты на Будванской ривьере.
        Сопровождаем сделку от первого просмотра до ключей и оформления.</p>
-    <div class="hero-note">⚠ Черновик сайта — все объекты ниже демонстрационные, будут заменены реальными предложениями</div>
+    <div class="hero-note">Черновая версия сайта · каталог автоматически обновляется из актуальной базы объектов</div>
   </div>
 </section>
 
@@ -126,7 +126,25 @@
       </div>
       <div class="filter-field filter-actions">
         <label>&nbsp;</label>
-        <button class="btn" id="btn-apply" type="button">Показать</button>
+        <div class="filter-action-row">
+          <button class="btn" id="btn-apply" type="button">Показать</button>
+          <div class="id-search" id="id-search">
+            <button class="id-search-toggle" id="id-search-toggle" type="button"
+                    aria-expanded="false" aria-controls="id-search-panel" title="Найти объект по ID">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+                <circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/>
+              </svg>
+              <span>ID</span>
+            </button>
+            <div class="id-search-panel" id="id-search-panel">
+              <label for="f-object-id">Поиск по ID объекта</label>
+              <input id="f-object-id" type="text" inputmode="text" autocomplete="off"
+                     placeholder="BD-26-003S" maxlength="10" aria-autocomplete="list"
+                     aria-controls="id-search-results">
+              <div class="id-search-results" id="id-search-results" role="listbox"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -261,7 +279,7 @@
     <div class="foot-brand">
       <img class="logo-mark" src="img/logo-mark.png" alt="Gurevic Real Estate" width="106" height="88">
       <div><b>DOO GUREVIC BUDVA</b> · Будва, Черногория<br>
-        <span style="opacity:.7">© 2026 · Черновик сайта — данные объектов демонстрационные</span>
+        <span style="opacity:.7">© 2026 · Каталог обновляется автоматически</span>
       </div>
     </div>
     <div class="foot-social">
