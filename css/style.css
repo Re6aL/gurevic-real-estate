@@ -86,13 +86,32 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .logo .logo-mark { height: 50px; width: auto; flex: none; display: block; }
 .logo .logo-word { height: 40px; width: auto; flex: none; display: block; }
 
-.nav { display: flex; gap: 26px; margin-left: auto; }
+.nav { display: flex; align-items: center; gap: 12px; margin-left: auto; }
 .nav a {
+  position: relative;
   font-family: var(--font-display); font-weight: 400;
   font-size: .82rem; text-transform: uppercase; letter-spacing: .13em;
-  opacity: .82; padding: 6px 2px; border-bottom: 2px solid transparent; transition: .15s;
+  opacity: .82; padding: 11px 8px; border-bottom: 2px solid transparent;
+  transform-origin: center 75%;
+  transition: transform .22s cubic-bezier(.2,.8,.2,1), opacity .15s, color .15s, border-color .15s;
 }
 .nav a:hover { opacity: 1; border-color: var(--gold); color: var(--gold-2); }
+.nav a:focus-visible {
+  opacity: 1; color: var(--gold-2); outline: 2px solid var(--gold); outline-offset: 3px;
+  border-color: transparent; transform: scale(1.12);
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav a:hover {
+    z-index: 2;
+    transform: translateY(-1px) scale(1.2);
+    text-shadow: 0 5px 16px rgba(0,0,0,.38);
+  }
+  .nav a:has(+ a:hover),
+  .nav a:hover + a {
+    opacity: .94;
+    transform: scale(1.08);
+  }
+}
 
 /* телефон в шапке + дропдаун контактов */
 .header-contact { position: relative; }
