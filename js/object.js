@@ -31,6 +31,20 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
     </button>
     <span class="gallery-counter" aria-live="polite">1 / ${images.length}</span>` : '';
+  const lightbox = images.length ? `
+    <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true"
+         aria-label="Просмотр фотографий" aria-hidden="true">
+      <button class="photo-lightbox-close" type="button" aria-label="Закрыть просмотр">×</button>
+      ${images.length > 1 ? `
+        <button class="photo-lightbox-nav photo-lightbox-prev" type="button" data-lightbox-dir="-1" aria-label="Предыдущее фото">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg>
+        </button>
+        <button class="photo-lightbox-nav photo-lightbox-next" type="button" data-lightbox-dir="1" aria-label="Следующее фото">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+        </button>` : ''}
+      <img class="photo-lightbox-image" src="${images[0]}" alt="Фото 1 объекта">
+      <span class="photo-lightbox-counter" aria-live="polite">1 / ${images.length}</span>
+    </div>` : '';
 
   const params = [
     ['Сделка', DICT.deal[l.deal]],
@@ -98,12 +112,13 @@
     </div>
 
     <div class="gallery">
-      <div id="gallery-main" class="gallery-main" tabindex="${images.length > 1 ? '0' : '-1'}">
+      <div id="gallery-main" class="gallery-main" tabindex="${images.length ? '0' : '-1'}">
         ${images.length ? `<img class="gallery-main-image is-current" src="${images[0]}" alt="Фото 1 объекта">` : `<img class="gallery-main-image is-current listing-illustration" src="${fallbackImage}" alt="Иллюстрация объекта">`}
         ${galleryControls}
       </div>
       <div class="gallery-thumbs">${thumbs}</div>
     </div>
+    ${lightbox}
 
     <div class="obj-layout">
       <div class="obj-desc">
@@ -142,15 +157,22 @@
   `;
 
   // Галерея: автоматическое слайд-шоу до первого ручного действия пользователя.
-  if (images.length > 1) {
+  if (images.length) {
     const galleryMain = document.getElementById('gallery-main');
     const galleryThumbs = root.querySelector('.gallery-thumbs');
     const counter = galleryMain.querySelector('.gallery-counter');
+    const lightbox = document.getElementById('photo-lightbox');
+    const lightboxImage = lightbox.querySelector('.photo-lightbox-image');
+    const lightboxCounter = lightbox.querySelector('.photo-lightbox-counter');
+    const lightboxClose = lightbox.querySelector('.photo-lightbox-close');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentIndex = 0;
+    let lightboxIndex = 0;
     let timer = 0;
     let transitionLocked = false;
     let touchStartX = null;
+    let lightboxTouchStartX = null;
+    let focusBeforeLightbox = null;
 
     function stopSlideshow() {
       window.clearInterval(timer);
@@ -187,7 +209,7 @@
           }
         }
       });
-      counter.textContent = `${index + 1} / ${images.length}`;
+      if (counter) counter.textContent = `${index + 1} / ${images.length}`;
     }
 
     function showPhoto(index, direction = 1, manual = false) {
@@ -230,6 +252,31 @@
       else next.addEventListener('load', animate, { once: true });
     }
 
+    function updateLightbox(index) {
+      lightboxIndex = (index + images.length) % images.length;
+      lightboxImage.src = images[lightboxIndex];
+      lightboxImage.alt = `Фото ${lightboxIndex + 1} объекта`;
+      lightboxCounter.textContent = `${lightboxIndex + 1} / ${images.length}`;
+      showPhoto(lightboxIndex, lightboxIndex >= currentIndex ? 1 : -1, true);
+    }
+
+    function openLightbox() {
+      stopSlideshow();
+      focusBeforeLightbox = document.activeElement;
+      updateLightbox(currentIndex);
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+      focusBeforeLightbox?.focus();
+    }
+
     root.querySelectorAll('.gallery-image-thumb').forEach(thumb => {
       thumb.addEventListener('click', () => showPhoto(+thumb.dataset.i, +thumb.dataset.i >= currentIndex ? 1 : -1, true));
     });
@@ -239,7 +286,15 @@
         showPhoto(currentIndex + direction, direction, true);
       });
     });
+    galleryMain.addEventListener('click', event => {
+      if (event.target.closest('.gallery-main-image')) openLightbox();
+    });
     galleryMain.addEventListener('keydown', event => {
+      if ((event.key === 'Enter' || event.key === ' ') && event.target === galleryMain) {
+        event.preventDefault();
+        openLightbox();
+        return;
+      }
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();
       const direction = event.key === 'ArrowLeft' ? -1 : 1;
@@ -257,7 +312,51 @@
       showPhoto(currentIndex + direction, direction, true);
     }, { passive: true });
 
-    if (!reduceMotion.matches) {
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    lightbox.querySelectorAll('[data-lightbox-dir]').forEach(button => {
+      button.addEventListener('click', () => updateLightbox(lightboxIndex + +button.dataset.lightboxDir));
+    });
+    lightbox.addEventListener('touchstart', event => {
+      lightboxTouchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', event => {
+      if (lightboxTouchStartX === null || images.length < 2) return;
+      const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+      lightboxTouchStartX = null;
+      if (Math.abs(delta) >= 45) updateLightbox(lightboxIndex + (delta < 0 ? 1 : -1));
+    }, { passive: true });
+    document.addEventListener('keydown', event => {
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeLightbox();
+      }
+      if (event.key === 'ArrowLeft' && images.length > 1) {
+        event.preventDefault();
+        updateLightbox(lightboxIndex - 1);
+      }
+      if (event.key === 'ArrowRight' && images.length > 1) {
+        event.preventDefault();
+        updateLightbox(lightboxIndex + 1);
+      }
+      if (event.key === 'Tab') {
+        const controls = [...lightbox.querySelectorAll('button')];
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    if (images.length > 1 && !reduceMotion.matches) {
       timer = window.setInterval(() => showPhoto(currentIndex + 1, 1, false), 5500);
     }
     const resizeObserver = window.ResizeObserver ? new ResizeObserver(syncThumbHeight) : null;

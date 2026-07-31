@@ -41,9 +41,13 @@ function listingImageHTML(l, cls = '', alt = 'Фото объекта') {
     : `<img class="listing-image ${cls} listing-illustration" src="${listingPlaceholderImage(l)}" alt="Иллюстрация: ${DICT.type[l.type] || 'объект недвижимости'}" loading="lazy">`;
 }
 
+function isComplexListing(l) {
+  return Boolean(l.isComplex || l.investKind === 'Девелопмент');
+}
+
 function cardHTML(l) {
   const badges = [`<span class="badge ${l.deal === 'rent' ? 'deal-rent' : ''}">${DICT.deal[l.deal]}</span>`];
-  if (l.isComplex) badges.push('<span class="badge invest">Комплекс</span>');
+  if (isComplexListing(l)) badges.push('<span class="badge invest">Комплекс</span>');
   if (l.invest) badges.push(`<span class="badge invest">${l.investKind}</span>`);
   if (l.placeholder) badges.push('<span class="badge demo">Демо-объект</span>');
   return `
@@ -68,7 +72,7 @@ const state = { deal: 'sale', type: '', location: '', priceMin: '', priceMax: ''
 
 function applyFilters() {
   // комплексы вынесены в отдельный блок «Жилые комплексы», инвестиции — в свой
-  let items = LISTINGS.filter(l => !l.invest && !l.isComplex);
+  let items = LISTINGS.filter(l => !l.invest && !isComplexListing(l));
   if (state.deal) items = items.filter(l => l.deal === state.deal);
   if (state.type) items = items.filter(l => l.type === state.type);
   if (state.location) items = items.filter(l => l.location === state.location);
@@ -117,13 +121,15 @@ function renderInvest() {
 function renderComplexes() {
   const grid = document.getElementById('complex-cards');
   if (!grid) return;
-  const items = LISTINGS.filter(l => l.isComplex);
+  const items = LISTINGS.filter(isComplexListing);
   hideEmptySection('complexes', !items.length);
   grid.innerHTML = items.map(l => {
     const n = (l.units || []).length;
     const avail = (l.units || []).filter(u => u.status === 'available').length;
+    const card = cardHTML(l);
+    if (!n) return card;
     // добавляем строку «доступно вариантов» перед кнопкой
-    return cardHTML(l).replace(
+    return card.replace(
       '<div class="card-actions">',
       `<div class="card-params" style="color:var(--gold-dark);font-weight:700">🏢 вариантов в комплексе: ${n} · свободно: ${avail}</div><div class="card-actions">`
     );
@@ -304,6 +310,19 @@ function initFilters() {
       renderIdResults();
     });
     idInput.addEventListener('keydown', event => {
+      if (event.key === 'Backspace' && idInput.selectionStart === idInput.selectionEnd) {
+        const caret = idInput.selectionStart;
+        if (caret > 0 && idInput.value[caret - 1] === '-') {
+          event.preventDefault();
+          idInput.value = formatId(
+            idInput.value.slice(0, Math.max(0, caret - 2)) + idInput.value.slice(caret)
+          );
+          const nextCaret = Math.max(0, caret - 2);
+          idInput.setSelectionRange(nextCaret, nextCaret);
+          renderIdResults();
+          return;
+        }
+      }
       if (event.key === 'Escape') {
         setSearchOpen(false);
         idToggle.focus();

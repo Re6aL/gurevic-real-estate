@@ -340,6 +340,8 @@ def page_to_listing(page, coord_cache):
     if type_en in INVEST_KINDS:
         listing["invest"] = True
         listing["investKind"] = INVEST_KINDS[type_en]
+    if type_en == "gradnja":
+        listing["isComplex"] = True
 
     coords = resolve_map_link(g("mapLink"), coord_cache)
     if coords:

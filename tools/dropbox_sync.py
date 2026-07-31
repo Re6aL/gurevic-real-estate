@@ -127,6 +127,15 @@ def optimize_for_web(data, path, destination):
     if Image is None:
         fail("Pillow is required for public image optimization.")
     try:
+        # A JPEG that already meets the public size limit is publication-ready.
+        # Validate it, but keep the realtor's original encoding byte-for-byte.
+        if data.startswith(b"\xff\xd8\xff") and len(data) <= MAX_PUBLIC_BYTES:
+            with Image.open(io.BytesIO(data)) as source:
+                source.verify()
+            with open(destination, "wb") as output:
+                output.write(data)
+            return len(data)
+
         with Image.open(io.BytesIO(data)) as source:
             image = ImageOps.exif_transpose(source)
             image.thumbnail((MAX_PUBLIC_SIDE, MAX_PUBLIC_SIDE), Image.Resampling.LANCZOS)
