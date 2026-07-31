@@ -30,11 +30,12 @@
     <button class="gallery-nav gallery-nav--next" type="button" data-gallery-dir="1" aria-label="Следующее фото">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
     </button>
+    <span class="gallery-counter" aria-live="polite">1 / ${images.length}</span>` : '';
+  const galleryPlayControl = images.length > 1 ? `
     <button class="gallery-play" type="button" aria-label="Возобновить слайд-шоу" title="Возобновить слайд-шоу" hidden>
       <span class="gallery-play-icon" aria-hidden="true"></span>
       <span>Слайд-шоу</span>
-    </button>
-    <span class="gallery-counter" aria-live="polite">1 / ${images.length}</span>` : '';
+    </button>` : '';
   const lightbox = images.length ? `
     <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true"
          aria-label="Просмотр фотографий" aria-hidden="true">
@@ -121,6 +122,7 @@
         ${galleryControls}
       </div>
       <div class="gallery-thumbs">${thumbs}</div>
+      ${galleryPlayControl}
     </div>
     ${lightbox}
 
@@ -163,9 +165,10 @@
   // Галерея: автоматическое слайд-шоу до первого ручного действия пользователя.
   if (images.length) {
     const galleryMain = document.getElementById('gallery-main');
+    const gallery = galleryMain.closest('.gallery');
     const galleryThumbs = root.querySelector('.gallery-thumbs');
     const counter = galleryMain.querySelector('.gallery-counter');
-    const playButton = galleryMain.querySelector('.gallery-play');
+    const playButton = gallery.querySelector('.gallery-play');
     const lightbox = document.getElementById('photo-lightbox');
     const lightboxImage = lightbox.querySelector('.photo-lightbox-image');
     const lightboxCounter = lightbox.querySelector('.photo-lightbox-counter');
@@ -183,7 +186,10 @@
       window.clearInterval(timer);
       timer = 0;
       galleryMain.classList.add('is-manual');
-      if (playButton) playButton.hidden = false;
+      if (playButton) {
+        playButton.hidden = false;
+        positionPlayButton(currentIndex);
+      }
     }
 
     function startSlideshow() {
@@ -196,9 +202,23 @@
     function syncThumbHeight() {
       if (window.innerWidth <= 960) {
         galleryThumbs.style.height = '';
+        positionPlayButton(currentIndex);
         return;
       }
       galleryThumbs.style.height = `${galleryMain.getBoundingClientRect().height}px`;
+      positionPlayButton(currentIndex);
+    }
+
+    function positionPlayButton(index) {
+      if (!playButton || playButton.hidden) return;
+      const thumb = root.querySelectorAll('.gallery-image-thumb')[index];
+      if (!thumb) return;
+      window.requestAnimationFrame(() => {
+        const galleryRect = gallery.getBoundingClientRect();
+        const thumbRect = thumb.getBoundingClientRect();
+        playButton.style.left = `${thumbRect.left - galleryRect.left + thumbRect.width / 2}px`;
+        playButton.style.top = `${thumbRect.top - galleryRect.top + thumbRect.height / 2}px`;
+      });
     }
 
     function setActiveThumb(index) {
@@ -223,6 +243,7 @@
         }
       });
       if (counter) counter.textContent = `${index + 1} / ${images.length}`;
+      positionPlayButton(index);
     }
 
     function showPhoto(index, direction = 1, manual = false) {
@@ -299,7 +320,7 @@
         showPhoto(currentIndex + direction, direction, true);
       });
     });
-    galleryMain.addEventListener('click', event => {
+    gallery.addEventListener('click', event => {
       if (event.target.closest('.gallery-play')) {
         startSlideshow();
         galleryMain.focus({ preventScroll: true });
@@ -307,6 +328,7 @@
       }
       if (event.target.closest('.gallery-main-image')) openLightbox();
     });
+    galleryThumbs.addEventListener('scroll', () => positionPlayButton(currentIndex), { passive: true });
     galleryMain.addEventListener('keydown', event => {
       if ((event.key === 'Enter' || event.key === ' ') && event.target === galleryMain) {
         event.preventDefault();
