@@ -82,16 +82,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 }
 
 /* лого-локап: настоящая марка + бренд-надпись из логотипа (PNG с прозрачностью) */
-.logo { display: flex; align-items: center; gap: 15px; }
+.logo { display: flex; align-items: center; gap: 15px; flex: none; }
 .logo .logo-mark { height: 50px; width: auto; flex: none; display: block; }
 .logo .logo-word { height: 40px; width: auto; flex: none; display: block; }
 
-.nav { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.nav { display: flex; align-items: center; gap: 8px; margin-left: auto; min-width: 0; }
 .nav a {
   position: relative;
   font-family: var(--font-display); font-weight: 400;
-  font-size: .95rem; text-transform: uppercase; letter-spacing: .13em;
-  opacity: .82; padding: 11px 8px; border-bottom: 2px solid transparent;
+  font-size: .86rem; text-transform: uppercase; letter-spacing: .1em;
+  white-space: nowrap; flex: none;
+  opacity: .82; padding: 11px 6px; border-bottom: 2px solid transparent;
   transform-origin: center 75%;
   transition: transform .22s cubic-bezier(.2,.8,.2,1), opacity .15s, color .15s, border-color .15s;
 }
@@ -114,7 +115,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 }
 
 /* телефон в шапке + дропдаун контактов */
-.header-contact { position: relative; }
+.header-contact { position: relative; flex: none; }
 .header-phone {
   display: flex; align-items: center; gap: 8px;
   font-family: var(--font-display); font-weight: 600; color: var(--navy);
@@ -834,6 +835,29 @@ body[data-catalog-mode="rent"] .thou i { display: none; }
   .filter-action-row > .btn { flex: 1; }
 }
 @media (max-width: 960px) {
+  .site-header .container {
+    height: auto;
+    min-height: 84px;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    row-gap: 0;
+    padding-top: 8px;
+  }
+  .site-header .logo { order: 1; }
+  .site-header .header-contact,
+  .site-header .container > .header-phone { order: 2; margin-left: auto; flex: none; }
+  .nav {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
+    gap: 6px;
+    justify-content: center;
+    padding: 0 0 9px;
+  }
+  .nav a { font-size: .78rem; padding: 8px 7px; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .unit-cards { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid, .obj-layout { grid-template-columns: 1fr; }
@@ -841,7 +865,6 @@ body[data-catalog-mode="rent"] .thou i { display: none; }
   .object-facts { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr; }
   .gallery-thumbs { grid-auto-flow: column; grid-auto-columns: 140px; height: auto; overflow-x: auto; overflow-y: hidden; padding: 2px 2px 6px; }
-  .nav { display: none; }
 }
 @media (max-width: 620px) {
   .cards { grid-template-columns: 1fr; }
@@ -850,7 +873,7 @@ body[data-catalog-mode="rent"] .thou i { display: none; }
   .hero { padding: 60px 0 110px; min-height: 400px; }
   .hero h1 { font-size: clamp(2.15rem, 11vw, 3.2rem); }
   .logo .logo-sub { display: none; }
-  .site-header .container { gap: 12px; }
+  .site-header .container { column-gap: 12px; }
   .photo-lightbox-image { max-width: 100vw; max-height: calc(100vh - 96px); }
   .photo-lightbox-nav { width: 46px; height: 68px; }
   .photo-lightbox-prev { left: 8px; }
@@ -877,7 +900,8 @@ body[data-catalog-mode="rent"] .thou i { display: none; }
 }
 @media (max-width: 480px) {
   .site-header .container {
-    height: 72px;
+    height: auto;
+    min-height: 72px;
     padding-inline: 14px;
     justify-content: space-between;
   }
