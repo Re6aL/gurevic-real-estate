@@ -700,9 +700,6 @@ body.lightbox-open { overflow: hidden; }
 .catalog-hero h1 { max-width: 880px; font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .98; letter-spacing: -.025em; }
 .catalog-hero p { max-width: 720px; margin-top: 20px; font-size: 1.04rem; color: #d7e0e8; }
 .catalog-kicker { display: block; margin-bottom: 10px; color: var(--gold-2); text-transform: uppercase; letter-spacing: .15em; font-size: .76rem; font-weight: 700; }
-.catalog-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
-.catalog-switch a { padding: 9px 18px; border: 1px solid rgba(255,255,255,.34); border-radius: 999px; color: #fff; font-weight: 700; }
-.catalog-switch a.active, .catalog-switch a:hover { color: var(--navy); background: var(--gold-2); border-color: var(--gold-2); }
 .catalog-content { padding-top: 1px; }
 .catalog-content .filter-panel { margin-top: -28px; }
 body[data-catalog-mode="rent"] .thou i { display: none; }
