@@ -13,6 +13,8 @@ function paramsLine(l) {
   if (l.area) parts.push(`<span>📐 ${l.areaNote || l.area + ' м²'}</span>`);
   if (l.landArea) parts.push(`<span>🌿 участок ${l.landArea} м²</span>`);
   if (l.rooms) parts.push(`<span>🛏 ${l.rooms}</span>`);
+  if (l.bathrooms) parts.push(`<span>🛁 ${l.bathrooms}</span>`);
+  if (l.floor !== undefined && l.floor !== null && l.floor !== '') parts.push(`<span>↗ этаж ${l.floor}</span>`);
   return parts.join('');
 }
 
@@ -45,6 +47,18 @@ function isComplexListing(l) {
   return Boolean(l.isComplex || l.investKind === 'Девелопмент');
 }
 
+function listingTypeName(l) {
+  return isComplexListing(l) ? 'Проект' : (DICT.type[l.type] || 'Объект');
+}
+
+function generatedCardDescription(l) {
+  const parts = [];
+  if (l.area) parts.push(l.areaNote || `${l.area} м²`);
+  if (l.rooms) parts.push(l.rooms);
+  if (l.bathrooms) parts.push(`${l.bathrooms} ${Number(l.bathrooms) === 1 ? 'ванная' : 'ванные'}`);
+  return `${listingTypeName(l)} в районе ${l.location}${parts.length ? `: ${parts.join(', ')}` : ''}.`;
+}
+
 function cardHTML(l) {
   const badges = [`<span class="badge ${l.deal === 'rent' ? 'deal-rent' : ''}">${DICT.deal[l.deal]}</span>`];
   if (isComplexListing(l)) badges.push('<span class="badge invest">Комплекс</span>');
@@ -58,27 +72,43 @@ function cardHTML(l) {
     </a>
     <div class="card-body">
       <div class="card-price">${fmtPrice(l)}</div>
+      ${(l.price > 0 && l.area) ? `<div class="card-price-meter">${Math.round(l.price / l.area).toLocaleString('ru-RU')} €/м²</div>` : ''}
       <div class="card-title">${l.title}</div>
       <div class="card-loc">${l.location}</div>
       <div class="card-params">${paramsLine(l)}</div>
-      <div class="card-short">${l.short}</div>
+      <div class="card-short">${l.cardDescription || generatedCardDescription(l)}</div>
       <div class="card-actions"><a class="btn btn-navy" href="object.html?id=${l.id}">Подробнее</a></div>
     </div>
   </article>`;
 }
 
 // ---------- главная страница ----------
-const state = { deal: 'sale', type: '', location: '', priceMin: '', priceMax: '', areaMin: '', areaMax: '', sort: '' };
+const catalogueMode = document.body.dataset.catalogMode || '';
+const state = {
+  deal: catalogueMode === 'rent' ? 'rent' : 'sale',
+  type: '', location: '', priceMin: '', priceMax: '', areaMin: '', areaMax: '', sort: ''
+};
+
+function catalogueScope() {
+  if (catalogueMode === 'invest') return LISTINGS.filter(l => l.invest);
+  if (catalogueMode === 'sale') {
+    // Девелоперский проект может одновременно быть инвестиционным продуктом и
+    // содержать квартиры для обычной покупки, поэтому комплексы показываем здесь тоже.
+    return LISTINGS.filter(l => l.deal === 'sale' && (!l.invest || isComplexListing(l)));
+  }
+  if (catalogueMode === 'rent') return LISTINGS.filter(l => l.deal === 'rent');
+  return LISTINGS.filter(l => !l.invest && !isComplexListing(l));
+}
 
 function applyFilters() {
   // комплексы вынесены в отдельный блок «Жилые комплексы», инвестиции — в свой
-  let items = LISTINGS.filter(l => !l.invest && !isComplexListing(l));
-  if (state.deal) items = items.filter(l => l.deal === state.deal);
+  let items = catalogueScope();
+  if (!catalogueMode && state.deal) items = items.filter(l => l.deal === state.deal);
   if (state.type) items = items.filter(l => l.type === state.type);
   if (state.location) items = items.filter(l => l.location === state.location);
-  // цена вводится в тысячах € → умножаем на 1000
-  if (state.priceMin) items = items.filter(l => l.price >= +state.priceMin * 1000);
-  if (state.priceMax) items = items.filter(l => l.price <= +state.priceMax * 1000);
+  const priceMultiplier = catalogueMode === 'rent' ? 1 : 1000;
+  if (state.priceMin) items = items.filter(l => l.price >= +state.priceMin * priceMultiplier);
+  if (state.priceMax) items = items.filter(l => l.price <= +state.priceMax * priceMultiplier);
   if (state.areaMin) items = items.filter(l => (l.area || 0) >= +state.areaMin);
   if (state.areaMax) items = items.filter(l => (l.area || 0) <= +state.areaMax);
   // объекты «цена по запросу» (price 0) — всегда в конце
@@ -91,11 +121,14 @@ function renderListings() {
   const grid = document.getElementById('listings');
   if (!grid) return;
   const items = applyFilters();
-  document.getElementById('listings-count').textContent =
-    items.length ? `объектов: ${items.length}` : '';
+  const counter = document.getElementById('listings-count');
+  if (counter) counter.textContent = items.length ? `объектов: ${items.length}` : '';
+  const emptyMessage = catalogueMode === 'rent'
+    ? 'Сейчас в открытом каталоге нет подтверждённых объектов в аренду.<br>Оставьте срок, бюджет и состав жильцов — проверим предложения вручную.'
+    : 'По выбранным условиям объектов нет.<br>Сбросьте фильтры или напишите нам в чат — подберём вручную.';
   grid.innerHTML = items.length
     ? items.map(cardHTML).join('')
-    : '<div class="empty-state">По выбранным условиям объектов нет.<br>Сбросьте фильтры или напишите нам в чат — подберём вручную.</div>';
+    : `<div class="empty-state">${emptyMessage}</div>`;
 }
 
 // если раздел пуст (в CRM пока нет таких объектов) — прячем секцию и пункт меню
@@ -183,18 +216,18 @@ function initFilters() {
   if (!typeSel) return;
 
   Object.entries(DICT.type).forEach(([k, v]) => {
-    if (k === 'hotel') return; // отели живут в блоке инвестиций
+    if (k === 'hotel' && catalogueMode !== 'invest') return;
     typeSel.insertAdjacentHTML('beforeend', `<option value="${k}">${v}</option>`);
   });
   // Районы не захардкожены: строим список только из опубликованных объектов.
   // При смене сделки/типа пустые пункты остаются для ориентира, но выбрать их нельзя.
   function updateLocationOptions() {
-    const catalogue = LISTINGS.filter(l => !l.invest && !l.isComplex);
+    const catalogue = catalogueScope();
     const locations = [...new Set(catalogue.map(l => l.location).filter(Boolean))]
       .sort((a, b) => a.localeCompare(b, 'ru'));
     const counts = new Map();
     catalogue
-      .filter(l => (!state.deal || l.deal === state.deal) && (!state.type || l.type === state.type))
+      .filter(l => (catalogueMode || !state.deal || l.deal === state.deal) && (!state.type || l.type === state.type))
       .forEach(l => counts.set(l.location, (counts.get(l.location) || 0) + 1));
 
     locSel.innerHTML = '<option value="">Любой</option>';
@@ -219,7 +252,7 @@ function initFilters() {
       }
       document.querySelectorAll('.deal-tab').forEach(t => t.classList.toggle('active', t === tab));
       state.deal = tab.dataset.deal;
-      if (!LISTINGS.some(l => !l.invest && !l.isComplex && l.deal === state.deal && (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
+      if (!catalogueScope().some(l => l.deal === state.deal && (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
       updateLocationOptions();
       renderListings();
     });
@@ -228,7 +261,7 @@ function initFilters() {
   // селекты и поля от/до
   typeSel.addEventListener('change', () => {
     state.type = typeSel.value;
-    if (!LISTINGS.some(l => !l.invest && !l.isComplex && l.deal === state.deal && (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
+    if (!catalogueScope().some(l => (!state.type || l.type === state.type) && l.location === state.location)) state.location = '';
     updateLocationOptions();
     renderListings();
   });
@@ -251,7 +284,7 @@ function initFilters() {
     });
   });
 
-  document.getElementById('btn-apply').addEventListener('click', renderListings);
+  document.getElementById('btn-apply')?.addEventListener('click', renderListings);
 
   // Компактный поиск по внутреннему ID объекта. Поле появляется только по запросу.
   const idSearch = document.getElementById('id-search');
@@ -342,10 +375,9 @@ function initFilters() {
   }
 }
 
-// ---------- поле цены: ввод в тысячах (авто-«000») + ползунок-вилка ----------
-// Потолок ползунка = €1 млн; крайнее правое положение = «без ограничения».
-// Руками в поле можно вписать и больше — ползунок просто встанет вправо.
-const PRICE_MAX_K = 1000;
+// Покупка/инвестиции вводятся в тысячах евро, аренда — в евро за месяц.
+const PRICE_MULTIPLIER = catalogueMode === 'rent' ? 1 : 1000;
+const PRICE_MAX_K = catalogueMode === 'rent' ? 10000 : 1000;
 
 function initPriceControl() {
   const fMin = document.getElementById('f-price-min');
@@ -355,6 +387,13 @@ function initPriceControl() {
   const fill = document.getElementById('ps-fill');
   const cap = document.getElementById('price-caption');
   if (!fMin || !sMin) return;
+  sMin.max = PRICE_MAX_K;
+  sMax.max = PRICE_MAX_K;
+  sMax.value = PRICE_MAX_K;
+  const scale = document.querySelectorAll('.ps-scale span');
+  if (catalogueMode === 'rent' && scale.length === 3) {
+    scale[0].textContent = '€0'; scale[1].textContent = '€5 000'; scale[2].textContent = '€10 000+';
+  }
 
   // ползунок скрыт; открывается кнопкой-иконкой, закрывается кликом вне
   const slider = document.getElementById('price-slider');
@@ -388,7 +427,7 @@ function initPriceControl() {
     fill.style.left = (cMin / PRICE_MAX_K * 100) + '%';
     fill.style.width = (Math.max(0, cMax - cMin) / PRICE_MAX_K * 100) + '%';
 
-    const eur = k => '€' + (k * 1000).toLocaleString('ru-RU');
+    const eur = k => '€' + (k * PRICE_MULTIPLIER).toLocaleString('ru-RU');
     cap.textContent = (minK === 0 && noMax) ? '— без ограничения'
       : `${eur(minK)} – ${noMax ? 'без ограничения' : eur(maxK)}`;
 
@@ -412,7 +451,7 @@ function initPriceControl() {
   sMin.addEventListener('input', fromSlider);
   sMax.addEventListener('input', fromSlider);
 
-  // ручной ввод (цифры = тысячи; можно больше потолка ползунка — просто встанет вправо)
+  // Ручной ввод может быть выше потолка ползунка: заливка просто встанет вправо.
   function fromInput() {
     const minK = parseInt(fMin.value.replace(/\D/g, ''), 10) || 0;
     const noMax = fMax.value.trim() === '';

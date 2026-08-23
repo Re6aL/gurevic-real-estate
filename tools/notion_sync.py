@@ -93,16 +93,35 @@ FIELD_MAP = {
     # Значение намеренно не хранится в репозитории.
     "images":    os.environ.get("NOTION_PHOTOS_FIELD", ""),
     "status":    "Status",         # Adding/Available/For Re-evaluation/Reserved/Sold
+    "deal":      "Deal Type",      # Sale / Rent
+    "bathrooms": "Bathrooms",
+    "floor":     "Floor",
+    "balconies": "Balconies",
+    "view":      "View",
+    "cardDescription": "Card Description",
+    "propertyDescription": "Website Description",
+    "locationDescription": "Location Description",
+    "paymentPlan": "Payment Plan",
+    "transferTax": "Transfer Tax",
+    "furnishing": "Furnishing",
+    "condition": "Condition",
+    "parking": "Parking",
+    "distanceToSea": "Distance to Sea",
+    "completionDate": "Completion Date",
+    "projectId": "Project ID",
+    "projectName": "Project Name",
+    "unitCode": "Unit Code",
 }
 
 # Property Type (англ.) -> ключ типа на сайте (+ инвест-блок для Hotel/Gradnja)
 TYPE_EN2KEY = {
-    "apartment": "apartment", "house": "house", "land": "land",
+    "apartment": "apartment", "house": "house", "villa": "house", "land": "land",
     "commercial": "commercial", "industrial": "commercial",
     "office": "commercial", "retail": "commercial",
     "hotel": "hotel", "gradnja": "land",
 }
 INVEST_KINDS = {"hotel": "Отель — готовый бизнес", "gradnja": "Девелопмент"}
+DEAL_EN2KEY = {"sale": "sale", "prodaja": "sale", "rent": "rent", "rental": "rent", "izdavanje": "rent"}
 
 # Публикуем только эти статусы
 PUBLISH_STATUSES = {"available"}
@@ -311,6 +330,7 @@ def page_to_listing(page, coord_cache):
     land = g("landArea")
     rooms_n = g("rooms")
     price = g("price")
+    deal = DEAL_EN2KEY.get(str(g("deal") or "sale").strip().lower(), "sale")
 
     if not title:
         # автозаголовок, если риелтор не заполнил Aktualnost
@@ -324,7 +344,7 @@ def page_to_listing(page, coord_cache):
         "objectId": obj_id or None,
         "title": title,
         "type": tkey,
-        "deal": "sale",              # в CRM нет колонки аренды — всё продажа
+        "deal": deal,
         "location": district,        # только район; точный адрес не публикуем
         "price": int(price) if price else 0,
     }
@@ -337,10 +357,23 @@ def page_to_listing(page, coord_cache):
     if rooms_n:
         listing["rooms"] = rooms_ru(rooms_n)
 
+    passthrough_fields = (
+        "bathrooms", "floor", "balconies", "view", "cardDescription",
+        "propertyDescription", "locationDescription", "paymentPlan", "transferTax",
+        "furnishing", "condition", "parking", "distanceToSea", "completionDate",
+        "projectId", "projectName", "unitCode",
+    )
+    for field in passthrough_fields:
+        value = g(field)
+        if value is not None and value != "":
+            listing[field] = value
+
     if type_en in INVEST_KINDS:
         listing["invest"] = True
         listing["investKind"] = INVEST_KINDS[type_en]
     if type_en == "gradnja":
+        listing["isComplex"] = True
+    if listing.get("projectId") and not listing.get("unitCode"):
         listing["isComplex"] = True
 
     coords = resolve_map_link(g("mapLink"), coord_cache)
@@ -360,12 +393,10 @@ def page_to_listing(page, coord_cache):
     if rooms_n:
         p_bits.append(rooms_ru(rooms_n))
     params_txt = (", ".join(p_bits)) or "параметры уточняются"
-    listing["short"] = f"{TYPE_RU.get(tkey, 'Объект')} в районе {district}: {params_txt}."
-    listing["desc"] = (
-        f"{title}.\n\n{TYPE_RU.get(tkey, 'Объект')} в районе {district} ({params_txt})."
-        + (f" Идентификатор объекта: {obj_id}." if obj_id else "")
-        + "\n\nФотографии и подробное описание предоставим по запросу — свяжитесь с нами"
-        " в чате или по телефону, и риелтор пришлёт полную презентацию объекта."
+    listing["short"] = listing.get("cardDescription") or f"{TYPE_RU.get(tkey, 'Объект')} в районе {district}: {params_txt}."
+    listing["desc"] = listing.get("propertyDescription") or (
+        f"{TYPE_RU.get(tkey, 'Объект')} в районе {district}: {params_txt}. "
+        "Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора."
     )
     raw_features = g("features") or []
     if isinstance(raw_features, str):
@@ -374,6 +405,47 @@ def page_to_listing(page, coord_cache):
     listing["photos"] = len(images) or 4
     listing["hue"] = (abs(hash(listing["id"])) % 360)
     return listing
+
+
+def attach_project_units(listings):
+    """Собирает строки-юниты под карточкой родительского проекта.
+
+    Родитель: Project ID заполнен, Unit Code пуст. Юнит: оба поля заполнены.
+    Если родитель не найден, строка остаётся самостоятельным объектом и не теряется.
+    """
+    parents = {}
+    for item in listings:
+        if item.get("unitCode"):
+            continue
+        for key in (item.get("projectId"), item.get("objectId"), item.get("id")):
+            if key:
+                parents[str(key).strip().lower()] = item
+
+    attached_ids = set()
+    for item in listings:
+        project_id = item.get("projectId")
+        unit_code = item.get("unitCode")
+        if not project_id or not unit_code:
+            continue
+        parent = parents.get(str(project_id).strip().lower())
+        if not parent or parent is item:
+            continue
+        unit = {
+            "unitCode": unit_code,
+            "name": unit_code,
+            "status": "available",
+        }
+        for field in ("floor", "rooms", "area", "bathrooms", "view", "price"):
+            if item.get(field) is not None:
+                unit[field] = item[field]
+        parent.setdefault("units", []).append(unit)
+        parent["isComplex"] = True
+        attached_ids.add(id(item))
+
+    for parent in parents.values():
+        if parent.get("units"):
+            parent["units"].sort(key=lambda unit: (str(unit.get("floor", "")), str(unit.get("unitCode", ""))))
+    return [item for item in listings if id(item) not in attached_ids]
 
 
 def render_data_js(listings):
@@ -393,6 +465,7 @@ def sync_once(token, db, dry_run=False):
     pages = notion_query_all(token, db)
     cache = _load_coord_cache()
     listings = [x for x in (page_to_listing(p, cache) for p in pages) if x]
+    listings = attach_project_units(listings)
     _save_coord_cache(cache)
     ts = time.strftime("%H:%M:%S")
     print(f"[{ts}] Notion: страниц {len(pages)}, к публикации {len(listings)}")

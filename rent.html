@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аренда недвижимости в Будве — Gurevic Real Estate</title>
+  <meta name="description" content="Квартиры, дома и виллы в аренду в Будве и на Будванской ривьере. Подбор по сроку, бюджету, району и условиям проживания.">
+  <link rel="canonical" href="rent.html">
+  <link rel="stylesheet" href="css/style.css?v=20260821-1"><link rel="icon" href="img/logo-mark.png">
+</head>
+<body data-catalog-mode="rent">
+<header class="site-header"><div class="container"><a class="logo" href="index.html" aria-label="Gurevic Real Estate"><img class="logo-mark" src="img/logo-mark.png" alt="" width="128" height="120"><img class="logo-word" src="img/logo-word.png" alt="Gurevic Real Estate — Будва" width="376" height="120"></a><nav class="nav"><a href="sale.html">Продажа</a><a class="active" href="rent.html">Аренда</a><a href="investments.html">Инвестиции</a><a href="map.html">Карта</a><a href="index.html#about">О нас</a><a href="index.html#contacts">Контакты</a></nav><a class="header-phone" href="tel:+38269572257">+382 69 572 257</a></div></header>
+<main>
+  <section class="catalog-hero catalog-hero--rent"><div class="container"><div class="breadcrumbs"><a href="index.html">Главная</a> / Аренда</div><span class="catalog-kicker">Долгосрочная и сезонная аренда</span><h1>Аренда недвижимости<br>в Будве</h1><p>Отдельный поиск для арендаторов: срок, сезонность, депозит, коммунальные платежи и правила проживания не смешиваются с параметрами покупки.</p><div class="catalog-switch"><a href="sale.html">Продажа</a><a class="active" href="rent.html">Аренда</a><a href="investments.html">Инвестиции</a></div></div></section>
+  <div class="container catalog-content">
+    <div class="filter-panel" id="catalog"><div class="filter-row">
+      <div class="filter-field"><label for="f-type">Тип недвижимости</label><select id="f-type"><option value="">Любой</option></select></div><div class="filter-field"><label for="f-location">Район</label><select id="f-location"><option value="">Любой</option></select></div>
+      <div class="filter-field price-field"><label>Цена в месяц, € <span class="hint" id="price-caption">— без ограничения</span></label><div class="price-inputs"><span class="thou empty" id="thou-min"><span class="cur">€</span><input id="f-price-min" type="text" inputmode="numeric" placeholder="0"><i>&nbsp;000</i></span><span class="dash">—</span><span class="thou empty" id="thou-max"><span class="cur">€</span><input id="f-price-max" type="text" inputmode="numeric" placeholder="макс"><i>&nbsp;000</i></span><button class="slider-toggle" id="slider-toggle" type="button">↔</button></div><div class="price-slider" id="price-slider"><div class="ps-track"><div class="ps-fill" id="ps-fill"></div></div><input type="range" id="ps-min" min="0" max="1000" step="10" value="0"><input type="range" id="ps-max" min="0" max="1000" step="10" value="1000"><div class="ps-scale"><span>€0</span><span>€500 000</span><span>€1 млн+</span></div></div></div>
+      <div class="filter-field"><label>Площадь, м²</label><div class="range-pair"><input id="f-area-min" type="number" min="0" step="5" placeholder="От"><span>—</span><input id="f-area-max" type="number" min="0" step="5" placeholder="До"></div></div><div class="filter-field"><label>Сортировка</label><div class="sort-icons"><button class="sort-icon" data-sort="price-asc" type="button">↑</button><button class="sort-icon" data-sort="price-desc" type="button">↓</button></div></div><div class="filter-field filter-actions"><label>&nbsp;</label><button class="btn" id="btn-apply" type="button">Показать</button></div>
+    </div></div>
+    <section class="section catalog-results"><div class="section-head"><h2>Объекты в аренду</h2><span class="sub">актуальность и условия подтверждаются перед показом</span><span class="count" id="listings-count"></span></div><div class="cards" id="listings"></div></section>
+    <section class="catalog-cta"><div><span>Каталог пока не показывает нужный вариант?</span><h2>Оставьте параметры аренды</h2><p>Срок, даты, состав семьи, животные и бюджет — это позволит сразу отсеять неподходящие варианты.</p></div><button class="btn" type="button" onclick="Chat.open()">Оставить запрос</button></section>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><div class="foot-brand"><img class="logo-mark" src="img/logo-mark.png" alt="Gurevic Real Estate" width="106" height="88"><div><b>DOO GUREVIC BUDVA</b> · Будва, Черногория<br><span>© 2026</span></div></div><a href="mailto:gurevicestate@icloud.com">gurevicestate@icloud.com</a></div></footer>
+<script src="js/config.js"></script><script src="js/data.js"></script><script src="js/main.js?v=20260821-1"></script><script src="js/chat.js"></script>
+</body></html>

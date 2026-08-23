@@ -428,6 +428,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 
 .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card-price { font-family: var(--font-body); font-size: 1.25rem; font-weight: 700; color: var(--navy); }
+.card-price-meter { color: var(--muted); font-size: .76rem; margin-top: -4px; }
 .card-title { font-size: 1.05rem; font-weight: 700; }
 .card-loc { color: var(--muted); font-size: .88rem; }
 .card-loc::before { content: '📍 '; }
@@ -682,6 +683,76 @@ body.lightbox-open { overflow: hidden; }
 .status-pill { font-size: .76rem; padding: 3px 10px; border-radius: 999px; font-weight: 700; }
 .status-available { background: #dcfce7; color: #166534; }
 .status-reserved { background: #fef3c7; color: #92400e; }
+.status-unknown { background: #eef2f6; color: var(--muted); }
+
+/* ---------- отдельные посадочные каталоги ---------- */
+.nav a.active { color: var(--gold-dark); border-color: var(--gold); }
+.catalog-hero {
+  position: relative; overflow: hidden; padding: 72px 0 58px; color: #fff;
+  background: linear-gradient(100deg, rgba(12,29,45,.96), rgba(20,39,59,.68)),
+              url('../BG_images/01.jpg') center 42% / cover no-repeat;
+}
+.catalog-hero--rent { background-image: linear-gradient(100deg, rgba(12,29,45,.96), rgba(20,39,59,.6)), url('../BG_images/03.jpg'); }
+.catalog-hero--invest { background-image: linear-gradient(100deg, rgba(12,29,45,.98), rgba(20,39,59,.68)), url('../BG_images/02.jpg'); }
+.catalog-hero .breadcrumbs { margin: 0 0 28px; color: rgba(255,255,255,.68); }
+.catalog-hero .breadcrumbs a { color: #fff; }
+.catalog-hero h1 { max-width: 880px; font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .98; letter-spacing: -.025em; }
+.catalog-hero p { max-width: 720px; margin-top: 20px; font-size: 1.04rem; color: #d7e0e8; }
+.catalog-kicker { display: block; margin-bottom: 10px; color: var(--gold-2); text-transform: uppercase; letter-spacing: .15em; font-size: .76rem; font-weight: 700; }
+.catalog-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.catalog-switch a { padding: 9px 18px; border: 1px solid rgba(255,255,255,.34); border-radius: 999px; color: #fff; font-weight: 700; }
+.catalog-switch a.active, .catalog-switch a:hover { color: var(--navy); background: var(--gold-2); border-color: var(--gold-2); }
+.catalog-content { padding-top: 1px; }
+.catalog-content .filter-panel { margin-top: -28px; }
+body[data-catalog-mode="rent"] .thou i { display: none; }
+.catalog-results { min-height: 320px; }
+.catalog-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  margin: 28px 0 64px; padding: 32px 36px; border-radius: 18px;
+  color: #fff; background: linear-gradient(120deg, var(--navy), var(--navy-2));
+}
+.catalog-cta span { color: var(--gold-2); text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; font-weight: 700; }
+.catalog-cta h2 { color: #fff; margin-top: 4px; }
+.catalog-cta p { color: #c9d6e0; margin-top: 7px; }
+.catalog-cta .btn { flex: none; }
+.investment-standard { margin: 12px 0 32px; padding: 30px; border-radius: 18px; background: var(--bg-soft); }
+.investment-standard h2 { color: var(--navy); margin-bottom: 18px; }
+.investment-standard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.investment-standard-grid div { padding: 18px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.investment-standard-grid b, .investment-standard-grid span { display: block; }
+.investment-standard-grid b { color: var(--navy); margin-bottom: 5px; }
+.investment-standard-grid span { color: var(--muted); font-size: .88rem; }
+
+/* ---------- понятная структура карточки объекта ---------- */
+.object-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px; }
+.object-fact-group { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.object-fact-group h3 { padding: 10px 14px; color: var(--navy); background: #edf0f2; font-size: .84rem; }
+.object-fact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 10px; }
+.object-fact { display: flex; align-items: center; min-height: 54px; gap: 9px; padding: 9px 10px; border-radius: 9px; background: #f1f8f7; color: var(--muted); font-size: .73rem; }
+.object-fact-icon { display: grid; place-items: center; width: 25px; height: 25px; flex: none; color: #087f78; font-size: 1rem; font-weight: 700; }
+.object-fact b { display: block; color: var(--navy); font-size: .88rem; margin-top: 1px; }
+.object-copy-section { padding: 2px 0 8px; }
+.object-copy-section + .object-copy-section { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.object-id-row {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  margin: 0 0 20px; padding: 15px 16px 15px 18px; border: 1px solid #e6dcc8;
+  border-left: 4px solid var(--gold); border-radius: 12px; background: #fbf8f1;
+}
+.object-id-value { display: grid; gap: 3px; min-width: 0; }
+.object-id-value span { color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.object-id-value strong { color: var(--navy); font: 700 1.08rem/1.2 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; letter-spacing: .03em; }
+.object-id-copy {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; flex: none;
+  min-height: 38px; padding: 8px 12px; border: 1px solid #c9b486; border-radius: 9px;
+  background: #fff; color: var(--navy); font: inherit; font-size: .82rem; font-weight: 700; cursor: pointer;
+  transition: background .18s, border-color .18s, color .18s, transform .18s;
+}
+.object-id-copy:hover { border-color: var(--gold); background: #f5ecda; }
+.object-id-copy:active { transform: translateY(1px); }
+.object-id-copy:focus-visible { outline: 3px solid rgb(185 151 91 / 28%); outline-offset: 2px; }
+.object-id-copy.is-copied { border-color: #16826f; background: #e9f7f3; color: #116656; }
+.object-id-copy svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.object-id-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .demo-note { background: #fff7ed; border: 1px dashed #d97706; color: #92400e; border-radius: 10px; padding: 10px 14px; font-size: .85rem; margin: 10px 0; }
 
@@ -767,6 +838,7 @@ body.lightbox-open { overflow: hidden; }
   .unit-cards { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid, .obj-layout { grid-template-columns: 1fr; }
   .obj-side { position: static; }
+  .object-facts { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr; }
   .gallery-thumbs { grid-auto-flow: column; grid-auto-columns: 140px; height: auto; overflow-x: auto; overflow-y: hidden; padding: 2px 2px 6px; }
   .nav { display: none; }
@@ -786,6 +858,13 @@ body.lightbox-open { overflow: hidden; }
   .photo-lightbox-close { top: 12px; right: 12px; }
   .complexes-section { margin-top: 34px; padding: 38px 18px 34px; border-radius: 18px; }
   .complexes-backdrop-slide { filter: blur(4px) saturate(.8); }
+  .catalog-hero { padding: 46px 0 50px; }
+  .catalog-hero h1 { font-size: 2.35rem; }
+  .catalog-content .filter-panel { margin-top: -18px; }
+  .catalog-cta { align-items: flex-start; flex-direction: column; padding: 26px 22px; }
+  .investment-standard-grid { grid-template-columns: 1fr; }
+  .object-fact-grid { grid-template-columns: 1fr; }
+  .object-id-row { align-items: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-slide, .hero-slide.active, .hero-slide.leaving { clip-path: none; transition: none; }

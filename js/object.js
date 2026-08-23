@@ -17,6 +17,76 @@
 
   document.title = `${l.title} — Gurevic Real Estate`;
 
+  const typeName = isComplexListing(l) ? 'Проект' : (DICT.type[l.type] || 'Объект');
+  const isGenericCrmText = text => !text || text.includes('Фотографии и подробное описание предоставим по запросу');
+  const naturalParts = [
+    l.area && `${l.areaNote || `${l.area} м²`}`,
+    l.rooms,
+    l.bathrooms && `${l.bathrooms} ${Number(l.bathrooms) === 1 ? 'ванная' : 'ванные'}`,
+    l.floor !== undefined && l.floor !== null && l.floor !== '' && `${l.floor} этаж`,
+    l.view && `вид: ${l.view}`,
+  ].filter(Boolean);
+  const propertyDescription = l.propertyDescription
+    || (!isGenericCrmText(l.desc) ? l.desc : '')
+    || `${typeName} в районе ${l.location}${naturalParts.length ? `: ${naturalParts.join(', ')}` : ''}.`;
+  const locationDescription = l.locationDescription
+    || (l.coords
+      ? `Объект расположен в районе ${l.location}, Черногория; точка на карте передана из CRM, а расстояния до моря и инфраструктуры публикуются после проверки.`
+      : `Объект расположен в районе ${l.location}, Черногория; на карте показан район, а точную геолокацию риелтор сообщает заинтересованному клиенту.`);
+
+  const metaDescription = document.querySelector('meta[name="description"]') || document.head.appendChild(Object.assign(document.createElement('meta'), { name: 'description' }));
+  metaDescription.content = `${l.title}. ${l.short || propertyDescription}`.replace(/\s+/g, ' ').slice(0, 160);
+  const canonical = document.createElement('link');
+  canonical.rel = 'canonical';
+  canonical.href = new URL(`object.html?id=${encodeURIComponent(l.id)}`, location.href).href;
+  document.head.appendChild(canonical);
+
+  const schemaType = { apartment: 'Apartment', house: 'House', hotel: 'Hotel' }[l.type] || 'Place';
+  const schemaRoomCount = parseInt(l.rooms, 10);
+  const listingSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'RealEstateListing',
+        name: l.title,
+        description: propertyDescription.replace(/\s+/g, ' '),
+        url: canonical.href,
+        inLanguage: 'ru',
+        contentLocation: { '@type': 'Place', name: `${l.location}, Черногория` },
+        image: (l.images || []).map(src => new URL(src, location.href).href),
+        about: {
+          '@type': schemaType,
+          name: l.title,
+          floorSize: l.area ? { '@type': 'QuantitativeValue', value: l.area, unitCode: 'MTK' } : undefined,
+          numberOfRooms: Number.isFinite(schemaRoomCount) ? schemaRoomCount : undefined,
+          address: { '@type': 'PostalAddress', addressLocality: l.location, addressCountry: 'ME' },
+        },
+        offers: l.price > 0 ? {
+          '@type': 'Offer',
+          price: l.price,
+          priceCurrency: 'EUR',
+          availability: 'https://schema.org/InStock',
+          businessFunction: l.deal === 'rent'
+            ? 'http://purl.org/goodrelations/v1#LeaseOut'
+            : 'http://purl.org/goodrelations/v1#Sell',
+        } : undefined,
+        publisher: { '@type': 'RealEstateAgent', name: 'Gurevic Real Estate' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Главная', item: new URL('index.html', location.href).href },
+          { '@type': 'ListItem', position: 2, name: l.deal === 'rent' ? 'Аренда' : 'Продажа', item: new URL(l.deal === 'rent' ? 'rent.html' : 'sale.html', location.href).href },
+          { '@type': 'ListItem', position: 3, name: l.title, item: canonical.href },
+        ],
+      },
+    ],
+  };
+  const schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.textContent = JSON.stringify(listingSchema);
+  document.head.appendChild(schemaScript);
+
   const images = Array.isArray(l.images) ? l.images : [];
   const fallbackImage = listingPlaceholderImage(l);
   const features = Array.isArray(l.features) ? l.features.filter(Boolean) : [];
@@ -51,18 +121,54 @@
       <span class="photo-lightbox-counter" aria-live="polite">1 / ${images.length}</span>
     </div>` : '';
 
+  const publicObjectId = l.objectId || l.id;
   const params = [
     ['Сделка', DICT.deal[l.deal]],
     ['Тип', DICT.type[l.type]],
     ['Район', l.location],
     l.area && ['Площадь', l.areaNote || l.area + ' м²'],
     l.landArea && ['Участок', l.landArea + ' м²'],
-    l.rooms && ['Комнат', l.rooms],
+    l.rooms && ['Спальни', l.rooms],
+    l.bathrooms && ['Ванные', l.bathrooms],
+    l.floor !== undefined && l.floor !== null && l.floor !== '' && ['Этаж', l.floor],
     ['Цена', fmtPrice(l)],
   ].filter(Boolean);
 
+  const detailGroup = (title, items) => {
+    const rows = items.filter(Boolean);
+    if (!rows.length) return '';
+    return `<section class="object-fact-group"><h3>${title}</h3><div class="object-fact-grid">${rows.map(([label, value, icon = '•']) => `
+      <div class="object-fact"><span class="object-fact-icon" aria-hidden="true">${icon}</span><span>${label}<b>${value}</b></span></div>`).join('')}</div></section>`;
+  };
+
+  const objectFacts = `
+    <div class="object-facts">
+      ${detailGroup('Характеристики', [
+        l.rooms && ['Спальни', l.rooms, '⌂'],
+        l.bathrooms && ['Ванные', l.bathrooms, '◫'],
+        l.area && ['Площадь', l.areaNote || `${l.area} м²`, '▤'],
+        l.landArea && ['Участок', `${l.landArea} м²`, '◇'],
+        l.floor !== undefined && l.floor !== null && l.floor !== '' && ['Этаж', l.floor, '↗'],
+        l.balconies && ['Балконы / террасы', l.balconies, '▥'],
+        l.view && ['Вид', l.view, '◉'],
+      ])}
+      ${detailGroup('Финансовые условия', [
+        ['Цена', fmtPrice(l), '€'],
+        l.price > 0 && l.area && ['Цена за м²', `${Math.round(l.price / l.area).toLocaleString('ru-RU')} €`, '㎡'],
+        l.paymentPlan && ['Рассрочка', l.paymentPlan, '◷'],
+        l.transferTax && ['Налог / сборы', l.transferTax, '%'],
+      ])}
+      ${detailGroup('Комплектация и инфраструктура', [
+        l.furnishing && ['Меблировка', l.furnishing, '✓'],
+        l.condition && ['Состояние', l.condition, '✓'],
+        l.parking && ['Паркинг', l.parking, 'P'],
+        l.distanceToSea && ['До моря', l.distanceToSea, '≈'],
+        l.completionDate && ['Срок сдачи', l.completionDate, '◷'],
+      ])}
+    </div>`;
+
   const bedrooms = r => { const m = String(r).match(/^\d+/); return m ? m[0] : r; };
-  const unitsBlock = l.units ? `
+  const unitsBlock = Array.isArray(l.units) && l.units.length ? `
     <h2>Доступные варианты в комплексе</h2>
     <p style="color:var(--muted);font-size:.9rem;margin-bottom:4px">
       ${l.units.filter(u => u.status === 'available').length} свободно из ${l.units.length}. Выберите планировку — этаж, спальни, площадь:</p>
@@ -70,17 +176,18 @@
       ${l.units.map(u => `
         <div class="unit-card">
           <div class="u-top">
-            <span class="u-code">${u.name}</span>
+            <span class="u-code">${u.unitCode || u.name}</span>
             <span class="u-tag">${DICT.type[l.type] || 'Квартира'}</span>
           </div>
           <div class="u-grid">
-            <div><span>Этаж:</span> <b>${u.floor}</b></div>
-            <div><span>Спальни:</span> <b>${bedrooms(u.rooms)}</b></div>
-            <div><span>Площадь:</span> <b>${u.area} м²</b></div>
-            <div><span class="status-pill status-${u.status}">${u.status === 'available' ? 'Свободно' : 'Резерв'}</span></div>
+            ${u.floor !== undefined && u.floor !== null && u.floor !== '' ? `<div><span>Этаж:</span> <b>${u.floor}</b></div>` : ''}
+            ${u.rooms ? `<div><span>Спальни:</span> <b>${bedrooms(u.rooms)}</b></div>` : ''}
+            ${u.area ? `<div><span>Площадь:</span> <b>${u.area} м²</b></div>` : ''}
+            ${u.view ? `<div><span>Вид:</span> <b>${u.view}</b></div>` : ''}
+            <div><span class="status-pill status-${u.status}">${u.status === 'available' ? 'Свободно' : u.status === 'reserved' ? 'Резерв' : 'Уточнить'}</span></div>
           </div>
           <div class="u-foot">
-            <span class="u-price">€${u.price.toLocaleString('ru-RU').replace(/,/g, ' ')}</span>
+            <span class="u-price">${u.price ? `€${u.price.toLocaleString('ru-RU').replace(/,/g, ' ')}` : 'Цена по запросу'}</span>
             <button class="btn" onclick="Chat.open()">Оставить запрос</button>
           </div>
         </div>`).join('')}
@@ -128,8 +235,26 @@
 
     <div class="obj-layout">
       <div class="obj-desc">
-        <h2>Описание</h2>
-        ${l.desc.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        <div class="object-id-row">
+          <div class="object-id-value">
+            <span>ID объекта</span>
+            <strong>${publicObjectId}</strong>
+          </div>
+          <button class="object-id-copy" type="button" aria-label="Скопировать ID объекта ${publicObjectId}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+            <span>Копировать</span>
+          </button>
+          <span class="object-id-status" aria-live="polite"></span>
+        </div>
+        <section class="object-copy-section">
+          <h2>Об объекте</h2>
+          ${propertyDescription.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        </section>
+        <section class="object-copy-section">
+          <h2>О локации</h2>
+          ${locationDescription.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        </section>
+        ${objectFacts}
         ${features.length ? `<h2>Особенности</h2>
         <div class="features">${features.map(f => `<span class="feature-chip">${f}</span>`).join('')}</div>` : ''}
         ${unitsBlock}
@@ -161,6 +286,46 @@
       <div class="cards">${similar.map(cardHTML).join('')}</div>
     </section>` : ''}
   `;
+
+  const copyIdButton = root.querySelector('.object-id-copy');
+  const copyIdStatus = root.querySelector('.object-id-status');
+  let copyIdFeedbackTimer = 0;
+
+  async function copyObjectId() {
+    const fallbackCopy = () => {
+      const field = document.createElement('textarea');
+      field.value = publicObjectId;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      const copied = document.execCommand('copy');
+      field.remove();
+      if (!copied) throw new Error('copy failed');
+    };
+
+    try {
+      if (navigator.clipboard?.writeText && window.isSecureContext) {
+        await navigator.clipboard.writeText(publicObjectId);
+      } else {
+        fallbackCopy();
+      }
+      copyIdButton.classList.add('is-copied');
+      copyIdButton.querySelector('span').textContent = 'Скопировано';
+      copyIdStatus.textContent = `ID ${publicObjectId} скопирован`;
+      window.clearTimeout(copyIdFeedbackTimer);
+      copyIdFeedbackTimer = window.setTimeout(() => {
+        copyIdButton.classList.remove('is-copied');
+        copyIdButton.querySelector('span').textContent = 'Копировать';
+        copyIdStatus.textContent = '';
+      }, 1800);
+    } catch {
+      copyIdStatus.textContent = 'Не удалось скопировать ID';
+    }
+  }
+
+  copyIdButton.addEventListener('click', copyObjectId);
 
   // Галерея: автоматическое слайд-шоу до первого ручного действия пользователя.
   if (images.length) {

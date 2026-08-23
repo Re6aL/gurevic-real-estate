@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Недвижимость на продажу в Будве и Черногории — Gurevic Real Estate</title>
+  <meta name="description" content="Квартиры, дома, виллы, участки и новостройки на продажу в Будве и на побережье Черногории. Проверенные параметры, фото и сопровождение сделки.">
+  <link rel="canonical" href="sale.html">
+  <link rel="stylesheet" href="css/style.css?v=20260821-1">
+  <link rel="icon" href="img/logo-mark.png">
+</head>
+<body data-catalog-mode="sale">
+<header class="site-header"><div class="container">
+  <a class="logo" href="index.html" aria-label="Gurevic Real Estate"><img class="logo-mark" src="img/logo-mark.png" alt="" width="128" height="120"><img class="logo-word" src="img/logo-word.png" alt="Gurevic Real Estate — Будва" width="376" height="120"></a>
+  <nav class="nav"><a class="active" href="sale.html">Продажа</a><a href="rent.html">Аренда</a><a href="investments.html">Инвестиции</a><a href="map.html">Карта</a><a href="index.html#about">О нас</a><a href="index.html#contacts">Контакты</a></nav>
+  <a class="header-phone" href="tel:+38269572257">+382 69 572 257</a>
+</div></header>
+
+<main>
+  <section class="catalog-hero catalog-hero--sale"><div class="container">
+    <div class="breadcrumbs"><a href="index.html">Главная</a> / Продажа</div>
+    <span class="catalog-kicker">Покупка недвижимости</span>
+    <h1>Недвижимость на продажу<br>в Будве и на побережье</h1>
+    <p>От отдельных квартир и вилл до новостроек с выбором планировок. В карточках показываем только данные, подтверждённые CRM.</p>
+    <div class="catalog-switch"><a class="active" href="sale.html">Продажа</a><a href="rent.html">Аренда</a><a href="investments.html">Инвестиции</a></div>
+  </div></section>
+
+  <div class="container catalog-content">
+    <div class="filter-panel" id="catalog">
+      <div class="filter-row">
+        <div class="filter-field"><label for="f-type">Тип недвижимости</label><select id="f-type"><option value="">Любой</option></select></div>
+        <div class="filter-field"><label for="f-location">Район</label><select id="f-location"><option value="">Любой</option></select></div>
+        <div class="filter-field price-field"><label>Цена, € <span class="hint" id="price-caption">— без ограничения</span></label>
+          <div class="price-inputs"><span class="thou empty" id="thou-min"><span class="cur">€</span><input id="f-price-min" type="text" inputmode="numeric" placeholder="0"><i>&nbsp;000</i></span><span class="dash">—</span><span class="thou empty" id="thou-max"><span class="cur">€</span><input id="f-price-max" type="text" inputmode="numeric" placeholder="макс"><i>&nbsp;000</i></span><button class="slider-toggle" id="slider-toggle" type="button" title="Задать вилку ползунком">↔</button></div>
+          <div class="price-slider" id="price-slider"><div class="ps-track"><div class="ps-fill" id="ps-fill"></div></div><input type="range" id="ps-min" min="0" max="1000" step="10" value="0"><input type="range" id="ps-max" min="0" max="1000" step="10" value="1000"><div class="ps-scale"><span>€0</span><span>€500 000</span><span>€1 млн+</span></div></div>
+        </div>
+        <div class="filter-field"><label>Площадь, м²</label><div class="range-pair"><input id="f-area-min" type="number" min="0" step="5" placeholder="От"><span>—</span><input id="f-area-max" type="number" min="0" step="5" placeholder="До"></div></div>
+        <div class="filter-field"><label>Сортировка</label><div class="sort-icons"><button class="sort-icon" data-sort="price-asc" data-tip="Сначала дешевле" type="button">↑</button><button class="sort-icon" data-sort="price-desc" data-tip="Сначала дороже" type="button">↓</button></div></div>
+        <div class="filter-field filter-actions"><label>&nbsp;</label><button class="btn" id="btn-apply" type="button">Показать</button></div>
+      </div>
+    </div>
+
+    <section class="section catalog-results"><div class="section-head"><h2>Объекты для покупки</h2><span class="sub">включая комплексы и отдельные юниты</span><span class="count" id="listings-count"></span></div><div class="cards" id="listings"></div></section>
+    <section class="catalog-cta"><div><span>Не нашли подходящий вариант?</span><h2>Соберём подборку под вашу задачу</h2><p>Укажите бюджет, район и сроки — проверим публичные и закрытые предложения.</p></div><button class="btn" type="button" onclick="Chat.open()">Получить подборку</button></section>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="foot-brand"><img class="logo-mark" src="img/logo-mark.png" alt="Gurevic Real Estate" width="106" height="88"><div><b>DOO GUREVIC BUDVA</b> · Будва, Черногория<br><span>© 2026</span></div></div><a href="mailto:gurevicestate@icloud.com">gurevicestate@icloud.com</a></div></footer>
+<script src="js/config.js"></script><script src="js/data.js"></script><script src="js/main.js?v=20260821-1"></script><script src="js/chat.js"></script>
+</body>
+</html>
