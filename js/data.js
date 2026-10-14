@@ -653,32 +653,6 @@ const LISTINGS =
     "disclosure": "public"
   },
   {
-    "id": "bd-26-015s",
-    "objectId": "BD-26-015S",
-    "title": "Квартира 26 м² — Черногория",
-    "crmTitle": null,
-    "type": "apartment",
-    "kind": "apartment",
-    "section": "buy",
-    "deal": "sale",
-    "location": "Черногория",
-    "districtKey": "other",
-    "price": 0,
-    "priceNote": "Цена по запросу",
-    "area": 26,
-    "texts": {
-      "card": {},
-      "description": {},
-      "location": {}
-    },
-    "short": "Квартира в районе Черногория: площадь 26 м².",
-    "desc": "Квартира в районе Черногория: площадь 26 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 4,
-    "hue": 188,
-    "disclosure": "public"
-  },
-  {
     "id": "bd-26-014s",
     "objectId": "BD-26-014S",
     "title": "Квартира — Черногория",
@@ -753,31 +727,6 @@ const LISTINGS =
     "features": [],
     "photos": 4,
     "hue": 195,
-    "disclosure": "public"
-  },
-  {
-    "id": "bd-26-011s",
-    "objectId": "BD-26-011S",
-    "title": "Квартира — Бечичи",
-    "crmTitle": null,
-    "type": "apartment",
-    "kind": "apartment",
-    "section": "buy",
-    "deal": "sale",
-    "location": "Бечичи",
-    "districtKey": "becici",
-    "price": 0,
-    "priceNote": "Цена по запросу",
-    "texts": {
-      "card": {},
-      "description": {},
-      "location": {}
-    },
-    "short": "Квартира в районе Бечичи: параметры уточняются.",
-    "desc": "Квартира в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 4,
-    "hue": 296,
     "disclosure": "public"
   },
   {
