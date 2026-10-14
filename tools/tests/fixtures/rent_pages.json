@@ -1,0 +1,1110 @@
+{
+ "object": "list",
+ "results": [
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000065",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "rent-db"
+   },
+   "url": "https://www.notion.so/101",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Stan Rozino",
+        "link": null
+       },
+       "plain_text": "Stan Rozino",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RN-26-001",
+        "link": null
+       },
+       "plain_text": "RN-26-001",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Monthly Rent": {
+     "type": "number",
+     "number": 900
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 60
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 2
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Rozino, PRIVATE-STREET-R1, Budva",
+        "link": null
+       },
+       "plain_text": "Rozino, PRIVATE-STREET-R1, Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Rental Term": {
+     "type": "multi_select",
+     "multi_select": [
+      {
+       "id": "m",
+       "name": "Off-season",
+       "color": "default"
+      },
+      {
+       "id": "m",
+       "name": "Year",
+       "color": "default"
+      }
+     ]
+    },
+    "Deposit": {
+     "type": "number",
+     "number": 900
+    },
+    "Available From": {
+     "type": "date",
+     "date": {
+      "start": "2026-11-01",
+      "end": null,
+      "time_zone": null
+     }
+    },
+    "Min Term (months)": {
+     "type": "number",
+     "number": 6
+    },
+    "Utilities": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Not included",
+      "color": "default"
+     }
+    },
+    "Pets": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "By agreement",
+      "color": "default"
+     }
+    },
+    "Furnishing": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Furnished",
+      "color": "default"
+     }
+    },
+    "Photos": {
+     "type": "files",
+     "files": []
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Квартира с двумя спальнями, до начала сезона или на год.",
+        "link": null
+       },
+       "plain_text": "Квартира с двумя спальнями, до начала сезона или на год.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-R01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-R01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 001"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-R01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-R01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-R01"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-R01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-R01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Card Description EN": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Two-bedroom flat, off-season or annual lease.",
+        "link": null
+       },
+       "plain_text": "Two-bedroom flat, off-season or annual lease.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Card Description UK": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Квартира з двома спальнями.",
+        "link": null
+       },
+       "plain_text": "Квартира з двома спальнями.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000066",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "rent-db"
+   },
+   "url": "https://www.notion.so/102",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Vila Lastva",
+        "link": null
+       },
+       "plain_text": "Vila Lastva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RN-26-002",
+        "link": null
+       },
+       "plain_text": "RN-26-002",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Villa",
+      "color": "default"
+     }
+    },
+    "Monthly Rent": {
+     "type": "number",
+     "number": 2500
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 60
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 2
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Lastva Grbaljska, Kotor",
+        "link": null
+       },
+       "plain_text": "Lastva Grbaljska, Kotor",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Rental Term": {
+     "type": "multi_select",
+     "multi_select": [
+      {
+       "id": "m",
+       "name": "Year",
+       "color": "default"
+      }
+     ]
+    },
+    "Deposit": {
+     "type": "number",
+     "number": 2500
+    },
+    "Available From": {
+     "type": "date",
+     "date": {
+      "start": "2026-11-01",
+      "end": null,
+      "time_zone": null
+     }
+    },
+    "Min Term (months)": {
+     "type": "number",
+     "number": 12
+    },
+    "Utilities": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Included",
+      "color": "default"
+     }
+    },
+    "Pets": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Allowed",
+      "color": "default"
+     }
+    },
+    "Furnishing": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Furnished",
+      "color": "default"
+     }
+    },
+    "Photos": {
+     "type": "files",
+     "files": []
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-R02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-R02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 002"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-R02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-R02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-R02"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-R02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-R02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000067",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "rent-db"
+   },
+   "url": "https://www.notion.so/103",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Studio dnevni najam",
+        "link": null
+       },
+       "plain_text": "Studio dnevni najam",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RN-26-003",
+        "link": null
+       },
+       "plain_text": "RN-26-003",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Monthly Rent": {
+     "type": "number",
+     "number": 60
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 60
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 2
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Budva",
+        "link": null
+       },
+       "plain_text": "Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Rental Term": {
+     "type": "multi_select",
+     "multi_select": [
+      {
+       "id": "m",
+       "name": "Short-term",
+       "color": "default"
+      }
+     ]
+    },
+    "Deposit": {
+     "type": "number",
+     "number": 60
+    },
+    "Available From": {
+     "type": "date",
+     "date": {
+      "start": "2026-11-01",
+      "end": null,
+      "time_zone": null
+     }
+    },
+    "Min Term (months)": {
+     "type": "number",
+     "number": 6
+    },
+    "Utilities": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Not included",
+      "color": "default"
+     }
+    },
+    "Pets": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "By agreement",
+      "color": "default"
+     }
+    },
+    "Furnishing": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Furnished",
+      "color": "default"
+     }
+    },
+    "Photos": {
+     "type": "files",
+     "files": []
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-R03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-R03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 003"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-R03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-R03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-R03"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-R03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-R03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000068",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "rent-db"
+   },
+   "url": "https://www.notion.so/104",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Iznajmljen stan",
+        "link": null
+       },
+       "plain_text": "Iznajmljen stan",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RN-26-004",
+        "link": null
+       },
+       "plain_text": "RN-26-004",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Monthly Rent": {
+     "type": "number",
+     "number": 700
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 60
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 2
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Bečići",
+        "link": null
+       },
+       "plain_text": "Bečići",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Rented",
+      "color": "green"
+     }
+    },
+    "Rental Term": {
+     "type": "multi_select",
+     "multi_select": [
+      {
+       "id": "m",
+       "name": "Year",
+       "color": "default"
+      }
+     ]
+    },
+    "Deposit": {
+     "type": "number",
+     "number": 700
+    },
+    "Available From": {
+     "type": "date",
+     "date": {
+      "start": "2026-11-01",
+      "end": null,
+      "time_zone": null
+     }
+    },
+    "Min Term (months)": {
+     "type": "number",
+     "number": 6
+    },
+    "Utilities": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Not included",
+      "color": "default"
+     }
+    },
+    "Pets": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "By agreement",
+      "color": "default"
+     }
+    },
+    "Furnishing": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Furnished",
+      "color": "default"
+     }
+    },
+    "Photos": {
+     "type": "files",
+     "files": []
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-R04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-R04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 004"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-R04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-R04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-R04"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-R04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-R04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "has_more": false,
+ "next_cursor": null
+}

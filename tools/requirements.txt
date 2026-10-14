@@ -1,0 +1,4 @@
+# Site generator + image derivatives (Python ≥ 3.11). Install: pip install -r tools/requirements.txt
+Jinja2==3.1.6
+MarkupSafe>=2.1,<4
+Pillow==12.3.0

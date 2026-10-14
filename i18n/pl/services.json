@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Usługi agencji nieruchomości w Budvie | GUREVIĆ",
+    "description": "Kupno, wynajem długoterminowy, inwestycje i obsługa właścicieli w Czarnogórze: wyszukiwanie ofert, prezentacje, weryfikacja dokumentów i obsługa transakcji."
+  },
+  "h1": "Usługi agencji",
+  "kicker": "Czym się zajmujemy",
+  "lead": "Cztery kierunki pracy — dla kupujących, najemców, inwestorów i właścicieli. W każdym obowiązuje jasna kolejność kroków i pisemne umowy.",
+  "directions": {
+    "title": "Kierunki",
+    "sub": "Prosimy wybrać swój — każda sekcja ma własne oferty, pytania i formularz zapytania.",
+    "buy": {
+      "title": "Kupno",
+      "intro": "Mieszkania, domy, wille i działki pod budowę domu w Budvie i na wybrzeżu Czarnogóry.",
+      "items": {
+        "select": "Wyszukiwanie ofert według Państwa wymagań i budżetu",
+        "viewings": "Organizacja prezentacji",
+        "documents": "Weryfikacja dokumentów wspólnie z partnerskimi prawnikami",
+        "deal": "Obsługa transakcji aż do podpisania umowy"
+      },
+      "link": "Nieruchomości na sprzedaż"
+    },
+    "rent": {
+      "title": "Wynajem długoterminowy",
+      "intro": "Mieszkania i domy do początku sezonu lub na cały rok.",
+      "items": {
+        "select": "Wyszukiwanie według lokalizacji, okresu najmu i budżetu",
+        "viewings": "Organizacja prezentacji",
+        "terms": "Uzgadnianie warunków z właścicielem: kaucja, media, zwierzęta",
+        "contract": "Pomoc przy umowie najmu"
+      },
+      "note": "Wynajem krótkoterminowy jest w przygotowaniu.",
+      "link": "Nieruchomości na wynajem"
+    },
+    "invest": {
+      "title": "Inwestycje",
+      "intro": "Hotele, grunty inwestycyjne, nieruchomości komercyjne i projekty budowlane.",
+      "items": {
+        "select": "Wyszukiwanie aktywów pod założenia inwestycyjne",
+        "legal": "Wstępna obsługa prawna",
+        "handover": "Przekazanie sprawy specjalistom na kolejnych etapach",
+        "partners": "Partnerzy z licencjami na projektowanie i budowę"
+      },
+      "note": "Poufnie; w razie potrzeby NDA.",
+      "link": "Inwestycje w Czarnogórze"
+    },
+    "owners": {
+      "title": "Dla właścicieli",
+      "intro": "Sprzedaż i wynajem mieszkań, domów, działek, projektów budowlanych i działających firm.",
+      "items": {
+        "valuation": "Wycena nieruchomości",
+        "photo": "Sesja zdjęciowa",
+        "contract": "Sprzedaż lub wynajem na podstawie pisemnej umowy",
+        "management": "Zarządzanie nieruchomością po uzgodnieniu"
+      },
+      "note": "Prowizja agencji: 5% (bez VAT); pozostałe warunki do uzgodnienia.",
+      "link": "Dla właścicieli"
+    }
+  },
+  "steps": {
+    "title": "Jak zaczynamy",
+    "items": {
+      "request": {
+        "title": "Zapytanie",
+        "text": "Wystarczy wysłać zapytanie przez stronę, napisać do nas lub zadzwonić."
+      },
+      "talk": {
+        "title": "Rozmowa",
+        "text": "Doprecyzowujemy zadanie, termin i budżet oraz odpowiadamy na pierwsze pytania."
+      },
+      "agreement": {
+        "title": "Umowa",
+        "text": "Warunki współpracy zapisujemy na piśmie przed rozpoczęciem pracy."
+      },
+      "work": {
+        "title": "Praca w wybranym kierunku",
+        "text": "Wyszukiwanie, prezentacje, weryfikacja, transakcja — z udziałem partnerów tam, gdzie to potrzebne."
+      }
+    }
+  },
+  "residency": {
+    "kicker": "Warto wiedzieć",
+    "title": "Nieruchomość a pobyt czasowy",
+    "text": "Dla obywateli państw trzecich, których nie obejmują wyjątki ustawowe, nieruchomość o urzędowej wartości podatkowej co najmniej {amount} może stanowić podstawę pobytu czasowego, o ile spełnione są pozostałe wymogi prawne. Warunki sprawdzamy na dzień złożenia wniosku.",
+    "link": "Aktualne zmiany w ustawie o cudzoziemcach",
+    "link_note": "w języku czarnogórskim",
+    "disclaimer": "Informacje na tej stronie nie stanowią porady prawnej."
+  },
+  "form": {
+    "kicker": "Kontakt",
+    "title": "Porozmawiajmy o Państwa planach",
+    "text": "Prosimy opisać, czego Państwo szukają lub co chcą sprzedać — odpowiemy w sposób, który Państwu odpowiada. Można też napisać do nas bezpośrednio.",
+    "form_title": "Zapytanie",
+    "messengers": "Lub prosimy napisać bezpośrednio"
+  }
+}

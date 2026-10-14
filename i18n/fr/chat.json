@@ -1,0 +1,101 @@
+{
+  "js": {
+    "fab_open": "Ouvrir le chat : trouver un bien",
+    "fab_close": "Réduire le chat",
+    "title": "Assistant GUREVIĆ",
+    "subtitle": "Nous recueillons votre demande et la transmettons à un agent",
+    "avatar": "GR",
+    "close": "Fermer le chat",
+    "restart": "Recommencer",
+    "input_label": "Votre message",
+    "input_placeholder": "Écrivez votre réponse…",
+    "send": "Envoyer",
+    "you": "Vous",
+    "bot": "Assistant",
+    "q": {
+      "goal": "Bonjour, je peux vous aider à formuler votre demande — un agent la recevra et vous recontactera. Qu’est-ce qui vous intéresse ?",
+      "type": "Quel type de bien envisagez-vous ?",
+      "type_sell": "Quel type de bien avez-vous ?",
+      "budget_buy": "Quel est votre budget approximatif ? Choisissez une option ou indiquez le vôtre.",
+      "budget_rent": "Quel est votre budget mensuel ? Choisissez une option ou indiquez le vôtre.",
+      "budget_invest": "Quel montant d’investissement envisagez-vous ?",
+      "price_sell": "Avez-vous un prix de vente en tête ? Indiquez-le ou passez cette question.",
+      "district": "Un secteur de préférence ?",
+      "district_sell": "Où se trouve le bien ?",
+      "contact": "Merci. Laissez un numéro de téléphone, un @telegram ou un e-mail : l’agent vous enverra une sélection et répondra à vos questions.",
+      "contact_invalid": "Je n’ai pas reconnu de contact. Indiquez un numéro au format +382…, un nom d’utilisateur Telegram (@username) ou un e-mail.",
+      "name": "Comment devons-nous vous appeler ?",
+      "confirm": "Vérifiez votre demande :",
+      "free_note": "Je l’ai ajouté à votre demande."
+    },
+    "o": {
+      "goal": {
+        "buy": "Acheter",
+        "rent": "Louer en longue durée",
+        "invest": "Investir",
+        "sell": "Vendre ou louer mon bien",
+        "browse": "Je regarde pour l’instant"
+      },
+      "type": {
+        "apartment": "Appartement",
+        "house": "Maison ou villa",
+        "land": "Terrain",
+        "hotel": "Hôtel",
+        "commercial": "Restaurant ou commerce",
+        "development": "Programme immobilier",
+        "construction_project": "Bien en construction",
+        "business": "Entreprise en activité",
+        "undecided": "Je ne sais pas encore"
+      },
+      "budget": {
+        "b_lt150": "jusqu’à 150 000 €",
+        "b_150_300": "150–300 k€",
+        "b_300_700": "300–700 k€",
+        "b_gt700": "700 k€ et plus",
+        "r_lt800": "jusqu’à 800 €",
+        "r_800_1500": "800–1 500 €",
+        "r_gt1500": "1 500 € et plus",
+        "lt_500k": "jusqu’à 500 k€",
+        "500k_2m": "500 k€ – 2 M€",
+        "2m_10m": "2–10 M€",
+        "10m_50m": "10–50 M€",
+        "gt_50m": "plus de 50 M€"
+      },
+      "district": {
+        "budva": "Budva",
+        "becici": "Bečići / Rafailovići",
+        "sveti_stefan": "Pržno / Sveti Stefan",
+        "petrovac": "Petrovac",
+        "boka": "Tivat / Kotor",
+        "any": "Peu importe"
+      },
+      "skip": "Passer"
+    },
+    "summary": {
+      "goal": "Objectif",
+      "type": "Bien",
+      "budget": "Budget",
+      "price": "Prix souhaité",
+      "district": "Secteur",
+      "contact": "Contact",
+      "name": "Nom",
+      "notes": "Précisions"
+    },
+    "consent_text": "En cliquant sur « Envoyer à l’agent », vous acceptez le traitement de vos données afin de répondre à cette demande.",
+    "consent_link": "Politique de confidentialité",
+    "submit": "Envoyer à l’agent",
+    "edit": "Recommencer",
+    "sending": "Envoi…",
+    "sent": "C’est fait : votre demande a été transmise à un agent, qui vous contactera. Si vous préférez, écrivez directement :",
+    "fallback": "L’envoi en ligne n’est pas disponible pour le moment, mais votre demande est prête. Envoyez-la en un clic :",
+    "after": "Pour poursuivre la conversation, écrivez directement à l’agent :",
+    "copied": "Le texte de la demande a été copié : collez-le dans la conversation.",
+    "copy_failed": "Impossible de copier le texte.",
+    "lead_title": "Demande via le chat du site Gurevic Real Estate",
+    "email_subject": "Demande via le chat du site",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "copy": "Copier le texte"
+  }
+}

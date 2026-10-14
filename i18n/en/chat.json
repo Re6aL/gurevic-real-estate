@@ -1,0 +1,101 @@
+{
+  "js": {
+    "fab_open": "Open chat: find a property",
+    "fab_close": "Minimise chat",
+    "title": "GUREVIĆ assistant",
+    "subtitle": "We collect your request and pass it to an agent",
+    "avatar": "GR",
+    "close": "Close chat",
+    "restart": "Start over",
+    "input_label": "Your message",
+    "input_placeholder": "Type your answer…",
+    "send": "Send",
+    "you": "You",
+    "bot": "Assistant",
+    "q": {
+      "goal": "Hello, I can help you put together a request — an agent will receive it and get in touch. What are you interested in?",
+      "type": "What kind of property are you considering?",
+      "type_sell": "What kind of property do you have?",
+      "budget_buy": "What is your approximate budget? Choose an option or type your own.",
+      "budget_rent": "What is your monthly budget? Choose an option or type your own.",
+      "budget_invest": "What investment size are you considering?",
+      "price_sell": "Do you have an asking price in mind? Type it or skip this question.",
+      "district": "Any preferred area?",
+      "district_sell": "Where is the property located?",
+      "contact": "Thank you. Please leave a phone number, @telegram or email — the agent will send a selection and answer your questions.",
+      "contact_invalid": "I could not recognise a contact. Please enter a phone number as +382…, a Telegram username (@username) or an email.",
+      "name": "How should we address you?",
+      "confirm": "Please check your request:",
+      "free_note": "Added this to your request."
+    },
+    "o": {
+      "goal": {
+        "buy": "Buy",
+        "rent": "Rent long-term",
+        "invest": "Invest",
+        "sell": "Sell or rent out my property",
+        "browse": "Just looking for now"
+      },
+      "type": {
+        "apartment": "Apartment",
+        "house": "House or villa",
+        "land": "Land plot",
+        "hotel": "Hotel",
+        "commercial": "Restaurant or commercial",
+        "development": "Development project",
+        "construction_project": "Property under construction",
+        "business": "Operating business",
+        "undecided": "Not decided yet"
+      },
+      "budget": {
+        "b_lt150": "up to €150,000",
+        "b_150_300": "€150–300K",
+        "b_300_700": "€300–700K",
+        "b_gt700": "€700K and above",
+        "r_lt800": "up to €800",
+        "r_800_1500": "€800–1,500",
+        "r_gt1500": "€1,500 and above",
+        "lt_500k": "up to €500K",
+        "500k_2m": "€500K – €2M",
+        "2m_10m": "€2–10M",
+        "10m_50m": "€10–50M",
+        "gt_50m": "over €50M"
+      },
+      "district": {
+        "budva": "Budva",
+        "becici": "Bečići / Rafailovići",
+        "sveti_stefan": "Pržno / Sveti Stefan",
+        "petrovac": "Petrovac",
+        "boka": "Tivat / Kotor",
+        "any": "No preference"
+      },
+      "skip": "Skip"
+    },
+    "summary": {
+      "goal": "Goal",
+      "type": "Property",
+      "budget": "Budget",
+      "price": "Asking price",
+      "district": "District",
+      "contact": "Contact",
+      "name": "Name",
+      "notes": "Additional notes"
+    },
+    "consent_text": "By pressing “Send to agent” you agree to the processing of your data in order to respond to this request.",
+    "consent_link": "Privacy policy",
+    "submit": "Send to agent",
+    "edit": "Start over",
+    "sending": "Sending…",
+    "sent": "Done — your request has been passed to an agent, who will contact you. If you prefer, write directly:",
+    "fallback": "Online sending is not available right now, but your request is ready. Send it with one tap:",
+    "after": "To continue the conversation, write to the agent directly:",
+    "copied": "The request text has been copied — paste it into the chat.",
+    "copy_failed": "Could not copy the text.",
+    "lead_title": "Chat request from the Gurevic Real Estate website",
+    "email_subject": "Website chat request",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "Email",
+    "copy": "Copy text"
+  }
+}

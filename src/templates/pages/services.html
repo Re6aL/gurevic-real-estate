@@ -1,0 +1,95 @@
+{#- Услуги: четыре направления со ссылками, «как начинается работа», заметка о ВНЖ
+    (формулировка со старой главной + ссылка на sluzbenilist.me), форма обратной связи. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/forms.html" as forms %}
+{% set c = site.contacts %}
+{% set DIRECTIONS = [
+  ('buy', 'buy', 'key', ['select', 'viewings', 'documents', 'deal']),
+  ('rent', 'rent', 'calendar', ['select', 'viewings', 'terms', 'contract']),
+  ('invest', 'invest', 'building', ['select', 'legal', 'handover', 'partners']),
+  ('owners', 'owners', 'document', ['valuation', 'photo', 'contract', 'management']),
+] %}
+
+{% block main %}
+<header class="info-hero">
+  <div class="container">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="info-kicker">{{ t('services.kicker') }}</span>
+    <h1>{{ page.h1 }}</h1>
+    <p class="info-lead">{{ t('services.lead') }}</p>
+  </div>
+</header>
+
+<section class="info-section" aria-labelledby="services-directions">
+  <div class="container">
+    {{ ui.section_head(t('services.directions.title'), sub=t('services.directions.sub'), id='services-directions') }}
+    <ul class="direction-grid">
+      {% for key, route_key, icon_name, items in DIRECTIONS %}
+      {% set base = 'services.directions.' ~ key %}
+      <li class="direction" id="dir-{{ key }}">
+        <div class="direction__head">
+          <span class="direction__icon">{{ ui.icon(icon_name, size=24) }}</span>
+          <h3>{{ t(base ~ '.title') }}</h3>
+        </div>
+        <p class="direction__intro">{{ t(base ~ '.intro') }}</p>
+        <ul class="check-list">
+          {% for item in items %}
+          <li>{{ ui.icon('check', size=18) }}<span>{{ t(base ~ '.items.' ~ item) }}</span></li>
+          {% endfor %}
+        </ul>
+        {% if t_has(base ~ '.note') %}
+        <p class="direction__note">{{ t(base ~ '.note') }}</p>
+        {% endif %}
+        <a class="direction__link" href="{{ url(route_key) }}">{{ t(base ~ '.link') }}{{ ui.icon('arrow-right', size=18) }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="info-section info-section--soft" aria-labelledby="services-steps">
+  <div class="container">
+    {{ ui.section_head(t('services.steps.title'), id='services-steps') }}
+    <ol class="steps">
+      {% for key in ['request', 'talk', 'agreement', 'work'] %}
+      <li class="step">
+        <span class="step__num" aria-hidden="true">{{ loop.index }}</span>
+        <h3>{{ t('services.steps.items.' ~ key ~ '.title') }}</h3>
+        <p>{{ t('services.steps.items.' ~ key ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="info-section" aria-labelledby="services-residency">
+  <div class="container">
+    <div role="note" class="note-card" aria-labelledby="services-residency">
+      <span class="kicker">{{ t('services.residency.kicker') }}</span>
+      <h2 id="services-residency">{{ t('services.residency.title') }}</h2>
+      <p>{{ t('services.residency.text', amount=fmt_price(150000)) }}</p>
+      <p class="note-card__link">
+        <a href="https://www.sluzbenilist.me/propisi/389913" hreflang="sr-Latn-ME"{{ ui.external_attrs() }}>{{ t('services.residency.link') }}{{ ui.icon('external', size=16) }}</a>
+        <span class="info-muted-inline">({{ t('services.residency.link_note') }})</span>
+      </p>
+      <p class="note-card__disclaimer">{{ ui.icon('info', size=18) }}<span>{{ t('services.residency.disclaimer') }}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section info-section--soft" aria-labelledby="services-form">
+  <div class="container form-layout">
+    <div class="form-layout__aside">
+      <span class="kicker">{{ t('services.form.kicker') }}</span>
+      <h2 id="services-form">{{ t('services.form.title') }}</h2>
+      <p>{{ t('services.form.text') }}</p>
+      <p class="form-layout__label">{{ t('services.form.messengers') }}</p>
+      {{ ui.contact_list(c, 'contact-tiles') }}
+    </div>
+    <div class="form-layout__form">
+      {{ forms.contact_form(heading=t('services.form.form_title'), heading_level=3) }}
+    </div>
+  </div>
+</section>
+{% endblock %}

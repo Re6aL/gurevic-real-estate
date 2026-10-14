@@ -1,0 +1,121 @@
+{#- Карточки объектов. Импорт: {% import "macros/cards.html" as cards %}
+    cards.card(l, heading=3, sizes=…, loading='lazy')   — карточка каталога (buy/rent)
+    cards.card_compact(l, heading=3, …)                 — компактная (подстраницы invest, «похожие»)
+    cards.price(l), cards.badges(l), cards.data_attrs(l), cards.price_per_m2(l)
+    Заголовок карточки — listing_name(l): у квартир/домов/вилл/участков это сгенерированный
+    локализованный заголовок («Квартира 56 м² — Ластва Грбальска»; CRM-название не показываем —
+    в нём бывают имена владельцев), у проектов строительства — имя проекта.
+    Тексты карточки обёрнуты в <bdi>: на иврите латинские названия/английский fallback не «переворачиваются».
+    Разметка пре-рендерится; data-* — для фильтров/сортировки в js/catalog.js:
+      data-id data-object-id data-section data-type (= kind) data-kind data-category data-district
+      data-price (0 = по запросу; у аренды — в месяц) data-area data-bedrooms data-terms. -#}
+{% import "macros/ui.html" as ui %}
+
+{% macro data_attrs(l) -%}
+ data-id="{{ l.id }}"{% if l.object_id %} data-object-id="{{ l.object_id }}"{% endif %} data-section="{{ l.section }}" data-type="{{ l.kind }}" data-kind="{{ l.kind }}" data-category="{{ l.category or '' }}" data-district="{{ l.district }}" data-price="{{ l.price or 0 }}" data-area="{{ (l.land_area or l.area) if l.kind == 'land' else (l.area or l.land_area or '') }}" data-bedrooms="{{ l.bedrooms or '' }}"{% if l.rent and l.rent.terms %} data-terms="{{ l.rent.terms | join(' ') }}"{% endif %}
+{%- endmacro %}
+
+{#- Бейджи на фото: тип, «Проект», «Конфиденциально». «Цена по запросу» — только строкой цены (без дубля-бейджа). -#}
+{% macro badges(l) -%}
+<div class="badge-row">
+  <span class="badge">{{ t('common.types.' ~ l.kind) }}</span>
+  {% if l.kind == 'development' %}<span class="badge badge-gold">{{ t('common.badges.project') }}</span>{% endif %}
+  {% if l.confidential %}<span class="badge badge-gold">{{ ui.icon('lock', size=12) }}{{ t('common.badges.confidential') }}</span>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro price(l) -%}
+{%- if l.confidential and l.price -%}
+{{ t('common.price.indicative', price=fmt_price(l.price)) }}
+{%- else -%}
+{{ fmt_price(l.price, per_month=(l.section == 'rent')) }}
+{%- endif -%}
+{%- endmacro %}
+
+{#- €/м² — только для продажи с известной ценой и площадью (у проекта площадь — одного варианта, не показываем) -#}
+{% macro price_per_m2(l) -%}
+{%- set _area = (l.land_area or l.area) if l.kind == 'land' else l.area -%}
+{%- if l.price and _area and not l.confidential and l.section != 'rent' and l.kind != 'development' -%}
+{{ fmt_num((l.price / _area) | round | int) }}&nbsp;{{ t('common.units.eur_per_m2') }}
+{%- endif -%}
+{%- endmacro %}
+
+{#- Фото или иллюстрация + подпись «Иллюстрация», если это не фото объекта -#}
+{% macro _media(l, name, sizes, loading) -%}
+{% if l.images %}
+{{ img(l.images[0], t('common.alt.listing_photo', name=name), sizes=sizes, cls='listing-image card-image', loading=loading) }}
+{% else %}
+{{ img(l.illustration, t('common.alt.illustration', type=type_name(l.kind)), sizes=sizes, cls='listing-image card-image listing-illustration', loading=loading) }}
+<span class="card-illustration-tag">{{ t('common.badges.illustration') }}</span>
+{% endif %}
+{%- endmacro %}
+
+{% macro _location(l) -%}
+<div class="card-loc">{{ ui.icon('pin', size=16) }}<bdi>{{ district_name(l.district) if not l.confidential else t('common.regions.' ~ l.region) }}</bdi></div>
+{%- endmacro %}
+
+{#- Текст карточки показываем, только если он свой (из CRM на этом языке) или это пояснение
+    конфиденциального объекта: сгенерированный текст лишь повторяет параметры карточки. -#}
+{% macro _short(l) -%}
+{% set text = listing_card(l) %}
+{% if l.confidential or text in l.texts.card.values() %}
+<p class="card-short"><bdi>{{ text }}</bdi></p>
+{% endif %}
+{%- endmacro %}
+
+{% macro card(l, heading=3, sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px', loading='lazy') -%}
+{% set href = url('property', listing=l) %}
+{% set name = listing_name(l) %}
+{% set per_m2 = price_per_m2(l) %}
+<article class="card{% if l.confidential %} card--confidential{% endif %}"{{ data_attrs(l) }}>
+  <a class="card-media" href="{{ href }}" tabindex="-1" aria-hidden="true">
+    {{ badges(l) }}
+    {{ _media(l, name, sizes, loading) }}
+  </a>
+  <div class="card-body">
+    <div class="card-top">
+      <div class="card-price{% if not l.price %} card-price--request{% endif %}"><bdi>{{ price(l) }}</bdi></div>
+      {% if l.object_id %}<span class="card-id"><bdi dir="ltr">{{ l.object_id }}</bdi></span>{% endif %}
+    </div>
+    {% if per_m2 %}
+    <div class="card-price-meter"><bdi>{{ per_m2 }}</bdi></div>
+    {% endif %}
+    <h{{ heading }} class="card-title"><a href="{{ href }}"><bdi>{{ name }}</bdi></a></h{{ heading }}>
+    {{ _location(l) }}
+    {% set params = listing_params(l) %}
+    {% if params and not l.confidential %}
+    <ul class="card-params">
+      {% for icon_name, text in params %}
+      <li>{{ ui.icon(icon_name, size=16) }}<bdi>{{ text }}</bdi></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if l.section == 'rent' and l.rent and l.rent.terms %}
+    <ul class="card-terms">
+      {% for term in l.rent.terms %}<li>{{ t('common.rental_terms.' ~ term) }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {{ _short(l) }}
+    {#- Один Tab-стоп на карточку: фокус и имя ссылки — у заголовка; «Подробнее» — дубль для мыши/касания -#}
+    <div class="card-actions"><a class="btn btn-navy" href="{{ href }}" tabindex="-1" aria-hidden="true">{{ t('common.buttons.details') }}</a></div>
+  </div>
+</article>
+{%- endmacro %}
+
+{#- Компактная: горизонтальная на широких экранах, без описания и кнопки (вся карточка — одна ссылка через заголовок) -#}
+{% macro card_compact(l, heading=3, sizes='(max-width: 640px) 100vw, 220px', loading='lazy') -%}
+{% set href = url('property', listing=l) %}
+{% set name = listing_name(l) %}
+<article class="card card--compact{% if l.confidential %} card--confidential{% endif %}"{{ data_attrs(l) }}>
+  <a class="card-media" href="{{ href }}" tabindex="-1" aria-hidden="true">
+    {{ _media(l, name, sizes, loading) }}
+  </a>
+  <div class="card-body">
+    <div class="card-kicker">{{ t('common.types.' ~ l.kind) }}{% if l.confidential %} · {{ t('common.badges.confidential') }}{% endif %}</div>
+    <h{{ heading }} class="card-title"><a class="card-link" href="{{ href }}"><bdi>{{ name }}</bdi></a></h{{ heading }}>
+    {{ _location(l) }}
+    <div class="card-price{% if not l.price %} card-price--request{% endif %}"><bdi>{{ price(l) }}</bdi></div>
+    {% if l.confidential and l.price %}<p class="card-note">{{ t('common.price.preliminary') }}</p>{% endif %}
+  </div>
+</article>
+{%- endmacro %}

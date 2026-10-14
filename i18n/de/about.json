@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Ilia Gurevich – Immobilienmakler in Budva | GUREVIĆ",
+    "description": "Ilia Gurevich ist Gründer der Immobilienagentur DOO GUREVIC BUDVA und Ihr persönlicher Makler. Im dritten Jahr auf dem Immobilienmarkt Montenegros."
+  },
+  "h1": "Ilia Gurevich und die Agentur GUREVIĆ",
+  "kicker": "Über uns",
+  "lead": "Eine Immobilienagentur in Budva, geführt von ihrem Gründer. Sie haben einen Ansprechpartner – von der ersten Frage bis zur Unterzeichnung der Dokumente.",
+  "portrait": {
+    "monogram": "IG",
+    "name": "Ilia Gurevich",
+    "role": "Gründer und Makler, DOO GUREVIC BUDVA",
+    "alt": "Ilia Gurevich, Gründer der Immobilienagentur GUREVIĆ in Budva",
+    "pending": "Foto folgt in Kürze"
+  },
+  "who": {
+    "title": "Mit wem Sie zusammenarbeiten",
+    "p1": "Ilia Gurevich ist Gründer von DOO GUREVIC BUDVA und Immobilienmakler. Telefon, WhatsApp und Telegram der Agentur sind seine persönlichen Kontakte – Sie sprechen also in jeder Phase direkt mit ihm.",
+    "p2": "Aufgaben außerhalb der Maklertätigkeit – rechtliche Prüfung, Planung und Bau – übernehmen Partner: Anwälte sowie lizenzierte Planer und Bauunternehmen. Wir stellen den Kontakt her und übergeben die Aufgabe mit allen bereits gesammelten Informationen."
+  },
+  "market": {
+    "title": "Unser drittes Jahr in Montenegro",
+    "p1": "Die Agentur ist im dritten Jahr auf dem Immobilienmarkt Montenegros tätig. Schwerpunkt sind Budva und die Budva-Riviera; im Katalog finden sich auch Objekte in anderen Städten des Landes.",
+    "p2": "Der Katalog auf dieser Website wird automatisch aus der Arbeitsdatenbank der Agentur aktualisiert. Vertrauliche Investitionsangebote werden anonymisiert veröffentlicht."
+  },
+  "format": {
+    "title": "Ein neues Arbeitsformat",
+    "intro": "Die Agentur arbeitet jetzt in einem neuen Format. In der Praxis bedeutet das Folgendes.",
+    "items": {
+      "directions": {
+        "title": "Vier getrennte Bereiche",
+        "text": "Käufer, Mieter, Anleger und Eigentümer verfolgen unterschiedliche Ziele. Deshalb hat jede Gruppe auf der Website einen eigenen Bereich, eigene Fragen und ein eigenes Anfrageformular."
+      },
+      "agreements": {
+        "title": "Schriftliche Vereinbarungen",
+        "text": "Die Konditionen halten wir in einem schriftlichen Vertrag nach montenegrinischem Recht fest – vor Beginn der Arbeit, nicht erst unterwegs."
+      },
+      "partners": {
+        "title": "Partner für Fachaufgaben",
+        "text": "Die erste rechtliche Begleitung übernehmen wir selbst. Vertiefte rechtliche Prüfung, Planung und Bau liegen bei Anwälten und lizenzierten Fachleuten – was über die Rolle der Agentur hinausgeht, übergeben wir an sie."
+      },
+      "honest": {
+        "title": "Nur bekannte Fakten",
+        "text": "Wir sagen Ihnen, was über eine Immobilie bekannt ist: Unterlagen, Zustand, Konditionen. Vorläufige Zahlen kennzeichnen wir als vorläufig und noch zu prüfen."
+      }
+    }
+  },
+  "languages": {
+    "title": "Sprachen",
+    "text": "Wir beraten auf Russisch, Englisch und Montenegrinisch. Die Website gibt es in weiteren Sprachen, Korrespondenz und Treffen finden jedoch in einer dieser drei Sprachen statt.",
+    "list": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski"
+    }
+  },
+  "legal": {
+    "title": "Unternehmensdaten",
+    "company_label": "Unternehmen",
+    "city_label": "Ort",
+    "city": "Budva, Montenegro",
+    "founder_label": "Gründer",
+    "founder": "Ilia Gurevich",
+    "founder_local_html": "in Montenegro eingetragen als {name}",
+    "meetings": "Treffen nach Vereinbarung."
+  },
+  "cta": {
+    "title": "Erzählen Sie uns, was Sie suchen",
+    "text": "Schreiben Sie uns über Ihren bevorzugten Messenger oder rufen Sie an. Wobei genau wir helfen können, lesen Sie auf der Seite „Leistungen“.",
+    "services": "Leistungen der Agentur",
+    "contact": "Alle Kontakte"
+  },
+  "jsonld": {
+    "job_title": "Gründer und Immobilienmakler"
+  }
+}

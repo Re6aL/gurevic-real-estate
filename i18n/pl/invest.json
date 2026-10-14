@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Inwestycje w nieruchomości w Czarnogórze | GUREVIĆ",
+    "description": "Hotele, grunty inwestycyjne, restauracje, magazyny i nieruchomości komercyjne w Czarnogórze. Poufny dobór, NDA na życzenie, wstępna obsługa prawna."
+  },
+  "h1": "Możliwości inwestycyjne w Czarnogórze",
+  "hero": {
+    "kicker": "Poufny dobór dla inwestorów",
+    "lead": "Hotele, grunty inwestycyjne, działające restauracje i nieruchomości komercyjne, magazyny i logistyka. Dobieramy aktywa pod założenia inwestora i ujawniamy szczegóły po kwalifikacji zapytania.",
+    "sub": "Projektowanie i budowa — z licencjonowanymi partnerami. Wstępną obsługę prawną prowadzimy sami, a następnie przekazujemy projekt wyspecjalizowanym ekspertom.",
+    "cta": "Porozmawiajmy o inwestycji",
+    "image_alt": "Wybrzeże Czarnogóry o zachodzie słońca: góry, zatoka i stare miasto w oddali"
+  },
+  "focus": {
+    "kicker": "Klasy aktywów",
+    "title": "Obszary inwestycji",
+    "sub": "Cztery obszary, w których działamy. Na ich stronach opisujemy, co sprawdzamy przed transakcją i jakie aktywa mamy obecnie w ofercie.",
+    "more": "Dowiedz się więcej",
+    "items": {
+      "hotels": {
+        "title": "Hotele",
+        "text": "Działające hotele i budynki nadające się do funkcji hotelowej na wybrzeżu.",
+        "alt": "Taras butikowego hotelu z basenem nad zatoką — ilustracja"
+      },
+      "land": {
+        "title": "Grunty inwestycyjne",
+        "text": "Grunty pod zabudowę komercyjną: hotele, apartamenty, logistykę.",
+        "alt": "Nadmorska działka na zboczu z drzewami oliwnymi — ilustracja"
+      },
+      "commercial": {
+        "title": "Działające restauracje i nieruchomości komercyjne",
+        "text": "Restauracje, lokale handlowe i biurowe, działające firmy wraz z zespołem.",
+        "alt": "Taras restauracji z widokiem na morze — ilustracja"
+      },
+      "logistics": {
+        "title": "Magazyny i logistyka",
+        "text": "Budynki magazynowe i obiekty logistyczne z dobrym dojazdem.",
+        "alt": "Nowoczesny magazyn z rampami załadunkowymi — ilustracja"
+      }
+    },
+    "development": {
+      "title": "Projekty deweloperskie",
+      "text": "Projekty w budowie na wybrzeżu i partnerstwa deweloperskie.",
+      "link": "Zobacz projekty"
+    }
+  },
+  "cases": {
+    "kicker": "Illustrative Investment Cases",
+    "kicker_lang": "en",
+    "title": "Poglądowe przykłady inwestycyjne",
+    "sub": "Cztery zanonimizowane przykłady, które pokazują skalę i charakter dostępnych możliwości.",
+    "disclaimer_label": "Ważne",
+    "disclaimer": "Przykłady są zanonimizowane i nie stanowią oferty publicznej. Dokładne adresy i dane identyfikujące nie są ujawniane. Wszystkie dane liczbowe są wstępne: pochodzą od sprzedających lub z rynkowych punktów odniesienia i wymagają weryfikacji w ramach due diligence.",
+    "preliminary": "Wstępnie, wymaga weryfikacji",
+    "cta": "Zapytaj o szczegóły",
+    "million": "{n} mln €",
+    "per_m2": "{price} za m²",
+    "about": "ok. {price}",
+    "from": "od {price}",
+    "labels": {
+      "area": "Powierzchnia",
+      "land_area": "Powierzchnia działki",
+      "price_guide": "Cena orientacyjna",
+      "value_guide": "Wartość orientacyjna",
+      "profit_declared": "Roczny zysk deklarowany przez sprzedającego",
+      "build_cost": "Orientacyjny koszt budowy",
+      "sales_prices": "Ceny sprzedaży w okolicy",
+      "potential": "Potencjał",
+      "format": "Charakter"
+    },
+    "items": {
+      "hotel": {
+        "type": "Hotel",
+        "title": "Hotel, Budva",
+        "note": "Zysk podany według deklaracji sprzedającego; niezweryfikowany."
+      },
+      "land": {
+        "type": "Grunt inwestycyjny",
+        "title": "Grunt inwestycyjny, Buljarica",
+        "note": "Ceny sprzedaży to rynkowy punkt odniesienia dla okolicy, a nie prognoza zwrotu."
+      },
+      "coastal": {
+        "type": "Teren inwestycyjny",
+        "title": "Nadmorski teren inwestycyjny",
+        "potential": "zabudowa hotelowa i wielofunkcyjna",
+        "note": "Dopuszczalna skala zabudowy zależy od warunków urbanistycznych, które sprawdzamy w ramach due diligence."
+      },
+      "restaurant": {
+        "type": "Restauracja",
+        "title": "Działająca restauracja",
+        "format": "działający biznes z zespołem i stałymi klientami",
+        "note": "Wyniki finansowe przekazujemy na zapytanie — według danych sprzedającego, które następnie weryfikujemy."
+      }
+    }
+  },
+  "support": {
+    "kicker": "Partnerzy",
+    "title": "Wsparcie inwestycji deweloperskich",
+    "lead": "Gdy projekt wymaga projektowania i budowy, angażujemy partnerów z licencjami w Czarnogórze. Jasno określamy własną rolę: wstępna obsługa prawna i koordynacja na starcie.",
+    "image_alt": "Betonowa konstrukcja budynku z żurawiami nad morzem — ilustracja",
+    "items": {
+      "legal": {
+        "title": "Wstępna obsługa prawna",
+        "text": "Zamawiamy i porównujemy podstawowe dokumenty dotyczące aktywa, przygotowujemy listę pytań do sprzedającego i grunt pod due diligence."
+      },
+      "design": {
+        "title": "Projektowanie i budowa",
+        "text": "Partnerzy z licencjami na projektowanie i budowę włączają się, gdy projekt przechodzi do etapu koncepcji, pozwoleń i robót budowlanych."
+      },
+      "handover": {
+        "title": "Przekazanie specjalistom",
+        "text": "Dalsze prace prawne, podatkowe i techniczne prowadzą specjaliści. Przekazujemy im projekt wraz z zebranymi dotąd materiałami."
+      }
+    }
+  },
+  "process": {
+    "kicker": "Poufny proces",
+    "title": "Jak obsługujemy zapytanie",
+    "sub": "Pięć kroków od pierwszej wiadomości do analizy aktywa.",
+    "more": "Więcej o procesie",
+    "steps": {
+      "request": {
+        "title": "Zapytanie",
+        "text": "Opisują Państwo założenia: rodzaj aktywa, budżet, terminy i preferowaną formę udziału."
+      },
+      "qualification": {
+        "title": "Kwalifikacja inwestora",
+        "text": "Doprecyzowujemy cele i parametry transakcji. Na tym etapie nie są potrzebne dane paszportowe ani dokumenty finansowe."
+      },
+      "nda": {
+        "title": "NDA w razie potrzeby",
+        "text": "Jeśli Państwo lub sprzedający tego wymagają, przed ujawnieniem szczegółów podpisywana jest umowa o zachowaniu poufności."
+      },
+      "selection": {
+        "title": "Dobór aktywów",
+        "text": "Przedstawiamy aktywa zgodne z Państwa parametrami — w zakresie informacji, które możemy udostępnić."
+      },
+      "due_diligence": {
+        "title": "Due diligence",
+        "text": "Analiza dokumentów, stanu technicznego i finansów z udziałem specjalistów."
+      }
+    }
+  },
+  "enquiry": {
+    "kicker": "Zapytanie poufne",
+    "title": "Zapytanie inwestycyjne",
+    "lead": "Prosimy opisać swoje założenia — odpowiemy osobiście i zaproponujemy kolejny krok.",
+    "aside_title": "Poufność",
+    "points": {
+      "addresses": "Nie publikujemy dokładnych adresów ani danych identyfikujących aktywa — szczegóły przekazujemy po kwalifikacji zapytania.",
+      "nda": "Możemy pracować na podstawie NDA: wystarczy zaznaczyć pole w formularzu, a umowa zostanie podpisana przed przekazaniem jakichkolwiek szczegółów.",
+      "company": "Dla przedstawicieli firm przewidzieliśmy osobny formularz z danymi firmy.",
+      "documents": "Na pierwszym etapie nie prosimy o dane paszportowe ani dokumenty finansowe."
+    },
+    "company_link": "Otwórz formularz dla firm",
+    "direct": "Wolą Państwo napisać bezpośrednio?"
+  },
+  "final": {
+    "kicker": "Oferty niepubliczne",
+    "title": "Zapytaj o poufne oferty",
+    "text": "Części aktywów nie publikujemy. Prosimy wysłać zapytanie — po kwalifikacji i, w razie potrzeby, podpisaniu NDA przekażemy to, co odpowiada Państwa parametrom.",
+    "cta": "Zapytaj o oferty",
+    "chat": "Zadaj pytanie na czacie"
+  },
+  "cat": {
+    "kicker": "Inwestycje w Czarnogórze",
+    "cta": "Wyślij zapytanie",
+    "analyse": {
+      "kicker": "Due diligence",
+      "title": "Co analizujemy",
+      "sub": "Zanim zarekomendujemy aktywo, sprawdzamy kluczowe parametry. Pogłębioną analizę prowadzą specjaliści.",
+      "items": {
+        "ownership": {
+          "title": "Własność i obciążenia",
+          "text": "List nepokretnosti (wypis z rejestru nieruchomości), historia praw, hipoteki, zajęcia i inne ograniczenia."
+        },
+        "planning": {
+          "title": "Warunki urbanistyczne i pozwolenia",
+          "text": "Dopuszczalne przeznaczenie, parametry zabudowy, istnienie i status pozwoleń."
+        },
+        "technical": {
+          "title": "Stan techniczny",
+          "text": "Konstrukcja i instalacje budynku oraz zgodność nieruchomości z dokumentacją."
+        },
+        "financials": {
+          "title": "Finanse",
+          "text": "Przychody i koszty deklarowane przez sprzedającego — oraz ich weryfikacja na podstawie dokumentów."
+        },
+        "comparables": {
+          "title": "Porównania rynkowe",
+          "text": "Ceny ofertowe i transakcyjne porównywalnych aktywów w okolicy."
+        },
+        "exit": {
+          "title": "Strategie wyjścia",
+          "text": "Odsprzedaż, najem, zmiana przeznaczenia — które scenariusze są realne dla danego aktywa."
+        }
+      }
+    },
+    "listings": {
+      "title": "Aktualne możliwości",
+      "note": "Poufne aktywa pokazujemy w formie zanonimizowanej: bez adresu i zdjęć, a cena jest orientacyjna. Szczegóły na zapytanie."
+    },
+    "process_title": "Jak to działa"
+  },
+  "categories": {
+    "hotels": {
+      "meta": {
+        "title": "Hotele w Czarnogórze dla inwestorów | GUREVIĆ",
+        "description": "Hotele i obiekty hotelowe w Czarnogórze dla inwestorów: poufny dobór, NDA na życzenie, analiza dokumentów i danych deklarowanych przez sprzedającego."
+      },
+      "h1": "Hotele w Czarnogórze dla inwestorów",
+      "intro": "Działające hotele i budynki nadające się do funkcji hotelowej na wybrzeżu. Prezentujemy je w formie zanonimizowanej, a szczegóły przekazujemy po kwalifikacji zapytania — w razie potrzeby na podstawie NDA.",
+      "image_alt": "Taras butikowego hotelu z basenem nad zatoką — ilustracja",
+      "points_title": "Na co zwracamy uwagę w hotelach",
+      "points": {
+        "rooms": "Liczba pokoi, kategoria i obłożenie — według deklaracji sprzedającego, a następnie weryfikowane.",
+        "operations": "Model operacyjny: zarządzanie, personel, umowy z touroperatorami i platformami rezerwacyjnymi.",
+        "expansion": "Możliwość modernizacji lub rozbudowy w granicach warunków urbanistycznych."
+      },
+      "form_title": "Zapytanie o hotel",
+      "form_intro": "Prosimy podać budżet i preferowaną formę udziału — dobierzemy aktywa i przekażemy szczegóły po kwalifikacji zapytania."
+    },
+    "land": {
+      "meta": {
+        "title": "Grunty inwestycyjne w Czarnogórze | GUREVIĆ",
+        "description": "Grunty pod zabudowę komercyjną w Czarnogórze: hotele, apartamenty, logistyka. Analiza warunków urbanistycznych i licencjonowani partnerzy."
+      },
+      "h1": "Grunty inwestycyjne w Czarnogórze",
+      "intro": "Grunty pod zabudowę komercyjną — hotele, apartamenty, logistykę. Zaczynamy od warunków urbanistycznych: to one określają, co i w jakiej skali można zbudować.",
+      "image_alt": "Nadmorska działka na zboczu z drzewami oliwnymi — ilustracja",
+      "points_title": "Na co zwracamy uwagę przy gruntach",
+      "points": {
+        "planning": "Warunki urbanistyczne: dopuszczalne przeznaczenie, intensywność zabudowy i liczba kondygnacji.",
+        "access": "Dojazd, media, ukształtowanie terenu i warunki gruntowe.",
+        "benchmarks": "Orientacyjne koszty budowy i lokalne ceny sprzedaży — jako punkty odniesienia rynkowego, a nie prognozy."
+      },
+      "form_title": "Zapytanie o grunt",
+      "form_intro": "Prosimy opisać założenia — planowane przeznaczenie, powierzchnię działki i budżet. Partnerzy projektowi włączają się, gdy projekt dojdzie do tego etapu."
+    },
+    "commercial": {
+      "meta": {
+        "title": "Nieruchomości komercyjne w Czarnogórze | GUREVIĆ",
+        "description": "Działające restauracje, lokale handlowe i biurowe, magazyny i logistyka w Czarnogórze. Poufny dobór i weryfikacja wyników działalności firmy."
+      },
+      "h1": "Restauracje, nieruchomości komercyjne i magazyny",
+      "intro": "Działające restauracje, lokale handlowe i biurowe, działające firmy, a także magazyny i obiekty logistyczne. Wyniki działalności pochodzą od sprzedającego i są weryfikowane przed transakcją.",
+      "image_alt": "Taras restauracji z widokiem na morze — ilustracja",
+      "points_title": "Na co zwracamy uwagę w nieruchomościach komercyjnych",
+      "points": {
+        "leases": "Umowy najmu i ich warunki, jeśli nieruchomość jest wynajęta.",
+        "business": "Zespół, dostawcy i pozwolenia działającej firmy.",
+        "revenue": "Przychody i koszty potwierdzone dokumentami, a nie tylko słowem sprzedającego."
+      },
+      "logistics": {
+        "title": "Magazyny i logistyka",
+        "text": "Budynki magazynowe i obiekty logistyczne. Sprawdzamy dojazd dla ciężarówek, wysokość hali, rampy załadunkowe oraz bliskość głównych dróg i portu w Barze.",
+        "image_alt": "Nowoczesny magazyn z rampami załadunkowymi — ilustracja",
+        "cta": "Zapytanie o magazyn"
+      },
+      "form_title": "Zapytanie o nieruchomość komercyjną",
+      "form_intro": "W przypadku magazynów i logistyki prosimy wybrać rodzaj inwestycji „Magazyn / logistyka”."
+    },
+    "development": {
+      "meta": {
+        "title": "Projekty deweloperskie w Czarnogórze | GUREVIĆ",
+        "description": "Projekty deweloperskie w Czarnogórze: parametry, lokale i warunki. Partnerstwa deweloperskie oraz licencjonowani partnerzy do projektowania i budowy."
+      },
+      "h1": "Projekty deweloperskie w Czarnogórze",
+      "intro": "Projekty w budowie na wybrzeżu i możliwości partnerstwa deweloperskiego. Nazwy i zdjęcia projektów są publiczne; warunki i aktualne ceny udostępniamy na zapytanie.",
+      "image_alt": "Betonowa konstrukcja budynku z żurawiami nad morzem — ilustracja",
+      "points_title": "Na co zwracamy uwagę w projektach",
+      "points": {
+        "permits": "Pozwolenie na budowę i faktyczny stan robót.",
+        "developer": "Deweloper: zrealizowane projekty i struktura umów z kupującymi.",
+        "schedule": "Harmonogram płatności i terminy oddania — według umowy, a nie broszury."
+      },
+      "listings_title": "Projekty",
+      "listings_note": "Parametry, lokale i aktualne ceny na zapytanie.",
+      "form_title": "Zapytanie o projekt",
+      "form_intro": "Prosimy podać preferowaną formę udziału — zakup lokali lub partnerstwo w projekcie — oraz budżet."
+    }
+  },
+  "js": {
+    "preselected": "W formularzu wybrano rodzaj inwestycji: {type}"
+  }
+}

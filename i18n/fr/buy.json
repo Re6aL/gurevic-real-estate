@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Biens à vendre à Budva et au Monténégro | GUREVIĆ",
+    "description": "Appartements, maisons, villas et terrains à bâtir à vendre à Budva et au Monténégro : prix, surfaces, secteurs et photos. Recherche et accompagnement à l’achat."
+  },
+  "h1": "Biens immobiliers à vendre à Budva et au Monténégro",
+  "hero": {
+    "kicker": "Achat immobilier",
+    "lead": "Appartements, maisons, villas et terrains pour construction privée. Chaque fiche indique le prix, la surface et le secteur ; l’adresse exacte et les documents sont communiqués sur demande.",
+    "image_alt": "Vue aérienne de Budva : la vieille ville et la baie"
+  },
+  "results_title": "Biens à vendre",
+  "seo": {
+    "title": "Acheter un bien au Monténégro avec GUREVIĆ",
+    "p1": "Le catalogue présente des appartements, maisons, villas et terrains pour construction privée sur la côte et dans d’autres régions du Monténégro. Hôtels, immobilier commercial, terrains à développer et programmes immobiliers figurent dans la rubrique Investir.",
+    "p2": "Avant l’achat, nous vous aidons à vérifier le bien : obtenir le list nepokretnosti — l’extrait du registre foncier qui indique le propriétaire et les éventuelles charges grevant le bien —, convenir des conditions avec le vendeur et préparer la signature de l’acte devant notaire."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Appartements à vendre à Budva, Monténégro | GUREVIĆ",
+        "description": "Appartements à vendre à Budva, Bečići et sur la côte monténégrine : prix, prix au m², surface, chambres et secteur. Nous vous aidons à choisir et à acheter."
+      },
+      "h1": "Appartements à vendre à Budva et au Monténégro",
+      "hero": {
+        "kicker": "Acheter · Appartements",
+        "lead": "Appartements à Budva et sur la côte : chaque fiche indique le prix, le prix au mètre carré, la surface, le nombre de chambres et le secteur.",
+        "image_alt": "Budva : la vieille ville et la baie derrière des bougainvilliers en fleurs"
+      },
+      "results_title": "Appartements à vendre",
+      "seo": {
+        "title": "Choisir un appartement sur la côte",
+        "p1": "Comparez non seulement les prix, mais aussi le prix au mètre carré : il figure sur la fiche dès que la surface est connue. Vos filtres (secteur, surface, chambres) sont conservés dans l’adresse de la page : vous pouvez partager votre sélection.",
+        "p2": "Dans le neuf, vérifiez la date de livraison, les finitions et les charges de l’immeuble ; dans l’ancien, vérifiez le list nepokretnosti et le numéro du lot (PD)."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Maisons à vendre au Monténégro | GUREVIĆ",
+        "description": "Maisons à vendre à Budva et ailleurs au Monténégro : surfaces de la maison et du terrain, chambres, prix et photos. Vérification des documents avant l’achat."
+      },
+      "h1": "Maisons à vendre au Monténégro",
+      "hero": {
+        "kicker": "Acheter · Maisons",
+        "lead": "Maisons avec terrain sur la côte et dans l’arrière-pays : surface de la maison et du terrain, nombre de chambres et prix.",
+        "image_alt": "La vieille ville de Budva vue depuis la plage de galets"
+      },
+      "results_title": "Maisons à vendre",
+      "seo": {
+        "title": "Ce qu’il faut vérifier avant d’acheter une maison",
+        "p1": "La fiche d’une maison indique deux surfaces : celle de la maison et celle du terrain. Si la surface du terrain manque, demandez-la avant la visite : c’est elle qui détermine ce qui peut être agrandi ou aménagé.",
+        "p2": "Assurez-vous que la maison est inscrite au registre foncier et que les documents correspondent au bâtiment tel qu’il existe. Nous vous aidons à obtenir l’extrait et à examiner les documents avant l’achat."
+      }
+    },
+    "villas": {
+      "meta": {
+        "title": "Villas à vendre au Monténégro | GUREVIĆ",
+        "description": "Villas à vendre sur la côte monténégrine : surface de la villa et du terrain, chambres, prix, secteur. Visites et accompagnement à l’achat à Budva et alentour."
+      },
+      "h1": "Villas à vendre au Monténégro",
+      "hero": {
+        "kicker": "Acheter · Villas",
+        "lead": "Villas sur la côte monténégrine : surface, terrain, nombre de chambres et prix sur chaque fiche.",
+        "image_alt": "La promenade de Budva et la vieille ville au pied des montagnes"
+      },
+      "results_title": "Villas à vendre",
+      "seo": {
+        "title": "Villas sur la côte monténégrine",
+        "p1": "La frontière entre « Villas » et « Maisons » est floue : dans les deux cas, il s’agit de maisons individuelles avec terrain. Si vous cherchez une maison au bord de la mer, consultez les deux rubriques.",
+        "p2": "Pour une villa, l’accès, le stationnement, la vue et l’état du jardin comptent avant tout. Nous vérifions ces points auprès du propriétaire avant la visite."
+      }
+    },
+    "land": {
+      "meta": {
+        "title": "Terrains à bâtir à vendre au Monténégro | GUREVIĆ",
+        "description": "Terrains pour construction privée à Budva et au Monténégro : surface, secteur, prix et prix au m². Vérification de la destination du terrain et des documents."
+      },
+      "h1": "Terrains à bâtir à vendre au Monténégro",
+      "hero": {
+        "kicker": "Acheter · Terrains",
+        "lead": "Terrains pour construire votre maison : surface, secteur, prix et prix au mètre carré.",
+        "image_alt": "Terrain en pente planté d’oliviers au-dessus de la mer — illustration"
+      },
+      "results_title": "Terrains à vendre",
+      "seo": {
+        "title": "Comment vérifier un terrain avant l’achat",
+        "p1": "Cette rubrique présente des terrains pour construction privée. Les terrains destinés à des projets commerciaux — hôtels, immeubles d’appartements, logistique — figurent dans la rubrique Investir.",
+        "p2": "Avant d’acheter, vérifiez la destination du terrain selon le plan d’urbanisme en vigueur, l’accès routier et les raccordements aux réseaux, ainsi que les éventuelles charges inscrites au list nepokretnosti. Nous vous aidons à réunir ces informations avant l’achat."
+      }
+    }
+  }
+}

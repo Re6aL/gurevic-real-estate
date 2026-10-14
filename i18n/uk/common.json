@@ -1,0 +1,290 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "tagline": "Нерухомість у Будві та Чорногорії",
+  "skip_link": "Перейти до вмісту",
+  "home_aria": "Gurevic Real Estate — на головну",
+  "logo_alt": "Gurevic Real Estate — Будва",
+  "nav": {
+    "main_aria": "Головне меню",
+    "rent": "Оренда",
+    "rent_apartments": "Квартири",
+    "rent_houses": "Будинки й вілли",
+    "rent_short_term": "Короткострокова оренда",
+    "soon": "скоро",
+    "all_rent": "Уся довгострокова оренда",
+    "buy": "Купівля",
+    "buy_apartments": "Квартири",
+    "buy_houses": "Будинки",
+    "buy_villas": "Вілли",
+    "buy_land": "Ділянки під приватну забудову",
+    "all_buy": "Усі об’єкти на продаж",
+    "invest": "Інвестиції",
+    "invest_hotels": "Готелі",
+    "invest_land": "Земля під девелопмент",
+    "invest_commercial": "Комерційна нерухомість",
+    "invest_development": "Проєкти будівництва",
+    "all_invest": "Інвестиції в Чорногорії",
+    "owners": "Власникам",
+    "owners_sell": "Продати нерухомість",
+    "owners_rent_out": "Здати в оренду",
+    "owners_management": "Управління нерухомістю",
+    "all_owners": "Для власників",
+    "services": "Послуги",
+    "about": "Про нас",
+    "contact": "Контакти",
+    "map": "Карта об’єктів",
+    "privacy": "Політика конфіденційності",
+    "menu_open": "Відкрити меню",
+    "menu_close": "Закрити меню",
+    "submenu": "Підменю «{label}»",
+    "menu": "Меню"
+  },
+  "routes": {
+    "home": "Головна",
+    "buy": "Купівля",
+    "buy_apartments": "Квартири",
+    "buy_houses": "Будинки",
+    "buy_villas": "Вілли",
+    "buy_land": "Ділянки",
+    "rent": "Оренда",
+    "rent_apartments": "Квартири",
+    "rent_houses": "Будинки й вілли",
+    "invest": "Інвестиції",
+    "invest_hotels": "Готелі",
+    "invest_land": "Земля під девелопмент",
+    "invest_commercial": "Комерційна нерухомість",
+    "invest_development": "Проєкти будівництва",
+    "owners": "Власникам",
+    "owners_sell": "Продати",
+    "owners_rent_out": "Здати в оренду",
+    "owners_management": "Управління нерухомістю",
+    "about": "Про нас",
+    "services": "Послуги",
+    "contact": "Контакти",
+    "privacy": "Конфіденційність",
+    "map": "Карта об’єктів",
+    "property": "Об’єкт"
+  },
+  "footer": {
+    "nav_aria": "Нижнє меню",
+    "columns": {
+      "rent": "Оренда",
+      "buy": "Купівля",
+      "invest": "Інвестиції",
+      "owners": "Власникам",
+      "agency": "Агентство"
+    },
+    "contacts": "Контакти",
+    "languages": "Мови",
+    "about_short": "Агентство нерухомості в Будві: купівля, довгострокова оренда, інвестиції та робота з власниками.",
+    "meetings": "Зустрічі — за попередньою домовленістю.",
+    "legal_line": "DOO GUREVIC BUDVA · Будва, Чорногорія · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "Зв’язатися з нами",
+    "phone": "Телефон",
+    "call": "Зателефонувати",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "Пошта",
+    "instagram": "Instagram",
+    "location": "Будва, Чорногорія",
+    "write": "Написати"
+  },
+  "languages": {
+    "label": "Мова",
+    "switch_aria": "Обрати мову сайту",
+    "current": "Поточна мова"
+  },
+  "lang_suggest": {
+    "text": "Ця сторінка доступна українською мовою",
+    "switch": "Перейти",
+    "dismiss": "Закрити"
+  },
+  "buttons": {
+    "details": "Детальніше",
+    "send": "Надіслати",
+    "call": "Зателефонувати",
+    "write_whatsapp": "Написати у WhatsApp",
+    "back_home": "На головну",
+    "show_more": "Показати ще",
+    "learn_more": "Дізнатися більше",
+    "contact_us": "Зв’язатися з нами",
+    "close": "Закрити",
+    "show_on_map": "Показати на карті",
+    "request": "Залишити заявку",
+    "all_objects": "Усі об’єкти",
+    "apply": "Показати",
+    "reset": "Скинути",
+    "prev": "Назад",
+    "next": "Далі",
+    "show_all": "Показати всі",
+    "open_menu": "Меню",
+    "discuss": "Обговорити",
+    "copy": "Копіювати"
+  },
+  "breadcrumbs": {
+    "aria": "Навігаційний ланцюжок",
+    "home": "Головна"
+  },
+  "units": {
+    "m2": "м²",
+    "per_month": "/ міс.",
+    "eur_per_m2": "€/м²",
+    "eur": "€",
+    "month": "міс.",
+    "sqm_short": "м²"
+  },
+  "price": {
+    "on_request": "Ціна за запитом",
+    "indicative": "Орієнтир: {price}",
+    "preliminary": "попередньо, потребує перевірки",
+    "from": "від {price}"
+  },
+  "types": {
+    "apartment": "Квартира",
+    "house": "Будинок",
+    "villa": "Вілла",
+    "land": "Ділянка",
+    "hotel": "Готель",
+    "commercial": "Комерційна нерухомість",
+    "business": "Готовий бізнес",
+    "development": "Проєкт будівництва"
+  },
+  "types_lc": {
+    "apartment": "квартира",
+    "house": "будинок",
+    "villa": "вілла",
+    "land": "ділянка",
+    "hotel": "готель",
+    "commercial": "комерційна нерухомість",
+    "business": "готовий бізнес",
+    "development": "проєкт будівництва"
+  },
+  "categories": {
+    "apartments": "Квартири",
+    "houses": "Будинки",
+    "villas": "Вілли",
+    "land": "Ділянки",
+    "hotels": "Готелі",
+    "commercial": "Комерційна нерухомість",
+    "development": "Проєкти будівництва"
+  },
+  "sections": {
+    "buy": "Продаж",
+    "rent": "Оренда",
+    "invest": "Інвестиції"
+  },
+  "badges": {
+    "project": "Проєкт",
+    "confidential": "Конфіденційно",
+    "soon": "Скоро",
+    "illustration": "Ілюстрація",
+    "price_on_request": "Ціна за запитом",
+    "new": "Нове"
+  },
+  "params": {
+    "area": "{n} м²",
+    "land_area": "ділянка {n} м²",
+    "floor": "поверх {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "{n} спальня",
+      "few": "{n} спальні",
+      "many": "{n} спалень",
+      "other": "{n} спальні"
+    },
+    "bathrooms": {
+      "one": "{n} санвузол",
+      "few": "{n} санвузли",
+      "many": "{n} санвузлів",
+      "other": "{n} санвузла"
+    },
+    "objects": {
+      "one": "{n} об’єкт",
+      "few": "{n} об’єкти",
+      "many": "{n} об’єктів",
+      "other": "{n} об’єкта"
+    }
+  },
+  "alt": {
+    "listing_photo": "Фото: {name}",
+    "listing_photo_n": "{name} — фото {n}",
+    "illustration": "Ілюстрація: {type}"
+  },
+  "districts": {
+    "budva-center": "Будва — центр",
+    "budva-rozino": "Будва — Розіно",
+    "budva-waterfront": "Будва — набережна",
+    "budva-ivanica": "Будва — Іваніца",
+    "budva-veligrad": "Будва — Веліград",
+    "becici": "Бечичі",
+    "rafailovici": "Рафаїловичі",
+    "przno": "Пржно",
+    "sveti-stefan": "Светі-Стефан",
+    "lapcici": "Лапчичі",
+    "tudorovici": "Тудоровичі",
+    "lastva-grbaljska": "Ластва Грбальська",
+    "petrovac": "Петровац",
+    "buljarica": "Булярица",
+    "tivat": "Тіват",
+    "kotor": "Котор",
+    "herceg-novi": "Херцег-Нові",
+    "bar": "Бар",
+    "dobra-voda": "Добра Вода",
+    "ulcinj": "Улцинь",
+    "rijeka-crnojevica": "Рієка Црноєвича",
+    "cetinje": "Цетинє",
+    "podgorica": "Подгориця",
+    "other": "Чорногорія"
+  },
+  "regions": {
+    "budva_riviera": "Будванська рив’єра",
+    "petrovac_area": "Петровац і околиці",
+    "boka": "Бока-Которська затока",
+    "south_coast": "Південне узбережжя",
+    "central": "Центральна Чорногорія",
+    "montenegro": "Чорногорія"
+  },
+  "not_found": {
+    "meta": {
+      "title": "Сторінку не знайдено | GUREVIĆ",
+      "description": "Такої сторінки немає або її перенесено. Перейдіть на головну сторінку Gurevic Real Estate зручною для вас мовою: купівля, оренда, інвестиції."
+    },
+    "h1": "Сторінку не знайдено",
+    "text": "Такої сторінки немає або її перенесено.",
+    "home_link": "На головну"
+  },
+  "rental_terms": {
+    "off_season": "До початку сезону",
+    "year": "На рік",
+    "short_term": "Короткостроково"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "Комунальні послуги включено",
+      "not_included": "Комунальні послуги сплачуються окремо",
+      "partial": "Комунальні послуги включено частково"
+    },
+    "pets": {
+      "allowed": "Можна з тваринами",
+      "not_allowed": "Без тварин",
+      "by_agreement": "Тварини — за домовленістю"
+    }
+  },
+  "js": {
+    "menu_open": "Відкрити меню",
+    "menu_close": "Закрити меню",
+    "close": "Закрити",
+    "copied": "Скопійовано",
+    "copy_failed": "Не вдалося скопіювати",
+    "submenu_open": "Відкрити підменю",
+    "submenu_close": "Закрити підменю",
+    "price_on_request": "Ціна за запитом",
+    "per_month": "/ міс.",
+    "price_from": "від {price}"
+  }
+}

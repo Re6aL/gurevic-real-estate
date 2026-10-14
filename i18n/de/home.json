@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Immobilienagentur in Budva, Montenegro | GUREVIĆ",
+    "description": "Kauf, Langzeitmiete und Investitionen in Immobilien in Budva und an der Küste Montenegros. GUREVIĆ arbeitet auf Basis schriftlicher Verträge."
+  },
+  "h1": "Immobilienagentur in Budva. Leben am Meer – Ihre neue Geschichte",
+  "splash": {
+    "line1": "Der Schlüssel zum Leben am Meer",
+    "line2": "Immobilien in Montenegro – von der Suche bis zum Schlüssel"
+  },
+  "hero": {
+    "eyebrow": "Immobilienagentur in Budva",
+    "title": "Leben am Meer –",
+    "accent": "Ihre neue Geschichte",
+    "sub": "Kauf, Langzeitmiete und Investitionen an der Küste Montenegros",
+    "cta_buy": "Kaufen",
+    "cta_rent": "Mieten",
+    "cta_invest": "Investieren",
+    "owners_link": "Für Immobilieneigentümer",
+    "carousel": "Karussell",
+    "slides_aria": "Fotos von Budva",
+    "controls_aria": "Fotosteuerung",
+    "prev": "Vorheriges Foto",
+    "next": "Nächstes Foto",
+    "slide": "Foto {n} von {total}",
+    "alt": {
+      "1": "Die Altstadt von Budva, vom Kiesstrand aus gesehen",
+      "2": "Budva von oben: Altstadt, Marina und Bucht bei Sonnenaufgang",
+      "3": "Die Statue der Tänzerin auf einem Felsen an der Altstadt von Budva",
+      "4": "Glockenturm der Altstadt von Budva und die Bucht hinter blühender Bougainvillea",
+      "5": "Stadtmauern der Altstadt von Budva und Berge über dem Meer"
+    }
+  },
+  "directions": {
+    "kicker": "Unsere Bereiche",
+    "title": "Wählen Sie, was Sie brauchen",
+    "sub": "Jeder Bereich hat eine eigene Rubrik: Objekte oder Konditionen, Ablauf und Anfrageformular.",
+    "subs_aria": "Unterseiten: {name}",
+    "rent": {
+      "text": "Wohnungen und Häuser zur Langzeitmiete – bis zum Saisonbeginn oder für ein ganzes Jahr.",
+      "alt": "Balkon mit Blick auf eine Bucht – Illustration"
+    },
+    "buy": {
+      "text": "Wohnungen, Häuser, Villen und Grundstücke für den privaten Hausbau.",
+      "alt": "Neue Wohnanlage an der Küste – Visualisierung"
+    },
+    "invest": {
+      "text": "Hotels, Entwicklungsflächen und Gewerbeimmobilien – vertrauliche Auswahl.",
+      "alt": "Die Küste Montenegros von oben – Illustration"
+    },
+    "owners": {
+      "text": "Verkauf, Vermietung und Verwaltung Ihrer Immobilie auf Basis eines schriftlichen Vertrags.",
+      "alt": "Helles Wohnzimmer mit Zugang zum Balkon – Illustration"
+    }
+  },
+  "about": {
+    "kicker": "Über die Agentur",
+    "title": "Ilia Gurevich – Gründer und Makler von GUREVIĆ",
+    "person": "Ilia Gurevich",
+    "monogram": "IG",
+    "photo_alt": "Ilia Gurevich, Gründer der Agentur GUREVIĆ",
+    "p1": "Wir sind im dritten Jahr auf dem Immobilienmarkt Montenegros tätig. Die Agentur arbeitet jetzt in einem neuen Format: Käufer, Mieter, Anleger und Eigentümer haben jeweils einen eigenen Bereich mit eigenen Konditionen und eigenem Ablauf.",
+    "p2": "Vereinbarungen mit Kunden halten wir schriftlich fest. Bei Rechtsfragen, Planung und Bau arbeiten wir mit spezialisierten Partnern zusammen.",
+    "link": "Mehr über die Agentur"
+  },
+  "steps": {
+    "kicker": "Ablauf",
+    "title": "So arbeiten wir",
+    "sub": "Vier Schritte – von Ihrer ersten Nachricht bis zum Abschluss.",
+    "s1": {
+      "title": "Anfrage",
+      "text": "Sie beschreiben Ihr Anliegen: was Sie suchen oder welche Immobilie Sie anbieten, Ihren Zeitrahmen und Ihr Budget."
+    },
+    "s2": {
+      "title": "Auswahl oder Bewertung",
+      "text": "Wir stellen passende Angebote zusammen oder bewerten Ihre Immobilie und vereinbaren die Konditionen unserer Zusammenarbeit."
+    },
+    "s3": {
+      "title": "Besichtigungen und Verhandlungen",
+      "text": "Wir organisieren Besichtigungen und verhandeln Preis und Konditionen mit der Gegenseite."
+    },
+    "s4": {
+      "title": "Abschluss per Vertrag",
+      "text": "Die Konditionen werden in einem schriftlichen Vertrag nach montenegrinischem Recht festgehalten."
+    }
+  },
+  "cta": {
+    "kicker": "Kontakt",
+    "title": "Erzählen Sie uns von Ihren Plänen",
+    "text": "Schreiben Sie uns per WhatsApp oder Telegram oder senden Sie eine Anfrage über die Website – wir melden uns auf dem Weg, der Ihnen am besten passt.",
+    "languages": "Beratung auf Russisch, Englisch und Montenegrinisch.",
+    "call": "Oder rufen Sie an:"
+  },
+  "js": {
+    "pause": "Fotowechsel anhalten",
+    "play": "Fotowechsel fortsetzen"
+  }
+}

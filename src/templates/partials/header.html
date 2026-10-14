@@ -1,0 +1,94 @@
+{#- Шапка («верхнее меню»): лого · меню с подменю · язык · телефон с контактами · бургер.
+    ≤1024px меню (#hdr-panel) превращается в off-canvas панель (js/site.js: фокус-ловушка, Esc,
+    блокировка прокрутки, role=dialog + aria-modal только в открытом мобильном состоянии).
+    Без JS (html.no-js) подменю раскрываются по :hover/:focus-within, а на мобильных меню
+    показывается статичным списком под шапкой. Все id — с префиксом hdr-. -#}
+{% import "macros/ui.html" as ui %}
+{#- (ключ раздела, [(ключ маршрута | 'soon', ключ подписи)], подпись «все …») -#}
+{% set _NAV = [
+  ('rent', [('rent.apartments', 'rent_apartments'), ('rent.houses', 'rent_houses'), ('soon', 'rent_short_term')], 'all_rent'),
+  ('buy', [('buy.apartments', 'buy_apartments'), ('buy.houses', 'buy_houses'), ('buy.villas', 'buy_villas'), ('buy.land', 'buy_land')], 'all_buy'),
+  ('invest', [('invest.hotels', 'invest_hotels'), ('invest.land', 'invest_land'), ('invest.commercial', 'invest_commercial'), ('invest.development', 'invest_development')], 'all_invest'),
+  ('owners', [('owners.sell', 'owners_sell'), ('owners.rent_out', 'owners_rent_out'), ('owners.management', 'owners_management')], 'all_owners'),
+  ('services', [], None),
+  ('about', [], None),
+  ('contact', [], None),
+] %}
+{% set _cur = languages | selectattr('current') | first %}
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="{{ url('home') }}"{% if page.key == 'home' %} aria-current="page"{% endif %}>
+      {{ img('img/logo-mark.png', '', sizes='54px', cls='logo-mark', loading=None) }}
+      {{ img('img/logo-word.png', t('common.logo_alt'), sizes='126px', cls='logo-word', loading=None) }}
+    </a>
+
+    <div class="nav-panel" id="hdr-panel" data-labelledby="hdr-panel-title">
+      <div class="nav-panel-head">
+        {{ img('img/logo-mark.png', '', sizes='40px', cls='nav-panel-logo') }}
+        <span class="nav-panel-title" id="hdr-panel-title">{{ t('common.nav.menu') }}</span>
+        <button class="nav-close icon-btn" type="button" aria-label="{{ t('common.nav.menu_close') }}" data-menu-close>{{ ui.icon('close', size=24) }}</button>
+      </div>
+
+      <nav class="nav" aria-label="{{ t('common.nav.main_aria') }}">
+        <ul class="nav-list">
+          {% for key, subs, all_key in _NAV %}
+          {% set is_current = page.key == key %}
+          {% set in_section = page.key.startswith(key ~ '.') or page.section == key %}
+          {% set label = t('common.nav.' ~ key) %}
+          <li class="nav-item{% if subs %} has-sub{% endif %}{% if is_current or in_section %} active{% endif %}"{% if subs %} data-dropdown{% endif %}>
+            <a class="nav-link" href="{{ url(key) }}"{% if is_current %} aria-current="page"{% endif %}>{{ label }}</a>
+            {% if subs %}
+            <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="hdr-sub-{{ key }}" data-dropdown-toggle>
+              <span class="visually-hidden">{{ t('common.nav.submenu', label=label) }}</span>{{ ui.icon('chevron-down', 'caret', 16) }}
+            </button>
+            <ul class="nav-sub" id="hdr-sub-{{ key }}" data-dropdown-menu>
+              {% for sub_key, sub_label in subs %}
+              {% if sub_key == 'soon' %}
+              <li class="nav-sub-soon"><span>{{ t('common.nav.' ~ sub_label) }}</span><span class="badge-soon">{{ t('common.nav.soon') }}</span></li>
+              {% else %}
+              <li><a href="{{ url(sub_key) }}"{% if page.key == sub_key %} aria-current="page"{% endif %}>{{ t('common.nav.' ~ sub_label) }}</a></li>
+              {% endif %}
+              {% endfor %}
+              <li class="nav-sub-all"><a href="{{ url(key) }}"><span>{{ t('common.nav.' ~ all_key) }}</span>{{ ui.icon('arrow-right', size=16) }}</a></li>
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="nav-panel-extra">
+        <p class="nav-panel-label">{{ t('common.languages.label') }}</p>
+        {{ ui.lang_list(languages, 'nav-panel-langs') }}
+        <p class="nav-panel-label">{{ t('common.footer.contacts') }}</p>
+        {{ ui.contact_list(site.contacts, 'nav-panel-contacts') }}
+      </div>
+    </div>
+
+    <div class="header-tools">
+      <div class="lang-switch" data-dropdown>
+        <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="hdr-lang-menu" data-dropdown-toggle>
+          {{ ui.icon('globe', size=18) }}<span class="visually-hidden">{{ t('common.languages.switch_aria') }}: </span><span class="lang-code" lang="{{ _cur.code }}">{{ _cur.short }}</span>{{ ui.icon('chevron-down', 'caret', 14) }}
+        </button>
+        <div class="lang-menu dropdown" id="hdr-lang-menu" data-dropdown-menu>
+          {{ ui.lang_list(languages, 'lang-menu-list', check=True) }}
+        </div>
+      </div>
+
+      <div class="header-contact" data-dropdown>
+        <button class="header-phone" type="button" aria-expanded="false" aria-controls="hdr-contact-menu" data-dropdown-toggle>
+          {{ ui.icon('phone', 'hp-icon', 18) }}<span class="hp-number"><span class="visually-hidden">{{ t('common.contacts.menu_aria') }}: </span><bdi dir="ltr">{{ site.contacts.phone }}</bdi></span>{{ ui.icon('chevron-down', 'caret', 14) }}
+        </button>
+        <div class="contact-dropdown dropdown" id="hdr-contact-menu" data-dropdown-menu>
+          {{ ui.contact_list(site.contacts, 'contact-dropdown-list') }}
+          <p class="contact-dropdown-note">{{ t('common.contacts.location') }} · {{ t('common.footer.meetings') }}</p>
+        </div>
+      </div>
+
+      <button class="burger icon-btn" type="button" aria-expanded="false" aria-controls="hdr-panel" aria-label="{{ t('common.nav.menu_open') }}" data-menu-open>
+        {{ ui.icon('menu', size=26) }}
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-backdrop" data-menu-close hidden></div>

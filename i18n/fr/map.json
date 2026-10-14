@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Carte des biens : Budva et Monténégro | GUREVIĆ",
+    "description": "Les biens GUREVIĆ sur la carte de Budva et du Monténégro : appartements, maisons, terrains et programmes par secteur. Cliquez sur un repère pour voir le bien."
+  },
+  "h1": "Carte des biens",
+  "lead": "Les biens du catalogue sur une carte de la côte. Les opportunités d’investissement confidentielles n’apparaissent pas sur la carte.",
+  "filters": {
+    "aria": "Rubrique",
+    "all": "Tous",
+    "buy": "Acheter",
+    "rent": "Louer",
+    "invest": "Programmes"
+  },
+  "view": {
+    "aria": "Affichage",
+    "list": "Liste",
+    "map": "Carte"
+  },
+  "legend": {
+    "exact": "Repère d’après les données du bien",
+    "approx": "Approximatif : centre du secteur"
+  },
+  "list_title": "Biens sur la carte",
+  "map_aria": "Carte interactive des biens",
+  "noscript": "La carte nécessite JavaScript. La liste des biens figure ci-dessous.",
+  "empty": "Aucun bien de cette rubrique n’est encore affiché sur la carte.",
+  "js": {
+    "count": {
+      "one": "{n} bien",
+      "other": "{n} biens"
+    },
+    "details": "Voir le bien",
+    "approx": "Approximatif — centre du secteur",
+    "zoom_in": "Zoom avant",
+    "zoom_out": "Zoom arrière",
+    "load_error": "Impossible de charger la carte. La liste des biens est disponible sur la page.",
+    "show_on_map": "Voir sur la carte"
+  }
+}

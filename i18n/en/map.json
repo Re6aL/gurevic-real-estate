@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Property map: Budva and Montenegro | GUREVIĆ",
+    "description": "GUREVIĆ properties on the map of Budva and Montenegro: apartments, houses, plots and construction projects by area. Pick a pin and open the property page."
+  },
+  "h1": "Property map",
+  "lead": "Properties from the catalogue on a map of the coast. Confidential investment opportunities are not shown on the map.",
+  "filters": {
+    "aria": "Section",
+    "all": "All",
+    "buy": "Buy",
+    "rent": "Rent",
+    "invest": "Projects"
+  },
+  "view": {
+    "aria": "View",
+    "list": "List",
+    "map": "Map"
+  },
+  "legend": {
+    "exact": "Pin based on the property data",
+    "approx": "Approximate: centre of the area"
+  },
+  "list_title": "Properties on the map",
+  "map_aria": "Interactive property map",
+  "noscript": "The map needs JavaScript. The list of properties is available below.",
+  "empty": "There are no properties on the map in this section yet.",
+  "js": {
+    "count": {
+      "one": "{n} property",
+      "other": "{n} properties"
+    },
+    "details": "View details",
+    "approx": "Approximate — centre of the area",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "load_error": "The map could not be loaded. The list of properties is available on the page.",
+    "show_on_map": "Show on the map"
+  }
+}

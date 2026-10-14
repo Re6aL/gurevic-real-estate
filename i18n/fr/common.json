@@ -1,0 +1,284 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "tagline": "L’immobilier à Budva et au Monténégro",
+  "skip_link": "Aller au contenu",
+  "home_aria": "Gurevic Real Estate — accueil",
+  "logo_alt": "Gurevic Real Estate — Budva",
+  "nav": {
+    "main_aria": "Menu principal",
+    "rent": "Louer",
+    "rent_apartments": "Appartements",
+    "rent_houses": "Maisons et villas",
+    "rent_short_term": "Location courte durée",
+    "soon": "bientôt",
+    "all_rent": "Toutes les locations longue durée",
+    "buy": "Acheter",
+    "buy_apartments": "Appartements",
+    "buy_houses": "Maisons",
+    "buy_villas": "Villas",
+    "buy_land": "Terrains à bâtir",
+    "all_buy": "Tous les biens à vendre",
+    "invest": "Investir",
+    "invest_hotels": "Hôtels",
+    "invest_land": "Terrains à développer",
+    "invest_commercial": "Immobilier commercial",
+    "invest_development": "Programmes immobiliers",
+    "all_invest": "Investir au Monténégro",
+    "owners": "Propriétaires",
+    "owners_sell": "Vendre votre bien",
+    "owners_rent_out": "Mettre en location",
+    "owners_management": "Gestion de biens",
+    "all_owners": "Espace propriétaires",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "map": "Carte des biens",
+    "privacy": "Politique de confidentialité",
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu",
+    "submenu": "Sous-menu {label}",
+    "menu": "Menu"
+  },
+  "routes": {
+    "home": "Accueil",
+    "buy": "Acheter",
+    "buy_apartments": "Appartements",
+    "buy_houses": "Maisons",
+    "buy_villas": "Villas",
+    "buy_land": "Terrains",
+    "rent": "Louer",
+    "rent_apartments": "Appartements",
+    "rent_houses": "Maisons et villas",
+    "invest": "Investir",
+    "invest_hotels": "Hôtels",
+    "invest_land": "Terrains à développer",
+    "invest_commercial": "Immobilier commercial",
+    "invest_development": "Programmes immobiliers",
+    "owners": "Propriétaires",
+    "owners_sell": "Vendre",
+    "owners_rent_out": "Mettre en location",
+    "owners_management": "Gestion de biens",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "map": "Carte des biens",
+    "property": "Bien"
+  },
+  "footer": {
+    "nav_aria": "Menu du pied de page",
+    "columns": {
+      "rent": "Louer",
+      "buy": "Acheter",
+      "invest": "Investir",
+      "owners": "Propriétaires",
+      "agency": "Agence"
+    },
+    "contacts": "Contacts",
+    "languages": "Langues",
+    "about_short": "Agence immobilière à Budva : achat, location longue durée, investissement et services aux propriétaires.",
+    "meetings": "Rencontres sur rendez-vous.",
+    "legal_line": "DOO GUREVIC BUDVA · Budva, Monténégro · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "Nous contacter",
+    "phone": "Téléphone",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "instagram": "Instagram",
+    "location": "Budva, Monténégro",
+    "write": "Nous écrire"
+  },
+  "languages": {
+    "label": "Langue",
+    "switch_aria": "Choisir la langue du site",
+    "current": "Langue actuelle"
+  },
+  "lang_suggest": {
+    "text": "Cette page est disponible en français",
+    "switch": "Afficher",
+    "dismiss": "Fermer"
+  },
+  "buttons": {
+    "details": "Détails",
+    "send": "Envoyer",
+    "call": "Appeler",
+    "write_whatsapp": "Écrire sur WhatsApp",
+    "back_home": "Retour à l’accueil",
+    "show_more": "Voir plus",
+    "learn_more": "En savoir plus",
+    "contact_us": "Nous contacter",
+    "close": "Fermer",
+    "show_on_map": "Voir sur la carte",
+    "request": "Envoyer une demande",
+    "all_objects": "Tous les biens",
+    "apply": "Afficher",
+    "reset": "Réinitialiser",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "show_all": "Tout afficher",
+    "open_menu": "Menu",
+    "discuss": "En parler",
+    "copy": "Copier"
+  },
+  "breadcrumbs": {
+    "aria": "Fil d’Ariane",
+    "home": "Accueil"
+  },
+  "units": {
+    "m2": "m²",
+    "per_month": "/ mois",
+    "eur_per_m2": "€/m²",
+    "eur": "€",
+    "month": "mois",
+    "sqm_short": "m²"
+  },
+  "price": {
+    "on_request": "Prix sur demande",
+    "indicative": "Indicatif : {price}",
+    "preliminary": "préliminaire, à vérifier",
+    "from": "à partir de {price}"
+  },
+  "types": {
+    "apartment": "Appartement",
+    "house": "Maison",
+    "villa": "Villa",
+    "land": "Terrain",
+    "hotel": "Hôtel",
+    "commercial": "Local commercial",
+    "business": "Fonds de commerce",
+    "development": "Programme immobilier"
+  },
+  "types_lc": {
+    "apartment": "appartement",
+    "house": "maison",
+    "villa": "villa",
+    "land": "terrain",
+    "hotel": "hôtel",
+    "commercial": "local commercial",
+    "business": "fonds de commerce",
+    "development": "programme immobilier"
+  },
+  "categories": {
+    "apartments": "Appartements",
+    "houses": "Maisons",
+    "villas": "Villas",
+    "land": "Terrains",
+    "hotels": "Hôtels",
+    "commercial": "Immobilier commercial",
+    "development": "Programmes immobiliers"
+  },
+  "sections": {
+    "buy": "À vendre",
+    "rent": "À louer",
+    "invest": "Investissement"
+  },
+  "badges": {
+    "project": "Programme",
+    "confidential": "Confidentiel",
+    "soon": "Bientôt",
+    "illustration": "Illustration",
+    "price_on_request": "Prix sur demande",
+    "new": "Nouveau"
+  },
+  "params": {
+    "area": "{n} m²",
+    "land_area": "terrain {n} m²",
+    "floor": "étage {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "{n} chambre",
+      "other": "{n} chambres"
+    },
+    "bathrooms": {
+      "one": "{n} salle de bains",
+      "other": "{n} salles de bains"
+    },
+    "objects": {
+      "one": "{n} bien",
+      "other": "{n} biens"
+    }
+  },
+  "alt": {
+    "listing_photo": "Photo : {name}",
+    "listing_photo_n": "{name} — photo {n}",
+    "illustration": "Illustration : {type}"
+  },
+  "districts": {
+    "budva-center": "Budva – centre",
+    "budva-rozino": "Budva – Rozino",
+    "budva-waterfront": "Budva – front de mer",
+    "budva-ivanica": "Budva – Ivanica",
+    "budva-veligrad": "Budva – Veligrad",
+    "becici": "Bečići",
+    "rafailovici": "Rafailovići",
+    "przno": "Pržno",
+    "sveti-stefan": "Sveti Stefan",
+    "lapcici": "Lapčići",
+    "tudorovici": "Tudorovići",
+    "lastva-grbaljska": "Lastva Grbaljska",
+    "petrovac": "Petrovac",
+    "buljarica": "Buljarica",
+    "tivat": "Tivat",
+    "kotor": "Kotor",
+    "herceg-novi": "Herceg Novi",
+    "bar": "Bar",
+    "dobra-voda": "Dobra Voda",
+    "ulcinj": "Ulcinj",
+    "rijeka-crnojevica": "Rijeka Crnojevića",
+    "cetinje": "Cetinje",
+    "podgorica": "Podgorica",
+    "other": "Monténégro"
+  },
+  "regions": {
+    "budva_riviera": "Riviera de Budva",
+    "petrovac_area": "Région de Petrovac",
+    "boka": "Bouches de Kotor",
+    "south_coast": "Côte sud",
+    "central": "Monténégro central",
+    "montenegro": "Monténégro"
+  },
+  "not_found": {
+    "meta": {
+      "title": "Page introuvable | GUREVIĆ",
+      "description": "Cette page n’existe pas ou a été déplacée. Rendez-vous sur la page d’accueil de Gurevic Real Estate, dans la langue de votre choix."
+    },
+    "h1": "Page introuvable",
+    "text": "Cette page n’existe pas ou a été déplacée.",
+    "home_link": "Aller à la page d’accueil"
+  },
+  "rental_terms": {
+    "off_season": "Jusqu’au début de la saison",
+    "year": "À l’année",
+    "short_term": "Courte durée"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "Charges comprises",
+      "not_included": "Charges en sus",
+      "partial": "Charges en partie comprises"
+    },
+    "pets": {
+      "allowed": "Animaux acceptés",
+      "not_allowed": "Animaux non acceptés",
+      "by_agreement": "Animaux selon accord"
+    }
+  },
+  "js": {
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu",
+    "close": "Fermer",
+    "copied": "Copié",
+    "copy_failed": "Impossible de copier",
+    "submenu_open": "Ouvrir le sous-menu",
+    "submenu_close": "Fermer le sous-menu",
+    "price_on_request": "Prix sur demande",
+    "per_month": "/ mois",
+    "price_from": "à partir de {price}"
+  }
+}

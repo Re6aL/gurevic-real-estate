@@ -1,0 +1,274 @@
+{#- Страница объекта: {section}/{slug}/ (buy | rent | invest). Серверный порт старой object.html:
+    крошки → шапка (H1 + район + цена) → галерея (фото + миниатюры + лайтбокс; без фото — иллюстрация
+    категории с подписью) → ID с копированием → «Об объекте» / «О локации» → характеристики →
+    особенности → варианты проекта → карта-фасад (iframe Google Maps только по клику) →
+    боковая CTA-карточка + форма запроса → похожие объекты.
+    Конфиденциальные (invest): анонимный заголовок, «Индикативная цена», пометка NDA, без фото/карты,
+    CTA → инвесторская форма с пресетом категории. JSON-LD (RealEstateListing + Offer + BreadcrumbList)
+    формирует генератор (core.py). js/property.js — прогрессивное улучшение (галерея, копирование, карта). -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/cards.html" as cards %}
+{% import "macros/forms.html" as forms %}
+
+{% set l = listing %}
+{% set oid = l.object_id or l.id %}
+{% set title = page.h1 %}
+{% set project = listings.project_name(l) %}
+{% set is_rent = l.section == 'rent' %}
+{% set conf = l.confidential %}
+{% set photos = l.images %}
+{% set per_m2 = cards.price_per_m2(l) %}
+{% set cat_key = (l.section ~ '.' ~ l.category) if l.category else l.section %}
+{% set place = district_name(l.district) if not conf else t('common.regions.' ~ l.region) %}
+{% set similar = listings.similar(l) %}
+{% set abs_page = abs_url('property', listing=l) %}
+
+{% block main %}
+<div class="container property">
+  {{ ui.breadcrumbs(page.breadcrumbs) }}
+
+  <header class="obj-head">
+    <div class="obj-head__main">
+      <p class="obj-eyebrow">
+        <span>{{ t('common.sections.' ~ l.section) }}</span>
+        <span aria-hidden="true">·</span>
+        <span>{{ type_name(l.kind) }}</span>
+        {% if conf %}<span class="badge badge-gold">{{ ui.icon('lock', size=12) }}{{ t('property.confidential.badge') }}</span>{% endif %}
+      </p>
+      <h1><bdi>{{ title }}</bdi></h1>
+      <p class="obj-loc">{{ ui.icon('pin', size=18) }}<bdi>{{ place }}</bdi></p>
+    </div>
+    <div class="obj-price{% if not l.price %} obj-price--request{% endif %}">
+      {% if conf %}
+      <span class="obj-price__label">{{ t('property.head.indicative_label') }}</span>
+      <b><bdi>{{ fmt_price(l.price) }}</bdi></b>
+      {% if l.price %}<span class="obj-price__note">{{ t('property.head.preliminary') }}</span>{% endif %}
+      {% elif is_rent %}
+      <span class="obj-price__label">{{ t('property.head.rent_label') }}</span>
+      <b><bdi>{{ fmt_price(l.price, per_month=True) }}</bdi></b>
+      {% if l.rent and l.rent.available_from %}<span class="obj-price__note">{{ t('property.head.available_from', date=listings.date(l.rent.available_from, lang)) }}</span>{% endif %}
+      {% else %}
+      <span class="obj-price__label">{{ t('property.head.price_label') }}</span>
+      <b><bdi>{{ fmt_price(l.price) }}</bdi></b>
+      {% if per_m2 %}<span class="obj-price__note"><bdi>{{ per_m2 }}</bdi></span>{% endif %}
+      {% endif %}
+    </div>
+  </header>
+
+  {#- ------------------------------------------------ галерея -#}
+  {% if photos %}
+  <section class="gallery{% if photos | length == 1 %} gallery--single{% endif %}" aria-label="{{ t('property.gallery.aria') }}" data-gallery>
+    <div class="gallery-main" data-gallery-main>
+      {% for src in photos %}
+      <figure class="gallery-slide{% if loop.first %} is-active{% endif %}" data-slide="{{ loop.index0 }}"{% if not loop.first %} hidden{% endif %}>
+        {{ img(src, t('common.alt.listing_photo_n', name=title, n=loop.index), sizes='(max-width: 960px) 100vw, 860px', cls='gallery-img', loading='eager' if loop.first else 'lazy', fetchpriority='high' if loop.first else None) }}
+      </figure>
+      {% endfor %}
+      <button class="gallery-zoom" type="button" data-gallery-open aria-label="{{ t('property.gallery.open') }}" hidden></button>
+      {% if photos | length > 1 %}
+      <button class="gallery-nav gallery-nav--prev" type="button" data-gallery-dir="-1" aria-label="{{ t('property.gallery.prev') }}" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 4-8 8 8 8"/></svg></button>
+      <button class="gallery-nav gallery-nav--next" type="button" data-gallery-dir="1" aria-label="{{ t('property.gallery.next') }}" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8"/></svg></button>
+      <span class="gallery-counter" dir="ltr" aria-hidden="true" data-gallery-counter>1 / {{ photos | length }}</span>
+      {% endif %}
+    </div>
+    {% if photos | length > 1 %}
+    <ul class="gallery-thumbs" aria-label="{{ t('property.gallery.thumbs_aria') }}">
+      {% for src in photos %}
+      <li><a class="gallery-image-thumb{% if loop.first %} active{% endif %}" href="{{ path(src) }}" data-thumb="{{ loop.index0 }}"{% if loop.first %} aria-current="true"{% endif %}>
+        {{ img(src, '', sizes='160px', cls='gallery-thumb-img', loading='eager' if loop.index <= 4 else 'lazy') }}<span class="visually-hidden">{{ t('property.gallery.thumb', n=loop.index, total=photos | length) }}</span>
+      </a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  {% else %}
+  <figure class="gallery gallery--illustration">
+    <div class="gallery-main">
+      {{ img(l.illustration, t('common.alt.illustration', type=type_name(l.kind)), sizes='(max-width: 960px) 100vw, 1180px', cls='gallery-img listing-illustration', loading='eager', fetchpriority='high') }}
+      <span class="card-illustration-tag">{{ t('property.illustration') }}</span>
+    </div>
+    <figcaption class="gallery-note">{{ ui.icon('info', size=16) }}<span>{{ t('property.gallery.illustration_note') }}</span></figcaption>
+  </figure>
+  {% endif %}
+
+  <div class="obj-layout">
+    {#- ---------------------------------------------- основная колонка -#}
+    <div class="obj-desc">
+      <div class="object-id-row">
+        <div class="object-id-value">
+          <span id="obj-id-label">{{ t('property.id.label') }}</span>
+          <strong data-copy-value>{{ oid }}</strong>
+          <small>{{ t('property.id.hint') }}</small>
+        </div>
+        <button class="object-id-copy" type="button" data-copy-id="{{ oid }}" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+          <span data-copy-label>{{ t('property.id.copy') }}</span><span class="visually-hidden"> {{ t('property.id.label') }} {{ oid }}</span>
+        </button>
+        <span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
+      </div>
+
+      {% if conf %}
+      <aside class="conf-note" aria-labelledby="conf-note-title">
+        <h2 id="conf-note-title">{{ ui.icon('lock', size=18) }}<span>{{ t('property.confidential.note_title') }}</span></h2>
+        <p>{{ t('property.confidential.note') }}</p>
+      </aside>
+      {% endif %}
+
+      {% if not conf %}{#- у конфиденциальных «Об объекте» совпало бы с пометкой выше -#}
+      <section class="obj-section" aria-labelledby="about-title">
+        <h2 id="about-title">{{ t('property.sections.about') }}</h2>
+        {% for para in listing_description(l).split('\n\n') %}<p><bdi>{{ para }}</bdi></p>{% endfor %}
+      </section>
+      {% endif %}
+
+      <section class="obj-section" aria-labelledby="loc-title">
+        <h2 id="loc-title">{{ t('property.sections.location') }}</h2>
+        {% for para in listing_location(l).split('\n\n') %}<p><bdi>{{ para }}</bdi></p>{% endfor %}
+      </section>
+
+      <section class="obj-section" aria-labelledby="facts-title">
+        <h2 id="facts-title">{{ t('property.sections.facts') }}</h2>
+        <div class="object-facts">
+          {% for group, rows in listings.facts(l, lang) %}
+          <section class="object-fact-group" aria-labelledby="facts-{{ group }}">
+            <h3 id="facts-{{ group }}">{{ t('property.groups.' ~ group) }}</h3>
+            <dl class="object-fact-grid">
+              {% for key, value, icon in rows %}
+              <div class="object-fact">
+                <dt><span class="object-fact-icon" aria-hidden="true">{{ ui.icon(icon, size=20) }}</span><span class="object-fact-label">{{ t('property.facts.' ~ key) }}</span></dt>
+                <dd><bdi>{{ value }}</bdi></dd>
+              </div>
+              {% endfor %}
+            </dl>
+          </section>
+          {% endfor %}
+        </div>
+      </section>
+
+      {% if l.features %}
+      <section class="obj-section" aria-labelledby="features-title">
+        <h2 id="features-title">{{ t('property.sections.features') }}</h2>
+        <ul class="features">
+          {% for feature in l.features %}<li class="feature-chip"><bdi>{{ feature }}</bdi></li>{% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if l.units %}
+      {% set available = l.units | selectattr('status', 'equalto', 'available') | list | length %}
+      <section class="obj-section" aria-labelledby="units-title">
+        <h2 id="units-title">{{ t('property.sections.units') }}</h2>
+        <p class="obj-muted">{{ t('property.units.intro', available=available, total=l.units | length) }}</p>
+        <ul class="unit-cards">
+          {% for u in l.units %}
+          {% set status = u.status if u.status in ['available', 'reserved', 'sold'] else 'unknown' %}
+          <li class="unit-card">
+            <div class="u-top"><span class="u-code"><bdi dir="ltr">{{ u.unitCode or u.name or loop.index }}</bdi></span><span class="status-pill status-{{ status }}">{{ t('property.units.status.' ~ status) }}</span></div>
+            <dl class="u-grid">
+              {% if u.floor not in (none, '') %}<div><dt>{{ t('property.units.floor') }}</dt><dd>{{ u.floor }}</dd></div>{% endif %}
+              {% if u.rooms %}<div><dt>{{ t('property.units.bedrooms') }}</dt><dd><bdi>{{ u.rooms }}</bdi></dd></div>{% endif %}
+              {% if u.area %}<div><dt>{{ t('property.units.area') }}</dt><dd>{{ t('common.params.area', n=fmt_num(u.area)) }}</dd></div>{% endif %}
+              {% if u.view %}<div><dt>{{ t('property.units.view') }}</dt><dd><bdi>{{ u.view }}</bdi></dd></div>{% endif %}
+            </dl>
+            <div class="u-foot">
+              <span class="u-price{% if not u.price %} rq{% endif %}"><bdi>{{ fmt_price(u.price) }}</bdi></span>
+              <button class="btn btn-sm" type="button" data-chat-open>{{ t('property.units.request') }}</button>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <section class="obj-section" aria-labelledby="map-title">
+        <h2 id="map-title">{{ t('property.sections.map') }}</h2>
+        {% if conf or not l.map_coords %}
+        <p class="map-confidential">{{ ui.icon('lock', size=18) }}<span>{{ t('property.map.confidential', region=place) }}</span></p>
+        {% else %}
+        {% set lat, lng = l.map_coords %}
+        {% set zoom = 15 if l.coords else 13 %}
+        <div class="map-facade" data-map-facade data-src="https://www.google.com/maps?q={{ lat }},{{ lng }}&amp;z={{ zoom }}&amp;hl={{ lang }}&amp;output=embed" data-title="{{ t('property.map.iframe_title', place=place) }}">
+          <div class="map-facade__art" aria-hidden="true">
+            <span class="map-facade__pin{% if not l.coords %} is-approx{% endif %}">{{ ui.icon('pin', size=30) }}</span>
+          </div>
+          <div class="map-facade__body">
+            <p class="map-facade__place">{{ ui.icon('pin', size=18) }}<bdi>{{ place }}</bdi></p>
+            <p class="map-facade__note">{{ t('property.map.exact' if l.coords else 'property.map.approx') }}</p>
+            <div class="map-facade__actions">
+              <button class="btn btn-navy" type="button" data-map-load hidden>{{ ui.icon('map', size=18) }}<span>{{ t('property.map.button') }}</span></button>
+              <a class="btn btn-link" href="https://www.google.com/maps?q={{ lat }},{{ lng }}&amp;z={{ zoom }}"{{ ui.external_attrs() }}>{{ t('property.map.open_external') }}{{ ui.icon('external', size=16) }}</a>
+            </div>
+            <p class="map-facade__privacy">{{ t('property.map.note') }}</p>
+          </div>
+        </div>
+        {% endif %}
+      </section>
+    </div>
+
+    {#- ---------------------------------------------- CTA (боковая колонка) -#}
+    <aside class="obj-cta side-card" aria-labelledby="cta-title">
+      <div class="agent-row">
+        <span class="agent-ava" aria-hidden="true">G</span>
+        <div><b>{{ t('property.cta.agent_name') }}</b><span>{{ t('property.cta.agent_role') }}</span></div>
+      </div>
+      {% if conf %}
+      <h2 id="cta-title">{{ t('property.confidential.cta_title') }}</h2>
+      <p>{{ t('property.confidential.cta_text') }}</p>
+      <a class="btn" href="#enquiry">{{ ui.icon('document', size=18) }}<span>{{ t('property.confidential.cta_button') }}</span></a>
+      {% else %}
+      <h2 id="cta-title">{{ t('property.cta.title') }}</h2>
+      <p>{{ t('property.cta.text', id=oid) }}</p>
+      {% endif %}
+      <a class="btn btn-outline" href="{{ site.contacts.phone_href }}">{{ ui.icon('phone', size=18) }}<span>{{ t('property.cta.call') }}</span></a>
+      <a class="btn btn-navy" href="{{ site.contacts.whatsapp }}?text={{ t('property.cta.whatsapp_text', id=oid, url=abs_page) | urlencode }}"{{ ui.external_attrs() }}>{{ ui.icon('whatsapp', size=18) }}<span>{{ t('property.cta.whatsapp') }}</span></a>
+      <button class="btn btn-reset" type="button" data-chat-open><span>{{ t('property.cta.chat') }}</span></button>
+      {% if conf %}
+      <a class="obj-cta__link" href="{{ url('invest') }}">{{ t('property.confidential.invest_link') }}{{ ui.icon('arrow-right', size=16) }}</a>
+      {% endif %}
+    </aside>
+
+    {% if not conf %}
+    <div class="obj-form" id="request">
+      {{ forms.property_request_form(l, uid='lf-property', heading=t('property.cta.form_heading'), heading_level=2) }}
+    </div>
+    {% endif %}
+  </div>
+
+  {% if conf %}
+  <section class="obj-enquiry" id="enquiry" aria-labelledby="enquiry-title">
+    <div class="obj-enquiry__text">
+      <span class="kicker">{{ t('common.sections.invest') }}</span>
+      <h2 id="enquiry-title">{{ t('property.confidential.enquiry_title') }}</h2>
+      <p>{{ t('property.confidential.enquiry_intro', id=oid) }}</p>
+    </div>
+    {{ forms.investor_form(variant='private', preset={'investment_type': l.category}, uid='lf-investor') }}
+  </section>
+  {% endif %}
+
+  {% if similar %}
+  <section class="obj-similar" aria-labelledby="similar-title">
+    <div class="results-head">
+      <h2 id="similar-title">{{ t('property.sections.similar') }}</h2>
+      <a class="results-map" href="{{ url(cat_key) }}">{{ t('property.similar.all') }}{{ ui.icon('arrow-right', size=16) }}</a>
+    </div>
+    <div class="cards">
+      {% for s in similar %}{{ cards.card(s, heading=3) }}{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+
+{#- Лайтбокс — нативный <dialog> (фокус, Esc); наполняется js/property.js -#}
+{% if photos %}
+<dialog class="photo-lightbox" data-lightbox aria-label="{{ t('property.gallery.aria') }}">
+  <button class="photo-lightbox-close" type="button" data-lightbox-close aria-label="{{ t('common.buttons.close') }}">{{ ui.icon('close', size=24) }}</button>
+  {% if photos | length > 1 %}
+  <button class="photo-lightbox-nav photo-lightbox-prev" type="button" data-lightbox-dir="-1" aria-label="{{ t('property.gallery.prev') }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 4-8 8 8 8"/></svg></button>
+  <button class="photo-lightbox-nav photo-lightbox-next" type="button" data-lightbox-dir="1" aria-label="{{ t('property.gallery.next') }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8"/></svg></button>
+  {% endif %}
+  <div class="photo-lightbox-stage" data-lightbox-stage></div>
+  <span class="photo-lightbox-counter" dir="auto" aria-live="polite" data-lightbox-counter></span>
+</dialog>
+{% endif %}
+{% endblock %}

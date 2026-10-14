@@ -1,0 +1,198 @@
+{#- /owners/ — «Владельцам»: агентство для продавцов и арендодателей + заявка на объект (brief §A, §D.4–6).
+    Строки — i18n/<lang>/owners.json; форма — macros/forms.html owner_form; скрипт — js/owners.js
+    (кнопка «Запросить образец договора» дописывает запрос в сообщение формы). -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/forms.html" as forms %}
+
+{% set SERVICES = [('sell', 'owners.sell', 'BG_images/04.jpg'),
+                   ('rent_out', 'owners.rent_out', 'img/stock/rent-balcony.jpg'),
+                   ('management', 'owners.management', 'BG_images/05.jpg')] %}
+{% set KINDS = ['apartment', 'house', 'land', 'construction_project', 'business'] %}
+{% set STEPS = ['valuation', 'photo', 'contract', 'marketing', 'deal'] %}
+{% set CONTRACT_TERMS = ['commission_html', 'exclusive', 'price', 'access'] %}
+{% set EXCLUSIVE_POINTS = ['contact', 'price', 'viewings'] %}
+{% set CONTRACTS = ['sale', 'business'] %}
+{% set CONTRACT_SECTIONS = ['parties', 'object', 'price', 'commission', 'exclusivity', 'owner_duties', 'agent_duties', 'confidentiality', 'termination', 'law'] %}
+
+{#- Боковая колонка формы: что дальше, данные, прямые контакты (та же разметка — в owners_service.html) -#}
+{% macro form_aside() -%}
+<div role="note" class="ow-form-aside" aria-labelledby="ow-next-title">
+  <div class="ow-aside-card">
+    <h3 id="ow-next-title">{{ t('owners.form.next_title') }}</h3>
+    <ol class="ow-next">
+      {% for n in ['call', 'visit', 'contract'] %}
+      <li>{{ t('owners.form.next.' ~ n) }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div class="ow-aside-card">
+    <h3>{{ ui.icon('lock', 'ow-aside-icon', 18) }}<span>{{ t('owners.form.privacy_title') }}</span></h3>
+    <p>{{ t('owners.form.privacy') }}</p>
+  </div>
+  <div class="ow-aside-card ow-aside-card--direct">
+    <h3>{{ t('owners.form.direct_title') }}</h3>
+    <p>{{ t('owners.form.direct') }}</p>
+    <div class="ow-direct">
+      <a class="ow-direct__link" href="{{ site.contacts.whatsapp }}"{{ ui.external_attrs() }}>{{ ui.icon('whatsapp', '', 20) }}<span>{{ t('common.contacts.whatsapp') }}</span></a>
+      <a class="ow-direct__link" href="{{ site.contacts.telegram }}"{{ ui.external_attrs() }}>{{ ui.icon('telegram', '', 20) }}<span>{{ t('common.contacts.telegram') }}</span></a>
+      <a class="ow-direct__link" href="{{ site.contacts.phone_href }}">{{ ui.icon('phone', '', 20) }}<span><bdi dir="ltr">{{ site.contacts.phone }}</bdi></span></a>
+    </div>
+    <a class="ow-chat-link" href="{{ url('contact') }}" data-chat-open>{{ t('owners.form.chat') }}{{ ui.icon('arrow-right', '', 18) }}</a>
+  </div>
+</div>
+{%- endmacro %}
+
+{% block main %}
+{# ---------------------------------------------------------------- hero #}
+<section class="ow-hero" aria-labelledby="ow-h1">
+  <div class="ow-hero__media">
+    {{ img('img/stock/owners-interior.jpg', t('owners.alt.hero'), sizes='100vw', cls='ow-hero__img', loading='eager', fetchpriority='high', fallback='BG_images/01.jpg') }}
+  </div>
+  <div class="container ow-hero__inner">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="ow-kicker">{{ t('owners.hero.kicker') }}</span>
+    <h1 id="ow-h1">{{ page.h1 }}</h1>
+    <p class="ow-hero__lead">{{ t('owners.hero.lead') }}</p>
+    <div class="ow-hero__actions">
+      {{ ui.button('#owner-form', t('owners.hero.cta_form'), icon_end='arrow-right') }}
+      {{ ui.button('#process', t('owners.hero.cta_process'), 'ghost') }}
+    </div>
+    <ul class="ow-facts" aria-label="{{ t('owners.hero.facts_aria') }}">
+      <li>{{ ui.icon('check', 'ow-facts__icon', 18) }}<span>{{ t('owners.hero.facts.commission') }}</span></li>
+      <li>{{ ui.icon('document', 'ow-facts__icon', 18) }}<span>{{ t('owners.hero.facts.contract') }}</span></li>
+      <li>{{ ui.icon('globe', 'ow-facts__icon', 18) }}<span>{{ t('owners.hero.facts.languages') }}</span></li>
+    </ul>
+  </div>
+</section>
+
+{# -------------------------------------------------------------- agency #}
+<section class="section ow-agency" aria-labelledby="ow-agency-title">
+  <div class="container ow-agency__grid">
+    <div class="ow-agency__text">
+      {{ ui.section_head(t('owners.agency.title'), kicker=t('owners.agency.kicker'), id='ow-agency-title') }}
+      <p>{{ t('owners.agency.p1') }}</p>
+      <p>{{ t('owners.agency.p2') }}</p>
+      <p>{{ t('owners.agency.p3') }}</p>
+      <p class="ow-agency__more">{{ ui.button(url('about'), t('owners.agency.more'), 'link', icon_end='arrow-right') }}</p>
+    </div>
+    <div role="note" class="ow-kinds" aria-labelledby="ow-kinds-title">
+      <h3 class="ow-kinds__title" id="ow-kinds-title">{{ t('owners.agency.kinds_title') }}</h3>
+      <ul class="ow-kinds__list">
+        {% for kind in KINDS %}
+        <li class="ow-kind">
+          <svg class="ow-kind__icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="{{ forms.KIND_ICONS[kind] }}"/></svg>
+          <span class="ow-kind__text"><b>{{ t('owners.agency.kinds.' ~ kind ~ '.title') }}</b><span>{{ t('owners.agency.kinds.' ~ kind ~ '.text') }}</span></span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------------------ services #}
+<section class="section ow-services" aria-labelledby="ow-services-title">
+  <div class="container">
+    {{ ui.section_head(t('owners.services.title'), kicker=t('owners.services.kicker'), sub=t('owners.services.sub'), id='ow-services-title') }}
+    <ul class="ow-cards">
+      {% for code, key, image in SERVICES %}
+      <li class="ow-card">
+        <div class="ow-card__media">
+          {{ img(image, t('owners.alt.' ~ code), sizes='(min-width: 960px) 360px, (min-width: 641px) 50vw, 100vw', cls='ow-card__img', fallback='BG_images/01.jpg') }}
+        </div>
+        <div class="ow-card__body">
+          <h3 class="ow-card__title"><a href="{{ url(key) }}">{{ t('owners.services.items.' ~ code ~ '.title') }}</a></h3>
+          <p>{{ t('owners.services.items.' ~ code ~ '.text') }}</p>
+          <span class="ow-card__more" aria-hidden="true">{{ t('owners.services.more') }}{{ ui.icon('arrow-right', '', 18) }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ------------------------------------------------------------- process #}
+<section class="section ow-process" id="process" aria-labelledby="ow-process-title">
+  <div class="container ow-process__grid">
+    {{ ui.section_head(t('owners.process.title'), kicker=t('owners.process.kicker'), sub=t('owners.process.sub'), id='ow-process-title') }}
+    <ol class="ow-steps">
+      {% for s in STEPS %}
+      <li class="ow-step">
+        <span class="ow-step__num" aria-hidden="true">{{ loop.index }}</span>
+        <div class="ow-step__body">
+          <h3 class="ow-step__title">{{ t('owners.process.steps.' ~ s ~ '.title') }}</h3>
+          <p>{{ t('owners.process.steps.' ~ s ~ '.text') }}</p>
+          {% if s == 'contract' %}
+          <ul class="ow-step__terms">
+            {% for term in CONTRACT_TERMS %}
+            <li>{{ t('owners.process.steps.contract.terms.' ~ term) }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="ow-process__aside">
+      <p class="ow-legal">{{ ui.icon('document', 'ow-legal__icon', 22) }}<span>{{ t('owners.process.legal') }}</span></p>
+      <div class="ow-exclusive">
+        <h3 class="ow-exclusive__title">{{ t('owners.process.exclusive.title') }}</h3>
+        <p>{{ t('owners.process.exclusive.lead') }}</p>
+        <ul class="ow-checks">
+          {% for p in EXCLUSIVE_POINTS %}
+          <li>{{ ui.icon('check', 'ow-checks__icon', 18) }}<span>{{ t('owners.process.exclusive.points.' ~ p) }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------------------ contract #}
+<section class="section ow-contract" id="contract" aria-labelledby="ow-contract-title">
+  <div class="container">
+    {{ ui.section_head(t('owners.contract.title'), kicker=t('owners.contract.kicker'), sub=t('owners.contract.sub'), id='ow-contract-title') }}
+    <p class="ow-sample-note">{{ ui.icon('info', 'ow-sample-note__icon', 20) }}<span>{{ t('owners.contract.note') }}</span></p>
+    <div class="ow-accordions">
+      {% for c in CONTRACTS %}
+      {% set file = t('owners.contract.files.' ~ c) %}
+      <details class="ow-acc" id="contract-{{ c }}">
+        <summary class="ow-acc__summary">
+          {{ ui.icon('document', 'ow-acc__icon', 24) }}
+          <span class="ow-acc__title">{{ t('owners.contract.' ~ c ~ '.title') }}</span>
+          {{ ui.icon('chevron-down', 'ow-acc__chevron', 20) }}
+        </summary>
+        <div class="ow-acc__body">
+          <p class="ow-acc__note">{{ t('owners.contract.note') }}</p>
+          <ol class="ow-sections">
+            {% for sec in CONTRACT_SECTIONS %}
+            <li><b>{{ t('owners.contract.' ~ c ~ '.sections.' ~ sec ~ '.title') }}</b><span>{{ t('owners.contract.' ~ c ~ '.sections.' ~ sec ~ '.text') }}</span></li>
+            {% endfor %}
+          </ol>
+          <div class="ow-acc__actions">
+            {% if file and asset_exists(file) %}
+            {{ ui.button(asset(file), t('owners.contract.download'), 'outline', icon_name='document', attrs={'download': '', 'type': 'application/pdf'}) }}
+            {% endif %}
+            {{ ui.button('#owner-form', t('owners.contract.request'), 'navy', attrs={'data-contract-request': c}) }}
+          </div>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+    <div class="ow-contract__cta">
+      <p>{{ t('owners.contract.request_hint') }}</p>
+      {{ ui.button('#owner-form', t('owners.contract.request'), 'outline', icon_end='arrow-right', attrs={'data-contract-request': 'sale'}) }}
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- form #}
+<section class="section ow-form-section" id="owner-form" aria-labelledby="lf-owner-title">
+  <div class="container ow-form-grid">
+    <div class="ow-form-main">
+      {{ forms.owner_form(heading=t('owners.form.title'), intro=t('owners.form.intro')) }}
+    </div>
+    {{ form_aside() }}
+  </div>
+</section>
+{% endblock %}

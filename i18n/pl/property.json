@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "title": "{title}, ID {id} | GUREVIĆ",
+    "description": "{card} {price_phrase}. ID {id}. Najważniejsze dane, lokalizacja i prezentacje — agencja GUREVIĆ, Budva.",
+    "price": "Cena: {price}",
+    "title_confidential": "{title} | GUREVIĆ",
+    "description_confidential": "{title}. {price_phrase}. Poufna oferta inwestycyjna: szczegóły po kwalifikacji inwestora i podpisaniu NDA. GUREVIĆ, Budva."
+  },
+  "labels": {
+    "description": "Opis",
+    "location": "Lokalizacja",
+    "price": "Cena",
+    "id": "ID oferty",
+    "project": "Projekt",
+    "features": "Wyposażenie i udogodnienia",
+    "units": "Lokale w projekcie"
+  },
+  "head": {
+    "price_label": "Cena",
+    "rent_label": "Czynsz miesięczny",
+    "per_m2": "{price} za m²",
+    "indicative_label": "Cena orientacyjna",
+    "preliminary": "Wstępnie, wymaga weryfikacji",
+    "available_from": "Dostępność od {date}"
+  },
+  "gallery": {
+    "aria": "Zdjęcia nieruchomości",
+    "prev": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie",
+    "thumbs_aria": "Miniatury zdjęć",
+    "thumb": "Zdjęcie {n} z {total}",
+    "open": "Otwórz zdjęcie na pełnym ekranie",
+    "illustration_note": "Zdjęcia tej nieruchomości nie zostały jeszcze opublikowane — obraz przedstawia ilustrację kategorii."
+  },
+  "id": {
+    "label": "ID oferty",
+    "hint": "Prosimy podawać ten numer przy kontakcie — od razu odnajdziemy ofertę.",
+    "copy": "Kopiuj",
+    "copy_aria": "Kopiuj ID oferty {id}"
+  },
+  "sections": {
+    "about": "O nieruchomości",
+    "location": "O lokalizacji",
+    "facts": "Najważniejsze informacje",
+    "features": "Wyposażenie i udogodnienia",
+    "units": "Lokale w projekcie",
+    "map": "Lokalizacja na mapie",
+    "similar": "Podobne oferty",
+    "request": "Zapytanie o tę ofertę"
+  },
+  "groups": {
+    "main": "Informacje ogólne",
+    "money": "Cena",
+    "rent": "Warunki najmu",
+    "more": "Stan i udogodnienia"
+  },
+  "facts": {
+    "type": "Rodzaj",
+    "district": "Lokalizacja",
+    "region": "Region",
+    "area": "Powierzchnia",
+    "area_unit": "Powierzchnia lokalu",
+    "plot": "Działka",
+    "bedrooms": "Sypialnie",
+    "bathrooms": "Łazienki",
+    "floor": "Piętro",
+    "balconies": "Balkony i tarasy",
+    "view": "Widok",
+    "monthly": "Czynsz miesięczny",
+    "terms": "Okres najmu",
+    "min_term": "Minimalny okres",
+    "deposit": "Kaucja",
+    "available_from": "Dostępność od",
+    "utilities": "Media",
+    "pets": "Zwierzęta",
+    "price": "Cena",
+    "price_m2": "Cena za m²",
+    "payment_plan": "Harmonogram płatności",
+    "transfer_tax": "Podatki i opłaty",
+    "furnishing": "Umeblowanie",
+    "condition": "Stan",
+    "parking": "Parking",
+    "distance_to_sea": "Odległość od morza",
+    "completion": "Termin oddania"
+  },
+  "values": {
+    "no_deposit": "Bez kaucji",
+    "utilities": {
+      "included": "Wliczone",
+      "not_included": "Płatne osobno",
+      "partial": "Częściowo wliczone"
+    },
+    "pets": {
+      "allowed": "Dozwolone",
+      "not_allowed": "Niedozwolone",
+      "by_agreement": "Po uzgodnieniu"
+    }
+  },
+  "units": {
+    "intro": "Dostępne: {available} z {total}. Ceny i dostępność prosimy sprawdzać według numeru lokalu.",
+    "floor": "Piętro",
+    "bedrooms": "Sypialnie",
+    "area": "Powierzchnia",
+    "view": "Widok",
+    "status": {
+      "available": "Dostępny",
+      "reserved": "Zarezerwowany",
+      "sold": "Sprzedany",
+      "unknown": "Na zapytanie"
+    },
+    "request": "Zapytaj na czacie"
+  },
+  "map": {
+    "button": "Pokaż mapę",
+    "note": "Mapa Google ładuje się dopiero po kliknięciu przycisku.",
+    "exact": "Pinezka jest oparta na danych oferty. Dokładny adres udostępniamy na zapytanie.",
+    "approx": "Pinezka wskazuje środek okolicy, a nie adres nieruchomości.",
+    "iframe_title": "Mapa: {place}",
+    "open_external": "Otwórz w Mapach Google",
+    "confidential": "Dla poufnych ofert nie publikujemy mapy — podajemy tylko region: {region}."
+  },
+  "cta": {
+    "title": "Zainteresowała Państwa ta oferta?",
+    "text": "Odpowiemy na pytania i umówimy prezentację. Prosimy podać ID oferty widoczne na tej stronie.",
+    "call": "Zadzwoń",
+    "whatsapp": "Napisz na WhatsAppie",
+    "whatsapp_text": "Dzień dobry, interesuje mnie oferta {id}: {url}",
+    "chat": "Zapytaj na czacie",
+    "form_heading": "Zapytaj o szczegóły",
+    "agent_name": "GUREVIĆ",
+    "agent_role": "Agencja nieruchomości, Budva"
+  },
+  "confidential": {
+    "badge": "Poufne",
+    "note_title": "Poufna oferta",
+    "note": "Nazwę, dokładny adres i dokumenty ujawniamy po kwalifikacji zapytania i — w razie potrzeby — podpisaniu NDA. Wszystkie dane liczbowe są wstępne i wymagają weryfikacji.",
+    "cta_title": "Zapytaj o szczegóły",
+    "cta_text": "Prosimy opisać swoje cele i budżet — po kwalifikacji zapytania przekażemy dostępne informacje o tej ofercie.",
+    "cta_button": "Przejdź do formularza",
+    "enquiry_title": "Zapytanie o tę ofertę inwestycyjną",
+    "enquiry_intro": "Prosimy podać w wiadomości ID {id}. Na tym etapie nie prosimy o dane paszportowe ani dokumenty finansowe.",
+    "invest_link": "Wszystkie kierunki inwestycji"
+  },
+  "similar": {
+    "all": "Wszystkie oferty w tej kategorii"
+  },
+  "illustration": "Ilustracja",
+  "date": "{d} {month} {y}",
+  "months": {
+    "m1": "stycznia",
+    "m2": "lutego",
+    "m3": "marca",
+    "m4": "kwietnia",
+    "m5": "maja",
+    "m6": "czerwca",
+    "m7": "lipca",
+    "m8": "sierpnia",
+    "m9": "września",
+    "m10": "października",
+    "m11": "listopada",
+    "m12": "grudnia"
+  },
+  "plural": {
+    "months": {
+      "one": "{n} miesiąc",
+      "few": "{n} miesiące",
+      "many": "{n} miesięcy",
+      "other": "{n} miesiąca"
+    }
+  },
+  "gen": {
+    "where": "w lokalizacji {district}",
+    "where_other": "w Czarnogórze",
+    "where_in": {
+      "budva-center": "w Budvie",
+      "budva-rozino": "w dzielnicy Rozino w Budvie",
+      "budva-waterfront": "na nabrzeżu w Budvie",
+      "budva-ivanica": "w dzielnicy Ivanica w Budvie",
+      "budva-veligrad": "w dzielnicy Veligrad w Budvie",
+      "becici": "w Bečići",
+      "rafailovici": "w Rafailovići",
+      "przno": "w miejscowości Pržno",
+      "sveti-stefan": "w Sveti Stefan",
+      "lapcici": "w miejscowości Lapčići",
+      "tudorovici": "w miejscowości Tudorovići",
+      "lastva-grbaljska": "w miejscowości Lastva Grbaljska",
+      "petrovac": "w Petrovacu",
+      "buljarica": "w Buljaricy",
+      "tivat": "w Tivacie",
+      "kotor": "w Kotorze",
+      "herceg-novi": "w Herceg Novi",
+      "bar": "w Barze",
+      "dobra-voda": "w miejscowości Dobra Voda",
+      "ulcinj": "w Ulcinju",
+      "rijeka-crnojevica": "w miejscowości Rijeka Crnojevića",
+      "cetinje": "w Cetinje",
+      "podgorica": "w Podgoricy",
+      "other": "w Czarnogórze"
+    },
+    "district_title": {
+      "budva-center": "Budva",
+      "budva-rozino": "Rozino, Budva",
+      "budva-waterfront": "Budva, nabrzeże",
+      "budva-ivanica": "Ivanica, Budva",
+      "budva-veligrad": "Veligrad, Budva"
+    },
+    "title": "{type} {area} m² — {district_title}",
+    "title_no_area": "{type} — {district_title}",
+    "title_project": "{name} — {district_title}",
+    "card": "{type} {where}: {params}.",
+    "card_no_params": "{type} {where}.",
+    "lead": "{type} {where}.",
+    "lead_project": "{type} „{name}” {where}.",
+    "part_area": "powierzchnia {n} m²",
+    "part_area_house": "powierzchnia domu {n} m²",
+    "part_area_unit": "powierzchnia lokalu {n} m²",
+    "part_land": "działka {n} m²",
+    "part_plot": "powierzchnia działki {n} m²",
+    "price": "Cena: {price}.",
+    "price_per_m2": "Cena: {price} ({per} za m²).",
+    "price_on_request": "Cena na zapytanie.",
+    "price_rent": "Czynsz: {price} miesięcznie.",
+    "closing": "Chętnie odpowiemy na pytania i umówimy prezentację — prosimy podać ID {id} przy kontakcie.",
+    "closing_no_params": "Parametry są w trakcie potwierdzania. Chętnie odpowiemy na pytania i umówimy prezentację — prosimy podać ID {id} przy kontakcie.",
+    "location": "Lokalizacja: {district}.",
+    "location_coords": "Pinezka na mapie jest oparta na danych oferty; dokładny adres udostępniamy na zapytanie.",
+    "location_approx": "Mapa pokazuje okolicę; dokładny adres udostępniamy na zapytanie.",
+    "location_confidential": "Region: {region}. Dokładną lokalizację ujawniamy po kwalifikacji zapytania.",
+    "district_about": {
+      "budva-center": "Budva to największy kurort na wybrzeżu i serce Riwiery Budvańskiej — sklepy, szkoły, placówki medyczne i urzędy działają tu przez cały rok.",
+      "budva-rozino": "Rozino to dzielnica mieszkaniowa Budvy położona niedaleko centrum.",
+      "budva-waterfront": "Nadmorska część Budvy, przy miejskiej promenadzie.",
+      "budva-ivanica": "Ivanica to dzielnica mieszkaniowa Budvy.",
+      "budva-veligrad": "Veligrad to dzielnica mieszkaniowa Budvy.",
+      "becici": "Bečići to miejscowość wypoczynkowa na wschód od Budvy z jedną z najdłuższych plaż Riwiery Budvańskiej.",
+      "rafailovici": "Rafailovići to nadmorska miejscowość tuż obok Bečići na Riwierze Budvańskiej.",
+      "przno": "Pržno to niewielka nadmorska miejscowość między Budvą a Sveti Stefan.",
+      "sveti-stefan": "Sveti Stefan to nadmorska miejscowość na południowy wschód od Budvy, naprzeciwko słynnej wyspy-hotelu.",
+      "lapcici": "Lapčići to wieś na wzgórzach nad Riwierą Budvańską.",
+      "tudorovici": "Tudorovići to wieś na zboczu nad wybrzeżem, w pobliżu Pržna.",
+      "lastva-grbaljska": "Lastva Grbaljska to wieś w dolinie Grbalj między Budvą a Tivatem, niedaleko od wybrzeża.",
+      "petrovac": "Petrovac to niewielkie miasteczko wypoczynkowe na wybrzeżu na południe od Budvy.",
+      "buljarica": "Buljarica to zatoka z długą plażą na południe od Petrovca.",
+      "tivat": "Tivat to miasto nad Zatoką Kotorską z międzynarodowym lotniskiem i mariną jachtową.",
+      "kotor": "Kotor to historyczne miasto w głębi Zatoki Kotorskiej; jego Stare Miasto jest wpisane na Listę światowego dziedzictwa UNESCO.",
+      "herceg-novi": "Herceg Novi to miasto u wejścia do Zatoki Kotorskiej.",
+      "bar": "Bar to miasto portowe na południowym wybrzeżu Czarnogóry.",
+      "dobra-voda": "Dobra Voda to nadmorska miejscowość na południowym wybrzeżu, w pobliżu Baru.",
+      "ulcinj": "Ulcinj to najdalej na południe położone miasto na wybrzeżu Czarnogóry.",
+      "rijeka-crnojevica": "Rijeka Crnojevića to historyczna miejscowość nad rzeką o tej samej nazwie w pobliżu Jeziora Szkoderskiego, na terenie parku narodowego.",
+      "cetinje": "Cetinje to dawna królewska stolica Czarnogóry, położona w górzystym wnętrzu kraju.",
+      "podgorica": "Podgorica to stolica i największe miasto Czarnogóry."
+    },
+    "confidential_title": "{type}, {region}",
+    "confidential_card": "{type}, {region}. Szczegóły po kwalifikacji zapytania, w razie potrzeby na podstawie NDA.",
+    "confidential_description": "Poufna oferta: {type_lc}, {region}. Nazwę, dokładny adres i dokumenty ujawniamy po kwalifikacji inwestora i — w razie potrzeby — podpisaniu NDA. Wszystkie dane liczbowe są wstępne i wymagają weryfikacji."
+  },
+  "js": {
+    "copied": "Skopiowano",
+    "copied_status": "Skopiowano ID {id}",
+    "copy_failed": "Nie udało się skopiować — prosimy zaznaczyć ID ręcznie",
+    "counter": "{n} / {total}",
+    "photo": "Zdjęcie {n} z {total}",
+    "lightbox": "Przeglądarka zdjęć",
+    "close": "Zamknij",
+    "prev": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie",
+    "map_loading": "Ładowanie mapy…"
+  }
+}

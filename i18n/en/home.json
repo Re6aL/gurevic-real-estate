@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Real estate agency in Budva, Montenegro | GUREVIĆ",
+    "description": "Buying, long-term rentals and property investment in Budva and on the Montenegrin coast. GUREVIĆ is a Budva agency working under written agreements."
+  },
+  "h1": "Real estate agency in Budva. Life by the sea — your new story",
+  "splash": {
+    "line1": "The key to life by the sea",
+    "line2": "Montenegro property — from first viewing to the keys"
+  },
+  "hero": {
+    "eyebrow": "Real estate agency in Budva",
+    "title": "Life by the sea —",
+    "accent": "your new story",
+    "sub": "Buying, long-term rentals and investment on the Montenegrin coast",
+    "cta_buy": "Buy",
+    "cta_rent": "Rent",
+    "cta_invest": "Invest",
+    "owners_link": "For property owners",
+    "carousel": "carousel",
+    "slides_aria": "Photos of Budva",
+    "controls_aria": "Photo controls",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "slide": "Photo {n} of {total}",
+    "alt": {
+      "1": "Budva Old Town seen from a pebble beach",
+      "2": "Aerial view of Budva: the Old Town, marina and bay at sunrise",
+      "3": "The Dancer statue on a rock by Budva Old Town",
+      "4": "Budva Old Town bell tower and the bay behind flowering bougainvillea",
+      "5": "Budva Old Town walls and mountains above the sea"
+    }
+  },
+  "directions": {
+    "kicker": "What we do",
+    "title": "Choose what you need",
+    "sub": "Each direction has its own section: listings or terms, how we work and a request form.",
+    "subs_aria": "Sections: {name}",
+    "rent": {
+      "text": "Apartments and houses for long-term rent — until the season starts or for a full year.",
+      "alt": "Balcony overlooking a bay — illustration"
+    },
+    "buy": {
+      "text": "Apartments, houses, villas and plots for private construction.",
+      "alt": "New residential complex on the coast — rendering"
+    },
+    "invest": {
+      "text": "Hotels, development land and commercial property, sourced confidentially.",
+      "alt": "Montenegrin coastline from above — illustration"
+    },
+    "owners": {
+      "text": "Selling, letting and managing your property under a written agreement.",
+      "alt": "Bright living room opening onto a balcony — illustration"
+    }
+  },
+  "about": {
+    "kicker": "About the agency",
+    "title": "Ilia Gurevich — founder and agent of GUREVIĆ",
+    "person": "Ilia Gurevich",
+    "monogram": "IG",
+    "photo_alt": "Ilia Gurevich, founder of the GUREVIĆ agency",
+    "p1": "We are in our third year on the Montenegrin property market. The agency now works in a new format: buyers, tenants, investors and owners each have a separate direction with its own terms and process.",
+    "p2": "Agreements with clients are made in writing. For legal matters, design and construction we work with specialist partners.",
+    "link": "More about the agency"
+  },
+  "steps": {
+    "kicker": "Process",
+    "title": "How we work",
+    "sub": "Four stages, from your first message to the deal.",
+    "s1": {
+      "title": "Request",
+      "text": "You describe the task: what you are looking for or which property you offer, your timing and budget."
+    },
+    "s2": {
+      "title": "Shortlist or valuation",
+      "text": "We shortlist suitable options or assess your property and agree on the terms of our work."
+    },
+    "s3": {
+      "title": "Viewings and negotiation",
+      "text": "We arrange viewings and negotiate price and terms with the other party."
+    },
+    "s4": {
+      "title": "Deal under contract",
+      "text": "The terms are set out in a written agreement in line with Montenegrin law."
+    }
+  },
+  "cta": {
+    "kicker": "Contact",
+    "title": "Tell us about your plans",
+    "text": "Message us on WhatsApp or Telegram, or leave a request on the website, and we will get back to you the way you prefer.",
+    "languages": "Consultations in Russian, English and Montenegrin.",
+    "call": "Or call:"
+  },
+  "js": {
+    "pause": "Pause the photos",
+    "play": "Resume the photos"
+  }
+}

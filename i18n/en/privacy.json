@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Privacy policy | GUREVIĆ",
+    "description": "How DOO GUREVIC BUDVA handles data from the forms and chat on this website: what we collect, why, who receives it, how long we keep it and what your rights are."
+  },
+  "h1": "Privacy policy",
+  "kicker": "Your data",
+  "lead": "What data we receive through this website, why we need it, who it is shared with and how you can control it.",
+  "updated": "Last updated: October 2026",
+  "toc_title": "Contents",
+  "back_to_top": "Back to contents",
+  "sections": {
+    "controller": {
+      "title": "Who is responsible for your data",
+      "p1_html": "The controller of your personal data is <strong>{legal}</strong>, the {brand} real estate agency, Budva, Montenegro. For any question about your data, write to <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>.",
+      "p2": "This policy applies to this website and all its language versions. If you contact us directly — by phone, in messengers or by email — the same rules apply to that data."
+    },
+    "data": {
+      "title": "What data we receive",
+      "p1": "We receive only what you enter in the forms or tell us in the chat, plus the technical information the website cannot work without. The data depends on the form:",
+      "list": {
+        "contact_html": "<strong>Contact form and purchase enquiry</strong> — name; phone, Telegram or email (one is enough); subject; preferred language; your message.",
+        "rent_html": "<strong>Rental request</strong> — rental term, desired move-in date, monthly budget, number of bedrooms and occupants, pets, name, contact details, comment. The short-term rental notification form collects name, contact details, desired date and a comment.",
+        "property_html": "<strong>Property enquiry</strong> — name, contact details, message, plus the reference number and page address of the property you are asking about.",
+        "investor_html": "<strong>Investment enquiry (private investor)</strong> — full name, email, investment type, budget range, preferred contact method, phone or Telegram (if you chose these), comment, NDA request.",
+        "investor_company_html": "<strong>Investment enquiry (company representative)</strong> — the same data plus company name, position, corporate email and, optionally, the company's website and jurisdiction.",
+        "owner_html": "<strong>Owner's request</strong> — property type and task (sale, letting, management); for an individual — the owner's full name, title deed number (list nepokretnosti), cadastral municipality (KO) and, for an apartment, the unit number (PD); for a company — name, registration number and contact person; phone, email, preferred language, asking price, property description.",
+        "chat_html": "<strong>Chat assistant</strong> — your answers to the chat questions (purpose, property type, budget, area), name, contact details and the chat transcript. The chat follows a fixed script; the transcript is sent to us only after you confirm sending."
+      },
+      "p2": "Each request also automatically includes the language and address of the page it was sent from, the time of sending, the time spent filling in the form (spam protection), the consent version and campaign tags (UTM) if you arrived through a link containing them.",
+      "p3": "We do not ask for passport data, bank details or financial documents through this website. Please do not include them in comments.",
+      "p4": "Whenever a page is opened, the hosting provider automatically receives technical data: IP address, browser and device information, the requested address and the time of the request. Every web server works this way; see \"Who receives the data\" for details."
+    },
+    "purposes": {
+      "title": "Why we use the data",
+      "list": {
+        "respond": "to answer your enquiry and contact you the way you chose;",
+        "select": "to find properties, arrange viewings and prepare an offer for your request;",
+        "owner": "to assess an owner's property, prepare an agreement and start the sale or letting;",
+        "invest": "to carry out an initial review of an investment enquiry and prepare an NDA where needed;",
+        "contract": "to conclude and perform an agreement with you;",
+        "security": "to protect the website and forms from spam and abuse;",
+        "utm": "to understand which advertising links bring enquiries (UTM tags only, no tracking of your behaviour on the website)."
+      },
+      "p1": "We do not sell data, do not use it for automated decision-making and do not send marketing messages without your separate consent."
+    },
+    "bases": {
+      "title": "Legal bases",
+      "p1": "We process data in accordance with Montenegrin personal data protection law and, for visitors from the European Union, with regard to the EU General Data Protection Regulation (GDPR). The legal bases are:",
+      "list": {
+        "consent_html": "<strong>Consent.</strong> You give it by ticking the box when sending a form or by confirming sending in the chat. You can withdraw consent at any time; this does not affect the lawfulness of processing before the withdrawal.",
+        "contract_html": "<strong>Steps prior to a contract and its performance.</strong> When you ask us to find or value a property, prepare an agreement or support a transaction.",
+        "interest_html": "<strong>Legitimate interest.</strong> Protecting the website from spam and abuse (a hidden trap field for bots, a check of the form-filling time) and keeping a record of enquiries.",
+        "law_html": "<strong>Legal obligation.</strong> Where keeping certain data or documents is required by law, for example in connection with a concluded agreement."
+      }
+    },
+    "recipients": {
+      "title": "Who receives the data",
+      "p1": "Only the agency has access to enquiries. To run the website we use the services of the following companies; they process data on our behalf or under their own terms, as described below.",
+      "list": {
+        "notion_html": "<strong>Notion Labs, Inc.</strong> (USA) — the CRM system where enquiries from the website are stored.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) — delivers form data to the CRM (once this service is enabled). Cloudflare receives the enquiry data and the sender's IP address solely to deliver the request.",
+        "telegram_html": "<strong>Telegram</strong> — a short internal notification to the agent about a new enquiry (if notifications are enabled): the type of enquiry, name and key parameters, without phone, email, cadastral or registration numbers.",
+        "github_html": "<strong>GitHub, Inc.</strong> (USA) — website hosting (GitHub Pages). GitHub receives technical data about visits (IP address, browser, requested page) and keeps it in server logs under its own terms.",
+        "google_html": "<strong>Google</strong> — the map on a property page. It loads only after you click the button to load the map; until then nothing is sent to Google. Once loaded, Google receives your IP address and may use its own cookies.",
+        "osm_html": "<strong>OpenStreetMap and unpkg.com</strong> — the map on the \"Property map\" page. When you open it, your browser loads the Leaflet map library from unpkg.com and map tiles from OpenStreetMap servers; these servers receive your IP address.",
+        "messengers_html": "<strong>WhatsApp, Telegram, email</strong> — if you write to us directly or send a request through these channels (including the fallback buttons of a form), the data is processed by the service you chose under its own terms."
+      },
+      "p2": "Lawyers and other partners of the agency receive data only with your knowledge and only to the extent your matter requires, for example to check a property's documents. We disclose data to public authorities only where the law requires it."
+    },
+    "transfers": {
+      "title": "Transfers outside Montenegro",
+      "p1": "Some of the companies listed are located outside Montenegro, including in the USA. For such transfers we rely on the contractual safeguards of these companies, such as standard contractual clauses on data protection. Details are available on request by email."
+    },
+    "retention": {
+      "title": "How long we keep data",
+      "p1": "As a general rule, we keep enquiries and correspondence for up to 24 months after our last contact with you, after which we delete or anonymise them. If we have concluded an agreement, the related data is kept for as long as the agreement and the law require.",
+      "p2": "Technical logs of the hosting and delivery services are kept for the periods set by those companies.",
+      "p3": "Entries in your browser's storage remain on your device (see \"Cookies and browser storage\")."
+    },
+    "rights": {
+      "title": "Your rights",
+      "p1": "You have the right to:",
+      "list": {
+        "access": "know what data of yours we process and receive a copy of it;",
+        "rectification": "have inaccurate or incomplete data corrected;",
+        "erasure": "request the deletion of your data;",
+        "restriction": "request restriction of processing;",
+        "objection": "object to processing based on legitimate interest;",
+        "portability": "receive the data you provided in a machine-readable format;",
+        "withdraw": "withdraw your consent at any time;",
+        "complaint": "lodge a complaint with a supervisory authority."
+      },
+      "p2_html": "To exercise your rights, write to <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>. We may ask you to confirm that the request comes from you, and we will reply within the period set by law.",
+      "p3_html": "The supervisory authority in Montenegro is the <strong>Agency for Personal Data Protection and Free Access to Information</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). If you are in the European Union, you may also contact the supervisory authority of your country."
+    },
+    "storage": {
+      "title": "Cookies and browser storage",
+      "p1": "This website does not use cookies for analytics or advertising and does not include visitor counters.",
+      "p2": "For convenience, the website keeps a few service entries in your browser. They are not sent to us and are not used for tracking:",
+      "list": {
+        "local_html": "<strong>localStorage</strong> — the website language you chose (including when you close the suggestion to switch language). The entry stays until you delete it.",
+        "session_html": "<strong>sessionStorage</strong> — a note that the home page intro has already been shown, campaign tags (UTM) and the draft of an unfinished form. These entries are deleted when you close the tab; the draft is also deleted after a successful submission."
+      },
+      "p3": "You can delete these entries in your browser settings and the website will keep working. Third-party services (the Google map once you have loaded it, WhatsApp, Telegram) may use their own cookies under their own terms."
+    },
+    "security": {
+      "title": "Data security",
+      "p1": "We take reasonable organisational and technical measures: form data is transmitted over a secure connection (HTTPS), access to the CRM is restricted and service access keys are never published on the website."
+    },
+    "children": {
+      "title": "Children",
+      "p1": "This website is not intended for people under 18, and we do not knowingly collect their data. If you believe a child has sent us their data, please write to us and we will delete it."
+    },
+    "changes": {
+      "title": "Changes to this policy",
+      "p1": "We may update this policy, for example when we start using new services. The current version is always published on this page, with the date of the last update at the top."
+    },
+    "contacts": {
+      "title": "How to contact us",
+      "p1_html": "<strong>{legal}</strong>, Budva, Montenegro. Email for data questions: <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>."
+    }
+  }
+}

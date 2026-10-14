@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Immobilien kaufen in Budva und Montenegro | GUREVIĆ",
+    "description": "Wohnungen, Häuser, Villen und Baugrundstücke zum Kauf in Budva und ganz Montenegro: Preise, Flächen, Lagen und Fotos. Objektsuche und Kaufbegleitung."
+  },
+  "h1": "Immobilien zum Kauf in Budva und Montenegro",
+  "hero": {
+    "kicker": "Immobilienkauf",
+    "lead": "Wohnungen, Häuser, Villen und Grundstücke für den privaten Hausbau. Jede Karte zeigt Preis, Fläche und Lage; genaue Adresse und Unterlagen erhalten Sie auf Anfrage.",
+    "image_alt": "Budva von oben: Altstadt und Bucht"
+  },
+  "results_title": "Kaufobjekte",
+  "seo": {
+    "title": "Immobilien in Montenegro kaufen mit GUREVIĆ",
+    "p1": "Im Katalog finden Sie Wohnungen, Häuser, Villen und Grundstücke für den privaten Hausbau an der Küste und in anderen Regionen Montenegros. Hotels, Gewerbeimmobilien, Entwicklungsflächen und Bauprojekte stehen im Bereich Investitionen.",
+    "p2": "Vor dem Kauf helfen wir Ihnen, die Immobilie zu prüfen: den List nepokretnosti anzufordern – den Katasterauszug mit Eigentümer und etwaigen Belastungen –, die Konditionen mit dem Verkäufer abzustimmen und den Abschluss für die Unterzeichnung beim Notar vorzubereiten."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Wohnungen kaufen in Budva, Montenegro | GUREVIĆ",
+        "description": "Wohnungen zum Kauf in Budva, Bečići und an der Küste Montenegros: Preis, Preis pro m², Fläche, Schlafzimmer und Lage. Wir beraten und begleiten den Kauf."
+      },
+      "h1": "Wohnungen zum Kauf in Budva und Montenegro",
+      "hero": {
+        "kicker": "Kaufen · Wohnungen",
+        "lead": "Wohnungen in Budva und an der Küste: Jede Karte zeigt Preis, Quadratmeterpreis, Fläche, Anzahl der Schlafzimmer und Lage.",
+        "image_alt": "Budva: Altstadt und Bucht hinter blühender Bougainvillea"
+      },
+      "results_title": "Wohnungen zum Kauf",
+      "seo": {
+        "title": "So wählen Sie eine Wohnung an der Küste",
+        "p1": "Vergleichen Sie nicht nur Preise, sondern auch den Quadratmeterpreis – er steht in der Karte, sobald die Fläche bekannt ist. Ihre Filter nach Lage, Fläche und Schlafzimmern bleiben in der Seitenadresse erhalten, sodass Sie Ihre Auswahl teilen können.",
+        "p2": "Bei Neubauwohnungen klären Sie Fertigstellungstermin, Ausbauzustand und laufende Gebäudekosten; bei Bestandswohnungen die Angaben im List nepokretnosti und die Nummer der Sondereigentumseinheit (PD)."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Häuser kaufen in Montenegro | GUREVIĆ",
+        "description": "Häuser zum Kauf in Budva und anderen Regionen Montenegros: Wohn- und Grundstücksfläche, Schlafzimmer, Preis und Fotos. Wir helfen bei der Dokumentenprüfung."
+      },
+      "h1": "Häuser zum Kauf in Montenegro",
+      "hero": {
+        "kicker": "Kaufen · Häuser",
+        "lead": "Häuser mit Grundstück an der Küste und im Landesinneren: Wohn- und Grundstücksfläche, Anzahl der Schlafzimmer und Preis.",
+        "image_alt": "Altstadt von Budva, vom Kiesstrand aus gesehen"
+      },
+      "results_title": "Häuser zum Kauf",
+      "seo": {
+        "title": "Was Sie beim Hauskauf prüfen sollten",
+        "p1": "Die Karte eines Hauses zeigt zwei Flächen – Wohnfläche und Grundstück. Fehlt die Grundstücksfläche, fragen Sie vor der Besichtigung danach: Sie bestimmt, was angebaut oder angelegt werden kann.",
+        "p2": "Achten Sie darauf, dass das Haus im Kataster eingetragen ist und die Angaben in den Unterlagen dem tatsächlichen Bestand entsprechen. Wir helfen, den Auszug anzufordern und die Unterlagen vor dem Kauf durchzugehen."
+      }
+    },
+    "villas": {
+      "meta": {
+        "title": "Villen kaufen in Montenegro | GUREVIĆ",
+        "description": "Villen zum Kauf an der Küste Montenegros: Wohn- und Grundstücksfläche, Schlafzimmer, Preis und Lage. Besichtigungen und Kaufbegleitung in Budva und Umgebung."
+      },
+      "h1": "Villen zum Kauf in Montenegro",
+      "hero": {
+        "kicker": "Kaufen · Villen",
+        "lead": "Villen an der Küste Montenegros: Fläche, Grundstück, Anzahl der Schlafzimmer und Preis in jeder Objektkarte.",
+        "image_alt": "Promenade und Altstadt von Budva vor den Bergen"
+      },
+      "results_title": "Villen zum Kauf",
+      "seo": {
+        "title": "Villen an der Küste Montenegros",
+        "p1": "Die Grenze zwischen „Villen“ und „Häusern“ ist fließend: In beiden Rubriken finden Sie freistehende Häuser mit Grundstück. Wenn Sie ein Haus am Meer suchen, sehen Sie sich beide an.",
+        "p2": "Bei einer Villa zählen vor allem Zufahrt, Parkplätze, Aussicht und der Zustand des Grundstücks. Diese Details klären wir vor der Besichtigung mit dem Eigentümer."
+      }
+    },
+    "land": {
+      "meta": {
+        "title": "Baugrundstücke kaufen in Montenegro | GUREVIĆ",
+        "description": "Grundstücke für den privaten Hausbau in Budva und Montenegro: Fläche, Lage, Preis und Preis pro m². Wir helfen, Nutzungsart und Unterlagen zu prüfen."
+      },
+      "h1": "Baugrundstücke zum Kauf in Montenegro",
+      "hero": {
+        "kicker": "Kaufen · Grundstücke",
+        "lead": "Grundstücke für den Bau Ihres eigenen Hauses: Fläche, Lage, Preis und Quadratmeterpreis.",
+        "image_alt": "Hanggrundstück mit Olivenbäumen über dem Meer – Illustration"
+      },
+      "results_title": "Grundstücke zum Kauf",
+      "seo": {
+        "title": "So prüfen Sie ein Grundstück vor dem Kauf",
+        "p1": "Hier finden Sie Grundstücke für den privaten Hausbau. Flächen für gewerbliche Projekte – Hotels, Apartmenthäuser, Logistik – finden Sie im Bereich Investitionen.",
+        "p2": "Prüfen Sie vor dem Kauf die Nutzungsart laut geltendem Bebauungsplan, Zufahrt und Anschlüsse an die Versorgungsnetze sowie Belastungen im List nepokretnosti. Wir helfen, diese Informationen vor dem Kauf zusammenzutragen."
+      }
+    }
+  }
+}

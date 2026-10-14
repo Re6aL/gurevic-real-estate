@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Long-term rentals in Budva | GUREVIĆ",
+    "description": "Long-term rentals of apartments, houses and villas in Budva and on the Montenegrin coast: until the season or for a year. Send a request for a tailored search."
+  },
+  "h1": "Long-term rentals in Budva",
+  "hero": {
+    "kicker": "Rentals",
+    "lead": "Apartments, houses and villas to rent until the season starts or for a full year. Short-term rentals are in development.",
+    "image_alt": "Budva: the Old Town and the bay with the dancer statue"
+  },
+  "results_title": "Properties for rent",
+  "seo": {
+    "title": "Long-term rentals on the coast",
+    "p1": "We handle long-term rentals: from autumn until the tourist season starts, or for a full year. Daily and short-term lets are not included in the catalogue.",
+    "p2": "Terms such as the deposit, utilities and pets are shown on the card when the owner has provided them; anything else we confirm before the viewing. We recommend signing a written tenancy agreement."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Long-term apartment rentals in Budva | GUREVIĆ",
+        "description": "Apartments for long-term rent in Budva and on the coast: until the season or for a year. Monthly rent, deposit and move-in date — request a tailored search."
+      },
+      "h1": "Apartments for long-term rent in Budva",
+      "hero": {
+        "kicker": "Rent · Apartments",
+        "lead": "Apartments until the season starts or for a year: monthly rent, deposit and the date the apartment becomes available.",
+        "image_alt": "Budva Old Town and the mountains seen from the sea"
+      },
+      "results_title": "Apartments for rent",
+      "seo": {
+        "title": "Renting an apartment until the season or for a year",
+        "p1": "Rent is shown per month. If you rent until the season starts, confirm the move-out date in advance: in summer many owners switch to daily lets.",
+        "p2": "Tell us your budget, preferred area and move-in date — we will look for suitable options."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Long-term house and villa rentals, Montenegro | GUREVIĆ",
+        "description": "Houses and villas for long-term rent on the Montenegrin coast: until the season or for a year. A search matched to your budget, household and preferred area."
+      },
+      "h1": "Houses and villas for long-term rent in Montenegro",
+      "hero": {
+        "kicker": "Rent · Houses and villas",
+        "lead": "Houses and villas until the season starts or for a year — for living by the sea outside the tourist season.",
+        "image_alt": "Budva Old Town seen from the pebble beach"
+      },
+      "results_title": "Houses and villas for rent",
+      "seo": {
+        "title": "Renting a house by the sea",
+        "p1": "This section lists houses and villas for long-term rent. Rent is shown per month; how utilities are paid is noted on the card when the owner has provided it.",
+        "p2": "Tell us your budget, the number of occupants and whether you have pets — so we can rule out unsuitable options straight away."
+      }
+    }
+  }
+}

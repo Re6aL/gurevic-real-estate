@@ -1,0 +1,36 @@
+{
+  "site_url": "https://re6al.github.io/gurevic-real-estate/",
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "default_lang": "ru",
+  "x_default": "en",
+  "languages": [
+    {"code": "ru", "name": "Русский", "short": "RU", "dir": "ltr", "prefix": "", "og_locale": "ru_RU"},
+    {"code": "en", "name": "English", "short": "EN", "dir": "ltr", "prefix": "en/", "og_locale": "en_GB"},
+    {"code": "de", "name": "Deutsch", "short": "DE", "dir": "ltr", "prefix": "de/", "og_locale": "de_DE"},
+    {"code": "fr", "name": "Français", "short": "FR", "dir": "ltr", "prefix": "fr/", "og_locale": "fr_FR"},
+    {"code": "pl", "name": "Polski", "short": "PL", "dir": "ltr", "prefix": "pl/", "og_locale": "pl_PL"},
+    {"code": "uk", "name": "Українська", "short": "UA", "dir": "ltr", "prefix": "uk/", "og_locale": "uk_UA"},
+    {"code": "he", "name": "עברית", "short": "HE", "dir": "rtl", "prefix": "he/", "og_locale": "he_IL"}
+  ],
+  "contacts": {
+    "phone": "+382 69 572 257",
+    "phone_href": "tel:+38269572257",
+    "phone_e164": "+38269572257",
+    "whatsapp": "https://wa.me/38269572257",
+    "telegram": "https://t.me/hurewicz",
+    "telegram_handle": "@hurewicz",
+    "email": "gurevicestate@icloud.com",
+    "instagram": "https://www.instagram.com/gurevic_mne/",
+    "instagram_handle": "@gurevic_mne",
+    "locality": "Budva",
+    "country": "ME"
+  },
+  "lead_endpoint": "",
+  "consent_version": "2026-10",
+  "favicon": "img/logo-mark.png",
+  "logo": "img/logo-mark.png",
+  "default_og_image": "img/og/default.jpg",
+  "static_dirs": ["css", "js", "img", "assets", "BG_images"]
+}

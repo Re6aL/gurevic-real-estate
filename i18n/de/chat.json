@@ -1,0 +1,101 @@
+{
+  "js": {
+    "fab_open": "Chat öffnen: Immobilie finden",
+    "fab_close": "Chat minimieren",
+    "title": "GUREVIĆ-Assistent",
+    "subtitle": "Wir nehmen Ihre Anfrage auf und leiten sie an einen Makler weiter",
+    "avatar": "GR",
+    "close": "Chat schließen",
+    "restart": "Neu beginnen",
+    "input_label": "Ihre Nachricht",
+    "input_placeholder": "Ihre Antwort …",
+    "send": "Senden",
+    "you": "Sie",
+    "bot": "Assistent",
+    "q": {
+      "goal": "Guten Tag! Ich helfe Ihnen, Ihre Anfrage zu formulieren – ein Makler erhält sie und meldet sich bei Ihnen. Wofür interessieren Sie sich?",
+      "type": "Welche Art von Immobilie kommt für Sie infrage?",
+      "type_sell": "Welche Art von Immobilie haben Sie?",
+      "budget_buy": "Wie hoch ist Ihr ungefähres Budget? Wählen Sie eine Option oder geben Sie einen eigenen Betrag ein.",
+      "budget_rent": "Wie hoch ist Ihr Budget pro Monat? Wählen Sie eine Option oder geben Sie einen eigenen Betrag ein.",
+      "budget_invest": "Welches Investitionsvolumen ziehen Sie in Betracht?",
+      "price_sell": "Haben Sie einen Wunschpreis? Geben Sie ihn ein oder überspringen Sie diese Frage.",
+      "district": "Haben Sie eine bevorzugte Lage?",
+      "district_sell": "Wo befindet sich die Immobilie?",
+      "contact": "Vielen Dank. Hinterlassen Sie bitte eine Telefonnummer, Ihren @Telegram-Namen oder Ihre E-Mail – der Makler sendet Ihnen eine Auswahl und beantwortet Ihre Fragen.",
+      "contact_invalid": "Ich konnte keine Kontaktangabe erkennen. Bitte geben Sie eine Telefonnummer im Format +382…, einen Telegram-Benutzernamen (@username) oder eine E-Mail-Adresse ein.",
+      "name": "Wie dürfen wir Sie ansprechen?",
+      "confirm": "Bitte prüfen Sie Ihre Anfrage:",
+      "free_note": "Ich habe das zu Ihrer Anfrage hinzugefügt."
+    },
+    "o": {
+      "goal": {
+        "buy": "Kaufen",
+        "rent": "Langfristig mieten",
+        "invest": "Investieren",
+        "sell": "Meine Immobilie verkaufen oder vermieten",
+        "browse": "Ich schaue mich erst einmal um"
+      },
+      "type": {
+        "apartment": "Wohnung",
+        "house": "Haus oder Villa",
+        "land": "Grundstück",
+        "hotel": "Hotel",
+        "commercial": "Restaurant oder Gewerbe",
+        "development": "Entwicklungsprojekt",
+        "construction_project": "Objekt im Bau",
+        "business": "Laufendes Unternehmen",
+        "undecided": "Noch nicht entschieden"
+      },
+      "budget": {
+        "b_lt150": "bis 150.000 €",
+        "b_150_300": "150–300 Tsd. €",
+        "b_300_700": "300–700 Tsd. €",
+        "b_gt700": "ab 700 Tsd. €",
+        "r_lt800": "bis 800 €",
+        "r_800_1500": "800–1.500 €",
+        "r_gt1500": "ab 1.500 €",
+        "lt_500k": "bis 500 Tsd. €",
+        "500k_2m": "500 Tsd. – 2 Mio. €",
+        "2m_10m": "2–10 Mio. €",
+        "10m_50m": "10–50 Mio. €",
+        "gt_50m": "über 50 Mio. €"
+      },
+      "district": {
+        "budva": "Budva",
+        "becici": "Bečići / Rafailovići",
+        "sveti_stefan": "Pržno / Sveti Stefan",
+        "petrovac": "Petrovac",
+        "boka": "Tivat / Kotor",
+        "any": "Keine Präferenz"
+      },
+      "skip": "Überspringen"
+    },
+    "summary": {
+      "goal": "Ziel",
+      "type": "Immobilie",
+      "budget": "Budget",
+      "price": "Wunschpreis",
+      "district": "Lage",
+      "contact": "Kontakt",
+      "name": "Name",
+      "notes": "Weitere Angaben"
+    },
+    "consent_text": "Mit Klick auf „An Makler senden“ stimmen Sie der Verarbeitung Ihrer Daten zur Beantwortung dieser Anfrage zu.",
+    "consent_link": "Datenschutzerklärung",
+    "submit": "An Makler senden",
+    "edit": "Neu beginnen",
+    "sending": "Wird gesendet …",
+    "sent": "Erledigt – Ihre Anfrage wurde an einen Makler weitergeleitet, der sich bei Ihnen meldet. Wenn Sie möchten, schreiben Sie direkt:",
+    "fallback": "Der Online-Versand ist gerade nicht verfügbar, aber Ihre Anfrage ist fertig. Senden Sie sie mit einem Klick:",
+    "after": "Um das Gespräch fortzusetzen, schreiben Sie dem Makler direkt:",
+    "copied": "Der Anfragetext wurde kopiert – fügen Sie ihn in den Chat ein.",
+    "copy_failed": "Der Text konnte nicht kopiert werden.",
+    "lead_title": "Chat-Anfrage von der Website Gurevic Real Estate",
+    "email_subject": "Chat-Anfrage von der Website",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-Mail",
+    "copy": "Text kopieren"
+  }
+}

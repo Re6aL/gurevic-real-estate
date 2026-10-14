@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Contact a real estate agency in Budva | GUREVIĆ",
+    "description": "Phone and WhatsApp +382 69 572 257, Telegram @hurewicz, email and Instagram of the GUREVIĆ agency. Budva, Montenegro; meetings by appointment only."
+  },
+  "h1": "Contact",
+  "kicker": "Get in touch",
+  "lead": "Message or call us — Ilia Gurevich answers personally. WhatsApp and Telegram are the quickest way to reach us.",
+  "channels": {
+    "title": "How to reach us"
+  },
+  "location": {
+    "title": "Where we are",
+    "text": "Budva, Montenegro — meetings by appointment.",
+    "note": "We agree on the place and time of a meeting in advance."
+  },
+  "languages": {
+    "title": "Languages",
+    "text": "Russian, English, Montenegrin."
+  },
+  "legal": {
+    "title": "Legal entity"
+  },
+  "form": {
+    "title": "Send a message",
+    "intro": "Describe your question and we will reply the way you prefer."
+  },
+  "quick": {
+    "title": "If you have a specific request",
+    "sub": "These directions have dedicated forms with the right questions.",
+    "items": {
+      "invest": {
+        "title": "Investment enquiry",
+        "text": "Hotels, development land, commercial property. Confidential; NDA where required.",
+        "link": "Go to the enquiry"
+      },
+      "owners": {
+        "title": "Owner's request",
+        "text": "Sell or let an apartment, house, land, construction project or business.",
+        "link": "Fill in the request"
+      },
+      "rent": {
+        "title": "Rental request",
+        "text": "Long-term rental of an apartment or house: until the season starts or for a year.",
+        "link": "Send a request"
+      }
+    }
+  },
+  "chat": {
+    "text": "Not sure where to start? The website assistant will ask a few questions and pass your request to the agent.",
+    "button": "Open chat"
+  },
+  "jsonld": {
+    "contact_type": "Sales and rentals"
+  }
+}

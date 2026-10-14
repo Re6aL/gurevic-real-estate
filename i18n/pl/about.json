@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Ilia Gurevich — agent nieruchomości w Budvie | GUREVIĆ",
+    "description": "Ilia Gurevich jest założycielem agencji nieruchomości DOO GUREVIC BUDVA i agentem, z którym pracują Państwo osobiście. Trzeci rok na rynku Czarnogóry."
+  },
+  "h1": "Ilia Gurevich i agencja GUREVIĆ",
+  "kicker": "O nas",
+  "lead": "Agencja nieruchomości w Budvie prowadzona przez jej założyciela. Mają Państwo do czynienia z jedną osobą — od pierwszego pytania do podpisania dokumentów.",
+  "portrait": {
+    "monogram": "IG",
+    "name": "Ilia Gurevich",
+    "role": "Założyciel i agent, DOO GUREVIC BUDVA",
+    "alt": "Ilia Gurevich, założyciel agencji nieruchomości GUREVIĆ w Budvie",
+    "pending": "Zdjęcie wkrótce"
+  },
+  "who": {
+    "title": "Z kim będą Państwo współpracować",
+    "p1": "Ilia Gurevich jest założycielem DOO GUREVIC BUDVA i agentem nieruchomości. Telefon, WhatsApp i Telegram agencji to jego osobiste kontakty, dlatego na każdym etapie rozmawiają Państwo bezpośrednio z nim.",
+    "p2": "Zadania wykraczające poza rolę agenta — weryfikację prawną, projektowanie i budowę — wykonują partnerzy: prawnicy oraz licencjonowani architekci i wykonawcy. Kontaktujemy Państwa z nimi i przekazujemy sprawę wraz ze wszystkimi zebranymi materiałami."
+  },
+  "market": {
+    "title": "Trzeci rok w Czarnogórze",
+    "p1": "Agencja działa na rynku nieruchomości w Czarnogórze trzeci rok. Skupiamy się głównie na Budvie i Riwierze Budvańskiej; w katalogu są też nieruchomości w innych miejscowościach kraju.",
+    "p2": "Katalog na tej stronie jest aktualizowany automatycznie z roboczej bazy danych agencji. Poufne oferty inwestycyjne publikujemy w formie zanonimizowanej."
+  },
+  "format": {
+    "title": "Nowy sposób pracy",
+    "intro": "Agencja działa obecnie w nowym formacie. W praktyce wygląda to tak.",
+    "items": {
+      "directions": {
+        "title": "Cztery osobne kierunki",
+        "text": "Kupujący, najemcy, inwestorzy i właściciele mają różne cele. Dlatego każda z tych grup ma na stronie własną sekcję, własne pytania i własny formularz zapytania."
+      },
+      "agreements": {
+        "title": "Pisemne umowy",
+        "text": "Warunki współpracy zapisujemy w pisemnej umowie zgodnej z prawem Czarnogóry — przed rozpoczęciem pracy, a nie w jej trakcie."
+      },
+      "partners": {
+        "title": "Partnerzy do zadań specjalistycznych",
+        "text": "Wstępną obsługę prawną zapewniamy sami. Pogłębioną weryfikację prawną, projektowanie i budowę prowadzą prawnicy i licencjonowani specjaliści — zadania wykraczające poza rolę agencji przekazujemy im."
+      },
+      "honest": {
+        "title": "Tylko znane fakty",
+        "text": "Mówimy, co wiadomo o nieruchomości: dokumenty, stan, warunki. Wstępne dane liczbowe oznaczamy jako wstępne i wymagające weryfikacji."
+      }
+    }
+  },
+  "languages": {
+    "title": "Języki",
+    "text": "Doradzamy w języku rosyjskim, angielskim i czarnogórskim. Strona jest dostępna w większej liczbie języków, ale korespondencję i spotkania prowadzimy w jednym z tych trzech.",
+    "list": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski"
+    }
+  },
+  "legal": {
+    "title": "Dane firmy",
+    "company_label": "Podmiot prawny",
+    "city_label": "Lokalizacja",
+    "city": "Budva, Czarnogóra",
+    "founder_label": "Założyciel",
+    "founder": "Ilia Gurevich",
+    "founder_local_html": "zarejestrowany w Czarnogórze jako {name}",
+    "meetings": "Spotkania po wcześniejszym umówieniu."
+  },
+  "cta": {
+    "title": "Prosimy napisać, czego Państwo szukają",
+    "text": "Wystarczy wysłać wiadomość w ulubionym komunikatorze lub zadzwonić. Na stronie usług opisaliśmy, w czym dokładnie możemy pomóc.",
+    "services": "Usługi agencji",
+    "contact": "Wszystkie kontakty"
+  },
+  "jsonld": {
+    "job_title": "Założyciel i agent nieruchomości"
+  }
+}

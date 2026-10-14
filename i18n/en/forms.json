@@ -1,0 +1,232 @@
+{
+  "common": {
+    "required_note": "Fields marked * are required.",
+    "optional": "optional",
+    "required_sr": "required field",
+    "select_placeholder": "Select…",
+    "contact_legend": "How can we reach you",
+    "contact_hint": "One is enough: phone, Telegram or email.",
+    "consent_html": "I agree to the processing of my data in order to respond to this request — <a href=\"{url}\">privacy policy</a>.",
+    "nojs_html": "JavaScript is needed to send this form. Please contact us directly — phone, WhatsApp, Telegram and email are on the <a href=\"{url}\">Contact</a> page.",
+    "hp_label": "Leave this field empty",
+    "submit": "Send"
+  },
+  "labels": {
+    "name": "Name",
+    "name_full": "Full name",
+    "owner_name": "Owner's full name",
+    "contact_person": "Contact person",
+    "company": "Company",
+    "company_legal": "Legal entity name",
+    "position": "Position",
+    "email": "Email",
+    "email_corporate": "Corporate email",
+    "phone": "Phone",
+    "telegram": "Telegram",
+    "website": "Company website",
+    "jurisdiction": "Country of incorporation",
+    "investment_type": "Investment type",
+    "budget": "Budget",
+    "contact_method": "Preferred contact method",
+    "preferred_language": "Language of communication",
+    "preferred_language_other": "Which language suits you",
+    "property_kind": "Property type",
+    "owner_type": "Property owner",
+    "owner_interest": "What would you like to do",
+    "list_nepokretnosti": "Title deed number (list nepokretnosti)",
+    "cadastral_municipality": "Cadastral municipality (KO)",
+    "pd": "Unit number (PD)",
+    "company_reg_no": "Company registration number",
+    "asking_price": "Asking price, €",
+    "interest": "What are you interested in",
+    "rental_term": "Rental term",
+    "move_in": "Preferred move-in date",
+    "move_in_short": "Approximate travel date",
+    "budget_month": "Monthly budget, €",
+    "bedrooms": "Bedrooms",
+    "occupants": "How many people will live there",
+    "pets": "Pets",
+    "message": "Comment",
+    "message_owner": "About the property",
+    "message_property": "Message",
+    "message_short": "Dates and wishes",
+    "nda": "I would like an NDA before receiving details — ready to sign a confidentiality agreement",
+    "object_id": "Property",
+    "listing_url": "Listing link"
+  },
+  "placeholders": {
+    "name": "How should we address you",
+    "email": "name@example.com",
+    "email_corporate": "name@company.com",
+    "phone": "+382 69 123 456",
+    "telegram": "@username",
+    "website": "company.com",
+    "message_investor": "Objectives, timing, region, form of participation — anything that helps us prepare suitable options",
+    "message_owner": "Size, area, condition, timing — what an agent should know",
+    "message_contact": "Your question",
+    "message_rent": "Area, floor, furniture, parking — your wishes",
+    "message_short": "When you plan to come and for how long",
+    "message_property": "Convenient days for a viewing or questions about the property"
+  },
+  "hints": {
+    "phone": "International format, e.g. +382 69 123 456.",
+    "phone_owner": "International format with country code: +382…",
+    "phone_investor": "Required if you choose a call, WhatsApp or Telegram.",
+    "telegram": "Your username, e.g. @username.",
+    "email_corporate": "An address on your company's domain.",
+    "cadastral": "If you have the documents at hand, this speeds up the property check. You can also provide it later.",
+    "pd": "For apartments.",
+    "asking_price": "You may leave it empty — we will discuss it after the valuation.",
+    "budget_month": "Excluding utilities.",
+    "short_term": "Short-term rentals are still in development. Leave your contact and we will let you know when the section opens."
+  },
+  "options": {
+    "investment_type": {
+      "hotel": "Hotel",
+      "development_land": "Development land",
+      "restaurant_commercial": "Restaurant / commercial",
+      "warehouse_logistics": "Warehouse / logistics",
+      "development_partnership": "Development partnership",
+      "other": "Other"
+    },
+    "budget": {
+      "lt_500k": "up to €500K",
+      "500k_2m": "€500K – €2M",
+      "2m_10m": "€2–10M",
+      "10m_50m": "€10–50M",
+      "gt_50m": "over €50M",
+      "undisclosed": "Prefer not to say"
+    },
+    "contact_method": {
+      "email": "Email",
+      "phone": "Phone call",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "video_call": "Video call"
+    },
+    "preferred_language": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski / Srpski",
+      "uk": "Українська",
+      "other": "Other (please specify)"
+    },
+    "property_kind": {
+      "apartment": "Apartment",
+      "house": "House",
+      "land": "Land",
+      "construction_project": "Construction project",
+      "business": "Operating business"
+    },
+    "property_kind_desc": {
+      "apartment": "in a building or residential complex",
+      "house": "house or villa",
+      "land": "building plot",
+      "construction_project": "property under construction or a project",
+      "business": "restaurant, shop, hotel"
+    },
+    "owner_type": {
+      "individual": "Private individual",
+      "company": "Legal entity"
+    },
+    "owner_interest": {
+      "sell": "Sell",
+      "rent_out": "Rent out",
+      "management": "Hand over for management"
+    },
+    "interest": {
+      "buy": "Buying property",
+      "rent": "Long-term rental",
+      "invest": "Investment",
+      "sell": "Selling property",
+      "rent_out": "Renting out property",
+      "management": "Property management",
+      "other": "Something else"
+    },
+    "rental_term": {
+      "off_season": "Until the season starts",
+      "year": "For a year",
+      "short_term": "Short-term"
+    },
+    "bedrooms": {
+      "0": "Studio",
+      "1": "1 bedroom",
+      "2": "2 bedrooms",
+      "3": "3 bedrooms",
+      "4": "4 or more"
+    },
+    "pets": {
+      "no": "No",
+      "cat": "Cat",
+      "dog": "Dog",
+      "other": "Other"
+    }
+  },
+  "investor": {
+    "tabs_aria": "Who is making the enquiry",
+    "tab_private": "Private investor",
+    "tab_company": "Company representative",
+    "no_documents": "We do not ask for passport details or financial documents at this stage.",
+    "submit": "Send enquiry"
+  },
+  "owner": {
+    "submit": "Submit your property"
+  },
+  "contact": {
+    "submit": "Send message"
+  },
+  "rent": {
+    "submit": "Find me a rental",
+    "submit_short": "Notify me at launch"
+  },
+  "property": {
+    "title": "Request a viewing or details",
+    "intro": "Property {id}. Leave a convenient way to reach you — we will send the details and arrange a viewing.",
+    "submit": "Request a viewing"
+  },
+  "js": {
+    "required": "Please fill in this field.",
+    "required_choice": "Please choose an option.",
+    "email": "Please check the email, e.g. name@example.com.",
+    "phone": "Please enter the phone in international format, e.g. +382 69 123 456.",
+    "telegram": "Please enter Telegram as @username.",
+    "url": "Please check the website address, e.g. company.com.",
+    "number": "Please enter a number.",
+    "number_min": "The value cannot be less than {min}.",
+    "date": "Please enter a date.",
+    "date_past": "The date cannot be in the past.",
+    "contact_one": "Please give a phone number, Telegram or email — at least one way to reach you.",
+    "consent": "We cannot respond to your request without your consent to data processing.",
+    "summary": "Not sent yet — please check the highlighted fields ({n}):",
+    "sending": "Sending…",
+    "success_title": "Thank you — your request has been sent",
+    "success_text": "We have received your details and will get back to you shortly.",
+    "success_again": "Send another request",
+    "fallback_title": "Send your request directly",
+    "fallback_offline": "Online sending from the website is not connected yet. Your details are kept in the form — send the prepared text the way you prefer:",
+    "fallback_error": "We could not send your request through the website. Your details are kept in the form — send the prepared text the way you prefer:",
+    "summary_heading": "Request text",
+    "channel_whatsapp": "Send via WhatsApp",
+    "channel_telegram": "Open Telegram",
+    "telegram_note": "The request text has been copied — paste it into the chat with the agent.",
+    "channel_email": "Send by email",
+    "channel_copy": "Copy text",
+    "copied": "Text copied.",
+    "copy_failed": "Could not copy — please select the text manually.",
+    "text_header": "Request from the Gurevic Real Estate website — {form}",
+    "text_page": "Page",
+    "email_subject": "Website request: {form}",
+    "yes": "yes",
+    "no": "no",
+    "form_names": {
+      "investor": "private investor",
+      "investor_company": "investor — company",
+      "owner": "property owner",
+      "contact": "contact form",
+      "rent_request": "rental request",
+      "buy_request": "purchase request",
+      "property_request": "property request",
+      "chat": "website chat"
+    }
+  }
+}

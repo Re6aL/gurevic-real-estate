@@ -1,0 +1,232 @@
+{
+  "common": {
+    "required_note": "שדות המסומנים בכוכבית (*) הם שדות חובה.",
+    "optional": "לא חובה",
+    "required_sr": "שדה חובה",
+    "select_placeholder": "בחרו…",
+    "contact_legend": "איך ליצור איתכם קשר",
+    "contact_hint": "מספיק פרט אחד: טלפון, Telegram או דוא״ל.",
+    "consent_html": "אני מסכים/ה לעיבוד הנתונים שלי לצורך מענה לפנייה זו — <a href=\"{url}\">מדיניות הפרטיות</a>.",
+    "nojs_html": "כדי לשלוח את הטופס יש להפעיל JavaScript. אפשר לפנות אלינו ישירות — טלפון, WhatsApp, Telegram ודוא״ל מופיעים בעמוד <a href=\"{url}\">צור קשר</a>.",
+    "hp_label": "נא להשאיר שדה זה ריק",
+    "submit": "שליחה"
+  },
+  "labels": {
+    "name": "שם",
+    "name_full": "שם מלא",
+    "owner_name": "שם מלא של בעל הנכס",
+    "contact_person": "איש קשר",
+    "company": "חברה",
+    "company_legal": "שם התאגיד",
+    "position": "תפקיד",
+    "email": "דוא״ל",
+    "email_corporate": "דוא״ל עסקי",
+    "phone": "טלפון",
+    "telegram": "Telegram",
+    "website": "אתר החברה",
+    "jurisdiction": "מדינת התאגדות",
+    "investment_type": "סוג ההשקעה",
+    "budget": "תקציב",
+    "contact_method": "דרך התקשרות מועדפת",
+    "preferred_language": "שפת התקשורת",
+    "preferred_language_other": "באיזו שפה נוח לכם",
+    "property_kind": "סוג הנכס",
+    "owner_type": "בעל הנכס",
+    "owner_interest": "מה תרצו לעשות עם הנכס",
+    "list_nepokretnosti": "מספר נסח (list nepokretnosti)",
+    "cadastral_municipality": "אזור קדסטרי (KO)",
+    "pd": "מספר תת־חלקה (PD)",
+    "company_reg_no": "מספר רישום התאגיד",
+    "asking_price": "מחיר מבוקש, €",
+    "interest": "מה מעניין אתכם",
+    "rental_term": "תקופת השכירות",
+    "move_in": "תאריך כניסה רצוי",
+    "move_in_short": "תאריך הגעה משוער",
+    "budget_month": "תקציב חודשי, €",
+    "bedrooms": "חדרי שינה",
+    "occupants": "כמה אנשים יגורו בנכס",
+    "pets": "חיות מחמד",
+    "message": "הערות",
+    "message_owner": "בקצרה על הנכס",
+    "message_property": "הודעה",
+    "message_short": "תאריכים ובקשות",
+    "nda": "אבקש NDA לפני קבלת הפרטים — אני מוכן/ה לחתום על הסכם סודיות",
+    "object_id": "נכס",
+    "listing_url": "קישור לנכס"
+  },
+  "placeholders": {
+    "name": "איך לפנות אליכם",
+    "email": "name@example.com",
+    "email_corporate": "name@company.com",
+    "phone": "+382 69 123 456",
+    "telegram": "@username",
+    "website": "company.com",
+    "message_investor": "מטרות, לוח זמנים, אזור, אופן ההשתתפות — כל מה שיעזור לנו להכין אפשרויות מתאימות",
+    "message_owner": "שטח, אזור, מצב הנכס, לוחות זמנים — מה שחשוב שהסוכן יידע",
+    "message_contact": "השאלה שלכם",
+    "message_rent": "אזור, קומה, ריהוט, חניה — הבקשות שלכם",
+    "message_short": "מתי אתם מתכננים להגיע ולכמה זמן",
+    "message_property": "ימים נוחים לצפייה בנכס או שאלות על הנכס"
+  },
+  "hints": {
+    "phone": "בפורמט בינלאומי, לדוגמה ‎+382 69 123 456.",
+    "phone_owner": "בפורמט בינלאומי עם קידומת מדינה: ‎+382…",
+    "phone_investor": "נדרש אם בחרתם שיחה, WhatsApp או Telegram.",
+    "telegram": "שם המשתמש, לדוגמה ‎@username.",
+    "email_corporate": "כתובת בדומיין של החברה.",
+    "cadastral": "אם המסמכים בהישג יד — זה יזרז את בדיקת הנכס. אפשר למסור גם בהמשך.",
+    "pd": "לדירות.",
+    "asking_price": "אפשר להשאיר ריק — נדבר על כך אחרי ההערכה.",
+    "budget_month": "לא כולל חשבונות שוטפים.",
+    "short_term": "מדור ההשכרה לטווח קצר עדיין בפיתוח. השאירו פרטים ונעדכן אתכם כשהוא ייפתח."
+  },
+  "options": {
+    "investment_type": {
+      "hotel": "מלון",
+      "development_land": "קרקע לפיתוח",
+      "restaurant_commercial": "מסעדה / נכס מסחרי",
+      "warehouse_logistics": "מחסן / לוגיסטיקה",
+      "development_partnership": "שותפות ביזמות",
+      "other": "אחר"
+    },
+    "budget": {
+      "lt_500k": "עד ‎€500K",
+      "500k_2m": "‎€500K – €2M",
+      "2m_10m": "‎€2–10M",
+      "10m_50m": "‎€10–50M",
+      "gt_50m": "מעל ‎€50M",
+      "undisclosed": "מעדיפים לא לציין"
+    },
+    "contact_method": {
+      "email": "דוא״ל",
+      "phone": "שיחת טלפון",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "video_call": "שיחת וידאו"
+    },
+    "preferred_language": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski / Srpski",
+      "uk": "Українська",
+      "other": "אחר (נא לציין)"
+    },
+    "property_kind": {
+      "apartment": "דירה",
+      "house": "בית",
+      "land": "קרקע",
+      "construction_project": "פרויקט בנייה",
+      "business": "עסק פעיל"
+    },
+    "property_kind_desc": {
+      "apartment": "בבניין או במתחם מגורים",
+      "house": "בית או וילה",
+      "land": "מגרש לבנייה",
+      "construction_project": "נכס בבנייה או פרויקט",
+      "business": "מסעדה, חנות, מלון"
+    },
+    "owner_type": {
+      "individual": "אדם פרטי",
+      "company": "תאגיד"
+    },
+    "owner_interest": {
+      "sell": "מכירה",
+      "rent_out": "השכרה",
+      "management": "מסירה לניהול"
+    },
+    "interest": {
+      "buy": "קניית נכס",
+      "rent": "השכרה לטווח ארוך",
+      "invest": "השקעה",
+      "sell": "מכירת נכס",
+      "rent_out": "השכרת נכס",
+      "management": "ניהול נכס",
+      "other": "משהו אחר"
+    },
+    "rental_term": {
+      "off_season": "עד תחילת העונה",
+      "year": "לשנה",
+      "short_term": "לטווח קצר"
+    },
+    "bedrooms": {
+      "0": "סטודיו",
+      "1": "חדר שינה אחד",
+      "2": "2 חדרי שינה",
+      "3": "3 חדרי שינה",
+      "4": "4 ומעלה"
+    },
+    "pets": {
+      "no": "אין",
+      "cat": "חתול",
+      "dog": "כלב",
+      "other": "אחר"
+    }
+  },
+  "investor": {
+    "tabs_aria": "מי שולח את הפנייה",
+    "tab_private": "משקיע פרטי",
+    "tab_company": "נציג חברה",
+    "no_documents": "בשלב זה איננו מבקשים פרטי דרכון או מסמכים פיננסיים.",
+    "submit": "שליחת הפנייה"
+  },
+  "owner": {
+    "submit": "הצעת הנכס"
+  },
+  "contact": {
+    "submit": "שליחת הודעה"
+  },
+  "rent": {
+    "submit": "מצאו לי נכס להשכרה",
+    "submit_short": "עדכנו אותי בפתיחה"
+  },
+  "property": {
+    "title": "תיאום צפייה או קבלת פרטים",
+    "intro": "נכס {id}. השאירו דרך נוחה ליצירת קשר — נשלח את הפרטים ונתאם צפייה.",
+    "submit": "תיאום צפייה"
+  },
+  "js": {
+    "required": "נא למלא שדה זה.",
+    "required_choice": "נא לבחור אפשרות.",
+    "email": "נא לבדוק את כתובת הדוא״ל, לדוגמה name@example.com.",
+    "phone": "נא להזין טלפון בפורמט בינלאומי, לדוגמה ‎+382 69 123 456.",
+    "telegram": "נא להזין Telegram בפורמט ‎@username.",
+    "url": "נא לבדוק את כתובת האתר, לדוגמה company.com.",
+    "number": "נא להזין מספר.",
+    "number_min": "הערך לא יכול להיות קטן מ־{min}.",
+    "date": "נא להזין תאריך.",
+    "date_past": "התאריך לא יכול להיות בעבר.",
+    "contact_one": "נא לציין טלפון, Telegram או דוא״ל — לפחות דרך אחת ליצירת קשר.",
+    "consent": "לא נוכל להשיב לפנייה ללא הסכמתכם לעיבוד הנתונים.",
+    "summary": "הפנייה טרם נשלחה — נא לבדוק את השדות המסומנים ({n}):",
+    "sending": "שולחים…",
+    "success_title": "תודה — הפנייה נשלחה",
+    "success_text": "קיבלנו את הפרטים ונחזור אליכם בהקדם.",
+    "success_again": "שליחת פנייה נוספת",
+    "fallback_title": "שלחו את הפנייה ישירות",
+    "fallback_offline": "שליחה מקוונת מהאתר עדיין לא חוברה. הפרטים שלכם נשמרו בטופס — שלחו את הטקסט המוכן בדרך הנוחה לכם:",
+    "fallback_error": "לא הצלחנו לשלוח את הפנייה דרך האתר. הפרטים שלכם נשמרו בטופס — שלחו את הטקסט המוכן בדרך הנוחה לכם:",
+    "summary_heading": "נוסח הפנייה",
+    "channel_whatsapp": "שליחה ב־WhatsApp",
+    "channel_telegram": "פתיחת Telegram",
+    "telegram_note": "נוסח הפנייה הועתק — הדביקו אותו בצ׳אט עם הסוכן.",
+    "channel_email": "שליחה בדוא״ל",
+    "channel_copy": "העתקת הטקסט",
+    "copied": "הטקסט הועתק.",
+    "copy_failed": "ההעתקה נכשלה — נא לסמן את הטקסט ידנית.",
+    "text_header": "פנייה מאתר Gurevic Real Estate — {form}",
+    "text_page": "עמוד",
+    "email_subject": "פנייה מהאתר: {form}",
+    "yes": "כן",
+    "no": "לא",
+    "form_names": {
+      "investor": "משקיע פרטי",
+      "investor_company": "משקיע — חברה",
+      "owner": "בעל נכס",
+      "contact": "טופס יצירת קשר",
+      "rent_request": "בקשה לשכירות",
+      "buy_request": "בקשה לרכישה",
+      "property_request": "פנייה על נכס",
+      "chat": "צ׳אט האתר"
+    }
+  }
+}

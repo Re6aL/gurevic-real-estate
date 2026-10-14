@@ -1,0 +1,124 @@
+{
+  "filters": {
+    "aria": "Wyszukiwanie nieruchomości",
+    "categories_aria": "Kategorie",
+    "all": "Wszystkie",
+    "toggle": "Filtry",
+    "type": "Rodzaj",
+    "type_any": "Dowolny",
+    "district": "Lokalizacja",
+    "district_any": "Dowolna",
+    "price_buy": "Cena, €",
+    "price_rent": "Czynsz miesięczny, €",
+    "price_any": "bez limitu",
+    "price_min": "Cena od, tys. euro",
+    "price_max": "Cena do, tys. euro",
+    "price_min_rent": "Czynsz od, euro miesięcznie",
+    "price_max_rent": "Czynsz do, euro miesięcznie",
+    "price_max_placeholder": "maks.",
+    "slider_toggle": "Ustaw przedział cenowy suwakiem",
+    "slider_min": "Dolna granica ceny",
+    "slider_max": "Górna granica ceny",
+    "slider_scale_min": "0 €",
+    "slider_scale_mid": "500 tys. €",
+    "slider_scale_max": "1 mln €+",
+    "area": "Powierzchnia, m²",
+    "area_plot": "Powierzchnia działki, m²",
+    "from": "Od",
+    "to": "Do",
+    "area_min": "Powierzchnia od, m²",
+    "area_max": "Powierzchnia do, m²",
+    "bedrooms": "Sypialnie",
+    "bedrooms_any": "Dowolnie",
+    "bedrooms_min": "{n}+",
+    "term": "Okres najmu",
+    "term_any": "Dowolny",
+    "sort": "Sortowanie",
+    "sort_aria": "Kolejność sortowania",
+    "sort_price_asc": "Od najtańszych",
+    "sort_price_desc": "Od najdroższych",
+    "sort_area_desc": "Od największych",
+    "reset": "Wyczyść filtry",
+    "id_search": "Szukaj po ID",
+    "id_label": "ID oferty",
+    "id_hint": "Na przykład BD-26-003S — ID widnieje na każdej karcie i w korespondencji z agentem."
+  },
+  "results": {
+    "map_link": "Pokaż na mapie"
+  },
+  "empty": {
+    "title": "Brak ofert spełniających te kryteria",
+    "text": "Prosimy zmienić filtry lub wysłać nam zapytanie — poszukamy ofert także poza katalogiem.",
+    "request": "Wyślij zapytanie"
+  },
+  "empty_category": {
+    "title": "W tej kategorii nie opublikowano jeszcze ofert",
+    "text": "Katalog uzupełniamy w miarę napływu nowych ofert. Prosimy napisać, czego Państwo szukają — poszukamy na zapytanie."
+  },
+  "request": {
+    "kicker": "Nie znaleźli Państwo odpowiedniej oferty?",
+    "title_buy": "Przygotujemy dla Państwa wybór ofert",
+    "text_buy": "Prosimy podać budżet, preferowaną lokalizację i termin — sprawdzimy, co jest dostępne na rynku, i prześlemy pasujące propozycje.",
+    "title_rent": "Znajdziemy dla Państwa wynajem długoterminowy",
+    "text_rent": "Prosimy podać miesięczny budżet, preferowaną lokalizację, datę wprowadzenia się i liczbę osób — prześlemy odpowiednie oferty.",
+    "points": [
+      "Odpowiadamy w wybrany sposób: telefonicznie, przez WhatsApp, Telegram lub e-mail",
+      "Mówimy po rosyjsku, angielsku i czarnogórsku"
+    ],
+    "form_heading": "Zapytanie o wybór ofert"
+  },
+  "residency": {
+    "title": "Pobyt czasowy",
+    "text": "Dla obywateli państw trzecich, których nie obejmują wyjątki ustawowe, nieruchomość o urzędowej wartości podatkowej co najmniej 150 000 € może stanowić podstawę pobytu czasowego, o ile spełnione są pozostałe wymogi prawne. Warunki sprawdzamy na dzień złożenia wniosku — ta strona nie zastępuje porady prawnej.",
+    "link": "Aktualne zmiany w ustawie o cudzoziemcach",
+    "url": "https://www.sluzbenilist.me/propisi/389913"
+  },
+  "rent_tabs": {
+    "aria": "Rodzaj wynajmu",
+    "long": "Wynajem długoterminowy",
+    "short": "Wynajem krótkoterminowy",
+    "soon": "wkrótce"
+  },
+  "short_term": {
+    "kicker": "Wynajem krótkoterminowy",
+    "title": "Ta sekcja jest w przygotowaniu",
+    "text": "Na razie zajmujemy się wyłącznie wynajmem długoterminowym — do początku sezonu lub na cały rok. Wynajem na doby i krótkoterminowy dodamy później.",
+    "form_heading": "Powiadom mnie o uruchomieniu",
+    "back": "Wróć do wynajmu długoterminowego"
+  },
+  "rent_empty": {
+    "kicker": "Katalog wynajmu",
+    "title": "Katalog wynajmu długoterminowego jest w trakcie podłączania",
+    "text": "Oferty wynajmu będą publikowane z osobnej bazy danych, którą właśnie podłączamy. Do czasu uruchomienia katalogu szukamy na zapytanie: prosimy podać budżet, lokalizację i datę wprowadzenia się, a prześlemy odpowiednie oferty.",
+    "points": [
+      "Do początku sezonu lub na cały rok",
+      "Mieszkania, domy i wille",
+      "Budżet w euro miesięcznie"
+    ],
+    "form_heading": "Zapytanie o wynajem długoterminowy",
+    "image_alt": "Balkon z widokiem na zatokę poza sezonem — ilustracja"
+  },
+  "js": {
+    "count": {
+      "one": "{n} oferta",
+      "few": "{n} oferty",
+      "many": "{n} ofert",
+      "other": "{n} oferty"
+    },
+    "price_any": "bez limitu",
+    "price_range": "{min} – {max}",
+    "price_from": "od {min}",
+    "price_to": "do {max}",
+    "filters_active": "Filtry: {n}",
+    "id_empty": "Brak oferty o tym ID",
+    "id_found": {
+      "one": "Znaleziono {n} ofertę",
+      "few": "Znaleziono {n} oferty",
+      "many": "Znaleziono {n} ofert",
+      "other": "Znaleziono {n} oferty"
+    },
+    "district_option": "{name} · {n}",
+    "district_option_none": "{name} · brak ofert",
+    "results_updated": "Wyświetlono: {count}"
+  }
+}

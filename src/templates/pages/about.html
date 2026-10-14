@@ -1,0 +1,131 @@
+{#- О нас: владелец и агент Илья Гуревич (brief §D.13). Фото — img/team/ilia.jpg, пока его нет —
+    монограмма. Никаких цифр успеха: только «третий год на рынке» и «новый формат». -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% set photo = 'img/team/ilia.jpg' %}
+{% set has_photo = img_exists(photo) %}
+{% set c = site.contacts %}
+
+{% block jsonld %}
+{{ super() }}
+{% set person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': t('about.portrait.name'),
+  'alternateName': ['Ilija Gurević'] + (['Ilia Gurevich'] if t('about.portrait.name') != 'Ilia Gurevich' else []),
+  'jobTitle': t('about.jsonld.job_title'),
+  'url': page.canonical,
+  'knowsLanguage': ['ru', 'en', 'cnr'],
+  'worksFor': {
+    '@type': 'RealEstateAgent',
+    '@id': site.site_url ~ '#agency',
+    'name': site.brand ~ ' Real Estate',
+    'legalName': site.legal_name,
+    'url': abs_url('home'),
+    'telephone': c.phone_e164,
+    'email': c.email,
+    'address': {'@type': 'PostalAddress', 'addressLocality': c.locality, 'addressCountry': c.country},
+  },
+  'sameAs': [c.instagram],
+} %}
+{% if has_photo %}{% set _ = person.update({'image': abs_path(photo)}) %}{% endif %}
+<script type="application/ld+json">{{ person | tojson }}</script>
+{% endblock %}
+
+{% block main %}
+<header class="info-hero">
+  <div class="container">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="info-kicker">{{ t('about.kicker') }}</span>
+    <h1>{{ page.h1 }}</h1>
+    <p class="info-lead">{{ t('about.lead') }}</p>
+  </div>
+</header>
+
+<section class="info-section about-profile" aria-labelledby="about-who">
+  <div class="container about-profile__grid">
+    <figure class="portrait">
+      {% if has_photo %}
+      {{ img(photo, t('about.portrait.alt'), sizes='(max-width: 760px) 80vw, 380px', cls='portrait__img', loading='eager', fetchpriority='high') }}
+      {% else %}
+      <div class="portrait__mono" aria-hidden="true">
+        <span class="portrait__letters">{{ t('about.portrait.monogram') }}</span>
+        <span class="portrait__rule"></span>
+        <span class="portrait__brand">{{ t('common.brand') }}</span>
+      </div>
+      {% endif %}
+      <figcaption class="portrait__caption">
+        <b>{{ t('about.portrait.name') }}</b>
+        <span>{{ t('about.portrait.role') }}</span>
+      </figcaption>
+    </figure>
+
+    <div class="prose about-text">
+      <h2 id="about-who">{{ t('about.who.title') }}</h2>
+      <p>{{ t('about.who.p1') }}</p>
+      <p>{{ t('about.who.p2') }}</p>
+      <h2>{{ t('about.market.title') }}</h2>
+      <p>{{ t('about.market.p1') }}</p>
+      <p>{{ t('about.market.p2') }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section info-section--soft" aria-labelledby="about-format">
+  <div class="container">
+    {{ ui.section_head(t('about.format.title'), sub=t('about.format.intro'), id='about-format') }}
+    <ul class="feature-grid">
+      {% for key in ['directions', 'agreements', 'partners', 'honest'] %}
+      <li class="feature">
+        <span class="feature__num" aria-hidden="true">{{ '%02d' % loop.index }}</span>
+        <h3>{{ t('about.format.items.' ~ key ~ '.title') }}</h3>
+        <p>{{ t('about.format.items.' ~ key ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="info-section" aria-label="{{ t('about.languages.title') }} · {{ t('about.legal.title') }}">
+  <div class="container about-facts">
+    <div class="info-card">
+      <h2 class="info-card__title">{{ ui.icon('globe') }}<span>{{ t('about.languages.title') }}</span></h2>
+      <p>{{ t('about.languages.text') }}</p>
+      <ul class="lang-chips">
+        {% for code in ['ru', 'en', 'me'] %}
+        <li lang="{{ 'sr-Latn-ME' if code == 'me' else code }}">{{ t('about.languages.list.' ~ code) }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="info-card">
+      <h2 class="info-card__title">{{ ui.icon('document') }}<span>{{ t('about.legal.title') }}</span></h2>
+      <dl class="info-dl">
+        <div><dt>{{ t('about.legal.company_label') }}</dt><dd><bdi>{{ site.legal_name }}</bdi></dd></div>
+        <div><dt>{{ t('about.legal.founder_label') }}</dt><dd>{{ t('about.legal.founder') }} <span class="info-dl__note">{{ t('about.legal.founder_local_html', name='Ilija Gurević' | bdi) }}</span></dd></div>
+        <div><dt>{{ t('about.legal.city_label') }}</dt><dd>{{ t('about.legal.city') }}</dd></div>
+      </dl>
+      <p class="info-muted">{{ ui.icon('calendar', size=18) }}<span>{{ t('about.legal.meetings') }}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section info-section--cta" aria-labelledby="about-cta">
+  <div class="container">
+    <div class="cta-band">
+      <div class="cta-band__text">
+        <h2 id="about-cta">{{ t('about.cta.title') }}</h2>
+        <p>{{ t('about.cta.text') }}</p>
+      </div>
+      <div class="cta-band__actions">
+        {{ ui.button(c.whatsapp, t('common.contacts.whatsapp'), icon_name='whatsapp', external=True) }}
+        {{ ui.button(c.telegram, t('common.contacts.telegram'), 'ghost', icon_name='telegram', external=True) }}
+        {{ ui.button(c.phone_href, t('common.contacts.call'), 'ghost', icon_name='phone') }}
+      </div>
+      <div class="cta-band__links">
+        <a href="{{ url('services') }}">{{ t('about.cta.services') }}{{ ui.icon('arrow-right', size=16) }}</a>
+        <a href="{{ url('contact') }}">{{ t('about.cta.contact') }}{{ ui.icon('arrow-right', size=16) }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

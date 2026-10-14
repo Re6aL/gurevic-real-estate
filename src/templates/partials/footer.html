@@ -1,0 +1,54 @@
+{#- Подвал («нижнее меню»): бренд + колонки разделов + контакты; внизу языки и юр. строка. -#}
+{% import "macros/ui.html" as ui %}
+{% set _COLS = [
+  ('rent', ['rent', 'rent.apartments', 'rent.houses']),
+  ('buy', ['buy', 'buy.apartments', 'buy.houses', 'buy.villas', 'buy.land', 'map']),
+  ('invest', ['invest', 'invest.hotels', 'invest.land', 'invest.commercial', 'invest.development']),
+  ('owners', ['owners', 'owners.sell', 'owners.rent_out', 'owners.management']),
+  ('agency', ['about', 'services', 'contact', 'privacy']),
+] %}
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="foot-brand">
+      <a class="foot-logo" href="{{ url('home') }}">
+        {{ img('img/logo-mark.png', '', sizes='45px', cls='logo-mark') }}
+        {{ img('img/logo-word.png', t('common.logo_alt'), sizes='100px', cls='logo-word') }}
+      </a>
+      <p class="foot-about">{{ t('common.footer.about_short') }}</p>
+      <p class="foot-meet">{{ ui.icon('pin', size=16) }}<span>{{ t('common.contacts.location') }} · {{ t('common.footer.meetings') }}</span></p>
+    </div>
+
+    <nav class="foot-nav" aria-label="{{ t('common.footer.nav_aria') }}">
+      {% for col, keys in _COLS %}
+      <div class="foot-col">
+        <h2 class="foot-title">{{ t('common.footer.columns.' ~ col) }}</h2>
+        <ul class="foot-links">
+          {% for key in keys %}
+          {#- первый пункт колонки разделов — «главная» раздела: подпись из nav.all_* -#}
+          {% set label = t('common.nav.all_' ~ key) if (loop.first and col != 'agency') else t('common.routes.' ~ key | replace('.', '_')) %}
+          <li><a href="{{ url(key) }}"{% if page.key == key %} aria-current="page"{% endif %}>{{ label }}</a></li>
+          {% endfor %}
+          {% if col == 'rent' %}
+          <li class="foot-soon"><span>{{ t('common.nav.rent_short_term') }}</span> <span class="badge-soon">{{ t('common.nav.soon') }}</span></li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endfor %}
+    </nav>
+
+    <div class="foot-contacts">
+      <h2 class="foot-title">{{ t('common.footer.contacts') }}</h2>
+      {{ ui.contact_list(site.contacts, 'foot-contact-list') }}
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <div class="foot-langs">
+        <span class="foot-langs-label">{{ ui.icon('globe', size=16) }}<span>{{ t('common.footer.languages') }}</span></span>
+        {{ ui.lang_list(languages, 'foot-lang-list') }}
+      </div>
+      <p class="foot-legal"><span>{{ t('common.footer.legal_line') }}</span> <a href="{{ url('privacy') }}">{{ t('common.nav.privacy') }}</a></p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Agence immobilière à Budva, Monténégro | GUREVIĆ",
+    "description": "Achat, location longue durée et investissement immobilier à Budva et sur la côte monténégrine. GUREVIĆ, agence de Budva, travaille sous contrat écrit."
+  },
+  "h1": "Agence immobilière à Budva. La vie au bord de la mer — votre nouvelle histoire",
+  "splash": {
+    "line1": "La clé d’une vie face à la mer",
+    "line2": "Immobilier au Monténégro — de la visite aux clés"
+  },
+  "hero": {
+    "eyebrow": "Agence immobilière à Budva",
+    "title": "La vie au bord de la mer —",
+    "accent": "votre nouvelle histoire",
+    "sub": "Achat, location longue durée et investissement sur la côte monténégrine",
+    "cta_buy": "Acheter",
+    "cta_rent": "Louer",
+    "cta_invest": "Investir",
+    "owners_link": "Pour les propriétaires",
+    "carousel": "carrousel",
+    "slides_aria": "Photos de Budva",
+    "controls_aria": "Commandes des photos",
+    "prev": "Photo précédente",
+    "next": "Photo suivante",
+    "slide": "Photo {n} sur {total}",
+    "alt": {
+      "1": "La vieille ville de Budva vue depuis une plage de galets",
+      "2": "Vue aérienne de Budva : la vieille ville, la marina et la baie au lever du soleil",
+      "3": "La statue de la Danseuse sur un rocher près de la vieille ville de Budva",
+      "4": "Le clocher de la vieille ville de Budva et la baie derrière des bougainvilliers en fleurs",
+      "5": "Les remparts de la vieille ville de Budva et les montagnes au-dessus de la mer"
+    }
+  },
+  "directions": {
+    "kicker": "Nos activités",
+    "title": "Choisissez ce qu’il vous faut",
+    "sub": "Chaque domaine a sa propre rubrique : biens ou conditions, méthode de travail et formulaire de demande.",
+    "subs_aria": "Rubriques : {name}",
+    "rent": {
+      "text": "Appartements et maisons en location longue durée — jusqu’au début de la saison ou à l’année.",
+      "alt": "Balcon donnant sur une baie — illustration"
+    },
+    "buy": {
+      "text": "Appartements, maisons, villas et terrains pour construction privée.",
+      "alt": "Nouvelle résidence sur la côte — image de synthèse"
+    },
+    "invest": {
+      "text": "Hôtels, terrains à développer et immobilier commercial, en toute confidentialité.",
+      "alt": "Le littoral monténégrin vu du ciel — illustration"
+    },
+    "owners": {
+      "text": "Vente, location et gestion de votre bien dans le cadre d’un contrat écrit.",
+      "alt": "Salon lumineux ouvert sur un balcon — illustration"
+    }
+  },
+  "about": {
+    "kicker": "L’agence",
+    "title": "Ilia Gurevich, fondateur et agent de GUREVIĆ",
+    "person": "Ilia Gurevich",
+    "monogram": "IG",
+    "photo_alt": "Ilia Gurevich, fondateur de l’agence GUREVIĆ",
+    "p1": "Nous en sommes à notre troisième année sur le marché immobilier monténégrin. L’agence fonctionne désormais selon un nouveau format : acheteurs, locataires, investisseurs et propriétaires disposent chacun d’un parcours distinct, avec ses propres conditions et sa propre démarche.",
+    "p2": "Les accords avec nos clients sont conclus par écrit. Pour les questions juridiques, la conception et la construction, nous travaillons avec des partenaires spécialisés.",
+    "link": "En savoir plus sur l’agence"
+  },
+  "steps": {
+    "kicker": "Méthode",
+    "title": "Notre façon de travailler",
+    "sub": "Quatre étapes, de votre premier message à la transaction.",
+    "s1": {
+      "title": "Demande",
+      "text": "Vous décrivez votre projet : ce que vous recherchez ou le bien que vous proposez, vos délais et votre budget."
+    },
+    "s2": {
+      "title": "Sélection ou estimation",
+      "text": "Nous sélectionnons les biens adaptés ou estimons le vôtre, et convenons des conditions de notre collaboration."
+    },
+    "s3": {
+      "title": "Visites et négociation",
+      "text": "Nous organisons les visites et négocions le prix et les conditions avec l’autre partie."
+    },
+    "s4": {
+      "title": "Transaction sous contrat",
+      "text": "Les conditions sont fixées dans un contrat écrit, conformément au droit monténégrin."
+    }
+  },
+  "cta": {
+    "kicker": "Contact",
+    "title": "Parlez-nous de votre projet",
+    "text": "Écrivez-nous sur WhatsApp ou Telegram, ou laissez une demande sur le site : nous vous recontacterons par le moyen de votre choix.",
+    "languages": "Consultations en russe, en anglais et en monténégrin.",
+    "call": "Ou appelez :"
+  },
+  "js": {
+    "pause": "Mettre les photos en pause",
+    "play": "Relancer les photos"
+  }
+}

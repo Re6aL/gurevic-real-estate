@@ -1,0 +1,90 @@
+{#- Карта объектов (map/). Leaflet 1.9.4 с unpkg (только на этой странице, с SRI) + тайлы OpenStreetMap.
+    Данные маркеров — инлайн JSON (<script type="application/json" id="map-data">) из listings:
+    конфиденциальные объекты исключены; объекты без координат стоят в центре района с пометкой approx.
+    Список мини-карточек пре-рендерится (работает без JS); js/map.js добавляет карту, фильтр раздела
+    и переключатель список/карта на мобильных. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/cards.html" as cards %}
+
+{% set items = listings | rejectattr('confidential') | selectattr('map_coords') | list %}
+{% set SECTIONS = ['buy', 'rent', 'invest'] %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+{% endblock %}
+
+{% block main %}
+<div class="map-page">
+  <div class="map-bar">
+    <div class="map-bar__inner">
+      {{ ui.breadcrumbs(page.breadcrumbs) }}
+      <div class="map-bar__row">
+        <div class="map-bar__title">
+          <h1>{{ page.h1 }}</h1>
+          <p class="map-bar__lead">{{ t('map.lead') }}</p>
+        </div>
+        <div class="map-bar__controls">
+          <div class="map-filter" role="group" aria-label="{{ t('map.filters.aria') }}" data-map-filter hidden>
+            <button type="button" class="map-filter__btn" data-section="" aria-pressed="true"><span>{{ t('map.filters.all') }}</span><span class="map-filter__n">{{ items | length }}</span></button>
+            {% for s in SECTIONS %}
+            {% set n = items | selectattr('section', 'equalto', s) | list | length %}
+            <button type="button" class="map-filter__btn" data-section="{{ s }}" aria-pressed="false"{% if not n %} disabled{% endif %}><span>{{ t('map.filters.' ~ s) }}</span><span class="map-filter__n">{{ n }}</span></button>
+            {% endfor %}
+          </div>
+          <div class="map-view" role="group" aria-label="{{ t('map.view.aria') }}" data-map-view hidden>
+            <button type="button" data-view="list" aria-pressed="true">{{ ui.icon('menu', size=18) }}<span>{{ t('map.view.list') }}</span></button>
+            <button type="button" data-view="map" aria-pressed="false">{{ ui.icon('map', size=18) }}<span>{{ t('map.view.map') }}</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="map-bar__meta">
+        <p class="map-count" dir="auto" role="status" aria-live="polite" data-map-count>{{ plural('map.js.count', items | length) }}</p>
+        <ul class="map-legend">
+          <li><span class="legend-dot" aria-hidden="true"></span>{{ t('map.legend.exact') }}</li>
+          <li><span class="legend-dot legend-dot--approx" aria-hidden="true"></span>{{ t('map.legend.approx') }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-wrap" data-map-wrap data-view="list">
+    <section class="map-list" aria-labelledby="map-list-title">
+      <h2 class="visually-hidden" id="map-list-title">{{ t('map.list_title') }}</h2>
+      {% if items %}
+      <ul class="map-list__items" data-map-list>
+        {% for l in items %}
+        {% set name = listing_name(l) %}
+        <li class="mini-card" data-id="{{ l.object_id or l.id }}" data-section="{{ l.section }}">
+          <a class="mini-card__media" href="{{ url('property', listing=l) }}" tabindex="-1" aria-hidden="true">
+            {{ img(l.images[0] if l.images else l.illustration, '', sizes='120px', cls='mini-card__img' ~ ('' if l.images else ' listing-illustration')) }}
+          </a>
+          <div class="mini-card__body">
+            <p class="mini-card__price{% if not l.price %} is-request{% endif %}"><bdi>{{ cards.price(l) }}</bdi></p>
+            <h3 class="mini-card__title"><a href="{{ url('property', listing=l) }}"><bdi>{{ name }}</bdi></a></h3>
+            <p class="mini-card__loc">{{ ui.icon('pin', size=14) }}<bdi>{{ district_name(l.district) }}</bdi>{% if not l.coords %}<span class="mini-card__approx" aria-hidden="true">≈</span><span class="visually-hidden"> ({{ t('map.legend.approx') }})</span>{% endif %}</p>
+            <button class="mini-card__locate" type="button" data-locate hidden>{{ ui.icon('map', size=16) }}<span>{{ t('common.buttons.show_on_map') }}<span class="visually-hidden">: {{ name }}</span></span></button>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <p class="map-list__empty" data-map-empty{% if items %} hidden{% endif %}>{{ t('map.empty') }}</p>
+    </section>
+    <div class="map-canvas" id="map" role="region" aria-label="{{ t('map.map_aria') }}" data-map>
+      <noscript><p class="map-noscript">{{ t('map.noscript') }}</p></noscript>
+    </div>
+  </div>
+</div>
+
+{#- Маркеры: заголовок/цена/район уже локализованы; координаты без коррекции (approx — центр района) -#}
+{% set ns = namespace(data=[]) %}
+{% for l in items %}
+{% set ns.data = ns.data + [{
+  'id': l.object_id or l.id, 'section': l.section, 'title': listing_name(l), 'price': cards.price(l) | string,
+  'request': not l.price, 'district': district_name(l.district), 'url': url('property', listing=l),
+  'thumb': path(l.thumb), 'lat': l.map_coords[0], 'lng': l.map_coords[1], 'approx': not l.coords, 'value': l.price or 0}] %}
+{% endfor %}
+<script type="application/json" id="map-data">{{ ns.data | tojson }}</script>
+{% endblock %}

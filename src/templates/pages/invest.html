@@ -1,0 +1,227 @@
+{#- /invest/ — лендинг для инвестиционных заявок (brief §A «Страница invest/», §C тон barok, §D.7–9).
+    Не каталог: hero → фокус → иллюстративные кейсы → сопровождение → процесс → форма (#enquiry) → финальный CTA.
+    Тексты — invest.* (i18n). js/invest.js: плавный переход к форме, предвыбор типа инвестиций
+    (data-invest-type, хэш #enquiry-<type>), переключение на вкладку компании (data-invest-variant). -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/forms.html" as forms %}
+{% set body_extra_class = 'has-hero-overlay' %}
+
+{#- Направления: ключ → (картинка, маршрут, якорь) -#}
+{% set FOCUS = [
+  ('hotels', 'img/stock/invest-hotel.jpg', 'invest.hotels', ''),
+  ('land', 'img/stock/invest-land.jpg', 'invest.land', ''),
+  ('commercial', 'img/stock/invest-restaurant.jpg', 'invest.commercial', ''),
+  ('logistics', 'img/stock/invest-logistics.jpg', 'invest.commercial', '#logistics'),
+] %}
+
+{#- Иллюстративные кейсы (brief §A.3, §D.8): только цифры клиента; подписи — из i18n.
+    facts: (ключ подписи, вид значения, значение). Вид: area | million | price | about | per_m2 | from_per_m2 | text -#}
+{% set CASES = [
+  {'key': 'hotel', 'type': 'hotel', 'facts': [
+    ('area', 'area', 800), ('price_guide', 'million', 16), ('profit_declared', 'about', 370000)]},
+  {'key': 'land', 'type': 'development_land', 'facts': [
+    ('land_area', 'area', 12000), ('build_cost', 'per_m2', 1600), ('sales_prices', 'from_per_m2', 3500)]},
+  {'key': 'coastal', 'type': 'development_land', 'facts': [
+    ('land_area', 'area', 75000), ('value_guide', 'million', 90), ('potential', 'text', 'potential')]},
+  {'key': 'restaurant', 'type': 'restaurant_commercial', 'facts': [
+    ('price_guide', 'price', 200000), ('format', 'text', 'format')]},
+] %}
+
+{% macro case_value(key, kind, value) -%}
+{%- if kind == 'area' -%}<bdi>{{ fmt_num(value) }}&nbsp;{{ t('common.units.m2') }}</bdi>
+{%- elif kind == 'million' -%}<bdi>{{ t('invest.cases.million', n=fmt_num(value)) }}</bdi>
+{%- elif kind == 'price' -%}<bdi>{{ fmt_price(value) }}</bdi>
+{%- elif kind == 'about' -%}<bdi>{{ t('invest.cases.about', price=fmt_price(value)) }}</bdi>
+{%- elif kind == 'per_m2' -%}<bdi>{{ t('invest.cases.per_m2', price=fmt_price(value)) }}</bdi>
+{%- elif kind == 'from_per_m2' -%}<bdi>{{ t('invest.cases.from', price=t('invest.cases.per_m2', price=fmt_price(value))) }}</bdi>
+{%- else -%}{{ t('invest.cases.items.' ~ key ~ '.' ~ value) }}
+{%- endif -%}
+{%- endmacro %}
+
+{% block main %}
+{# 1. Hero #}
+<section class="inv-hero" aria-labelledby="inv-h1">
+  <div class="inv-hero__media">
+    {{ img('img/stock/invest-coast.jpg', t('invest.hero.image_alt'), sizes='100vw', cls='inv-hero__img', loading='eager', fetchpriority='high', fallback='BG_images/02.jpg') }}
+  </div>
+  <div class="container inv-hero__inner">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="inv-kicker inv-kicker--light">{{ t('invest.hero.kicker') }}</span>
+    <h1 id="inv-h1">{{ page.h1 }}</h1>
+    <p class="inv-hero__lead">{{ t('invest.hero.lead') }}</p>
+    <p class="inv-hero__sub">{{ t('invest.hero.sub') }}</p>
+    <div class="inv-hero__actions">
+      {{ ui.button('#enquiry', t('invest.hero.cta'), '', icon_end='arrow-right', attrs={'data-invest-cta': ''}) }}
+    </div>
+  </div>
+</section>
+
+{# 2. Investment Focus #}
+<section class="section inv-section inv-focus" aria-labelledby="focus-title">
+  <div class="container">
+    <header class="inv-head">
+      <span class="inv-kicker">{{ t('invest.focus.kicker') }}</span>
+      <h2 id="focus-title">{{ t('invest.focus.title') }}</h2>
+      <p class="inv-head__sub">{{ t('invest.focus.sub') }}</p>
+    </header>
+    <ul class="inv-focus__grid">
+      {% for key, src, route_key, anchor in FOCUS %}
+      {% set title = t('invest.focus.items.' ~ key ~ '.title') %}
+      <li class="inv-focus__item">
+        <div class="inv-focus__media">
+          {{ img(src, t('invest.focus.items.' ~ key ~ '.alt'), sizes='(min-width: 1100px) 270px, (min-width: 640px) 45vw, 36vw', cls='inv-focus__img') }}
+        </div>
+        <div class="inv-focus__body">
+          <h3 class="inv-focus__title"><a class="inv-stretch" href="{{ url(route_key) }}{{ anchor }}">{{ title }}</a></h3>
+          <p>{{ t('invest.focus.items.' ~ key ~ '.text') }}</p>
+          <span class="inv-more" aria-hidden="true">{{ t('invest.focus.more') }}{{ ui.icon('arrow-right', size=16) }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="inv-devlink" href="{{ url('invest.development') }}">
+      <span class="inv-devlink__icon">{{ ui.icon('building', size=24) }}</span>
+      <span class="inv-devlink__text"><b>{{ t('invest.focus.development.title') }}</b><span>{{ t('invest.focus.development.text') }}</span></span>
+      <span class="inv-devlink__go">{{ t('invest.focus.development.link') }}{{ ui.icon('arrow-right', size=18) }}</span>
+    </a>
+  </div>
+</section>
+
+{# 3. Selected Opportunities — Illustrative Investment Cases #}
+<section class="section inv-section inv-cases" id="cases" aria-labelledby="cases-title">
+  <div class="container">
+    <header class="inv-head">
+      <span class="inv-kicker" lang="{{ t('invest.cases.kicker_lang') }}">{{ t('invest.cases.kicker') }}</span>
+      <h2 id="cases-title">{{ t('invest.cases.title') }}</h2>
+      <p class="inv-head__sub">{{ t('invest.cases.sub') }}</p>
+    </header>
+    <div class="inv-disclaimer" id="cases-disclaimer">
+      {{ ui.icon('info', 'inv-disclaimer__icon', 22) }}
+      <p><strong>{{ t('invest.cases.disclaimer_label') }}.</strong> {{ t('invest.cases.disclaimer') }}</p>
+    </div>
+    <ul class="inv-cases__grid">
+      {% for c in CASES %}
+      {% set title = t('invest.cases.items.' ~ c.key ~ '.title') %}
+      <li>
+        <article class="inv-case" aria-labelledby="case-{{ c.key }}">
+          <div class="inv-case__top">
+            <span class="inv-case__type">{{ t('invest.cases.items.' ~ c.key ~ '.type') }}</span>
+            <span class="inv-case__num" aria-hidden="true">{{ '%02d' % loop.index }}</span>
+          </div>
+          <h3 class="inv-case__title" id="case-{{ c.key }}">{{ title }}</h3>
+          <dl class="inv-case__facts">
+            {% for label, kind, value in c.facts %}
+            <div class="inv-fact{% if kind == 'text' %} inv-fact--text{% endif %}">
+              <dt>{{ t('invest.cases.labels.' ~ label) }}</dt>
+              <dd>{{ case_value(c.key, kind, value) }}</dd>
+            </div>
+            {% endfor %}
+          </dl>
+          <p class="inv-case__note">{{ t('invest.cases.items.' ~ c.key ~ '.note') }}</p>
+          <div class="inv-case__foot">
+            <span class="inv-tag">{{ ui.icon('info', size=14) }}{{ t('invest.cases.preliminary') }}</span>
+            <a class="btn btn-outline btn-sm inv-case__cta" href="#enquiry" data-invest-type="{{ c.type }}" aria-describedby="cases-disclaimer"><span>{{ t('invest.cases.cta') }}</span><span class="visually-hidden">: {{ title }}</span>{{ ui.icon('arrow-right', size=16) }}</a>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# 4. Development Support #}
+<section class="section inv-section inv-support" aria-labelledby="support-title">
+  <div class="container inv-support__grid">
+    <div class="inv-support__media">
+      {{ img('img/stock/invest-development.jpg', t('invest.support.image_alt'), sizes='(min-width: 960px) 840px, 100vw', cls='inv-support__img') }}
+    </div>
+    <div class="inv-support__body">
+      <header class="inv-head inv-head--tight">
+        <span class="inv-kicker">{{ t('invest.support.kicker') }}</span>
+        <h2 id="support-title">{{ t('invest.support.title') }}</h2>
+        <p class="inv-head__sub">{{ t('invest.support.lead') }}</p>
+      </header>
+      <ul class="inv-support__list">
+        {% for key in ['legal', 'design', 'handover'] %}
+        <li>
+          <span class="inv-support__mark">{{ ui.icon({'legal': 'document', 'design': 'building', 'handover': 'key'}[key], size=22) }}</span>
+          <div>
+            <h3>{{ t('invest.support.items.' ~ key ~ '.title') }}</h3>
+            <p>{{ t('invest.support.items.' ~ key ~ '.text') }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{# 5. Confidential Process #}
+<section class="section inv-section inv-process" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <header class="inv-head inv-head--center">
+      <span class="inv-kicker">{{ t('invest.process.kicker') }}</span>
+      <h2 id="process-title">{{ t('invest.process.title') }}</h2>
+      <p class="inv-head__sub">{{ t('invest.process.sub') }}</p>
+    </header>
+    <ol class="inv-steps">
+      {% for key in ['request', 'qualification', 'nda', 'selection', 'due_diligence'] %}
+      <li class="inv-step">
+        <span class="inv-step__num" aria-hidden="true">{{ loop.index }}</span>
+        <h3 class="inv-step__title">{{ t('invest.process.steps.' ~ key ~ '.title') }}</h3>
+        <p class="inv-step__text">{{ t('invest.process.steps.' ~ key ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# 6. Investor Enquiry Form #}
+<section class="section inv-section inv-enquiry" id="enquiry" aria-labelledby="enquiry-title">
+  <div class="container">
+    <header class="inv-head">
+      <span class="inv-kicker">{{ t('invest.enquiry.kicker') }}</span>
+      <h2 id="enquiry-title" tabindex="-1">{{ t('invest.enquiry.title') }}</h2>
+      <p class="inv-head__sub">{{ t('invest.enquiry.lead') }}</p>
+    </header>
+    <div class="inv-enquiry__grid">
+      <div role="note" class="inv-conf" aria-labelledby="conf-title">
+        <h3 class="inv-conf__title" id="conf-title">{{ ui.icon('lock', size=20) }}{{ t('invest.enquiry.aside_title') }}</h3>
+        <ul class="inv-conf__list">
+          <li>{{ t('invest.enquiry.points.addresses') }}</li>
+          <li>{{ t('invest.enquiry.points.nda') }}</li>
+          <li>{{ t('invest.enquiry.points.company') }}
+            <a class="inv-conf__switch" href="#enquiry" data-invest-variant="company">{{ t('invest.enquiry.company_link') }}{{ ui.icon('arrow-right', size=16) }}</a></li>
+          <li>{{ t('invest.enquiry.points.documents') }}</li>
+        </ul>
+        <div class="inv-conf__direct">
+          <p>{{ t('invest.enquiry.direct') }}</p>
+          <ul class="inv-conf__channels">
+            <li><a href="{{ site.contacts.whatsapp }}"{{ ui.external_attrs() }}>{{ ui.icon('whatsapp', size=18) }}<span>{{ t('common.contacts.whatsapp') }}</span></a></li>
+            <li><a href="{{ site.contacts.telegram }}"{{ ui.external_attrs() }}>{{ ui.icon('telegram', size=18) }}<span>{{ t('common.contacts.telegram') }}</span></a></li>
+            <li><a href="mailto:{{ site.contacts.email }}">{{ ui.icon('mail', size=18) }}<span>{{ t('common.contacts.email') }}</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inv-enquiry__form">
+        {{ forms.investor_form('private') }}
+      </div>
+    </div>
+    <p class="visually-hidden" role="status" aria-live="polite" data-invest-status></p>
+  </div>
+</section>
+
+{# 7. Final CTA #}
+<section class="inv-final" aria-labelledby="final-title">
+  <div class="container inv-final__inner">
+    <span class="inv-kicker inv-kicker--light">{{ t('invest.final.kicker') }}</span>
+    <h2 id="final-title">{{ t('invest.final.title') }}</h2>
+    <p>{{ t('invest.final.text') }}</p>
+    <div class="inv-final__actions">
+      {{ ui.button('#enquiry', t('invest.final.cta'), '', icon_end='arrow-right', attrs={'data-invest-cta': ''}) }}
+      {{ ui.button_el(t('invest.final.chat'), 'ghost', attrs={'data-chat-open': ''}) }}
+    </div>
+  </div>
+</section>
+{% endblock %}

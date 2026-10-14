@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Location longue durée à Budva | GUREVIĆ",
+    "description": "Location longue durée d’appartements, maisons et villas à Budva et sur la côte monténégrine : jusqu’à la saison ou à l’année. Demandez une recherche sur mesure."
+  },
+  "h1": "Location longue durée à Budva",
+  "hero": {
+    "kicker": "Location",
+    "lead": "Appartements, maisons et villas à louer jusqu’au début de la saison ou à l’année. La location courte durée est en cours de développement.",
+    "image_alt": "Budva : la vieille ville et la baie avec la statue de la Danseuse"
+  },
+  "results_title": "Biens à louer",
+  "seo": {
+    "title": "Location longue durée sur la côte",
+    "p1": "Nous nous occupons de location longue durée : de l’automne jusqu’au début de la saison touristique, ou à l’année. Les locations à la journée et de courte durée ne figurent pas au catalogue.",
+    "p2": "Les conditions comme le dépôt de garantie, les charges ou les animaux sont indiquées sur la fiche lorsque le propriétaire les a communiquées ; le reste est vérifié avant la visite. Nous recommandons de signer un bail écrit."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Appartements en location longue durée à Budva | GUREVIĆ",
+        "description": "Appartements en location longue durée à Budva et sur la côte : jusqu’à la saison ou à l’année. Loyer, dépôt de garantie, date d’entrée — recherche sur mesure."
+      },
+      "h1": "Appartements en location longue durée à Budva",
+      "hero": {
+        "kicker": "Louer · Appartements",
+        "lead": "Appartements jusqu’au début de la saison ou à l’année : loyer mensuel, dépôt de garantie et date de disponibilité.",
+        "image_alt": "La vieille ville de Budva et les montagnes vues depuis la mer"
+      },
+      "results_title": "Appartements à louer",
+      "seo": {
+        "title": "Louer un appartement jusqu’à la saison ou à l’année",
+        "p1": "Le loyer est indiqué par mois. Si vous louez jusqu’au début de la saison, convenez à l’avance de la date de départ : en été, de nombreux propriétaires passent à la location à la journée.",
+        "p2": "Indiquez-nous votre budget, le secteur souhaité et la date d’entrée : nous chercherons des biens adaptés."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Maisons et villas en location longue durée | GUREVIĆ",
+        "description": "Maisons et villas en location longue durée sur la côte monténégrine : jusqu’à la saison ou à l’année. Recherche selon votre budget, votre foyer et le secteur."
+      },
+      "h1": "Maisons et villas en location longue durée au Monténégro",
+      "hero": {
+        "kicker": "Louer · Maisons et villas",
+        "lead": "Maisons et villas jusqu’au début de la saison ou à l’année, pour vivre au bord de la mer en dehors de la saison touristique.",
+        "image_alt": "La vieille ville de Budva vue depuis la plage de galets"
+      },
+      "results_title": "Maisons et villas à louer",
+      "seo": {
+        "title": "Louer une maison au bord de la mer",
+        "p1": "Cette rubrique présente des maisons et villas en location longue durée. Le loyer est indiqué par mois ; le mode de paiement des charges figure sur la fiche lorsque le propriétaire l’a précisé.",
+        "p2": "Indiquez-nous votre budget, le nombre d’occupants et si vous avez des animaux : nous pourrons écarter d’emblée les biens qui ne conviennent pas."
+      }
+    }
+  }
+}

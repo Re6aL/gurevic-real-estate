@@ -1,0 +1,3322 @@
+{
+ "object": "list",
+ "results": [
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000001",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/1",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Apartman sa pogledom na more",
+        "link": null
+       },
+       "plain_text": "Apartman sa pogledom na more",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-001S",
+        "link": null
+       },
+       "plain_text": "BD-26-001S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 245000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 68
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 2
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Mediteranska bb, PRIVATE-STREET-1, Bečići, Budva",
+        "link": null
+       },
+       "plain_text": "Mediteranska bb, PRIVATE-STREET-1, Bečići, Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": "https://www.google.com/maps/place/@42.283100,18.870200,17z"
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": [
+      {
+       "id": "m",
+       "name": "Вид на море",
+       "color": "default"
+      },
+      {
+       "id": "m",
+       "name": "Бассейн",
+       "color": "default"
+      }
+     ]
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": 1
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Светлая квартира с видом на море в 5 минутах от пляжа.",
+        "link": null
+       },
+       "plain_text": "Светлая квартира с видом на море в 5 минутах от пляжа.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Квартира на третьем этаже. Звоните +382 69 111 222 или test@example.com.",
+        "link": null
+       },
+       "plain_text": "Квартира на третьем этаже. Звоните +382 69 111 222 или test@example.com.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Тихая улица рядом с набережной Бечичи.",
+        "link": null
+       },
+       "plain_text": "Тихая улица рядом с набережной Бечичи.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 001"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S01"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S01",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S01",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Card Description EN": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Bright sea-view apartment five minutes from the beach.",
+        "link": null
+       },
+       "plain_text": "Bright sea-view apartment five minutes from the beach.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Website Description EN": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Third-floor apartment with a large terrace.",
+        "link": null
+       },
+       "plain_text": "Third-floor apartment with a large terrace.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000002",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/2",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Vila Maslina",
+        "link": null
+       },
+       "plain_text": "Vila Maslina",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-002S",
+        "link": null
+       },
+       "plain_text": "BD-26-002S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Villa",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 1250000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 320
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": 900
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 4
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Put za Tudoroviće, Tudorovići",
+        "link": null
+       },
+       "plain_text": "Put za Tudoroviće, Tudorovići",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": 4
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 002"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S02"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S02",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S02",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Card Description (DE)": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Villa mit Pool und Meerblick.",
+        "link": null
+       },
+       "plain_text": "Villa mit Pool und Meerblick.",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000003",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/3",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Hotel Aurora Budva",
+        "link": null
+       },
+       "plain_text": "Hotel Aurora Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-003S",
+        "link": null
+       },
+       "plain_text": "BD-26-003S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Hotel",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 16000000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 800
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": null
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Slovenska obala 10, Budva",
+        "link": null
+       },
+       "plain_text": "Slovenska obala 10, Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": "https://www.google.com/maps/place/@42.290000,18.848000,17z"
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Действующий отель в Будве, 800 м².",
+        "link": null
+       },
+       "plain_text": "Действующий отель в Будве, 800 м².",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Aurora",
+        "link": null
+       },
+       "plain_text": "Aurora",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 003"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S03"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S03",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S03",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "PHOTOS": {
+     "type": "files",
+     "files": [
+      {
+       "name": "f0.jpg",
+       "type": "external",
+       "external": {
+        "url": "https://example.com/PRIVATE-HOTEL-PHOTO.jpg"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000004",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/4",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Residence Lux Rafailovići",
+        "link": null
+       },
+       "plain_text": "Residence Lux Rafailovići",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RF-26-004G",
+        "link": null
+       },
+       "plain_text": "RF-26-004G",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Gradnja",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 0
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": null
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Rafailovići",
+        "link": null
+       },
+       "plain_text": "Rafailovići",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRJ-1",
+        "link": null
+       },
+       "plain_text": "PRJ-1",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 004"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S04"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S04",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S04",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000005",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/5",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": []
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "RF-26-005A",
+        "link": null
+       },
+       "plain_text": "RF-26-005A",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 210000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 54
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 1
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Rafailovići",
+        "link": null
+       },
+       "plain_text": "Rafailovići",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRJ-1",
+        "link": null
+       },
+       "plain_text": "PRJ-1",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "A-12",
+        "link": null
+       },
+       "plain_text": "A-12",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S05",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S05",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 005"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S05",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S05",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S05"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S05",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S05",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Floor": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "3",
+        "link": null
+       },
+       "plain_text": "3",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000006",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/6",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Plac Buljarica",
+        "link": null
+       },
+       "plain_text": "Plac Buljarica",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-006S",
+        "link": null
+       },
+       "plain_text": "BD-26-006S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Land",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 4500000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": 12000
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": null
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Buljarica, Petrovac",
+        "link": null
+       },
+       "plain_text": "Buljarica, Petrovac",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Invest",
+      "color": "default"
+     }
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S06",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S06",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 006"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S06",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S06",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S06"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S06",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S06",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000007",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/7",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Skladište Zeta",
+        "link": null
+       },
+       "plain_text": "Skladište Zeta",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-007S",
+        "link": null
+       },
+       "plain_text": "BD-26-007S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Warehouse",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 980000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 2400
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": null
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Industrijska zona, Podgorica",
+        "link": null
+       },
+       "plain_text": "Industrijska zona, Podgorica",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Public",
+      "color": "default"
+     }
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S07",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S07",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 007"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S07",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S07",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S07"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S07",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S07",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000008",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/8",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Prodan stan",
+        "link": null
+       },
+       "plain_text": "Prodan stan",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-008S",
+        "link": null
+       },
+       "plain_text": "BD-26-008S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 150000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 40
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 1
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Budva",
+        "link": null
+       },
+       "plain_text": "Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Sold",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S08",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S08",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 008"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S08",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S08",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S08"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S08",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S08",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-000000000009",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/9",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Restoran Konoba Stari",
+        "link": null
+       },
+       "plain_text": "Restoran Konoba Stari",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-009S",
+        "link": null
+       },
+       "plain_text": "BD-26-009S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Business",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 200000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 120
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": null
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Budva, Stari grad",
+        "link": null
+       },
+       "plain_text": "Budva, Stari grad",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Herceg Novi",
+      "color": "default"
+     }
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S09",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S09",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 009"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S09",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S09",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S09"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S09",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S09",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-00000000000a",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/10",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": []
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-010S",
+        "link": null
+       },
+       "plain_text": "BD-26-010S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 99000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 35
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 1
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Ulica bez grada 7",
+        "link": null
+       },
+       "plain_text": "Ulica bez grada 7",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S10",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S10",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 010"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S10",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S10",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S10"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S10",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S10",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-00000000000b",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/11",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Stan Kotorska",
+        "link": null
+       },
+       "plain_text": "Stan Kotorska",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-011S",
+        "link": null
+       },
+       "plain_text": "BD-26-011S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Apartment",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 180000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 50
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": null
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 1
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Kotorska 5, Budva",
+        "link": null
+       },
+       "plain_text": "Kotorska 5, Budva",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S11",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S11",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 011"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S11",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S11",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S11"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S11",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S11",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "00000000-0000-0000-0000-00000000000c",
+   "created_time": "2026-09-01T10:00:00.000Z",
+   "last_edited_time": "2026-10-01T10:00:00.000Z",
+   "archived": false,
+   "in_trash": false,
+   "parent": {
+    "type": "database_id",
+    "database_id": "sales-db"
+   },
+   "url": "https://www.notion.so/12",
+   "properties": {
+    "Aktualnost": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Kuća Dobra Voda",
+        "link": null
+       },
+       "plain_text": "Kuća Dobra Voda",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Object ID": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "BD-26-012S",
+        "link": null
+       },
+       "plain_text": "BD-26-012S",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Property Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "House",
+      "color": "default"
+     }
+    },
+    "Cijena": {
+     "type": "number",
+     "number": 320000
+    },
+    "Interjer (m²)": {
+     "type": "number",
+     "number": 140
+    },
+    "Land (m²)": {
+     "type": "number",
+     "number": 500
+    },
+    "Sp. sobe": {
+     "type": "number",
+     "number": 3
+    },
+    "Location": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "Dobra Voda, Bar",
+        "link": null
+       },
+       "plain_text": "Dobra Voda, Bar",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Status": {
+     "type": "status",
+     "status": {
+      "id": "s",
+      "name": "Available",
+      "color": "green"
+     }
+    },
+    "Deal Type": {
+     "type": "select",
+     "select": {
+      "id": "x",
+      "name": "Sale",
+      "color": "default"
+     }
+    },
+    "Map Link": {
+     "type": "url",
+     "url": null
+    },
+    "Особенности": {
+     "type": "multi_select",
+     "multi_select": []
+    },
+    "Bathrooms": {
+     "type": "number",
+     "number": null
+    },
+    "Card Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Location Description": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Website Section": {
+     "type": "select",
+     "select": null
+    },
+    "Disclosure": {
+     "type": "select",
+     "select": null
+    },
+    "District": {
+     "type": "select",
+     "select": null
+    },
+    "Project ID": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Unit Code": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Project Name": {
+     "type": "rich_text",
+     "rich_text": []
+    },
+    "Owner Name": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-OWNER-S12",
+        "link": null
+       },
+       "plain_text": "PRIVATE-OWNER-S12",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Owner Phone": {
+     "type": "phone_number",
+     "phone_number": "+382 67 000 012"
+    },
+    "Provizija": {
+     "type": "number",
+     "number": 3.5
+    },
+    "List Nep.": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-LN-S12",
+        "link": null
+       },
+       "plain_text": "PRIVATE-LN-S12",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    },
+    "Documents Folder": {
+     "type": "url",
+     "url": "https://www.dropbox.com/PRIVATE-DOCS-S12"
+    },
+    "Person": {
+     "type": "people",
+     "people": [
+      {
+       "object": "user",
+       "id": "u-1",
+       "name": "PRIVATE-AGENT"
+      }
+     ]
+    },
+    "Cadastral Municipality": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "text": {
+        "content": "PRIVATE-KO-S12",
+        "link": null
+       },
+       "plain_text": "PRIVATE-KO-S12",
+       "href": null,
+       "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "has_more": false,
+ "next_cursor": null
+}

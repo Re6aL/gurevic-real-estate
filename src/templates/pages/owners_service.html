@@ -1,0 +1,171 @@
+{#- owners/sell | owners/rent-out | owners/property-management (route.extra.service = sell | rent_out | management).
+    Строки — i18n/<lang>/owners.json → categories.<service>.*; общие подписи — owners.*.
+    Форма — owner_form с предустановленным interest. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/forms.html" as forms %}
+
+{% set svc = route.extra.service %}
+{% set P = 'owners.categories.' ~ svc %}
+{% set CFG = {
+  'sell': {'image': 'BG_images/04.jpg', 'route': 'owners.sell', 'icon': 'key',
+           'included': ['valuation', 'photo', 'listing', 'viewings', 'negotiation', 'deal'],
+           'terms': ['commission_html', 'exclusive', 'contract'],
+           'faq': ['price', 'exclusive', 'documents', 'price_change', 'business']},
+  'rent_out': {'image': 'img/stock/rent-balcony.jpg', 'route': 'owners.rent_out', 'icon': 'calendar',
+           'included': ['rate', 'photo', 'search', 'viewings', 'lease'],
+           'terms': ['commission_html', 'term', 'contract'],
+           'faq': ['term', 'price', 'tenant', 'presence']},
+  'management': {'image': 'BG_images/05.jpg', 'route': 'owners.management', 'icon': 'building',
+           'included': ['keys', 'bills', 'checks', 'maintenance'],
+           'terms': ['commission_html', 'scope', 'contract'],
+           'faq': ['scope', 'price', 'combine', 'repairs']},
+} %}
+{% set cfg = CFG[svc] %}
+
+{#- JSON-LD: Service + FAQPage (BreadcrumbList выводит base.html) -#}
+{% set faq_items = [] %}
+{% for q in cfg.faq %}
+{% set _ = faq_items.append({'@type': 'Question', 'name': t(P ~ '.faq.' ~ q ~ '.q'),
+                             'acceptedAnswer': {'@type': 'Answer', 'text': t(P ~ '.faq.' ~ q ~ '.a')}}) %}
+{% endfor %}
+{% set service_ld = {
+  '@context': 'https://schema.org', '@type': 'Service', 'name': page.h1, 'description': page.description,
+  'url': page.canonical, 'areaServed': {'@type': 'Country', 'name': 'Montenegro'},
+  'provider': {'@type': 'RealEstateAgent', 'name': site.brand, 'legalName': site.legal_name,
+               'url': abs_url('home'), 'telephone': site.contacts.phone_e164, 'email': site.contacts.email}
+} %}
+{% set faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': faq_items} %}
+
+{#- Боковая колонка формы (та же разметка, что в owners.html) -#}
+{% macro form_aside() -%}
+<div role="note" class="ow-form-aside" aria-labelledby="ow-next-title">
+  <div class="ow-aside-card">
+    <h3 id="ow-next-title">{{ t('owners.form.next_title') }}</h3>
+    <ol class="ow-next">
+      {% for n in ['call', 'visit', 'contract'] %}
+      <li>{{ t('owners.form.next.' ~ n) }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div class="ow-aside-card">
+    <h3>{{ ui.icon('lock', 'ow-aside-icon', 18) }}<span>{{ t('owners.form.privacy_title') }}</span></h3>
+    <p>{{ t('owners.form.privacy') }}</p>
+  </div>
+  <div class="ow-aside-card ow-aside-card--direct">
+    <h3>{{ t('owners.form.direct_title') }}</h3>
+    <p>{{ t('owners.form.direct') }}</p>
+    <div class="ow-direct">
+      <a class="ow-direct__link" href="{{ site.contacts.whatsapp }}"{{ ui.external_attrs() }}>{{ ui.icon('whatsapp', '', 20) }}<span>{{ t('common.contacts.whatsapp') }}</span></a>
+      <a class="ow-direct__link" href="{{ site.contacts.telegram }}"{{ ui.external_attrs() }}>{{ ui.icon('telegram', '', 20) }}<span>{{ t('common.contacts.telegram') }}</span></a>
+      <a class="ow-direct__link" href="{{ site.contacts.phone_href }}">{{ ui.icon('phone', '', 20) }}<span><bdi dir="ltr">{{ site.contacts.phone }}</bdi></span></a>
+    </div>
+    <a class="ow-chat-link" href="{{ url('contact') }}" data-chat-open>{{ t('owners.form.chat') }}{{ ui.icon('arrow-right', '', 18) }}</a>
+  </div>
+</div>
+{%- endmacro %}
+
+{% block jsonld %}
+{{ super() }}
+<script type="application/ld+json">{{ service_ld | tojson }}</script>
+<script type="application/ld+json">{{ faq_ld | tojson }}</script>
+{% endblock %}
+
+{% block main %}
+{# ---------------------------------------------------------------- hero #}
+<section class="ow-hero ow-hero--service" aria-labelledby="ow-h1">
+  <div class="ow-hero__media">
+    {{ img(cfg.image, t('owners.alt.' ~ svc), sizes='100vw', cls='ow-hero__img', loading='eager', fetchpriority='high', fallback='BG_images/01.jpg') }}
+  </div>
+  <div class="container ow-hero__inner">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="ow-kicker">{{ t(P ~ '.kicker') }}</span>
+    <h1 id="ow-h1">{{ page.h1 }}</h1>
+    <p class="ow-hero__lead">{{ t(P ~ '.lead') }}</p>
+    <div class="ow-hero__actions">
+      {{ ui.button('#owner-form', t('owners.hero.cta_form'), icon_end='arrow-right') }}
+      {{ ui.button(url('contact'), t('owners.form.chat'), 'ghost', attrs={'data-chat-open': ''}) }}
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------------------ included #}
+<section class="section ow-included" aria-labelledby="ow-included-title">
+  <div class="container">
+    {{ ui.section_head(t(P ~ '.included_title'), kicker=t('owners.services.items.' ~ svc ~ '.title'),
+                       sub=t(P ~ '.included_note') if t_source(lang, P ~ '.included_note') else None, id='ow-included-title') }}
+    <ul class="ow-included__list ow-included__list--{{ cfg.included | length }}">
+      {% for item in cfg.included %}
+      <li class="ow-inc">
+        <span class="ow-inc__icon">{{ ui.icon('check', '', 20) }}</span>
+        <h3 class="ow-inc__title">{{ t(P ~ '.included.' ~ item ~ '.title') }}</h3>
+        <p>{{ t(P ~ '.included.' ~ item ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="ow-terms" role="group" aria-labelledby="ow-terms-title">
+      <h3 class="ow-terms__title" id="ow-terms-title">{{ ui.icon(cfg.icon, 'ow-terms__icon', 22) }}<span>{{ t('owners.terms_title') }}</span></h3>
+      <ul class="ow-terms__list">
+        {% for term in cfg.terms %}
+        <li>{{ t(P ~ '.terms.' ~ term) }}</li>
+        {% endfor %}
+      </ul>
+      {% if svc == 'sell' %}
+      <a class="ow-terms__link" href="{{ url('owners') }}#contract">{{ t(P ~ '.terms_link') }}{{ ui.icon('arrow-right', '', 18) }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{# ----------------------------------------------------------------- faq #}
+<section class="section ow-faq" aria-labelledby="ow-faq-title">
+  <div class="container">
+    {{ ui.section_head(t('owners.faq_title'), id='ow-faq-title') }}
+    <div class="ow-faq__list">
+      {% for q in cfg.faq %}
+      <details class="ow-acc ow-acc--faq">
+        <summary class="ow-acc__summary">
+          <span class="ow-acc__title">{{ t(P ~ '.faq.' ~ q ~ '.q') }}</span>
+          {{ ui.icon('chevron-down', 'ow-acc__chevron', 20) }}
+        </summary>
+        <div class="ow-acc__body"><p>{{ t(P ~ '.faq.' ~ q ~ '.a') }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- form #}
+<section class="section ow-form-section" id="owner-form" aria-labelledby="lf-owner-title">
+  <div class="container ow-form-grid">
+    <div class="ow-form-main">
+      {{ forms.owner_form(preset={'interest': svc}, heading=t(P ~ '.form_title'), intro=t(P ~ '.form_intro')) }}
+    </div>
+    {{ form_aside() }}
+  </div>
+</section>
+
+{# ------------------------------------------------------------- related #}
+<section class="section ow-related" aria-labelledby="ow-related-title">
+  <div class="container">
+    {{ ui.section_head(t('owners.related.title'), id='ow-related-title') }}
+    <ul class="ow-related__list">
+      {% for code, key in [('sell', 'owners.sell'), ('rent_out', 'owners.rent_out'), ('management', 'owners.management')] if code != svc %}
+      <li>
+        <a class="ow-related__link" href="{{ url(key) }}">
+          <span class="ow-related__text"><b>{{ t('owners.services.items.' ~ code ~ '.title') }}</b><span>{{ t('owners.services.items.' ~ code ~ '.text') }}</span></span>
+          {{ ui.icon('arrow-right', 'ow-related__arrow', 22) }}
+        </a>
+      </li>
+      {% endfor %}
+      <li>
+        <a class="ow-related__link ow-related__link--all" href="{{ url('owners') }}">
+          <span class="ow-related__text"><b>{{ t('owners.related.all') }}</b><span>{{ t('owners.related.all_text') }}</span></span>
+          {{ ui.icon('arrow-right', 'ow-related__arrow', 22) }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,297 @@
+{#- Каталог: buy/, buy/<категория>/, rent/, rent/<категория>/ (ARCHITECTURE §3, brief §D.10–11).
+    Hero (фото через img(), LCP) → [rent: вкладки долгосрочная/краткосрочная] → белая панель фильтров
+    («окно поиска» как на старом sale.html) → карточки (пре-рендер, data-* для js/catalog.js) →
+    SEO-текст (+ ВНЖ-примечание на buy) → CTA с формой.
+    Без JS: видны все карточки, ссылки категорий и формы-заглушки; фильтры требуют JS и скрыты.
+    Состояние фильтров — только в #hash (индексируемых URL фильтры не создают). -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/cards.html" as cards %}
+{% import "macros/forms.html" as forms %}
+
+{% set section = page.section %}
+{% set category = page.category %}
+{% set items = listings.catalog_order(listings.query(section=section, category=category)) %}
+{% set all_items = listings.query(section=section) %}
+{% set m = route.meta %}
+{% set is_rent = section == 'rent' %}
+{% set is_land = category == 'land' %}
+{% set CATS = {'buy': ['apartments', 'houses', 'villas', 'land'], 'rent': ['apartments', 'houses']}[section] %}
+{% set HERO = {
+  'buy': 'BG_images/02.jpg', 'buy.apartments': 'BG_images/04.jpg', 'buy.houses': 'BG_images/01.jpg',
+  'buy.villas': 'BG_images/05.jpg', 'buy.land': 'img/stock/invest-land.jpg',
+  'rent': 'BG_images/03.jpg', 'rent.apartments': 'BG_images/05.jpg', 'rent.houses': 'BG_images/01.jpg'} %}
+{#- Районы — только те, что есть среди объектов страницы, в порядке src/districts.json -#}
+{% set present = items | map(attribute='district') | list %}
+{% set district_keys = listings.districts.items | map(attribute='key') | select('in', present) | list %}
+
+{% block jsonld %}
+{{ super() }}
+{% if items %}
+{% set ns = namespace(list=[]) %}
+{% for l in items %}
+{% set ns.list = ns.list + [{'@type': 'ListItem', 'position': loop.index, 'url': abs_url('property', listing=l), 'name': listing_name(l)}] %}
+{% endfor %}
+<script type="application/ld+json">{{ {'@context': 'https://schema.org', '@type': 'ItemList', 'name': page.h1, 'numberOfItems': items | length, 'itemListElement': ns.list} | tojson }}</script>
+{% endif %}
+{% endblock %}
+
+{% block main %}
+<section class="catalog-hero catalog-hero--{{ section }} has-media" aria-labelledby="catalog-h1">
+  <div class="catalog-hero__media">
+    {{ img(HERO[page.key], t(m ~ '.hero.image_alt'), sizes='100vw', cls='catalog-hero__img', loading='eager', fetchpriority='high', fallback='BG_images/02.jpg') }}
+  </div>
+  <div class="container catalog-hero__inner">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="catalog-kicker">{{ t(m ~ '.hero.kicker') }}</span>
+    <h1 id="catalog-h1">{{ page.h1 }}</h1>
+    <p>{{ t(m ~ '.hero.lead') }}</p>
+  </div>
+</section>
+
+<div class="container catalog-content">
+{% if is_rent %}
+  <div class="rent-tabs" role="tablist" aria-label="{{ t('catalog.rent_tabs.aria') }}" data-rent-tabs>
+    <button class="rent-tab" type="button" role="tab" id="rent-tab-long" aria-controls="rent-panel-long" aria-selected="true">{{ ui.icon('key', size=18) }}<span>{{ t('catalog.rent_tabs.long') }}</span></button>
+    <button class="rent-tab" type="button" role="tab" id="rent-tab-short" aria-controls="rent-panel-short" aria-selected="false" aria-disabled="true" tabindex="-1"><span>{{ t('catalog.rent_tabs.short') }}</span><span class="badge-soon">{{ t('catalog.rent_tabs.soon') }}</span></button>
+  </div>
+  <div class="rent-panel" id="rent-panel-long" role="tabpanel" aria-labelledby="rent-tab-long">
+{% endif %}
+
+{#- ---------------------------------------------------------- панель фильтров -#}
+{% if all_items %}
+  <form class="filter-panel catalog-filters{% if is_rent %} filter-panel--tabbed{% endif %}" id="catalog-filters" role="search" aria-label="{{ t('catalog.filters.aria') }}"
+        data-catalog data-section="{{ section }}" data-price-unit="{{ 1 if is_rent else 1000 }}" novalidate>
+    <div class="catalog-filters__head">
+      <nav class="cat-chips" aria-label="{{ t('catalog.filters.categories_aria') }}">
+        <ul class="cat-chips__list">
+          <li><a class="cat-chip" href="{{ url(section) }}"{% if not category %} aria-current="page"{% endif %}><span>{{ t('catalog.filters.all') }}</span><span class="cat-chip__n">{{ all_items | length }}</span></a></li>
+          {% for c in CATS %}
+          {% set n = listings.query(section=section, category=c) | length %}
+          <li><a class="cat-chip" href="{{ url(section ~ '.' ~ c) }}"{% if category == c %} aria-current="page"{% endif %}><span>{{ t('common.routes.' ~ section ~ '_' ~ c) }}</span><span class="cat-chip__n">{{ n }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="catalog-filters__tools">
+        {% if not is_rent %}
+        <div class="id-search" data-id-search>
+          <button class="id-search-toggle" type="button" aria-expanded="false" aria-controls="id-search-panel">{{ ui.icon('search', size=18) }}<span>ID</span><span class="visually-hidden"> — {{ t('catalog.filters.id_search') }}</span></button>
+          <div class="id-search-panel" id="id-search-panel" hidden>
+            <label class="filter-label" for="f-id">{{ t('catalog.filters.id_label') }}</label>
+            <input id="f-id" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="12" placeholder="BD-26-003S" aria-describedby="f-id-hint" aria-controls="id-search-results">
+            <p class="id-search-hint" id="f-id-hint">{{ t('catalog.filters.id_hint') }}</p>
+            <ul class="id-search-results" id="id-search-results" aria-live="polite"></ul>
+          </div>
+        </div>
+        {% endif %}
+        <button class="filters-toggle" type="button" aria-expanded="false" aria-controls="catalog-fields" data-filters-toggle>{{ ui.icon('filter', size=18) }}<span data-filters-toggle-label>{{ t('catalog.filters.toggle') }}</span></button>
+      </div>
+    </div>
+
+    <div class="catalog-filters__fields" id="catalog-fields">
+      {% if not category %}
+      <div class="filter-field">
+        <label for="f-cat">{{ t('catalog.filters.type') }}</label>
+        <select id="f-cat" name="cat">
+          <option value="">{{ t('catalog.filters.type_any') }}</option>
+          {% for c in CATS %}<option value="{{ c }}">{{ t('common.routes.' ~ section ~ '_' ~ c) }}</option>{% endfor %}
+        </select>
+      </div>
+      {% endif %}
+      <div class="filter-field">
+        <label for="f-district">{{ t('catalog.filters.district') }}</label>
+        <select id="f-district" name="d">
+          <option value="">{{ t('catalog.filters.district_any') }}</option>
+          {% for key in district_keys %}<option value="{{ key }}" data-name="{{ district_name(key) }}">{{ district_name(key) }}</option>{% endfor %}
+        </select>
+      </div>
+
+      {% if is_rent %}
+      <div class="filter-field price-field">
+        <span class="filter-label" id="f-price-label">{{ t('catalog.filters.price_rent') }}</span>
+        <div class="range-pair" role="group" aria-labelledby="f-price-label">
+          <span class="thou"><span class="cur" aria-hidden="true">€</span><input id="f-pmin" name="pmin" type="text" inputmode="numeric" autocomplete="off" placeholder="{{ t('catalog.filters.from') }}" aria-label="{{ t('catalog.filters.price_min_rent') }}"></span>
+          <span aria-hidden="true">—</span>
+          <span class="thou"><span class="cur" aria-hidden="true">€</span><input id="f-pmax" name="pmax" type="text" inputmode="numeric" autocomplete="off" placeholder="{{ t('catalog.filters.to') }}" aria-label="{{ t('catalog.filters.price_max_rent') }}"></span>
+        </div>
+      </div>
+      {% else %}
+      {#- Цена в тысячах евро: «000» дописывается прямо в поле (разделитель — как в локали) -#}
+      {% set thousands = fmt_num(1000)[1:] %}
+      <div class="filter-field price-field" data-price-field>
+        <span class="filter-label" id="f-price-label">{{ t('catalog.filters.price_buy') }} <span class="hint" data-price-caption>— {{ t('catalog.filters.price_any') }}</span></span>
+        <div class="price-inputs" role="group" aria-labelledby="f-price-label">
+          <span class="thou empty"><span class="cur" aria-hidden="true">€</span><input id="f-pmin" name="pmin" type="text" inputmode="numeric" autocomplete="off" placeholder="0" maxlength="6" aria-label="{{ t('catalog.filters.price_min') }}"><i aria-hidden="true">{{ thousands }}</i></span>
+          <span class="dash" aria-hidden="true">—</span>
+          <span class="thou empty"><span class="cur" aria-hidden="true">€</span><input id="f-pmax" name="pmax" type="text" inputmode="numeric" autocomplete="off" placeholder="{{ t('catalog.filters.price_max_placeholder') }}" maxlength="6" aria-label="{{ t('catalog.filters.price_max') }}"><i aria-hidden="true">{{ thousands }}</i></span>
+          <button class="slider-toggle" type="button" aria-expanded="false" aria-controls="price-slider" data-slider-toggle>{{ ui.icon('filter', size=20) }}<span class="visually-hidden">{{ t('catalog.filters.slider_toggle') }}</span></button>
+        </div>
+        <div class="price-slider" id="price-slider" data-price-slider>
+          <div class="ps-track"><div class="ps-fill" data-ps-fill></div></div>
+          <input type="range" min="0" max="1000" step="10" value="0" data-ps-min aria-label="{{ t('catalog.filters.slider_min') }}">
+          <input type="range" min="0" max="1000" step="10" value="1000" data-ps-max aria-label="{{ t('catalog.filters.slider_max') }}">
+          <div class="ps-scale" aria-hidden="true"><span>{{ t('catalog.filters.slider_scale_min') }}</span><span>{{ t('catalog.filters.slider_scale_mid') }}</span><span>{{ t('catalog.filters.slider_scale_max') }}</span></div>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="filter-field">
+        <span class="filter-label" id="f-area-label">{{ t('catalog.filters.area_plot' if is_land else 'catalog.filters.area') }}</span>
+        <div class="range-pair" role="group" aria-labelledby="f-area-label">
+          <input id="f-amin" name="amin" type="text" inputmode="numeric" autocomplete="off" placeholder="{{ t('catalog.filters.from') }}" aria-label="{{ t('catalog.filters.area_min') }}">
+          <span aria-hidden="true">—</span>
+          <input id="f-amax" name="amax" type="text" inputmode="numeric" autocomplete="off" placeholder="{{ t('catalog.filters.to') }}" aria-label="{{ t('catalog.filters.area_max') }}">
+        </div>
+      </div>
+
+      {% if not is_land %}
+      <div class="filter-field filter-field--narrow">
+        <label for="f-beds">{{ t('catalog.filters.bedrooms') }}</label>
+        <select id="f-beds" name="beds">
+          <option value="">{{ t('catalog.filters.bedrooms_any') }}</option>
+          {% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ t('catalog.filters.bedrooms_min', n=n) }}</option>{% endfor %}
+        </select>
+      </div>
+      {% endif %}
+
+      {% if is_rent %}
+      <div class="filter-field">
+        <label for="f-term">{{ t('catalog.filters.term') }}</label>
+        <select id="f-term" name="term">
+          <option value="">{{ t('catalog.filters.term_any') }}</option>
+          {% for term in ['off_season', 'year'] %}<option value="{{ term }}">{{ t('common.rental_terms.' ~ term) }}</option>{% endfor %}
+        </select>
+      </div>
+      {% endif %}
+
+      <div class="filter-field filter-field--sort">
+        <span class="filter-label" id="f-sort-label">{{ t('catalog.filters.sort') }}</span>
+        <div class="sort-icons" role="group" aria-labelledby="f-sort-label">
+          <button class="sort-icon" type="button" data-sort="price-asc" aria-pressed="false" data-tip="{{ t('catalog.filters.sort_price_asc') }}">{{ ui.icon('sort-asc') }}<span class="visually-hidden">{{ t('catalog.filters.sort_price_asc') }}</span></button>
+          <button class="sort-icon" type="button" data-sort="price-desc" aria-pressed="false" data-tip="{{ t('catalog.filters.sort_price_desc') }}">{{ ui.icon('sort-desc') }}<span class="visually-hidden">{{ t('catalog.filters.sort_price_desc') }}</span></button>
+          <button class="sort-icon" type="button" data-sort="area-desc" aria-pressed="false" data-tip="{{ t('catalog.filters.sort_area_desc') }}">{{ ui.icon('area') }}<span class="visually-hidden">{{ t('catalog.filters.sort_area_desc') }}</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endif %}
+
+{#- ---------------------------------------------------------- результаты -#}
+{% if items %}
+  <section class="catalog-results" aria-labelledby="results-title">
+    <div class="results-head">
+      <h2 id="results-title">{{ t(m ~ '.results_title') }}</h2>
+      <p class="results-count" id="catalog-count" dir="auto" role="status" aria-live="polite" aria-atomic="true">{{ plural('catalog.js.count', items | length) }}</p>
+      <div class="results-tools">
+        <button class="btn btn-link results-reset" type="button" data-reset hidden>{{ ui.icon('close', size=16) }}<span>{{ t('catalog.filters.reset') }}</span></button>
+        <a class="results-map" href="{{ url('map') }}">{{ ui.icon('map', size=18) }}<span>{{ t('catalog.results.map_link') }}</span></a>
+      </div>
+    </div>
+    <div class="cards catalog-grid" id="catalog-grid">
+      {% for l in items %}
+      {{ cards.card(l, heading=3, loading='eager' if loop.index <= 3 else 'lazy') }}
+      {% endfor %}
+    </div>
+    <div class="catalog-empty" id="catalog-empty" hidden>
+      <span class="catalog-empty__icon" aria-hidden="true">{{ ui.icon('search', size=28) }}</span>
+      <h3>{{ t('catalog.empty.title') }}</h3>
+      <p>{{ t('catalog.empty.text') }}</p>
+      <div class="catalog-empty__actions">
+        <button class="btn btn-navy" type="button" data-reset>{{ t('catalog.filters.reset') }}</button>
+        <a class="btn btn-outline" href="#request">{{ t('catalog.empty.request') }}</a>
+      </div>
+    </div>
+  </section>
+{% elif is_rent and not all_items %}
+  {#- Каталог аренды ещё не подключён (js/rentals.js пуст) — полноценное пустое состояние с формой -#}
+  <section class="rent-empty" id="request" aria-labelledby="rent-empty-title">
+    <div class="rent-empty__intro">
+      {{ img('img/stock/rent-balcony.jpg', t('catalog.rent_empty.image_alt'), sizes='(max-width: 960px) 100vw, 460px', cls='rent-empty__img', fallback='BG_images/03.jpg') }}
+      <span class="kicker">{{ t('catalog.rent_empty.kicker') }}</span>
+      <h2 id="rent-empty-title">{{ t('catalog.rent_empty.title') }}</h2>
+      <p>{{ t('catalog.rent_empty.text') }}</p>
+      <ul class="check-list">
+        {% for point in t('catalog.rent_empty.points') %}<li>{{ ui.icon('check', size=18) }}<span>{{ point }}</span></li>{% endfor %}
+      </ul>
+      <nav class="cat-links" aria-label="{{ t('catalog.filters.categories_aria') }}">
+        {% for c in CATS %}<a href="{{ url(section ~ '.' ~ c) }}"{% if category == c %} aria-current="page"{% endif %}>{{ t('common.routes.' ~ section ~ '_' ~ c) }}</a>{% endfor %}
+      </nav>
+    </div>
+    <div class="rent-empty__form">
+      {{ forms.rent_request_form(preset={}, uid='lf-rent', heading=t('catalog.rent_empty.form_heading'), heading_level=3) }}
+    </div>
+  </section>
+{% else %}
+  <section class="catalog-results catalog-results--empty" aria-labelledby="results-title">
+    <div class="catalog-empty">
+      <span class="catalog-empty__icon" aria-hidden="true">{{ ui.icon('building', size=28) }}</span>
+      <h2 id="results-title">{{ t('catalog.empty_category.title') }}</h2>
+      <p>{{ t('catalog.empty_category.text') }}</p>
+      <div class="catalog-empty__actions">
+        <a class="btn btn-navy" href="{{ url(section) }}">{{ t('common.buttons.all_objects') }}</a>
+        <a class="btn btn-outline" href="#request">{{ t('catalog.empty.request') }}</a>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{#- ---------------------------------------------------------- запрос на подбор -#}
+{% if not (is_rent and not all_items) %}
+  <section class="catalog-request" id="request" aria-labelledby="request-title">
+    <div class="catalog-request__text">
+      <span class="kicker">{{ t('catalog.request.kicker') }}</span>
+      <h2 id="request-title">{{ t('catalog.request.title_rent' if is_rent else 'catalog.request.title_buy') }}</h2>
+      <p>{{ t('catalog.request.text_rent' if is_rent else 'catalog.request.text_buy') }}</p>
+      <ul class="check-list">
+        {% for point in t('catalog.request.points') %}<li>{{ ui.icon('check', size=18) }}<span>{{ point }}</span></li>{% endfor %}
+      </ul>
+      <div class="catalog-request__quick">
+        <a class="btn btn-outline btn-sm" href="{{ site.contacts.whatsapp }}"{{ ui.external_attrs() }}>{{ ui.icon('whatsapp', size=18) }}<span>WhatsApp</span></a>
+        <a class="btn btn-outline btn-sm" href="{{ site.contacts.telegram }}"{{ ui.external_attrs() }}>{{ ui.icon('telegram', size=18) }}<span>Telegram</span></a>
+        <a class="btn btn-outline btn-sm" href="{{ site.contacts.phone_href }}">{{ ui.icon('phone', size=18) }}<span><bdi dir="ltr">{{ site.contacts.phone }}</bdi></span></a>
+      </div>
+    </div>
+    <div class="catalog-request__form">
+      {% if is_rent %}
+      {{ forms.rent_request_form(preset={}, uid='lf-rent', heading=t('catalog.request.form_heading'), heading_level=3) }}
+      {% else %}
+      {{ forms.contact_form(preset={'interest': 'buy'}, uid='lf-buy', heading=t('catalog.request.form_heading'), heading_level=3, form='buy_request') }}
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+
+{% if is_rent %}
+  </div>{#- /rent-panel-long -#}
+  <div class="rent-panel rent-panel--short" id="rent-panel-short" role="tabpanel" aria-labelledby="rent-tab-short" tabindex="-1">
+    <section class="short-term" aria-labelledby="short-term-title">
+      <div class="short-term__text">
+        <span class="kicker">{{ t('catalog.short_term.kicker') }}</span>
+        <h2 id="short-term-title">{{ t('catalog.short_term.title') }} <span class="badge-soon">{{ t('catalog.rent_tabs.soon') }}</span></h2>
+        <p>{{ t('catalog.short_term.text') }}</p>
+        <button class="btn btn-link" type="button" data-rent-back>{{ ui.icon('arrow-left', size=16) }}<span>{{ t('catalog.short_term.back') }}</span></button>
+      </div>
+      <div class="short-term__form">
+        {{ forms.rent_request_form(preset={'rental_term': 'short_term'}, uid='lf-rent-short', heading=t('catalog.short_term.form_heading'), intro=False, heading_level=3) }}
+      </div>
+    </section>
+  </div>
+{% endif %}
+
+{#- ---------------------------------------------------------- SEO-текст (+ ВНЖ на buy) -#}
+  <section class="catalog-seo{% if not is_rent %} catalog-seo--aside{% endif %}" aria-labelledby="seo-title">
+    <div class="catalog-seo__text">
+      <h2 id="seo-title">{{ t(m ~ '.seo.title') }}</h2>
+      <p>{{ t(m ~ '.seo.p1') }}</p>
+      <p>{{ t(m ~ '.seo.p2') }}</p>
+    </div>
+    {% if not is_rent %}
+    <div role="note" class="residency-note" aria-labelledby="residency-title">
+      <h3 id="residency-title">{{ ui.icon('info', size=20) }}<span>{{ t('catalog.residency.title') }}</span></h3>
+      <p>{{ t('catalog.residency.text') }}</p>
+      <a href="{{ t('catalog.residency.url') }}"{{ ui.external_attrs() }}>{{ t('catalog.residency.link') }}{{ ui.icon('external', size=16) }}</a>
+    </div>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+# Cloudflare Worker: заявки с сайта → Notion «Website Leads» (+ Telegram).
+# Деплой и настройка — README.md рядом. Секретов здесь НЕТ и быть не должно:
+#   npx wrangler secret put NOTION_TOKEN
+#   npx wrangler secret put NOTION_LEADS_DB_ID
+#   npx wrangler secret put TELEGRAM_BOT_TOKEN   (необязательно)
+#   npx wrangler secret put TELEGRAM_CHAT_ID     (необязательно)
+
+name = "gurevic-lead-worker"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+# Сайты, с которых принимаются заявки (через запятую, без пути и без «/» в конце).
+# При подключении своего домена — добавить его сюда и передеплоить.
+ALLOWED_ORIGINS = "https://re6al.github.io,http://localhost:8768"
+
+[observability]
+# Хранимые логи выключены: журнал вызовов Cloudflare содержит IP и заголовки посетителей.
+# Для отладки — живой поток `npx wrangler tail` (код пишет только коды ошибок).
+enabled = false

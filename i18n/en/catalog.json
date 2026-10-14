@@ -1,0 +1,120 @@
+{
+  "filters": {
+    "aria": "Property search",
+    "categories_aria": "Categories",
+    "all": "All",
+    "toggle": "Filters",
+    "type": "Property type",
+    "type_any": "Any",
+    "district": "District",
+    "district_any": "Any",
+    "price_buy": "Price, €",
+    "price_rent": "Price per month, €",
+    "price_any": "no limit",
+    "price_min": "Price from, thousand euros",
+    "price_max": "Price up to, thousand euros",
+    "price_min_rent": "Price from, euros per month",
+    "price_max_rent": "Price up to, euros per month",
+    "price_max_placeholder": "max",
+    "slider_toggle": "Set the price range with a slider",
+    "slider_min": "Lower price limit",
+    "slider_max": "Upper price limit",
+    "slider_scale_min": "€0",
+    "slider_scale_mid": "€500k",
+    "slider_scale_max": "€1M+",
+    "area": "Area, m²",
+    "area_plot": "Plot area, m²",
+    "from": "From",
+    "to": "To",
+    "area_min": "Area from, m²",
+    "area_max": "Area up to, m²",
+    "bedrooms": "Bedrooms",
+    "bedrooms_any": "Any",
+    "bedrooms_min": "{n}+",
+    "term": "Rental term",
+    "term_any": "Any",
+    "sort": "Sort",
+    "sort_aria": "Sort order",
+    "sort_price_asc": "Lowest price first",
+    "sort_price_desc": "Highest price first",
+    "sort_area_desc": "Largest first",
+    "reset": "Reset filters",
+    "id_search": "Search by ID",
+    "id_label": "Property ID",
+    "id_hint": "For example BD-26-003S — the ID is shown on each card and in your messages with the agent."
+  },
+  "results": {
+    "map_link": "Show on the map"
+  },
+  "empty": {
+    "title": "Nothing matches these filters",
+    "text": "Adjust the filters or send us a request — we will look for options beyond the catalogue.",
+    "request": "Send a request"
+  },
+  "empty_category": {
+    "title": "No properties are published in this category yet",
+    "text": "The catalogue is updated as new properties come in. Tell us what you are looking for and we will search on request."
+  },
+  "request": {
+    "kicker": "Haven’t found the right property?",
+    "title_buy": "We will put together a shortlist for you",
+    "text_buy": "Tell us your budget, preferred area and timing — we will check what is available on the market and send you the options that fit.",
+    "title_rent": "We will find a long-term rental for you",
+    "text_rent": "Tell us your monthly budget, preferred area, move-in date and household — we will send you suitable options.",
+    "points": [
+      "We reply the way you prefer: phone, WhatsApp, Telegram or email",
+      "We speak Russian, English and Montenegrin"
+    ],
+    "form_heading": "Shortlist request"
+  },
+  "residency": {
+    "title": "Temporary residence",
+    "text": "For third-country nationals not covered by the statutory exceptions, property with an official tax valuation of €150,000 or more may serve as grounds for temporary residence, provided the other legal requirements are met. We check the conditions as of the application date — this website is not a substitute for legal advice.",
+    "link": "Current amendments to the Law on Foreigners",
+    "url": "https://www.sluzbenilist.me/propisi/389913"
+  },
+  "rent_tabs": {
+    "aria": "Rental type",
+    "long": "Long-term rentals",
+    "short": "Short-term rentals",
+    "soon": "soon"
+  },
+  "short_term": {
+    "kicker": "Short-term rentals",
+    "title": "This section is in development",
+    "text": "For now we only handle long-term rentals — until the season starts or for a full year. Daily and short-term lets will be added later.",
+    "form_heading": "Notify me at launch",
+    "back": "Back to long-term rentals"
+  },
+  "rent_empty": {
+    "kicker": "Rental catalogue",
+    "title": "The long-term rental catalogue is being connected",
+    "text": "Rental properties will be published from a separate database that we are connecting now. Until the catalogue goes live we search on request: tell us your budget, area and move-in date and we will send you suitable offers.",
+    "points": [
+      "Until the season starts or for a full year",
+      "Apartments, houses and villas",
+      "Budget in euros per month"
+    ],
+    "form_heading": "Long-term rental request",
+    "image_alt": "Balcony overlooking a bay out of season — illustration"
+  },
+  "js": {
+    "count": {
+      "one": "{n} property",
+      "other": "{n} properties"
+    },
+    "price_any": "no limit",
+    "price_range": "{min} – {max}",
+    "price_from": "from {min}",
+    "price_to": "up to {max}",
+    "filters_active": "Filters: {n}",
+    "id_empty": "No property with this ID",
+    "id_found": {
+      "one": "{n} property found",
+      "other": "{n} properties found"
+    },
+    "district_option": "{name} · {n}",
+    "district_option_none": "{name} · no offers",
+    "results_updated": "Showing: {count}"
+  }
+}

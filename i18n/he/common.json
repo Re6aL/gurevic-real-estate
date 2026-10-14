@@ -1,0 +1,287 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "tagline": "נדל״ן בבודווה ובמונטנגרו",
+  "skip_link": "דילוג לתוכן",
+  "home_aria": "Gurevic Real Estate — דף הבית",
+  "logo_alt": "Gurevic Real Estate — בודווה",
+  "nav": {
+    "main_aria": "תפריט ראשי",
+    "rent": "השכרה",
+    "rent_apartments": "דירות",
+    "rent_houses": "בתים ווילות",
+    "rent_short_term": "השכרה לטווח קצר",
+    "soon": "בקרוב",
+    "all_rent": "כל הנכסים להשכרה לטווח ארוך",
+    "buy": "קנייה",
+    "buy_apartments": "דירות",
+    "buy_houses": "בתים",
+    "buy_villas": "וילות",
+    "buy_land": "מגרשים לבנייה",
+    "all_buy": "כל הנכסים למכירה",
+    "invest": "השקעות",
+    "invest_hotels": "מלונות",
+    "invest_land": "קרקע לפיתוח",
+    "invest_commercial": "נדל״ן מסחרי",
+    "invest_development": "פרויקטים בבנייה",
+    "all_invest": "השקעות במונטנגרו",
+    "owners": "לבעלי נכסים",
+    "owners_sell": "מכירת נכס",
+    "owners_rent_out": "השכרת נכס",
+    "owners_management": "ניהול נכסים",
+    "all_owners": "לבעלי נכסים",
+    "services": "שירותים",
+    "about": "אודות",
+    "contact": "צור קשר",
+    "map": "מפת נכסים",
+    "privacy": "מדיניות פרטיות",
+    "menu_open": "פתיחת התפריט",
+    "menu_close": "סגירת התפריט",
+    "submenu": "תפריט משנה: {label}",
+    "menu": "תפריט"
+  },
+  "routes": {
+    "home": "דף הבית",
+    "buy": "קנייה",
+    "buy_apartments": "דירות",
+    "buy_houses": "בתים",
+    "buy_villas": "וילות",
+    "buy_land": "מגרשים",
+    "rent": "השכרה",
+    "rent_apartments": "דירות",
+    "rent_houses": "בתים ווילות",
+    "invest": "השקעות",
+    "invest_hotels": "מלונות",
+    "invest_land": "קרקע לפיתוח",
+    "invest_commercial": "נדל״ן מסחרי",
+    "invest_development": "פרויקטים בבנייה",
+    "owners": "לבעלי נכסים",
+    "owners_sell": "מכירה",
+    "owners_rent_out": "השכרה",
+    "owners_management": "ניהול נכסים",
+    "about": "אודות",
+    "services": "שירותים",
+    "contact": "צור קשר",
+    "privacy": "פרטיות",
+    "map": "מפת נכסים",
+    "property": "נכס"
+  },
+  "footer": {
+    "nav_aria": "תפריט תחתון",
+    "columns": {
+      "rent": "השכרה",
+      "buy": "קנייה",
+      "invest": "השקעות",
+      "owners": "לבעלי נכסים",
+      "agency": "הסוכנות"
+    },
+    "contacts": "פרטי קשר",
+    "languages": "שפות",
+    "about_short": "סוכנות נדל״ן בבודווה: קנייה, השכרה לטווח ארוך, השקעות ושירותים לבעלי נכסים.",
+    "meetings": "פגישות בתיאום מראש.",
+    "legal_line": "DOO GUREVIC BUDVA · בודווה, מונטנגרו · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "צרו קשר",
+    "phone": "טלפון",
+    "call": "התקשרו",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "דוא״ל",
+    "instagram": "Instagram",
+    "location": "בודווה, מונטנגרו",
+    "write": "שלחו הודעה"
+  },
+  "languages": {
+    "label": "שפה",
+    "switch_aria": "בחירת שפת האתר",
+    "current": "השפה הנוכחית"
+  },
+  "lang_suggest": {
+    "text": "העמוד הזה זמין גם בעברית",
+    "switch": "מעבר לעברית",
+    "dismiss": "סגירה"
+  },
+  "buttons": {
+    "details": "לפרטים",
+    "send": "שליחה",
+    "call": "התקשרו",
+    "write_whatsapp": "כתבו לנו ב־WhatsApp",
+    "back_home": "חזרה לדף הבית",
+    "show_more": "הצגת עוד",
+    "learn_more": "למידע נוסף",
+    "contact_us": "צרו קשר",
+    "close": "סגירה",
+    "show_on_map": "הצגה במפה",
+    "request": "שליחת פנייה",
+    "all_objects": "כל הנכסים",
+    "apply": "הצגה",
+    "reset": "איפוס",
+    "prev": "הקודם",
+    "next": "הבא",
+    "show_all": "הצגת הכול",
+    "open_menu": "תפריט",
+    "discuss": "בואו נדבר",
+    "copy": "העתקה"
+  },
+  "breadcrumbs": {
+    "aria": "נתיב ניווט",
+    "home": "דף הבית"
+  },
+  "units": {
+    "m2": "מ״ר",
+    "per_month": "לחודש",
+    "eur_per_m2": "€ למ״ר",
+    "eur": "€",
+    "month": "חודש",
+    "sqm_short": "מ״ר"
+  },
+  "price": {
+    "on_request": "המחיר יימסר לפי בקשה",
+    "indicative": "מחיר משוער: {price}",
+    "preliminary": "נתון ראשוני, טעון בדיקה",
+    "from": "החל מ־{price}"
+  },
+  "types": {
+    "apartment": "דירה",
+    "house": "בית",
+    "villa": "וילה",
+    "land": "מגרש",
+    "hotel": "מלון",
+    "commercial": "נכס מסחרי",
+    "business": "עסק למכירה",
+    "development": "פרויקט בבנייה"
+  },
+  "types_lc": {
+    "apartment": "דירה",
+    "house": "בית",
+    "villa": "וילה",
+    "land": "מגרש",
+    "hotel": "מלון",
+    "commercial": "נכס מסחרי",
+    "business": "עסק למכירה",
+    "development": "פרויקט בבנייה"
+  },
+  "categories": {
+    "apartments": "דירות",
+    "houses": "בתים",
+    "villas": "וילות",
+    "land": "מגרשים",
+    "hotels": "מלונות",
+    "commercial": "נדל״ן מסחרי",
+    "development": "פרויקטים בבנייה"
+  },
+  "sections": {
+    "buy": "למכירה",
+    "rent": "להשכרה",
+    "invest": "השקעה"
+  },
+  "badges": {
+    "project": "פרויקט",
+    "confidential": "חסוי",
+    "soon": "בקרוב",
+    "illustration": "להמחשה",
+    "price_on_request": "מחיר לפי בקשה",
+    "new": "חדש"
+  },
+  "params": {
+    "area": "{n} מ״ר",
+    "land_area": "מגרש {n} מ״ר",
+    "floor": "קומה {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "חדר שינה אחד",
+      "two": "2 חדרי שינה",
+      "other": "{n} חדרי שינה"
+    },
+    "bathrooms": {
+      "one": "חדר רחצה אחד",
+      "two": "2 חדרי רחצה",
+      "other": "{n} חדרי רחצה"
+    },
+    "objects": {
+      "one": "נכס אחד",
+      "two": "2 נכסים",
+      "other": "{n} נכסים"
+    }
+  },
+  "alt": {
+    "listing_photo": "תמונה: {name}",
+    "listing_photo_n": "{name} — תמונה {n}",
+    "illustration": "להמחשה: {type}"
+  },
+  "districts": {
+    "budva-center": "בודווה – מרכז העיר",
+    "budva-rozino": "בודווה – רוזינו",
+    "budva-waterfront": "בודווה – קו החוף",
+    "budva-ivanica": "בודווה – איוואניצה",
+    "budva-veligrad": "בודווה – וליגרד",
+    "becici": "בצ׳יצ׳י",
+    "rafailovici": "רפאילוביצ׳י",
+    "przno": "פרז׳נו",
+    "sveti-stefan": "סבטי סטפן",
+    "lapcici": "לפצ׳יצ׳י",
+    "tudorovici": "טודורוביצ׳י",
+    "lastva-grbaljska": "לסטבה גרבליסקה",
+    "petrovac": "פטרובאץ",
+    "buljarica": "בוליאריצה",
+    "tivat": "טיבט",
+    "kotor": "קוטור",
+    "herceg-novi": "הרצג נובי",
+    "bar": "בר",
+    "dobra-voda": "דוברה וודה",
+    "ulcinj": "אולצין",
+    "rijeka-crnojevica": "רייקה צרנויביצ׳ה",
+    "cetinje": "צטיניה",
+    "podgorica": "פודגוריצה",
+    "other": "מונטנגרו"
+  },
+  "regions": {
+    "budva_riviera": "הריביירה של בודווה",
+    "petrovac_area": "אזור פטרובאץ",
+    "boka": "מפרץ קוטור",
+    "south_coast": "החוף הדרומי",
+    "central": "מרכז מונטנגרו",
+    "montenegro": "מונטנגרו"
+  },
+  "not_found": {
+    "meta": {
+      "title": "הדף לא נמצא | GUREVIĆ",
+      "description": "הדף הזה לא קיים. עברו לדף הבית של Gurevic Real Estate בשפה שלכם."
+    },
+    "h1": "הדף לא נמצא",
+    "text": "הדף אינו קיים או שהועבר לכתובת אחרת.",
+    "home_link": "מעבר לדף הבית"
+  },
+  "rental_terms": {
+    "off_season": "עד תחילת העונה",
+    "year": "לשנה",
+    "short_term": "לטווח קצר"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "חשבונות שוטפים כלולים",
+      "not_included": "חשבונות שוטפים בנפרד",
+      "partial": "חשבונות שוטפים כלולים בחלקם"
+    },
+    "pets": {
+      "allowed": "מותר עם חיות מחמד",
+      "not_allowed": "ללא חיות מחמד",
+      "by_agreement": "חיות מחמד בתיאום"
+    }
+  },
+  "js": {
+    "menu_open": "פתיחת התפריט",
+    "menu_close": "סגירת התפריט",
+    "close": "סגירה",
+    "copied": "הועתק",
+    "copy_failed": "ההעתקה נכשלה",
+    "submenu_open": "פתיחת תפריט המשנה",
+    "submenu_close": "סגירת תפריט המשנה",
+    "price_on_request": "המחיר יימסר לפי בקשה",
+    "per_month": "לחודש",
+    "price_from": "החל מ־{price}"
+  }
+}

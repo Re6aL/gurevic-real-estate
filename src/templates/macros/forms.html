@@ -1,0 +1,344 @@
+{#- Формы заявок (ARCHITECTURE §7, brief §D.5–7, §E). Импорт: {% import "macros/forms.html" as forms %}
+    Готовые формы:
+      investor_form(variant='private'|'company', preset={'investment_type': 'hotel'|'hotels'|…})
+      owner_form(preset={'interest': 'sell'|'rent_out'|'management', 'property_kind': …})
+      contact_form(preset={'interest': …}, form='contact'|'buy_request')
+      rent_request_form(preset={'rental_term': 'off_season'|'year'|'short_term'}, intro=False → без подсказки по умолчанию)
+      property_request_form(listing)
+    Общие необязательные параметры: uid (префикс id, если на странице две одинаковые формы),
+    heading / intro / heading_level (заголовок внутри карточки формы).
+    Разметка работает без JS (кнопка отправки выключена, <noscript> ведёт на «Контакты»);
+    js/forms.js включает валидацию, условные поля, вкладки и отправку.
+    Условные блоки: data-show-when="name=a|b" (скрыт + поля disabled, пока условие ложно);
+    data-required-when="name=a|b" на .lf-field делает поле обязательным по условию. -#}
+{% import "macros/ui.html" as ui %}
+
+{#- Коды значений — brief §E (общие для форм, воркера и Notion) -#}
+{% set INVESTMENT_TYPES = ['hotel', 'development_land', 'restaurant_commercial', 'warehouse_logistics', 'development_partnership', 'other'] %}
+{% set BUDGETS = ['lt_500k', '500k_2m', '2m_10m', '10m_50m', 'gt_50m', 'undisclosed'] %}
+{% set CONTACT_METHODS = ['email', 'phone', 'whatsapp', 'telegram', 'video_call'] %}
+{% set PREFERRED_LANGUAGES = ['ru', 'en', 'me', 'uk', 'other'] %}
+{% set PROPERTY_KINDS = ['apartment', 'house', 'land', 'construction_project', 'business'] %}
+{% set OWNER_TYPES = ['individual', 'company'] %}
+{% set OWNER_INTERESTS = ['sell', 'rent_out', 'management'] %}
+{% set INTERESTS = ['buy', 'rent', 'invest', 'sell', 'rent_out', 'management', 'other'] %}
+{% set RENTAL_TERMS = ['off_season', 'year'] %}
+{% set BEDROOMS = ['0', '1', '2', '3', '4'] %}
+{% set PETS = ['no', 'cat', 'dog', 'other'] %}
+{#- Категории invest-подстраниц → investment_type -#}
+{% set INVEST_PRESET = {'hotels': 'hotel', 'land': 'development_land', 'commercial': 'restaurant_commercial',
+                        'development': 'development_partnership', 'logistics': 'warehouse_logistics'} %}
+
+{#- Иконки карточек «вид объекта» (24×24, stroke) -#}
+{% set KIND_ICONS = {
+  'apartment': 'M4 21V4h11v17M15 9h5v12M7.5 8h1M11 8h1M7.5 12h1M11 12h1M7.5 16h1M11 16h1M2 21h20',
+  'house': 'M3 11l9-7 9 7M5 9.5V20h14V9.5M10 20v-5h4v5',
+  'land': 'M3 17l6-3 6 3 6-3M3 17v3M9 14v3M15 17v3M21 14v3M12 4v7M12 4l4 1.5-4 1.5',
+  'construction_project': 'M5 21V6M5 6h15M5 6l3-3M8 3v3M17 6v5M15 11h4v3h-4zM2 21h9M9 21v-4h2v4',
+  'business': 'M3 9l1.5-5h15L21 9M3 9h18M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12v8h14v-8M10 20v-5h4v5',
+} %}
+
+{# ------------------------------------------------------------------ поля #}
+
+{% macro _marks() -%}
+<span class="lf-req" aria-hidden="true">*</span><span class="lf-opt">({{ t('forms.common.optional') }})</span>
+{%- endmacro %}
+
+{% macro _attrs(attrs) -%}
+{% for k, v in attrs.items() %}{% if v is sameas true %} {{ k }}{% elif v is not none and v is not sameas false %} {{ k }}="{{ v }}"{% endif %}{% endfor %}
+{%- endmacro %}
+
+{#- Обёртка поля: метка (+ альтернативные метки по условию), контрол (caller), подсказка, ошибка -#}
+{% macro _field(fid, label, required=False, hint=None, cls='', show_when=None, required_when=None, alt_labels=[], off=False) -%}
+<div class="lf-field{% if cls %} {{ cls }}{% endif %}{% if required %} is-required{% endif %}"{% if show_when %} data-show-when="{{ show_when }}"{% if off %} hidden{% endif %}{% endif %}{% if required_when %} data-required-when="{{ required_when }}"{% endif %}>
+  <label class="lf-label" for="{{ fid }}">{% if alt_labels %}{% for text, cond, visible in alt_labels %}<span class="lf-label-text" data-show-when="{{ cond }}"{% if not visible %} hidden{% endif %}>{{ text }}</span>{% endfor %}{% else %}<span class="lf-label-text">{{ label }}</span>{% endif %}{{ _marks() }}</label>
+  {{ caller() }}
+  {% if hint %}
+  <p class="lf-hint" id="{{ fid }}-hint">{{ hint }}</p>
+  {% endif %}
+  <p class="lf-error" id="{{ fid }}-error" hidden></p>
+</div>
+{%- endmacro %}
+
+{% macro input(fid, name, label, type='text', required=False, hint=None, placeholder=None, autocomplete=None,
+               value=None, cls='', show_when=None, required_when=None, ltr=False, attrs={}, alt_labels=[], off=False, maxlength=500) -%}
+{% call _field(fid, label, required, hint, cls, show_when, required_when, alt_labels, off) %}
+<input class="lf-input" id="{{ fid }}" name="{{ name }}" type="{{ type }}"{{ _attrs({
+  'required': required, 'disabled': off, 'aria-describedby': (fid ~ '-hint') if hint else None,
+  'placeholder': placeholder, 'autocomplete': autocomplete, 'value': value, 'dir': 'ltr' if ltr else None,
+  'maxlength': maxlength if type not in ('date', 'number') else None}) }}{{ _attrs(attrs) }}>
+{% endcall %}
+{%- endmacro %}
+
+{% macro textarea(fid, name, label, required=False, hint=None, placeholder=None, cls='lf-field--full', rows=4, maxlength=5000, off=False) -%}
+{% call _field(fid, label, required, hint, cls, off=off) %}
+<textarea class="lf-input lf-textarea" id="{{ fid }}" name="{{ name }}" rows="{{ rows }}"{{ _attrs({
+  'required': required, 'disabled': off, 'aria-describedby': (fid ~ '-hint') if hint else None,
+  'placeholder': placeholder, 'maxlength': maxlength}) }} dir="auto"></textarea>
+{% endcall %}
+{%- endmacro %}
+
+{#- group = ключ forms.options.<group>; codes — порядок вариантов -#}
+{% macro select(fid, name, label, group, codes, required=False, selected=None, hint=None, cls='', placeholder=True,
+                show_when=None, off=False) -%}
+{% call _field(fid, label, required, hint, cls, show_when, off=off) %}
+<select class="lf-input lf-select" id="{{ fid }}" name="{{ name }}"{{ _attrs({
+  'required': required, 'disabled': off, 'aria-describedby': (fid ~ '-hint') if hint else None}) }}>
+  {% if placeholder %}
+  <option value=""{% if not selected %} selected{% endif %}>{{ t('forms.common.select_placeholder') }}</option>
+  {% endif %}
+  {% for code in codes %}
+  <option value="{{ code }}"{% if code == selected %} selected{% endif %}>{{ t('forms.options.' ~ group ~ '.' ~ code) }}</option>
+  {% endfor %}
+</select>
+{% endcall %}
+{%- endmacro %}
+
+{#- Радиогруппа: style = chips (пилюли) | cards (крупные карточки с иконкой и описанием) -#}
+{% macro radios(fid, name, label, group, codes, checked=None, required=True, style='chips', hint=None, cls='lf-field--full',
+                desc_group=None, icons=None) -%}
+<fieldset class="lf-group lf-group--{{ style }}{% if cls %} {{ cls }}{% endif %}{% if required %} is-required{% endif %}" id="{{ fid }}" data-group="{{ name }}"{% if hint %} aria-describedby="{{ fid }}-hint"{% endif %}>
+  <legend class="lf-label"><span class="lf-label-text">{{ label }}</span>{{ _marks() }}</legend>
+  {% if hint %}
+  <p class="lf-hint" id="{{ fid }}-hint">{{ hint }}</p>
+  {% endif %}
+  <div class="lf-options">
+    {% for code in codes %}
+    {% set text = t('forms.options.' ~ group ~ '.' ~ code) %}
+    <label class="lf-choice" for="{{ fid }}-{{ code }}">
+      <input class="lf-choice__input" type="radio" id="{{ fid }}-{{ code }}" name="{{ name }}" value="{{ code }}"{% if code == checked %} checked{% endif %}{% if required %} required{% endif %}>
+      <span class="lf-choice__box">
+        {% if icons and icons.get(code) %}
+        <svg class="lf-choice__icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="{{ icons[code] }}"/></svg>
+        {% endif %}
+        <span class="lf-choice__text">{{ text }}</span>
+        {% if desc_group %}
+        <span class="lf-choice__desc">{{ t('forms.options.' ~ desc_group ~ '.' ~ code) }}</span>
+        {% endif %}
+      </span>
+    </label>
+    {% endfor %}
+  </div>
+  <p class="lf-error" id="{{ fid }}-error" hidden></p>
+</fieldset>
+{%- endmacro %}
+
+{% macro checkbox(fid, name, label, required=False, label_html=None, cls='lf-field--full') -%}
+<div class="lf-field lf-check{% if cls %} {{ cls }}{% endif %}{% if required %} is-required{% endif %}">
+  <input class="lf-check__input" type="checkbox" id="{{ fid }}" name="{{ name }}" value="1"{% if required %} required{% endif %}>
+  <label class="lf-check__label" for="{{ fid }}"><span class="lf-label-text">{{ label_html or label }}</span>{% if required %}<span class="lf-req" aria-hidden="true">*</span>{% endif %}</label>
+  <p class="lf-error" id="{{ fid }}-error" hidden></p>
+</div>
+{%- endmacro %}
+
+{#- Скрытое поле, попадающее в заявку (data-label — подпись в тексте запасного канала) -#}
+{#- label — подпись в тексте заявки (WhatsApp / e-mail); display — читаемое значение вместо кода.
+    Скрытое поле без label — служебное: уходит в fields, но не в текст заявки. -#}
+{% macro hidden(name, value, label=None, display=None) -%}
+<input type="hidden" name="{{ name }}" value="{{ value }}"{% if label %} data-label="{{ label }}"{% endif %}{% if display %} data-display="{{ display }}"{% endif %}>
+{%- endmacro %}
+
+{#- Телефон / Telegram / e-mail — обязателен хотя бы один (data-require-one) -#}
+{% macro contact_group(p, telegram=True) -%}
+<fieldset class="lf-group lf-group--contact lf-field--full is-required" id="{{ p }}-contact" data-require-one aria-describedby="{{ p }}-contact-hint">
+  <legend class="lf-label"><span class="lf-label-text">{{ t('forms.common.contact_legend') }}</span>{{ _marks() }}</legend>
+  <p class="lf-hint" id="{{ p }}-contact-hint">{{ t('forms.common.contact_hint') }}</p>
+  <div class="lf-grid lf-grid--{{ 3 if telegram else 2 }}">
+    {{ input(p ~ '-phone', 'phone', t('forms.labels.phone'), type='tel', placeholder=t('forms.placeholders.phone'), autocomplete='tel', ltr=True, cls='lf-field--plain', attrs={'inputmode': 'tel'}, maxlength=40) }}
+    {% if telegram %}
+    {{ input(p ~ '-telegram', 'telegram', t('forms.labels.telegram'), placeholder=t('forms.placeholders.telegram'), autocomplete='off', ltr=True, cls='lf-field--plain', attrs={'data-validate': 'telegram', 'autocapitalize': 'off', 'spellcheck': 'false'}, maxlength=64) }}
+    {% endif %}
+    {{ input(p ~ '-email', 'email', t('forms.labels.email'), type='email', placeholder=t('forms.placeholders.email'), autocomplete='email', ltr=True, cls='lf-field--plain', maxlength=254) }}
+  </div>
+  <p class="lf-error" id="{{ p }}-contact-error" hidden></p>
+</fieldset>
+{%- endmacro %}
+
+{#- Ловушка для ботов: визуально скрыта, вне таб-порядка, без автозаполнения -#}
+{% macro _honeypot(p) -%}
+<div class="lf-hp" aria-hidden="true">
+  <label for="{{ p }}-homepage">{{ t('forms.common.hp_label') }}</label>
+  <input type="text" id="{{ p }}-homepage" name="homepage" value="" tabindex="-1" autocomplete="off">
+</div>
+{%- endmacro %}
+
+{#- Каркас формы; содержимое — через {% call %} -#}
+{% macro _form(p, form, cls='', submit_label=None, note=None, heading=None, intro=None, heading_level=2) -%}
+<form class="lead-form{% if cls %} {{ cls }}{% endif %}" id="{{ p }}" data-lead-form data-form="{{ form }}" method="post" novalidate{% if heading %} aria-labelledby="{{ p }}-title"{% endif %}>
+  {% if heading %}
+  <h{{ heading_level }} class="lf-title" id="{{ p }}-title">{{ heading }}</h{{ heading_level }}>
+  {% endif %}
+  {% if intro %}
+  <p class="lf-intro">{{ intro }}</p>
+  {% endif %}
+  <div class="lf-summary" id="{{ p }}-summary" tabindex="-1" hidden></div>
+  <div class="lf-body">
+    {{ caller() }}
+    {{ _honeypot(p) }}
+    {{ checkbox(p ~ '-consent', 'consent', '', required=True, label_html=t('forms.common.consent_html', url=url('privacy')), cls='lf-field--full lf-consent') }}
+    <div class="lf-actions">
+      <button class="lf-submit" type="submit" disabled data-lf-submit><span class="lf-submit__label">{{ submit_label or t('forms.common.submit') }}</span></button>
+      <p class="lf-required-note">{{ t('forms.common.required_note') }}</p>
+    </div>
+    {% if note %}
+    <p class="lf-note">{{ ui.icon('lock', 'lf-note__icon') }}<span>{{ note }}</span></p>
+    {% endif %}
+    <noscript><p class="lf-nojs">{{ t('forms.common.nojs_html', url=url('contact')) }}</p></noscript>
+  </div>
+  <p class="lf-status lf-sr" role="status" aria-live="polite"></p>
+  <div class="lf-result" id="{{ p }}-result" hidden></div>
+</form>
+{%- endmacro %}
+
+{# ------------------------------------------------------------ готовые формы #}
+
+{#- Инвестор: вкладки «Частный инвестор» / «Представитель компании» в одной форме.
+    variant задаёт открытую вкладку; вкладка меняет data-form (investor | investor_company). -#}
+{% macro investor_form(variant='private', preset={}, uid=None, heading=None, intro=None, heading_level=2) -%}
+{% set company = variant == 'company' %}
+{% set p = uid or ('lf-investor-company' if company else 'lf-investor') %}
+{% set v = 'company' if company else 'private' %}
+{% set itype = INVEST_PRESET.get(preset.get('investment_type'), preset.get('investment_type')) %}
+{% call _form(p, 'investor_company' if company else 'investor', 'lead-form--investor', t('forms.investor.submit'),
+              t('forms.investor.no_documents'), heading, intro, heading_level) %}
+<div class="lf-tabs" role="tablist" aria-label="{{ t('forms.investor.tabs_aria') }}">
+  {% for code in ['private', 'company'] %}
+  <button class="lf-tab" type="button" role="tab" id="{{ p }}-tab-{{ code }}" aria-controls="{{ p }}-panel"
+          aria-selected="{{ 'true' if code == v else 'false' }}" tabindex="{{ '0' if code == v else '-1' }}" data-variant="{{ code }}">{{ t('forms.investor.tab_' ~ code) }}</button>
+  {% endfor %}
+</div>
+<input type="hidden" name="_variant" value="{{ v }}">
+<div class="lf-panel lf-grid" role="tabpanel" id="{{ p }}-panel" aria-labelledby="{{ p }}-tab-{{ v }}">
+  {{ input(p ~ '-name', 'name', t('forms.labels.name_full'), required=True, autocomplete='name', placeholder=t('forms.placeholders.name'), maxlength=200) }}
+  {{ input(p ~ '-email', 'email', t('forms.labels.email'), type='email', required=True, autocomplete='email', ltr=True, maxlength=254,
+           placeholder=t('forms.placeholders.email'),
+           alt_labels=[(t('forms.labels.email'), '_variant=private', not company), (t('forms.labels.email_corporate'), '_variant=company', company)]) }}
+  <div class="lf-cond lf-grid lf-field--full" data-show-when="_variant=company"{% if not company %} hidden{% endif %}>
+    {{ input(p ~ '-org', 'company', t('forms.labels.company'), required=True, autocomplete='organization', off=not company, maxlength=200) }}
+    {{ input(p ~ '-position', 'position', t('forms.labels.position'), required=True, autocomplete='organization-title', off=not company) }}
+    {{ input(p ~ '-website', 'website', t('forms.labels.website'), placeholder=t('forms.placeholders.website'), autocomplete='url', ltr=True, off=not company,
+             attrs={'inputmode': 'url', 'data-validate': 'url', 'autocapitalize': 'off', 'spellcheck': 'false'}) }}
+    {{ input(p ~ '-jurisdiction', 'jurisdiction', t('forms.labels.jurisdiction'), autocomplete='country-name', off=not company) }}
+  </div>
+  {{ select(p ~ '-type', 'investment_type', t('forms.labels.investment_type'), 'investment_type', INVESTMENT_TYPES, required=True, selected=itype) }}
+  {{ select(p ~ '-budget', 'budget', t('forms.labels.budget'), 'budget', BUDGETS, required=True, selected=preset.get('budget')) }}
+  {{ radios(p ~ '-method', 'contact_method', t('forms.labels.contact_method'), 'contact_method', CONTACT_METHODS, checked=preset.get('contact_method', 'email')) }}
+  {% set m = preset.get('contact_method', 'email') %}
+  {{ input(p ~ '-phone', 'phone', t('forms.labels.phone'), type='tel', required=m in ('phone', 'whatsapp', 'telegram'), hint=t('forms.hints.phone_investor'),
+           placeholder=t('forms.placeholders.phone'), autocomplete='tel', ltr=True, required_when='contact_method=phone|whatsapp|telegram',
+           attrs={'inputmode': 'tel'}, maxlength=40) }}
+  {{ input(p ~ '-telegram', 'telegram', t('forms.labels.telegram'), required=True, hint=t('forms.hints.telegram'), placeholder=t('forms.placeholders.telegram'),
+           autocomplete='off', ltr=True, show_when='contact_method=telegram', off=m != 'telegram',
+           attrs={'data-validate': 'telegram', 'autocapitalize': 'off', 'spellcheck': 'false'}, maxlength=64) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message'), placeholder=t('forms.placeholders.message_investor')) }}
+  {{ checkbox(p ~ '-nda', 'nda', t('forms.labels.nda')) }}
+</div>
+{% endcall %}
+{%- endmacro %}
+
+{#- Владелец: вид объекта, частное лицо / юрлицо, документы, телефон, язык общения.
+    preset.interest (sell | rent_out | management) — скрытое поле; без него — выбор на форме. -#}
+{% macro owner_form(preset={}, uid=None, heading=None, intro=None, heading_level=2) -%}
+{% set p = uid or 'lf-owner' %}
+{% set kind = preset.get('property_kind') %}
+{% set otype = preset.get('owner_type', 'individual') %}
+{% call _form(p, 'owner', 'lead-form--owner', t('forms.owner.submit'), None, heading, intro, heading_level) %}
+<div class="lf-grid">
+  {{ radios(p ~ '-kind', 'property_kind', t('forms.labels.property_kind'), 'property_kind', PROPERTY_KINDS, checked=kind, style='cards',
+            desc_group='property_kind_desc', icons=KIND_ICONS) }}
+  {% if preset.get('interest') in OWNER_INTERESTS %}
+  {{ hidden('interest', preset.interest, t('forms.labels.owner_interest'), t('forms.options.owner_interest.' ~ preset.interest)) }}
+  {% else %}
+  {{ radios(p ~ '-interest', 'interest', t('forms.labels.owner_interest'), 'owner_interest', OWNER_INTERESTS, checked='sell') }}
+  {% endif %}
+  {{ radios(p ~ '-otype', 'owner_type', t('forms.labels.owner_type'), 'owner_type', OWNER_TYPES, checked=otype) }}
+  <div class="lf-cond lf-grid lf-field--full" data-show-when="owner_type=individual"{% if otype != 'individual' %} hidden{% endif %}>
+    {{ input(p ~ '-name', 'name', t('forms.labels.owner_name'), required=True, autocomplete='name', cls='lf-field--full', off=otype != 'individual', maxlength=200) }}
+    {{ input(p ~ '-list', 'list_nepokretnosti', t('forms.labels.list_nepokretnosti'), hint=t('forms.hints.cadastral'), off=otype != 'individual', maxlength=100) }}
+    {{ input(p ~ '-ko', 'cadastral_municipality', t('forms.labels.cadastral_municipality'), off=otype != 'individual', maxlength=100) }}
+    {{ input(p ~ '-pd', 'pd', t('forms.labels.pd'), hint=t('forms.hints.pd'), show_when='property_kind=apartment',
+             off=otype != 'individual' or kind != 'apartment', maxlength=100) }}
+  </div>
+  <div class="lf-cond lf-grid lf-field--full" data-show-when="owner_type=company"{% if otype != 'company' %} hidden{% endif %}>
+    {{ input(p ~ '-company', 'company', t('forms.labels.company_legal'), required=True, autocomplete='organization', cls='lf-field--full', off=otype != 'company', maxlength=200) }}
+    {{ input(p ~ '-regno', 'company_reg_no', t('forms.labels.company_reg_no'), off=otype != 'company', maxlength=100) }}
+    {{ input(p ~ '-person', 'name', t('forms.labels.contact_person'), autocomplete='name', off=otype != 'company', maxlength=200) }}
+  </div>
+  {{ input(p ~ '-phone', 'phone', t('forms.labels.phone'), type='tel', required=True, hint=t('forms.hints.phone_owner'), placeholder=t('forms.placeholders.phone'),
+           autocomplete='tel', ltr=True, attrs={'inputmode': 'tel'}, maxlength=40) }}
+  {{ input(p ~ '-email', 'email', t('forms.labels.email'), type='email', placeholder=t('forms.placeholders.email'), autocomplete='email', ltr=True, maxlength=254) }}
+  {{ select(p ~ '-lang', 'preferred_language', t('forms.labels.preferred_language'), 'preferred_language', PREFERRED_LANGUAGES, required=True,
+            selected=preset.get('preferred_language')) }}
+  {{ input(p ~ '-lang-other', 'preferred_language_other', t('forms.labels.preferred_language_other'), required=True, show_when='preferred_language=other',
+           off=preset.get('preferred_language') != 'other', maxlength=100) }}
+  {{ input(p ~ '-price', 'asking_price', t('forms.labels.asking_price'), hint=t('forms.hints.asking_price'), ltr=True,
+           attrs={'inputmode': 'numeric', 'data-validate': 'number'}, maxlength=20) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message_owner'), placeholder=t('forms.placeholders.message_owner')) }}
+</div>
+{% endcall %}
+{%- endmacro %}
+
+{#- Обратная связь. form='buy_request' — для каталога покупки (тот же набор полей). -#}
+{% macro contact_form(preset={}, uid=None, heading=None, intro=None, heading_level=2, form='contact') -%}
+{% set p = uid or ('lf-' ~ form) %}
+{% call _form(p, form, 'lead-form--contact', t('forms.contact.submit'), None, heading, intro, heading_level) %}
+<div class="lf-grid">
+  {{ input(p ~ '-name', 'name', t('forms.labels.name'), required=True, autocomplete='name', placeholder=t('forms.placeholders.name'), cls='lf-field--full', maxlength=200) }}
+  {{ contact_group(p) }}
+  {{ select(p ~ '-interest', 'interest', t('forms.labels.interest'), 'interest', INTERESTS, selected=preset.get('interest')) }}
+  {{ select(p ~ '-lang', 'preferred_language', t('forms.labels.preferred_language'), 'preferred_language', PREFERRED_LANGUAGES, selected=preset.get('preferred_language')) }}
+  {{ input(p ~ '-lang-other', 'preferred_language_other', t('forms.labels.preferred_language_other'), required=True, show_when='preferred_language=other',
+           off=preset.get('preferred_language') != 'other', cls='lf-field--full', maxlength=100) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message'), placeholder=t('forms.placeholders.message_contact')) }}
+</div>
+{% endcall %}
+{%- endmacro %}
+
+{#- Запрос на долгосрочную аренду; preset rental_term='short_term' — компактная форма «сообщить о запуске». -#}
+{% macro rent_request_form(preset={}, uid=None, heading=None, intro=None, heading_level=2) -%}
+{% set short = preset.get('rental_term') == 'short_term' %}
+{% set p = uid or ('lf-rent-short' if short else 'lf-rent') %}
+{% call _form(p, 'rent_request', 'lead-form--rent' ~ (' lead-form--compact' if short else ''),
+              t('forms.rent.submit_short' if short else 'forms.rent.submit'), None, heading, (intro if intro is not none else (t('forms.hints.short_term') if short else None)) or None, heading_level) %}
+{{ hidden('interest', 'rent') }}
+<div class="lf-grid">
+  {% if short %}
+  {{ hidden('rental_term', 'short_term', t('forms.labels.rental_term'), t('forms.options.rental_term.short_term')) }}
+  {{ input(p ~ '-name', 'name', t('forms.labels.name'), required=True, autocomplete='name', placeholder=t('forms.placeholders.name'), cls='lf-field--full', maxlength=200) }}
+  {{ contact_group(p) }}
+  {{ input(p ~ '-move-in', 'move_in', t('forms.labels.move_in_short'), type='date', attrs={'data-min-today': true}) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message_short'), placeholder=t('forms.placeholders.message_short'), rows=3) }}
+  {% else %}
+  {{ radios(p ~ '-term', 'rental_term', t('forms.labels.rental_term'), 'rental_term', RENTAL_TERMS, checked=preset.get('rental_term')) }}
+  {{ input(p ~ '-move-in', 'move_in', t('forms.labels.move_in'), type='date', attrs={'data-min-today': true}) }}
+  {{ input(p ~ '-budget', 'budget_month', t('forms.labels.budget_month'), type='number', hint=t('forms.hints.budget_month'), ltr=True,
+           attrs={'inputmode': 'numeric', 'min': 0, 'step': 50}) }}
+  {{ select(p ~ '-bedrooms', 'bedrooms', t('forms.labels.bedrooms'), 'bedrooms', BEDROOMS, selected=preset.get('bedrooms')) }}
+  {{ input(p ~ '-occupants', 'occupants', t('forms.labels.occupants'), type='number', ltr=True, attrs={'inputmode': 'numeric', 'min': 1, 'max': 20}) }}
+  {{ select(p ~ '-pets', 'pets', t('forms.labels.pets'), 'pets', PETS, cls='lf-field--full') }}
+  {{ input(p ~ '-name', 'name', t('forms.labels.name'), required=True, autocomplete='name', placeholder=t('forms.placeholders.name'), cls='lf-field--full', maxlength=200) }}
+  {{ contact_group(p) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message'), placeholder=t('forms.placeholders.message_rent'), rows=3) }}
+  {% endif %}
+</div>
+{% endcall %}
+{%- endmacro %}
+
+{#- Компактный запрос по объекту (страница объекта). heading=False — без заголовка. -#}
+{% macro property_request_form(listing, uid=None, heading=None, intro=None, heading_level=2) -%}
+{% set p = uid or 'lf-property' %}
+{% set oid = (listing.object_id or listing.id) if listing else '' %}
+{% set title = t('forms.property.title') if heading is none else heading %}
+{% call _form(p, 'property_request', 'lead-form--property lead-form--compact', t('forms.property.submit'), None, title,
+              intro or (t('forms.property.intro', id=oid) if oid else None), heading_level) %}
+{% if listing %}
+{{ hidden('object_id', oid, t('forms.labels.object_id')) }}
+{{ hidden('listing_url', abs_url('property', listing=listing), t('forms.labels.listing_url')) }}
+{% endif %}
+<div class="lf-grid">
+  {{ input(p ~ '-name', 'name', t('forms.labels.name'), required=True, autocomplete='name', placeholder=t('forms.placeholders.name'), cls='lf-field--full', maxlength=200) }}
+  {{ contact_group(p) }}
+  {{ textarea(p ~ '-message', 'message', t('forms.labels.message_property'), placeholder=t('forms.placeholders.message_property'), rows=3) }}
+</div>
+{% endcall %}
+{%- endmacro %}

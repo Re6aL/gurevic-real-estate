@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Property for sale in Budva and Montenegro | GUREVIĆ",
+    "description": "Apartments, houses, villas and building plots for sale in Budva and across Montenegro: prices, sizes, areas and photos. Property search and purchase support."
+  },
+  "h1": "Property for sale in Budva and Montenegro",
+  "hero": {
+    "kicker": "Buying property",
+    "lead": "Apartments, houses, villas and plots for private construction. Each card shows the price, size and area; the exact address and documents are shared on request.",
+    "image_alt": "Aerial view of Budva: the Old Town and the bay"
+  },
+  "results_title": "Properties for sale",
+  "seo": {
+    "title": "Buying property in Montenegro with GUREVIĆ",
+    "p1": "The catalogue lists apartments, houses, villas and plots for private construction on the coast and in other parts of Montenegro. Hotels, commercial property, development land and construction projects are in the investment section.",
+    "p2": "Before the purchase we help you check the property: request the list nepokretnosti — the land registry extract showing the owner and any encumbrances — agree the terms with the seller and prepare the deal for signing before a notary."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Apartments for sale in Budva, Montenegro | GUREVIĆ",
+        "description": "Apartments for sale in Budva, Bečići and along the Montenegrin coast: price, price per m², size, bedrooms and area. We help you choose and guide the purchase."
+      },
+      "h1": "Apartments for sale in Budva and Montenegro",
+      "hero": {
+        "kicker": "Buy · Apartments",
+        "lead": "Apartments in Budva and along the coast: every card shows the price, price per square metre, size, number of bedrooms and area.",
+        "image_alt": "Budva: the Old Town and the bay behind blooming bougainvillea"
+      },
+      "results_title": "Apartments for sale",
+      "seo": {
+        "title": "Choosing an apartment on the coast",
+        "p1": "Compare not only prices but also the price per square metre — it is shown on the card whenever the size is known. Your filters by area, size and bedrooms are kept in the page address, so you can share the shortlist.",
+        "p2": "For apartments in new developments, check the completion date, the finishing and the building’s running costs; for resale apartments, check the list nepokretnosti and the number of the separate unit (PD)."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Houses for sale in Montenegro | GUREVIĆ",
+        "description": "Houses for sale in Budva and other parts of Montenegro: house and plot size, bedrooms, price and photos. We help you check the documents before the purchase."
+      },
+      "h1": "Houses for sale in Montenegro",
+      "hero": {
+        "kicker": "Buy · Houses",
+        "lead": "Houses with land on the coast and inland: house and plot size, number of bedrooms and price.",
+        "image_alt": "Budva Old Town seen from the pebble beach"
+      },
+      "results_title": "Houses for sale",
+      "seo": {
+        "title": "What to check when buying a house",
+        "p1": "A house card shows two sizes — the house and the plot. If the plot size is missing, ask for it before the viewing: it determines what can be extended or landscaped.",
+        "p2": "Make sure the house is registered in the land registry and that the documents match the building as it stands. We help you request the extract and go through the documents before the purchase."
+      }
+    },
+    "villas": {
+      "meta": {
+        "title": "Villas for sale in Montenegro | GUREVIĆ",
+        "description": "Villas for sale on the Montenegrin coast: villa and plot size, bedrooms, price and area. Viewings and purchase support in Budva and the surrounding area."
+      },
+      "h1": "Villas for sale in Montenegro",
+      "hero": {
+        "kicker": "Buy · Villas",
+        "lead": "Villas on the Montenegrin coast: size, plot, number of bedrooms and price on every property card.",
+        "image_alt": "Budva promenade and Old Town against the mountains"
+      },
+      "results_title": "Villas for sale",
+      "seo": {
+        "title": "Villas on the Montenegrin coast",
+        "p1": "The line between “Villas” and “Houses” is a loose one: both are detached homes with land. If you are looking for a house by the sea, browse both sections.",
+        "p2": "For a villa, access, parking, the view and the condition of the grounds matter most. We confirm these details with the owner before the viewing."
+      }
+    },
+    "land": {
+      "meta": {
+        "title": "Building plots for sale in Montenegro | GUREVIĆ",
+        "description": "Plots for private construction in Budva and Montenegro: size, area, price and price per m². We help you check the land use designation and the documents."
+      },
+      "h1": "Building plots for sale in Montenegro",
+      "hero": {
+        "kicker": "Buy · Plots",
+        "lead": "Plots of land for building your own home: size, area, price and price per square metre.",
+        "image_alt": "Hillside plot with olive trees above the sea — illustration"
+      },
+      "results_title": "Plots for sale",
+      "seo": {
+        "title": "How to check a plot before buying",
+        "p1": "This section lists plots for private construction. Land for commercial projects — hotels, apartment buildings, logistics — is in the investment section.",
+        "p2": "Before buying, check the plot’s designation under the current zoning plan, road access and utility connections, and any encumbrances in the list nepokretnosti. We help you gather this information before the purchase."
+      }
+    }
+  }
+}

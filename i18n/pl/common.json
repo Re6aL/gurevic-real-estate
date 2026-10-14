@@ -1,0 +1,290 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "tagline": "Nieruchomości w Budvie i Czarnogórze",
+  "skip_link": "Przejdź do treści",
+  "home_aria": "Gurevic Real Estate — strona główna",
+  "logo_alt": "Gurevic Real Estate — Budva",
+  "nav": {
+    "main_aria": "Menu główne",
+    "rent": "Wynajem",
+    "rent_apartments": "Mieszkania",
+    "rent_houses": "Domy i wille",
+    "rent_short_term": "Wynajem krótkoterminowy",
+    "soon": "wkrótce",
+    "all_rent": "Wszystkie oferty wynajmu",
+    "buy": "Kupno",
+    "buy_apartments": "Mieszkania",
+    "buy_houses": "Domy",
+    "buy_villas": "Wille",
+    "buy_land": "Działki budowlane",
+    "all_buy": "Wszystkie oferty sprzedaży",
+    "invest": "Inwestycje",
+    "invest_hotels": "Hotele",
+    "invest_land": "Grunty inwestycyjne",
+    "invest_commercial": "Nieruchomości komercyjne",
+    "invest_development": "Projekty deweloperskie",
+    "all_invest": "Inwestycje w Czarnogórze",
+    "owners": "Dla właścicieli",
+    "owners_sell": "Sprzedaż nieruchomości",
+    "owners_rent_out": "Wynajem nieruchomości",
+    "owners_management": "Zarządzanie nieruchomością",
+    "all_owners": "Dla właścicieli",
+    "services": "Usługi",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "map": "Mapa ofert",
+    "privacy": "Polityka prywatności",
+    "menu_open": "Otwórz menu",
+    "menu_close": "Zamknij menu",
+    "submenu": "Podmenu: {label}",
+    "menu": "Menu"
+  },
+  "routes": {
+    "home": "Strona główna",
+    "buy": "Kupno",
+    "buy_apartments": "Mieszkania",
+    "buy_houses": "Domy",
+    "buy_villas": "Wille",
+    "buy_land": "Działki",
+    "rent": "Wynajem",
+    "rent_apartments": "Mieszkania",
+    "rent_houses": "Domy i wille",
+    "invest": "Inwestycje",
+    "invest_hotels": "Hotele",
+    "invest_land": "Grunty inwestycyjne",
+    "invest_commercial": "Nieruchomości komercyjne",
+    "invest_development": "Projekty deweloperskie",
+    "owners": "Dla właścicieli",
+    "owners_sell": "Sprzedaż",
+    "owners_rent_out": "Wynajem",
+    "owners_management": "Zarządzanie nieruchomością",
+    "about": "O nas",
+    "services": "Usługi",
+    "contact": "Kontakt",
+    "privacy": "Prywatność",
+    "map": "Mapa ofert",
+    "property": "Oferta"
+  },
+  "footer": {
+    "nav_aria": "Menu w stopce",
+    "columns": {
+      "rent": "Wynajem",
+      "buy": "Kupno",
+      "invest": "Inwestycje",
+      "owners": "Dla właścicieli",
+      "agency": "Agencja"
+    },
+    "contacts": "Kontakt",
+    "languages": "Języki",
+    "about_short": "Agencja nieruchomości w Budvie: kupno, wynajem długoterminowy, inwestycje i obsługa właścicieli nieruchomości.",
+    "meetings": "Spotkania po wcześniejszym umówieniu.",
+    "legal_line": "DOO GUREVIC BUDVA · Budva, Czarnogóra · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "Kontakt z nami",
+    "phone": "Telefon",
+    "call": "Zadzwoń",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "instagram": "Instagram",
+    "location": "Budva, Czarnogóra",
+    "write": "Napisz do nas"
+  },
+  "languages": {
+    "label": "Język",
+    "switch_aria": "Wybierz język strony",
+    "current": "Bieżący język"
+  },
+  "lang_suggest": {
+    "text": "Ta strona jest dostępna w języku polskim",
+    "switch": "Przełącz",
+    "dismiss": "Zamknij"
+  },
+  "buttons": {
+    "details": "Szczegóły",
+    "send": "Wyślij",
+    "call": "Zadzwoń",
+    "write_whatsapp": "Napisz na WhatsAppie",
+    "back_home": "Na stronę główną",
+    "show_more": "Pokaż więcej",
+    "learn_more": "Dowiedz się więcej",
+    "contact_us": "Skontaktuj się z nami",
+    "close": "Zamknij",
+    "show_on_map": "Pokaż na mapie",
+    "request": "Wyślij zapytanie",
+    "all_objects": "Wszystkie oferty",
+    "apply": "Pokaż",
+    "reset": "Wyczyść",
+    "prev": "Wstecz",
+    "next": "Dalej",
+    "show_all": "Pokaż wszystkie",
+    "open_menu": "Menu",
+    "discuss": "Porozmawiajmy",
+    "copy": "Kopiuj"
+  },
+  "breadcrumbs": {
+    "aria": "Ścieżka nawigacyjna",
+    "home": "Strona główna"
+  },
+  "units": {
+    "m2": "m²",
+    "per_month": "/ mies.",
+    "eur_per_m2": "€/m²",
+    "eur": "€",
+    "month": "miesiąc",
+    "sqm_short": "m²"
+  },
+  "price": {
+    "on_request": "Cena na zapytanie",
+    "indicative": "Cena orientacyjna: {price}",
+    "preliminary": "wstępnie, wymaga weryfikacji",
+    "from": "od {price}"
+  },
+  "types": {
+    "apartment": "Mieszkanie",
+    "house": "Dom",
+    "villa": "Willa",
+    "land": "Działka",
+    "hotel": "Hotel",
+    "commercial": "Nieruchomość komercyjna",
+    "business": "Firma na sprzedaż",
+    "development": "Projekt deweloperski"
+  },
+  "types_lc": {
+    "apartment": "mieszkanie",
+    "house": "dom",
+    "villa": "willa",
+    "land": "działka",
+    "hotel": "hotel",
+    "commercial": "nieruchomość komercyjna",
+    "business": "firma na sprzedaż",
+    "development": "projekt deweloperski"
+  },
+  "categories": {
+    "apartments": "Mieszkania",
+    "houses": "Domy",
+    "villas": "Wille",
+    "land": "Działki",
+    "hotels": "Hotele",
+    "commercial": "Nieruchomości komercyjne",
+    "development": "Projekty deweloperskie"
+  },
+  "sections": {
+    "buy": "Na sprzedaż",
+    "rent": "Na wynajem",
+    "invest": "Inwestycje"
+  },
+  "badges": {
+    "project": "Projekt",
+    "confidential": "Poufne",
+    "soon": "Wkrótce",
+    "illustration": "Ilustracja",
+    "price_on_request": "Cena na zapytanie",
+    "new": "Nowość"
+  },
+  "params": {
+    "area": "{n} m²",
+    "land_area": "działka {n} m²",
+    "floor": "piętro {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "{n} sypialnia",
+      "few": "{n} sypialnie",
+      "many": "{n} sypialni",
+      "other": "{n} sypialni"
+    },
+    "bathrooms": {
+      "one": "{n} łazienka",
+      "few": "{n} łazienki",
+      "many": "{n} łazienek",
+      "other": "{n} łazienki"
+    },
+    "objects": {
+      "one": "{n} oferta",
+      "few": "{n} oferty",
+      "many": "{n} ofert",
+      "other": "{n} oferty"
+    }
+  },
+  "alt": {
+    "listing_photo": "Zdjęcie: {name}",
+    "listing_photo_n": "{name} — zdjęcie {n}",
+    "illustration": "Ilustracja: {type}"
+  },
+  "districts": {
+    "budva-center": "Budva – centrum",
+    "budva-rozino": "Budva – Rozino",
+    "budva-waterfront": "Budva – nabrzeże",
+    "budva-ivanica": "Budva – Ivanica",
+    "budva-veligrad": "Budva – Veligrad",
+    "becici": "Bečići",
+    "rafailovici": "Rafailovići",
+    "przno": "Pržno",
+    "sveti-stefan": "Sveti Stefan",
+    "lapcici": "Lapčići",
+    "tudorovici": "Tudorovići",
+    "lastva-grbaljska": "Lastva Grbaljska",
+    "petrovac": "Petrovac",
+    "buljarica": "Buljarica",
+    "tivat": "Tivat",
+    "kotor": "Kotor",
+    "herceg-novi": "Herceg Novi",
+    "bar": "Bar",
+    "dobra-voda": "Dobra Voda",
+    "ulcinj": "Ulcinj",
+    "rijeka-crnojevica": "Rijeka Crnojevića",
+    "cetinje": "Cetinje",
+    "podgorica": "Podgorica",
+    "other": "Czarnogóra"
+  },
+  "regions": {
+    "budva_riviera": "Riwiera Budvańska",
+    "petrovac_area": "Petrovac i okolice",
+    "boka": "Zatoka Kotorska",
+    "south_coast": "Południowe wybrzeże",
+    "central": "Środkowa Czarnogóra",
+    "montenegro": "Czarnogóra"
+  },
+  "not_found": {
+    "meta": {
+      "title": "Nie znaleziono strony | GUREVIĆ",
+      "description": "Ta strona nie istnieje lub została przeniesiona. Przejdź na stronę główną Gurevic Real Estate w wybranej wersji językowej."
+    },
+    "h1": "Nie znaleziono strony",
+    "text": "Ta strona nie istnieje lub została przeniesiona.",
+    "home_link": "Przejdź na stronę główną"
+  },
+  "rental_terms": {
+    "off_season": "Do początku sezonu",
+    "year": "Na rok",
+    "short_term": "Krótkoterminowo"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "Media wliczone w czynsz",
+      "not_included": "Media płatne osobno",
+      "partial": "Media częściowo wliczone"
+    },
+    "pets": {
+      "allowed": "Zwierzęta dozwolone",
+      "not_allowed": "Bez zwierząt",
+      "by_agreement": "Zwierzęta po uzgodnieniu"
+    }
+  },
+  "js": {
+    "menu_open": "Otwórz menu",
+    "menu_close": "Zamknij menu",
+    "close": "Zamknij",
+    "copied": "Skopiowano",
+    "copy_failed": "Nie udało się skopiować",
+    "submenu_open": "Otwórz podmenu",
+    "submenu_close": "Zamknij podmenu",
+    "price_on_request": "Cena na zapytanie",
+    "per_month": "/ mies.",
+    "price_from": "od {price}"
+  }
+}

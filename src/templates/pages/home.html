@@ -1,0 +1,193 @@
+{#- Главная (ARCHITECTURE §3, brief §B, §D.3): заставка-«замочная скважина» → hero-слайдер →
+    направления → об агентстве → как мы работаем → контакты. Без сеток объектов.
+    Заставка включается только инлайн-скриптом в <head> (класс html.splash-on до первой отрисовки),
+    вся её анимация — на CSS (css/home.css), js/home.js — только слайдер и уборка оверлея. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% set body_extra_class = 'has-hero-overlay' %}
+{% set _SLIDES = ['BG_images/01.jpg', 'BG_images/02.jpg', 'BG_images/03.jpg', 'BG_images/04.jpg', 'BG_images/05.jpg'] %}
+{#- (маршрут, картинка, запасная картинка, [(маршрут | 'soon', подпись common.nav.*)]) -#}
+{% set _DIRECTIONS = [
+  ('rent', 'img/stock/rent-balcony.jpg', 'BG_images/04.jpg', [('rent.apartments', 'rent_apartments'), ('rent.houses', 'rent_houses'), ('soon', 'rent_short_term')]),
+  ('buy', 'img/listings/bd-26-003s/01.jpg', 'BG_images/02.jpg', [('buy.apartments', 'buy_apartments'), ('buy.houses', 'buy_houses'), ('buy.villas', 'buy_villas'), ('buy.land', 'buy_land')]),
+  ('invest', 'img/stock/invest-coast.jpg', 'BG_images/02.jpg', [('invest.hotels', 'invest_hotels'), ('invest.land', 'invest_land'), ('invest.commercial', 'invest_commercial'), ('invest.development', 'invest_development')]),
+  ('owners', 'img/stock/owners-interior.jpg', 'BG_images/05.jpg', [('owners.sell', 'owners_sell'), ('owners.rent_out', 'owners_rent_out'), ('owners.management', 'owners_management')]),
+] %}
+
+{% block head_extra %}
+{#- Заставка: раз за сессию, не при reduced motion, без JS — никогда. Пропуск — клик/клавиша/колесо/касание. -#}
+<script>(function(w,h){try{if(sessionStorage.getItem('gre_splash')||w.matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('gre_splash','1')}catch(e){return}var ev=['click','keydown','wheel','touchstart'],o={capture:true,passive:true};function off(){ev.forEach(function(e){w.removeEventListener(e,skip,o)})}function skip(){h.classList.add('splash-skip');off()}h.classList.add('splash-on');ev.forEach(function(e){w.addEventListener(e,skip,o)});w.setTimeout(off,2600)})(window,document.documentElement);</script>
+{% endblock %}
+
+{% block jsonld %}
+{#- RealEstateAgent — общий seo.agent_jsonld (@id, бренд, регион); главная добавляет описание и основателя -#}
+{% for obj in page.jsonld %}
+{% if obj['@type'] == 'RealEstateAgent' %}
+{% set obj = dict(obj) %}
+{% set _ = obj.update({'description': page.description, 'founder': {'@type': 'Person', 'name': t('home.about.person')}}) %}
+{% endif %}
+<script type="application/ld+json">{{ obj | tojson }}</script>
+{% endfor %}
+{% endblock %}
+
+{% block main %}
+{#- ---------- заставка (декоративная, вне дерева доступности, без фокусируемых элементов) ---------- -#}
+<div class="splash" data-splash aria-hidden="true">
+  <svg class="splash-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <defs>
+      <linearGradient id="splash-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1a3049"/>
+        <stop offset=".55" stop-color="#14273b"/>
+        <stop offset="1" stop-color="#08121d"/>
+      </linearGradient>
+    </defs>
+    {#- полотно с вырезом-скважиной: круг r72 (центр 960,430) + трапеция до y=660 -#}
+    <path fill="url(#splash-grad)" fill-rule="evenodd" d="M0 0H1920V1080H0Z M927 494A72 72 0 1 1 993 494L1024 660H896Z"/>
+    <path class="splash-rim" fill="none" stroke="#b9975b" stroke-width="1.5" d="M927 494A72 72 0 1 1 993 494L1024 660H896Z"/>
+  </svg>
+  <div class="splash-text">
+    <span class="splash-mask"><span class="splash-line splash-line--1">{{ t('home.splash.line1') }}</span></span>
+    <span class="splash-mask"><span class="splash-line splash-line--2">{{ t('home.splash.line2') }}</span></span>
+    <span class="splash-mask"><span class="splash-line splash-line--3">
+      <svg class="splash-key" viewBox="0 0 56 20" width="56" height="20" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9.5 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM9.5 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM16 10h37M47 10v5.5M42 10v4M37 10v5.5"/></svg>
+    </span></span>
+  </div>
+</div>
+
+{#- ---------- hero: слайдер BG_images, копирайт снизу (как у tref) ---------- -#}
+<section class="hero" data-hero aria-labelledby="hero-title">
+  <div class="hero-slides" role="group" aria-roledescription="{{ t('home.hero.carousel') }}" aria-label="{{ t('home.hero.slides_aria') }}">
+    {% for src in _SLIDES %}
+    <div class="hero-slide{% if loop.first %} is-active{% endif %}" data-slide{% if not loop.first %} aria-hidden="true"{% endif %}>
+      {% if loop.first %}
+      {{ img(src, t('home.hero.alt.' ~ loop.index), sizes='100vw', cls='hero-img', loading='eager', fetchpriority='high') }}
+      {% else %}
+      {{ img(src, t('home.hero.alt.' ~ loop.index), sizes='100vw', cls='hero-img') }}
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1 id="hero-title" class="hero-title">
+        <span class="hero-eyebrow">{{ t('home.hero.eyebrow') }}</span><span class="visually-hidden">. </span>
+        <span class="hero-title-lead">{{ t('home.hero.title') }}</span>
+        <span class="hero-title-accent">{{ t('home.hero.accent') }}</span>
+      </h1>
+      <p class="hero-sub">{{ t('home.hero.sub') }}</p>
+      <div class="hero-actions">
+        {{ ui.button(url('buy'), t('home.hero.cta_buy'), '', None, 'arrow-right') }}
+        {{ ui.button(url('rent'), t('home.hero.cta_rent'), 'ghost') }}
+        {{ ui.button(url('invest'), t('home.hero.cta_invest'), 'ghost') }}
+      </div>
+      <a class="hero-owners" href="{{ url('owners') }}"><span>{{ t('home.hero.owners_link') }}</span>{{ ui.icon('arrow-right', size=16) }}</a>
+    </div>
+
+    <div class="hero-controls" data-hero-controls role="group" aria-label="{{ t('home.hero.controls_aria') }}" hidden>
+      <button class="hero-arrow" type="button" data-hero-prev aria-label="{{ t('home.hero.prev') }}">{{ ui.icon('chevron-left', size=20) }}</button>
+      <div class="hero-dots">
+        {% for src in _SLIDES %}
+        <button class="hero-dot" type="button" data-hero-dot="{{ loop.index0 }}" aria-label="{{ t('home.hero.slide', n=loop.index, total=_SLIDES | length) }}"{% if loop.first %} aria-current="true"{% endif %}><span></span></button>
+        {% endfor %}
+      </div>
+      <button class="hero-arrow" type="button" data-hero-next aria-label="{{ t('home.hero.next') }}">{{ ui.icon('chevron-right', size=20) }}</button>
+      <button class="hero-arrow hero-toggle" type="button" data-hero-toggle aria-label="{{ t('home.js.pause') }}">
+        <svg class="icon hero-ico-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        <svg class="icon hero-ico-play icon-dir" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+{#- ---------- направления ---------- -#}
+<section class="section home-directions" aria-labelledby="directions-title">
+  <div class="container">
+    <div class="home-head">
+      <span class="home-kicker">{{ ui.icon('key', size=18) }}<span>{{ t('home.directions.kicker') }}</span></span>
+      <h2 id="directions-title">{{ t('home.directions.title') }}</h2>
+      <p class="home-head-sub">{{ t('home.directions.sub') }}</p>
+    </div>
+    <ul class="dir-grid">
+      {% for key, src, fallback, subs in _DIRECTIONS %}
+      <li class="dir-tile dir-tile--{{ key }}">
+        <div class="dir-media">
+          {{ img(src, t('home.directions.' ~ key ~ '.alt'), sizes='(min-width: 1180px) 580px, (min-width: 760px) 50vw, 100vw', cls='dir-img', fallback=fallback) }}
+        </div>
+        <div class="dir-body">
+          <h3 class="dir-title"><a class="dir-link" href="{{ url(key) }}"><span>{{ t('common.nav.' ~ key) }}</span>{{ ui.icon('arrow-right', size=22) }}</a></h3>
+          <p class="dir-text">{{ t('home.directions.' ~ key ~ '.text') }}</p>
+          <ul class="dir-subs" aria-label="{{ t('home.directions.subs_aria', name=t('common.nav.' ~ key)) }}">
+            {% for sub_key, label in subs %}
+            {% if sub_key == 'soon' %}
+            <li><span class="dir-sub dir-sub--soon">{{ t('common.nav.' ~ label) }} <span class="badge-soon">{{ t('common.nav.soon') }}</span></span></li>
+            {% else %}
+            <li><a class="dir-sub" href="{{ url(sub_key) }}">{{ t('common.nav.' ~ label) }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{#- ---------- об агентстве (тизер) ---------- -#}
+<section class="section home-about" aria-labelledby="about-title">
+  <div class="container about-teaser">
+    <div class="about-portrait">
+      {% if img_exists('img/team/ilia.jpg') %}
+      {{ img('img/team/ilia.jpg', t('home.about.photo_alt'), sizes='(min-width: 900px) 280px, 180px', cls='about-photo') }}
+      {% else %}
+      <div class="about-monogram" aria-hidden="true"><span>{{ t('home.about.monogram') }}</span></div>
+      {% endif %}
+      <p class="about-legal"><span>{{ site.legal_name }}</span><span>{{ t('common.contacts.location') }}</span></p>
+    </div>
+    <div class="about-copy">
+      <span class="home-kicker">{{ ui.icon('key', size=18) }}<span>{{ t('home.about.kicker') }}</span></span>
+      <h2 id="about-title">{{ t('home.about.title') }}</h2>
+      <p>{{ t('home.about.p1') }}</p>
+      <p>{{ t('home.about.p2') }}</p>
+      {{ ui.button(url('about'), t('home.about.link'), 'outline', None, 'arrow-right') }}
+    </div>
+  </div>
+</section>
+
+{#- ---------- как мы работаем ---------- -#}
+<section class="section home-steps" aria-labelledby="steps-title">
+  <div class="container">
+    <div class="home-head">
+      <span class="home-kicker">{{ ui.icon('key', size=18) }}<span>{{ t('home.steps.kicker') }}</span></span>
+      <h2 id="steps-title">{{ t('home.steps.title') }}</h2>
+      <p class="home-head-sub">{{ t('home.steps.sub') }}</p>
+    </div>
+    <ol class="steps">
+      {% for n in range(1, 5) %}
+      <li class="step">
+        <h3 class="step-title">{{ t('home.steps.s' ~ n ~ '.title') }}</h3>
+        <p class="step-text">{{ t('home.steps.s' ~ n ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{#- ---------- контакты ---------- -#}
+<section class="home-cta" aria-labelledby="cta-title">
+  <div class="container home-cta-inner">
+    <div class="home-cta-copy">
+      <span class="home-kicker home-kicker--light">{{ ui.icon('key', size=18) }}<span>{{ t('home.cta.kicker') }}</span></span>
+      <h2 id="cta-title">{{ t('home.cta.title') }}</h2>
+      <p>{{ t('home.cta.text') }}</p>
+      <p class="home-cta-note">{{ t('home.cta.languages') }}</p>
+    </div>
+    <div class="home-cta-actions">
+      {{ ui.button(site.contacts.whatsapp, t('common.contacts.whatsapp'), '', 'whatsapp', None, True) }}
+      {{ ui.button(site.contacts.telegram, t('common.contacts.telegram'), 'ghost', 'telegram', None, True) }}
+      {{ ui.button(url('contact'), t('common.buttons.request'), 'ghost', None, 'arrow-right') }}
+      <p class="home-cta-phone">{{ t('home.cta.call') }} <a href="{{ site.contacts.phone_href }}"><bdi dir="ltr">{{ site.contacts.phone }}</bdi></a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

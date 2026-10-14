@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Wynajem długoterminowy w Budvie | GUREVIĆ",
+    "description": "Wynajem długoterminowy mieszkań, domów i willi w Budvie i na wybrzeżu Czarnogóry: do początku sezonu lub na rok. Na zapytanie dobierzemy odpowiednie oferty."
+  },
+  "h1": "Wynajem długoterminowy w Budvie",
+  "hero": {
+    "kicker": "Wynajem",
+    "lead": "Mieszkania, domy i wille na wynajem do początku sezonu lub na cały rok. Wynajem krótkoterminowy jest w przygotowaniu.",
+    "image_alt": "Budva: Stare Miasto i zatoka z posągiem Tancerki"
+  },
+  "results_title": "Nieruchomości na wynajem",
+  "seo": {
+    "title": "Wynajem długoterminowy na wybrzeżu",
+    "p1": "Zajmujemy się wynajmem długoterminowym: od jesieni do początku sezonu turystycznego lub na cały rok. Wynajmu na doby i krótkoterminowego nie ma w katalogu.",
+    "p2": "Warunki takie jak kaucja, media i zwierzęta podajemy na karcie, jeśli przekazał je właściciel; pozostałe szczegóły potwierdzamy przed prezentacją. Zalecamy zawarcie pisemnej umowy najmu."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Mieszkania na wynajem długoterminowy w Budvie | GUREVIĆ",
+        "description": "Mieszkania na wynajem długoterminowy w Budvie i na wybrzeżu: do początku sezonu lub na rok. Czynsz, kaucja i termin wprowadzenia się — dobierzemy oferty."
+      },
+      "h1": "Mieszkania na wynajem długoterminowy w Budvie",
+      "hero": {
+        "kicker": "Wynajem · Mieszkania",
+        "lead": "Mieszkania do początku sezonu lub na rok: miesięczny czynsz, kaucja i data, od której mieszkanie jest dostępne.",
+        "image_alt": "Stare Miasto w Budvie i góry widziane od strony morza"
+      },
+      "results_title": "Mieszkania na wynajem",
+      "seo": {
+        "title": "Wynajem mieszkania do sezonu lub na rok",
+        "p1": "Czynsz podajemy za miesiąc. Przy wynajmie do początku sezonu warto z góry potwierdzić datę wyprowadzki: latem wielu właścicieli przechodzi na wynajem na doby.",
+        "p2": "Prosimy podać budżet, preferowaną lokalizację i datę wprowadzenia się — poszukamy odpowiednich ofert."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Domy i wille na wynajem, Czarnogóra | GUREVIĆ",
+        "description": "Domy i wille na wynajem długoterminowy na wybrzeżu Czarnogóry: do początku sezonu lub na rok. Dobór według budżetu, liczby osób i preferowanej lokalizacji."
+      },
+      "h1": "Domy i wille na wynajem długoterminowy w Czarnogórze",
+      "hero": {
+        "kicker": "Wynajem · Domy i wille",
+        "lead": "Domy i wille do początku sezonu lub na rok — aby mieszkać nad morzem poza sezonem turystycznym.",
+        "image_alt": "Stare Miasto w Budvie widziane z kamienistej plaży"
+      },
+      "results_title": "Domy i wille na wynajem",
+      "seo": {
+        "title": "Wynajem domu nad morzem",
+        "p1": "W tej sekcji są domy i wille na wynajem długoterminowy. Czynsz podajemy za miesiąc; sposób rozliczania mediów jest opisany na karcie, jeśli przekazał go właściciel.",
+        "p2": "Prosimy podać budżet, liczbę osób i informację o zwierzętach — od razu wykluczymy nieodpowiednie oferty."
+      }
+    }
+  }
+}

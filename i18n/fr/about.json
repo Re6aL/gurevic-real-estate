@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Ilia Gurevich, agent immobilier à Budva | GUREVIĆ",
+    "description": "Ilia Gurevich, fondateur de l’agence immobilière DOO GUREVIC BUDVA, est l’agent avec qui vous travaillez en personne. Notre troisième année au Monténégro."
+  },
+  "h1": "Ilia Gurevich et l’agence GUREVIĆ",
+  "kicker": "À propos",
+  "lead": "Une agence immobilière à Budva dirigée par son fondateur. Vous avez un seul interlocuteur, de votre première question à la signature des documents.",
+  "portrait": {
+    "monogram": "IG",
+    "name": "Ilia Gurevich",
+    "role": "Fondateur et agent, DOO GUREVIC BUDVA",
+    "alt": "Ilia Gurevich, fondateur de l’agence immobilière GUREVIĆ à Budva",
+    "pending": "Photo à venir"
+  },
+  "who": {
+    "title": "Avec qui vous travaillerez",
+    "p1": "Ilia Gurevich est le fondateur de DOO GUREVIC BUDVA et agent immobilier. Le téléphone, le WhatsApp et le Telegram de l’agence sont ses contacts personnels : vous échangez directement avec lui à chaque étape.",
+    "p2": "Ce qui dépasse le rôle d’un agent — vérifications juridiques, conception et construction — est confié à des partenaires : avocats, architectes et constructeurs agréés. Nous vous mettons en relation avec eux et leur transmettons le dossier avec tous les éléments réunis."
+  },
+  "market": {
+    "title": "Notre troisième année au Monténégro",
+    "p1": "L’agence en est à sa troisième année sur le marché immobilier monténégrin. Nous nous concentrons sur Budva et la Riviera de Budva ; le catalogue comprend aussi des biens dans d’autres villes du pays.",
+    "p2": "Le catalogue de ce site est mis à jour automatiquement à partir de la base de données de l’agence. Les opportunités d’investissement confidentielles y sont publiées sous forme anonymisée."
+  },
+  "format": {
+    "title": "Une nouvelle façon de travailler",
+    "intro": "L’agence fonctionne désormais selon un nouveau format. Concrètement, cela signifie ce qui suit.",
+    "items": {
+      "directions": {
+        "title": "Quatre parcours distincts",
+        "text": "Acheteurs, locataires, investisseurs et propriétaires n’ont pas les mêmes objectifs. C’est pourquoi chacun dispose sur le site de sa propre rubrique, de ses propres questions et de son propre formulaire de demande."
+      },
+      "agreements": {
+        "title": "Contrats écrits",
+        "text": "Les conditions de travail sont fixées dans un contrat écrit conforme au droit monténégrin — avant le début de la mission, et non en cours de route."
+      },
+      "partners": {
+        "title": "Des partenaires pour les missions spécialisées",
+        "text": "Nous assurons nous-mêmes l’accompagnement juridique initial. Les vérifications juridiques approfondies, la conception et la construction sont confiées à des avocats et à des spécialistes agréés : ce qui dépasse le rôle de l’agence leur est transmis."
+      },
+      "honest": {
+        "title": "Uniquement des faits établis",
+        "text": "Nous vous disons ce que l’on sait d’un bien : documents, état, conditions. Les chiffres préliminaires sont signalés comme tels et restent à vérifier."
+      }
+    }
+  },
+  "languages": {
+    "title": "Langues",
+    "text": "Nous vous conseillons en russe, en anglais et en monténégrin. Le site existe dans d’autres langues, mais les échanges et les rendez-vous se déroulent dans l’une de ces trois langues.",
+    "list": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski"
+    }
+  },
+  "legal": {
+    "title": "Informations sur la société",
+    "company_label": "Personne morale",
+    "city_label": "Localisation",
+    "city": "Budva, Monténégro",
+    "founder_label": "Fondateur",
+    "founder": "Ilia Gurevich",
+    "founder_local_html": "enregistré au Monténégro sous le nom {name}",
+    "meetings": "Rencontres sur rendez-vous."
+  },
+  "cta": {
+    "title": "Dites-nous ce que vous recherchez",
+    "text": "Écrivez-nous sur la messagerie de votre choix ou appelez-nous. La page Services détaille ce que nous pouvons faire pour vous.",
+    "services": "Services de l’agence",
+    "contact": "Tous les contacts"
+  },
+  "jsonld": {
+    "job_title": "Fondateur et agent immobilier"
+  }
+}

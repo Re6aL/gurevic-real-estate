@@ -1,0 +1,428 @@
+{
+  "meta": {
+    "title": "Vendre ou louer votre bien à Budva | GUREVIĆ",
+    "description": "GUREVIĆ à Budva : estimation, photos, vente et location longue durée d’appartements, maisons, terrains et entreprises au Monténégro. Commission 5 % HT."
+  },
+  "h1": "Vendre ou louer votre bien avec GUREVIĆ",
+  "hero": {
+    "kicker": "Propriétaires",
+    "lead": "Nous prenons en charge appartements, maisons, terrains, projets de construction et entreprises en activité à Budva et ailleurs au Monténégro. Nous estimons le bien, le préparons à la vente ou à la location et vous accompagnons jusqu’à la transaction, dans le cadre d’un contrat écrit.",
+    "cta_form": "Confier votre bien",
+    "cta_process": "Notre méthode",
+    "facts_aria": "Conditions clés en bref",
+    "facts": {
+      "commission": "Commission 5 % HT",
+      "contract": "Contrat écrit",
+      "languages": "Nous parlons russe, anglais et monténégrin"
+    }
+  },
+  "agency": {
+    "kicker": "L’agence",
+    "title": "Une agence immobilière à Budva",
+    "p1": "GUREVIĆ (DOO GUREVIC BUDVA) est une agence immobilière de Budva dirigée par son propriétaire et agent, Ilia Gurevich. Vous discutez du prix, des conditions et de l’avancement de la vente directement avec la personne qui s’occupe de votre dossier.",
+    "p2": "Nous en sommes à notre troisième année sur le marché immobilier monténégrin et travaillons désormais selon un nouveau format : des services distincts pour les acheteurs, les locataires, les investisseurs et les propriétaires, des contrats écrits et des partenaires pour l’accompagnement juridique, la conception et la construction.",
+    "p3": "Côté vendeur, nous prenons également en charge des actifs d’investissement : terrains à développer, projets de construction, hôtels, restaurants et autres entreprises en activité. Les informations sur ces actifs sont communiquées aux acquéreurs de manière confidentielle.",
+    "more": "En savoir plus sur l’agence",
+    "kinds_title": "Ce que nous prenons en charge",
+    "kinds": {
+      "apartment": {
+        "title": "Appartements",
+        "text": "Neuf et ancien"
+      },
+      "house": {
+        "title": "Maisons et villas",
+        "text": "Résidences principales et secondaires"
+      },
+      "land": {
+        "title": "Terrains",
+        "text": "Pour construction privée ou promotion commerciale"
+      },
+      "construction_project": {
+        "title": "Projets de construction",
+        "text": "Au stade du projet ou en cours de construction"
+      },
+      "business": {
+        "title": "Entreprises en activité",
+        "text": "Restaurants, hôtels, locaux commerciaux"
+      }
+    }
+  },
+  "services": {
+    "kicker": "Services",
+    "title": "Comment nous pouvons vous aider",
+    "sub": "Choisissez un service : chaque page détaille ce qu’il comprend.",
+    "more": "En savoir plus",
+    "items": {
+      "sell": {
+        "title": "Vendre votre bien",
+        "text": "Estimation, photos, annonce, visites, négociation et accompagnement jusqu’à la signature du contrat."
+      },
+      "rent_out": {
+        "title": "Mettre en location",
+        "text": "Location longue durée — jusqu’à la saison ou à l’année : loyer, recherche du locataire, bail."
+      },
+      "management": {
+        "title": "Gestion de biens",
+        "text": "Clés, factures, contrôles du bien et coordination des artisans — sur demande."
+      }
+    }
+  },
+  "process": {
+    "kicker": "Notre méthode",
+    "title": "Comment nous travaillons avec les propriétaires",
+    "sub": "Cinq étapes, du premier échange à la transaction.",
+    "legal": "Nous travaillons dans le cadre d’un contrat écrit, conformément à la législation monténégrine.",
+    "steps": {
+      "valuation": {
+        "title": "Estimation",
+        "text": "Nous visitons le bien, examinons les documents et le marché, et convenons avec vous du prix de mise en vente."
+      },
+      "photo": {
+        "title": "Photographie",
+        "text": "Nous photographions le bien et rédigeons le descriptif de l’annonce."
+      },
+      "contract": {
+        "title": "Contrat",
+        "text": "Les conditions sont fixées par écrit :",
+        "terms": {
+          "commission_html": "commission d’agence de <strong>5 % HT</strong>, autres conditions à convenir ;",
+          "exclusive": "un mandat exclusif est privilégié ;",
+          "price": "toute modification du prix uniquement avec l’accord du propriétaire ;",
+          "access": "le propriétaire donne accès au bien pour les visites."
+        }
+      },
+      "marketing": {
+        "title": "Promotion et visites",
+        "text": "Nous publions le bien, répondons aux demandes, organisons les visites selon un planning convenu et vous rendons compte des résultats."
+      },
+      "deal": {
+        "title": "La transaction",
+        "text": "Nous vous transmettons les offres, vous accompagnons dans les négociations et menons la transaction jusqu’à la signature."
+      }
+    },
+    "exclusive": {
+      "title": "Pourquoi un mandat exclusif",
+      "lead": "Il n’est pas obligatoire, mais il est plus pratique pour le propriétaire.",
+      "points": {
+        "contact": "Un seul interlocuteur, au lieu de rencontrer chaque agent et chaque agence du Monténégro.",
+        "price": "Le bien est sur le marché avec un seul prix et un seul descriptif.",
+        "viewings": "Les visites suivent un planning unique et convenu."
+      }
+    }
+  },
+  "contract": {
+    "kicker": "Documents",
+    "title": "Modèle de contrat",
+    "sub": "Les principales sections des contrats que nous signons avec les propriétaires.",
+    "note": "Modèle fourni à titre informatif — le texte définitif est remis à la signature.",
+    "download": "Télécharger le PDF",
+    "request": "Demander un modèle",
+    "request_hint": "Envoyez-nous une demande et nous vous transmettrons un modèle de contrat à examiner.",
+    "files": {
+      "sale": "",
+      "business": ""
+    },
+    "sale": {
+      "title": "Mandat de vente d’un bien immobilier — principales sections",
+      "sections": {
+        "parties": {
+          "title": "Parties",
+          "text": "Le propriétaire — personne physique ou morale — et l’agence DOO GUREVIC BUDVA ; coordonnées et représentants des parties."
+        },
+        "object": {
+          "title": "Le bien et son identification",
+          "text": "Type et surface du bien, numéro du list nepokretnosti (extrait du registre foncier), commune cadastrale (KO) et, pour un appartement, numéro du lot (PD)."
+        },
+        "price": {
+          "title": "Prix et modification du prix",
+          "text": "Le prix de mise en vente ; il ne peut être modifié qu’avec l’accord du propriétaire."
+        },
+        "commission": {
+          "title": "Rémunération de l’agence",
+          "text": "5 % HT ; date d’exigibilité et modalités de paiement."
+        },
+        "exclusivity": {
+          "title": "Exclusivité et durée",
+          "text": "Mandat exclusif ou simple, durée du contrat et modalités de prolongation."
+        },
+        "owner_duties": {
+          "title": "Obligations du propriétaire",
+          "text": "Fournir les documents du bien, donner accès au bien pour les visites, signaler les charges, les locataires et toute autre circonstance utile à la vente."
+        },
+        "agent_duties": {
+          "title": "Obligations de l’agence",
+          "text": "Estimation, photos, promotion, visites, comptes rendus au propriétaire, accompagnement des négociations et assistance jusqu’à la signature du contrat."
+        },
+        "confidentiality": {
+          "title": "Confidentialité",
+          "text": "Traitement des documents et des données personnelles du propriétaire ; informations sur le bien rendues publiques."
+        },
+        "termination": {
+          "title": "Résiliation",
+          "text": "Motifs et modalités de résiliation anticipée du contrat."
+        },
+        "law": {
+          "title": "Droit applicable",
+          "text": "Le contrat est régi par le droit monténégrin."
+        }
+      }
+    },
+    "business": {
+      "title": "Mandat de vente d’une entreprise — principales sections",
+      "sections": {
+        "parties": {
+          "title": "Parties",
+          "text": "Le propriétaire de l’entreprise ou la société cédante et l’agence DOO GUREVIC BUDVA ; coordonnées et représentants des parties."
+        },
+        "object": {
+          "title": "Objet de la vente",
+          "text": "Informations sur la société (dénomination, numéro d’immatriculation) et objet exact de la vente : parts de la société, ou biens et actifs de l’entreprise."
+        },
+        "price": {
+          "title": "Prix et modification du prix",
+          "text": "Le prix demandé et ce qu’il comprend ; il ne peut être modifié qu’avec l’accord du propriétaire."
+        },
+        "commission": {
+          "title": "Rémunération de l’agence",
+          "text": "5 % HT ; date d’exigibilité et modalités de paiement."
+        },
+        "exclusivity": {
+          "title": "Exclusivité et durée",
+          "text": "Mandat exclusif ou simple, durée du contrat et modalités de prolongation."
+        },
+        "owner_duties": {
+          "title": "Obligations du propriétaire",
+          "text": "Fournir les documents de la société et les informations nécessaires aux vérifications de l’acquéreur, donner accès aux locaux pour les visites, signaler les dettes et les charges."
+        },
+        "agent_duties": {
+          "title": "Obligations de l’agence",
+          "text": "Estimation, rédaction du descriptif, recherche d’acquéreurs, visites, comptes rendus au propriétaire, accompagnement des négociations et assistance jusqu’à la signature du contrat."
+        },
+        "confidentiality": {
+          "title": "Confidentialité",
+          "text": "Les informations sur l’entreprise ne sont communiquées qu’aux acquéreurs qualifiés et, si nécessaire, après signature d’un NDA."
+        },
+        "termination": {
+          "title": "Résiliation",
+          "text": "Motifs et modalités de résiliation anticipée du contrat."
+        },
+        "law": {
+          "title": "Droit applicable",
+          "text": "Le contrat est régi par le droit monténégrin."
+        }
+      }
+    }
+  },
+  "form": {
+    "kicker": "Demande",
+    "title": "Confier votre bien",
+    "intro": "Présentez-nous le bien — aucun document n’est nécessaire à ce stade. Les données cadastrales servent uniquement à vérifier le bien.",
+    "next_title": "La suite",
+    "next": {
+      "call": "Nous vous contactons au numéro indiqué pour préciser les détails.",
+      "visit": "Nous organisons une visite et l’estimation du bien.",
+      "contract": "Nous vous proposons des conditions et préparons le contrat."
+    },
+    "privacy_title": "Vos données",
+    "privacy": "Le numéro du list nepokretnosti, la KO et le PD servent uniquement à vérifier le bien. Nous ne publions jamais le nom des propriétaires, les numéros cadastraux ni les adresses exactes.",
+    "direct_title": "Vous préférez écrire ?",
+    "direct": "Écrivez-nous directement ou posez une question dans le chat du site.",
+    "chat": "Demander dans le chat"
+  },
+  "faq_title": "Questions fréquentes",
+  "terms_title": "Conditions",
+  "related": {
+    "title": "Autres services pour les propriétaires",
+    "all": "Tous les services pour les propriétaires",
+    "all_text": "L’agence, notre méthode et un modèle de contrat."
+  },
+  "alt": {
+    "hero": "Salon lumineux avec balcon et vue sur la mer — illustration",
+    "sell": "La vieille ville de Budva et la baie derrière des bougainvilliers en fleurs",
+    "rent_out": "Balcon donnant sur une baie, avec une tasse de café et des clés sur la table — illustration",
+    "management": "La vieille ville de Budva vue depuis la mer"
+  },
+  "categories": {
+    "sell": {
+      "meta": {
+        "title": "Vendre un bien au Monténégro | GUREVIĆ",
+        "description": "Vente d’appartements, maisons, terrains et entreprises à Budva et au Monténégro : estimation, photos, visites, négociation. Commission 5 % HT, contrat écrit."
+      },
+      "h1": "Vendre votre bien au Monténégro",
+      "kicker": "Vente",
+      "lead": "Nous estimons le bien, le préparons à la vente et négocions avec les acquéreurs. Vous avez un seul interlocuteur et recevez des comptes rendus sur l’avancement de la vente.",
+      "included_title": "Ce que comprend le service de vente",
+      "included": {
+        "valuation": {
+          "title": "Estimation",
+          "text": "Nous analysons le bien, le secteur et le marché, et convenons avec vous du prix de mise en vente."
+        },
+        "photo": {
+          "title": "Photos et descriptif",
+          "text": "Nous photographions le bien et rédigeons le descriptif de l’annonce."
+        },
+        "listing": {
+          "title": "Diffusion",
+          "text": "Nous publions le bien sur le site de l’agence et sur nos canaux, et répondons aux demandes des acquéreurs."
+        },
+        "viewings": {
+          "title": "Visites",
+          "text": "Nous organisons les visites selon un planning convenu avec vous et vous en rendons compte."
+        },
+        "negotiation": {
+          "title": "Négociation",
+          "text": "Nous vous transmettons les offres des acquéreurs et vous aidons à vous accorder sur le prix et les conditions."
+        },
+        "deal": {
+          "title": "Accompagnement de la transaction",
+          "text": "Nous vous aidons à préparer les documents et vous accompagnons jusqu’à la signature de l’acte de vente."
+        }
+      },
+      "terms": {
+        "commission_html": "Commission d’agence de <strong>5 % HT</strong> ; autres conditions à convenir.",
+        "exclusive": "Un mandat exclusif est privilégié : un seul interlocuteur au lieu de chaque agent et chaque agence du Monténégro.",
+        "contract": "Un contrat écrit, conforme à la législation monténégrine."
+      },
+      "terms_link": "Modèle de contrat",
+      "faq": {
+        "price": {
+          "q": "Combien coûtent vos services ?",
+          "a": "La commission d’agence est de 5 % HT. Les autres conditions sont discutées au cas par cas et fixées dans un contrat écrit."
+        },
+        "exclusive": {
+          "q": "Dois-je signer un mandat exclusif ?",
+          "a": "Non, mais nous le recommandons : vous traitez avec une seule agence au lieu de tous les agents du Monténégro, le bien est sur le marché à un seul prix, et les visites suivent un planning convenu."
+        },
+        "documents": {
+          "q": "Quels documents faut-il pour envoyer une demande ?",
+          "a": "Aucun. Le numéro du list nepokretnosti, la commune cadastrale (KO) et, pour un appartement, le numéro du lot (PD) nous aident à vérifier le bien plus rapidement. Le dossier complet est nécessaire à la signature du contrat."
+        },
+        "price_change": {
+          "q": "Qui décide de modifier le prix ?",
+          "a": "Le propriétaire, et lui seul. Toute modification du prix est convenue avec vous à l’avance."
+        },
+        "business": {
+          "q": "Puis-je vendre une entreprise en activité ou un projet de construction ?",
+          "a": "Oui. Côté vendeur, nous prenons aussi en charge des actifs d’investissement. Les informations sur l’entreprise ne sont communiquées qu’aux acquéreurs qualifiés et, si nécessaire, après signature d’un NDA."
+        }
+      },
+      "form_title": "Proposer un bien à la vente",
+      "form_intro": "Présentez-nous le bien — aucun document n’est nécessaire à ce stade. Les données cadastrales servent uniquement à vérifier le bien."
+    },
+    "rent_out": {
+      "meta": {
+        "title": "Mettre votre bien en location à Budva | GUREVIĆ",
+        "description": "Location longue durée d’un appartement ou d’une maison à Budva et au Monténégro, jusqu’à la saison ou à l’année : loyer, photos, recherche du locataire et bail."
+      },
+      "h1": "Louer votre bien en longue durée",
+      "kicker": "Mise en location",
+      "lead": "Nous vous aidons à louer un appartement ou une maison sur une longue durée — jusqu’à la saison ou à l’année : nous évaluons le loyer, trouvons un locataire et préparons le bail.",
+      "included_title": "Ce que comprend le service de location",
+      "included": {
+        "rate": {
+          "title": "Évaluation du loyer",
+          "text": "Nous proposons un loyer longue durée — jusqu’à la saison ou à l’année — en fonction du secteur, de l’état du bien et de l’offre sur le marché."
+        },
+        "photo": {
+          "title": "Photos et descriptif",
+          "text": "Nous photographions le bien et rédigeons le descriptif de l’annonce."
+        },
+        "search": {
+          "title": "Recherche et sélection du locataire",
+          "text": "Nous rencontrons les candidats et vérifions la durée, les occupants, les animaux et le budget. La décision finale vous revient."
+        },
+        "viewings": {
+          "title": "Visites",
+          "text": "Nous organisons les visites selon un planning convenu avec vous."
+        },
+        "lease": {
+          "title": "Bail",
+          "text": "Nous vous aidons à préparer le bail : durée, dépôt de garantie, charges et remise du bien."
+        }
+      },
+      "terms": {
+        "commission_html": "Commission et conditions <strong>à convenir</strong>.",
+        "term": "Location longue durée uniquement : jusqu’à la saison ou à l’année.",
+        "contract": "Les conditions sont fixées par écrit."
+      },
+      "faq": {
+        "term": {
+          "q": "Pour quelle durée louez-vous les biens ?",
+          "a": "Nous travaillons en location longue durée — jusqu’au début de la saison ou à l’année. La location courte durée est encore en cours de développement."
+        },
+        "price": {
+          "q": "Combien coûtent vos services ?",
+          "a": "La commission et les conditions sont discutées au cas par cas et fixées par écrit."
+        },
+        "tenant": {
+          "q": "Comment choisissez-vous le locataire ?",
+          "a": "Nous rencontrons les candidats, vérifions la durée, les occupants, les animaux et le budget, puis vous transmettons ces informations. La décision de louer vous revient."
+        },
+        "presence": {
+          "q": "Dois-je être présent aux visites ?",
+          "a": "Pas nécessairement : les visites peuvent se faire avec des clés confiées à l’agence. Ce point est convenu à la signature du contrat."
+        }
+      },
+      "form_title": "Proposer un bien à la location",
+      "form_intro": "Présentez-nous le bien et la durée de location envisagée. Aucun document n’est nécessaire à ce stade."
+    },
+    "management": {
+      "meta": {
+        "title": "Gestion de biens à Budva | GUREVIĆ",
+        "description": "Gestion de biens à Budva pour propriétaires : garde des clés, factures, contrôles du bien et coordination des artisans. Conditions convenues au cas par cas."
+      },
+      "h1": "Gestion de biens",
+      "kicker": "Gestion",
+      "lead": "Pour les propriétaires qui ne vivent pas au Monténégro toute l’année ou qui louent leur bien en longue durée. Les tâches et les conditions sont convenues au cas par cas.",
+      "included_title": "Ce que nous pouvons prendre en charge",
+      "included_note": "Pas de formule figée : nous convenons des tâches dont vous avez réellement besoin.",
+      "included": {
+        "keys": {
+          "title": "Garde des clés",
+          "text": "L’agence conserve les clés — pour les visites, les artisans et les urgences."
+        },
+        "bills": {
+          "title": "Charges et factures",
+          "text": "Vérification et paiement des factures de charges selon des modalités convenues."
+        },
+        "checks": {
+          "title": "Contrôles du bien",
+          "text": "États des lieux à l’entrée et à la sortie d’un locataire longue durée et, sur demande, en cours de location."
+        },
+        "maintenance": {
+          "title": "Entretien et réparations",
+          "text": "Coordination des artisans ; le coût des travaux est convenu à l’avance avec le propriétaire."
+        }
+      },
+      "terms": {
+        "commission_html": "Conditions convenues <strong>au cas par cas</strong>.",
+        "scope": "Les tâches et les comptes rendus sont convenus à l’avance.",
+        "contract": "Les accords sont fixés par écrit."
+      },
+      "faq": {
+        "scope": {
+          "q": "Que comprend la gestion ?",
+          "a": "Les tâches sont convenues au cas par cas : par exemple la garde des clés, le paiement des factures de charges, les contrôles du bien pendant une location longue durée et la coordination des réparations par des artisans."
+        },
+        "price": {
+          "q": "Combien cela coûte-t-il ?",
+          "a": "Les conditions sont discutées au cas par cas et dépendent du bien et des tâches."
+        },
+        "combine": {
+          "q": "Peut-on combiner gestion et location ?",
+          "a": "Oui, nous pouvons en discuter : par exemple, trouver un locataire longue durée puis rester en contact avec lui."
+        },
+        "repairs": {
+          "q": "Effectuez-vous vous-mêmes les réparations ?",
+          "a": "Non, nous coordonnons des artisans. Le coût des travaux est convenu à l’avance avec le propriétaire."
+        }
+      },
+      "form_title": "Confier la gestion de votre bien",
+      "form_intro": "Présentez-nous le bien et les tâches que vous souhaitez confier. Aucun document n’est nécessaire à ce stade."
+    }
+  },
+  "js": {
+    "contract_request_sale": "Merci de m’envoyer un modèle de mandat de vente immobilière.",
+    "contract_request_business": "Merci de m’envoyer un modèle de mandat de vente d’entreprise."
+  }
+}

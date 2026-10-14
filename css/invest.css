@@ -1,0 +1,365 @@
+/* ============================================================
+   Gurevic Real Estate — инвестиции: /invest/ и подстраницы
+   (invest/hotels|land|commercial|development-projects/).
+   Тон — сдержанный «private office» (brief §C): мало картинок, много воздуха,
+   без тяжёлой анимации. Только логические свойства (RTL: he). Префикс .inv-
+   ============================================================ */
+
+/* ---------- общие элементы ---------- */
+.inv-kicker {
+  display: block; margin-block-end: 12px;
+  color: var(--gold-dark); font: 700 .74rem/1.35 var(--font-body);
+  text-transform: uppercase; letter-spacing: var(--ls-kicker);
+}
+.inv-kicker--light { color: var(--gold-2); }
+
+.inv-section { padding-block: 88px; }
+.inv-head { max-inline-size: 760px; margin-block-end: 40px; }
+.inv-head h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.12; color: var(--navy); text-wrap: balance; }
+.inv-head h2:focus { outline: none; }
+.inv-head h2:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.inv-head__sub { margin-block-start: 14px; color: var(--muted); font-size: 1.02rem; line-height: 1.6; }
+.inv-head--center { margin-inline: auto; text-align: center; }
+.inv-head--tight { margin-block-end: 28px; }
+
+/* ============================================================
+   1. HERO (/invest/) — фото на всю ширину, прозрачная шапка сверху
+   ============================================================ */
+.inv-hero {
+  --focus: var(--gold-2);
+  position: relative; isolation: isolate; overflow: hidden;
+  display: flex; align-items: flex-end;
+  min-block-size: min(92vh, 820px);
+  padding-block: calc(var(--header-h) + 36px) 76px;
+  color: #fff; background: var(--navy-deep);
+}
+.inv-hero__media, .inv-hero__media picture { position: absolute; inset: 0; z-index: -2; }
+.inv-hero__img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; object-position: 38% 50%; }
+.inv-hero::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(8, 18, 29, .6) 0%, rgba(8, 18, 29, .12) 26%, rgba(8, 18, 29, .3) 50%, rgba(8, 18, 29, .9) 100%),
+    linear-gradient(90deg, rgba(8, 18, 29, .62) 0%, rgba(8, 18, 29, .18) 55%, rgba(8, 18, 29, 0) 75%);
+}
+[dir="rtl"] .inv-hero::before {
+  background:
+    linear-gradient(180deg, rgba(8, 18, 29, .6) 0%, rgba(8, 18, 29, .12) 26%, rgba(8, 18, 29, .3) 50%, rgba(8, 18, 29, .9) 100%),
+    linear-gradient(270deg, rgba(8, 18, 29, .62) 0%, rgba(8, 18, 29, .18) 55%, rgba(8, 18, 29, 0) 75%);
+}
+.inv-hero__inner { inline-size: 100%; }
+.inv-hero .breadcrumbs { padding-block-start: 0; margin-block-end: 30px; color: rgba(255, 255, 255, .78); }
+.inv-hero h1 {
+  max-inline-size: 13em; text-wrap: balance;
+  font-size: clamp(2.3rem, 5.4vw, 4.4rem); line-height: 1.03; letter-spacing: -.02em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .25);
+}
+:root[lang="he"] .inv-hero h1 { letter-spacing: 0; font-weight: 600; }
+.inv-hero__lead { max-inline-size: 640px; margin-block-start: 22px; color: #e8eef3; font-size: clamp(1rem, 1.4vw, 1.14rem); line-height: 1.6; }
+.inv-hero__sub {
+  max-inline-size: 620px; margin-block-start: 16px; padding-inline-start: 16px;
+  border-inline-start: 2px solid var(--gold); color: #cfdae3; font-size: .94rem; line-height: 1.55;
+}
+.inv-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 30px; }
+.inv-hero__actions .btn, .inv-final__actions .btn { min-block-size: 50px; padding-inline: 28px; }
+
+/* ============================================================
+   2. INVESTMENT FOCUS
+   ============================================================ */
+.inv-focus__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.inv-focus__item {
+  position: relative; display: flex; flex-direction: column; overflow: hidden;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.inv-focus__item:hover { border-color: #d9e0e6; box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.inv-focus__item:focus-within { outline: 2px solid var(--focus); outline-offset: 3px; }
+.inv-focus__media { overflow: hidden; background: var(--bg-soft); }
+.inv-focus__img { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s cubic-bezier(.2, .6, .2, 1); }
+.inv-focus__item:hover .inv-focus__img { transform: scale(1.04); }
+.inv-focus__body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 20px 20px 22px; }
+.inv-focus__title { font-size: 1.16rem; line-height: 1.25; color: var(--navy); }
+.inv-focus__body p { color: var(--muted); font-size: .93rem; line-height: 1.55; }
+.inv-stretch::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.inv-stretch:focus-visible { outline: none; }
+.inv-more { display: inline-flex; align-items: center; gap: 6px; margin-block-start: auto; padding-block-start: 4px; color: var(--gold-dark); font-size: .86rem; font-weight: 700; }
+
+.inv-devlink {
+  display: flex; align-items: center; gap: 18px; margin-block-start: 24px; padding: 16px 22px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--bg-soft);
+  transition: border-color .2s, background .2s;
+}
+.inv-devlink:hover { border-color: var(--gold); background: #fbf8f2; }
+.inv-devlink__icon {
+  display: grid; place-items: center; flex: none; inline-size: 48px; block-size: 48px; border-radius: 50%;
+  background: #fff; color: var(--gold-dark); box-shadow: inset 0 0 0 1px var(--line);
+}
+.inv-devlink__text { display: grid; gap: 2px; flex: 1; min-inline-size: 0; }
+.inv-devlink__text b { color: var(--navy); font: 400 1.12rem/1.3 var(--font-display); }
+.inv-devlink__text span { color: var(--muted); font-size: .92rem; }
+.inv-devlink__go { display: inline-flex; align-items: center; gap: 6px; flex: none; color: var(--gold-dark); font-size: .88rem; font-weight: 700; }
+
+/* ============================================================
+   3. ILLUSTRATIVE INVESTMENT CASES
+   ============================================================ */
+.inv-cases { background: var(--bg-soft); }
+.inv-disclaimer {
+  display: flex; align-items: flex-start; gap: 14px; max-inline-size: 920px; margin-block-end: 36px;
+  padding: 18px 22px; background: #fff; border-inline-start: 3px solid var(--gold);
+  border-start-end-radius: 10px; border-end-end-radius: 10px;
+}
+.inv-disclaimer__icon { flex: none; margin-block-start: 1px; color: var(--gold-dark); }
+.inv-disclaimer p { color: var(--ink); font-size: .93rem; line-height: 1.6; }
+.inv-disclaimer strong { color: var(--navy); }
+
+.inv-cases__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.inv-cases__grid > li { display: flex; }
+.inv-case {
+  display: flex; flex-direction: column; inline-size: 100%; padding: 30px 32px 28px;
+  background: #fff; border: 1px solid #e9edf1; border-radius: 16px; box-shadow: var(--shadow);
+}
+.inv-case__top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.inv-case__type { color: var(--gold-dark); font: 700 .74rem/1.3 var(--font-body); text-transform: uppercase; letter-spacing: var(--ls-kicker); }
+.inv-case__num { color: var(--gold-dark); font: 400 1.5rem/1 var(--font-display); letter-spacing: .04em; }
+.inv-case__title { margin-block: 10px 22px; font-size: clamp(1.3rem, 2vw, 1.55rem); line-height: 1.2; color: var(--navy); }
+.inv-case__facts { border-block-start: 1px solid var(--line); }
+.inv-fact { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 18px; padding-block: 13px; border-block-end: 1px solid var(--line); }
+.inv-fact dt { color: var(--muted); font-size: .88rem; line-height: 1.4; }
+.inv-fact dd { color: var(--navy); font-size: 1.1rem; font-weight: 700; line-height: 1.3; text-align: end; white-space: nowrap; }
+.inv-fact--text { flex-direction: column; align-items: flex-start; }
+.inv-fact--text dd { font-size: .98rem; font-weight: 600; text-align: start; white-space: normal; }
+.inv-case__note { margin-block: 16px 22px; color: var(--muted); font-size: .86rem; line-height: 1.55; }
+.inv-case__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-block-start: auto; }
+.inv-tag {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px;
+  background: #f6efe2; color: var(--gold-dark); font-size: .76rem; font-weight: 700; line-height: 1.3;
+}
+.inv-case__cta { min-block-size: 44px; padding-inline: 18px; }
+.inv-case__cta .icon { inline-size: 16px; block-size: 16px; }
+
+/* ============================================================
+   4. DEVELOPMENT SUPPORT
+   ============================================================ */
+.inv-support__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
+.inv-support__img { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; }
+.inv-support__list { display: grid; gap: 24px; }
+.inv-support__list li { display: flex; align-items: flex-start; gap: 16px; }
+.inv-support__mark {
+  display: grid; place-items: center; flex: none; inline-size: 46px; block-size: 46px; border-radius: 50%;
+  background: var(--navy); color: var(--gold-2);
+}
+.inv-support__list h3 { margin-block-end: 4px; font-size: 1.14rem; color: var(--navy); }
+.inv-support__list p { color: var(--muted); font-size: .95rem; line-height: 1.6; }
+
+/* ============================================================
+   5. CONFIDENTIAL PROCESS — горизонтальная шкала (desktop), вертикальная (mobile)
+   ============================================================ */
+.inv-process { --focus: var(--gold-2); background: var(--navy); color: #fff; }
+.inv-process .inv-head h2 { color: #fff; }
+.inv-process .inv-kicker { color: var(--gold-2); }
+.inv-process .inv-head__sub { color: var(--muted-dark-bg); }
+.inv-steps { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; }
+.inv-steps::before {
+  content: ''; position: absolute; inset-block-start: 23px; inset-inline: 10%;
+  block-size: 1px; background: rgba(203, 171, 114, .5);
+}
+.inv-step { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.inv-step__num {
+  position: relative; z-index: 1; display: grid; place-items: center; flex: none;
+  inline-size: 46px; block-size: 46px; border-radius: 50%;
+  background: var(--navy); box-shadow: inset 0 0 0 1.5px var(--gold);
+  color: var(--gold-2); font: 400 1.1rem/1 var(--font-display);
+}
+.inv-step__title { font-size: 1.08rem; line-height: 1.3; color: #fff; }
+.inv-step__text { color: var(--muted-dark-bg); font-size: .9rem; line-height: 1.55; }
+.inv-process__more { margin-block-start: 36px; text-align: center; }
+.inv-process__more .btn-link { color: var(--gold-2); gap: 6px; min-block-size: 44px; }
+.inv-process__more .btn-link:hover { color: #fff; }
+/* подстраницы: светлая полоса процесса (под ней — тёмный подвал) */
+.inv-process--strip { --focus: var(--gold-dark); padding-block: 72px; background: var(--bg-soft); color: var(--ink); border-block-start: 1px solid var(--line); }
+.inv-process--strip .inv-head { margin-block-end: 32px; }
+.inv-process--strip .inv-head h2, .inv-process--strip .inv-step__title { color: var(--navy); }
+.inv-process--strip .inv-kicker { color: var(--gold-dark); }
+.inv-process--strip .inv-step__num { background: #fff; color: var(--gold-dark); }
+.inv-process--strip .inv-process__more .btn-link { color: var(--gold-dark); }
+.inv-process--strip .inv-process__more .btn-link:hover { color: var(--navy); }
+
+/* компактные карточки: картинка тянется на всю высоту карточки */
+.inv-cards .card--compact .card-media picture { block-size: 100%; }
+
+/* ============================================================
+   6. INVESTOR ENQUIRY
+   ============================================================ */
+.inv-enquiry__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 32px; align-items: start; }
+.inv-enquiry__form { min-inline-size: 0; }
+.inv-conf {
+  --focus: var(--gold-2);
+  position: sticky; inset-block-start: calc(var(--header-h) + 24px);
+  padding: 28px 26px; border-radius: 16px; background: var(--navy); color: #dbe4ec;
+}
+.inv-conf__title { display: flex; align-items: center; gap: 10px; margin-block-end: 18px; color: #fff; font-size: 1.22rem; }
+.inv-conf__title .icon { color: var(--gold-2); }
+.inv-conf__list { display: grid; gap: 14px; }
+.inv-conf__list li { position: relative; padding-inline-start: 18px; font-size: .92rem; line-height: 1.55; }
+.inv-conf__list li::before {
+  content: ''; position: absolute; inset-inline-start: 0; inset-block-start: .62em;
+  inline-size: 6px; block-size: 6px; border-radius: 50%; background: var(--gold);
+}
+.inv-conf__switch {
+  display: inline-flex; align-items: center; gap: 6px; min-block-size: 44px;
+  color: var(--gold-2); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;
+}
+.inv-conf__switch:hover { color: #fff; }
+.inv-conf__direct { margin-block-start: 22px; padding-block-start: 20px; border-block-start: 1px solid rgba(255, 255, 255, .12); }
+.inv-conf__direct p { margin-block-end: 10px; color: #fff; font-size: .92rem; font-weight: 600; }
+.inv-conf__channels { display: flex; flex-wrap: wrap; gap: 8px; }
+.inv-conf__channels a {
+  display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; padding: 8px 14px;
+  border-radius: 10px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22); color: #fff; font-size: .88rem;
+  transition: box-shadow .15s, color .15s;
+}
+.inv-conf__channels a:hover { box-shadow: inset 0 0 0 1px var(--gold); color: var(--gold-2); }
+.inv-conf__channels .icon { color: var(--gold-2); }
+/* подсветка поля, выбранного кнопкой «Запросить детали» (js/invest.js) */
+.inv-enquiry .lf-select.inv-flash { box-shadow: 0 0 0 3px rgba(185, 151, 91, .45); transition: box-shadow .4s; }
+
+/* ============================================================
+   7. FINAL CTA
+   ============================================================ */
+.inv-final { padding-block: 8px 88px; }
+.inv-final__inner {
+  --focus: var(--gold-2);
+  max-inline-size: calc(var(--container) - 2 * var(--gutter)); padding: 64px 40px; border-radius: 20px;
+  color: #fff; text-align: center;
+  background: radial-gradient(120% 160% at 50% 0%, var(--navy-2) 0%, var(--navy) 45%, var(--navy-deep) 100%);
+}
+.inv-final h2 { max-inline-size: 18em; margin-inline: auto; text-wrap: balance; font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.12; color: #fff; }
+.inv-final p { max-inline-size: 620px; margin: 16px auto 0; color: #c9d6e0; line-height: 1.6; }
+.inv-final__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-block-start: 30px; }
+
+/* ============================================================
+   ПОДСТРАНИЦЫ (invest_category.html)
+   ============================================================ */
+.inv-cat-hero {
+  --focus: var(--gold-2);
+  padding-block: 36px 64px; color: #fff;
+  background: linear-gradient(120deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-2) 100%);
+}
+.inv-cat-hero__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; align-items: center; }
+.inv-cat-hero .breadcrumbs { padding-block-start: 0; margin-block-end: 28px; }
+.inv-cat-hero h1 { font-size: clamp(2rem, 4.2vw, 3.3rem); line-height: 1.06; letter-spacing: -.015em; }
+:root[lang="he"] .inv-cat-hero h1 { letter-spacing: 0; font-weight: 600; }
+.inv-cat-hero__intro { max-inline-size: 620px; margin-block-start: 18px; color: #d7e0e8; font-size: 1.03rem; line-height: 1.6; }
+.inv-cat-hero__img {
+  display: block; inline-size: 100%; block-size: auto; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: 16px; box-shadow: 0 22px 50px rgba(0, 0, 0, .35);
+}
+
+.inv-points {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px 56px;
+  padding-block-end: 64px; margin-block-end: 72px; border-block-end: 1px solid var(--line);
+}
+.inv-points__title { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.18; color: var(--navy); }
+.inv-points__list { display: grid; gap: 16px; }
+.inv-points__list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1.02rem; line-height: 1.55; }
+.inv-points__icon { flex: none; margin-block-start: 2px; color: var(--gold-dark); }
+
+.inv-logistics {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px 56px; align-items: center;
+  padding-block-end: 64px; margin-block-end: 72px; border-block-end: 1px solid var(--line);
+}
+.inv-logistics__img { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; }
+.inv-logistics__body h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.18; color: var(--navy); }
+.inv-logistics__body p { margin-block: 14px 22px; color: var(--muted); line-height: 1.6; }
+.inv-logistics__body .btn { min-block-size: 44px; }
+
+.inv-checklist {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block-start: 1px solid var(--line); border-inline-start: 1px solid var(--line);
+}
+.inv-check { padding: 28px 26px 30px; border-inline-end: 1px solid var(--line); border-block-end: 1px solid var(--line); }
+.inv-check__icon { display: inline-flex; margin-block-end: 14px; color: var(--gold-dark); }
+.inv-check h3 { margin-block-end: 6px; font-size: 1.08rem; line-height: 1.3; color: var(--navy); }
+.inv-check p { color: var(--muted); font-size: .93rem; line-height: 1.55; }
+
+.inv-listings { background: var(--bg-soft); }
+.inv-count {
+  display: inline-grid; place-items: center; min-inline-size: 34px; block-size: 34px; margin-inline-start: 12px; padding-inline: 8px;
+  border-radius: 999px; background: var(--navy); color: #fff; font: 700 .9rem/1 var(--font-body); vertical-align: middle;
+}
+
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+@media (max-width: 1100px) {
+  .inv-focus__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+  .inv-section { padding-block: 68px; }
+  .inv-support__grid, .inv-enquiry__grid, .inv-cat-hero__grid, .inv-points, .inv-logistics { grid-template-columns: minmax(0, 1fr); }
+  .inv-support__grid { gap: 32px; }
+  .inv-support__img { aspect-ratio: 16 / 9; }
+  .inv-conf { position: static; }
+  .inv-cat-hero__grid { gap: 32px; }
+  .inv-cat-hero__img { aspect-ratio: 16 / 9; }
+  .inv-checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* процесс — вертикальная шкала */
+  .inv-steps { grid-template-columns: minmax(0, 1fr); gap: 0; max-inline-size: 560px; margin-inline: auto; }
+  .inv-steps::before { display: none; }
+  .inv-step:not(:last-child)::after {
+    content: ''; position: absolute; inset-inline-start: 22px; inset-block: 46px 0;
+    inline-size: 1px; background: rgba(203, 171, 114, .5);
+  }
+  .inv-step {
+    display: grid; grid-template-columns: 46px minmax(0, 1fr); column-gap: 18px; row-gap: 4px;
+    align-items: start; padding-block-end: 26px; text-align: start;
+  }
+  .inv-step:last-child { padding-block-end: 0; }
+  .inv-step__num { grid-row: 1 / span 2; }
+  .inv-step__title { padding-block-start: 11px; }
+  .inv-steps--compact .inv-step { padding-block-end: 18px; }
+}
+
+@media (max-width: 640px) {
+  .inv-section { padding-block: 56px; }
+  .inv-head { margin-block-end: 28px; }
+  .inv-hero { min-block-size: min(100svh, 760px); padding-block-end: 48px; }
+  .inv-hero h1 { font-size: 2.3rem; }
+  .inv-hero__lead { font-size: 1rem; }
+  .inv-hero__actions .btn, .inv-final__actions .btn { inline-size: 100%; }
+
+  .inv-focus__grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .inv-focus__item { flex-direction: row; }
+  .inv-focus__media { flex: 0 0 34%; }
+  .inv-focus__media picture { block-size: 100%; }
+  .inv-focus__img { block-size: 100%; aspect-ratio: auto; min-block-size: 132px; }
+  .inv-focus__body { gap: 6px; padding: 14px 16px 16px; }
+  .inv-focus__title { font-size: 1.04rem; }
+  .inv-focus__body p { font-size: .88rem; }
+  .inv-devlink { flex-wrap: wrap; gap: 12px 14px; padding: 16px; }
+  .inv-devlink__go { inline-size: 100%; padding-inline-start: 62px; }
+
+  .inv-cases__grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .inv-case { padding: 24px 20px 22px; }
+  .inv-fact { flex-direction: column; align-items: flex-start; gap: 2px; padding-block: 11px; }
+  .inv-fact dd { text-align: start; white-space: normal; }
+  .inv-case__foot { flex-direction: column; align-items: stretch; }
+  .inv-tag { align-self: flex-start; }
+  .inv-case__cta { inline-size: 100%; }
+  .inv-disclaimer { padding: 16px; }
+
+  .inv-conf { padding: 24px 20px; }
+  .inv-final { padding-block-end: 56px; }
+  .inv-final__inner { max-inline-size: calc(100% - 2 * var(--gutter)); padding: 44px 22px; border-radius: 16px; }
+
+  .inv-cat-hero { padding-block: 28px 44px; }
+  .inv-cat-hero h1 { font-size: 2rem; }
+  .inv-points, .inv-logistics { padding-block-end: 48px; margin-block-end: 52px; }
+  .inv-checklist { grid-template-columns: minmax(0, 1fr); }
+  .inv-check { padding: 22px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-focus__item:hover, .inv-focus__item:hover .inv-focus__img { transform: none; }
+}

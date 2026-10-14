@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Langzeitmiete in Budva | GUREVIĆ",
+    "description": "Langzeitmiete von Wohnungen, Häusern und Villen in Budva und an der Küste Montenegros: bis zum Saisonbeginn oder für ein Jahr. Jetzt Suche anfragen."
+  },
+  "h1": "Langzeitmiete in Budva",
+  "hero": {
+    "kicker": "Mieten",
+    "lead": "Wohnungen, Häuser und Villen zur Miete bis zum Saisonbeginn oder für ein ganzes Jahr. Die Kurzzeitmiete ist in Vorbereitung.",
+    "image_alt": "Budva: Altstadt und Bucht mit der Statue der Tänzerin"
+  },
+  "results_title": "Mietobjekte",
+  "seo": {
+    "title": "Langzeitmiete an der Küste",
+    "p1": "Wir vermitteln Langzeitmieten: vom Herbst bis zum Beginn der Touristensaison oder für ein ganzes Jahr. Tages- und Kurzzeitvermietungen nehmen wir nicht in den Katalog auf.",
+    "p2": "Konditionen wie Kaution, Nebenkosten und Haustiere stehen in der Objektkarte, sofern der Eigentümer sie angegeben hat; alles Weitere klären wir vor der Besichtigung. Wir empfehlen, den Mietvertrag schriftlich abzuschließen."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Wohnungen zur Langzeitmiete in Budva | GUREVIĆ",
+        "description": "Wohnungen zur Langzeitmiete in Budva und an der Küste: bis zum Saisonbeginn oder für ein Jahr. Monatsmiete, Kaution, Einzugsdatum – jetzt Suche anfragen."
+      },
+      "h1": "Wohnungen zur Langzeitmiete in Budva",
+      "hero": {
+        "kicker": "Mieten · Wohnungen",
+        "lead": "Wohnungen bis zum Saisonbeginn oder für ein Jahr: Monatsmiete, Kaution und das Datum, ab dem die Wohnung frei ist.",
+        "image_alt": "Altstadt von Budva und die Berge, vom Meer aus gesehen"
+      },
+      "results_title": "Mietwohnungen",
+      "seo": {
+        "title": "Wohnung mieten – bis zur Saison oder für ein Jahr",
+        "p1": "Die Miete ist pro Monat angegeben. Wenn Sie bis zum Saisonbeginn mieten, klären Sie das Auszugsdatum vorab: Im Sommer vermieten viele Eigentümer tageweise.",
+        "p2": "Nennen Sie uns Budget, Wunschlage und Einzugsdatum – wir suchen passende Angebote."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Häuser & Villen zur Langzeitmiete, Montenegro | GUREVIĆ",
+        "description": "Häuser und Villen zur Langzeitmiete an der Küste Montenegros: bis zum Saisonbeginn oder für ein Jahr. Auswahl nach Budget, Haushaltsgröße und Wunschlage."
+      },
+      "h1": "Häuser und Villen zur Langzeitmiete in Montenegro",
+      "hero": {
+        "kicker": "Mieten · Häuser und Villen",
+        "lead": "Häuser und Villen bis zum Saisonbeginn oder für ein Jahr – für das Leben am Meer außerhalb der Touristensaison.",
+        "image_alt": "Altstadt von Budva, vom Kiesstrand aus gesehen"
+      },
+      "results_title": "Häuser und Villen zur Miete",
+      "seo": {
+        "title": "Ein Haus am Meer mieten",
+        "p1": "In dieser Rubrik finden Sie Häuser und Villen zur Langzeitmiete. Die Miete ist pro Monat angegeben; wie die Nebenkosten abgerechnet werden, steht in der Objektkarte, sofern der Eigentümer es angegeben hat.",
+        "p2": "Nennen Sie uns Budget, Anzahl der Bewohner und ob Sie Haustiere haben – so können wir Unpassendes gleich ausschließen."
+      }
+    }
+  }
+}

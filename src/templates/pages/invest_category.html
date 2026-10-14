@@ -1,0 +1,147 @@
+{#- Подстраницы инвестиций: invest/hotels|land|commercial|development-projects/ (brief §D.9).
+    Короткий hero со стоковой картинкой → на что смотрим в направлении → чек-лист «что анализируем» →
+    предложения из CRM (обезличенные карточки; у проектов строительства — названия и фото) →
+    форма инвестора с предвыбранным типом → полоса процесса. Тексты — invest.cat.*, invest.categories.<c>.* -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/cards.html" as cards %}
+{% import "macros/forms.html" as forms %}
+
+{% set CAT = {
+  'hotels': {'image': 'img/stock/invest-hotel.jpg', 'type': 'hotel', 'points': ['rooms', 'operations', 'expansion']},
+  'land': {'image': 'img/stock/invest-land.jpg', 'type': 'development_land', 'points': ['planning', 'access', 'benchmarks']},
+  'commercial': {'image': 'img/stock/invest-restaurant.jpg', 'type': 'restaurant_commercial', 'points': ['leases', 'business', 'revenue']},
+  'development': {'image': 'img/stock/invest-development.jpg', 'type': 'development_partnership', 'points': ['permits', 'developer', 'schedule']},
+} %}
+{% set c = CAT[page.category] %}
+{% set k = 'invest.categories.' ~ page.category %}
+{% set items = listings.query(section='invest', category=page.category) %}
+{% set ANALYSE = [('ownership', 'document'), ('planning', 'map'), ('technical', 'building'),
+                  ('financials', 'area'), ('comparables', 'search'), ('exit', 'arrow-right')] %}
+
+{% block main %}
+{# Hero #}
+<section class="inv-cat-hero" aria-labelledby="inv-h1">
+  <div class="container inv-cat-hero__grid">
+    <div class="inv-cat-hero__text">
+      {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+      <span class="inv-kicker inv-kicker--light">{{ t('invest.cat.kicker') }}</span>
+      <h1 id="inv-h1">{{ page.h1 }}</h1>
+      <p class="inv-cat-hero__intro">{{ t(k ~ '.intro') }}</p>
+      <div class="inv-hero__actions">
+        {{ ui.button('#enquiry', t('invest.cat.cta'), '', icon_end='arrow-right', attrs={'data-invest-cta': ''}) }}
+      </div>
+    </div>
+    <div class="inv-cat-hero__media">
+      {{ img(c.image, t(k ~ '.image_alt'), sizes='(min-width: 960px) 480px, 100vw', cls='inv-cat-hero__img', loading='eager', fetchpriority='high', fallback='BG_images/02.jpg') }}
+    </div>
+  </div>
+</section>
+
+{# На что смотрим в направлении + чек-лист due diligence #}
+<section class="section inv-section inv-analyse" aria-labelledby="analyse-title">
+  <div class="container">
+    <div class="inv-points">
+      <h2 class="inv-points__title" id="points-title">{{ t(k ~ '.points_title') }}</h2>
+      <ul class="inv-points__list">
+        {% for p in c.points %}
+        <li>{{ ui.icon('check', 'inv-points__icon', 20) }}<span>{{ t(k ~ '.points.' ~ p) }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% if page.category == 'commercial' %}
+    <div class="inv-logistics" id="logistics">
+      <div class="inv-logistics__media">
+        {{ img('img/stock/invest-logistics.jpg', t(k ~ '.logistics.image_alt'), sizes='(min-width: 960px) 380px, 100vw', cls='inv-logistics__img') }}
+      </div>
+      <div class="inv-logistics__body">
+        <h2>{{ t(k ~ '.logistics.title') }}</h2>
+        <p>{{ t(k ~ '.logistics.text') }}</p>
+        <a class="btn btn-outline btn-sm" href="#enquiry" data-invest-type="warehouse_logistics"><span>{{ t(k ~ '.logistics.cta') }}</span>{{ ui.icon('arrow-right', size=16) }}</a>
+      </div>
+    </div>
+    {% endif %}
+
+    <header class="inv-head inv-analyse__head">
+      <span class="inv-kicker">{{ t('invest.cat.analyse.kicker') }}</span>
+      <h2 id="analyse-title">{{ t('invest.cat.analyse.title') }}</h2>
+      <p class="inv-head__sub">{{ t('invest.cat.analyse.sub') }}</p>
+    </header>
+    <ul class="inv-checklist">
+      {% for key, icon_name in ANALYSE %}
+      <li class="inv-check">
+        <span class="inv-check__icon">{{ ui.icon(icon_name, size=22) }}</span>
+        <h3>{{ t('invest.cat.analyse.items.' ~ key ~ '.title') }}</h3>
+        <p>{{ t('invest.cat.analyse.items.' ~ key ~ '.text') }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# Предложения из CRM (если есть) #}
+{% if items %}
+{% set has_conf = items | selectattr('confidential') | list | length > 0 %}
+<section class="section inv-section inv-listings" aria-labelledby="listings-title">
+  <div class="container">
+    <header class="inv-head">
+      <h2 id="listings-title">{{ t(k ~ '.listings_title') if t_has(k ~ '.listings_title') else t('invest.cat.listings.title') }}<span class="inv-count"><bdi>{{ items | length }}</bdi></span></h2>
+      {% set note = t('invest.cat.listings.note') if has_conf else (t(k ~ '.listings_note') if t_has(k ~ '.listings_note') else '') %}
+      {% if note %}<p class="inv-head__sub">{{ note }}</p>{% endif %}
+    </header>
+    <div class="cards cards--compact inv-cards">
+      {% for l in items %}
+      {{ cards.card_compact(l, heading=3) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Форма инвестора с предвыбранным типом #}
+<section class="section inv-section inv-enquiry" id="enquiry" aria-labelledby="enquiry-title">
+  <div class="container">
+    <header class="inv-head">
+      <span class="inv-kicker">{{ t('invest.enquiry.kicker') }}</span>
+      <h2 id="enquiry-title" tabindex="-1">{{ t(k ~ '.form_title') }}</h2>
+      <p class="inv-head__sub">{{ t(k ~ '.form_intro') }}</p>
+    </header>
+    <div class="inv-enquiry__grid">
+      <div role="note" class="inv-conf" aria-labelledby="conf-title">
+        <h3 class="inv-conf__title" id="conf-title">{{ ui.icon('lock', size=20) }}{{ t('invest.enquiry.aside_title') }}</h3>
+        <ul class="inv-conf__list">
+          <li>{{ t('invest.enquiry.points.addresses') }}</li>
+          <li>{{ t('invest.enquiry.points.nda') }}</li>
+          <li>{{ t('invest.enquiry.points.company') }}
+            <a class="inv-conf__switch" href="#enquiry" data-invest-variant="company">{{ t('invest.enquiry.company_link') }}{{ ui.icon('arrow-right', size=16) }}</a></li>
+          <li>{{ t('invest.enquiry.points.documents') }}</li>
+        </ul>
+      </div>
+      <div class="inv-enquiry__form">
+        {{ forms.investor_form('private', preset={'investment_type': c.type}) }}
+      </div>
+    </div>
+    <p class="visually-hidden" role="status" aria-live="polite" data-invest-status></p>
+  </div>
+</section>
+
+{# Полоса процесса #}
+<section class="section inv-section inv-process inv-process--strip" aria-labelledby="process-title">
+  <div class="container">
+    <header class="inv-head inv-head--center">
+      <span class="inv-kicker">{{ t('invest.process.kicker') }}</span>
+      <h2 id="process-title">{{ t('invest.cat.process_title') }}</h2>
+    </header>
+    <ol class="inv-steps inv-steps--compact">
+      {% for key in ['request', 'qualification', 'nda', 'selection', 'due_diligence'] %}
+      <li class="inv-step">
+        <span class="inv-step__num" aria-hidden="true">{{ loop.index }}</span>
+        <h3 class="inv-step__title">{{ t('invest.process.steps.' ~ key ~ '.title') }}</h3>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="inv-process__more"><a class="btn-link btn" href="{{ url('invest') }}#process">{{ t('invest.process.more') }}{{ ui.icon('arrow-right', size=16) }}</a></p>
+  </div>
+</section>
+{% endblock %}

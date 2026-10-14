@@ -1,0 +1,129 @@
+{#- Общие макросы интерфейса. Импорт: {% import "macros/ui.html" as ui %}
+    Глобальные функции (t, url, …) доступны и без "with context".
+
+    icon(name, cls='', size=20, label=None) — inline SVG; label → role="img" + aria-label
+    breadcrumbs(items, light=False)        — items: page.breadcrumbs [(label, url)]
+    section_head(title, kicker, sub, level, id, center=False)
+    button(href, label, variant, icon_name, icon_end, external, attrs)
+    button_el(label, variant, icon_name, type, attrs) — <button>
+    external_attrs()                        — target/rel для внешних ссылок -#}
+
+{#- Иконки: inline SVG 24×24, currentColor. ('fill'|'stroke', d). Несколько фигур — в одном d.
+    Направленные получают класс icon-dir: в RTL их зеркалит CSS [dir="rtl"] .icon-dir. -#}
+{% set _ICONS = {
+  'phone': ('fill', 'M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .7-.2 1l-2.3 2.3z'),
+  'whatsapp': ('fill', 'M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z'),
+  'telegram': ('fill', 'M21.9 4.3 18.7 19.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.6 13.2l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1.3z'),
+  'mail': ('stroke', 'M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 7l9 6 9-6'),
+  'instagram': ('stroke', 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM17.5 6.5h.01'),
+  'area': ('stroke', 'M4 4h16v16H4zM4 9h5M15 4v5M9 20v-5h11'),
+  'land': ('stroke', 'M3 20h18M5 20c1-5 3-8 7-8s6 3 7 8M12 12V5M12 5l4 2-4 2'),
+  'bed': ('stroke', 'M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 15h18M7 9V6h4v3M3 18v2M21 18v2'),
+  'bath': ('stroke', 'M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2'),
+  'floor': ('stroke', 'M4 20h4v-4h4v-4h4V8h4'),
+  'pin': ('stroke', 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zM12 7.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'),
+  'chevron-down': ('stroke', 'M6 9l6 6 6-6'),
+  'chevron-up': ('stroke', 'M6 15l6-6 6 6'),
+  'chevron-right': ('stroke', 'M9 6l6 6-6 6'),
+  'chevron-left': ('stroke', 'M15 6l-6 6 6 6'),
+  'arrow-right': ('stroke', 'M4 12h16M14 6l6 6-6 6'),
+  'arrow-left': ('stroke', 'M20 12H4M10 6l-6 6 6 6'),
+  'external': ('stroke', 'M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5'),
+  'search': ('stroke', 'M10.5 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM20 20l-4.8-4.8'),
+  'close': ('stroke', 'M6 6l12 12M18 6L6 18'),
+  'menu': ('stroke', 'M4 7h16M4 12h16M4 17h16'),
+  'globe': ('stroke', 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.7 3.5 5.7 3.5 9s-1 6.3-3.5 9c-2.5-2.7-3.5-5.7-3.5-9s1-6.3 3.5-9z'),
+  'key': ('stroke', 'M8 7.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM11.5 11H21M18 11v3M15 11v2'),
+  'check': ('stroke', 'M5 12.5l4.5 4.5L19 7.5'),
+  'lock': ('stroke', 'M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3'),
+  'document': ('stroke', 'M7 3h7l4 4v14H7zM14 3v4h4M9.5 12h6M9.5 15.5h6'),
+  'map': ('stroke', 'M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14'),
+  'building': ('stroke', 'M5 21V5l7-2v18M12 8h7v13M8 8h1M8 12h1M8 16h1M15 12h1M15 16h1M3 21h18'),
+  'filter': ('stroke', 'M4 7h10M18 7h2M4 17h2M10 17h10M14 4.5h4v5h-4zM6 14.5h4v5H6z'),
+  'sort-asc': ('stroke', 'M6 20V4M6 4 3 7M6 4l3 3M12 7h3M12 12h6M12 17h9'),
+  'sort-desc': ('stroke', 'M6 4v16M6 20l-3-3M6 20l3-3M12 7h9M12 12h6M12 17h3'),
+  'calendar': ('stroke', 'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4'),
+  'info': ('stroke', 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 11v6M12 7.5h.01'),
+} %}
+{#- Синонимы имён (как в ТЗ: map-pin, chevron, arrow) -#}
+{% set _ALIASES = {'map-pin': 'pin', 'chevron': 'chevron-down', 'arrow': 'arrow-right', 'email': 'mail'} %}
+{% set _DIRECTIONAL = ['chevron-right', 'chevron-left', 'arrow-right', 'arrow-left', 'external'] %}
+
+{% macro icon(name, cls='', size=20, label=None) -%}
+{% set key = _ALIASES.get(name, name) %}
+{% set spec = _ICONS.get(key) %}
+{% if spec %}
+{% set kind, d = spec %}
+<svg class="icon icon-{{ key }}{% if key in _DIRECTIONAL %} icon-dir{% endif %}{% if cls %} {{ cls }}{% endif %}" viewBox="0 0 24 24" width="{{ size }}" height="{{ size }}"{% if label %} role="img" aria-label="{{ label }}"{% else %} aria-hidden="true"{% endif %} focusable="false"{% if kind == 'fill' %} fill="currentColor"{% else %} fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"{% endif %}><path d="{{ d }}"/></svg>
+{%- endif %}
+{%- endmacro %}
+
+{#- items: [(label, url)] — последний пункт = текущая страница.
+    JSON-LD BreadcrumbList для этих же крошек base.html выводит сам (page.jsonld), здесь не дублируем.
+    light=True — светлый вариант для тёмного hero. -#}
+{% macro breadcrumbs(items, light=False) -%}
+{% if items | length > 1 %}
+<nav class="breadcrumbs{% if light %} breadcrumbs--light{% endif %}" aria-label="{{ t('common.breadcrumbs.aria') }}">
+  <ol>
+  {% for label, href in items %}
+    {% if loop.last %}
+    <li><span aria-current="page">{{ label }}</span></li>
+    {% else %}
+    <li><a href="{{ href }}">{{ label }}</a>{{ icon('chevron-right', 'breadcrumbs-sep', 14) }}</li>
+    {% endif %}
+  {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{%- endmacro %}
+
+{% macro section_head(title, kicker=None, sub=None, level=2, id=None, center=False) -%}
+<div class="section-head{% if center %} section-head--center{% endif %}">
+  {% if kicker %}<span class="kicker">{{ kicker }}</span>{% endif %}
+  <h{{ level }}{% if id %} id="{{ id }}"{% endif %}>{{ title }}</h{{ level }}>
+  {% if sub %}<p class="sub">{{ sub }}</p>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro external_attrs() %} target="_blank" rel="noopener"{%- endmacro %}
+
+{#- variant: '' (золотая) | outline | navy | ghost (светлая обводка для тёмного фона) | link | sm (через пробел: 'outline sm').
+    attrs: dict дополнительных атрибутов (data-*, aria-*). -#}
+{% macro _cls(variant) -%}
+btn{% for v in (variant or '').split() %} btn-{{ v }}{% endfor %}
+{%- endmacro %}
+
+{% macro _attrs(attrs) -%}
+{% for k, v in (attrs or {}).items() %} {{ k }}="{{ v }}"{% endfor %}
+{%- endmacro %}
+
+{% macro button(href, label, variant='', icon_name=None, icon_end=None, external=False, attrs=None) -%}
+<a class="{{ _cls(variant) }}" href="{{ href }}"{% if external %}{{ external_attrs() }}{% endif %}{{ _attrs(attrs) }}>{% if icon_name %}{{ icon(icon_name) }}{% endif %}<span>{{ label }}</span>{% if icon_end %}{{ icon(icon_end) }}{% endif %}</a>
+{%- endmacro %}
+
+{% macro button_el(label, variant='', icon_name=None, type='button', attrs=None) -%}
+<button class="{{ _cls(variant) }}" type="{{ type }}"{{ _attrs(attrs) }}>{% if icon_name %}{{ icon(icon_name) }}{% endif %}<span>{{ label }}</span></button>
+{%- endmacro %}
+
+{#- Список контактов (шапка-дропдаун, off-canvas, подвал, страница контактов).
+    contacts = site.contacts. Подписи — common.contacts.*, значения в <bdi dir="ltr">. -#}
+{% macro contact_list(contacts, cls='contact-list', values=True) -%}
+<ul class="{{ cls }}">
+  <li><a href="{{ contacts.phone_href }}">{{ icon('phone', 'ci') }}<span class="cl-text"><b>{{ t('common.contacts.call') }}</b>{% if values %}<bdi dir="ltr">{{ contacts.phone }}</bdi>{% endif %}</span></a></li>
+  <li><a href="{{ contacts.whatsapp }}"{{ external_attrs() }}>{{ icon('whatsapp', 'ci') }}<span class="cl-text"><b>{{ t('common.contacts.whatsapp') }}</b>{% if values %}<bdi dir="ltr">{{ contacts.phone }}</bdi>{% endif %}</span></a></li>
+  <li><a href="{{ contacts.telegram }}"{{ external_attrs() }}>{{ icon('telegram', 'ci') }}<span class="cl-text"><b>{{ t('common.contacts.telegram') }}</b>{% if values %}<bdi dir="ltr">{{ contacts.telegram_handle }}</bdi>{% endif %}</span></a></li>
+  <li><a href="mailto:{{ contacts.email }}">{{ icon('mail', 'ci') }}<span class="cl-text"><b>{{ t('common.contacts.email') }}</b>{% if values %}<bdi dir="ltr">{{ contacts.email }}</bdi>{% endif %}</span></a></li>
+  <li><a href="{{ contacts.instagram }}"{{ external_attrs() }}>{{ icon('instagram', 'ci') }}<span class="cl-text"><b>{{ t('common.contacts.instagram') }}</b>{% if values %}<bdi dir="ltr">{{ contacts.instagram_handle }}</bdi>{% endif %}</span></a></li>
+</ul>
+{%- endmacro %}
+
+{#- Список языков (переключатель, off-canvas, подвал). languages — из контекста страницы;
+    для страницы объекта l.url ведёт на тот же объект на другом языке. -#}
+{#- dir — на подписи, а не на ссылке: строки списка идут по направлению страницы (в he все справа, в de «עברית» не прыгает вправо), само название изолировано своим dir -#}
+{% macro lang_list(languages, cls='lang-list', check=False) -%}
+<ul class="{{ cls }}">
+  {% for l in languages %}
+  <li><a href="{{ l.url }}" lang="{{ l.code }}" hreflang="{{ l.code }}" data-lang="{{ l.code }}"{% if l.current %} aria-current="true"{% endif %}><span dir="{{ l.dir }}">{{ l.name }}</span>{% if check and l.current %}{{ icon('check', 'lang-check', 16) }}{% endif %}</a></li>
+  {% endfor %}
+</ul>
+{%- endmacro %}

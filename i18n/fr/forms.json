@@ -1,0 +1,232 @@
+{
+  "common": {
+    "required_note": "Les champs marqués d’un * sont obligatoires.",
+    "optional": "facultatif",
+    "required_sr": "champ obligatoire",
+    "select_placeholder": "Choisir…",
+    "contact_legend": "Comment vous joindre",
+    "contact_hint": "Un seul suffit : téléphone, Telegram ou e-mail.",
+    "consent_html": "J’accepte le traitement de mes données afin de répondre à cette demande — <a href=\"{url}\">politique de confidentialité</a>.",
+    "nojs_html": "JavaScript est nécessaire pour envoyer ce formulaire. Contactez-nous directement : téléphone, WhatsApp, Telegram et e-mail figurent sur la page <a href=\"{url}\">Contact</a>.",
+    "hp_label": "Laissez ce champ vide",
+    "submit": "Envoyer"
+  },
+  "labels": {
+    "name": "Nom",
+    "name_full": "Nom et prénom",
+    "owner_name": "Nom et prénom du propriétaire",
+    "contact_person": "Personne à contacter",
+    "company": "Société",
+    "company_legal": "Dénomination de la société",
+    "position": "Fonction",
+    "email": "E-mail",
+    "email_corporate": "E-mail professionnel",
+    "phone": "Téléphone",
+    "telegram": "Telegram",
+    "website": "Site web de la société",
+    "jurisdiction": "Pays d’immatriculation",
+    "investment_type": "Type d’investissement",
+    "budget": "Budget",
+    "contact_method": "Moyen de contact préféré",
+    "preferred_language": "Langue de communication",
+    "preferred_language_other": "Quelle langue vous convient",
+    "property_kind": "Type de bien",
+    "owner_type": "Propriétaire du bien",
+    "owner_interest": "Que souhaitez-vous faire",
+    "list_nepokretnosti": "N° du list nepokretnosti (registre foncier)",
+    "cadastral_municipality": "Commune cadastrale (KO)",
+    "pd": "Numéro du lot (PD)",
+    "company_reg_no": "Numéro d’immatriculation de la société",
+    "asking_price": "Prix demandé, €",
+    "interest": "Qu’est-ce qui vous intéresse",
+    "rental_term": "Durée de location",
+    "move_in": "Date d’entrée souhaitée",
+    "move_in_short": "Date d’arrivée approximative",
+    "budget_month": "Budget mensuel, €",
+    "bedrooms": "Chambres",
+    "occupants": "Nombre d’occupants",
+    "pets": "Animaux",
+    "message": "Commentaire",
+    "message_owner": "À propos du bien",
+    "message_property": "Message",
+    "message_short": "Dates et souhaits",
+    "nda": "Je souhaite un NDA avant de recevoir les détails — prêt(e) à signer un accord de confidentialité",
+    "object_id": "Bien",
+    "listing_url": "Lien de l’annonce"
+  },
+  "placeholders": {
+    "name": "Comment devons-nous vous appeler",
+    "email": "nom@exemple.com",
+    "email_corporate": "nom@societe.com",
+    "phone": "+382 69 123 456",
+    "telegram": "@username",
+    "website": "societe.com",
+    "message_investor": "Objectifs, calendrier, région, mode de participation — tout ce qui nous aide à préparer des options adaptées",
+    "message_owner": "Surface, secteur, état, délais — ce qu’un agent doit savoir",
+    "message_contact": "Votre question",
+    "message_rent": "Secteur, étage, meubles, stationnement — vos souhaits",
+    "message_short": "Quand prévoyez-vous de venir, et pour combien de temps",
+    "message_property": "Jours qui vous conviennent pour une visite, ou vos questions sur le bien"
+  },
+  "hints": {
+    "phone": "Format international, par ex. +382 69 123 456.",
+    "phone_owner": "Format international avec l’indicatif du pays : +382…",
+    "phone_investor": "Obligatoire si vous choisissez un appel, WhatsApp ou Telegram.",
+    "telegram": "Votre nom d’utilisateur, par ex. @username.",
+    "email_corporate": "Une adresse sur le domaine de votre société.",
+    "cadastral": "Si vous avez les documents sous la main, la vérification du bien sera plus rapide. Vous pouvez aussi le fournir plus tard.",
+    "pd": "Pour les appartements.",
+    "asking_price": "Vous pouvez laisser ce champ vide : nous en discuterons après l’estimation.",
+    "budget_month": "Hors charges.",
+    "short_term": "La location courte durée est encore en cours de développement. Laissez vos coordonnées et nous vous préviendrons à l’ouverture de la rubrique."
+  },
+  "options": {
+    "investment_type": {
+      "hotel": "Hôtel",
+      "development_land": "Terrain à développer",
+      "restaurant_commercial": "Restaurant / commerce",
+      "warehouse_logistics": "Entrepôt / logistique",
+      "development_partnership": "Partenariat de promotion",
+      "other": "Autre"
+    },
+    "budget": {
+      "lt_500k": "jusqu’à 500 k€",
+      "500k_2m": "500 k€ – 2 M€",
+      "2m_10m": "2–10 M€",
+      "10m_50m": "10–50 M€",
+      "gt_50m": "plus de 50 M€",
+      "undisclosed": "Je préfère ne pas le préciser"
+    },
+    "contact_method": {
+      "email": "E-mail",
+      "phone": "Appel téléphonique",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "video_call": "Appel vidéo"
+    },
+    "preferred_language": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski / Srpski",
+      "uk": "Українська",
+      "other": "Autre (à préciser)"
+    },
+    "property_kind": {
+      "apartment": "Appartement",
+      "house": "Maison",
+      "land": "Terrain",
+      "construction_project": "Projet de construction",
+      "business": "Entreprise en activité"
+    },
+    "property_kind_desc": {
+      "apartment": "dans un immeuble ou une résidence",
+      "house": "maison ou villa",
+      "land": "terrain à bâtir",
+      "construction_project": "bien en construction ou projet",
+      "business": "restaurant, commerce, hôtel"
+    },
+    "owner_type": {
+      "individual": "Personne physique",
+      "company": "Personne morale"
+    },
+    "owner_interest": {
+      "sell": "Vendre",
+      "rent_out": "Mettre en location",
+      "management": "Confier la gestion"
+    },
+    "interest": {
+      "buy": "Achat d’un bien",
+      "rent": "Location longue durée",
+      "invest": "Investissement",
+      "sell": "Vente d’un bien",
+      "rent_out": "Mise en location d’un bien",
+      "management": "Gestion de biens",
+      "other": "Autre chose"
+    },
+    "rental_term": {
+      "off_season": "Jusqu’au début de la saison",
+      "year": "À l’année",
+      "short_term": "Courte durée"
+    },
+    "bedrooms": {
+      "0": "Studio",
+      "1": "1 chambre",
+      "2": "2 chambres",
+      "3": "3 chambres",
+      "4": "4 ou plus"
+    },
+    "pets": {
+      "no": "Non",
+      "cat": "Chat",
+      "dog": "Chien",
+      "other": "Autre"
+    }
+  },
+  "investor": {
+    "tabs_aria": "Qui fait la demande",
+    "tab_private": "Particulier",
+    "tab_company": "Société",
+    "no_documents": "Nous ne demandons ni pièce d’identité ni documents financiers à ce stade.",
+    "submit": "Envoyer la demande"
+  },
+  "owner": {
+    "submit": "Confier votre bien"
+  },
+  "contact": {
+    "submit": "Envoyer le message"
+  },
+  "rent": {
+    "submit": "Trouvez-moi une location",
+    "submit_short": "Me prévenir à l’ouverture"
+  },
+  "property": {
+    "title": "Demander une visite ou des informations",
+    "intro": "Bien {id}. Indiquez un moyen de vous joindre : nous vous enverrons les détails et organiserons une visite.",
+    "submit": "Demander une visite"
+  },
+  "js": {
+    "required": "Veuillez remplir ce champ.",
+    "required_choice": "Veuillez choisir une option.",
+    "email": "Vérifiez l’adresse e-mail, par ex. nom@exemple.com.",
+    "phone": "Saisissez le numéro au format international, par ex. +382 69 123 456.",
+    "telegram": "Saisissez votre Telegram sous la forme @username.",
+    "url": "Vérifiez l’adresse du site, par ex. societe.com.",
+    "number": "Saisissez un nombre.",
+    "number_min": "La valeur ne peut pas être inférieure à {min}.",
+    "date": "Saisissez une date.",
+    "date_past": "La date ne peut pas être passée.",
+    "contact_one": "Indiquez un téléphone, un Telegram ou un e-mail — au moins un moyen de vous joindre.",
+    "consent": "Nous ne pouvons pas répondre à votre demande sans votre consentement au traitement des données.",
+    "summary": "Pas encore envoyé — vérifiez les champs signalés ({n}) :",
+    "sending": "Envoi…",
+    "success_title": "Merci, votre demande a bien été envoyée",
+    "success_text": "Nous avons bien reçu vos informations et vous recontacterons rapidement.",
+    "success_again": "Envoyer une autre demande",
+    "fallback_title": "Envoyez votre demande directement",
+    "fallback_offline": "L’envoi en ligne depuis le site n’est pas encore activé. Vos informations restent dans le formulaire — envoyez le texte préparé par le moyen de votre choix :",
+    "fallback_error": "Nous n’avons pas pu envoyer votre demande via le site. Vos informations restent dans le formulaire — envoyez le texte préparé par le moyen de votre choix :",
+    "summary_heading": "Texte de la demande",
+    "channel_whatsapp": "Envoyer via WhatsApp",
+    "channel_telegram": "Ouvrir Telegram",
+    "telegram_note": "Le texte de la demande a été copié : collez-le dans la conversation avec l’agent.",
+    "channel_email": "Envoyer par e-mail",
+    "channel_copy": "Copier le texte",
+    "copied": "Texte copié.",
+    "copy_failed": "Impossible de copier : sélectionnez le texte manuellement.",
+    "text_header": "Demande depuis le site Gurevic Real Estate — {form}",
+    "text_page": "Page",
+    "email_subject": "Demande depuis le site : {form}",
+    "yes": "oui",
+    "no": "non",
+    "form_names": {
+      "investor": "investisseur privé",
+      "investor_company": "investisseur — société",
+      "owner": "propriétaire",
+      "contact": "formulaire de contact",
+      "rent_request": "demande de location",
+      "buy_request": "demande d’achat",
+      "property_request": "demande sur un bien",
+      "chat": "chat du site"
+    }
+  }
+}

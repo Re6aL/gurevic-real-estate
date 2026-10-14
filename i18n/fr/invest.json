@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Opportunités d’investissement au Monténégro | GUREVIĆ",
+    "description": "Hôtels, terrains à développer, restaurants, entrepôts et immobilier commercial au Monténégro. Recherche confidentielle, NDA, accompagnement juridique initial."
+  },
+  "h1": "Opportunités d’investissement au Monténégro",
+  "hero": {
+    "kicker": "Recherche confidentielle pour investisseurs",
+    "lead": "Hôtels, terrains à développer, restaurants en activité et immobilier commercial, entrepôts et logistique. Nous identifions les actifs qui répondent au cahier des charges de l’investisseur et communiquons les détails une fois la demande qualifiée.",
+    "sub": "Conception et construction par des partenaires agréés. Nous assurons nous-mêmes l’accompagnement juridique initial, puis transmettons le projet à des spécialistes.",
+    "cta": "Discuter d’un investissement",
+    "image_alt": "Le littoral monténégrin au coucher du soleil : montagnes, baie et vieille ville au loin"
+  },
+  "focus": {
+    "kicker": "Classes d’actifs",
+    "title": "Axes d’investissement",
+    "sub": "Les quatre domaines dans lesquels nous intervenons. Leurs pages détaillent ce que nous vérifions avant une transaction et les actifs actuellement disponibles.",
+    "more": "En savoir plus",
+    "items": {
+      "hotels": {
+        "title": "Hôtels",
+        "text": "Hôtels en activité et bâtiments se prêtant à un usage hôtelier sur la côte.",
+        "alt": "Terrasse d’un hôtel-boutique avec piscine au-dessus d’une baie — illustration"
+      },
+      "land": {
+        "title": "Terrains à développer",
+        "text": "Terrains destinés à la promotion : hôtels, appartements, logistique.",
+        "alt": "Terrain côtier en pente planté d’oliviers — illustration"
+      },
+      "commercial": {
+        "title": "Restaurants en activité et immobilier commercial",
+        "text": "Restaurants, commerces et bureaux, entreprises en activité avec leur équipe.",
+        "alt": "Terrasse de restaurant avec vue sur la mer — illustration"
+      },
+      "logistics": {
+        "title": "Entrepôts et logistique",
+        "text": "Entrepôts et plateformes logistiques bien desservis par la route.",
+        "alt": "Entrepôt moderne avec quais de chargement — illustration"
+      }
+    },
+    "development": {
+      "title": "Programmes immobiliers",
+      "text": "Programmes en construction sur la côte et partenariats de promotion.",
+      "link": "Voir les programmes"
+    }
+  },
+  "cases": {
+    "kicker": "Illustrative Investment Cases",
+    "kicker_lang": "en",
+    "title": "Cas d’investissement illustratifs",
+    "sub": "Quatre exemples anonymisés qui donnent la mesure et la nature des opportunités.",
+    "disclaimer_label": "À noter",
+    "disclaimer": "Ces cas sont anonymisés et ne constituent pas une offre publique. Les adresses exactes et les éléments d’identification ne sont pas communiqués. Tous les chiffres sont préliminaires : ils proviennent des vendeurs ou de références de marché et doivent être vérifiés lors de la due diligence.",
+    "preliminary": "Préliminaire, à vérifier",
+    "cta": "Demander des détails",
+    "million": "{n} M€",
+    "per_m2": "{price} le m²",
+    "about": "environ {price}",
+    "from": "à partir de {price}",
+    "labels": {
+      "area": "Surface",
+      "land_area": "Surface du terrain",
+      "price_guide": "Prix indicatif",
+      "value_guide": "Valeur indicative",
+      "profit_declared": "Bénéfice annuel déclaré par le vendeur",
+      "build_cost": "Coût de construction de référence",
+      "sales_prices": "Prix de vente dans le secteur",
+      "potential": "Potentiel",
+      "format": "Format"
+    },
+    "items": {
+      "hotel": {
+        "type": "Hôtel",
+        "title": "Hôtel, Budva",
+        "note": "Bénéfice déclaré par le vendeur, non vérifié."
+      },
+      "land": {
+        "type": "Terrain à développer",
+        "title": "Terrain à développer, Buljarica",
+        "note": "Les prix de vente sont une référence de marché pour le secteur, et non une prévision de rendement."
+      },
+      "coastal": {
+        "type": "Site à développer",
+        "title": "Site côtier à développer",
+        "potential": "projet hôtelier et à usage mixte",
+        "note": "La constructibilité dépend des conditions d’urbanisme, vérifiées lors de la due diligence."
+      },
+      "restaurant": {
+        "type": "Restaurant",
+        "title": "Restaurant en activité",
+        "format": "une entreprise en activité, avec une équipe en place et une clientèle fidèle",
+        "note": "Les chiffres d’exploitation sont communiqués sur demande — tels que fournis par le vendeur, puis vérifiés."
+      }
+    }
+  },
+  "support": {
+    "kicker": "Partenaires",
+    "title": "Accompagnement des projets",
+    "lead": "Lorsqu’un projet nécessite conception et construction, nous faisons appel à des partenaires agréés au Monténégro. Notre propre rôle est clairement défini : accompagnement juridique initial et coordination au démarrage.",
+    "image_alt": "Structure en béton et grues au bord de la mer — illustration",
+    "items": {
+      "legal": {
+        "title": "Accompagnement juridique initial",
+        "text": "Nous obtenons et recoupons les principaux documents de l’actif, listons les questions à poser au vendeur et préparons le terrain de la due diligence."
+      },
+      "design": {
+        "title": "Conception et construction",
+        "text": "Des partenaires agréés pour la conception et la construction interviennent dès que le projet passe au concept, aux permis et aux travaux."
+      },
+      "handover": {
+        "title": "Relais aux spécialistes",
+        "text": "Les travaux juridiques, fiscaux et techniques ultérieurs sont menés par des spécialistes. Nous leur transmettons le projet avec les éléments déjà réunis."
+      }
+    }
+  },
+  "process": {
+    "kicker": "Processus confidentiel",
+    "title": "Traitement d’une demande",
+    "sub": "Cinq étapes, du premier message à l’examen d’un actif.",
+    "more": "En savoir plus sur le processus",
+    "steps": {
+      "request": {
+        "title": "Demande",
+        "text": "Vous décrivez votre projet : type d’actif, budget, calendrier et mode de participation."
+      },
+      "qualification": {
+        "title": "Qualification de l’investisseur",
+        "text": "Nous précisons vos objectifs et les paramètres de l’opération. Aucune pièce d’identité ni aucun document financier n’est demandé à ce stade."
+      },
+      "nda": {
+        "title": "NDA si nécessaire",
+        "text": "Si vous ou le vendeur le demandez, un accord de confidentialité est signé avant toute communication de détails."
+      },
+      "selection": {
+        "title": "Sélection des actifs",
+        "text": "Nous présentons les actifs correspondant à vos critères, avec les informations que nous sommes autorisés à communiquer."
+      },
+      "due_diligence": {
+        "title": "Due diligence",
+        "text": "Examen des documents, de l’état technique et des données financières, avec le concours de spécialistes."
+      }
+    }
+  },
+  "enquiry": {
+    "kicker": "Demande privée",
+    "title": "Demande d’investisseur",
+    "lead": "Décrivez votre projet : nous vous répondrons personnellement et vous proposerons la prochaine étape.",
+    "aside_title": "Confidentialité",
+    "points": {
+      "addresses": "Nous ne publions ni les adresses exactes ni les éléments permettant d’identifier les actifs : les détails sont communiqués une fois la demande qualifiée.",
+      "nda": "Nous pouvons travailler sous NDA : cochez la case dans le formulaire, et l’accord sera signé avant toute communication de détails.",
+      "company": "Les représentants de sociétés disposent d’un formulaire distinct, avec les informations sur la société.",
+      "documents": "Nous ne demandons ni pièce d’identité ni documents financiers à la première étape."
+    },
+    "company_link": "Ouvrir le formulaire société",
+    "direct": "Vous préférez écrire directement ?"
+  },
+  "final": {
+    "kicker": "Off-market",
+    "title": "Demander des opportunités confidentielles",
+    "text": "Certains actifs ne sont pas publiés. Envoyez une demande : après qualification et, si nécessaire, signature d’un NDA, nous vous communiquerons ce qui correspond à vos critères.",
+    "cta": "Demander des opportunités",
+    "chat": "Poser une question dans le chat"
+  },
+  "cat": {
+    "kicker": "Investir au Monténégro",
+    "cta": "Envoyer une demande",
+    "analyse": {
+      "kicker": "Due diligence",
+      "title": "Ce que nous analysons",
+      "sub": "Avant de recommander un actif, nous vérifions ses paramètres clés. L’examen approfondi est confié à des spécialistes.",
+      "items": {
+        "ownership": {
+          "title": "Propriété et charges",
+          "text": "Extrait du registre foncier (list nepokretnosti), historique des droits, hypothèques, saisies et autres restrictions."
+        },
+        "planning": {
+          "title": "Conditions d’urbanisme et permis",
+          "text": "Usage autorisé, paramètres de construction, existence et statut des permis."
+        },
+        "technical": {
+          "title": "État technique",
+          "text": "Structure et équipements techniques, conformité du bien à ses documents."
+        },
+        "financials": {
+          "title": "Données financières",
+          "text": "Chiffre d’affaires et charges déclarés par le vendeur, et leur vérification sur pièces."
+        },
+        "comparables": {
+          "title": "Références de marché",
+          "text": "Prix demandés et prix de transaction d’actifs comparables dans le secteur."
+        },
+        "exit": {
+          "title": "Scénarios de sortie",
+          "text": "Revente, location, changement d’usage : quels scénarios sont réalistes pour l’actif."
+        }
+      }
+    },
+    "listings": {
+      "title": "Opportunités disponibles",
+      "note": "Les actifs confidentiels sont présentés de façon anonymisée : sans adresse ni photos, avec un prix indicatif. Détails sur demande."
+    },
+    "process_title": "Comment ça se passe"
+  },
+  "categories": {
+    "hotels": {
+      "meta": {
+        "title": "Hôtels au Monténégro pour investisseurs | GUREVIĆ",
+        "description": "Hôtels et actifs hôteliers au Monténégro pour investisseurs : recherche confidentielle, NDA sur demande, examen des documents et des chiffres du vendeur."
+      },
+      "h1": "Hôtels au Monténégro pour investisseurs",
+      "intro": "Hôtels en activité et bâtiments se prêtant à un usage hôtelier sur la côte. Nous les présentons de façon anonymisée et communiquons les détails une fois la demande qualifiée, sous NDA si nécessaire.",
+      "image_alt": "Terrasse d’un hôtel-boutique avec piscine au-dessus d’une baie — illustration",
+      "points_title": "Ce que nous examinons pour un hôtel",
+      "points": {
+        "rooms": "Nombre de chambres, catégorie et taux d’occupation — selon le vendeur, puis vérifiés.",
+        "operations": "Modèle d’exploitation : gestion, personnel, contrats avec les tour-opérateurs et les plateformes de réservation.",
+        "expansion": "Possibilités de rénovation ou d’extension dans le cadre des conditions d’urbanisme."
+      },
+      "form_title": "Demande — hôtels",
+      "form_intro": "Indiquez votre budget et votre mode de participation : nous sélectionnerons des actifs et communiquerons les détails une fois la demande qualifiée."
+    },
+    "land": {
+      "meta": {
+        "title": "Terrains à développer au Monténégro | GUREVIĆ",
+        "description": "Terrains destinés à la promotion au Monténégro : hôtels, appartements, logistique. Analyse des conditions d’urbanisme et partenaires agréés pour vos projets."
+      },
+      "h1": "Terrains à développer au Monténégro",
+      "intro": "Terrains destinés à la promotion : hôtels, appartements, logistique. Nous commençons par les conditions d’urbanisme : ce sont elles qui déterminent ce qui peut être construit, et dans quelles proportions.",
+      "image_alt": "Terrain côtier en pente planté d’oliviers — illustration",
+      "points_title": "Ce que nous examinons pour un terrain",
+      "points": {
+        "planning": "Conditions d’urbanisme : usage autorisé, densité et nombre d’étages.",
+        "access": "Accès, réseaux, topographie et nature du sol.",
+        "benchmarks": "Coûts de construction et prix de vente locaux de référence — comme repères de marché, et non comme prévisions."
+      },
+      "form_title": "Demande — terrains",
+      "form_intro": "Décrivez votre projet : usage envisagé, surface du terrain et budget. Nos partenaires en conception interviennent lorsque le projet atteint ce stade."
+    },
+    "commercial": {
+      "meta": {
+        "title": "Immobilier commercial au Monténégro | GUREVIĆ",
+        "description": "Restaurants en activité, commerces et bureaux, entrepôts et logistique au Monténégro. Recherche confidentielle et analyse des chiffres d’exploitation."
+      },
+      "h1": "Restaurants, immobilier commercial et entrepôts",
+      "intro": "Restaurants en activité, commerces et bureaux, entreprises en activité, ainsi qu’entrepôts et actifs logistiques. Les chiffres d’exploitation proviennent du vendeur et sont vérifiés avant toute transaction.",
+      "image_alt": "Terrasse de restaurant avec vue sur la mer — illustration",
+      "points_title": "Ce que nous examinons pour l’immobilier commercial",
+      "points": {
+        "leases": "Baux en cours et leurs conditions, si le bien est loué.",
+        "business": "Équipe, fournisseurs et autorisations de l’entreprise en activité.",
+        "revenue": "Chiffre d’affaires et charges justifiés par des documents, et pas seulement par la parole du vendeur."
+      },
+      "logistics": {
+        "title": "Entrepôts et logistique",
+        "text": "Entrepôts et plateformes logistiques. Nous examinons l’accès poids lourds, la hauteur sous plafond, les quais de chargement et la proximité des grands axes et du port de Bar.",
+        "image_alt": "Entrepôt moderne avec quais de chargement — illustration",
+        "cta": "Demande — entrepôts"
+      },
+      "form_title": "Demande — immobilier commercial",
+      "form_intro": "Pour les entrepôts et la logistique, choisissez « Entrepôt / logistique » comme type d’investissement."
+    },
+    "development": {
+      "meta": {
+        "title": "Programmes immobiliers au Monténégro | GUREVIĆ",
+        "description": "Programmes immobiliers au Monténégro : caractéristiques, lots et conditions. Partenariats de promotion et partenaires agréés en conception et construction."
+      },
+      "h1": "Programmes immobiliers au Monténégro",
+      "intro": "Programmes en construction sur la côte et opportunités de partenariat de promotion. Les noms et les photos des programmes sont publics ; les conditions et les prix actuels sont communiqués sur demande.",
+      "image_alt": "Structure en béton et grues au bord de la mer — illustration",
+      "points_title": "Ce que nous examinons pour un programme",
+      "points": {
+        "permits": "Permis de construire et état réel d’avancement des travaux.",
+        "developer": "Le promoteur : programmes déjà livrés et structure des contrats avec les acquéreurs.",
+        "schedule": "Échéancier de paiement et dates de livraison — tels que fixés dans le contrat, et non dans la brochure."
+      },
+      "listings_title": "Programmes",
+      "listings_note": "Caractéristiques, lots et prix actuels sur demande.",
+      "form_title": "Demande — programmes",
+      "form_intro": "Indiquez votre mode de participation — achat de lots ou partenariat dans un programme — et votre budget."
+    }
+  },
+  "js": {
+    "preselected": "Type d’investissement sélectionné dans le formulaire : {type}"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Polityka prywatności | GUREVIĆ",
+    "description": "Jak DOO GUREVIC BUDVA przetwarza dane z formularzy i czatu: co zbieramy, w jakim celu, komu przekazujemy, jak długo przechowujemy i jakie prawa mają Państwo."
+  },
+  "h1": "Polityka prywatności",
+  "kicker": "Państwa dane",
+  "lead": "Jakie dane otrzymujemy za pośrednictwem tej strony, do czego są nam potrzebne, komu są przekazywane i jak mogą Państwo nimi zarządzać.",
+  "updated": "Data ostatniej aktualizacji: październik 2026",
+  "toc_title": "Spis treści",
+  "back_to_top": "Powrót do spisu treści",
+  "sections": {
+    "controller": {
+      "title": "Kto odpowiada za Państwa dane",
+      "p1_html": "Administratorem Państwa danych osobowych jest <strong>{legal}</strong>, agencja nieruchomości {brand}, Budva, Czarnogóra. We wszystkich sprawach dotyczących Państwa danych prosimy pisać na adres <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>.",
+      "p2": "Niniejsza polityka dotyczy tej strony internetowej i wszystkich jej wersji językowych. Jeśli kontaktują się Państwo z nami bezpośrednio — telefonicznie, przez komunikatory lub e-mailem — do tych danych stosuje się te same zasady."
+    },
+    "data": {
+      "title": "Jakie dane otrzymujemy",
+      "p1": "Otrzymujemy wyłącznie to, co sami Państwo wpiszą w formularzach lub przekażą na czacie, a także informacje techniczne, bez których strona nie może działać. Zakres danych zależy od formularza:",
+      "list": {
+        "contact_html": "<strong>Formularz kontaktowy i zapytanie o zakup</strong> — imię; telefon, Telegram lub e-mail (wystarczy jeden sposób); temat; preferowany język; treść wiadomości.",
+        "rent_html": "<strong>Zapytanie o wynajem</strong> — okres najmu, planowana data wprowadzenia się, budżet miesięczny, liczba sypialni i osób, zwierzęta, imię, dane kontaktowe, komentarz. Formularz powiadomienia o wynajmie krótkoterminowym zbiera imię, dane kontaktowe, preferowaną datę i komentarz.",
+        "property_html": "<strong>Zapytanie o ofertę</strong> — imię, dane kontaktowe, wiadomość, a także numer oferty i adres strony nieruchomości, o którą Państwo pytają.",
+        "investor_html": "<strong>Zapytanie inwestycyjne (inwestor prywatny)</strong> — imię i nazwisko, e-mail, rodzaj inwestycji, przedział budżetu, preferowana forma kontaktu, telefon lub Telegram (jeśli wybrali Państwo te sposoby), komentarz, prośba o NDA.",
+        "investor_company_html": "<strong>Zapytanie inwestycyjne (przedstawiciel firmy)</strong> — te same dane, a ponadto nazwa firmy, stanowisko, służbowy e-mail oraz opcjonalnie strona internetowa i jurysdykcja firmy.",
+        "owner_html": "<strong>Zgłoszenie właściciela</strong> — rodzaj nieruchomości i zadanie (sprzedaż, wynajem, zarządzanie); w przypadku osoby fizycznej — imię i nazwisko właściciela, numer list nepokretnosti (wypisu z rejestru nieruchomości), gmina katastralna (KO) oraz, w przypadku mieszkania, numer lokalu (PD); w przypadku podmiotu prawnego — nazwa, numer rejestrowy i osoba kontaktowa; telefon, e-mail, preferowany język, oczekiwana cena, opis nieruchomości.",
+        "chat_html": "<strong>Asystent czatu</strong> — Państwa odpowiedzi na pytania czatu (cel, rodzaj nieruchomości, budżet, lokalizacja), imię, dane kontaktowe i zapis rozmowy. Czat działa według stałego scenariusza; zapis rozmowy jest przesyłany do nas dopiero po potwierdzeniu wysłania."
+      },
+      "p2": "Wraz z każdym zapytaniem automatycznie przekazywane są: język i adres strony, z której zostało wysłane, czas wysłania, czas wypełniania formularza (ochrona przed spamem), wersja zgody oraz znaczniki kampanii (UTM), jeśli trafili Państwo na stronę przez link, który je zawiera.",
+      "p3": "Za pośrednictwem tej strony nie prosimy o dane paszportowe, dane bankowe ani dokumenty finansowe. Prosimy nie podawać ich w komentarzach.",
+      "p4": "Przy każdym otwarciu strony dostawca hostingu automatycznie otrzymuje dane techniczne: adres IP, informacje o przeglądarce i urządzeniu, adres żądanej strony i czas żądania. Tak działa każdy serwer WWW; szczegóły w sekcji „Komu przekazywane są dane”."
+    },
+    "purposes": {
+      "title": "W jakim celu wykorzystujemy dane",
+      "list": {
+        "respond": "aby odpowiedzieć na Państwa zapytanie i skontaktować się w wybrany przez Państwa sposób;",
+        "select": "aby dobrać nieruchomości, zorganizować prezentacje i przygotować propozycję zgodnie z Państwa zapytaniem;",
+        "owner": "aby wycenić nieruchomość właściciela, przygotować umowę i rozpocząć sprzedaż lub wynajem;",
+        "invest": "aby przeprowadzić wstępną kwalifikację zapytania inwestycyjnego i w razie potrzeby przygotować NDA;",
+        "contract": "aby zawrzeć i wykonać umowę z Państwem;",
+        "security": "aby chronić stronę i formularze przed spamem i nadużyciami;",
+        "utm": "aby wiedzieć, które linki reklamowe przynoszą zapytania (wyłącznie znaczniki UTM, bez śledzenia Państwa zachowania na stronie)."
+      },
+      "p1": "Nie sprzedajemy danych, nie wykorzystujemy ich do zautomatyzowanego podejmowania decyzji i nie wysyłamy informacji marketingowych bez Państwa odrębnej zgody."
+    },
+    "bases": {
+      "title": "Podstawy prawne",
+      "p1": "Przetwarzamy dane zgodnie z czarnogórskimi przepisami o ochronie danych osobowych, a w przypadku odwiedzających z Unii Europejskiej — z uwzględnieniem ogólnego rozporządzenia UE o ochronie danych (RODO, GDPR). Podstawy prawne przetwarzania to:",
+      "list": {
+        "consent_html": "<strong>Zgoda.</strong> Wyrażają ją Państwo, zaznaczając pole przy wysyłaniu formularza lub potwierdzając wysłanie na czacie. Zgodę można wycofać w dowolnym momencie; nie wpływa to na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.",
+        "contract_html": "<strong>Działania przed zawarciem umowy i jej wykonanie.</strong> Gdy proszą nas Państwo o znalezienie lub wycenę nieruchomości, przygotowanie umowy albo obsługę transakcji.",
+        "interest_html": "<strong>Prawnie uzasadniony interes.</strong> Ochrona strony przed spamem i nadużyciami (ukryte pole-pułapka dla botów, sprawdzanie czasu wypełniania formularza) oraz ewidencja zapytań.",
+        "law_html": "<strong>Obowiązek prawny.</strong> Gdy przechowywanie określonych danych lub dokumentów jest wymagane przez prawo, na przykład w związku z zawartą umową."
+      }
+    },
+    "recipients": {
+      "title": "Komu przekazywane są dane",
+      "p1": "Dostęp do zapytań ma wyłącznie agencja. Do obsługi strony korzystamy z usług następujących firm; przetwarzają one dane w naszym imieniu lub na własnych zasadach, jak opisano poniżej.",
+      "list": {
+        "notion_html": "<strong>Notion Labs, Inc.</strong> (USA) — system CRM, w którym przechowywane są zapytania ze strony.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) — przekazuje dane z formularzy do CRM (po uruchomieniu tej usługi). Cloudflare otrzymuje dane zapytania i adres IP nadawcy wyłącznie w celu dostarczenia zapytania.",
+        "telegram_html": "<strong>Telegram</strong> — krótkie wewnętrzne powiadomienie dla agenta o nowym zapytaniu (jeśli powiadomienia są włączone): rodzaj zapytania, imię i główne parametry, bez telefonu, e-maila, numerów katastralnych i rejestrowych.",
+        "github_html": "<strong>GitHub, Inc.</strong> (USA) — hosting strony (GitHub Pages). GitHub otrzymuje dane techniczne o odwiedzinach (adres IP, przeglądarka, żądana strona) i przechowuje je w logach serwera na własnych zasadach.",
+        "google_html": "<strong>Google</strong> — mapa na stronie oferty. Ładuje się dopiero po kliknięciu przycisku wczytania mapy; wcześniej do Google nic nie jest przesyłane. Po wczytaniu mapy Google otrzymuje Państwa adres IP i może używać własnych plików cookie.",
+        "osm_html": "<strong>OpenStreetMap i unpkg.com</strong> — mapa na stronie „Mapa ofert”. Po jej otwarciu przeglądarka pobiera bibliotekę map Leaflet z serwisu unpkg.com i fragmenty mapy z serwerów OpenStreetMap; serwery te otrzymują Państwa adres IP.",
+        "messengers_html": "<strong>WhatsApp, Telegram, e-mail</strong> — jeśli piszą Państwo do nas bezpośrednio lub wysyłają zapytanie tymi kanałami (w tym za pomocą zapasowych przycisków formularza), dane przetwarza wybrany przez Państwa serwis na własnych zasadach."
+      },
+      "p2": "Prawnicy i inni partnerzy agencji otrzymują dane wyłącznie za Państwa wiedzą i tylko w zakresie, jakiego wymaga Państwa sprawa, na przykład do weryfikacji dokumentów nieruchomości. Organom publicznym ujawniamy dane wyłącznie wtedy, gdy wymaga tego prawo."
+    },
+    "transfers": {
+      "title": "Przekazywanie danych poza Czarnogórę",
+      "p1": "Niektóre z wymienionych firm mają siedzibę poza Czarnogórą, w tym w USA. Przy takim przekazywaniu opieramy się na umownych zabezpieczeniach stosowanych przez te firmy, takich jak standardowe klauzule umowne dotyczące ochrony danych. Szczegóły można uzyskać na zapytanie wysłane e-mailem."
+    },
+    "retention": {
+      "title": "Jak długo przechowujemy dane",
+      "p1": "Co do zasady zapytania i korespondencję przechowujemy do 24 miesięcy od ostatniego kontaktu z Państwem, a następnie je usuwamy lub anonimizujemy. Jeśli zawarliśmy umowę, związane z nią dane przechowujemy tak długo, jak wymagają tego umowa i przepisy prawa.",
+      "p2": "Logi techniczne usług hostingu i dostarczania są przechowywane przez okresy ustalone przez te firmy.",
+      "p3": "Wpisy w pamięci Państwa przeglądarki pozostają na Państwa urządzeniu (zob. sekcja „Pliki cookie i pamięć przeglądarki”)."
+    },
+    "rights": {
+      "title": "Państwa prawa",
+      "p1": "Mają Państwo prawo do:",
+      "list": {
+        "access": "uzyskania informacji, jakie Państwa dane przetwarzamy, oraz otrzymania ich kopii;",
+        "rectification": "sprostowania nieprawidłowych lub uzupełnienia niekompletnych danych;",
+        "erasure": "żądania usunięcia danych;",
+        "restriction": "żądania ograniczenia przetwarzania;",
+        "objection": "wniesienia sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie;",
+        "portability": "otrzymania przekazanych przez Państwa danych w formacie nadającym się do odczytu maszynowego;",
+        "withdraw": "wycofania zgody w dowolnym momencie;",
+        "complaint": "wniesienia skargi do organu nadzorczego."
+      },
+      "p2_html": "Aby skorzystać ze swoich praw, prosimy napisać na adres <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>. Możemy poprosić o potwierdzenie, że żądanie pochodzi od Państwa, i odpowiemy w terminie przewidzianym przez prawo.",
+      "p3_html": "Organem nadzorczym w Czarnogórze jest <strong>Agencja Ochrony Danych Osobowych i Swobodnego Dostępu do Informacji</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Jeśli przebywają Państwo w Unii Europejskiej, mogą Państwo również zwrócić się do organu nadzorczego swojego państwa."
+    },
+    "storage": {
+      "title": "Pliki cookie i pamięć przeglądarki",
+      "p1": "Ta strona nie używa plików cookie do analityki ani reklamy i nie zawiera liczników odwiedzin.",
+      "p2": "Dla wygody strona zapisuje w Państwa przeglądarce kilka wpisów technicznych. Nie są one przesyłane do nas ani wykorzystywane do śledzenia:",
+      "list": {
+        "local_html": "<strong>localStorage</strong> — wybrany język strony (także wtedy, gdy zamkną Państwo podpowiedź o zmianie języka). Wpis pozostaje do czasu jego usunięcia.",
+        "session_html": "<strong>sessionStorage</strong> — informacja, że ekran powitalny strony głównej został już wyświetlony, znaczniki kampanii (UTM) oraz wersja robocza niedokończonego formularza. Wpisy te są usuwane po zamknięciu karty; wersja robocza — również po pomyślnym wysłaniu."
+      },
+      "p3": "Wpisy te można usunąć w ustawieniach przeglądarki, a strona nadal będzie działać. Usługi stron trzecich (mapa Google po jej wczytaniu, WhatsApp, Telegram) mogą używać własnych plików cookie na własnych zasadach."
+    },
+    "security": {
+      "title": "Bezpieczeństwo danych",
+      "p1": "Stosujemy rozsądne środki organizacyjne i techniczne: dane z formularzy są przesyłane bezpiecznym połączeniem (HTTPS), dostęp do CRM jest ograniczony, a klucze dostępu do usług nigdy nie są publikowane na stronie."
+    },
+    "children": {
+      "title": "Dzieci",
+      "p1": "Ta strona nie jest przeznaczona dla osób poniżej 18. roku życia i świadomie nie zbieramy ich danych. Jeśli uważają Państwo, że dziecko przekazało nam swoje dane, prosimy o kontakt — usuniemy je."
+    },
+    "changes": {
+      "title": "Zmiany polityki",
+      "p1": "Możemy aktualizować niniejszą politykę, na przykład gdy zaczniemy korzystać z nowych usług. Aktualna wersja jest zawsze opublikowana na tej stronie, a data ostatniej aktualizacji znajduje się na jej początku."
+    },
+    "contacts": {
+      "title": "Jak się z nami skontaktować",
+      "p1_html": "<strong>{legal}</strong>, Budva, Czarnogóra. E-mail w sprawach danych osobowych: <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gurevic-lead-worker",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker: website forms -> Notion 'Website Leads' (+ Telegram)",
+  "scripts": {
+    "test": "node --test",
+    "deploy": "npx wrangler deploy"
+  }
+}

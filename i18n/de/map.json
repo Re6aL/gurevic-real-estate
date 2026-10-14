@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Immobilienkarte: Budva und Montenegro | GUREVIĆ",
+    "description": "Objekte von GUREVIĆ auf der Karte von Budva und Montenegro: Wohnungen, Häuser, Grundstücke und Bauprojekte nach Lage. Punkt wählen und Objektseite öffnen."
+  },
+  "h1": "Immobilienkarte",
+  "lead": "Objekte aus dem Katalog auf einer Karte der Küste. Vertrauliche Investitionsangebote werden auf der Karte nicht angezeigt.",
+  "filters": {
+    "aria": "Bereich",
+    "all": "Alle",
+    "buy": "Kaufen",
+    "rent": "Mieten",
+    "invest": "Projekte"
+  },
+  "view": {
+    "aria": "Ansicht",
+    "list": "Liste",
+    "map": "Karte"
+  },
+  "legend": {
+    "exact": "Position laut Objektdaten",
+    "approx": "Ungefähr: Mitte des Gebiets"
+  },
+  "list_title": "Objekte auf der Karte",
+  "map_aria": "Interaktive Immobilienkarte",
+  "noscript": "Für die Karte wird JavaScript benötigt. Die Objektliste finden Sie weiter unten.",
+  "empty": "In diesem Bereich gibt es noch keine Objekte auf der Karte.",
+  "js": {
+    "count": {
+      "one": "{n} Objekt",
+      "other": "{n} Objekte"
+    },
+    "details": "Details ansehen",
+    "approx": "Ungefähr – Mitte des Gebiets",
+    "zoom_in": "Vergrößern",
+    "zoom_out": "Verkleinern",
+    "load_error": "Die Karte konnte nicht geladen werden. Die Objektliste finden Sie auf der Seite.",
+    "show_on_map": "Auf der Karte zeigen"
+  }
+}

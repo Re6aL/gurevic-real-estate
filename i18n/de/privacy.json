@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Datenschutzerklärung | GUREVIĆ",
+    "description": "Wie DOO GUREVIC BUDVA Daten aus Formularen und Chat verarbeitet: was wir erheben, wozu, wer sie erhält, wie lange wir sie speichern und welche Rechte Sie haben."
+  },
+  "h1": "Datenschutzerklärung",
+  "kicker": "Ihre Daten",
+  "lead": "Welche Daten wir über diese Website erhalten, wozu wir sie benötigen, an wen sie weitergegeben werden und wie Sie darüber bestimmen können.",
+  "updated": "Zuletzt aktualisiert: Oktober 2026",
+  "toc_title": "Inhalt",
+  "back_to_top": "Zurück zum Inhalt",
+  "sections": {
+    "controller": {
+      "title": "Wer für Ihre Daten verantwortlich ist",
+      "p1_html": "Verantwortlicher für Ihre personenbezogenen Daten ist <strong>{legal}</strong>, die Immobilienagentur {brand}, Budva, Montenegro. Bei allen Fragen zu Ihren Daten schreiben Sie an <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>.",
+      "p2": "Diese Erklärung gilt für diese Website und alle ihre Sprachversionen. Wenn Sie uns direkt kontaktieren – telefonisch, über Messenger oder per E-Mail –, gelten für diese Daten dieselben Regeln."
+    },
+    "data": {
+      "title": "Welche Daten wir erhalten",
+      "p1": "Wir erhalten nur, was Sie selbst in die Formulare eingeben oder uns im Chat mitteilen, sowie die technischen Angaben, ohne die die Website nicht funktioniert. Welche Daten das sind, hängt vom Formular ab:",
+      "list": {
+        "contact_html": "<strong>Kontaktformular und Kaufanfrage</strong> – Name; Telefon, Telegram oder E-Mail (eine Angabe genügt); Betreff; bevorzugte Sprache; Ihre Nachricht.",
+        "rent_html": "<strong>Mietanfrage</strong> – Mietdauer, gewünschtes Einzugsdatum, Monatsbudget, Anzahl der Schlafzimmer und Bewohner, Haustiere, Name, Kontaktdaten, Kommentar. Das Formular zur Benachrichtigung über die Kurzzeitmiete erfasst Name, Kontaktdaten, gewünschtes Datum und einen Kommentar.",
+        "property_html": "<strong>Anfrage zu einem Objekt</strong> – Name, Kontaktdaten, Nachricht sowie Referenznummer und Seitenadresse des Objekts, nach dem Sie fragen.",
+        "investor_html": "<strong>Investitionsanfrage (Privatanleger)</strong> – Vor- und Nachname, E-Mail, Art der Investition, Budgetrahmen, bevorzugter Kontaktweg, Telefon oder Telegram (wenn Sie diese Wege gewählt haben), Kommentar, Wunsch nach einem NDA.",
+        "investor_company_html": "<strong>Investitionsanfrage (Unternehmensvertreter)</strong> – dieselben Daten sowie Name des Unternehmens, Position, geschäftliche E-Mail und optional Website und Sitzland des Unternehmens.",
+        "owner_html": "<strong>Anfrage eines Eigentümers</strong> – Objektart und Anliegen (Verkauf, Vermietung, Verwaltung); bei Privatpersonen Vor- und Nachname des Eigentümers, Nummer des Grundbuchauszugs (list nepokretnosti), Katastralgemeinde (KO) und bei Wohnungen die Einheitsnummer (PD); bei Unternehmen Name, Registernummer und Ansprechpartner; Telefon, E-Mail, bevorzugte Sprache, Wunschpreis, Beschreibung der Immobilie.",
+        "chat_html": "<strong>Chat-Assistent</strong> – Ihre Antworten auf die Fragen im Chat (Anliegen, Objektart, Budget, Lage), Name, Kontaktdaten und der Chatverlauf. Der Chat folgt einem festen Ablauf; der Verlauf wird uns erst übermittelt, nachdem Sie das Senden bestätigt haben."
+      },
+      "p2": "Mit jeder Anfrage werden außerdem automatisch Sprache und Adresse der Seite, von der sie gesendet wurde, der Zeitpunkt des Sendens, die Ausfülldauer des Formulars (zum Schutz vor Spam), die Version der Einwilligung und Kampagnenparameter (UTM) übermittelt, sofern Sie über einen Link mit solchen Parametern auf die Website gekommen sind.",
+      "p3": "Über diese Website fragen wir weder Passdaten noch Bankverbindungen oder Finanzunterlagen ab. Bitte geben Sie solche Angaben auch nicht in Kommentaren an.",
+      "p4": "Beim Aufruf jeder Seite erhält der Hosting-Anbieter automatisch technische Daten: IP-Adresse, Angaben zu Browser und Gerät, die aufgerufene Adresse und den Zeitpunkt des Aufrufs. So funktioniert jeder Webserver; Einzelheiten finden Sie im Abschnitt „Wer die Daten erhält“."
+    },
+    "purposes": {
+      "title": "Wozu wir die Daten verwenden",
+      "list": {
+        "respond": "um Ihre Anfrage zu beantworten und Sie auf dem von Ihnen gewählten Weg zu kontaktieren;",
+        "select": "um Objekte auszuwählen, Besichtigungen zu organisieren und ein Angebot zu Ihrer Anfrage vorzubereiten;",
+        "owner": "um die Immobilie eines Eigentümers zu bewerten, einen Vertrag vorzubereiten und den Verkauf oder die Vermietung zu beginnen;",
+        "invest": "um eine Investitionsanfrage erstmals zu prüfen und bei Bedarf ein NDA vorzubereiten;",
+        "contract": "um einen Vertrag mit Ihnen abzuschließen und zu erfüllen;",
+        "security": "um die Website und die Formulare vor Spam und Missbrauch zu schützen;",
+        "utm": "um zu verstehen, über welche Werbelinks Anfragen eingehen (nur UTM-Parameter, keine Verfolgung Ihres Verhaltens auf der Website)."
+      },
+      "p1": "Wir verkaufen keine Daten, nutzen sie nicht für automatisierte Entscheidungen und versenden ohne Ihre gesonderte Einwilligung keine Werbung."
+    },
+    "bases": {
+      "title": "Rechtsgrundlagen",
+      "p1": "Wir verarbeiten Daten nach dem montenegrinischen Recht zum Schutz personenbezogener Daten und berücksichtigen für Besucher aus der Europäischen Union auch die Datenschutz-Grundverordnung der EU (DSGVO). Die Rechtsgrundlagen sind:",
+      "list": {
+        "consent_html": "<strong>Einwilligung.</strong> Sie erteilen sie, indem Sie beim Senden eines Formulars das Kästchen ankreuzen oder im Chat das Senden bestätigen. Sie können Ihre Einwilligung jederzeit widerrufen; die Rechtmäßigkeit der Verarbeitung bis zum Widerruf bleibt davon unberührt.",
+        "contract_html": "<strong>Vorvertragliche Maßnahmen und Vertragserfüllung.</strong> Wenn Sie uns bitten, eine Immobilie zu suchen oder zu bewerten, einen Vertrag vorzubereiten oder eine Transaktion zu begleiten.",
+        "interest_html": "<strong>Berechtigtes Interesse.</strong> Schutz der Website vor Spam und Missbrauch (ein verstecktes Fallenfeld für Bots, eine Prüfung der Ausfülldauer des Formulars) und die Dokumentation von Anfragen.",
+        "law_html": "<strong>Rechtliche Verpflichtung.</strong> Wenn die Aufbewahrung bestimmter Daten oder Unterlagen gesetzlich vorgeschrieben ist, etwa im Zusammenhang mit einem geschlossenen Vertrag."
+      }
+    },
+    "recipients": {
+      "title": "Wer die Daten erhält",
+      "p1": "Zugriff auf Anfragen hat nur die Agentur. Für den Betrieb der Website nutzen wir die Dienste der folgenden Unternehmen; sie verarbeiten Daten in unserem Auftrag oder nach ihren eigenen Bedingungen, wie unten beschrieben.",
+      "list": {
+        "notion_html": "<strong>Notion Labs, Inc.</strong> (USA) – das CRM-System, in dem Anfragen von der Website gespeichert werden.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) – übermittelt Formulardaten an das CRM (sobald dieser Dienst eingerichtet ist). Cloudflare erhält die Daten der Anfrage und die IP-Adresse des Absenders ausschließlich zur Zustellung der Anfrage.",
+        "telegram_html": "<strong>Telegram</strong> – eine kurze interne Benachrichtigung an den Makler über eine neue Anfrage (sofern Benachrichtigungen aktiviert sind): Art der Anfrage, Name und wichtigste Eckdaten, ohne Telefon, E-Mail, Kataster- oder Registernummern.",
+        "github_html": "<strong>GitHub, Inc.</strong> (USA) – Hosting der Website (GitHub Pages). GitHub erhält technische Daten über Besuche (IP-Adresse, Browser, aufgerufene Seite) und speichert sie nach eigenen Bedingungen in Serverprotokollen.",
+        "google_html": "<strong>Google</strong> – die Karte auf einer Objektseite. Sie wird erst geladen, nachdem Sie auf die Schaltfläche zum Laden der Karte geklickt haben; bis dahin wird nichts an Google übermittelt. Nach dem Laden erhält Google Ihre IP-Adresse und kann eigene Cookies verwenden.",
+        "osm_html": "<strong>OpenStreetMap und unpkg.com</strong> – die Karte auf der Seite „Immobilienkarte“. Beim Öffnen lädt Ihr Browser die Kartenbibliothek Leaflet von unpkg.com und Kartenkacheln von Servern von OpenStreetMap; diese Server erhalten Ihre IP-Adresse.",
+        "messengers_html": "<strong>WhatsApp, Telegram, E-Mail</strong> – wenn Sie uns direkt schreiben oder eine Anfrage über diese Kanäle senden (auch über die Ersatz-Schaltflächen eines Formulars), verarbeitet der von Ihnen gewählte Dienst die Daten nach seinen eigenen Bedingungen."
+      },
+      "p2": "Anwälte und andere Partner der Agentur erhalten Daten nur mit Ihrem Wissen und nur in dem Umfang, den Ihr Anliegen erfordert, zum Beispiel zur Prüfung der Unterlagen einer Immobilie. Behörden gegenüber legen wir Daten nur offen, wenn das Gesetz es verlangt."
+    },
+    "transfers": {
+      "title": "Übermittlung außerhalb Montenegros",
+      "p1": "Einige der genannten Unternehmen haben ihren Sitz außerhalb Montenegros, unter anderem in den USA. Bei solchen Übermittlungen stützen wir uns auf die vertraglichen Garantien dieser Unternehmen, etwa Standardvertragsklauseln zum Datenschutz. Einzelheiten erhalten Sie auf Anfrage per E-Mail."
+    },
+    "retention": {
+      "title": "Wie lange wir Daten speichern",
+      "p1": "In der Regel speichern wir Anfragen und Korrespondenz bis zu 24 Monate nach unserem letzten Kontakt mit Ihnen und löschen oder anonymisieren sie danach. Wenn wir einen Vertrag geschlossen haben, werden die zugehörigen Daten so lange aufbewahrt, wie Vertrag und Gesetz es verlangen.",
+      "p2": "Technische Protokolle des Hostings und der Zustelldienste werden für die von diesen Unternehmen festgelegten Fristen gespeichert.",
+      "p3": "Einträge im Speicher Ihres Browsers verbleiben auf Ihrem Gerät (siehe „Cookies und Browserspeicher“)."
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "p1": "Sie haben das Recht,",
+      "list": {
+        "access": "zu erfahren, welche Ihrer Daten wir verarbeiten, und eine Kopie davon zu erhalten;",
+        "rectification": "unrichtige oder unvollständige Daten berichtigen zu lassen;",
+        "erasure": "die Löschung Ihrer Daten zu verlangen;",
+        "restriction": "die Einschränkung der Verarbeitung zu verlangen;",
+        "objection": "einer auf berechtigtem Interesse beruhenden Verarbeitung zu widersprechen;",
+        "portability": "die von Ihnen bereitgestellten Daten in einem maschinenlesbaren Format zu erhalten;",
+        "withdraw": "Ihre Einwilligung jederzeit zu widerrufen;",
+        "complaint": "sich bei einer Aufsichtsbehörde zu beschweren."
+      },
+      "p2_html": "Um Ihre Rechte auszuüben, schreiben Sie an <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>. Wir können Sie bitten zu bestätigen, dass die Anfrage von Ihnen stammt, und antworten innerhalb der gesetzlichen Frist.",
+      "p3_html": "Aufsichtsbehörde in Montenegro ist die <strong>Agentur für den Schutz personenbezogener Daten und den freien Zugang zu Informationen</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Wenn Sie sich in der Europäischen Union befinden, können Sie sich auch an die Aufsichtsbehörde Ihres Landes wenden."
+    },
+    "storage": {
+      "title": "Cookies und Browserspeicher",
+      "p1": "Diese Website verwendet keine Cookies für Analyse- oder Werbezwecke und bindet keine Besucherzähler ein.",
+      "p2": "Zur Erleichterung der Nutzung speichert die Website einige technische Einträge in Ihrem Browser. Sie werden nicht an uns übermittelt und nicht zur Nachverfolgung verwendet:",
+      "list": {
+        "local_html": "<strong>localStorage</strong> – die von Ihnen gewählte Sprache der Website (auch wenn Sie den Hinweis auf eine andere Sprache schließen). Der Eintrag bleibt bestehen, bis Sie ihn löschen.",
+        "session_html": "<strong>sessionStorage</strong> – ein Vermerk, dass das Intro der Startseite bereits gezeigt wurde, Kampagnenparameter (UTM) und der Entwurf eines nicht abgeschlossenen Formulars. Diese Einträge werden beim Schließen des Tabs gelöscht, der Entwurf außerdem nach erfolgreichem Senden."
+      },
+      "p3": "Sie können diese Einträge in den Einstellungen Ihres Browsers löschen; die Website funktioniert weiterhin. Dienste Dritter (die Google-Karte, nachdem Sie sie geladen haben, WhatsApp, Telegram) können nach ihren eigenen Bedingungen eigene Cookies verwenden."
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "p1": "Wir treffen angemessene organisatorische und technische Maßnahmen: Formulardaten werden über eine gesicherte Verbindung (HTTPS) übertragen, der Zugriff auf das CRM ist beschränkt, und Zugangsschlüssel zu Diensten werden nie auf der Website veröffentlicht."
+    },
+    "children": {
+      "title": "Kinder",
+      "p1": "Diese Website richtet sich nicht an Personen unter 18 Jahren, und wir erheben wissentlich keine Daten von ihnen. Wenn Sie glauben, dass ein Kind uns seine Daten übermittelt hat, schreiben Sie uns bitte – wir löschen sie."
+    },
+    "changes": {
+      "title": "Änderungen dieser Erklärung",
+      "p1": "Wir können diese Erklärung aktualisieren, zum Beispiel wenn wir neue Dienste einsetzen. Die aktuelle Fassung ist stets auf dieser Seite veröffentlicht, das Datum der letzten Aktualisierung steht am Anfang."
+    },
+    "contacts": {
+      "title": "So erreichen Sie uns",
+      "p1_html": "<strong>{legal}</strong>, Budva, Montenegro. E-Mail für Fragen zum Datenschutz: <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>."
+    }
+  }
+}

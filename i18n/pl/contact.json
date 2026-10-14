@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Kontakt z agencją nieruchomości w Budvie | GUREVIĆ",
+    "description": "Telefon i WhatsApp +382 69 572 257, Telegram @hurewicz, e-mail i Instagram agencji GUREVIĆ. Budva, Czarnogóra; spotkania wyłącznie po umówieniu."
+  },
+  "h1": "Kontakt",
+  "kicker": "Bądźmy w kontakcie",
+  "lead": "Prosimy napisać lub zadzwonić — Ilia Gurevich odpowiada osobiście. Najszybciej skontaktują się Państwo z nami przez WhatsApp i Telegram.",
+  "channels": {
+    "title": "Jak się z nami skontaktować"
+  },
+  "location": {
+    "title": "Gdzie jesteśmy",
+    "text": "Budva, Czarnogóra — spotkania po wcześniejszym umówieniu.",
+    "note": "Miejsce i godzinę spotkania uzgadniamy z wyprzedzeniem."
+  },
+  "languages": {
+    "title": "Języki",
+    "text": "Rosyjski, angielski, czarnogórski."
+  },
+  "legal": {
+    "title": "Podmiot prawny"
+  },
+  "form": {
+    "title": "Wyślij wiadomość",
+    "intro": "Prosimy opisać swoje pytanie — odpowiemy w sposób, który Państwu odpowiada."
+  },
+  "quick": {
+    "title": "Jeśli mają Państwo konkretną sprawę",
+    "sub": "Te kierunki mają osobne formularze z odpowiednimi pytaniami.",
+    "items": {
+      "invest": {
+        "title": "Zapytanie inwestycyjne",
+        "text": "Hotele, grunty inwestycyjne, nieruchomości komercyjne. Poufnie; w razie potrzeby NDA.",
+        "link": "Przejdź do zapytania"
+      },
+      "owners": {
+        "title": "Zgłoszenie właściciela",
+        "text": "Sprzedaż lub wynajem mieszkania, domu, działki, projektu budowlanego lub firmy.",
+        "link": "Wypełnij zgłoszenie"
+      },
+      "rent": {
+        "title": "Zapytanie o wynajem",
+        "text": "Wynajem długoterminowy mieszkania lub domu: do początku sezonu lub na rok.",
+        "link": "Wyślij zapytanie"
+      }
+    }
+  },
+  "chat": {
+    "text": "Nie wiedzą Państwo, od czego zacząć? Asystent na stronie zada kilka pytań i przekaże zapytanie agentowi.",
+    "button": "Otwórz czat"
+  },
+  "jsonld": {
+    "contact_type": "Sprzedaż i wynajem"
+  }
+}

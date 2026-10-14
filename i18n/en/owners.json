@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "title": "Sell or rent out property in Budva | GUREVIĆ",
+    "description": "GUREVIĆ in Budva: valuation, photography, sale and long-term letting of apartments, houses, land and businesses in Montenegro. Commission 5% excl. VAT."
+  },
+  "h1": "Sell or rent out your property with GUREVIĆ",
+  "hero": {
+    "kicker": "For owners",
+    "lead": "We take on apartments, houses, land, construction projects and operating businesses in Budva and elsewhere in Montenegro. We value the property, prepare it for sale or rent and see it through to the deal under a written agreement.",
+    "cta_form": "Submit your property",
+    "cta_process": "How we work",
+    "facts_aria": "Key terms at a glance",
+    "facts": {
+      "commission": "Commission 5% excl. VAT",
+      "contract": "Written agreement",
+      "languages": "We speak Russian, English and Montenegrin"
+    }
+  },
+  "agency": {
+    "kicker": "About the agency",
+    "title": "A real estate agency in Budva",
+    "p1": "GUREVIĆ (DOO GUREVIC BUDVA) is a real estate agency in Budva, run by its owner and agent Ilia Gurevich. You discuss the price, the terms and the progress of the sale directly with the person who handles your deal.",
+    "p2": "We are in our third year on the Montenegrin property market and now work in a new format: separate services for buyers, tenants, investors and owners, written agreements, and partners for legal support, design and construction.",
+    "p3": "On the seller's side we also take on investment assets — development land, construction projects, hotels, restaurants and other operating businesses. Details of such assets are shared with buyers confidentially.",
+    "more": "More about the agency",
+    "kinds_title": "What we take on",
+    "kinds": {
+      "apartment": {"title": "Apartments", "text": "New builds and resale"},
+      "house": {"title": "Houses and villas", "text": "Permanent homes and holiday homes"},
+      "land": {"title": "Land", "text": "Plots for private and commercial development"},
+      "construction_project": {"title": "Construction projects", "text": "At the design or construction stage"},
+      "business": {"title": "Operating businesses", "text": "Restaurants, hotels, commercial premises"}
+    }
+  },
+  "services": {
+    "kicker": "Services",
+    "title": "How we can help",
+    "sub": "Choose a service — each page explains in detail what it includes.",
+    "more": "Learn more",
+    "items": {
+      "sell": {"title": "Selling your property", "text": "Valuation, photography, listing, viewings, negotiation and support until the contract is signed."},
+      "rent_out": {"title": "Renting out", "text": "Long-term lets — until the season or for a year: rental rate, tenant search, lease agreement."},
+      "management": {"title": "Property management", "text": "Keys, bills, property checks and coordination of contractors — by arrangement."}
+    }
+  },
+  "process": {
+    "kicker": "Our process",
+    "title": "How we work with owners",
+    "sub": "Five steps from the first conversation to the deal.",
+    "legal": "We work under a written agreement in accordance with the laws of Montenegro.",
+    "steps": {
+      "valuation": {"title": "Valuation", "text": "We view the property, review the documents and the market, and agree the asking price with you."},
+      "photo": {"title": "Photography", "text": "We photograph the property and prepare the listing description."},
+      "contract": {
+        "title": "Agreement",
+        "text": "The terms are set out in writing:",
+        "terms": {
+          "commission_html": "agency commission of <strong>5% excl. VAT</strong>, other terms by agreement;",
+          "exclusive": "an exclusive agreement is preferred;",
+          "price": "any change of price only with the owner's consent;",
+          "access": "the owner provides access to the property for viewings."
+        }
+      },
+      "marketing": {"title": "Marketing and viewings", "text": "We publish the property, answer enquiries, hold viewings on an agreed schedule and report the results to you."},
+      "deal": {"title": "The deal", "text": "We pass on offers, support you in negotiations and see the deal through to signing."}
+    },
+    "exclusive": {
+      "title": "Why an exclusive agreement",
+      "lead": "It is not mandatory, but it is more convenient for the owner.",
+      "points": {
+        "contact": "One point of contact instead of meeting every agent and agency in Montenegro.",
+        "price": "The property is on the market with one price and one description.",
+        "viewings": "Viewings follow a single agreed schedule."
+      }
+    }
+  },
+  "contract": {
+    "kicker": "Documents",
+    "title": "Sample agreement",
+    "sub": "The main sections of the agreements we sign with owners.",
+    "note": "Sample for information only — the final text is provided at signing.",
+    "download": "Download PDF",
+    "request": "Request a sample agreement",
+    "request_hint": "Send us a request and we will share a sample agreement for review.",
+    "files": {
+      "sale": "",
+      "business": ""
+    },
+    "sale": {
+      "title": "Property sale agreement — main sections",
+      "sections": {
+        "parties": {"title": "Parties", "text": "The owner — an individual or a company — and the agency DOO GUREVIC BUDVA; details and representatives of the parties."},
+        "object": {"title": "The property and its identification", "text": "Type and size of the property, title deed number (list nepokretnosti), cadastral municipality (KO) and, for an apartment, the unit number (PD)."},
+        "price": {"title": "Price and price changes", "text": "The asking price; it may only be changed with the owner's consent."},
+        "commission": {"title": "Agency fee", "text": "5% excl. VAT; when payment becomes due and how it is settled."},
+        "exclusivity": {"title": "Exclusivity and term", "text": "Exclusive or non-exclusive mandate, term of the agreement and how it is extended."},
+        "owner_duties": {"title": "Owner's obligations", "text": "Provide the property documents, give access for viewings, disclose encumbrances, tenants and other circumstances relevant to the sale."},
+        "agent_duties": {"title": "Agency's obligations", "text": "Valuation, photography, marketing, viewings, reporting to the owner, negotiation support and assistance until the contract is signed."},
+        "confidentiality": {"title": "Confidentiality", "text": "Handling of the owner's documents and personal data; which property details are published."},
+        "termination": {"title": "Termination", "text": "Grounds and procedure for early termination of the agreement."},
+        "law": {"title": "Governing law", "text": "The agreement is governed by the laws of Montenegro."}
+      }
+    },
+    "business": {
+      "title": "Business sale agreement — main sections",
+      "sections": {
+        "parties": {"title": "Parties", "text": "The business owner or selling company and the agency DOO GUREVIC BUDVA; details and representatives of the parties."},
+        "object": {"title": "Subject of the sale", "text": "Company details (name, registration number) and what exactly is sold — a share in the company or the business's property and assets."},
+        "price": {"title": "Price and price changes", "text": "The asking price and what it includes; it may only be changed with the owner's consent."},
+        "commission": {"title": "Agency fee", "text": "5% excl. VAT; when payment becomes due and how it is settled."},
+        "exclusivity": {"title": "Exclusivity and term", "text": "Exclusive or non-exclusive mandate, term of the agreement and how it is extended."},
+        "owner_duties": {"title": "Owner's obligations", "text": "Provide company documents and information for the buyer's checks, give access to the premises for viewings, disclose liabilities and encumbrances."},
+        "agent_duties": {"title": "Agency's obligations", "text": "Valuation, preparing the description, finding buyers, viewings, reporting to the owner, negotiation support and assistance until the contract is signed."},
+        "confidentiality": {"title": "Confidentiality", "text": "Business details are disclosed only to qualified buyers and, where needed, after an NDA is signed."},
+        "termination": {"title": "Termination", "text": "Grounds and procedure for early termination of the agreement."},
+        "law": {"title": "Governing law", "text": "The agreement is governed by the laws of Montenegro."}
+      }
+    }
+  },
+  "form": {
+    "kicker": "Request",
+    "title": "Submit your property",
+    "intro": "Tell us about the property — no documents are needed at this stage. Cadastral details are used only to verify the property.",
+    "next_title": "What happens next",
+    "next": {
+      "call": "We contact you on the phone number you provide and clarify the details.",
+      "visit": "We arrange a viewing and valuation of the property.",
+      "contract": "We propose terms and prepare the agreement."
+    },
+    "privacy_title": "Your data",
+    "privacy": "The title deed number, KO and PD are needed only to verify the property. We never publish owners' names, cadastral numbers or exact addresses.",
+    "direct_title": "Prefer to write?",
+    "direct": "Message us directly or ask a question in the website chat.",
+    "chat": "Ask in the chat"
+  },
+  "faq_title": "Frequently asked questions",
+  "terms_title": "Terms",
+  "related": {
+    "title": "Other services for owners",
+    "all": "All services for owners",
+    "all_text": "About the agency, how we work and a sample agreement."
+  },
+  "alt": {
+    "hero": "Bright living room with a balcony and sea view — illustration",
+    "sell": "Budva old town and the bay behind bougainvillea blossoms",
+    "rent_out": "Balcony overlooking a bay with a cup of coffee and keys on the table — illustration",
+    "management": "Budva old town seen from the sea"
+  },
+  "categories": {
+    "sell": {
+      "meta": {
+        "title": "Sell property in Montenegro | GUREVIĆ",
+        "description": "Sell an apartment, house, land or business in Budva and Montenegro: valuation, photography, viewings, negotiation. Commission 5% excl. VAT, written agreement."
+      },
+      "h1": "Sell your property in Montenegro",
+      "kicker": "Selling",
+      "lead": "We value the property, prepare it for sale and negotiate with buyers. You deal with one person and receive reports on how the sale is going.",
+      "included_title": "What the sale service includes",
+      "included": {
+        "valuation": {"title": "Valuation", "text": "We analyse the property, the area and the market and agree the asking price with you."},
+        "photo": {"title": "Photography and description", "text": "We photograph the property and prepare the listing description."},
+        "listing": {"title": "Listing", "text": "We publish the property on the agency website and our channels and answer buyers' enquiries."},
+        "viewings": {"title": "Viewings", "text": "We hold viewings on a schedule agreed with you and report the results."},
+        "negotiation": {"title": "Negotiation", "text": "We pass buyers' offers on to you and help agree the price and terms."},
+        "deal": {"title": "Deal support", "text": "We help prepare the documents and support you until the sale contract is signed."}
+      },
+      "terms": {
+        "commission_html": "Agency commission of <strong>5% excl. VAT</strong>; other terms by agreement.",
+        "exclusive": "An exclusive agreement is preferred: one point of contact instead of every agent and agency in Montenegro.",
+        "contract": "A written agreement in accordance with the laws of Montenegro."
+      },
+      "terms_link": "Sample agreement",
+      "faq": {
+        "price": {"q": "How much do your services cost?", "a": "The agency commission is 5% excluding VAT. Other terms are discussed individually and set out in a written agreement."},
+        "exclusive": {"q": "Do I have to sign an exclusive agreement?", "a": "No, but we recommend it: you deal with one agency instead of every agent in Montenegro, the property is on the market at one price, and viewings follow an agreed schedule."},
+        "documents": {"q": "Which documents do I need to submit a request?", "a": "None. The title deed number, cadastral municipality (KO) and, for an apartment, the unit number (PD) help us verify the property faster. The full set of documents is needed when the agreement is signed."},
+        "price_change": {"q": "Who decides whether to change the price?", "a": "Only the owner. We agree any price change with you in advance."},
+        "business": {"q": "Can I sell an operating business or a construction project?", "a": "Yes. We also take on investment assets on the seller's side. Business details are shared only with qualified buyers and, where needed, after an NDA is signed."}
+      },
+      "form_title": "Submit a property for sale",
+      "form_intro": "Tell us about the property — no documents are needed at this stage. Cadastral details are used only to verify the property."
+    },
+    "rent_out": {
+      "meta": {
+        "title": "Rent out your property in Budva | GUREVIĆ",
+        "description": "Long-term letting of an apartment or house in Budva and Montenegro — until the season or for a year: rental rate, photos, tenant search and lease agreement."
+      },
+      "h1": "Rent out your property long-term",
+      "kicker": "Renting out",
+      "lead": "We help you let an apartment or house for a longer term — until the season or for a year: we assess the rental rate, find a tenant and prepare the lease.",
+      "included_title": "What the letting service includes",
+      "included": {
+        "rate": {"title": "Rental rate assessment", "text": "We suggest a long-term rate — until the season or for a year — based on the area, condition and market supply."},
+        "photo": {"title": "Photography and description", "text": "We photograph the property and prepare the listing description."},
+        "search": {"title": "Tenant search and screening", "text": "We get to know the candidates and check the term, occupants, pets and budget. The final decision is yours."},
+        "viewings": {"title": "Viewings", "text": "We hold viewings on a schedule agreed with you."},
+        "lease": {"title": "Lease agreement", "text": "We help prepare the lease: term, deposit, utilities and the handover of the property."}
+      },
+      "terms": {
+        "commission_html": "Commission and terms <strong>by agreement</strong>.",
+        "term": "Long-term lets only: until the season or for a year.",
+        "contract": "Terms are agreed in writing."
+      },
+      "faq": {
+        "term": {"q": "For how long do you let properties?", "a": "We work with long-term lets — until the start of the season or for a year. Short-term rentals are still in development."},
+        "price": {"q": "How much do your services cost?", "a": "Commission and terms are discussed individually and agreed in writing."},
+        "tenant": {"q": "How do you choose a tenant?", "a": "We get to know the candidates, check the term, the occupants, pets and budget, and pass this information on to you. The decision to let is yours."},
+        "presence": {"q": "Do I need to attend the viewings?", "a": "Not necessarily: viewings can be held with keys left with the agency. This is agreed when the agreement is signed."}
+      },
+      "form_title": "Submit a property for rent",
+      "form_intro": "Tell us about the property and the rental term you have in mind. No documents are needed at this stage."
+    },
+    "management": {
+      "meta": {
+        "title": "Property management in Budva | GUREVIĆ",
+        "description": "Property management in Budva for owners: key holding, utility bills, property checks and coordination of contractors. Terms are agreed individually."
+      },
+      "h1": "Property management",
+      "kicker": "Management",
+      "lead": "For owners who do not live in Montenegro full-time or let their property long-term. The tasks and terms are agreed individually.",
+      "included_title": "What can be arranged",
+      "included_note": "There is no fixed package: we agree on the tasks you actually need.",
+      "included": {
+        "keys": {"title": "Key holding", "text": "The agency keeps the keys — for viewings, tradespeople and emergencies."},
+        "bills": {"title": "Utilities and bills", "text": "Checking and paying utility bills in an agreed way."},
+        "checks": {"title": "Property checks", "text": "Inspections at check-in and check-out of a long-term tenant and, by arrangement, during the tenancy."},
+        "maintenance": {"title": "Maintenance and repairs", "text": "Coordination of contractors; the cost of works is agreed with the owner in advance."}
+      },
+      "terms": {
+        "commission_html": "Terms are agreed <strong>individually</strong>.",
+        "scope": "Tasks and reporting are agreed in advance.",
+        "contract": "Arrangements are put in writing."
+      },
+      "faq": {
+        "scope": {"q": "What does management include?", "a": "The tasks are agreed individually: for example, key holding, paying utility bills, property checks during a long-term let and coordinating repairs through contractors."},
+        "price": {"q": "How much does it cost?", "a": "Terms are discussed individually and depend on the property and the tasks."},
+        "combine": {"q": "Can management be combined with letting?", "a": "Yes, we can discuss it: for example, finding a long-term tenant and staying in touch with them afterwards."},
+        "repairs": {"q": "Do you carry out repairs yourselves?", "a": "No, we coordinate contractors. The cost of works is agreed with the owner in advance."}
+      },
+      "form_title": "Request property management",
+      "form_intro": "Tell us about the property and which tasks you would like to hand over. No documents are needed at this stage."
+    }
+  },
+  "js": {
+    "contract_request_sale": "Please send me a sample property sale agreement.",
+    "contract_request_business": "Please send me a sample business sale agreement."
+  }
+}

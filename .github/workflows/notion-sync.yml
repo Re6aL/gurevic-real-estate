@@ -22,12 +22,21 @@ jobs:
         with:
           ref: main
 
+      # Pinned generator/image dependencies (tools/requirements.txt) in an isolated venv
+      # outside the repository; every later `python` call uses it.
+      - name: Install Python dependencies
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/python" -m pip install --disable-pip-version-check --no-input -r tools/requirements.txt
+          echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+
       - name: Update public catalogue data
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
+          NOTION_RENT_DB_ID: ${{ secrets.NOTION_RENT_DB_ID }}
         run: |
-          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_DB_ID" ]; then
+          if [ -z "$NOTION_TOKEN" ] || { [ -z "$NOTION_DB_ID" ] && [ -z "$NOTION_RENT_DB_ID" ]; }; then
             echo "Notion secrets are not configured yet; skipping sync."
           else
             python tools/notion_sync.py
@@ -44,13 +53,40 @@ jobs:
             echo "Dropbox is not configured yet; skipping photo sync."
             exit 0
           fi
-          python -m pip install --disable-pip-version-check --no-input Pillow==12.3.0
           python tools/dropbox_sync.py
+
+      # dropbox_sync.py adds photos to every listing that has a Dropbox folder;
+      # confidential (anonymized) listings must stay without photos and map pins.
+      - name: Re-anonymize confidential listings
+        run: python tools/notion_sync.py --sanitize
+
+      - name: Build image derivatives
+        run: python tools/optimize_images.py
+
+      - name: Build static site
+        run: python tools/build_site.py --strict
+
+      # Broken internal links/assets, duplicate ids, missing alt → no commit (the live site stays as is).
+      - name: Check generated site
+        run: python tools/check_site.py
 
       - name: Commit published catalogue changes
         run: |
           git add js/data.js
-          if [ -d img/listings ]; then git add img/listings; fi
+          if [ -f js/rentals.js ]; then git add js/rentals.js; fi
+          if [ -d img ]; then git add -A img; fi
+          # every file the generator wrote (see docs/ARCHITECTURE.md §1)
+          python - <<'PY'
+          import json, os, subprocess
+          with open(".generated-manifest.json", encoding="utf-8") as fh:
+              files = json.load(fh).get("files", [])
+          paths = [".generated-manifest.json"] + [p for p in files if os.path.isfile(p)]
+          for i in range(0, len(paths), 200):
+              subprocess.run(["git", "add", "--", *paths[i:i + 200]], check=True)
+          print(f"staged {len(paths)} generated paths")
+          PY
+          # stale generated files deleted by the generator
+          git add -u
           if git diff --cached --quiet; then
             echo "Catalogue is already current."
             exit 0

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Real estate agency services in Budva | GUREVIĆ",
+    "description": "Buying, long-term rental, investment and services for owners in Montenegro: property search, viewings, document checks with lawyers and transaction support."
+  },
+  "h1": "Agency services",
+  "kicker": "What we do",
+  "lead": "Four directions of work — for buyers, tenants, investors and owners. Each follows a clear sequence of steps and written agreements.",
+  "directions": {
+    "title": "Directions",
+    "sub": "Choose yours — each section has its own properties, questions and enquiry form.",
+    "buy": {
+      "title": "Buying",
+      "intro": "Apartments, houses, villas and plots for private homes in Budva and along the Montenegrin coast.",
+      "items": {
+        "select": "Property search matched to your brief and budget",
+        "viewings": "Arranging viewings",
+        "documents": "Document checks together with partner lawyers",
+        "deal": "Transaction support until the contract is signed"
+      },
+      "link": "Properties for sale"
+    },
+    "rent": {
+      "title": "Long-term rental",
+      "intro": "Apartments and houses until the start of the season or for a full year.",
+      "items": {
+        "select": "Search by area, term and budget",
+        "viewings": "Arranging viewings",
+        "terms": "Agreeing terms with the owner: deposit, utilities, pets",
+        "contract": "Help with the lease agreement"
+      },
+      "note": "Short-term rental is in development.",
+      "link": "Properties to rent"
+    },
+    "invest": {
+      "title": "Investment",
+      "intro": "Hotels, development land, commercial property and construction projects.",
+      "items": {
+        "select": "Sourcing opportunities for your investment brief",
+        "legal": "Initial legal support",
+        "handover": "Handing the matter over to specialists at later stages",
+        "partners": "Partners licensed for design and construction"
+      },
+      "note": "Confidential; NDA where required.",
+      "link": "Investing in Montenegro"
+    },
+    "owners": {
+      "title": "For owners",
+      "intro": "Selling and letting apartments, houses, land, construction projects and operating businesses.",
+      "items": {
+        "valuation": "Property valuation",
+        "photo": "Photography",
+        "contract": "Sale or letting under a written agreement",
+        "management": "Property management by arrangement"
+      },
+      "note": "Agency commission: 5% (excluding VAT); other terms by agreement.",
+      "link": "For owners"
+    }
+  },
+  "steps": {
+    "title": "How we start",
+    "items": {
+      "request": {
+        "title": "Enquiry",
+        "text": "Send a request through the website, message us or give us a call."
+      },
+      "talk": {
+        "title": "A conversation",
+        "text": "We clarify your brief, timing and budget and answer the first questions."
+      },
+      "agreement": {
+        "title": "Agreement",
+        "text": "Terms of work are put in writing before the work begins."
+      },
+      "work": {
+        "title": "Work in your direction",
+        "text": "Search, viewings, checks, the transaction — with partners wherever needed."
+      }
+    }
+  },
+  "residency": {
+    "kicker": "Good to know",
+    "title": "Property and temporary residence",
+    "text": "For third-country nationals not covered by the statutory exemptions, property with an official tax valuation of {amount} or more may serve as grounds for temporary residence, provided the other legal requirements are met. We check the conditions as of the filing date.",
+    "link": "Current amendments to the Law on Foreigners",
+    "link_note": "in Montenegrin",
+    "disclaimer": "The information on this website is not legal advice."
+  },
+  "form": {
+    "kicker": "Get in touch",
+    "title": "Tell us about your plans",
+    "text": "Describe what you are looking for or what you would like to sell, and we will get back to you the way you prefer. You can also message us directly.",
+    "form_title": "Enquiry",
+    "messengers": "Or message us directly"
+  }
+}

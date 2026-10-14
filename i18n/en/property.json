@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "title": "{title}, ID {id} | GUREVIĆ",
+    "description": "{card} {price_phrase}. ID {id}. Key facts, location and viewing requests — GUREVIĆ real estate agency, Budva.",
+    "price": "Price: {price}",
+    "title_confidential": "{title} | GUREVIĆ",
+    "description_confidential": "{title}. {price_phrase}. Confidential investment opportunity: details after investor qualification and NDA. GUREVIĆ, Budva."
+  },
+  "labels": {
+    "description": "Description",
+    "location": "Location",
+    "price": "Price",
+    "id": "Property ID",
+    "project": "Project",
+    "features": "Features",
+    "units": "Units in the project"
+  },
+  "head": {
+    "price_label": "Price",
+    "rent_label": "Rent per month",
+    "per_m2": "{price} per m²",
+    "indicative_label": "Indicative price",
+    "preliminary": "Preliminary, subject to verification",
+    "available_from": "Available from {date}"
+  },
+  "gallery": {
+    "aria": "Property photos",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "thumbs_aria": "Photo thumbnails",
+    "thumb": "Photo {n} of {total}",
+    "open": "Open the photo full screen",
+    "illustration_note": "Photos of this property are not published yet — the image shows the category illustration."
+  },
+  "id": {
+    "label": "Property ID",
+    "hint": "Quote it when you contact us so we can find the property straight away.",
+    "copy": "Copy",
+    "copy_aria": "Copy property ID {id}"
+  },
+  "sections": {
+    "about": "About the property",
+    "location": "About the location",
+    "facts": "Key facts",
+    "features": "Features",
+    "units": "Units in the project",
+    "map": "Location on the map",
+    "similar": "Similar properties",
+    "request": "Enquiry about this property"
+  },
+  "groups": {
+    "main": "Overview",
+    "money": "Price",
+    "rent": "Rental terms",
+    "more": "Condition and amenities"
+  },
+  "facts": {
+    "type": "Type",
+    "district": "District",
+    "region": "Region",
+    "area": "Floor area",
+    "area_unit": "Unit floor area",
+    "plot": "Plot",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "floor": "Floor",
+    "balconies": "Balconies and terraces",
+    "view": "View",
+    "monthly": "Rent per month",
+    "terms": "Rental term",
+    "min_term": "Minimum term",
+    "deposit": "Deposit",
+    "available_from": "Available from",
+    "utilities": "Utilities",
+    "pets": "Pets",
+    "price": "Price",
+    "price_m2": "Price per m²",
+    "payment_plan": "Payment plan",
+    "transfer_tax": "Taxes and fees",
+    "furnishing": "Furnishing",
+    "condition": "Condition",
+    "parking": "Parking",
+    "distance_to_sea": "Distance to the sea",
+    "completion": "Completion"
+  },
+  "values": {
+    "no_deposit": "No deposit",
+    "utilities": {
+      "included": "Included",
+      "not_included": "Paid separately",
+      "partial": "Partly included"
+    },
+    "pets": {
+      "allowed": "Allowed",
+      "not_allowed": "Not allowed",
+      "by_agreement": "By agreement"
+    }
+  },
+  "units": {
+    "intro": "{available} of {total} available. Please check prices and availability by unit ID.",
+    "floor": "Floor",
+    "bedrooms": "Bedrooms",
+    "area": "Area",
+    "view": "View",
+    "status": {
+      "available": "Available",
+      "reserved": "Reserved",
+      "sold": "Sold",
+      "unknown": "On request"
+    },
+    "request": "Ask in chat"
+  },
+  "map": {
+    "button": "Show the map",
+    "note": "The map is loaded from Google Maps only after you press the button.",
+    "exact": "The pin is based on the property data. The exact address is shared on request.",
+    "approx": "The pin marks the centre of the area, not the property’s address.",
+    "iframe_title": "Map: {place}",
+    "open_external": "Open in Google Maps",
+    "confidential": "No map is published for confidential opportunities: only the region is shown — {region}."
+  },
+  "cta": {
+    "title": "Interested in this property?",
+    "text": "We will answer your questions and arrange a viewing. Please quote the property ID shown on this page.",
+    "call": "Call",
+    "whatsapp": "Message on WhatsApp",
+    "whatsapp_text": "Hello, I am interested in property {id}: {url}",
+    "chat": "Ask in chat",
+    "form_heading": "Request details",
+    "agent_name": "GUREVIĆ",
+    "agent_role": "Real estate agency, Budva"
+  },
+  "confidential": {
+    "badge": "Confidential",
+    "note_title": "Confidential opportunity",
+    "note": "The name, exact address and documents are disclosed after your request is qualified and, where required, an NDA is signed. All figures are preliminary and subject to verification.",
+    "cta_title": "Request details",
+    "cta_text": "Describe your objectives and budget — once your request is qualified, we will share the information available on this opportunity.",
+    "cta_button": "Go to the enquiry form",
+    "enquiry_title": "Enquiry about this investment opportunity",
+    "enquiry_intro": "Please quote ID {id} in your message. We do not ask for passport details or financial documents at this stage.",
+    "invest_link": "All investment directions"
+  },
+  "similar": {
+    "all": "All properties in this category"
+  },
+  "illustration": "Illustration",
+  "date": "{d} {month} {y}",
+  "months": {
+    "m1": "January",
+    "m2": "February",
+    "m3": "March",
+    "m4": "April",
+    "m5": "May",
+    "m6": "June",
+    "m7": "July",
+    "m8": "August",
+    "m9": "September",
+    "m10": "October",
+    "m11": "November",
+    "m12": "December"
+  },
+  "plural": {
+    "months": {
+      "one": "{n} month",
+      "other": "{n} months"
+    }
+  },
+  "gen": {
+    "where": "in {district}",
+    "where_other": "in Montenegro",
+    "where_in": {
+      "budva-center": "in Budva",
+      "budva-rozino": "in Rozino, Budva",
+      "budva-waterfront": "on the Budva waterfront",
+      "budva-ivanica": "in Ivanica, Budva",
+      "budva-veligrad": "in Veligrad, Budva",
+      "becici": "in Bečići",
+      "rafailovici": "in Rafailovići",
+      "przno": "in Pržno",
+      "sveti-stefan": "in Sveti Stefan",
+      "lapcici": "in Lapčići",
+      "tudorovici": "in Tudorovići",
+      "lastva-grbaljska": "in Lastva Grbaljska",
+      "petrovac": "in Petrovac",
+      "buljarica": "in Buljarica",
+      "tivat": "in Tivat",
+      "kotor": "in Kotor",
+      "herceg-novi": "in Herceg Novi",
+      "bar": "in Bar",
+      "dobra-voda": "in Dobra Voda",
+      "ulcinj": "in Ulcinj",
+      "rijeka-crnojevica": "in Rijeka Crnojevića",
+      "cetinje": "in Cetinje",
+      "podgorica": "in Podgorica",
+      "other": "in Montenegro"
+    },
+    "district_title": {
+      "budva-center": "Budva",
+      "budva-rozino": "Rozino, Budva",
+      "budva-waterfront": "Budva waterfront",
+      "budva-ivanica": "Ivanica, Budva",
+      "budva-veligrad": "Veligrad, Budva"
+    },
+    "title": "{type} {area} m² — {district_title}",
+    "title_no_area": "{type} — {district_title}",
+    "title_project": "{name} — {district_title}",
+    "card": "{type} {where}: {params}.",
+    "card_no_params": "{type} {where}.",
+    "lead": "{type} {where}.",
+    "lead_project": "{type} “{name}” {where}.",
+    "part_area": "floor area {n} m²",
+    "part_area_house": "house area {n} m²",
+    "part_area_unit": "unit floor area {n} m²",
+    "part_land": "plot {n} m²",
+    "part_plot": "plot area {n} m²",
+    "price": "Price: {price}.",
+    "price_per_m2": "Price: {price} ({per} per m²).",
+    "price_on_request": "Price on request.",
+    "price_rent": "Rent: {price} per month.",
+    "closing": "We will answer your questions and arrange a viewing — please quote ID {id} when you get in touch.",
+    "closing_no_params": "The specifications are being confirmed. We will answer your questions and arrange a viewing — please quote ID {id} when you get in touch.",
+    "location": "District: {district}.",
+    "location_coords": "The map pin is based on the property data; the exact address is shared on request.",
+    "location_approx": "The map shows the area; the exact address is shared on request.",
+    "location_confidential": "Region: {region}. The exact location is disclosed after your request is qualified.",
+    "district_about": {
+      "budva-center": "Budva is the largest resort town on the coast and the heart of the Budva Riviera, with shops, schools, medical facilities and public services open all year round.",
+      "budva-rozino": "Rozino is a residential district of Budva close to the town centre.",
+      "budva-waterfront": "The seafront part of Budva, by the town promenade.",
+      "budva-ivanica": "Ivanica is a residential district of Budva.",
+      "budva-veligrad": "Veligrad is a residential district of Budva.",
+      "becici": "Bečići is a resort village east of Budva with one of the longest beaches on the Budva Riviera.",
+      "rafailovici": "Rafailovići is a seaside village next to Bečići on the Budva Riviera.",
+      "przno": "Pržno is a small seaside village between Budva and Sveti Stefan.",
+      "sveti-stefan": "Sveti Stefan is a coastal village south-east of Budva, facing the famous island hotel.",
+      "lapcici": "Lapčići is a village on the hills above the Budva Riviera.",
+      "tudorovici": "Tudorovići is a hillside village above the coast near Pržno.",
+      "lastva-grbaljska": "Lastva Grbaljska is a village in the Grbalj valley between Budva and Tivat, a short drive from the coast.",
+      "petrovac": "Petrovac is a small resort town on the coast south of Budva.",
+      "buljarica": "Buljarica is a bay with a long beach south of Petrovac.",
+      "tivat": "Tivat is a town on the Bay of Kotor with an international airport and a yacht marina.",
+      "kotor": "Kotor is a historic town at the far end of the Bay of Kotor; its old town is a UNESCO World Heritage Site.",
+      "herceg-novi": "Herceg Novi is a town at the entrance to the Bay of Kotor.",
+      "bar": "Bar is a port town on Montenegro’s southern coast.",
+      "dobra-voda": "Dobra Voda is a seaside village on the southern coast, near Bar.",
+      "ulcinj": "Ulcinj is the southernmost town on the Montenegrin coast.",
+      "rijeka-crnojevica": "Rijeka Crnojevića is a historic village on the river of the same name near Lake Skadar, within the national park.",
+      "cetinje": "Cetinje is the historic royal capital of Montenegro, in the country’s mountainous interior.",
+      "podgorica": "Podgorica is the capital and largest city of Montenegro."
+    },
+    "confidential_title": "{type}, {region}",
+    "confidential_card": "{type}, {region}. Details after your request is qualified, under NDA if needed.",
+    "confidential_description": "Confidential opportunity: {type_lc}, {region}. The name, exact address and documents are disclosed after investor qualification and, where required, an NDA. All figures are preliminary and subject to verification."
+  },
+  "js": {
+    "copied": "Copied",
+    "copied_status": "ID {id} copied",
+    "copy_failed": "Could not copy — please select the ID manually",
+    "counter": "{n} / {total}",
+    "photo": "Photo {n} of {total}",
+    "lightbox": "Photo viewer",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "map_loading": "Loading the map…"
+  }
+}

@@ -1,0 +1,82 @@
+{#- Контакты: способы связи из site.contacts, «Будва — встречи по договорённости» (адреса офиса нет),
+    языки, форма обратной связи, быстрые ссылки на профильные формы, чат. JSON-LD: contactPoint. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% import "macros/forms.html" as forms %}
+{% set c = site.contacts %}
+
+{% block jsonld %}
+{% for obj in page.jsonld %}
+{% if obj['@type'] == 'RealEstateAgent' %}
+{% set obj = dict(obj) %}
+{% set _ = obj.update({'contactPoint': [{
+  '@type': 'ContactPoint',
+  'contactType': t('contact.jsonld.contact_type'),
+  'telephone': c.phone_e164,
+  'email': c.email,
+  'areaServed': 'ME',
+  'availableLanguage': ['Russian', 'English', 'Montenegrin'],
+}]}) %}
+{% endif %}
+<script type="application/ld+json">{{ obj | tojson }}</script>
+{% endfor %}
+{% endblock %}
+
+{% block main %}
+<header class="info-hero">
+  <div class="container">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="info-kicker">{{ t('contact.kicker') }}</span>
+    <h1>{{ page.h1 }}</h1>
+    <p class="info-lead">{{ t('contact.lead') }}</p>
+  </div>
+</header>
+
+<section class="info-section" aria-labelledby="contact-channels">
+  <div class="container contact-layout">
+    <div class="contact-layout__info">
+      <h2 id="contact-channels" class="info-h2">{{ t('contact.channels.title') }}</h2>
+      {{ ui.contact_list(c, 'contact-tiles contact-tiles--lg') }}
+
+      <dl class="contact-facts">
+        <div class="contact-fact">
+          <dt>{{ ui.icon('pin') }}<span>{{ t('contact.location.title') }}</span></dt>
+          <dd>{{ t('contact.location.text') }}<br><span class="info-muted-inline">{{ t('contact.location.note') }}</span></dd>
+        </div>
+        <div class="contact-fact">
+          <dt>{{ ui.icon('globe') }}<span>{{ t('contact.languages.title') }}</span></dt>
+          <dd>{{ t('contact.languages.text') }}</dd>
+        </div>
+        <div class="contact-fact">
+          <dt>{{ ui.icon('document') }}<span>{{ t('contact.legal.title') }}</span></dt>
+          <dd><bdi>{{ site.legal_name }}</bdi></dd>
+        </div>
+      </dl>
+    </div>
+    <div class="contact-layout__form">
+      {{ forms.contact_form(heading=t('contact.form.title'), intro=t('contact.form.intro')) }}
+    </div>
+  </div>
+</section>
+
+<section class="info-section info-section--soft" aria-labelledby="contact-quick">
+  <div class="container">
+    {{ ui.section_head(t('contact.quick.title'), sub=t('contact.quick.sub'), id='contact-quick') }}
+    <ul class="quick-grid">
+      {% for key, route_key, icon_name in [('invest', 'invest', 'building'), ('owners', 'owners', 'document'), ('rent', 'rent', 'key')] %}
+      {% set base = 'contact.quick.items.' ~ key %}
+      <li class="quick-card">
+        <span class="direction__icon">{{ ui.icon(icon_name, size=24) }}</span>
+        <h3>{{ t(base ~ '.title') }}</h3>
+        <p>{{ t(base ~ '.text') }}</p>
+        <a class="direction__link" href="{{ url(route_key) }}">{{ t(base ~ '.link') }}{{ ui.icon('arrow-right', size=18) }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="chat-prompt">
+      <p>{{ t('contact.chat.text') }}</p>
+      {{ ui.button_el(t('contact.chat.button'), 'navy', attrs={'data-chat-open': ''}) }}
+    </div>
+  </div>
+</section>
+{% endblock %}

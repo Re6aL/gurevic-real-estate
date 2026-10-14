@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Leistungen der Immobilienagentur in Budva | GUREVIĆ",
+    "description": "Kauf, Langzeitmiete, Investitionen und Leistungen für Eigentümer in Montenegro: Objektsuche, Besichtigungen, Dokumentenprüfung mit Anwälten, Kaufbegleitung."
+  },
+  "h1": "Leistungen der Agentur",
+  "kicker": "Was wir tun",
+  "lead": "Vier Arbeitsbereiche – für Käufer, Mieter, Anleger und Eigentümer. Jeder mit einem klaren Ablauf und schriftlichen Vereinbarungen.",
+  "directions": {
+    "title": "Bereiche",
+    "sub": "Wählen Sie Ihren Bereich – jede Rubrik hat eigene Objekte, Fragen und ein eigenes Anfrageformular.",
+    "buy": {
+      "title": "Kauf",
+      "intro": "Wohnungen, Häuser, Villen und Grundstücke für den privaten Hausbau in Budva und an der Küste Montenegros.",
+      "items": {
+        "select": "Objektsuche nach Ihren Wünschen und Ihrem Budget",
+        "viewings": "Organisation von Besichtigungen",
+        "documents": "Dokumentenprüfung gemeinsam mit Partneranwälten",
+        "deal": "Begleitung bis zur Vertragsunterzeichnung"
+      },
+      "link": "Kaufobjekte"
+    },
+    "rent": {
+      "title": "Langzeitmiete",
+      "intro": "Wohnungen und Häuser bis zum Saisonbeginn oder für ein ganzes Jahr.",
+      "items": {
+        "select": "Suche nach Lage, Mietdauer und Budget",
+        "viewings": "Organisation von Besichtigungen",
+        "terms": "Abstimmung der Konditionen mit dem Eigentümer: Kaution, Nebenkosten, Haustiere",
+        "contract": "Hilfe beim Mietvertrag"
+      },
+      "note": "Die Kurzzeitmiete ist in Vorbereitung.",
+      "link": "Mietobjekte"
+    },
+    "invest": {
+      "title": "Investitionen",
+      "intro": "Hotels, Entwicklungsflächen, Gewerbeimmobilien und Bauprojekte.",
+      "items": {
+        "select": "Objektauswahl für Ihre Investitionsziele",
+        "legal": "Erste rechtliche Begleitung",
+        "handover": "Übergabe an Fachleute in späteren Phasen",
+        "partners": "Partner mit Lizenzen für Planung und Bau"
+      },
+      "note": "Vertraulich; bei Bedarf mit NDA.",
+      "link": "Investieren in Montenegro"
+    },
+    "owners": {
+      "title": "Für Eigentümer",
+      "intro": "Verkauf und Vermietung von Wohnungen, Häusern, Grundstücken, Bauprojekten und laufenden Unternehmen.",
+      "items": {
+        "valuation": "Bewertung der Immobilie",
+        "photo": "Fotografie",
+        "contract": "Verkauf oder Vermietung auf Basis eines schriftlichen Vertrags",
+        "management": "Immobilienverwaltung nach Vereinbarung"
+      },
+      "note": "Provision der Agentur: 5 % (ohne MwSt.); weitere Konditionen nach Vereinbarung.",
+      "link": "Für Eigentümer"
+    }
+  },
+  "steps": {
+    "title": "So beginnt die Zusammenarbeit",
+    "items": {
+      "request": {
+        "title": "Anfrage",
+        "text": "Senden Sie eine Anfrage über die Website, schreiben Sie uns über einen Messenger oder rufen Sie an."
+      },
+      "talk": {
+        "title": "Erstgespräch",
+        "text": "Wir klären Ihr Anliegen, Zeitrahmen und Budget und beantworten erste Fragen."
+      },
+      "agreement": {
+        "title": "Vereinbarung",
+        "text": "Die Konditionen halten wir vor Beginn der Arbeit schriftlich fest."
+      },
+      "work": {
+        "title": "Arbeit im jeweiligen Bereich",
+        "text": "Suche, Besichtigungen, Prüfung, Abschluss – wo nötig mit Partnern."
+      }
+    }
+  },
+  "residency": {
+    "kicker": "Gut zu wissen",
+    "title": "Immobilie und befristeter Aufenthalt",
+    "text": "Für Drittstaatsangehörige, die nicht unter die gesetzlichen Ausnahmen fallen, kann eine Immobilie mit einem amtlichen Steuerwert ab {amount} Grundlage für einen befristeten Aufenthalt sein, sofern die übrigen gesetzlichen Voraussetzungen erfüllt sind. Die Bedingungen prüfen wir zum Zeitpunkt der Antragstellung.",
+    "link": "Aktuelle Änderungen des Ausländergesetzes",
+    "link_note": "auf Montenegrinisch",
+    "disclaimer": "Die Informationen auf dieser Website stellen keine Rechtsberatung dar."
+  },
+  "form": {
+    "kicker": "Kontakt",
+    "title": "Erzählen Sie uns von Ihren Plänen",
+    "text": "Beschreiben Sie, was Sie suchen oder verkaufen möchten – wir melden uns auf dem Weg, der Ihnen passt. Sie können uns auch direkt schreiben.",
+    "form_title": "Anfrage",
+    "messengers": "Oder schreiben Sie uns direkt"
+  }
+}

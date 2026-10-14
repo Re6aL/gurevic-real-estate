@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Agencja nieruchomości w Budvie, Czarnogóra | GUREVIĆ",
+    "description": "Kupno, wynajem długoterminowy i inwestycje w nieruchomości w Budvie i na wybrzeżu Czarnogóry. GUREVIĆ to agencja z Budvy pracująca na pisemnych umowach."
+  },
+  "h1": "Agencja nieruchomości w Budvie. Życie nad morzem — Twoja nowa historia",
+  "splash": {
+    "line1": "Klucz do życia nad morzem",
+    "line2": "Nieruchomości w Czarnogórze — od pierwszej prezentacji do kluczy"
+  },
+  "hero": {
+    "eyebrow": "Agencja nieruchomości w Budvie",
+    "title": "Życie nad morzem —",
+    "accent": "Twoja nowa historia",
+    "sub": "Kupno, wynajem długoterminowy i inwestycje na wybrzeżu Czarnogóry",
+    "cta_buy": "Kup",
+    "cta_rent": "Wynajmij",
+    "cta_invest": "Zainwestuj",
+    "owners_link": "Dla właścicieli nieruchomości",
+    "carousel": "karuzela",
+    "slides_aria": "Zdjęcia Budvy",
+    "controls_aria": "Sterowanie zdjęciami",
+    "prev": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie",
+    "slide": "Zdjęcie {n} z {total}",
+    "alt": {
+      "1": "Stare Miasto w Budvie widziane z kamienistej plaży",
+      "2": "Budva z lotu ptaka: Stare Miasto, marina i zatoka o wschodzie słońca",
+      "3": "Posąg Tancerki na skale przy Starym Mieście w Budvie",
+      "4": "Dzwonnica Starego Miasta w Budvie i zatoka za kwitnącą bugenwillą",
+      "5": "Mury Starego Miasta w Budvie i góry nad morzem"
+    }
+  },
+  "directions": {
+    "kicker": "Czym się zajmujemy",
+    "title": "Czego Państwo potrzebują?",
+    "sub": "Każdy kierunek ma osobną sekcję: oferty lub warunki, sposób pracy i formularz zapytania.",
+    "subs_aria": "Podstrony: {name}",
+    "rent": {
+      "text": "Mieszkania i domy na wynajem długoterminowy — do początku sezonu lub na cały rok.",
+      "alt": "Balkon z widokiem na zatokę — ilustracja"
+    },
+    "buy": {
+      "text": "Mieszkania, domy, wille i działki pod budowę domu.",
+      "alt": "Nowe osiedle mieszkaniowe na wybrzeżu — wizualizacja"
+    },
+    "invest": {
+      "text": "Hotele, grunty inwestycyjne i nieruchomości komercyjne — dobierane poufnie.",
+      "alt": "Wybrzeże Czarnogóry z lotu ptaka — ilustracja"
+    },
+    "owners": {
+      "text": "Sprzedaż, wynajem i zarządzanie Państwa nieruchomością na podstawie pisemnej umowy.",
+      "alt": "Jasny salon z wyjściem na balkon — ilustracja"
+    }
+  },
+  "about": {
+    "kicker": "O agencji",
+    "title": "Ilia Gurevich — założyciel i agent GUREVIĆ",
+    "person": "Ilia Gurevich",
+    "monogram": "IG",
+    "photo_alt": "Ilia Gurevich, założyciel agencji GUREVIĆ",
+    "p1": "To nasz trzeci rok na rynku nieruchomości w Czarnogórze. Agencja działa obecnie w nowym formacie: kupujący, najemcy, inwestorzy i właściciele mają osobne kierunki z własnymi warunkami i procesem.",
+    "p2": "Umowy z klientami zawieramy na piśmie. W sprawach prawnych, projektowych i budowlanych współpracujemy z wyspecjalizowanymi partnerami.",
+    "link": "Więcej o agencji"
+  },
+  "steps": {
+    "kicker": "Proces",
+    "title": "Jak pracujemy",
+    "sub": "Cztery etapy — od pierwszej wiadomości do transakcji.",
+    "s1": {
+      "title": "Zapytanie",
+      "text": "Opisują Państwo zadanie: czego szukają lub jaką nieruchomość oferują, a także termin i budżet."
+    },
+    "s2": {
+      "title": "Selekcja lub wycena",
+      "text": "Wybieramy pasujące oferty albo wyceniamy Państwa nieruchomość i uzgadniamy warunki współpracy."
+    },
+    "s3": {
+      "title": "Prezentacje i negocjacje",
+      "text": "Organizujemy prezentacje nieruchomości i negocjujemy cenę oraz warunki z drugą stroną."
+    },
+    "s4": {
+      "title": "Transakcja na podstawie umowy",
+      "text": "Warunki zostają zapisane w pisemnej umowie zgodnej z prawem Czarnogóry."
+    }
+  },
+  "cta": {
+    "kicker": "Kontakt",
+    "title": "Porozmawiajmy o Państwa planach",
+    "text": "Wystarczy napisać na WhatsAppie lub Telegramie albo wysłać zapytanie przez stronę — odpowiemy w sposób, który Państwu odpowiada.",
+    "languages": "Konsultacje w języku rosyjskim, angielskim i czarnogórskim.",
+    "call": "Można też zadzwonić:"
+  },
+  "js": {
+    "pause": "Wstrzymaj zdjęcia",
+    "play": "Wznów zdjęcia"
+  }
+}

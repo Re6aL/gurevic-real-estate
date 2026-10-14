@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Investment Opportunities in Montenegro | GUREVIĆ",
+    "description": "Hotels, development land, restaurants, warehouses and commercial property in Montenegro. Confidential search, NDA on request, initial legal support."
+  },
+  "h1": "Investment Opportunities in Montenegro",
+  "hero": {
+    "kicker": "Confidential search for investors",
+    "lead": "Hotels, development land, operating restaurants and commercial property, warehouses and logistics. We source assets to match an investor’s brief and share details once the enquiry is qualified.",
+    "sub": "Design and construction through licensed partners. We handle initial legal support ourselves, then hand the project over to specialists.",
+    "cta": "Discuss an Investment",
+    "image_alt": "Montenegrin coastline at sunset: mountains, a bay and an old town in the distance"
+  },
+  "focus": {
+    "kicker": "Asset classes",
+    "title": "Investment Focus",
+    "sub": "The four areas we work in. Their pages explain what we check before a transaction and which assets are currently in hand.",
+    "more": "Learn more",
+    "items": {
+      "hotels": {
+        "title": "Hotels",
+        "text": "Operating hotels and buildings suited to hospitality use on the coast.",
+        "alt": "Boutique hotel terrace with a pool above a bay — illustration"
+      },
+      "land": {
+        "title": "Development Land",
+        "text": "Land for commercial development: hotels, apartments, logistics.",
+        "alt": "Sloping coastal plot with olive trees — illustration"
+      },
+      "commercial": {
+        "title": "Operating Restaurants and Commercial Property",
+        "text": "Restaurants, retail and office premises, going-concern businesses with a team.",
+        "alt": "Restaurant terrace overlooking the sea — illustration"
+      },
+      "logistics": {
+        "title": "Warehouses and Logistics",
+        "text": "Warehouse buildings and logistics sites with good road access.",
+        "alt": "Modern warehouse with loading docks — illustration"
+      }
+    },
+    "development": {
+      "title": "Development Projects",
+      "text": "Projects under construction on the coast and development partnerships.",
+      "link": "View projects"
+    }
+  },
+  "cases": {
+    "kicker": "Selected Opportunities",
+    "kicker_lang": "en",
+    "title": "Illustrative Investment Cases",
+    "sub": "Four anonymised examples that show the scale and format of the opportunities.",
+    "disclaimer_label": "Please note",
+    "disclaimer": "These cases are anonymised and do not constitute a public offer. Exact addresses and identifying details are not disclosed. All figures are preliminary: they come from sellers or market benchmarks and are subject to verification during due diligence.",
+    "preliminary": "Preliminary, subject to verification",
+    "cta": "Request details",
+    "million": "€{n}M",
+    "per_m2": "{price} per m²",
+    "about": "approx. {price}",
+    "from": "from {price}",
+    "labels": {
+      "area": "Area",
+      "land_area": "Plot area",
+      "price_guide": "Guide price",
+      "value_guide": "Guide value",
+      "profit_declared": "Annual profit declared by the seller",
+      "build_cost": "Construction cost benchmark",
+      "sales_prices": "Sales prices in the area",
+      "potential": "Potential",
+      "format": "Format"
+    },
+    "items": {
+      "hotel": {
+        "type": "Hotel",
+        "title": "Hotel, Budva",
+        "note": "Profit as stated by the seller; not verified."
+      },
+      "land": {
+        "type": "Development land",
+        "title": "Development Land, Buljarica",
+        "note": "Sales prices are a market benchmark for the area, not a return forecast."
+      },
+      "coastal": {
+        "type": "Development site",
+        "title": "Coastal Development Site",
+        "potential": "hospitality and mixed-use development",
+        "note": "The permitted building volume depends on the urban-planning conditions, which are checked during due diligence."
+      },
+      "restaurant": {
+        "type": "Restaurant",
+        "title": "Operating Restaurant",
+        "format": "a going concern with an established team and regular customers",
+        "note": "Trading figures are shared on request — as provided by the seller, then verified."
+      }
+    }
+  },
+  "support": {
+    "kicker": "Partners",
+    "title": "Development Support",
+    "lead": "When a project needs design and construction, we bring in partners licensed in Montenegro. We are clear about our own part: initial legal support and coordination at the start.",
+    "image_alt": "Concrete building frame with cranes by the sea — illustration",
+    "items": {
+      "legal": {
+        "title": "Initial legal support",
+        "text": "We request and cross-check the asset’s core documents, list the questions for the seller and lay the groundwork for due diligence."
+      },
+      "design": {
+        "title": "Design and construction",
+        "text": "Partners licensed for design and construction come in once the project moves on to concept, permits and building works."
+      },
+      "handover": {
+        "title": "Hand-over to specialists",
+        "text": "Further legal, tax and technical work is carried out by specialists. We hand the project over together with the materials collected so far."
+      }
+    }
+  },
+  "process": {
+    "kicker": "Confidential Process",
+    "title": "How an enquiry is handled",
+    "sub": "Five steps from the first message to the review of an asset.",
+    "more": "More about the process",
+    "steps": {
+      "request": {
+        "title": "Enquiry",
+        "text": "You describe the brief: asset type, budget, timing and how you want to participate."
+      },
+      "qualification": {
+        "title": "Investor qualification",
+        "text": "We clarify your goals and deal parameters. No passport data or financial documents are needed at this stage."
+      },
+      "nda": {
+        "title": "NDA if required",
+        "text": "If you or the seller require it, a confidentiality agreement is signed before details are disclosed."
+      },
+      "selection": {
+        "title": "Asset selection",
+        "text": "We present assets that match your parameters — with the information we are permitted to share."
+      },
+      "due_diligence": {
+        "title": "Due diligence",
+        "text": "Review of documents, technical condition and financials, with the involvement of specialists."
+      }
+    }
+  },
+  "enquiry": {
+    "kicker": "Private enquiry",
+    "title": "Investor Enquiry",
+    "lead": "Describe your brief — we will reply personally and suggest the next step.",
+    "aside_title": "Confidentiality",
+    "points": {
+      "addresses": "We do not publish exact addresses or identifying details of assets — details are shared once the enquiry is qualified.",
+      "nda": "We can work under an NDA: tick the box in the form and the agreement will be signed before any details are shared.",
+      "company": "Company representatives have a separate form with company details.",
+      "documents": "We do not ask for passport data or financial documents at the first stage."
+    },
+    "company_link": "Open the company form",
+    "direct": "Prefer to write directly?"
+  },
+  "final": {
+    "kicker": "Off-market",
+    "title": "Request Confidential Opportunities",
+    "text": "Some assets are not published. Send an enquiry — after qualification and, if required, an NDA, we will share what matches your parameters.",
+    "cta": "Request Opportunities",
+    "chat": "Ask a question in the chat"
+  },
+  "cat": {
+    "kicker": "Investing in Montenegro",
+    "cta": "Send an enquiry",
+    "analyse": {
+      "kicker": "Due diligence",
+      "title": "What we analyse",
+      "sub": "Before recommending an asset, we check the key parameters. In-depth review is carried out by specialists.",
+      "items": {
+        "ownership": {
+          "title": "Ownership and encumbrances",
+          "text": "Title deed (list nepokretnosti), history of rights, mortgages, seizures and other restrictions."
+        },
+        "planning": {
+          "title": "Urban-planning conditions and permits",
+          "text": "Permitted use, building parameters, existence and status of permits."
+        },
+        "technical": {
+          "title": "Technical condition",
+          "text": "Structure and building services, and whether the property matches its documents."
+        },
+        "financials": {
+          "title": "Financials",
+          "text": "Revenue and costs as declared by the seller — and their verification against documents."
+        },
+        "comparables": {
+          "title": "Market comparables",
+          "text": "Asking and transaction prices for comparable assets in the area."
+        },
+        "exit": {
+          "title": "Exit options",
+          "text": "Resale, leasing, change of use — which scenarios are realistic for the asset."
+        }
+      }
+    },
+    "listings": {
+      "title": "Opportunities in hand",
+      "note": "Confidential assets are shown anonymised: no address or photos, and the price is a guide. Details on request."
+    },
+    "process_title": "How it works"
+  },
+  "categories": {
+    "hotels": {
+      "meta": {
+        "title": "Hotels in Montenegro for Investors | GUREVIĆ",
+        "description": "Hotels and hospitality assets in Montenegro for investors: confidential search, NDA on request, review of documents and seller-declared figures."
+      },
+      "h1": "Hotels in Montenegro for Investors",
+      "intro": "Operating hotels and buildings suited to hospitality use on the coast. We present them anonymised and share details once the enquiry is qualified — under an NDA if required.",
+      "image_alt": "Boutique hotel terrace with a pool above a bay — illustration",
+      "points_title": "What we look at in hotels",
+      "points": {
+        "rooms": "Room count, category and occupancy — as stated by the seller, then verified.",
+        "operations": "Operating model: management, staff, contracts with tour operators and booking platforms.",
+        "expansion": "Scope for refurbishment or extension within the urban-planning conditions."
+      },
+      "form_title": "Hotel enquiry",
+      "form_intro": "Tell us your budget and how you want to participate — we will select assets and share details once the enquiry is qualified."
+    },
+    "land": {
+      "meta": {
+        "title": "Development Land in Montenegro | GUREVIĆ",
+        "description": "Land for commercial development in Montenegro: hotels, apartments, logistics. Review of urban-planning conditions and licensed partners."
+      },
+      "h1": "Development Land in Montenegro",
+      "intro": "Land for commercial development — hotels, apartments, logistics. We start with the urban-planning conditions: they determine what can be built and at what scale.",
+      "image_alt": "Sloping coastal plot with olive trees — illustration",
+      "points_title": "What we look at in land",
+      "points": {
+        "planning": "Urban-planning conditions: permitted use, density and number of storeys.",
+        "access": "Access, utilities, topography and ground conditions.",
+        "benchmarks": "Construction cost and local sales price benchmarks — as market references, not forecasts."
+      },
+      "form_title": "Land enquiry",
+      "form_intro": "Describe the brief — intended use, plot size and budget. Design partners join once the project reaches that stage."
+    },
+    "commercial": {
+      "meta": {
+        "title": "Commercial Property in Montenegro | GUREVIĆ",
+        "description": "Operating restaurants, retail and office premises, warehouses and logistics in Montenegro. Confidential search and review of business figures."
+      },
+      "h1": "Restaurants, Commercial Property and Warehouses",
+      "intro": "Operating restaurants, retail and office premises, going-concern businesses, as well as warehouses and logistics assets. Business figures come from the seller and are verified before a transaction.",
+      "image_alt": "Restaurant terrace overlooking the sea — illustration",
+      "points_title": "What we look at in commercial property",
+      "points": {
+        "leases": "Lease agreements and their terms, if the property is let.",
+        "business": "Team, suppliers and permits of the operating business.",
+        "revenue": "Revenue and costs backed by documents, not only by the seller’s word."
+      },
+      "logistics": {
+        "title": "Warehouses and logistics",
+        "text": "Warehouse buildings and logistics sites. We look at heavy-vehicle access, ceiling height, loading docks and proximity to main roads and the Port of Bar.",
+        "image_alt": "Modern warehouse with loading docks — illustration",
+        "cta": "Warehouse enquiry"
+      },
+      "form_title": "Commercial property enquiry",
+      "form_intro": "For warehouses and logistics, choose “Warehouse / logistics” as the investment type."
+    },
+    "development": {
+      "meta": {
+        "title": "Development Projects in Montenegro | GUREVIĆ",
+        "description": "Development projects in Montenegro: specifications, units and terms. Development partnerships and licensed partners for design and construction."
+      },
+      "h1": "Development Projects in Montenegro",
+      "intro": "Projects under construction on the coast and development partnership opportunities. Project names and photos are public; terms and current prices are available on request.",
+      "image_alt": "Concrete building frame with cranes by the sea — illustration",
+      "points_title": "What we look at in projects",
+      "points": {
+        "permits": "Building permit and the actual status of works.",
+        "developer": "The developer: completed projects and the contract structure with buyers.",
+        "schedule": "Payment schedule and completion dates — as set in the contract, not in the brochure."
+      },
+      "listings_title": "Projects",
+      "listings_note": "Specifications, units and current prices on request.",
+      "form_title": "Project enquiry",
+      "form_intro": "Tell us how you want to participate — buying units or partnering in a project — and your budget."
+    }
+  },
+  "js": {
+    "preselected": "Investment type selected in the form: {type}"
+  }
+}

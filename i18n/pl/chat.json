@@ -1,0 +1,101 @@
+{
+  "js": {
+    "fab_open": "Otwórz czat: znajdź nieruchomość",
+    "fab_close": "Zwiń czat",
+    "title": "Asystent GUREVIĆ",
+    "subtitle": "Zbieramy zapytanie i przekazujemy je agentowi",
+    "avatar": "GR",
+    "close": "Zamknij czat",
+    "restart": "Zacznij od nowa",
+    "input_label": "Państwa wiadomość",
+    "input_placeholder": "Wpisz odpowiedź…",
+    "send": "Wyślij",
+    "you": "Ty",
+    "bot": "Asystent",
+    "q": {
+      "goal": "Dzień dobry! Pomogę przygotować zapytanie — agent je otrzyma i skontaktuje się z Państwem. Co Państwa interesuje?",
+      "type": "Jaki rodzaj nieruchomości Państwo rozważają?",
+      "type_sell": "Jaką nieruchomość Państwo posiadają?",
+      "budget_buy": "Jaki jest przybliżony budżet? Prosimy wybrać opcję lub wpisać własną kwotę.",
+      "budget_rent": "Jaki jest budżet miesięczny? Prosimy wybrać opcję lub wpisać własną kwotę.",
+      "budget_invest": "Jaką wielkość inwestycji Państwo rozważają?",
+      "price_sell": "Jakiej ceny Państwo oczekują? Prosimy ją wpisać lub pominąć to pytanie.",
+      "district": "Czy jest preferowana lokalizacja?",
+      "district_sell": "Gdzie znajduje się nieruchomość?",
+      "contact": "Dziękujemy. Prosimy zostawić numer telefonu, @telegram lub e-mail — agent prześle wybór ofert i odpowie na pytania.",
+      "contact_invalid": "Nie udało się rozpoznać danych kontaktowych. Prosimy podać telefon w formacie +382…, nazwę użytkownika Telegram (@username) lub e-mail.",
+      "name": "Jak mamy się do Państwa zwracać?",
+      "confirm": "Prosimy sprawdzić zapytanie:",
+      "free_note": "Dodano do zapytania."
+    },
+    "o": {
+      "goal": {
+        "buy": "Kupno",
+        "rent": "Wynajem długoterminowy",
+        "invest": "Inwestycje",
+        "sell": "Sprzedaż lub wynajem mojej nieruchomości",
+        "browse": "Na razie się rozglądam"
+      },
+      "type": {
+        "apartment": "Mieszkanie",
+        "house": "Dom lub willa",
+        "land": "Działka",
+        "hotel": "Hotel",
+        "commercial": "Restauracja lub lokal użytkowy",
+        "development": "Projekt deweloperski",
+        "construction_project": "Obiekt w budowie",
+        "business": "Działająca firma",
+        "undecided": "Jeszcze nie wiem"
+      },
+      "budget": {
+        "b_lt150": "do 150 000 €",
+        "b_150_300": "150–300 tys. €",
+        "b_300_700": "300–700 tys. €",
+        "b_gt700": "od 700 tys. €",
+        "r_lt800": "do 800 €",
+        "r_800_1500": "800–1500 €",
+        "r_gt1500": "od 1500 €",
+        "lt_500k": "do 500 tys. €",
+        "500k_2m": "500 tys. – 2 mln €",
+        "2m_10m": "2–10 mln €",
+        "10m_50m": "10–50 mln €",
+        "gt_50m": "powyżej 50 mln €"
+      },
+      "district": {
+        "budva": "Budva",
+        "becici": "Bečići / Rafailovići",
+        "sveti_stefan": "Pržno / Sveti Stefan",
+        "petrovac": "Petrovac",
+        "boka": "Tivat / Kotor",
+        "any": "Bez znaczenia"
+      },
+      "skip": "Pomiń"
+    },
+    "summary": {
+      "goal": "Cel",
+      "type": "Nieruchomość",
+      "budget": "Budżet",
+      "price": "Oczekiwana cena",
+      "district": "Lokalizacja",
+      "contact": "Kontakt",
+      "name": "Imię",
+      "notes": "Dodatkowe uwagi"
+    },
+    "consent_text": "Klikając „Wyślij agentowi”, wyrażają Państwo zgodę na przetwarzanie danych w celu odpowiedzi na to zapytanie.",
+    "consent_link": "Polityka prywatności",
+    "submit": "Wyślij agentowi",
+    "edit": "Zacznij od nowa",
+    "sending": "Wysyłanie…",
+    "sent": "Gotowe — zapytanie trafiło do agenta, który się z Państwem skontaktuje. Można też napisać bezpośrednio:",
+    "fallback": "Wysyłanie online jest teraz niedostępne, ale zapytanie jest gotowe. Można je wysłać jednym kliknięciem:",
+    "after": "Aby kontynuować rozmowę, prosimy napisać bezpośrednio do agenta:",
+    "copied": "Treść zapytania została skopiowana — prosimy wkleić ją w czacie.",
+    "copy_failed": "Nie udało się skopiować tekstu.",
+    "lead_title": "Zapytanie z czatu na stronie Gurevic Real Estate",
+    "email_subject": "Zapytanie z czatu na stronie",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "copy": "Kopiuj tekst"
+  }
+}

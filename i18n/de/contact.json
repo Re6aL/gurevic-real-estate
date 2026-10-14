@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Kontakt – Immobilienagentur in Budva | GUREVIĆ",
+    "description": "Telefon und WhatsApp +382 69 572 257, Telegram @hurewicz, E-Mail und Instagram der Agentur GUREVIĆ. Budva, Montenegro; Treffen nur nach Vereinbarung."
+  },
+  "h1": "Kontakt",
+  "kicker": "Kontakt aufnehmen",
+  "lead": "Schreiben Sie uns oder rufen Sie an – Ilia Gurevich antwortet persönlich. Am schnellsten erreichen Sie uns per WhatsApp oder Telegram.",
+  "channels": {
+    "title": "So erreichen Sie uns"
+  },
+  "location": {
+    "title": "Wo wir sind",
+    "text": "Budva, Montenegro – Treffen nach Vereinbarung.",
+    "note": "Ort und Zeit eines Treffens stimmen wir vorab ab."
+  },
+  "languages": {
+    "title": "Sprachen",
+    "text": "Russisch, Englisch, Montenegrinisch."
+  },
+  "legal": {
+    "title": "Unternehmen"
+  },
+  "form": {
+    "title": "Nachricht senden",
+    "intro": "Beschreiben Sie Ihr Anliegen – wir antworten auf dem Weg, der Ihnen passt."
+  },
+  "quick": {
+    "title": "Wenn Sie ein konkretes Anliegen haben",
+    "sub": "Für diese Bereiche gibt es eigene Formulare mit den passenden Fragen.",
+    "items": {
+      "invest": {
+        "title": "Investitionsanfrage",
+        "text": "Hotels, Entwicklungsflächen, Gewerbeimmobilien. Vertraulich; bei Bedarf mit NDA.",
+        "link": "Zur Anfrage"
+      },
+      "owners": {
+        "title": "Anfrage für Eigentümer",
+        "text": "Wohnung, Haus, Grundstück, Bauprojekt oder Unternehmen verkaufen oder vermieten.",
+        "link": "Anfrage ausfüllen"
+      },
+      "rent": {
+        "title": "Mietanfrage",
+        "text": "Langzeitmiete einer Wohnung oder eines Hauses: bis zum Saisonbeginn oder für ein Jahr.",
+        "link": "Anfrage senden"
+      }
+    }
+  },
+  "chat": {
+    "text": "Sie wissen nicht, wo Sie anfangen sollen? Der Assistent auf der Website stellt ein paar Fragen und leitet Ihre Anfrage an den Makler weiter.",
+    "button": "Chat öffnen"
+  },
+  "jsonld": {
+    "contact_type": "Verkauf und Vermietung"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "filters": {
+    "aria": "Recherche de biens",
+    "categories_aria": "Catégories",
+    "all": "Tous",
+    "toggle": "Filtres",
+    "type": "Type de bien",
+    "type_any": "Tous",
+    "district": "Secteur",
+    "district_any": "Tous",
+    "price_buy": "Prix, €",
+    "price_rent": "Loyer mensuel, €",
+    "price_any": "sans limite",
+    "price_min": "Prix minimum, en milliers d’euros",
+    "price_max": "Prix maximum, en milliers d’euros",
+    "price_min_rent": "Loyer minimum, en euros par mois",
+    "price_max_rent": "Loyer maximum, en euros par mois",
+    "price_max_placeholder": "max.",
+    "slider_toggle": "Définir la fourchette de prix avec un curseur",
+    "slider_min": "Prix minimum",
+    "slider_max": "Prix maximum",
+    "slider_scale_min": "0 €",
+    "slider_scale_mid": "500 k€",
+    "slider_scale_max": "1 M€ et +",
+    "area": "Surface, m²",
+    "area_plot": "Surface du terrain, m²",
+    "from": "De",
+    "to": "À",
+    "area_min": "Surface minimum, m²",
+    "area_max": "Surface maximum, m²",
+    "bedrooms": "Chambres",
+    "bedrooms_any": "Indifférent",
+    "bedrooms_min": "{n}+",
+    "term": "Durée de location",
+    "term_any": "Indifférente",
+    "sort": "Trier",
+    "sort_aria": "Ordre de tri",
+    "sort_price_asc": "Prix croissant",
+    "sort_price_desc": "Prix décroissant",
+    "sort_area_desc": "Surface décroissante",
+    "reset": "Réinitialiser les filtres",
+    "id_search": "Recherche par référence",
+    "id_label": "Référence du bien",
+    "id_hint": "Par exemple BD-26-003S : la référence figure sur chaque fiche et dans vos échanges avec l’agent."
+  },
+  "results": {
+    "map_link": "Voir sur la carte"
+  },
+  "empty": {
+    "title": "Aucun bien ne correspond à ces filtres",
+    "text": "Modifiez les filtres ou envoyez-nous une demande : nous chercherons aussi en dehors du catalogue.",
+    "request": "Envoyer une demande"
+  },
+  "empty_category": {
+    "title": "Aucun bien n’est encore publié dans cette catégorie",
+    "text": "Le catalogue s’enrichit au fil des nouveaux biens. Dites-nous ce que vous recherchez : nous chercherons pour vous."
+  },
+  "request": {
+    "kicker": "Vous n’avez pas trouvé votre bien ?",
+    "title_buy": "Nous vous préparons une sélection",
+    "text_buy": "Indiquez votre budget, le secteur souhaité et vos délais : nous vérifierons l’offre disponible sur le marché et vous enverrons les biens qui correspondent.",
+    "title_rent": "Nous vous trouvons une location longue durée",
+    "text_rent": "Indiquez votre budget mensuel, le secteur souhaité, la date d’entrée et la composition du foyer : nous vous enverrons des biens adaptés.",
+    "points": [
+      "Nous répondons par le moyen de votre choix : téléphone, WhatsApp, Telegram ou e-mail",
+      "Nous parlons russe, anglais et monténégrin"
+    ],
+    "form_heading": "Demande de sélection"
+  },
+  "residency": {
+    "title": "Séjour temporaire",
+    "text": "Pour les ressortissants de pays tiers qui ne relèvent pas des exceptions prévues par la loi, un bien d’une valeur fiscale officielle d’au moins 150 000 € peut constituer un motif de séjour temporaire, sous réserve des autres conditions légales. Nous vérifions les conditions à la date de la demande : ce site ne remplace pas un conseil juridique.",
+    "link": "Modifications en vigueur de la loi sur les étrangers",
+    "url": "https://www.sluzbenilist.me/propisi/389913"
+  },
+  "rent_tabs": {
+    "aria": "Type de location",
+    "long": "Location longue durée",
+    "short": "Location courte durée",
+    "soon": "bientôt"
+  },
+  "short_term": {
+    "kicker": "Location courte durée",
+    "title": "Cette rubrique est en cours de développement",
+    "text": "Pour l’instant, nous ne proposons que la location longue durée — jusqu’au début de la saison ou à l’année. La location à la journée et de courte durée sera ajoutée plus tard.",
+    "form_heading": "Me prévenir à l’ouverture",
+    "back": "Retour à la location longue durée"
+  },
+  "rent_empty": {
+    "kicker": "Catalogue locatif",
+    "title": "Le catalogue de location longue durée est en cours de connexion",
+    "text": "Les biens à louer seront publiés à partir d’une base de données distincte, que nous connectons actuellement. D’ici là, nous cherchons sur demande : indiquez votre budget, le secteur et la date d’entrée, et nous vous enverrons des offres adaptées.",
+    "points": [
+      "Jusqu’au début de la saison ou à l’année",
+      "Appartements, maisons et villas",
+      "Budget en euros par mois"
+    ],
+    "form_heading": "Demande de location longue durée",
+    "image_alt": "Balcon donnant sur une baie hors saison — illustration"
+  },
+  "js": {
+    "count": {
+      "one": "{n} bien",
+      "other": "{n} biens"
+    },
+    "price_any": "sans limite",
+    "price_range": "{min} – {max}",
+    "price_from": "à partir de {min}",
+    "price_to": "jusqu’à {max}",
+    "filters_active": "Filtres : {n}",
+    "id_empty": "Aucun bien avec cette référence",
+    "id_found": {
+      "one": "{n} bien trouvé",
+      "other": "{n} biens trouvés"
+    },
+    "district_option": "{name} · {n}",
+    "district_option_none": "{name} · aucune offre",
+    "results_updated": "Affichés : {count}"
+  }
+}

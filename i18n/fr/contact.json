@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Contacter une agence immobilière à Budva | GUREVIĆ",
+    "description": "Téléphone et WhatsApp +382 69 572 257, Telegram @hurewicz, e-mail et Instagram de l’agence GUREVIĆ. Budva, Monténégro ; rencontres sur rendez-vous."
+  },
+  "h1": "Contact",
+  "kicker": "Nous joindre",
+  "lead": "Écrivez-nous ou appelez-nous : Ilia Gurevich répond personnellement. WhatsApp et Telegram sont le moyen le plus rapide de nous joindre.",
+  "channels": {
+    "title": "Comment nous joindre"
+  },
+  "location": {
+    "title": "Où nous trouver",
+    "text": "Budva, Monténégro — rencontres sur rendez-vous.",
+    "note": "Le lieu et l’heure de la rencontre sont convenus à l’avance."
+  },
+  "languages": {
+    "title": "Langues",
+    "text": "Russe, anglais, monténégrin."
+  },
+  "legal": {
+    "title": "Personne morale"
+  },
+  "form": {
+    "title": "Envoyer un message",
+    "intro": "Décrivez votre question : nous vous répondrons par le moyen de votre choix."
+  },
+  "quick": {
+    "title": "Si vous avez une demande précise",
+    "sub": "Ces domaines disposent de formulaires dédiés, avec les bonnes questions.",
+    "items": {
+      "invest": {
+        "title": "Demande d’investissement",
+        "text": "Hôtels, terrains à développer, immobilier commercial. En toute confidentialité ; NDA si nécessaire.",
+        "link": "Accéder à la demande"
+      },
+      "owners": {
+        "title": "Demande de propriétaire",
+        "text": "Vendre ou louer un appartement, une maison, un terrain, un projet de construction ou une entreprise.",
+        "link": "Remplir la demande"
+      },
+      "rent": {
+        "title": "Demande de location",
+        "text": "Location longue durée d’un appartement ou d’une maison : jusqu’au début de la saison ou à l’année.",
+        "link": "Envoyer une demande"
+      }
+    }
+  },
+  "chat": {
+    "text": "Vous ne savez pas par où commencer ? L’assistant du site vous posera quelques questions et transmettra votre demande à l’agent.",
+    "button": "Ouvrir le chat"
+  },
+  "jsonld": {
+    "contact_type": "Ventes et locations"
+  }
+}

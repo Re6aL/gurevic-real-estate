@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Services d’une agence immobilière à Budva | GUREVIĆ",
+    "description": "Achat, location longue durée, investissement et services aux propriétaires au Monténégro : recherche, visites, contrôle juridique des documents, transaction."
+  },
+  "h1": "Services de l’agence",
+  "kicker": "Nos activités",
+  "lead": "Quatre domaines d’activité : pour les acheteurs, les locataires, les investisseurs et les propriétaires. Chacun suit des étapes claires et repose sur des accords écrits.",
+  "directions": {
+    "title": "Domaines",
+    "sub": "Choisissez le vôtre : chaque rubrique a ses biens, ses questions et son formulaire de demande.",
+    "buy": {
+      "title": "Achat",
+      "intro": "Appartements, maisons, villas et terrains pour maisons individuelles à Budva et sur la côte monténégrine.",
+      "items": {
+        "select": "Recherche de biens selon votre cahier des charges et votre budget",
+        "viewings": "Organisation des visites",
+        "documents": "Vérification des documents avec nos avocats partenaires",
+        "deal": "Accompagnement de la transaction jusqu’à la signature du contrat"
+      },
+      "link": "Biens à vendre"
+    },
+    "rent": {
+      "title": "Location longue durée",
+      "intro": "Appartements et maisons jusqu’au début de la saison ou à l’année.",
+      "items": {
+        "select": "Recherche par secteur, durée et budget",
+        "viewings": "Organisation des visites",
+        "terms": "Négociation des conditions avec le propriétaire : dépôt de garantie, charges, animaux",
+        "contract": "Aide à la rédaction du bail"
+      },
+      "note": "La location courte durée est en cours de développement.",
+      "link": "Biens à louer"
+    },
+    "invest": {
+      "title": "Investissement",
+      "intro": "Hôtels, terrains à développer, immobilier commercial et programmes immobiliers.",
+      "items": {
+        "select": "Recherche d’opportunités selon votre stratégie d’investissement",
+        "legal": "Accompagnement juridique initial",
+        "handover": "Transmission du dossier à des spécialistes pour les étapes suivantes",
+        "partners": "Partenaires agréés pour la conception et la construction"
+      },
+      "note": "En toute confidentialité ; NDA si nécessaire.",
+      "link": "Investir au Monténégro"
+    },
+    "owners": {
+      "title": "Propriétaires",
+      "intro": "Vente et location d’appartements, de maisons, de terrains, de projets de construction et d’entreprises en activité.",
+      "items": {
+        "valuation": "Estimation du bien",
+        "photo": "Photographie",
+        "contract": "Vente ou location dans le cadre d’un contrat écrit",
+        "management": "Gestion du bien sur demande"
+      },
+      "note": "Commission d’agence : 5 % HT ; autres conditions à convenir.",
+      "link": "Espace propriétaires"
+    }
+  },
+  "steps": {
+    "title": "Comment nous commençons",
+    "items": {
+      "request": {
+        "title": "Demande",
+        "text": "Envoyez une demande via le site, écrivez-nous ou appelez-nous."
+      },
+      "talk": {
+        "title": "Un premier échange",
+        "text": "Nous précisons votre projet, vos délais et votre budget, et répondons à vos premières questions."
+      },
+      "agreement": {
+        "title": "Contrat",
+        "text": "Les conditions de travail sont fixées par écrit avant le début de la mission."
+      },
+      "work": {
+        "title": "Mission dans votre domaine",
+        "text": "Recherche, visites, vérifications, transaction — avec nos partenaires lorsque c’est nécessaire."
+      }
+    }
+  },
+  "residency": {
+    "kicker": "Bon à savoir",
+    "title": "Immobilier et séjour temporaire",
+    "text": "Pour les ressortissants de pays tiers qui ne relèvent pas des exceptions prévues par la loi, un bien d’une valeur fiscale officielle d’au moins {amount} peut constituer un motif de séjour temporaire, sous réserve des autres conditions légales. Nous vérifions les conditions à la date du dépôt de la demande.",
+    "link": "Modifications en vigueur de la loi sur les étrangers",
+    "link_note": "en monténégrin",
+    "disclaimer": "Les informations de ce site ne constituent pas un conseil juridique."
+  },
+  "form": {
+    "kicker": "Nous contacter",
+    "title": "Parlez-nous de votre projet",
+    "text": "Décrivez ce que vous recherchez ou ce que vous souhaitez vendre : nous vous recontacterons par le moyen de votre choix. Vous pouvez aussi nous écrire directement.",
+    "form_title": "Demande",
+    "messengers": "Ou écrivez-nous directement"
+  }
+}

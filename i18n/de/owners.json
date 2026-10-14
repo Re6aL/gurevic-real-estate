@@ -1,0 +1,428 @@
+{
+  "meta": {
+    "title": "Immobilie verkaufen oder vermieten in Budva | GUREVIĆ",
+    "description": "GUREVIĆ in Budva: Bewertung, Fotos, Verkauf und Langzeitvermietung von Wohnungen, Häusern, Grundstücken und Unternehmen. Provision 5 % ohne MwSt."
+  },
+  "h1": "Immobilie verkaufen oder vermieten mit GUREVIĆ",
+  "hero": {
+    "kicker": "Für Eigentümer",
+    "lead": "Wir übernehmen Wohnungen, Häuser, Grundstücke, Bauprojekte und laufende Unternehmen in Budva und anderen Regionen Montenegros. Wir bewerten die Immobilie, bereiten sie für Verkauf oder Vermietung vor und begleiten Sie auf Basis eines schriftlichen Vertrags bis zum Abschluss.",
+    "cta_form": "Objekt anbieten",
+    "cta_process": "So arbeiten wir",
+    "facts_aria": "Die wichtigsten Konditionen im Überblick",
+    "facts": {
+      "commission": "Provision 5 % ohne MwSt.",
+      "contract": "Schriftlicher Vertrag",
+      "languages": "Wir sprechen Russisch, Englisch und Montenegrinisch"
+    }
+  },
+  "agency": {
+    "kicker": "Über die Agentur",
+    "title": "Eine Immobilienagentur in Budva",
+    "p1": "GUREVIĆ (DOO GUREVIC BUDVA) ist eine Immobilienagentur in Budva, geführt von ihrem Inhaber und Makler Ilia Gurevich. Preis, Konditionen und den Verlauf des Verkaufs besprechen Sie direkt mit der Person, die Ihren Abschluss betreut.",
+    "p2": "Wir sind im dritten Jahr auf dem Immobilienmarkt Montenegros tätig und arbeiten jetzt in einem neuen Format: getrennte Bereiche für Käufer, Mieter, Anleger und Eigentümer, schriftliche Verträge sowie Partner für rechtliche Begleitung, Planung und Bau.",
+    "p3": "Auf Verkäuferseite übernehmen wir auch Investitionsobjekte – Entwicklungsflächen, Bauprojekte, Hotels, Restaurants und andere laufende Unternehmen. Angaben zu solchen Objekten geben wir vertraulich an Käufer weiter.",
+    "more": "Mehr über die Agentur",
+    "kinds_title": "Was wir übernehmen",
+    "kinds": {
+      "apartment": {
+        "title": "Wohnungen",
+        "text": "Neubau und Bestand"
+      },
+      "house": {
+        "title": "Häuser und Villen",
+        "text": "Zum Wohnen und als Feriendomizil"
+      },
+      "land": {
+        "title": "Grundstücke",
+        "text": "Für private und gewerbliche Bebauung"
+      },
+      "construction_project": {
+        "title": "Bauprojekte",
+        "text": "In der Planungs- oder Bauphase"
+      },
+      "business": {
+        "title": "Laufende Unternehmen",
+        "text": "Restaurants, Hotels, Gewerbeflächen"
+      }
+    }
+  },
+  "services": {
+    "kicker": "Leistungen",
+    "title": "Wie wir helfen können",
+    "sub": "Wählen Sie eine Leistung – auf der jeweiligen Seite erfahren Sie im Detail, was dazugehört.",
+    "more": "Mehr erfahren",
+    "items": {
+      "sell": {
+        "title": "Immobilie verkaufen",
+        "text": "Bewertung, Fotografie, Inserat, Besichtigungen, Verhandlungen und Begleitung bis zur Vertragsunterzeichnung."
+      },
+      "rent_out": {
+        "title": "Vermietung",
+        "text": "Langzeitvermietung – bis zum Saisonbeginn oder für ein Jahr: Mietpreis, Mietersuche, Mietvertrag."
+      },
+      "management": {
+        "title": "Immobilienverwaltung",
+        "text": "Schlüssel, Rechnungen, Objektkontrollen und Koordination von Handwerkern – nach Vereinbarung."
+      }
+    }
+  },
+  "process": {
+    "kicker": "Ablauf",
+    "title": "So arbeiten wir mit Eigentümern",
+    "sub": "Fünf Schritte vom ersten Gespräch bis zum Abschluss.",
+    "legal": "Wir arbeiten auf Basis eines schriftlichen Vertrags nach montenegrinischem Recht.",
+    "steps": {
+      "valuation": {
+        "title": "Bewertung",
+        "text": "Wir besichtigen die Immobilie, prüfen Unterlagen und Marktangebot und legen gemeinsam mit Ihnen den Angebotspreis fest."
+      },
+      "photo": {
+        "title": "Fotografie",
+        "text": "Wir fotografieren die Immobilie und erstellen die Beschreibung für das Inserat."
+      },
+      "contract": {
+        "title": "Vertrag",
+        "text": "Die Konditionen halten wir schriftlich fest:",
+        "terms": {
+          "commission_html": "Provision der Agentur: <strong>5 % ohne MwSt.</strong>, weitere Konditionen nach Vereinbarung;",
+          "exclusive": "bevorzugt ein Alleinauftrag;",
+          "price": "Preisänderungen nur mit Zustimmung des Eigentümers;",
+          "access": "der Eigentümer ermöglicht den Zugang zur Immobilie für Besichtigungen."
+        }
+      },
+      "marketing": {
+        "title": "Vermarktung und Besichtigungen",
+        "text": "Wir veröffentlichen das Objekt, beantworten Anfragen, führen Besichtigungen nach abgestimmtem Zeitplan durch und berichten Ihnen über die Ergebnisse."
+      },
+      "deal": {
+        "title": "Abschluss",
+        "text": "Wir leiten Ihnen Angebote weiter, unterstützen Sie bei den Verhandlungen und begleiten Sie bis zur Unterzeichnung."
+      }
+    },
+    "exclusive": {
+      "title": "Warum ein Alleinauftrag?",
+      "lead": "Er ist nicht verpflichtend, für den Eigentümer aber bequemer.",
+      "points": {
+        "contact": "Ein Ansprechpartner, statt jeden Makler und jede Agentur in Montenegro kennenlernen zu müssen.",
+        "price": "Die Immobilie wird mit einem einheitlichen Preis und einer Beschreibung angeboten.",
+        "viewings": "Besichtigungen folgen einem gemeinsam abgestimmten Zeitplan."
+      }
+    }
+  },
+  "contract": {
+    "kicker": "Unterlagen",
+    "title": "Mustervertrag",
+    "sub": "Die wichtigsten Abschnitte der Verträge, die wir mit Eigentümern schließen.",
+    "note": "Muster nur zur Information – der endgültige Text wird bei Unterzeichnung vorgelegt.",
+    "download": "PDF herunterladen",
+    "request": "Mustervertrag anfordern",
+    "request_hint": "Senden Sie uns eine Anfrage – wir schicken Ihnen einen Mustervertrag zur Ansicht.",
+    "files": {
+      "sale": "",
+      "business": ""
+    },
+    "sale": {
+      "title": "Maklervertrag für den Immobilienverkauf – wichtigste Abschnitte",
+      "sections": {
+        "parties": {
+          "title": "Vertragsparteien",
+          "text": "Der Eigentümer – eine natürliche oder juristische Person – und die Agentur DOO GUREVIC BUDVA; Angaben und Vertreter der Parteien."
+        },
+        "object": {
+          "title": "Die Immobilie und ihre Identifizierung",
+          "text": "Art und Fläche der Immobilie, Nummer des Grundbuchauszugs (list nepokretnosti), Katastralgemeinde (KO) und bei Wohnungen die Einheitsnummer (PD)."
+        },
+        "price": {
+          "title": "Preis und Preisänderungen",
+          "text": "Der Angebotspreis; er darf nur mit Zustimmung des Eigentümers geändert werden."
+        },
+        "commission": {
+          "title": "Vergütung der Agentur",
+          "text": "5 % ohne MwSt.; wann die Zahlungspflicht entsteht und wie abgerechnet wird."
+        },
+        "exclusivity": {
+          "title": "Exklusivität und Laufzeit",
+          "text": "Allein- oder einfacher Auftrag, Vertragslaufzeit und Verlängerung."
+        },
+        "owner_duties": {
+          "title": "Pflichten des Eigentümers",
+          "text": "Unterlagen zur Immobilie bereitstellen, Zugang für Besichtigungen ermöglichen, Belastungen, Mieter und andere für den Verkauf relevante Umstände offenlegen."
+        },
+        "agent_duties": {
+          "title": "Pflichten der Agentur",
+          "text": "Bewertung, Fotografie, Vermarktung, Besichtigungen, Berichte an den Eigentümer, Unterstützung bei Verhandlungen und Begleitung bis zur Vertragsunterzeichnung."
+        },
+        "confidentiality": {
+          "title": "Vertraulichkeit",
+          "text": "Umgang mit den Unterlagen und personenbezogenen Daten des Eigentümers; welche Angaben zur Immobilie veröffentlicht werden."
+        },
+        "termination": {
+          "title": "Kündigung",
+          "text": "Gründe und Verfahren für die vorzeitige Beendigung des Vertrags."
+        },
+        "law": {
+          "title": "Anwendbares Recht",
+          "text": "Der Vertrag unterliegt dem Recht Montenegros."
+        }
+      }
+    },
+    "business": {
+      "title": "Maklervertrag für den Unternehmensverkauf – wichtigste Abschnitte",
+      "sections": {
+        "parties": {
+          "title": "Vertragsparteien",
+          "text": "Der Inhaber des Unternehmens oder die verkaufende Gesellschaft und die Agentur DOO GUREVIC BUDVA; Angaben und Vertreter der Parteien."
+        },
+        "object": {
+          "title": "Gegenstand des Verkaufs",
+          "text": "Angaben zur Gesellschaft (Firma, Registernummer) und was genau verkauft wird – ein Gesellschaftsanteil oder Vermögen und Wirtschaftsgüter des Unternehmens."
+        },
+        "price": {
+          "title": "Preis und Preisänderungen",
+          "text": "Der Angebotspreis und was er umfasst; er darf nur mit Zustimmung des Eigentümers geändert werden."
+        },
+        "commission": {
+          "title": "Vergütung der Agentur",
+          "text": "5 % ohne MwSt.; wann die Zahlungspflicht entsteht und wie abgerechnet wird."
+        },
+        "exclusivity": {
+          "title": "Exklusivität und Laufzeit",
+          "text": "Allein- oder einfacher Auftrag, Vertragslaufzeit und Verlängerung."
+        },
+        "owner_duties": {
+          "title": "Pflichten des Eigentümers",
+          "text": "Unterlagen der Gesellschaft und Informationen für die Prüfung durch den Käufer bereitstellen, Zugang zu den Räumlichkeiten für Besichtigungen ermöglichen, Verbindlichkeiten und Belastungen offenlegen."
+        },
+        "agent_duties": {
+          "title": "Pflichten der Agentur",
+          "text": "Bewertung, Erstellung der Beschreibung, Käufersuche, Besichtigungen, Berichte an den Eigentümer, Unterstützung bei Verhandlungen und Begleitung bis zur Vertragsunterzeichnung."
+        },
+        "confidentiality": {
+          "title": "Vertraulichkeit",
+          "text": "Angaben zum Unternehmen werden nur geprüften Käufern offengelegt, bei Bedarf erst nach Unterzeichnung eines NDA."
+        },
+        "termination": {
+          "title": "Kündigung",
+          "text": "Gründe und Verfahren für die vorzeitige Beendigung des Vertrags."
+        },
+        "law": {
+          "title": "Anwendbares Recht",
+          "text": "Der Vertrag unterliegt dem Recht Montenegros."
+        }
+      }
+    }
+  },
+  "form": {
+    "kicker": "Anfrage",
+    "title": "Objekt anbieten",
+    "intro": "Erzählen Sie uns von der Immobilie – Unterlagen sind in dieser Phase nicht nötig. Katasterdaten verwenden wir nur zur Prüfung des Objekts.",
+    "next_title": "Wie es weitergeht",
+    "next": {
+      "call": "Wir melden uns unter der angegebenen Telefonnummer und klären die Details.",
+      "visit": "Wir vereinbaren eine Besichtigung und Bewertung der Immobilie.",
+      "contract": "Wir schlagen Konditionen vor und bereiten den Vertrag vor."
+    },
+    "privacy_title": "Ihre Daten",
+    "privacy": "Die Nummer des Grundbuchauszugs, KO und PD benötigen wir nur zur Prüfung des Objekts. Namen von Eigentümern, Katasternummern und genaue Adressen veröffentlichen wir nie.",
+    "direct_title": "Lieber schreiben?",
+    "direct": "Schreiben Sie uns direkt oder stellen Sie Ihre Frage im Chat auf der Website.",
+    "chat": "Im Chat fragen"
+  },
+  "faq_title": "Häufige Fragen",
+  "terms_title": "Konditionen",
+  "related": {
+    "title": "Weitere Leistungen für Eigentümer",
+    "all": "Alle Leistungen für Eigentümer",
+    "all_text": "Über die Agentur, unseren Ablauf und den Mustervertrag."
+  },
+  "alt": {
+    "hero": "Helles Wohnzimmer mit Balkon und Meerblick – Illustration",
+    "sell": "Altstadt von Budva und die Bucht hinter blühender Bougainvillea",
+    "rent_out": "Balkon mit Blick auf eine Bucht, Kaffeetasse und Schlüssel auf dem Tisch – Illustration",
+    "management": "Altstadt von Budva, vom Meer aus gesehen"
+  },
+  "categories": {
+    "sell": {
+      "meta": {
+        "title": "Immobilie verkaufen in Montenegro | GUREVIĆ",
+        "description": "Wohnung, Haus, Grundstück oder Unternehmen in Budva und Montenegro verkaufen: Bewertung, Fotos, Besichtigungen. Provision 5 % ohne MwSt., schriftlicher Vertrag."
+      },
+      "h1": "Ihre Immobilie in Montenegro verkaufen",
+      "kicker": "Verkauf",
+      "lead": "Wir bewerten die Immobilie, bereiten sie für den Verkauf vor und verhandeln mit Käufern. Sie haben einen Ansprechpartner und erhalten Berichte über den Stand des Verkaufs.",
+      "included_title": "Was zum Verkauf gehört",
+      "included": {
+        "valuation": {
+          "title": "Bewertung",
+          "text": "Wir analysieren Immobilie, Lage und Marktangebot und legen gemeinsam mit Ihnen den Angebotspreis fest."
+        },
+        "photo": {
+          "title": "Fotografie und Beschreibung",
+          "text": "Wir fotografieren die Immobilie und erstellen die Beschreibung für das Inserat."
+        },
+        "listing": {
+          "title": "Inserat",
+          "text": "Wir veröffentlichen das Objekt auf der Website der Agentur und in unseren Kanälen und beantworten Anfragen von Käufern."
+        },
+        "viewings": {
+          "title": "Besichtigungen",
+          "text": "Wir führen Besichtigungen nach einem mit Ihnen abgestimmten Zeitplan durch und berichten über die Ergebnisse."
+        },
+        "negotiation": {
+          "title": "Verhandlungen",
+          "text": "Wir leiten Ihnen die Angebote der Käufer weiter und helfen, Preis und Konditionen abzustimmen."
+        },
+        "deal": {
+          "title": "Begleitung beim Abschluss",
+          "text": "Wir helfen bei der Vorbereitung der Unterlagen und begleiten Sie bis zur Unterzeichnung des Kaufvertrags."
+        }
+      },
+      "terms": {
+        "commission_html": "Provision der Agentur: <strong>5 % ohne MwSt.</strong>; weitere Konditionen nach Vereinbarung.",
+        "exclusive": "Bevorzugt ein Alleinauftrag: ein Ansprechpartner statt aller Makler und Agenturen in Montenegro.",
+        "contract": "Ein schriftlicher Vertrag nach montenegrinischem Recht."
+      },
+      "terms_link": "Mustervertrag",
+      "faq": {
+        "price": {
+          "q": "Was kosten Ihre Leistungen?",
+          "a": "Die Provision der Agentur beträgt 5 % ohne MwSt. Weitere Konditionen werden individuell besprochen und in einem schriftlichen Vertrag festgehalten."
+        },
+        "exclusive": {
+          "q": "Muss ich einen Alleinauftrag unterzeichnen?",
+          "a": "Nein, aber wir empfehlen ihn: Sie haben es mit einer Agentur zu tun statt mit allen Maklern in Montenegro, die Immobilie wird zu einem einheitlichen Preis angeboten, und Besichtigungen folgen einem abgestimmten Zeitplan."
+        },
+        "documents": {
+          "q": "Welche Unterlagen brauche ich für eine Anfrage?",
+          "a": "Keine. Die Nummer des Grundbuchauszugs, die Katastralgemeinde (KO) und bei Wohnungen die Einheitsnummer (PD) helfen uns, das Objekt schneller zu prüfen. Die vollständigen Unterlagen werden bei Vertragsunterzeichnung benötigt."
+        },
+        "price_change": {
+          "q": "Wer entscheidet über eine Preisänderung?",
+          "a": "Nur der Eigentümer. Jede Preisänderung stimmen wir vorab mit Ihnen ab."
+        },
+        "business": {
+          "q": "Kann ich ein laufendes Unternehmen oder ein Bauprojekt verkaufen?",
+          "a": "Ja. Auf Verkäuferseite übernehmen wir auch Investitionsobjekte. Angaben zum Unternehmen werden nur geprüften Käufern offengelegt, bei Bedarf erst nach Unterzeichnung eines NDA."
+        }
+      },
+      "form_title": "Objekt zum Verkauf anbieten",
+      "form_intro": "Erzählen Sie uns von der Immobilie – Unterlagen sind in dieser Phase nicht nötig. Katasterdaten verwenden wir nur zur Prüfung des Objekts."
+    },
+    "rent_out": {
+      "meta": {
+        "title": "Immobilie vermieten in Budva | GUREVIĆ",
+        "description": "Langzeitvermietung einer Wohnung oder eines Hauses in Budva und Montenegro – bis zur Saison oder für ein Jahr: Mietpreis, Fotos, Mietersuche und Mietvertrag."
+      },
+      "h1": "Ihre Immobilie langfristig vermieten",
+      "kicker": "Vermietung",
+      "lead": "Wir helfen Ihnen, eine Wohnung oder ein Haus langfristig zu vermieten – bis zum Saisonbeginn oder für ein Jahr: Wir ermitteln den Mietpreis, finden einen Mieter und bereiten den Mietvertrag vor.",
+      "included_title": "Was zur Vermietung gehört",
+      "included": {
+        "rate": {
+          "title": "Ermittlung des Mietpreises",
+          "text": "Wir schlagen einen Mietpreis für die Langzeitmiete vor – bis zum Saisonbeginn oder für ein Jahr – unter Berücksichtigung von Lage, Zustand und Marktangebot."
+        },
+        "photo": {
+          "title": "Fotografie und Beschreibung",
+          "text": "Wir fotografieren die Immobilie und erstellen die Beschreibung für das Inserat."
+        },
+        "search": {
+          "title": "Mietersuche und Auswahl",
+          "text": "Wir lernen die Interessenten kennen und klären Mietdauer, Bewohner, Haustiere und Budget. Die Entscheidung treffen Sie."
+        },
+        "viewings": {
+          "title": "Besichtigungen",
+          "text": "Wir führen Besichtigungen nach einem mit Ihnen abgestimmten Zeitplan durch."
+        },
+        "lease": {
+          "title": "Mietvertrag",
+          "text": "Wir helfen bei der Vorbereitung des Mietvertrags: Laufzeit, Kaution, Nebenkosten und Übergabe der Immobilie."
+        }
+      },
+      "terms": {
+        "commission_html": "Provision und Konditionen <strong>nach Vereinbarung</strong>.",
+        "term": "Nur Langzeitvermietung: bis zum Saisonbeginn oder für ein Jahr.",
+        "contract": "Die Konditionen werden schriftlich festgehalten."
+      },
+      "faq": {
+        "term": {
+          "q": "Für welchen Zeitraum vermieten Sie Immobilien?",
+          "a": "Wir arbeiten mit Langzeitmieten – bis zum Saisonbeginn oder für ein Jahr. Die Kurzzeitvermietung ist noch in Vorbereitung."
+        },
+        "price": {
+          "q": "Was kosten Ihre Leistungen?",
+          "a": "Provision und Konditionen werden individuell besprochen und schriftlich festgehalten."
+        },
+        "tenant": {
+          "q": "Wie wählen Sie einen Mieter aus?",
+          "a": "Wir lernen die Interessenten kennen, klären Mietdauer, Bewohner, Haustiere und Budget und geben diese Informationen an Sie weiter. Die Entscheidung über die Vermietung treffen Sie."
+        },
+        "presence": {
+          "q": "Muss ich bei den Besichtigungen anwesend sein?",
+          "a": "Nicht unbedingt: Besichtigungen sind auch mit Schlüsseln möglich, die Sie der Agentur überlassen. Das wird bei Vertragsabschluss vereinbart."
+        }
+      },
+      "form_title": "Objekt zur Vermietung anbieten",
+      "form_intro": "Erzählen Sie uns von der Immobilie und der gewünschten Mietdauer. Unterlagen sind in dieser Phase nicht nötig."
+    },
+    "management": {
+      "meta": {
+        "title": "Immobilienverwaltung in Budva | GUREVIĆ",
+        "description": "Immobilienverwaltung in Budva: Schlüsselverwahrung, Nebenkostenrechnungen, Objektkontrollen und Koordination von Handwerkern. Konditionen individuell."
+      },
+      "h1": "Immobilienverwaltung",
+      "kicker": "Verwaltung",
+      "lead": "Für Eigentümer, die nicht dauerhaft in Montenegro leben oder ihre Immobilie langfristig vermieten. Aufgaben und Konditionen werden individuell vereinbart.",
+      "included_title": "Was sich organisieren lässt",
+      "included_note": "Ein festes Paket gibt es nicht: Wir vereinbaren die Aufgaben, die Sie tatsächlich brauchen.",
+      "included": {
+        "keys": {
+          "title": "Schlüsselverwahrung",
+          "text": "Die Agentur verwahrt die Schlüssel – für Besichtigungen, Handwerker und Notfälle."
+        },
+        "bills": {
+          "title": "Nebenkosten und Rechnungen",
+          "text": "Kontrolle und Bezahlung von Nebenkostenrechnungen nach vereinbartem Verfahren."
+        },
+        "checks": {
+          "title": "Objektkontrollen",
+          "text": "Begehungen beim Ein- und Auszug eines Langzeitmieters und nach Vereinbarung während der Mietzeit."
+        },
+        "maintenance": {
+          "title": "Instandhaltung und Reparaturen",
+          "text": "Koordination von Handwerkern; die Kosten der Arbeiten werden vorab mit dem Eigentümer abgestimmt."
+        }
+      },
+      "terms": {
+        "commission_html": "Konditionen werden <strong>individuell</strong> vereinbart.",
+        "scope": "Aufgaben und Berichtswesen werden vorab abgestimmt.",
+        "contract": "Vereinbarungen werden schriftlich festgehalten."
+      },
+      "faq": {
+        "scope": {
+          "q": "Was umfasst die Verwaltung?",
+          "a": "Die Aufgaben werden individuell festgelegt: zum Beispiel Schlüsselverwahrung, Bezahlung von Nebenkostenrechnungen, Objektkontrollen während einer Langzeitvermietung und die Koordination von Reparaturen über Handwerker."
+        },
+        "price": {
+          "q": "Was kostet das?",
+          "a": "Die Konditionen werden individuell besprochen und hängen von der Immobilie und den Aufgaben ab."
+        },
+        "combine": {
+          "q": "Lässt sich die Verwaltung mit der Vermietung kombinieren?",
+          "a": "Ja, darüber können wir sprechen: zum Beispiel die Suche nach einem Langzeitmieter und der weitere Kontakt mit ihm."
+        },
+        "repairs": {
+          "q": "Führen Sie Reparaturen selbst aus?",
+          "a": "Nein, wir koordinieren Handwerker. Die Kosten der Arbeiten werden vorab mit dem Eigentümer abgestimmt."
+        }
+      },
+      "form_title": "Immobilienverwaltung anfragen",
+      "form_intro": "Erzählen Sie uns von der Immobilie und welche Aufgaben Sie übergeben möchten. Unterlagen sind in dieser Phase nicht nötig."
+    }
+  },
+  "js": {
+    "contract_request_sale": "Bitte senden Sie mir einen Mustervertrag für den Immobilienverkauf.",
+    "contract_request_business": "Bitte senden Sie mir einen Mustervertrag für den Unternehmensverkauf."
+  }
+}

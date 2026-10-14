@@ -1,0 +1,78 @@
+{#- Базовый каркас страницы. Блоки для страниц: head_extra, main, scripts_extra (+ jsonld).
+    Дочерний шаблон может на верхнем уровне задать:
+      {% set extra_css = ['css/x.css'] %}  {% set extra_js = ['js/x.js'] %}  {% set og_image = 'img/stock/…jpg' %}
+      {% set body_extra_class = 'has-hero-overlay' %}  — прозрачная шапка поверх hero (до 40px прокрутки)
+    <html> получает класс no-js → js (инлайн-скрипт ниже); на "js" завязаны off-canvas и дропдауны. -#}
+<!DOCTYPE html>
+<html class="no-js" lang="{{ lang }}" dir="{{ dir }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if page.noindex %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+{% if page.canonical %}
+<link rel="canonical" href="{{ page.canonical }}">
+{% for alt in page.alternates %}
+<link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.abs }}">
+{% endfor %}
+{% endif %}
+{% set _og_src = og_image | default(page.og_image) %}
+{% set _og_image = abs_path(_og_src) %}
+{% set _og_size = image_size(_og_src) %}
+<meta property="og:type" content="{{ page.og_type }}">
+<meta property="og:site_name" content="{{ site.site_name }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+{% if page.canonical %}
+<meta property="og:url" content="{{ page.canonical }}">
+{% endif %}
+<meta property="og:image" content="{{ _og_image }}">
+{% if _og_size %}
+<meta property="og:image:width" content="{{ _og_size[0] }}">
+<meta property="og:image:height" content="{{ _og_size[1] }}">
+{% endif %}
+<meta property="og:locale" content="{{ page.og_locale }}">
+{% for loc in page.og_locale_alternates %}
+<meta property="og:locale:alternate" content="{{ loc }}">
+{% endfor %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ _og_image }}">
+<meta name="theme-color" content="#14273b">
+{% if lang != 'he' %}
+<link rel="preload" href="{{ path('assets/fonts/futura-book.woff2') }}" as="font" type="font/woff2" crossorigin>
+{% endif %}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% for href in css_files(extra_css | default([])) %}
+<link rel="stylesheet" href="{{ asset(href) }}">
+{% endfor %}
+<link rel="icon" type="image/png" href="{{ asset(site.favicon) }}">
+{% block head_extra %}{% endblock %}
+{% block jsonld %}
+{% for obj in page.jsonld %}
+<script type="application/ld+json">{{ obj | tojson }}</script>
+{% endfor %}
+{% endblock %}
+</head>
+<body class="{{ page.body_class }}{% if body_extra_class is defined and body_extra_class %} {{ body_extra_class }}{% endif %}">
+<a class="skip-link" href="#main">{{ t('common.skip_link') }}</a>
+{% include "partials/header.html" %}
+<main id="main" tabindex="-1">
+{% block main %}{% endblock %}
+</main>
+{% include "partials/footer.html" %}
+<script>window.SITE={{ site_js | tojson }};</script>
+{% if asset_exists('js/site.js') %}
+<script src="{{ asset('js/site.js') }}" defer></script>
+{% endif %}
+{% for src in js_files(extra_js | default([])) %}
+<script src="{{ asset(src) }}" defer></script>
+{% endfor %}
+{% block scripts_extra %}{% endblock %}
+</body>
+</html>

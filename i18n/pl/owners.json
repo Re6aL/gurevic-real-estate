@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "title": "Sprzedaż lub wynajem nieruchomości w Budvie | GUREVIĆ",
+    "description": "GUREVIĆ w Budvie: wycena, zdjęcia, sprzedaż i wynajem długoterminowy mieszkań, domów, działek i firm w Czarnogórze. Prowizja 5% bez VAT."
+  },
+  "h1": "Sprzedaż i wynajem nieruchomości z GUREVIĆ",
+  "hero": {
+    "kicker": "Dla właścicieli",
+    "lead": "Przyjmujemy do oferty mieszkania, domy, działki, projekty budowlane i działające firmy w Budvie i innych częściach Czarnogóry. Wyceniamy nieruchomość, przygotowujemy ją do sprzedaży lub wynajmu i prowadzimy aż do transakcji na podstawie pisemnej umowy.",
+    "cta_form": "Zgłoś nieruchomość",
+    "cta_process": "Jak pracujemy",
+    "facts_aria": "Najważniejsze warunki w skrócie",
+    "facts": {
+      "commission": "Prowizja 5% bez VAT",
+      "contract": "Pisemna umowa",
+      "languages": "Mówimy po rosyjsku, angielsku i czarnogórsku"
+    }
+  },
+  "agency": {
+    "kicker": "O agencji",
+    "title": "Agencja nieruchomości w Budvie",
+    "p1": "GUREVIĆ (DOO GUREVIC BUDVA) to agencja nieruchomości w Budvie prowadzona przez jej właściciela i agenta, Ilię Gurevicha. Cenę, warunki i przebieg sprzedaży omawiają Państwo bezpośrednio z osobą, która prowadzi transakcję.",
+    "p2": "To nasz trzeci rok na rynku nieruchomości w Czarnogórze; obecnie pracujemy w nowym formacie: osobne usługi dla kupujących, najemców, inwestorów i właścicieli, pisemne umowy oraz partnerzy w zakresie obsługi prawnej, projektowania i budowy.",
+    "p3": "Po stronie sprzedającego przyjmujemy także aktywa inwestycyjne — grunty inwestycyjne, projekty budowlane, hotele, restauracje i inne działające firmy. Szczegóły takich aktywów udostępniamy kupującym poufnie.",
+    "more": "Więcej o agencji",
+    "kinds_title": "Co przyjmujemy do oferty",
+    "kinds": {
+      "apartment": {"title": "Mieszkania", "text": "Rynek pierwotny i wtórny"},
+      "house": {"title": "Domy i wille", "text": "Do stałego zamieszkania i wypoczynkowe"},
+      "land": {"title": "Działki", "text": "Pod zabudowę prywatną i komercyjną"},
+      "construction_project": {"title": "Projekty budowlane", "text": "Na etapie projektu lub budowy"},
+      "business": {"title": "Działające firmy", "text": "Restauracje, hotele, lokale użytkowe"}
+    }
+  },
+  "services": {
+    "kicker": "Usługi",
+    "title": "W czym możemy pomóc",
+    "sub": "Prosimy wybrać usługę — na każdej stronie szczegółowo opisujemy, co obejmuje.",
+    "more": "Dowiedz się więcej",
+    "items": {
+      "sell": {"title": "Sprzedaż nieruchomości", "text": "Wycena, zdjęcia, publikacja oferty, prezentacje, negocjacje i wsparcie aż do podpisania umowy."},
+      "rent_out": {"title": "Wynajem", "text": "Wynajem długoterminowy — do początku sezonu lub na rok: stawka czynszu, wyszukiwanie najemcy, umowa najmu."},
+      "management": {"title": "Zarządzanie nieruchomością", "text": "Klucze, rachunki, kontrole nieruchomości i koordynacja wykonawców — po uzgodnieniu."}
+    }
+  },
+  "process": {
+    "kicker": "Nasz proces",
+    "title": "Jak pracujemy z właścicielami",
+    "sub": "Pięć kroków od pierwszej rozmowy do transakcji.",
+    "legal": "Pracujemy na podstawie pisemnej umowy zgodnie z prawem Czarnogóry.",
+    "steps": {
+      "valuation": {"title": "Wycena", "text": "Oglądamy nieruchomość, analizujemy dokumenty i rynek oraz uzgadniamy z Państwem cenę ofertową."},
+      "photo": {"title": "Zdjęcia", "text": "Wykonujemy zdjęcia nieruchomości i przygotowujemy opis oferty."},
+      "contract": {
+        "title": "Umowa",
+        "text": "Warunki zapisujemy na piśmie:",
+        "terms": {
+          "commission_html": "prowizja agencji <strong>5% bez VAT</strong>, pozostałe warunki do uzgodnienia;",
+          "exclusive": "preferujemy umowę na wyłączność;",
+          "price": "każda zmiana ceny wyłącznie za zgodą właściciela;",
+          "access": "właściciel zapewnia dostęp do nieruchomości na potrzeby prezentacji."
+        }
+      },
+      "marketing": {"title": "Promocja i prezentacje", "text": "Publikujemy ofertę, odpowiadamy na zapytania, prowadzimy prezentacje według uzgodnionego harmonogramu i informujemy Państwa o wynikach."},
+      "deal": {"title": "Transakcja", "text": "Przekazujemy oferty kupujących, wspieramy Państwa w negocjacjach i prowadzimy transakcję aż do podpisania."}
+    },
+    "exclusive": {
+      "title": "Dlaczego umowa na wyłączność",
+      "lead": "Nie jest obowiązkowa, ale jest wygodniejsza dla właściciela.",
+      "points": {
+        "contact": "Jedna osoba kontaktowa zamiast spotkań z każdym agentem i każdą agencją w Czarnogórze.",
+        "price": "Nieruchomość jest na rynku z jedną ceną i jednym opisem.",
+        "viewings": "Prezentacje odbywają się według jednego uzgodnionego harmonogramu."
+      }
+    }
+  },
+  "contract": {
+    "kicker": "Dokumenty",
+    "title": "Wzór umowy",
+    "sub": "Główne części umów, które zawieramy z właścicielami.",
+    "note": "Wzór wyłącznie do zapoznania się — ostateczna treść jest przekazywana przy podpisaniu.",
+    "download": "Pobierz PDF",
+    "request": "Poproś o wzór umowy",
+    "request_hint": "Prosimy wysłać zapytanie — prześlemy wzór umowy do zapoznania się.",
+    "files": {
+      "sale": "",
+      "business": ""
+    },
+    "sale": {
+      "title": "Umowa pośrednictwa w sprzedaży nieruchomości — główne części",
+      "sections": {
+        "parties": {"title": "Strony", "text": "Właściciel — osoba fizyczna lub firma — oraz agencja DOO GUREVIC BUDVA; dane i przedstawiciele stron."},
+        "object": {"title": "Nieruchomość i jej identyfikacja", "text": "Rodzaj i powierzchnia nieruchomości, numer list nepokretnosti (wypisu z rejestru nieruchomości), gmina katastralna (KO, katastarska opština), a w przypadku mieszkania — numer lokalu (PD, poseban dio)."},
+        "price": {"title": "Cena i jej zmiany", "text": "Cena ofertowa; może zostać zmieniona wyłącznie za zgodą właściciela."},
+        "commission": {"title": "Wynagrodzenie agencji", "text": "5% bez VAT; termin wymagalności i sposób rozliczenia."},
+        "exclusivity": {"title": "Wyłączność i okres obowiązywania", "text": "Umowa na wyłączność lub bez wyłączności, okres obowiązywania umowy i sposób jej przedłużenia."},
+        "owner_duties": {"title": "Obowiązki właściciela", "text": "Przekazanie dokumentów nieruchomości, zapewnienie dostępu na potrzeby prezentacji, ujawnienie obciążeń, najemców i innych okoliczności istotnych dla sprzedaży."},
+        "agent_duties": {"title": "Obowiązki agencji", "text": "Wycena, zdjęcia, promocja, prezentacje, raporty dla właściciela, wsparcie w negocjacjach i pomoc aż do podpisania umowy sprzedaży."},
+        "confidentiality": {"title": "Poufność", "text": "Postępowanie z dokumentami i danymi osobowymi właściciela; które informacje o nieruchomości są publikowane."},
+        "termination": {"title": "Rozwiązanie umowy", "text": "Podstawy i tryb wcześniejszego rozwiązania umowy."},
+        "law": {"title": "Prawo właściwe", "text": "Umowa podlega prawu Czarnogóry."}
+      }
+    },
+    "business": {
+      "title": "Umowa pośrednictwa w sprzedaży firmy — główne części",
+      "sections": {
+        "parties": {"title": "Strony", "text": "Właściciel firmy lub spółka sprzedająca oraz agencja DOO GUREVIC BUDVA; dane i przedstawiciele stron."},
+        "object": {"title": "Przedmiot sprzedaży", "text": "Dane spółki (nazwa, numer rejestrowy) i to, co dokładnie jest sprzedawane — udziały w spółce lub majątek i aktywa firmy."},
+        "price": {"title": "Cena i jej zmiany", "text": "Cena ofertowa i to, co obejmuje; może zostać zmieniona wyłącznie za zgodą właściciela."},
+        "commission": {"title": "Wynagrodzenie agencji", "text": "5% bez VAT; termin wymagalności i sposób rozliczenia."},
+        "exclusivity": {"title": "Wyłączność i okres obowiązywania", "text": "Umowa na wyłączność lub bez wyłączności, okres obowiązywania umowy i sposób jej przedłużenia."},
+        "owner_duties": {"title": "Obowiązki właściciela", "text": "Przekazanie dokumentów spółki i informacji potrzebnych do weryfikacji przez kupującego, zapewnienie dostępu do lokalu na potrzeby prezentacji, ujawnienie zobowiązań i obciążeń."},
+        "agent_duties": {"title": "Obowiązki agencji", "text": "Wycena, przygotowanie opisu, wyszukiwanie kupujących, prezentacje, raporty dla właściciela, wsparcie w negocjacjach i pomoc aż do podpisania umowy sprzedaży."},
+        "confidentiality": {"title": "Poufność", "text": "Szczegóły dotyczące firmy są ujawniane wyłącznie zweryfikowanym kupującym i, w razie potrzeby, po podpisaniu NDA."},
+        "termination": {"title": "Rozwiązanie umowy", "text": "Podstawy i tryb wcześniejszego rozwiązania umowy."},
+        "law": {"title": "Prawo właściwe", "text": "Umowa podlega prawu Czarnogóry."}
+      }
+    }
+  },
+  "form": {
+    "kicker": "Zgłoszenie",
+    "title": "Zgłoś nieruchomość",
+    "intro": "Prosimy opisać nieruchomość — na tym etapie dokumenty nie są potrzebne. Dane katastralne służą wyłącznie do weryfikacji nieruchomości.",
+    "next_title": "Co dalej",
+    "next": {
+      "call": "Kontaktujemy się pod podanym numerem telefonu i doprecyzowujemy szczegóły.",
+      "visit": "Umawiamy oględziny i wycenę nieruchomości.",
+      "contract": "Proponujemy warunki i przygotowujemy umowę."
+    },
+    "privacy_title": "Państwa dane",
+    "privacy": "Numer list nepokretnosti, KO i PD są potrzebne wyłącznie do weryfikacji nieruchomości. Nigdy nie publikujemy nazwisk właścicieli, numerów katastralnych ani dokładnych adresów.",
+    "direct_title": "Wolą Państwo napisać?",
+    "direct": "Prosimy napisać do nas bezpośrednio lub zadać pytanie na czacie na stronie.",
+    "chat": "Zapytaj na czacie"
+  },
+  "faq_title": "Najczęstsze pytania",
+  "terms_title": "Warunki",
+  "related": {
+    "title": "Inne usługi dla właścicieli",
+    "all": "Wszystkie usługi dla właścicieli",
+    "all_text": "O agencji, sposób pracy i wzór umowy."
+  },
+  "alt": {
+    "hero": "Jasny salon z balkonem i widokiem na morze — ilustracja",
+    "sell": "Stare Miasto w Budvie i zatoka za kwitnącą bugenwillą",
+    "rent_out": "Balkon z widokiem na zatokę, filiżanka kawy i klucze na stole — ilustracja",
+    "management": "Stare Miasto w Budvie widziane od strony morza"
+  },
+  "categories": {
+    "sell": {
+      "meta": {
+        "title": "Sprzedaż nieruchomości w Czarnogórze | GUREVIĆ",
+        "description": "Sprzedaż mieszkania, domu, działki lub firmy w Budvie i Czarnogórze: wycena, zdjęcia, prezentacje, negocjacje. Prowizja 5% bez VAT, pisemna umowa."
+      },
+      "h1": "Sprzedaż nieruchomości w Czarnogórze",
+      "kicker": "Sprzedaż",
+      "lead": "Wyceniamy nieruchomość, przygotowujemy ją do sprzedaży i negocjujemy z kupującymi. Mają Państwo do czynienia z jedną osobą i otrzymują raporty o przebiegu sprzedaży.",
+      "included_title": "Co obejmuje usługa sprzedaży",
+      "included": {
+        "valuation": {"title": "Wycena", "text": "Analizujemy nieruchomość, okolicę i rynek oraz uzgadniamy z Państwem cenę ofertową."},
+        "photo": {"title": "Zdjęcia i opis", "text": "Wykonujemy zdjęcia nieruchomości i przygotowujemy opis oferty."},
+        "listing": {"title": "Publikacja oferty", "text": "Publikujemy ofertę na stronie agencji i w naszych kanałach oraz odpowiadamy na zapytania kupujących."},
+        "viewings": {"title": "Prezentacje", "text": "Prowadzimy prezentacje według uzgodnionego z Państwem harmonogramu i informujemy o wynikach."},
+        "negotiation": {"title": "Negocjacje", "text": "Przekazujemy Państwu oferty kupujących i pomagamy uzgodnić cenę i warunki."},
+        "deal": {"title": "Obsługa transakcji", "text": "Pomagamy przygotować dokumenty i wspieramy Państwa aż do podpisania umowy sprzedaży."}
+      },
+      "terms": {
+        "commission_html": "Prowizja agencji <strong>5% bez VAT</strong>; pozostałe warunki do uzgodnienia.",
+        "exclusive": "Preferujemy umowę na wyłączność: jedna osoba kontaktowa zamiast każdego agenta i każdej agencji w Czarnogórze.",
+        "contract": "Pisemna umowa zgodna z prawem Czarnogóry."
+      },
+      "terms_link": "Wzór umowy",
+      "faq": {
+        "price": {"q": "Ile kosztują Państwa usługi?", "a": "Prowizja agencji wynosi 5% bez VAT. Pozostałe warunki omawiamy indywidualnie i zapisujemy w pisemnej umowie."},
+        "exclusive": {"q": "Czy muszę podpisać umowę na wyłączność?", "a": "Nie, ale ją zalecamy: współpracują Państwo z jedną agencją zamiast z każdym agentem w Czarnogórze, nieruchomość jest na rynku z jedną ceną, a prezentacje odbywają się według uzgodnionego harmonogramu."},
+        "documents": {"q": "Jakie dokumenty są potrzebne do zgłoszenia?", "a": "Żadne. Numer list nepokretnosti (wypisu z rejestru nieruchomości), gmina katastralna (KO) i, w przypadku mieszkania, numer lokalu (PD) pomagają nam szybciej zweryfikować nieruchomość. Pełny komplet dokumentów jest potrzebny przy podpisaniu umowy."},
+        "price_change": {"q": "Kto decyduje o zmianie ceny?", "a": "Wyłącznie właściciel. Każdą zmianę ceny uzgadniamy z Państwem z wyprzedzeniem."},
+        "business": {"q": "Czy mogę sprzedać działającą firmę lub projekt budowlany?", "a": "Tak. Po stronie sprzedającego przyjmujemy także aktywa inwestycyjne. Szczegóły dotyczące firmy udostępniamy wyłącznie zweryfikowanym kupującym i, w razie potrzeby, po podpisaniu NDA."}
+      },
+      "form_title": "Zgłoś nieruchomość na sprzedaż",
+      "form_intro": "Prosimy opisać nieruchomość — na tym etapie dokumenty nie są potrzebne. Dane katastralne służą wyłącznie do weryfikacji nieruchomości."
+    },
+    "rent_out": {
+      "meta": {
+        "title": "Wynajem nieruchomości dla właścicieli, Budva | GUREVIĆ",
+        "description": "Wynajem długoterminowy mieszkania lub domu w Budvie i Czarnogórze — do początku sezonu lub na rok: stawka czynszu, zdjęcia, najemca i umowa najmu."
+      },
+      "h1": "Wynajem długoterminowy Państwa nieruchomości",
+      "kicker": "Wynajem",
+      "lead": "Pomagamy wynająć mieszkanie lub dom na dłuższy okres — do początku sezonu lub na rok: szacujemy stawkę czynszu, znajdujemy najemcę i przygotowujemy umowę najmu.",
+      "included_title": "Co obejmuje usługa wynajmu",
+      "included": {
+        "rate": {"title": "Szacowanie stawki czynszu", "text": "Proponujemy stawkę długoterminową — do początku sezonu lub na rok — na podstawie lokalizacji, stanu i podaży na rynku."},
+        "photo": {"title": "Zdjęcia i opis", "text": "Wykonujemy zdjęcia nieruchomości i przygotowujemy opis oferty."},
+        "search": {"title": "Wyszukiwanie i weryfikacja najemców", "text": "Poznajemy kandydatów i sprawdzamy okres najmu, liczbę osób, zwierzęta i budżet. Ostateczna decyzja należy do Państwa."},
+        "viewings": {"title": "Prezentacje", "text": "Prowadzimy prezentacje według uzgodnionego z Państwem harmonogramu."},
+        "lease": {"title": "Umowa najmu", "text": "Pomagamy przygotować umowę najmu: okres, kaucja, media i przekazanie nieruchomości."}
+      },
+      "terms": {
+        "commission_html": "Prowizja i warunki <strong>do uzgodnienia</strong>.",
+        "term": "Wyłącznie wynajem długoterminowy: do początku sezonu lub na rok.",
+        "contract": "Warunki uzgadniamy na piśmie."
+      },
+      "faq": {
+        "term": {"q": "Na jak długo wynajmują Państwo nieruchomości?", "a": "Zajmujemy się wynajmem długoterminowym — do początku sezonu lub na rok. Wynajem krótkoterminowy jest jeszcze w przygotowaniu."},
+        "price": {"q": "Ile kosztują Państwa usługi?", "a": "Prowizję i warunki omawiamy indywidualnie i uzgadniamy na piśmie."},
+        "tenant": {"q": "Jak wybierają Państwo najemcę?", "a": "Poznajemy kandydatów, sprawdzamy okres najmu, liczbę osób, zwierzęta i budżet, a następnie przekazujemy Państwu te informacje. Decyzja o wynajmie należy do Państwa."},
+        "presence": {"q": "Czy muszę uczestniczyć w prezentacjach?", "a": "Niekoniecznie: prezentacje mogą się odbywać z kluczami pozostawionymi w agencji. Uzgadniamy to przy podpisaniu umowy."}
+      },
+      "form_title": "Zgłoś nieruchomość do wynajmu",
+      "form_intro": "Prosimy opisać nieruchomość i planowany okres najmu. Na tym etapie dokumenty nie są potrzebne."
+    },
+    "management": {
+      "meta": {
+        "title": "Zarządzanie nieruchomością w Budvie | GUREVIĆ",
+        "description": "Zarządzanie nieruchomością w Budvie dla właścicieli: przechowywanie kluczy, rachunki za media, kontrole i koordynacja wykonawców. Warunki indywidualne."
+      },
+      "h1": "Zarządzanie nieruchomością",
+      "kicker": "Zarządzanie",
+      "lead": "Dla właścicieli, którzy nie mieszkają w Czarnogórze na stałe lub wynajmują nieruchomość długoterminowo. Zadania i warunki uzgadniamy indywidualnie.",
+      "included_title": "Co można zlecić",
+      "included_note": "Nie ma stałego pakietu: uzgadniamy zadania, których Państwo rzeczywiście potrzebują.",
+      "included": {
+        "keys": {"title": "Przechowywanie kluczy", "text": "Agencja przechowuje klucze — na potrzeby prezentacji, wizyt fachowców i sytuacji awaryjnych."},
+        "bills": {"title": "Media i rachunki", "text": "Sprawdzanie i opłacanie rachunków za media w uzgodniony sposób."},
+        "checks": {"title": "Kontrole nieruchomości", "text": "Oględziny przy wprowadzeniu się i wyprowadzce najemcy długoterminowego oraz, po uzgodnieniu, w trakcie najmu."},
+        "maintenance": {"title": "Utrzymanie i naprawy", "text": "Koordynacja wykonawców; koszt prac uzgadniamy z właścicielem z wyprzedzeniem."}
+      },
+      "terms": {
+        "commission_html": "Warunki uzgadniamy <strong>indywidualnie</strong>.",
+        "scope": "Zadania i sposób raportowania uzgadniamy z wyprzedzeniem.",
+        "contract": "Ustalenia zapisujemy na piśmie."
+      },
+      "faq": {
+        "scope": {"q": "Co obejmuje zarządzanie?", "a": "Zadania uzgadniamy indywidualnie: na przykład przechowywanie kluczy, opłacanie rachunków za media, kontrole nieruchomości w trakcie najmu długoterminowego i koordynację napraw przez wykonawców."},
+        "price": {"q": "Ile to kosztuje?", "a": "Warunki omawiamy indywidualnie; zależą od nieruchomości i zakresu zadań."},
+        "combine": {"q": "Czy zarządzanie można połączyć z wynajmem?", "a": "Tak, możemy to omówić: na przykład znaleźć najemcę długoterminowego, a potem pozostawać z nim w kontakcie."},
+        "repairs": {"q": "Czy sami wykonują Państwo naprawy?", "a": "Nie, koordynujemy wykonawców. Koszt prac uzgadniamy z właścicielem z wyprzedzeniem."}
+      },
+      "form_title": "Zapytanie o zarządzanie nieruchomością",
+      "form_intro": "Prosimy opisać nieruchomość i zadania, które chcą Państwo nam powierzyć. Na tym etapie dokumenty nie są potrzebne."
+    }
+  },
+  "js": {
+    "contract_request_sale": "Proszę o przesłanie wzoru umowy pośrednictwa w sprzedaży nieruchomości.",
+    "contract_request_business": "Proszę o przesłanie wzoru umowy pośrednictwa w sprzedaży firmy."
+  }
+}

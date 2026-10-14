@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Mapa ofert: Budva i Czarnogóra | GUREVIĆ",
+    "description": "Oferty GUREVIĆ na mapie Budvy i Czarnogóry: mieszkania, domy, działki i projekty budowlane według lokalizacji. Wystarczy wybrać pinezkę i otworzyć ofertę."
+  },
+  "h1": "Mapa ofert",
+  "lead": "Oferty z katalogu na mapie wybrzeża. Poufne oferty inwestycyjne nie są pokazywane na mapie.",
+  "filters": {
+    "aria": "Sekcja",
+    "all": "Wszystkie",
+    "buy": "Kupno",
+    "rent": "Wynajem",
+    "invest": "Projekty"
+  },
+  "view": {
+    "aria": "Widok",
+    "list": "Lista",
+    "map": "Mapa"
+  },
+  "legend": {
+    "exact": "Pinezka według danych oferty",
+    "approx": "Orientacyjnie: środek obszaru"
+  },
+  "list_title": "Oferty na mapie",
+  "map_aria": "Interaktywna mapa ofert",
+  "noscript": "Mapa wymaga JavaScriptu. Lista ofert jest dostępna poniżej.",
+  "empty": "W tej sekcji nie ma jeszcze ofert na mapie.",
+  "js": {
+    "count": {
+      "one": "{n} oferta",
+      "few": "{n} oferty",
+      "many": "{n} ofert",
+      "other": "{n} oferty"
+    },
+    "details": "Zobacz szczegóły",
+    "approx": "Orientacyjnie — środek obszaru",
+    "zoom_in": "Przybliż",
+    "zoom_out": "Oddal",
+    "load_error": "Nie udało się załadować mapy. Lista ofert jest dostępna na stronie.",
+    "show_on_map": "Pokaż na mapie"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Nieruchomości na sprzedaż w Budvie i Czarnogórze | GUREVIĆ",
+    "description": "Mieszkania, domy, wille i działki budowlane na sprzedaż w Budvie i całej Czarnogórze: ceny, metraże, lokalizacje i zdjęcia. Pomoc w wyborze i zakupie."
+  },
+  "h1": "Nieruchomości na sprzedaż w Budvie i Czarnogórze",
+  "hero": {
+    "kicker": "Kupno nieruchomości",
+    "lead": "Mieszkania, domy, wille i działki pod budowę domu. Na każdej karcie podajemy cenę, metraż i lokalizację; dokładny adres i dokumenty udostępniamy na zapytanie.",
+    "image_alt": "Budva z lotu ptaka: Stare Miasto i zatoka"
+  },
+  "results_title": "Nieruchomości na sprzedaż",
+  "seo": {
+    "title": "Zakup nieruchomości w Czarnogórze z GUREVIĆ",
+    "p1": "W katalogu znajdują się mieszkania, domy, wille i działki pod budowę domu na wybrzeżu i w innych częściach Czarnogóry. Hotele, nieruchomości komercyjne, grunty inwestycyjne i projekty budowlane są w sekcji inwestycji.",
+    "p2": "Przed zakupem pomagamy sprawdzić nieruchomość: zamawiamy list nepokretnosti — czarnogórski wypis z rejestru nieruchomości, który wskazuje właściciela i ewentualne obciążenia — uzgadniamy warunki ze sprzedającym i przygotowujemy transakcję do podpisania u notariusza."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Mieszkania na sprzedaż w Budvie, Czarnogóra | GUREVIĆ",
+        "description": "Mieszkania na sprzedaż w Budvie, Bečići i na wybrzeżu Czarnogóry: cena, cena za m², metraż, sypialnie i lokalizacja. Pomagamy wybrać i prowadzimy zakup."
+      },
+      "h1": "Mieszkania na sprzedaż w Budvie i Czarnogórze",
+      "hero": {
+        "kicker": "Kupno · Mieszkania",
+        "lead": "Mieszkania w Budvie i na wybrzeżu: każda karta pokazuje cenę, cenę za metr kwadratowy, metraż, liczbę sypialni i lokalizację.",
+        "image_alt": "Budva: Stare Miasto i zatoka za kwitnącą bugenwillą"
+      },
+      "results_title": "Mieszkania na sprzedaż",
+      "seo": {
+        "title": "Jak wybrać mieszkanie na wybrzeżu",
+        "p1": "Warto porównywać nie tylko ceny, ale też cenę za metr kwadratowy — pokazujemy ją na karcie zawsze, gdy znany jest metraż. Filtry lokalizacji, metrażu i liczby sypialni zapisują się w adresie strony, więc wybraną listę można komuś przesłać.",
+        "p2": "W przypadku mieszkań w nowych inwestycjach należy sprawdzić termin oddania, standard wykończenia i koszty utrzymania budynku; przy rynku wtórnym — list nepokretnosti (wypis z rejestru nieruchomości) i numer lokalu (PD, poseban dio)."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Domy na sprzedaż w Czarnogórze | GUREVIĆ",
+        "description": "Domy na sprzedaż w Budvie i innych częściach Czarnogóry: powierzchnia domu i działki, sypialnie, cena i zdjęcia. Pomagamy sprawdzić dokumenty przed zakupem."
+      },
+      "h1": "Domy na sprzedaż w Czarnogórze",
+      "hero": {
+        "kicker": "Kupno · Domy",
+        "lead": "Domy z działką na wybrzeżu i w głębi kraju: powierzchnia domu i działki, liczba sypialni i cena.",
+        "image_alt": "Stare Miasto w Budvie widziane z kamienistej plaży"
+      },
+      "results_title": "Domy na sprzedaż",
+      "seo": {
+        "title": "Co sprawdzić przy zakupie domu",
+        "p1": "Karta domu podaje dwie powierzchnie — domu i działki. Jeśli brakuje powierzchni działki, warto zapytać o nią przed prezentacją: od niej zależy, co można dobudować lub zagospodarować.",
+        "p2": "Należy upewnić się, że dom jest wpisany do rejestru nieruchomości, a dokumenty odpowiadają stanowi faktycznemu budynku. Pomagamy zamówić wypis i przejrzeć dokumenty przed zakupem."
+      }
+    },
+    "villas": {
+      "meta": {
+        "title": "Wille na sprzedaż w Czarnogórze | GUREVIĆ",
+        "description": "Wille na sprzedaż na wybrzeżu Czarnogóry: powierzchnia willi i działki, sypialnie, cena i lokalizacja. Prezentacje i pomoc przy zakupie w Budvie i okolicach."
+      },
+      "h1": "Wille na sprzedaż w Czarnogórze",
+      "hero": {
+        "kicker": "Kupno · Wille",
+        "lead": "Wille na wybrzeżu Czarnogóry: powierzchnia, działka, liczba sypialni i cena na każdej karcie oferty.",
+        "image_alt": "Promenada w Budvie i Stare Miasto na tle gór"
+      },
+      "results_title": "Wille na sprzedaż",
+      "seo": {
+        "title": "Wille na wybrzeżu Czarnogóry",
+        "p1": "Granica między „Willami” a „Domami” jest umowna: w obu przypadkach chodzi o dom wolnostojący z działką. Szukając domu nad morzem, warto przejrzeć obie sekcje.",
+        "p2": "W przypadku willi najważniejsze są dojazd, parking, widok i stan otoczenia. Te szczegóły potwierdzamy z właścicielem przed prezentacją."
+      }
+    },
+    "land": {
+      "meta": {
+        "title": "Działki budowlane w Czarnogórze | GUREVIĆ",
+        "description": "Działki pod budowę domu w Budvie i Czarnogórze: powierzchnia, lokalizacja, cena i cena za m². Pomagamy sprawdzić przeznaczenie terenu i dokumenty działki."
+      },
+      "h1": "Działki budowlane na sprzedaż w Czarnogórze",
+      "hero": {
+        "kicker": "Kupno · Działki",
+        "lead": "Działki pod budowę własnego domu: powierzchnia, lokalizacja, cena i cena za metr kwadratowy.",
+        "image_alt": "Działka na zboczu z drzewami oliwnymi nad morzem — ilustracja"
+      },
+      "results_title": "Działki na sprzedaż",
+      "seo": {
+        "title": "Jak sprawdzić działkę przed zakupem",
+        "p1": "W tej sekcji są działki pod budowę domu. Grunty pod projekty komercyjne — hotele, budynki apartamentowe, logistykę — znajdują się w sekcji inwestycji.",
+        "p2": "Przed zakupem należy sprawdzić przeznaczenie działki w obowiązującym planie zagospodarowania, dojazd i przyłącza mediów oraz ewentualne obciążenia w list nepokretnosti (wypisie z rejestru nieruchomości). Pomagamy zebrać te informacje przed zakupem."
+      }
+    }
+  }
+}

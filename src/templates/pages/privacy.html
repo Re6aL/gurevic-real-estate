@@ -1,0 +1,52 @@
+{#- Политика конфиденциальности. Текст целиком в i18n privacy.sections.<раздел>:
+    title + блоки в порядке JSON: p* (абзац), list* (маркированный список; пункты — ключи),
+    ключи *_html — доверенный HTML. Плейсхолдеры: {legal} {brand} {email}. -#}
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% set SECTIONS = ['controller', 'data', 'purposes', 'bases', 'recipients', 'transfers', 'retention',
+                   'rights', 'storage', 'security', 'children', 'changes', 'contacts'] %}
+{% set FMT = {'legal': site.legal_name, 'brand': site.brand, 'email': site.contacts.email} %}
+
+{% block main %}
+<header class="info-hero">
+  <div class="container">
+    {{ ui.breadcrumbs(page.breadcrumbs, light=True) }}
+    <span class="info-kicker">{{ t('privacy.kicker') }}</span>
+    <h1>{{ page.h1 }}</h1>
+    <p class="info-lead">{{ t('privacy.lead') }}</p>
+    <p class="info-updated">{{ ui.icon('calendar', size=18) }}<span>{{ t('privacy.updated') }}</span></p>
+  </div>
+</header>
+
+<div class="info-section legal-layout container">
+  <nav class="toc" id="pp-toc" aria-labelledby="pp-toc-title">
+    <h2 class="toc__title" id="pp-toc-title">{{ t('privacy.toc_title') }}</h2>
+    <ol class="toc__list">
+      {% for key in SECTIONS %}
+      <li><a href="#pp-{{ key }}">{{ t('privacy.sections.' ~ key ~ '.title') }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+
+  <article class="legal-text prose">
+    {% for key in SECTIONS %}
+    {% set base = 'privacy.sections.' ~ key %}
+    <section class="legal-section" aria-labelledby="pp-{{ key }}">
+      <h2 id="pp-{{ key }}"><span class="legal-num" aria-hidden="true">{{ loop.index }}.</span> {{ t(base ~ '.title') }}</h2>
+      {% for block in t(base) %}
+      {% if block.startswith('list') %}
+      <ul class="legal-list">
+        {% for item in t(base ~ '.' ~ block) %}
+        <li>{{ t(base ~ '.' ~ block ~ '.' ~ item, **FMT) }}</li>
+        {% endfor %}
+      </ul>
+      {% elif block.startswith('p') %}
+      <p>{{ t(base ~ '.' ~ block, **FMT) }}</p>
+      {% endif %}
+      {% endfor %}
+      <p class="legal-top"><a href="#pp-toc">{{ ui.icon('chevron-up', size=16) }}<span>{{ t('privacy.back_to_top') }}</span></a></p>
+    </section>
+    {% endfor %}
+  </article>
+</div>
+{% endblock %}

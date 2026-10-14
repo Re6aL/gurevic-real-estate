@@ -1,0 +1,119 @@
+/* ============================================================
+   Карта объектов (pages/map.html, js/map.js, Leaflet 1.9.4).
+   Только логические свойства (RTL: he). Карта Leaflet сама по себе LTR.
+   ============================================================ */
+
+.map-page { --map-bar-h: 150px; background: var(--bg-soft); }
+.map-bar { background: #fff; border-block-end: 1px solid var(--line); }
+.map-bar__inner { padding-inline: var(--gutter); padding-block: 0 14px; max-inline-size: 1600px; margin-inline: auto; }
+.map-bar .breadcrumbs { padding-block-start: 14px; }
+.map-bar__row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; margin-block-start: 8px; }
+.map-bar__title { min-inline-size: 0; }
+.map-bar h1 { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; }
+.map-bar__lead { margin-block-start: 4px; color: var(--muted); font-size: .92rem; max-inline-size: 70ch; }
+.map-bar__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.map-bar__meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; margin-block-start: 12px; }
+.map-count { color: var(--navy); font-weight: 700; font-size: .92rem; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: .82rem; }
+.map-legend li { display: inline-flex; align-items: center; gap: 7px; }
+.legend-dot { inline-size: 14px; block-size: 14px; border-radius: 50%; background: var(--navy); box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--navy); }
+.legend-dot--approx { background: #fff; box-shadow: 0 0 0 2px var(--gold-dark); outline: 1px dashed var(--gold-dark); outline-offset: 2px; }
+
+.map-filter, .map-view { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.map-filter__btn, .map-view button {
+  display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; padding-inline: 16px 10px;
+  border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); background: #fff;
+  color: var(--ink); font-weight: 600; font-size: .9rem; transition: background .15s, color .15s, box-shadow .15s;
+}
+.map-view button { padding-inline: 14px; }
+.map-filter__btn:hover:not(:disabled), .map-view button:hover { box-shadow: inset 0 0 0 1px var(--gold); color: var(--gold-dark); }
+.map-filter__btn[aria-pressed="true"], .map-view button[aria-pressed="true"] { background: var(--navy); color: #fff; box-shadow: none; }
+.map-filter__btn:disabled { opacity: .55; cursor: not-allowed; }
+.map-filter__n {
+  display: inline-grid; place-items: center; min-inline-size: 26px; block-size: 24px; padding-inline: 7px;
+  border-radius: 999px; background: var(--bg-soft); color: var(--muted); font-size: .76rem; font-weight: 700;
+}
+.map-filter__btn[aria-pressed="true"] .map-filter__n { background: rgba(255, 255, 255, .16); color: #fff; }
+.map-view { display: none; }
+
+/* ---------- список + карта ---------- */
+.map-wrap {
+  display: grid; grid-template-columns: 400px minmax(0, 1fr);
+  block-size: max(560px, calc(100vh - var(--header-h) - var(--map-bar-h)));
+  max-inline-size: 1600px; margin-inline: auto;
+}
+.no-js .map-wrap { grid-template-columns: 1fr; block-size: auto; }
+.no-js .map-canvas { display: none; }
+.map-list { overflow-y: auto; padding: 14px; border-inline-end: 1px solid var(--line); background: var(--bg-soft); overscroll-behavior: contain; }
+.map-list__items { display: grid; gap: 10px; }
+.no-js .map-list__items { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.map-list__empty { padding: 24px; color: var(--muted); text-align: center; }
+.mini-card {
+  position: relative; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px;
+  min-block-size: 104px; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.mini-card:hover, .mini-card.is-hot { border-color: var(--gold); box-shadow: var(--shadow); }
+.mini-card.is-hidden { display: none; }
+.mini-card__media { display: block; background: var(--bg-soft); }
+.mini-card__media picture, .mini-card__img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.mini-card__body { display: grid; align-content: center; gap: 2px; padding-block: 10px; padding-inline-end: 12px; min-inline-size: 0; }
+.mini-card__price { color: var(--navy); font-weight: 700; font-size: 1rem; }
+.mini-card__price.is-request { color: var(--gold-dark); font-size: .88rem; }
+.mini-card__title { font: 600 .86rem/1.3 var(--font-body); color: var(--ink); }
+/* 2 строки вместо nowrap+ellipsis: в RTL однострочная обрезка съедала начало латинского названия */
+.mini-card__title a { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; }
+.mini-card__title a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.mini-card__title a:hover { color: var(--gold-dark); }
+.mini-card__loc { display: flex; align-items: center; gap: 5px; color: var(--muted); font-size: .78rem; }
+.mini-card__loc .icon { color: var(--gold-dark); }
+.mini-card__approx { color: var(--gold-dark); font-weight: 700; }
+.mini-card__locate {
+  position: relative; z-index: 2; justify-self: start; display: inline-flex; align-items: center; gap: 6px;
+  min-block-size: 32px; margin-block-start: 2px; padding-block: 4px; padding-inline: 8px 10px;
+  border-radius: 8px; color: var(--navy); font-size: .78rem; font-weight: 700; background: var(--bg-soft);
+}
+.mini-card__locate:hover { background: #f3e8d1; color: var(--gold-dark); }
+.map-canvas { position: relative; z-index: 0; min-block-size: 320px; background: #dfe8ec; }
+.map-noscript, .map-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; color: var(--muted); text-align: center; }
+
+/* ---------- маркеры и попапы Leaflet ---------- */
+.leaflet-container { font-family: var(--font-body); }
+.price-pin {
+  display: inline-block; transform: translate(-50%, -50%); white-space: nowrap; cursor: pointer;
+  padding: 4px 10px; border-radius: 999px; border: 1.5px solid #fff; background: var(--navy); color: #fff;
+  font: 700 .78rem/1.3 var(--font-body); box-shadow: 0 2px 8px rgba(0, 0, 0, .3); transition: background .15s, transform .15s;
+}
+.price-pin--approx { background: #fff; color: var(--navy); border: 1.5px dashed var(--gold-dark); }
+.price-pin--invest { background: var(--gold); color: var(--navy); }
+.leaflet-marker-icon:hover .price-pin, .leaflet-marker-icon:focus .price-pin, .price-pin.is-hot { background: var(--gold-dark); color: #fff; border-style: solid; border-color: #fff; transform: translate(-50%, -50%) scale(1.08); z-index: 2; }
+.leaflet-marker-icon:focus { outline: none; }
+.leaflet-marker-icon:focus-visible .price-pin { outline: 2px solid var(--gold-dark); outline-offset: 2px; }
+.leaflet-div-icon.pin-wrap { background: none; border: 0; }
+.leaflet-popup-content-wrapper { border-radius: 12px; padding: 0; overflow: hidden; }
+.leaflet-popup-content { margin: 0; inline-size: 240px !important; }
+.map-pop img { display: block; inline-size: 100%; block-size: 120px; object-fit: cover; background: var(--bg-soft); }
+.map-pop__body { display: grid; gap: 2px; padding: 10px 12px 12px; }
+.map-pop__price { color: var(--navy); font-weight: 700; font-size: 1rem; }
+.map-pop__title { color: var(--ink); font-size: .84rem; font-weight: 600; line-height: 1.3; }
+.map-pop__loc, .map-pop__approx { color: var(--muted); font-size: .76rem; }
+.map-pop__approx { color: var(--gold-dark); }
+.map-pop__link { justify-self: start; margin-block-start: 6px; color: var(--gold-dark); font-weight: 700; font-size: .84rem; text-decoration: underline; text-underline-offset: 3px; }
+.leaflet-popup-content .map-pop p { margin: 0; }
+
+/* ---------- мобильные: переключатель список/карта ---------- */
+@media (max-width: 900px) {
+  .map-page { --map-bar-h: 210px; }
+  .js .map-view { display: inline-flex; }
+  .map-wrap { grid-template-columns: 1fr; block-size: auto; }
+  .map-list { border: 0; overflow: visible; padding: 12px var(--gutter) 28px; }
+  .js .map-wrap[data-view="list"] .map-canvas { display: none; }
+  .js .map-wrap[data-view="map"] .map-list { display: none; }
+  .js .map-wrap[data-view="map"] .map-canvas { block-size: calc(100vh - var(--header-h) - 120px); min-block-size: 420px; }
+  .map-bar__controls { inline-size: 100%; }
+  .map-filter { flex-wrap: nowrap; overflow-x: auto; max-inline-size: 100%; scrollbar-width: none; }
+  .map-filter__btn { flex: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .price-pin, .mini-card { transition: none; }
+}

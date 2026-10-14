@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Ilia Gurevich — real estate agent in Budva | GUREVIĆ",
+    "description": "Ilia Gurevich is the founder of the DOO GUREVIC BUDVA real estate agency and the agent you work with in person. Our third year on the Montenegrin market."
+  },
+  "h1": "Ilia Gurevich and the GUREVIĆ agency",
+  "kicker": "About us",
+  "lead": "A real estate agency in Budva run by its founder. You deal with one person — from your first question to the signing of documents.",
+  "portrait": {
+    "monogram": "IG",
+    "name": "Ilia Gurevich",
+    "role": "Founder and agent, DOO GUREVIC BUDVA",
+    "alt": "Ilia Gurevich, founder of the GUREVIĆ real estate agency in Budva",
+    "pending": "Photo coming soon"
+  },
+  "who": {
+    "title": "Who you will be working with",
+    "p1": "Ilia Gurevich is the founder of DOO GUREVIC BUDVA and a real estate agent. The agency's phone, WhatsApp and Telegram are his personal contacts, so you deal with him directly at every stage.",
+    "p2": "Work outside an agent's role — legal checks, design and construction — is done by partners: lawyers and licensed architects and builders. We introduce you to them and hand over the matter together with everything we have gathered."
+  },
+  "market": {
+    "title": "Our third year in Montenegro",
+    "p1": "The agency is in its third year on the Montenegrin property market. Our main focus is Budva and the Budva Riviera; the catalogue also includes properties in other towns across the country.",
+    "p2": "The catalogue on this website is updated automatically from the agency's working database. Confidential investment opportunities are published in anonymised form."
+  },
+  "format": {
+    "title": "A new way of working",
+    "intro": "The agency now works in a new format. In practice this means the following.",
+    "items": {
+      "directions": {
+        "title": "Four separate directions",
+        "text": "Buyers, tenants, investors and owners have different goals. That is why each of them has a section of the website, questions and an enquiry form of their own."
+      },
+      "agreements": {
+        "title": "Written agreements",
+        "text": "Terms of work are set out in a written agreement under Montenegrin law — before the work starts, not along the way."
+      },
+      "partners": {
+        "title": "Partners for specialist work",
+        "text": "We provide initial legal support ourselves. In-depth legal checks, design and construction are handled by lawyers and licensed specialists — work outside the agency's role is handed over to them."
+      },
+      "honest": {
+        "title": "Known facts only",
+        "text": "We tell you what is known about a property: documents, condition, terms. Preliminary figures are labelled as preliminary and subject to verification."
+      }
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "text": "We advise in Russian, English and Montenegrin. The website is available in more languages, but correspondence and meetings are held in one of these three.",
+    "list": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski"
+    }
+  },
+  "legal": {
+    "title": "Company details",
+    "company_label": "Legal entity",
+    "city_label": "Location",
+    "city": "Budva, Montenegro",
+    "founder_label": "Founder",
+    "founder": "Ilia Gurevich",
+    "founder_local_html": "registered in Montenegro as {name}",
+    "meetings": "Meetings by appointment."
+  },
+  "cta": {
+    "title": "Tell us what you are looking for",
+    "text": "Send a message in your preferred messenger or give us a call. The services page describes what exactly we can help with.",
+    "services": "Agency services",
+    "contact": "All contacts"
+  },
+  "jsonld": {
+    "job_title": "Founder and real estate agent"
+  }
+}

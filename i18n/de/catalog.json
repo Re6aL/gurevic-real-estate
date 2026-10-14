@@ -1,0 +1,120 @@
+{
+  "filters": {
+    "aria": "Objektsuche",
+    "categories_aria": "Kategorien",
+    "all": "Alle",
+    "toggle": "Filter",
+    "type": "Objektart",
+    "type_any": "Alle",
+    "district": "Lage",
+    "district_any": "Alle",
+    "price_buy": "Preis, €",
+    "price_rent": "Monatsmiete, €",
+    "price_any": "ohne Limit",
+    "price_min": "Preis ab, Tsd. €",
+    "price_max": "Preis bis, Tsd. €",
+    "price_min_rent": "Miete ab, € pro Monat",
+    "price_max_rent": "Miete bis, € pro Monat",
+    "price_max_placeholder": "max.",
+    "slider_toggle": "Preisspanne per Schieberegler festlegen",
+    "slider_min": "Untere Preisgrenze",
+    "slider_max": "Obere Preisgrenze",
+    "slider_scale_min": "0 €",
+    "slider_scale_mid": "500 Tsd. €",
+    "slider_scale_max": "1 Mio. €+",
+    "area": "Fläche, m²",
+    "area_plot": "Grundstücksfläche, m²",
+    "from": "Von",
+    "to": "Bis",
+    "area_min": "Fläche ab, m²",
+    "area_max": "Fläche bis, m²",
+    "bedrooms": "Schlafzimmer",
+    "bedrooms_any": "Beliebig",
+    "bedrooms_min": "{n}+",
+    "term": "Mietdauer",
+    "term_any": "Beliebig",
+    "sort": "Sortieren",
+    "sort_aria": "Sortierung",
+    "sort_price_asc": "Preis aufsteigend",
+    "sort_price_desc": "Preis absteigend",
+    "sort_area_desc": "Größte zuerst",
+    "reset": "Filter zurücksetzen",
+    "id_search": "Suche nach ID",
+    "id_label": "Objekt-ID",
+    "id_hint": "Zum Beispiel BD-26-003S – die ID steht in jeder Objektkarte und in Ihrer Korrespondenz mit dem Makler."
+  },
+  "results": {
+    "map_link": "Auf der Karte zeigen"
+  },
+  "empty": {
+    "title": "Keine Treffer für diese Filter",
+    "text": "Passen Sie die Filter an oder senden Sie uns eine Anfrage – wir suchen auch außerhalb des Katalogs.",
+    "request": "Anfrage senden"
+  },
+  "empty_category": {
+    "title": "In dieser Kategorie sind noch keine Objekte veröffentlicht",
+    "text": "Der Katalog wird laufend um neue Objekte ergänzt. Beschreiben Sie, was Sie suchen – wir suchen gezielt für Sie."
+  },
+  "request": {
+    "kicker": "Nicht das Richtige gefunden?",
+    "title_buy": "Wir stellen eine Auswahl für Sie zusammen",
+    "text_buy": "Nennen Sie Budget, Wunschlage und Zeitrahmen – wir prüfen das Angebot am Markt und senden Ihnen passende Objekte.",
+    "title_rent": "Wir finden eine Langzeitmiete für Sie",
+    "text_rent": "Nennen Sie Monatsbudget, Wunschlage, Einzugsdatum und Haushaltsgröße – wir senden Ihnen passende Angebote.",
+    "points": [
+      "Wir antworten auf dem Weg, der Ihnen passt: Telefon, WhatsApp, Telegram oder E-Mail",
+      "Wir sprechen Russisch, Englisch und Montenegrinisch"
+    ],
+    "form_heading": "Suchanfrage"
+  },
+  "residency": {
+    "title": "Befristeter Aufenthalt",
+    "text": "Für Drittstaatsangehörige, die nicht unter die gesetzlichen Ausnahmen fallen, kann eine Immobilie mit einem amtlichen Steuerwert ab 150.000 € Grundlage für einen befristeten Aufenthalt sein, sofern die übrigen gesetzlichen Voraussetzungen erfüllt sind. Die Bedingungen prüfen wir zum Zeitpunkt der Antragstellung – diese Website ersetzt keine Rechtsberatung.",
+    "link": "Aktuelle Änderungen des Ausländergesetzes",
+    "url": "https://www.sluzbenilist.me/propisi/389913"
+  },
+  "rent_tabs": {
+    "aria": "Mietart",
+    "long": "Langzeitmiete",
+    "short": "Kurzzeitmiete",
+    "soon": "bald"
+  },
+  "short_term": {
+    "kicker": "Kurzzeitmiete",
+    "title": "Dieser Bereich ist in Vorbereitung",
+    "text": "Derzeit vermitteln wir nur Langzeitmieten – bis zum Saisonbeginn oder für ein ganzes Jahr. Tages- und Kurzzeitvermietung folgen später.",
+    "form_heading": "Beim Start benachrichtigen",
+    "back": "Zurück zur Langzeitmiete"
+  },
+  "rent_empty": {
+    "kicker": "Mietkatalog",
+    "title": "Der Katalog für Langzeitmieten wird gerade angebunden",
+    "text": "Mietobjekte werden aus einer eigenen Datenbank veröffentlicht, die wir gerade anbinden. Bis der Katalog online ist, suchen wir auf Anfrage: Nennen Sie Budget, Lage und Einzugsdatum – wir senden Ihnen passende Angebote.",
+    "points": [
+      "Bis zum Saisonbeginn oder für ein ganzes Jahr",
+      "Wohnungen, Häuser und Villen",
+      "Budget in Euro pro Monat"
+    ],
+    "form_heading": "Anfrage zur Langzeitmiete",
+    "image_alt": "Balkon mit Blick auf eine Bucht außerhalb der Saison – Illustration"
+  },
+  "js": {
+    "count": {
+      "one": "{n} Objekt",
+      "other": "{n} Objekte"
+    },
+    "price_any": "ohne Limit",
+    "price_range": "{min} – {max}",
+    "price_from": "ab {min}",
+    "price_to": "bis {max}",
+    "filters_active": "Filter: {n}",
+    "id_empty": "Kein Objekt mit dieser ID",
+    "id_found": {
+      "one": "{n} Objekt gefunden",
+      "other": "{n} Objekte gefunden"
+    },
+    "district_option": "{name} · {n}",
+    "district_option_none": "{name} · keine Angebote",
+    "results_updated": "Angezeigt: {count}"
+  }
+}

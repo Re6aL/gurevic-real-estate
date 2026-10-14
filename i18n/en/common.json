@@ -1,0 +1,284 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "DOO GUREVIC BUDVA",
+  "tagline": "Real estate in Budva and Montenegro",
+  "skip_link": "Skip to content",
+  "home_aria": "Gurevic Real Estate — home",
+  "logo_alt": "Gurevic Real Estate — Budva",
+  "nav": {
+    "main_aria": "Main menu",
+    "rent": "Rent",
+    "rent_apartments": "Apartments",
+    "rent_houses": "Houses & villas",
+    "rent_short_term": "Short-term rentals",
+    "soon": "soon",
+    "all_rent": "All long-term rentals",
+    "buy": "Buy",
+    "buy_apartments": "Apartments",
+    "buy_houses": "Houses",
+    "buy_villas": "Villas",
+    "buy_land": "Building plots",
+    "all_buy": "All properties for sale",
+    "invest": "Invest",
+    "invest_hotels": "Hotels",
+    "invest_land": "Development land",
+    "invest_commercial": "Commercial property",
+    "invest_development": "Development projects",
+    "all_invest": "Investing in Montenegro",
+    "owners": "For Owners",
+    "owners_sell": "Sell your property",
+    "owners_rent_out": "Rent out",
+    "owners_management": "Property management",
+    "all_owners": "For owners",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "map": "Property map",
+    "privacy": "Privacy policy",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "submenu": "{label} submenu",
+    "menu": "Menu"
+  },
+  "routes": {
+    "home": "Home",
+    "buy": "Buy",
+    "buy_apartments": "Apartments",
+    "buy_houses": "Houses",
+    "buy_villas": "Villas",
+    "buy_land": "Land",
+    "rent": "Rent",
+    "rent_apartments": "Apartments",
+    "rent_houses": "Houses & villas",
+    "invest": "Invest",
+    "invest_hotels": "Hotels",
+    "invest_land": "Development land",
+    "invest_commercial": "Commercial property",
+    "invest_development": "Development projects",
+    "owners": "For Owners",
+    "owners_sell": "Sell",
+    "owners_rent_out": "Rent out",
+    "owners_management": "Property management",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "map": "Property map",
+    "property": "Property"
+  },
+  "footer": {
+    "nav_aria": "Footer menu",
+    "columns": {
+      "rent": "Rent",
+      "buy": "Buy",
+      "invest": "Invest",
+      "owners": "For Owners",
+      "agency": "Agency"
+    },
+    "contacts": "Contacts",
+    "languages": "Languages",
+    "about_short": "Real estate agency in Budva: buying, long-term rentals, investments and services for property owners.",
+    "meetings": "Meetings by appointment.",
+    "legal_line": "DOO GUREVIC BUDVA · Budva, Montenegro · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "Contact us",
+    "phone": "Phone",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "Email",
+    "instagram": "Instagram",
+    "location": "Budva, Montenegro",
+    "write": "Message us"
+  },
+  "languages": {
+    "label": "Language",
+    "switch_aria": "Choose site language",
+    "current": "Current language"
+  },
+  "lang_suggest": {
+    "text": "This page is available in English",
+    "switch": "Switch",
+    "dismiss": "Dismiss"
+  },
+  "buttons": {
+    "details": "Details",
+    "send": "Send",
+    "call": "Call",
+    "write_whatsapp": "Message on WhatsApp",
+    "back_home": "Back to home",
+    "show_more": "Show more",
+    "learn_more": "Learn more",
+    "contact_us": "Contact us",
+    "close": "Close",
+    "show_on_map": "Show on map",
+    "request": "Send a request",
+    "all_objects": "All properties",
+    "apply": "Show",
+    "reset": "Reset",
+    "prev": "Previous",
+    "next": "Next",
+    "show_all": "Show all",
+    "open_menu": "Menu",
+    "discuss": "Discuss",
+    "copy": "Copy"
+  },
+  "breadcrumbs": {
+    "aria": "Breadcrumb",
+    "home": "Home"
+  },
+  "units": {
+    "m2": "m²",
+    "per_month": "/ month",
+    "eur_per_m2": "€/m²",
+    "eur": "€",
+    "month": "month",
+    "sqm_short": "m²"
+  },
+  "price": {
+    "on_request": "Price on request",
+    "indicative": "Indicative: {price}",
+    "preliminary": "preliminary, subject to verification",
+    "from": "from {price}"
+  },
+  "types": {
+    "apartment": "Apartment",
+    "house": "House",
+    "villa": "Villa",
+    "land": "Plot of land",
+    "hotel": "Hotel",
+    "commercial": "Commercial property",
+    "business": "Business for sale",
+    "development": "Development project"
+  },
+  "types_lc": {
+    "apartment": "apartment",
+    "house": "house",
+    "villa": "villa",
+    "land": "plot of land",
+    "hotel": "hotel",
+    "commercial": "commercial property",
+    "business": "business for sale",
+    "development": "development project"
+  },
+  "categories": {
+    "apartments": "Apartments",
+    "houses": "Houses",
+    "villas": "Villas",
+    "land": "Land",
+    "hotels": "Hotels",
+    "commercial": "Commercial property",
+    "development": "Development projects"
+  },
+  "sections": {
+    "buy": "For sale",
+    "rent": "For rent",
+    "invest": "Investment"
+  },
+  "badges": {
+    "project": "Project",
+    "confidential": "Confidential",
+    "soon": "Soon",
+    "illustration": "Illustration",
+    "price_on_request": "Price on request",
+    "new": "New"
+  },
+  "params": {
+    "area": "{n} m²",
+    "land_area": "plot {n} m²",
+    "floor": "floor {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "{n} bedroom",
+      "other": "{n} bedrooms"
+    },
+    "bathrooms": {
+      "one": "{n} bathroom",
+      "other": "{n} bathrooms"
+    },
+    "objects": {
+      "one": "{n} property",
+      "other": "{n} properties"
+    }
+  },
+  "alt": {
+    "listing_photo": "Photo: {name}",
+    "listing_photo_n": "{name} — photo {n}",
+    "illustration": "Illustration: {type}"
+  },
+  "districts": {
+    "budva-center": "Budva – centre",
+    "budva-rozino": "Budva – Rozino",
+    "budva-waterfront": "Budva – waterfront",
+    "budva-ivanica": "Budva – Ivanica",
+    "budva-veligrad": "Budva – Veligrad",
+    "becici": "Bečići",
+    "rafailovici": "Rafailovići",
+    "przno": "Pržno",
+    "sveti-stefan": "Sveti Stefan",
+    "lapcici": "Lapčići",
+    "tudorovici": "Tudorovići",
+    "lastva-grbaljska": "Lastva Grbaljska",
+    "petrovac": "Petrovac",
+    "buljarica": "Buljarica",
+    "tivat": "Tivat",
+    "kotor": "Kotor",
+    "herceg-novi": "Herceg Novi",
+    "bar": "Bar",
+    "dobra-voda": "Dobra Voda",
+    "ulcinj": "Ulcinj",
+    "rijeka-crnojevica": "Rijeka Crnojevića",
+    "cetinje": "Cetinje",
+    "podgorica": "Podgorica",
+    "other": "Montenegro"
+  },
+  "regions": {
+    "budva_riviera": "Budva Riviera",
+    "petrovac_area": "Petrovac area",
+    "boka": "Bay of Kotor",
+    "south_coast": "Southern coast",
+    "central": "Central Montenegro",
+    "montenegro": "Montenegro"
+  },
+  "not_found": {
+    "meta": {
+      "title": "Page not found | GUREVIĆ",
+      "description": "This page does not exist. Go to the Gurevic Real Estate home page in your language."
+    },
+    "h1": "Page not found",
+    "text": "This page does not exist or has moved.",
+    "home_link": "Go to home page"
+  },
+  "rental_terms": {
+    "off_season": "Until the season starts",
+    "year": "For a year",
+    "short_term": "Short-term"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "Utilities included",
+      "not_included": "Utilities paid separately",
+      "partial": "Utilities partly included"
+    },
+    "pets": {
+      "allowed": "Pets allowed",
+      "not_allowed": "No pets",
+      "by_agreement": "Pets by agreement"
+    }
+  },
+  "js": {
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "close": "Close",
+    "copied": "Copied",
+    "copy_failed": "Could not copy",
+    "submenu_open": "Open submenu",
+    "submenu_close": "Close submenu",
+    "price_on_request": "Price on request",
+    "per_month": "/ month",
+    "price_from": "from {price}"
+  }
+}
