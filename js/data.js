@@ -1,6 +1,6 @@
 // ============================================================
 // Gurevic Real Estate — БАЗА ОБЪЕКТОВ (LISTINGS).
-// АВТОСГЕНЕРИРОВАНО из Notion скриптом tools/notion_sync.py — не править вручную.
+// АВТОСГЕНЕРИРОВАНО из Notion (база «Objekati») скриптом tools/notion_sync.py — не править вручную.
 // Справочники и координаты — в js/config.js.
 // ============================================================
 
@@ -9,22 +9,24 @@ const LISTINGS =
   {
     "id": "ct-26-001k",
     "objectId": "CT-26-001K",
-    "title": "Дом 175 м² — Риека Црноевича",
+    "title": "Дом 175 м² — Цетине",
     "crmTitle": null,
     "type": "house",
     "kind": "house",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "rijeka-crnojevica",
+    "location": "Цетине",
+    "districtKey": "cetinje",
     "price": 300000,
     "area": 175,
     "landArea": 3700,
     "rooms": "3 спальни",
-    "short": "Дом в районе Будва — центр: площадь 175 м², участок 3700 м², 3 спальни.",
-    "desc": "Дом в районе Будва — центр: площадь 175 м², участок 3700 м², 3 спальни. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 257,
+    "bedrooms": 3,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "images": [
       "img/listings/ct-26-001k/01.jpg",
       "img/listings/ct-26-001k/02.jpg",
@@ -34,7 +36,13 @@ const LISTINGS =
       "img/listings/ct-26-001k/06.jpg",
       "img/listings/ct-26-001k/07.jpg",
       "img/listings/ct-26-001k/08.jpg"
-    ]
+    ],
+    "short": "Дом в районе Цетине: площадь 175 м², участок 3700 м², 3 спальни.",
+    "desc": "Дом в районе Цетине: площадь 175 м², участок 3700 м², 3 спальни. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 110,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-026r",
@@ -43,6 +51,7 @@ const LISTINGS =
     "crmTitle": null,
     "type": "commercial",
     "kind": "commercial",
+    "section": "invest",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
@@ -50,44 +59,50 @@ const LISTINGS =
     "priceNote": "Цена по запросу",
     "area": 54,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Коммерческое помещение в районе Бечичи: площадь 54 м², 1 спальня.",
     "desc": "Коммерческое помещение в районе Бечичи: площадь 54 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
-    "photos": 8,
-    "hue": 37,
-    "images": [
-      "img/listings/bd-26-026r/01.jpg",
-      "img/listings/bd-26-026r/02.jpg",
-      "img/listings/bd-26-026r/03.jpg",
-      "img/listings/bd-26-026r/04.jpg",
-      "img/listings/bd-26-026r/05.jpg",
-      "img/listings/bd-26-026r/06.jpg",
-      "img/listings/bd-26-026r/07.jpg",
-      "img/listings/bd-26-026r/08.jpg"
-    ]
+    "photos": 0,
+    "hue": 136,
+    "disclosure": "confidential",
+    "invest": true,
+    "investKind": "Коммерческая недвижимость"
   },
   {
     "id": "žb-26-001p",
     "objectId": "ŽB-26-001P",
-    "title": "Участок — Будва — центр",
+    "title": "Участок — Черногория",
     "crmTitle": null,
     "type": "land",
     "kind": "land",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 68000,
     "landArea": 4000,
-    "short": "Участок в районе Будва — центр: участок 4000 м².",
-    "desc": "Участок в районе Будва — центр: участок 4000 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 3,
-    "hue": 6,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "images": [
       "img/listings/žb-26-001p/01.jpg",
       "img/listings/žb-26-001p/02.jpg",
       "img/listings/žb-26-001p/03.jpg"
-    ]
+    ],
+    "short": "Участок в районе Черногория: участок 4000 м².",
+    "desc": "Участок в районе Черногория: участок 4000 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 3,
+    "hue": 272,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-025s",
@@ -96,11 +111,17 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 0,
     "priceNote": "Цена по запросу",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.278337,
       18.837724
@@ -109,30 +130,42 @@ const LISTINGS =
     "desc": "Квартира в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 269
+    "hue": 269,
+    "disclosure": "public"
   },
   {
     "id": "tv-25-04g",
     "objectId": "TV-25-04G",
     "title": "ALSER Dumidran",
+    "crmTitle": "ALSER Dumidran",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Тиват",
+    "districtKey": "tivat",
     "price": 164603,
     "area": 48,
     "rooms": "1 спальня",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.419963,
       18.715289
     ],
-    "short": "Участок в районе Будва — центр: площадь 48 м², 1 спальня.",
-    "desc": "Участок в районе Будва — центр: площадь 48 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "short": "Проект строительства в районе Тиват: площадь 48 м², 1 спальня.",
+    "desc": "Проект строительства в районе Тиват: площадь 48 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 119
+    "hue": 227,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-26-003s",
@@ -141,21 +174,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 213000,
     "area": 58,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.2862,
       18.868915
     ],
-    "short": "Квартира в районе Бечичи: площадь 58 м², 1 спальня.",
-    "desc": "Квартира в районе Бечичи: площадь 58 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 267,
     "images": [
       "img/listings/bd-26-003s/01.jpg",
       "img/listings/bd-26-003s/02.jpg",
@@ -165,7 +200,13 @@ const LISTINGS =
       "img/listings/bd-26-003s/06.jpg",
       "img/listings/bd-26-003s/07.jpg",
       "img/listings/bd-26-003s/08.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Бечичи: площадь 58 м², 1 спальня.",
+    "desc": "Квартира в районе Бечичи: площадь 58 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 149,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-002s",
@@ -174,21 +215,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 256500,
     "area": 66,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.2862,
       18.868915
     ],
-    "short": "Квартира в районе Бечичи: площадь 66 м², 1 спальня.",
-    "desc": "Квартира в районе Бечичи: площадь 66 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 313,
     "images": [
       "img/listings/bd-26-002s/01.jpg",
       "img/listings/bd-26-002s/02.jpg",
@@ -198,7 +241,13 @@ const LISTINGS =
       "img/listings/bd-26-002s/06.jpg",
       "img/listings/bd-26-002s/07.jpg",
       "img/listings/bd-26-002s/08.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Бечичи: площадь 66 м², 1 спальня.",
+    "desc": "Квартира в районе Бечичи: площадь 66 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 220,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-001s",
@@ -207,21 +256,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 226000,
     "area": 59,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.2862,
       18.868915
     ],
-    "short": "Квартира в районе Бечичи: площадь 59 м², 1 спальня.",
-    "desc": "Квартира в районе Бечичи: площадь 59 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 124,
     "images": [
       "img/listings/bd-26-001s/01.jpg",
       "img/listings/bd-26-001s/02.jpg",
@@ -231,7 +282,13 @@ const LISTINGS =
       "img/listings/bd-26-001s/06.jpg",
       "img/listings/bd-26-001s/07.jpg",
       "img/listings/bd-26-001s/08.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Бечичи: площадь 59 м², 1 спальня.",
+    "desc": "Квартира в районе Бечичи: площадь 59 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 351,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-024s",
@@ -240,17 +297,19 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 142000,
     "area": 43,
     "rooms": "1 спальня",
-    "short": "Квартира в районе Бечичи: площадь 43 м², 1 спальня.",
-    "desc": "Квартира в районе Бечичи: площадь 43 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 317,
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "images": [
       "img/listings/bd-26-024s/01.jpg",
       "img/listings/bd-26-024s/02.jpg",
@@ -260,7 +319,13 @@ const LISTINGS =
       "img/listings/bd-26-024s/06.jpg",
       "img/listings/bd-26-024s/07.jpg",
       "img/listings/bd-26-024s/08.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Бечичи: площадь 43 м², 1 спальня.",
+    "desc": "Квартира в районе Бечичи: площадь 43 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 148,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-023s",
@@ -269,6 +334,7 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
@@ -276,6 +342,12 @@ const LISTINGS =
     "priceNote": "Цена по запросу",
     "area": 48,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.283236,
       18.87483
@@ -284,7 +356,8 @@ const LISTINGS =
     "desc": "Квартира в районе Бечичи: площадь 48 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 355
+    "hue": 115,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-022s",
@@ -293,6 +366,7 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
@@ -300,6 +374,12 @@ const LISTINGS =
     "priceNote": "Цена по запросу",
     "area": 49,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.283236,
       18.87483
@@ -308,72 +388,92 @@ const LISTINGS =
     "desc": "Квартира в районе Бечичи: площадь 49 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 234
+    "hue": 314,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-021h",
     "objectId": "BD-26-021H",
-    "title": "Отель, Будва",
+    "title": "Отель, Черногория",
     "crmTitle": null,
     "type": "hotel",
     "kind": "hotel",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Отель — готовый бизнес",
-    "short": "Отель в районе Будва — центр: параметры уточняются.",
-    "desc": "Отель в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Отель в районе Черногория: параметры уточняются.",
+    "desc": "Отель в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
-    "photos": 4,
-    "hue": 348
+    "photos": 0,
+    "hue": 189,
+    "disclosure": "confidential",
+    "invest": true,
+    "investKind": "Отель — готовый бизнес"
   },
   {
     "id": "bd-26-020g",
     "objectId": "BD-26-020G",
-    "title": "Участок — Бечичи",
+    "title": "Проект строительства — Бечичи",
+    "crmTitle": null,
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
     "location": "Бечичи",
+    "districtKey": "becici",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.283678,
       18.860743
     ],
-    "short": "Участок в районе Бечичи: параметры уточняются.",
-    "desc": "Участок в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "short": "Проект строительства в районе Бечичи: параметры уточняются.",
+    "desc": "Проект строительства в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 89
+    "hue": 77,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-26-019s",
     "objectId": "BD-26-019S",
-    "title": "Квартира 44 м² — Будва — Розино",
+    "title": "Квартира 44 м² — Будва — центр",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — Розино",
-    "districtKey": "budva-rozino",
+    "location": "Будва — центр",
+    "districtKey": "budva-center",
     "price": 145000,
     "area": 44,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.292399,
       18.839253
     ],
-    "short": "Квартира в районе Будва — Розино: площадь 44 м², 1 спальня.",
-    "desc": "Квартира в районе Будва — Розино: площадь 44 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 7,
-    "hue": 74,
     "images": [
       "img/listings/bd-26-019s/01.jpg",
       "img/listings/bd-26-019s/02.jpg",
@@ -382,152 +482,226 @@ const LISTINGS =
       "img/listings/bd-26-019s/05.jpg",
       "img/listings/bd-26-019s/06.jpg",
       "img/listings/bd-26-019s/07.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Будва — центр: площадь 44 м², 1 спальня.",
+    "desc": "Квартира в районе Будва — центр: площадь 44 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 7,
+    "hue": 168,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-018k",
     "objectId": "BD-26-018K",
-    "title": "Дом — Будва — центр",
+    "title": "Дом — Черногория",
     "crmTitle": null,
     "type": "house",
     "kind": "house",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "short": "Дом в районе Будва — центр: параметры уточняются.",
-    "desc": "Дом в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Дом в районе Черногория: параметры уточняются.",
+    "desc": "Дом в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 258
+    "hue": 271,
+    "disclosure": "public"
   },
   {
     "id": "tv-26-004g",
     "objectId": "TV-26-004G",
-    "title": "Участок — Будва — центр",
+    "title": "Проект строительства — Черногория",
+    "crmTitle": null,
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 132
+    "hue": 15,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "kl-26-001g",
     "objectId": "KL-26-001G",
-    "title": "Участок — Будва — центр",
+    "title": "Проект строительства — Черногория",
+    "crmTitle": null,
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 160
+    "hue": 64,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-26-016g",
     "objectId": "BD-26-016G",
-    "title": "Участок — Будва — центр",
+    "title": "Проект строительства — Черногория",
+    "crmTitle": null,
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 260
+    "hue": 250,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "tv-26-001g",
     "objectId": "TV-26-001G",
-    "title": "Участок — Будва — центр",
+    "title": "Проект строительства — Черногория",
+    "crmTitle": null,
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 258
+    "hue": 266,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-26-017s",
     "objectId": "BD-26-017S",
-    "title": "Квартира — Будва — центр",
+    "title": "Квартира — Черногория",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "short": "Квартира в районе Будва — центр: параметры уточняются.",
-    "desc": "Квартира в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Квартира в районе Черногория: параметры уточняются.",
+    "desc": "Квартира в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 123
+    "hue": 286,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-015s",
     "objectId": "BD-26-015S",
-    "title": "Квартира 26 м² — Будва — центр",
+    "title": "Квартира 26 м² — Черногория",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
     "area": 26,
-    "short": "Квартира в районе Будва — центр: площадь 26 м².",
-    "desc": "Квартира в районе Будва — центр: площадь 26 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Квартира в районе Черногория: площадь 26 м².",
+    "desc": "Квартира в районе Черногория: площадь 26 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 217
+    "hue": 188,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-014s",
     "objectId": "BD-26-014S",
-    "title": "Квартира — Будва — центр",
+    "title": "Квартира — Черногория",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "short": "Квартира в районе Будва — центр: параметры уточняются.",
-    "desc": "Квартира в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Квартира в районе Черногория: параметры уточняются.",
+    "desc": "Квартира в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 41
+    "hue": 269,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-013s",
@@ -536,16 +710,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — Розино",
     "districtKey": "budva-rozino",
     "price": 0,
     "priceNote": "Цена по запросу",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Будва — Розино: параметры уточняются.",
     "desc": "Квартира в районе Будва — Розино: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 261
+    "hue": 274,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-012s",
@@ -554,17 +735,25 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 147000,
     "area": 33,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Будва — центр: площадь 33 м², 1 спальня.",
     "desc": "Квартира в районе Будва — центр: площадь 33 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 233
+    "hue": 195,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-011s",
@@ -573,16 +762,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 0,
     "priceNote": "Цена по запросу",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Бечичи: параметры уточняются.",
     "desc": "Квартира в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 189
+    "hue": 296,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-010s",
@@ -591,11 +787,17 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 0,
     "priceNote": "Цена по запросу",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.281,
       18.833802
@@ -604,7 +806,8 @@ const LISTINGS =
     "desc": "Квартира в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 151
+    "hue": 273,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-009s",
@@ -613,12 +816,18 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — Розино",
     "districtKey": "budva-rozino",
     "price": 0,
     "priceNote": "Цена по запросу",
     "area": 23,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.292472,
       18.838678
@@ -627,154 +836,218 @@ const LISTINGS =
     "desc": "Квартира в районе Будва — Розино: площадь 23 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 130
+    "hue": 119,
+    "disclosure": "public"
   },
   {
     "id": "bd-26-008g",
     "objectId": "BD-26-008G",
     "title": "LAGANINI HOMES",
+    "crmTitle": "LAGANINI HOMES",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.284134,
       18.861019
     ],
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 228
+    "hue": 123,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-25-018g",
     "objectId": "BD-25-018G",
     "title": "Park Plaza Residence",
+    "crmTitle": "Park Plaza Residence",
     "type": "land",
-    "deal": "sale",
-    "location": "Будва — центр",
-    "price": 0,
-    "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "coords": [
-      42.288006,
-      18.849813
-    ],
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 4,
-    "hue": 125
-  },
-  {
-    "id": "bd-25-019k",
-    "objectId": "BD-25-019K",
-    "title": "Дом — Будва — центр",
-    "crmTitle": null,
-    "type": "house",
-    "kind": "house",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "short": "Дом в районе Будва — центр: параметры уточняются.",
-    "desc": "Дом в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "coords": [
+      42.288006,
+      18.849813
+    ],
+    "short": "Проект строительства в районе Будва — центр: параметры уточняются.",
+    "desc": "Проект строительства в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 323
+    "hue": 154,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
+  },
+  {
+    "id": "bd-25-019k",
+    "objectId": "BD-25-019K",
+    "title": "Дом — Черногория",
+    "crmTitle": null,
+    "type": "house",
+    "kind": "house",
+    "section": "buy",
+    "deal": "sale",
+    "location": "Черногория",
+    "districtKey": "other",
+    "price": 0,
+    "priceNote": "Цена по запросу",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Дом в районе Черногория: параметры уточняются.",
+    "desc": "Дом в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 4,
+    "hue": 72,
+    "disclosure": "public"
   },
   {
     "id": "tv-25-003g",
     "objectId": "TV-25-003G",
     "title": "ALSER Dumidran",
+    "crmTitle": "ALSER Dumidran",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Тиват",
+    "districtKey": "tivat",
     "price": 173907,
     "area": 51,
     "rooms": "1 спальня",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.419963,
       18.715289
     ],
-    "short": "Участок в районе Будва — центр: площадь 51 м², 1 спальня.",
-    "desc": "Участок в районе Будва — центр: площадь 51 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 5,
-    "hue": 18,
     "images": [
       "img/listings/tv-25-003g/01.jpg",
       "img/listings/tv-25-003g/02.jpg",
       "img/listings/tv-25-003g/03.jpg",
       "img/listings/tv-25-003g/04.jpg",
       "img/listings/tv-25-003g/05.jpg"
-    ]
+    ],
+    "short": "Проект строительства в районе Тиват: площадь 51 м², 1 спальня.",
+    "desc": "Проект строительства в районе Тиват: площадь 51 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 5,
+    "hue": 126,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "tv-25-002g",
     "objectId": "TV-25-002G",
     "title": "House by the sea. Tivat",
+    "crmTitle": "House by the sea. Tivat",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Тиват",
+    "districtKey": "tivat",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Тиват: параметры уточняются.",
+    "desc": "Проект строительства в районе Тиват: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 181
+    "hue": 7,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-25-017s",
     "objectId": "BD-25-017S",
-    "title": "Квартира 89 м² — Будва — центр",
+    "title": "Квартира 89 м² — Черногория",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 299000,
     "area": 89,
     "rooms": "2 спальни",
-    "short": "Квартира в районе Будва — центр: площадь 89 м², 2 спальни.",
-    "desc": "Квартира в районе Будва — центр: площадь 89 м², 2 спальни. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "bedrooms": 2,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Квартира в районе Черногория: площадь 89 м², 2 спальни.",
+    "desc": "Квартира в районе Черногория: площадь 89 м², 2 спальни. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 124
+    "hue": 40,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-016s",
     "objectId": "BD-25-016S",
-    "title": "Квартира — Будва — центр",
+    "title": "Квартира — Черногория",
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
-    "districtKey": "budva-center",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "short": "Квартира в районе Будва — центр: параметры уточняются.",
-    "desc": "Квартира в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Квартира в районе Черногория: параметры уточняются.",
+    "desc": "Квартира в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 289
+    "hue": 1,
+    "disclosure": "public"
   },
   {
     "id": "ko-25-003s",
@@ -783,12 +1056,19 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Ластва Грбальска",
     "districtKey": "lastva-grbaljska",
     "price": 149300,
     "area": 56,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.313137,
       18.800283
@@ -797,7 +1077,8 @@ const LISTINGS =
     "desc": "Квартира в районе Ластва Грбальска: площадь 56 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 162
+    "hue": 196,
+    "disclosure": "public"
   },
   {
     "id": "ko-25-002s",
@@ -806,12 +1087,19 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Ластва Грбальска",
     "districtKey": "lastva-grbaljska",
     "price": 152700,
     "area": 54,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.313137,
       18.800283
@@ -820,7 +1108,8 @@ const LISTINGS =
     "desc": "Квартира в районе Ластва Грбальска: площадь 54 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 129
+    "hue": 309,
+    "disclosure": "public"
   },
   {
     "id": "ko-25-001s",
@@ -829,12 +1118,19 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Ластва Грбальска",
     "districtKey": "lastva-grbaljska",
     "price": 146500,
     "area": 52,
     "rooms": "1 спальня",
+    "bedrooms": 1,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.313137,
       18.800283
@@ -843,29 +1139,31 @@ const LISTINGS =
     "desc": "Квартира в районе Ластва Грбальска: площадь 52 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 65
+    "hue": 6,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-015g",
     "objectId": "BD-25-015G",
     "title": "Melia Budva",
+    "crmTitle": "Melia Budva",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
     "location": "Бечичи",
+    "districtKey": "becici",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.281083,
       18.878108
     ],
-    "short": "Участок в районе Бечичи: параметры уточняются.",
-    "desc": "Участок в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 74,
     "images": [
       "img/listings/bd-25-015g/01.jpg",
       "img/listings/bd-25-015g/02.jpg",
@@ -875,47 +1173,76 @@ const LISTINGS =
       "img/listings/bd-25-015g/06.jpg",
       "img/listings/bd-25-015g/07.jpg",
       "img/listings/bd-25-015g/08.jpg"
-    ]
+    ],
+    "short": "Проект строительства в районе Бечичи: параметры уточняются.",
+    "desc": "Проект строительства в районе Бечичи: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 255,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "bd-25-014g",
     "objectId": "BD-25-014G",
     "title": "Hotel President ALK",
+    "crmTitle": "Hotel President ALK",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
     "location": "Будва — центр",
+    "districtKey": "budva-center",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Проект строительства в районе Будва — центр: параметры уточняются.",
+    "desc": "Проект строительства в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 139
+    "hue": 14,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "tv-25-001g",
     "objectId": "TV-25-001G",
     "title": "NEXUS Minder Gradnja",
+    "crmTitle": "NEXUS Minder Gradnja",
     "type": "land",
+    "kind": "development",
+    "section": "invest",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Черногория",
+    "districtKey": "other",
     "price": 0,
     "priceNote": "Цена по запросу",
-    "invest": true,
-    "investKind": "Девелопмент",
-    "isComplex": true,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.402894,
       18.747732
     ],
-    "short": "Участок в районе Будва — центр: параметры уточняются.",
-    "desc": "Участок в районе Будва — центр: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "short": "Проект строительства в районе Черногория: параметры уточняются.",
+    "desc": "Проект строительства в районе Черногория: параметры уточняются. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 138
+    "hue": 76,
+    "disclosure": "public",
+    "invest": true,
+    "investKind": "Девелопмент",
+    "isComplex": true
   },
   {
     "id": "сt-24-001p",
@@ -924,21 +1251,28 @@ const LISTINGS =
     "crmTitle": null,
     "type": "land",
     "kind": "land",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Цетине",
     "districtKey": "cetinje",
     "price": 65000,
     "landArea": 5187,
-    "short": "Участок в районе Будва — центр: участок 5187 м².",
-    "desc": "Участок в районе Будва — центр: участок 5187 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 3,
-    "hue": 199,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "images": [
       "img/listings/сt-24-001p/01.jpg",
       "img/listings/сt-24-001p/02.jpg",
       "img/listings/сt-24-001p/03.jpg"
-    ]
+    ],
+    "short": "Участок в районе Цетине: участок 5187 м².",
+    "desc": "Участок в районе Цетине: участок 5187 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 3,
+    "hue": 44,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-005s",
@@ -947,17 +1281,24 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 750000,
     "area": 170,
     "landArea": 400,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Будва — центр: площадь 170 м², участок 400 м².",
     "desc": "Квартира в районе Будва — центр: площадь 170 м², участок 400 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 20
+    "hue": 69,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-008s",
@@ -966,16 +1307,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Рафаиловичи",
     "districtKey": "rafailovici",
     "price": 250000,
     "area": 482,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Рафаиловичи: площадь 482 м².",
     "desc": "Квартира в районе Рафаиловичи: площадь 482 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 175
+    "hue": 0,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-007s",
@@ -984,11 +1332,17 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 295000,
     "area": 60,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.286672,
       18.839397
@@ -997,7 +1351,8 @@ const LISTINGS =
     "desc": "Квартира в районе Будва — центр: площадь 60 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 286
+    "hue": 311,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-009s",
@@ -1006,20 +1361,21 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 245000,
     "area": 43,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.284716,
       18.837061
     ],
-    "short": "Квартира в районе Будва — центр: площадь 43 м².",
-    "desc": "Квартира в районе Будва — центр: площадь 43 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
-    "features": [],
-    "photos": 8,
-    "hue": 237,
     "images": [
       "img/listings/bd-25-009s/01.jpg",
       "img/listings/bd-25-009s/02.jpg",
@@ -1029,27 +1385,41 @@ const LISTINGS =
       "img/listings/bd-25-009s/06.jpg",
       "img/listings/bd-25-009s/07.jpg",
       "img/listings/bd-25-009s/08.jpg"
-    ]
+    ],
+    "short": "Квартира в районе Будва — центр: площадь 43 м².",
+    "desc": "Квартира в районе Будва — центр: площадь 43 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "features": [],
+    "photos": 8,
+    "hue": 321,
+    "disclosure": "public"
   },
   {
     "id": "br-25-001k",
     "objectId": "BR-25-001K",
-    "title": "Вилла 275 м² — Добра Вода",
+    "title": "Дом 275 м² — Добра Вода",
     "crmTitle": null,
     "type": "house",
-    "kind": "villa",
+    "kind": "house",
+    "section": "buy",
     "deal": "sale",
-    "location": "Будва — центр",
+    "location": "Добра Вода",
     "districtKey": "dobra-voda",
     "price": 400000,
     "area": 275,
     "landArea": 117,
     "rooms": "7 спален",
-    "short": "Дом в районе Будва — центр: площадь 275 м², участок 117 м², 7 спален.",
-    "desc": "Дом в районе Будва — центр: площадь 275 м², участок 117 м², 7 спален. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
+    "bedrooms": 7,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
+    "short": "Дом в районе Добра Вода: площадь 275 м², участок 117 м², 7 спален.",
+    "desc": "Дом в районе Добра Вода: площадь 275 м², участок 117 м², 7 спален. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 258
+    "hue": 116,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-002k",
@@ -1058,17 +1428,24 @@ const LISTINGS =
     "crmTitle": null,
     "type": "house",
     "kind": "house",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 330000,
     "area": 210,
     "landArea": 350,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Дом в районе Будва — центр: площадь 210 м², участок 350 м².",
     "desc": "Дом в районе Будва — центр: площадь 210 м², участок 350 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 68
+    "hue": 108,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-001p",
@@ -1077,16 +1454,23 @@ const LISTINGS =
     "crmTitle": null,
     "type": "land",
     "kind": "land",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 111720,
     "landArea": 1064,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Участок в районе Будва — центр: участок 1064 м².",
     "desc": "Участок в районе Будва — центр: участок 1064 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 302
+    "hue": 179,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-004s",
@@ -1095,11 +1479,17 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
     "price": 61000,
     "area": 24,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "coords": [
       42.28373,
       18.86628
@@ -1108,7 +1498,8 @@ const LISTINGS =
     "desc": "Квартира в районе Бечичи: площадь 24 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 125
+    "hue": 60,
+    "disclosure": "public"
   },
   {
     "id": "bd-25-003s",
@@ -1117,15 +1508,22 @@ const LISTINGS =
     "crmTitle": null,
     "type": "apartment",
     "kind": "apartment",
+    "section": "buy",
     "deal": "sale",
     "location": "Будва — центр",
     "districtKey": "budva-center",
     "price": 145000,
     "area": 50,
+    "texts": {
+      "card": {},
+      "description": {},
+      "location": {}
+    },
     "short": "Квартира в районе Будва — центр: площадь 50 м².",
     "desc": "Квартира в районе Будва — центр: площадь 50 м². Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
     "photos": 4,
-    "hue": 127
+    "hue": 67,
+    "disclosure": "public"
   }
 ];
