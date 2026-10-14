@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://re6al.github.io/gurevic-real-estate/sitemap.xml
