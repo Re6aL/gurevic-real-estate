@@ -1,0 +1,99 @@
+{
+  "categories": {
+    "buying": {
+      "sections": [
+        {
+          "title": "Buying property in Montenegro",
+          "text": "Define your budget, intended use and preferred area. We shortlist properties and arrange in-person or live video viewings. Before paying a deposit, agree checks of ownership, encumbrances, permits and payment conditions."
+        },
+        {
+          "title": "Buying by power of attorney",
+          "text": "If you cannot attend, discuss a specific power of attorney with the notary: its scope, translation and legalisation. A representative can sign only within the authority granted. We coordinate specialist partners; the notary determines whether the transaction can proceed."
+        }
+      ],
+      "meta": {
+        "description": "Od odabira nekretnine do preuzimanja ključeva, uključujući i razgledavanje iz inozemstva.",
+        "title": "Kupovina nekretnine u Crnoj Gori | GUREVIĆ"
+      },
+      "h1": "Kupovina nekretnine u Crnoj Gori"
+    },
+    "taxes": {
+      "sections": [
+        {
+          "title": "Property taxes in Montenegro",
+          "text": "Transfer tax is progressive: up to €150,000, 3%; between €150,000 and €500,000, €4,500 plus 5% of the excess; above €500,000, €22,000 plus 6% of the excess. The taxable value follows tax rules and may differ from an advertised price."
+        },
+        {
+          "title": "Budgeting for the transaction",
+          "text": "VAT-taxed transactions follow specific rules: do not automatically add both VAT and transfer tax. Annual property tax depends on the municipality and property characteristics. Obtain a transaction-specific estimate of taxes, notary, registration and banking costs before signing."
+        }
+      ],
+      "meta": {
+        "title": "Porez na imovinu u Crnoj Gori | GUREVIĆ",
+        "description": "Razlikujemo porez na stjecanje, VAT i godišnji porez na vlasništvo."
+      },
+      "h1": "Porez na imovinu u Crnoj Gori"
+    },
+    "residency": {
+      "sections": [
+        {
+          "title": "Property, residence and citizenship in Montenegro",
+          "text": "Property ownership may support temporary residence if the current Law on Foreigners requirements are met. Property type, ownership and valuation evidence, citizenship, insurance, means of support and other documents require review. A purchase does not automatically grant residence."
+        },
+        {
+          "title": "Preparing an application",
+          "text": "First applications and renewals may have different conditions and exceptions. Before buying for residence purposes, ask a specialist lawyer to check eligibility and the current document list. Property ownership alone does not grant citizenship. We can introduce residence advisers."
+        }
+      ],
+      "meta": {
+        "title": "Imovina, prebivalište i državljanstvo Crne Gore | GUREVIĆ",
+        "description": "Kupnja nekretnine i dobivanje dozvole za boravak odvojeni su postupci."
+      },
+      "h1": "Imovina, prebivalište i državljanstvo Crne Gore"
+    },
+    "documents": {
+      "sections": [
+        {
+          "title": "Documents and property legalisation",
+          "text": "Request a current list nepokretnosti and check ownership, encumbrances and the registered property. For buildings, check construction documents, use permission and legalisation status. For land, check permitted use, planning conditions, access and applicable UTU."
+        },
+        {
+          "title": "Why a title extract is not enough",
+          "text": "The legalisation law includes restrictions on transferring unauthorised buildings and specific exceptions. A missing permit needs a property-specific review. Plot subdivision and development potential must be verified with legal, cadastral and licensed planning professionals."
+        }
+      ],
+      "meta": {
+        "title": "Dokumenti i legalizacija nekretnina | GUREVIĆ",
+        "description": "Provjere stanova, kuća i parcela prije pologa ili kupoprodajnog ugovora."
+      },
+      "h1": "Dokumentacija i legalizacija nekretnine"
+    },
+    "returns": {
+      "sections": [
+        {
+          "title": "Rental returns and seasonality",
+          "text": "Calculate net income after vacancies, management, cleaning, repairs, utilities, taxes and fees. Compare monthly occupancy and evidenced rental rates; a summer nightly rate is not an annual return. Model base, optimistic and downside scenarios."
+        },
+        {
+          "title": "Confidential opportunities",
+          "text": "Tell us the asset type, budget, investment horizon and strategy. For private sales, the agency agrees disclosure and an NDA where needed. Request documents and evidence of revenue; appropriate specialists carry out project valuation and legal due diligence."
+        }
+      ],
+      "h1": "Povrat najma i sezonalnost",
+      "meta": {
+        "title": "Povrat najma i sezonalnost | GUREVIĆ",
+        "description": "Usporedite mogućnosti ulaganja bez pretpostavke zajamčenog povrata."
+      }
+    }
+  },
+  "updated": "Pregledano",
+  "meta": {
+    "description": "Praktične upute o kupovini, dokumentima i vlasništvu nekretnine u Crnoj Gori.",
+    "title": "Vodiči za kupce i investitore | GUREVIĆ"
+  },
+  "sources": "Izvori",
+  "more": "Više vodiča",
+  "request": "Razgovarajte o svom pitanju",
+  "h1": "Vodiči za kupce i investitore",
+  "disclaimer": "Samo opće informacije. Javni bilježnik, odvjetnik i porezni savjetnik moraju provjeriti kako se pravila primjenjuju na vašu transakciju."
+}

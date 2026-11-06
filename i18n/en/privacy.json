@@ -6,7 +6,7 @@
   "h1": "Privacy policy",
   "kicker": "Your data",
   "lead": "What data we receive through this website, why we need it, who it is shared with and how you can control it.",
-  "updated": "Last updated: October 2026",
+  "updated": "2026-11-05",
   "toc_title": "Contents",
   "back_to_top": "Back to contents",
   "sections": {
@@ -95,14 +95,8 @@
       "p3_html": "The supervisory authority in Montenegro is the <strong>Agency for Personal Data Protection and Free Access to Information</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). If you are in the European Union, you may also contact the supervisory authority of your country."
     },
     "storage": {
-      "title": "Cookies and browser storage",
-      "p1": "This website does not use cookies for analytics or advertising and does not include visitor counters.",
-      "p2": "For convenience, the website keeps a few service entries in your browser. They are not sent to us and are not used for tracking:",
-      "list": {
-        "local_html": "<strong>localStorage</strong> — the website language you chose (including when you close the suggestion to switch language). The entry stays until you delete it.",
-        "session_html": "<strong>sessionStorage</strong> — a note that the home page intro has already been shown, campaign tags (UTM) and the draft of an unfinished form. These entries are deleted when you close the tab; the draft is also deleted after a successful submission."
-      },
-      "p3": "You can delete these entries in your browser settings and the website will keep working. Third-party services (the Google map once you have loaded it, WhatsApp, Telegram) may use their own cookies under their own terms."
+      "title": "Cookie settings",
+      "p1": "With your consent, we use Yandex Metrica for visit statistics. Session replay and form-content recording are disabled. Declining does not affect the website."
     },
     "security": {
       "title": "Data security",

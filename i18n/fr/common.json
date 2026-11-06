@@ -39,7 +39,8 @@
     "menu_open": "Ouvrir le menu",
     "menu_close": "Fermer le menu",
     "submenu": "Sous-menu {label}",
-    "menu": "Menu"
+    "menu": "Menu",
+    "buy_new": "Programmes neufs à Budva et au Monténégro"
   },
   "routes": {
     "home": "Accueil",
@@ -65,7 +66,26 @@
     "contact": "Contact",
     "privacy": "Confidentialité",
     "map": "Carte des biens",
-    "property": "Bien"
+    "property": "Bien",
+    "area_budva-center": "Budva – centre",
+    "area_budva-rozino": "Budva – Rozino",
+    "area_becici": "Bečići",
+    "area_rafailovici": "Rafailovići",
+    "area_przno": "Pržno",
+    "area_sveti-stefan": "Sveti Stefan",
+    "area_petrovac": "Petrovac",
+    "area_lastva-grbaljska": "Lastva Grbaljska",
+    "area_tivat": "Tivat",
+    "area_kotor": "Kotor",
+    "area_bar": "Bar",
+    "area_herceg-novi": "Herceg Novi",
+    "buy_new": "Programmes neufs à Budva et au Monténégro",
+    "guides": "Guides d'achat et d'investisseur",
+    "guide_buying": "Acheter une propriété au Monténégro",
+    "guide_taxes": "Taxes foncières au Monténégro",
+    "guide_residency": "Propriété, résidence et citoyenneté au Monténégro",
+    "guide_documents": "Documents et légalisation de propriété",
+    "guide_returns": "Retours locatifs et saisonnalité"
   },
   "footer": {
     "nav_aria": "Menu du pied de page",
@@ -280,5 +300,13 @@
     "price_on_request": "Prix sur demande",
     "per_month": "/ mois",
     "price_from": "à partir de {price}"
+  },
+  "consent": {
+    "title": "Statistiques du site",
+    "text": "Avec votre accord, nous utilisons Yandex Metrica pour les statistiques de visites. L’enregistrement des sessions et des formulaires est désactivé. Le refus n’affecte pas le site.",
+    "policy": "Confidentialité",
+    "reject": "Refuser",
+    "accept": "Autoriser les statistiques",
+    "settings": "Paramètres des cookies"
   }
 }

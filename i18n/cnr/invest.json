@@ -1,0 +1,286 @@
+{
+  "focus": {
+    "more": "Saznajte više",
+    "items": {
+      "hotels": {
+        "title": "hoteli",
+        "alt": "Terasa butik hotela s bazenom iznad zaljeva — ilustracija",
+        "text": "Upravljanje hotelima i zgradama prikladnim za ugostiteljstvo na obali."
+      },
+      "commercial": {
+        "alt": "Terasa restorana s pogledom na more — ilustracija",
+        "text": "Restorani, maloprodajni i uredski prostori, stalni poslovi s timom.",
+        "title": "Upravljanje restoranima i poslovnim prostorom"
+      },
+      "land": {
+        "alt": "Kosa obalna parcela s maslinama — ilustracija",
+        "text": "Zemljište za komercijalnu izgradnju: hoteli, stanovi, logistika.",
+        "title": "Građevinsko zemljište"
+      },
+      "logistics": {
+        "title": "Skladišta i logistika",
+        "alt": "Moderno skladište s dokovima za utovar — ilustracija",
+        "text": "Skladišni objekti i logistička mjesta s dobrim cestovnim pristupom."
+      }
+    },
+    "sub": "Četiri područja na kojima radimo. Njihove stranice objašnjavaju što provjeravamo prije transakcije i koja je imovina trenutno u rukama.",
+    "title": "Investicijski fokus",
+    "kicker": "Klase imovine",
+    "development": {
+      "link": "Pogledaj projekte",
+      "title": "Razvojni projekti",
+      "text": "Projekti u izgradnji na obali i razvojna partnerstva."
+    }
+  },
+  "meta": {
+    "title": "Investicijske mogućnosti u Crnoj Gori | GUREVIĆ",
+    "description": "Hoteli, građevinsko zemljište, restorani, skladišta i poslovni prostor u Crnoj Gori. Povjerljivo pretraživanje, NDA na zahtjev, početna pravna podrška."
+  },
+  "h1": "Investicijske mogućnosti u Crnoj Gori",
+  "hero": {
+    "kicker": "Povjerljivo traženje investitora",
+    "lead": "Hoteli, građevinsko zemljište, operativni restorani i poslovni prostori, skladišta i logistika. Dobavljamo sredstva koja odgovaraju zahtjevima investitora i dijelimo pojedinosti nakon što je upit kvalificiran.",
+    "sub": "Projektiranje i izgradnja preko ovlaštenih partnera. Sami pružamo početnu pravnu podršku, a zatim projekt predajemo stručnjacima.",
+    "image_alt": "Crnogorska obala u zalasku sunca: planine, zaljev i stari grad u daljini",
+    "cta": "Razgovarajte o ulaganju"
+  },
+  "cases": {
+    "kicker_lang": "hr",
+    "disclaimer_label": "Imajte na umu",
+    "kicker": "Odabrane mogućnosti",
+    "labels": {
+      "area": "Površina",
+      "potential": "Potencijal",
+      "price_guide": "Vodič cijena",
+      "format": "Format",
+      "build_cost": "Referentna vrijednost troškova izgradnje",
+      "profit_declared": "Godišnja dobit koju je prijavio prodavač",
+      "sales_prices": "Prodajne cijene u okolici",
+      "land_area": "Površina parcele",
+      "value_guide": "Vodeća vrijednost"
+    },
+    "about": "cca. {price}",
+    "cta": "Detalji zahtjeva",
+    "million": "€{n}M",
+    "title": "Ilustrativni investicijski slučajevi",
+    "preliminary": "Preliminarno, podložno provjeri",
+    "items": {
+      "hotel": {
+        "type": "Hotel",
+        "title": "Hotel, Budva",
+        "note": "Dobit prema iskazu prodavača; nije provjereno."
+      },
+      "land": {
+        "title": "Građevinsko zemljište, Buljarica",
+        "type": "Građevinsko zemljište",
+        "note": "Prodajne cijene su tržišna odrednica za to područje, a ne predviđanje povrata."
+      },
+      "restaurant": {
+        "type": "Restoran",
+        "title": "Radni restoran",
+        "note": "Trgovačke brojke dijele se na zahtjev — kako ih dostavlja prodavatelj, a zatim se provjeravaju.",
+        "format": "stalno poslovanje s uspostavljenim timom i stalnim kupcima"
+      },
+      "coastal": {
+        "title": "Lokacija obalnog razvoja",
+        "type": "Razvojno mjesto",
+        "note": "Dozvoljeni volumen građenja ovisi o urbanističkim uvjetima koji se provjeravaju tijekom dubinske analize.",
+        "potential": "ugostiteljstvo i razvoj mješovite namjene"
+      }
+    },
+    "sub": "Četiri anonimizirana primjera koji pokazuju opseg i format prilika.",
+    "disclaimer": "Ovi slučajevi su anonimizirani i ne predstavljaju javnu ponudu. Točne adrese i identifikacijski podaci nisu objavljeni. Sve brojke su preliminarne: dolaze od prodavača ili tržišnih referentnih vrijednosti i podliježu provjeri tijekom due diligencea.",
+    "per_m2": "{price} po m²",
+    "from": "od {price}"
+  },
+  "support": {
+    "kicker": "Partneri",
+    "items": {
+      "legal": {
+        "title": "Početna pravna podrška",
+        "text": "Zahtijevamo i unakrsno provjeravamo temeljne dokumente imovine, navodimo pitanja za prodavatelja i postavljamo temelje za dubinsku analizu."
+      },
+      "design": {
+        "title": "Projektiranje i izgradnja",
+        "text": "Partneri s licencom za projektiranje i građenje dolaze nakon što projekt prijeđe na koncept, dozvole i građevinske radove."
+      },
+      "handover": {
+        "title": "Predaja stručnjacima",
+        "text": "Daljnje pravne, porezne i tehničke poslove obavljaju stručnjaci. Projekt predajemo zajedno s dosad prikupljenim materijalom."
+      }
+    },
+    "title": "Razvojna podrška",
+    "lead": "Kada projekt zahtijeva projektiranje i izgradnju, dovodimo partnere licencirane u Crnoj Gori. Jasno nam je oko našeg dijela: početna pravna podrška i koordinacija na početku.",
+    "image_alt": "Betonski okvir zgrade s dizalicama uz more — ilustracija"
+  },
+  "process": {
+    "steps": {
+      "request": {
+        "title": "Upit",
+        "text": "Opisujete sažetak: vrstu imovine, proračun, vrijeme i način na koji želite sudjelovati."
+      },
+      "nda": {
+        "text": "Ako vi ili prodavač to zahtijevate, prije otkrivanja pojedinosti potpisuje se ugovor o povjerljivosti.",
+        "title": "NDA ako je potrebno"
+      },
+      "selection": {
+        "text": "Predstavljamo sredstva koja odgovaraju vašim parametrima — s informacijama koje smijemo dijeliti.",
+        "title": "Izbor sredstava"
+      },
+      "qualification": {
+        "text": "Pojašnjavamo vaše ciljeve i parametre posla. U ovoj fazi nisu potrebni podaci o putovnici ili financijski dokumenti.",
+        "title": "Kvalifikacija investitora"
+      },
+      "due_diligence": {
+        "title": "Dužna pažnja",
+        "text": "Pregled dokumenata, tehničkog stanja i financija, uz sudjelovanje stručnjaka."
+      }
+    },
+    "more": "Više o procesu",
+    "kicker": "Povjerljivi postupak",
+    "sub": "Pet koraka od prve poruke do pregleda sredstva.",
+    "title": "Kako se postupa s upitom"
+  },
+  "enquiry": {
+    "kicker": "Privatni upit",
+    "aside_title": "Povjerljivost",
+    "title": "Upit investitora",
+    "points": {
+      "company": "Predstavnici tvrtke imaju poseban obrazac s podacima o tvrtki.",
+      "nda": "Možemo raditi pod NDA: označite kućicu u obrascu i ugovor će biti potpisan prije nego što se razmijene bilo kakvi detalji.",
+      "documents": "U prvoj fazi ne tražimo podatke o putovnici ili financijske dokumente.",
+      "addresses": "Ne objavljujemo točne adrese ili pojedinosti o identifikaciji imovine - pojedinosti se dijele nakon što je upit kvalificiran."
+    },
+    "lead": "Opišite svoj brief — mi ćemo vam osobno odgovoriti i predložiti sljedeći korak.",
+    "company_link": "Otvorite obrazac za tvrtku",
+    "direct": "Radije pišete izravno?"
+  },
+  "cat": {
+    "analyse": {
+      "kicker": "Dužna pažnja",
+      "title": "Što analiziramo",
+      "items": {
+        "ownership": {
+          "title": "Vlasništvo i tereti",
+          "text": "Vlasnički list (list nepokretnosti), povijest prava, hipoteka, pljenidbe i druga ograničenja."
+        },
+        "comparables": {
+          "text": "Tražene i transakcijske cijene za usporedivu imovinu u tom području.",
+          "title": "Tržišne usporedive"
+        },
+        "exit": {
+          "text": "Preprodaja, leasing, promjena namjene — koji su scenariji realni za imovinu.",
+          "title": "Opcije izlaza"
+        },
+        "financials": {
+          "text": "Prihodi i troškovi koje je prijavio prodavatelj — i njihova provjera prema dokumentima.",
+          "title": "Financije"
+        },
+        "technical": {
+          "text": "Struktura i građevinske usluge te odgovara li nekretnina dokumentima.",
+          "title": "Tehničko stanje"
+        },
+        "planning": {
+          "text": "Dopuštena uporaba, parametri građenja, postojanje i status dozvola.",
+          "title": "Urbanistički uvjeti i dozvole"
+        }
+      },
+      "sub": "Prije nego što preporučimo sredstvo, provjeravamo ključne parametre. Detaljan pregled provode stručnjaci."
+    },
+    "kicker": "Ulaganje u Crnu Goru",
+    "cta": "Pošaljite upit",
+    "process_title": "Kako radi",
+    "listings": {
+      "title": "Mogućnosti u ruci",
+      "note": "Povjerljiva imovina prikazuje se anonimno: bez adrese ili fotografije, a cijena je orijentir. Detalji na upit."
+    }
+  },
+  "final": {
+    "cta": "Mogućnosti zahtjeva",
+    "kicker": "Izvan tržišta",
+    "title": "Zatražite povjerljive mogućnosti",
+    "text": "Neka sredstva nisu objavljena. Pošaljite upit — nakon kvalifikacije i, ako je potrebno, NDA, podijelit ćemo ono što odgovara vašim parametrima.",
+    "chat": "Postavite pitanje u chatu"
+  },
+  "categories": {
+    "hotels": {
+      "image_alt": "Terasa butik hotela s bazenom iznad zaljeva — ilustracija",
+      "points": {
+        "rooms": "Broj soba, kategorija i popunjenost - prema navodima prodavatelja, a zatim ovjereni.",
+        "expansion": "Mogućnost adaptacije ili dogradnje u okviru urbanističkih uvjeta.",
+        "operations": "Operativni model: menadžment, osoblje, ugovori s turoperatorima i platforme za rezervacije."
+      },
+      "form_intro": "Recite nam svoj proračun i kako želite sudjelovati — odabrat ćemo imovinu i podijeliti detalje nakon što upit bude kvalificiran.",
+      "intro": "Upravljanje hotelima i zgradama prikladnim za ugostiteljstvo na obali. Predstavljamo ih anonimno i dijelimo pojedinosti nakon što je upit kvalificiran — pod NDA ako je potrebno.",
+      "h1": "Hoteli u Crnoj Gori za investitore",
+      "meta": {
+        "title": "Hoteli u Crnoj Gori za investitore | GUREVIĆ",
+        "description": "Hoteli i ugostiteljska imovina u Crnoj Gori za investitore: povjerljiva pretraga, NDA na zahtjev, pregled dokumenata i iznosa koje je naveo prodavac."
+      },
+      "points_title": "Ono što gledamo u hotelima",
+      "form_title": "Upit za hotel"
+    },
+    "land": {
+      "image_alt": "Kosa obalna parcela s maslinama — ilustracija",
+      "meta": {
+        "title": "Građevinsko zemljište u Crnoj Gori | GUREVIĆ",
+        "description": "Zemljište za komercijalni razvoj u Crnoj Gori: hoteli, stanovi, logistika. Pregled urbanističkih uvjeta i licenciranih partnera."
+      },
+      "h1": "Građevinsko zemljište u Crnoj Gori",
+      "points": {
+        "planning": "Urbanističko-planski uvjeti: dozvoljena namjena, gustoća i katnost.",
+        "access": "Pristup, komunalije, topografija i terenski uvjeti.",
+        "benchmarks": "Referentne vrijednosti troškova izgradnje i lokalnih prodajnih cijena — kao tržišne reference, a ne predviđanja."
+      },
+      "intro": "Zemljište za komercijalnu izgradnju - hoteli, stanovi, logistika. Počinjemo s urbanističkim uvjetima: oni određuju što se može graditi i u kojem obimu.",
+      "form_intro": "Opišite ukratko — namjenu, veličinu parcele i proračun. Dizajnerski partneri se pridružuju kada projekt dosegne tu fazu.",
+      "form_title": "Upit za zemljište",
+      "points_title": "Ono što gledamo u zemlji"
+    },
+    "commercial": {
+      "image_alt": "Terasa restorana s pogledom na more — ilustracija",
+      "logistics": {
+        "image_alt": "Moderno skladište s dokovima za utovar — ilustracija",
+        "text": "Skladišne ​​zgrade i logistička mjesta. Gledamo pristup teškim vozilima, visinu stropa, utovarne rampe i blizinu glavnih cesta i Luke Bar.",
+        "cta": "Upit za skladište",
+        "title": "Skladišta i logistika"
+      },
+      "form_title": "Upit o poslovnom vlasništvu",
+      "meta": {
+        "title": "Poslovni prostor u Crnoj Gori | GUREVIĆ",
+        "description": "Upravljanje restoranima, maloprodajnim i uredskim prostorima, skladištima i logistikom u Crnoj Gori. Povjerljiva pretraga i pregled poslovnih podataka."
+      },
+      "h1": "Restorani, poslovni prostori i skladišta",
+      "points_title": "Što gledamo u poslovnom vlasništvu",
+      "points": {
+        "revenue": "Prihodi i troškovi potkrijepljeni dokumentima, a ne samo riječju prodavača.",
+        "business": "Tim, dobavljači i dozvole operativnog poslovanja.",
+        "leases": "Ugovori o najmu i njihovi uvjeti, ako se nekretnina iznajmljuje."
+      },
+      "intro": "Upravljanje restoranima, maloprodajnim i uredskim prostorima, stalnim poslovanjem, kao i skladištima i logističkom imovinom. Podaci o poslovanju dolaze od prodavatelja i provjeravaju se prije transakcije.",
+      "form_intro": "Za skladišta i logistiku kao vrstu ulaganja odaberite “Skladište / logistika”."
+    },
+    "development": {
+      "image_alt": "Betonski okvir zgrade s dizalicama uz more — ilustracija",
+      "listings_title": "Projekti",
+      "meta": {
+        "description": "Razvojni projekti u Crnoj Gori: specifikacije, jedinice i pojmovi. Razvojna partnerstva i licencirani partneri za projektiranje i građenje.",
+        "title": "Razvojni projekti u Crnoj Gori | GUREVIĆ"
+      },
+      "points": {
+        "schedule": "Raspored plaćanja i datumi završetka — kako je navedeno u ugovoru, a ne u brošuri.",
+        "permits": "Građevinska dozvola i stvarno stanje radova.",
+        "developer": "Investitor: završeni projekti i struktura ugovora s kupcima."
+      },
+      "h1": "Razvojni projekti u Crnoj Gori",
+      "form_title": "Upit o projektu",
+      "form_intro": "Recite nam kako želite sudjelovati - kupnjom jedinica ili partnerstvom u projektu - i svoj proračun.",
+      "listings_note": "Specifikacije, jedinice i trenutne cijene na upit.",
+      "points_title": "Što gledamo u projektima",
+      "intro": "Projekti u izgradnji na obali i mogućnosti razvojnog partnerstva. Nazivi projekata i fotografije su javni; uvjeti i trenutne cijene dostupni su na upit."
+    }
+  },
+  "js": {
+    "preselected": "Vrsta ulaganja odabrana u obliku: {type}"
+  }
+}

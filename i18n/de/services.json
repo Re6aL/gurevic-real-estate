@@ -53,7 +53,7 @@
         "contract": "Verkauf oder Vermietung auf Basis eines schriftlichen Vertrags",
         "management": "Immobilienverwaltung nach Vereinbarung"
       },
-      "note": "Provision der Agentur: 5 % (ohne MwSt.); weitere Konditionen nach Vereinbarung.",
+      "note": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen.",
       "link": "Für Eigentümer"
     }
   },
@@ -92,5 +92,35 @@
     "text": "Beschreiben Sie, was Sie suchen oder verkaufen möchten – wir melden uns auf dem Weg, der Ihnen passt. Sie können uns auch direkt schreiben.",
     "form_title": "Anfrage",
     "messengers": "Oder schreiben Sie uns direkt"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "commission": {
+        "a": "Bei Wohnungsverkäufen beträgt die Gebühr 5 % des Kaufvertragspreises, einschließlich VAT, und wird nur vom Verkäufer gezahlt. Konditionen für andere Objektarten und Vermietungen werden gesondert schriftlich vereinbart.",
+        "q": "Wie viel verlangt die Agentur?"
+      },
+      "documents": {
+        "q": "Welche Unterlagen sollten vor dem Kauf geprüft werden?",
+        "a": "Der genaue Satz hängt von der Immobilie ab. Dazu gehören im Allgemeinen die aktuelle Eigentumsurkunde, die Identität und Befugnis des Verkäufers, die registrierten Belastungen und Einschränkungen, der Planungs- oder Legalisierungsstatus sowie der Vertragsentwurf. Partnerrechtsanwälte und der Notar führen die entsprechenden rechtlichen Prüfungen durch."
+      },
+      "residency": {
+        "q": "Verleiht der Kauf einer Immobilie automatisch einen Wohnsitz?",
+        "a": "Nein. Eigentum kann eine Grundlage für einen Antrag auf vorübergehende Aufenthaltsgenehmigung sein, wenn die aktuellen gesetzlichen Voraussetzungen erfüllt sind, die Aufenthaltsgenehmigung ist jedoch ein separates Verfahren und erfolgt nicht automatisch."
+      },
+      "foreigners": {
+        "q": "Kann ein ausländischer Staatsbürger in Montenegro eine Immobilie kaufen?",
+        "a": "In vielen Fällen ja. Für bestimmte Kategorien von Grundstücken und Eigentum können Einschränkungen gelten. Daher müssen vor der Zahlung einer Anzahlung die Staatsbürgerschaft des Käufers und die konkrete Eigentumsurkunde überprüft werden."
+      },
+      "areas": {
+        "a": "Die Agentur hat ihren Sitz in Budva und ist an der gesamten Küste tätig, darunter an der Riviera von Budva, Petrovac, Tivat, Kotor, Herceg Novi und Bar. Einzelne Investitionsmöglichkeiten können auch anderswo in Montenegro liegen.",
+        "q": "Welche Teile Montenegros decken Sie ab?"
+      },
+      "legalisation": {
+        "q": "Kann eine nicht legalisierte Immobilie verkauft werden?",
+        "a": "Die Antwort hängt vom Registrierungs- und Legalisierungsstatus der Immobilie sowie vom geltenden Recht ab. Einige Transaktionen können eingeschränkt werden. Wir empfehlen, die Eigentumsurkunde zu prüfen und rechtlichen Rat einzuholen, bevor Sie die Bedingungen vereinbaren."
+      }
+    },
+    "sub": "Kurze Antworten auf die Fragen, die Käufer und Eigentümer zuerst stellen."
   }
 }

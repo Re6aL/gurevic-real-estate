@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Immobilie verkaufen oder vermieten in Budva | GUREVIĆ",
-    "description": "GUREVIĆ in Budva: Bewertung, Fotos, Verkauf und Langzeitvermietung von Wohnungen, Häusern, Grundstücken und Unternehmen. Provision 5 % ohne MwSt."
+    "description": "5 % inkl. MwSt. — der Wohnungsverkäufer zahlt"
   },
   "h1": "Immobilie verkaufen oder vermieten mit GUREVIĆ",
   "hero": {
@@ -11,9 +11,9 @@
     "cta_process": "So arbeiten wir",
     "facts_aria": "Die wichtigsten Konditionen im Überblick",
     "facts": {
-      "commission": "Provision 5 % ohne MwSt.",
+      "commission": "5 % inkl. MwSt. — der Wohnungsverkäufer zahlt",
       "contract": "Schriftlicher Vertrag",
-      "languages": "Wir sprechen Russisch, Englisch und Montenegrinisch"
+      "languages": "Beratung und Korrespondenz sind in allen Sprachen der Website möglich. Ilia spricht Russisch, Englisch, Ukrainisch und Montenegrinisch. Für Hebräisch, Französisch, Deutsch und Polnisch unterstützen uns Agenturpartner."
     }
   },
   "agency": {
@@ -85,7 +85,7 @@
         "title": "Vertrag",
         "text": "Die Konditionen halten wir schriftlich fest:",
         "terms": {
-          "commission_html": "Provision der Agentur: <strong>5 % ohne MwSt.</strong>, weitere Konditionen nach Vereinbarung;",
+          "commission_html": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen.",
           "exclusive": "bevorzugt ein Alleinauftrag;",
           "price": "Preisänderungen nur mit Zustimmung des Eigentümers;",
           "access": "der Eigentümer ermöglicht den Zugang zur Immobilie für Besichtigungen."
@@ -139,7 +139,7 @@
         },
         "commission": {
           "title": "Vergütung der Agentur",
-          "text": "5 % ohne MwSt.; wann die Zahlungspflicht entsteht und wie abgerechnet wird."
+          "text": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen."
         },
         "exclusivity": {
           "title": "Exklusivität und Laufzeit",
@@ -184,7 +184,7 @@
         },
         "commission": {
           "title": "Vergütung der Agentur",
-          "text": "5 % ohne MwSt.; wann die Zahlungspflicht entsteht und wie abgerechnet wird."
+          "text": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen."
         },
         "exclusivity": {
           "title": "Exklusivität und Laufzeit",
@@ -246,7 +246,7 @@
     "sell": {
       "meta": {
         "title": "Immobilie verkaufen in Montenegro | GUREVIĆ",
-        "description": "Wohnung, Haus, Grundstück oder Unternehmen in Budva und Montenegro verkaufen: Bewertung, Fotos, Besichtigungen. Provision 5 % ohne MwSt., schriftlicher Vertrag."
+        "description": "5 % inkl. MwSt. — der Wohnungsverkäufer zahlt"
       },
       "h1": "Ihre Immobilie in Montenegro verkaufen",
       "kicker": "Verkauf",
@@ -279,7 +279,7 @@
         }
       },
       "terms": {
-        "commission_html": "Provision der Agentur: <strong>5 % ohne MwSt.</strong>; weitere Konditionen nach Vereinbarung.",
+        "commission_html": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen.",
         "exclusive": "Bevorzugt ein Alleinauftrag: ein Ansprechpartner statt aller Makler und Agenturen in Montenegro.",
         "contract": "Ein schriftlicher Vertrag nach montenegrinischem Recht."
       },
@@ -287,7 +287,7 @@
       "faq": {
         "price": {
           "q": "Was kosten Ihre Leistungen?",
-          "a": "Die Provision der Agentur beträgt 5 % ohne MwSt. Weitere Konditionen werden individuell besprochen und in einem schriftlichen Vertrag festgehalten."
+          "a": "Beim Verkauf einer Wohnung beträgt die Provision 5 % des Kaufvertragspreises inklusive Mehrwertsteuer und wird ausschließlich vom Verkäufer bezahlt. Für andere Immobilien und Vermietungen gelten gesonderte Vereinbarungen."
         },
         "exclusive": {
           "q": "Muss ich einen Alleinauftrag unterzeichnen?",
@@ -424,5 +424,13 @@
   "js": {
     "contract_request_sale": "Bitte senden Sie mir einen Mustervertrag für den Immobilienverkauf.",
     "contract_request_business": "Bitte senden Sie mir einen Mustervertrag für den Unternehmensverkauf."
+  },
+  "downloads": {
+    "title": "Musterverträge",
+    "sale": "Verkaufsvertrag",
+    "exclusive": "Exklusiver Maklervertrag",
+    "view": "PDF ansehen",
+    "download": "PDF herunterladen",
+    "note": "Muster auf Englisch und Montenegrinisch. Bedingungen vor der Unterzeichnung mit der Agentur abstimmen. Beide Muster enthalten Exklusivitätsklauseln."
   }
 }

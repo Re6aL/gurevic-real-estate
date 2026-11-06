@@ -53,7 +53,7 @@
         "contract": "Sprzedaż lub wynajem na podstawie pisemnej umowy",
         "management": "Zarządzanie nieruchomością po uzgodnieniu"
       },
-      "note": "Prowizja agencji: 5% (bez VAT); pozostałe warunki do uzgodnienia.",
+      "note": "Przy sprzedaży mieszkania prowizja wynosi 5% ceny umownej, z VAT, i płaci ją wyłącznie sprzedający. Warunki dla innych nieruchomości i najmu ustalamy oddzielnie.",
       "link": "Dla właścicieli"
     }
   },
@@ -92,5 +92,35 @@
     "text": "Prosimy opisać, czego Państwo szukają lub co chcą sprzedać — odpowiemy w sposób, który Państwu odpowiada. Można też napisać do nas bezpośrednio.",
     "form_title": "Zapytanie",
     "messengers": "Lub prosimy napisać bezpośrednio"
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "items": {
+      "commission": {
+        "a": "W przypadku sprzedaży mieszkania prowizja wynosi 5% ceny umowy sprzedaży, w tym VAT i płaci wyłącznie sprzedający. Warunki pozostałych typów nieruchomości i najmu ustalane są odrębnie w formie pisemnej.",
+        "q": "Ile bierze agencja?"
+      },
+      "documents": {
+        "q": "Jakie dokumenty warto sprawdzić przed zakupem?",
+        "a": "Dokładny zestaw zależy od właściwości. Zwykle zawiera aktualny tytuł własności, tożsamość i uprawnienia sprzedawcy, zarejestrowane obciążenia i ograniczenia, status planowania lub legalizacji oraz projekt umowy. Prawnicy partnerzy i notariusz przeprowadzają odpowiednie kontrole prawne."
+      },
+      "residency": {
+        "q": "Czy zakup nieruchomości automatycznie gwarantuje pobyt?",
+        "a": "Nie. Nieruchomość może być podstawą do ubiegania się o pobyt czasowy, jeżeli spełnione są aktualne warunki ustawowe, jednak pobyt jest odrębną procedurą i nie następuje automatycznie."
+      },
+      "foreigners": {
+        "q": "Czy cudzoziemiec może kupić nieruchomość w Czarnogórze?",
+        "a": "W wielu przypadkach tak. Ograniczenia mogą dotyczyć niektórych kategorii gruntów i nieruchomości, dlatego przed wpłatą kaucji należy sprawdzić obywatelstwo kupującego i konkretny tytuł własności."
+      },
+      "legalisation": {
+        "q": "Czy można sprzedać niezalegalizowaną nieruchomość?",
+        "a": "Odpowiedź zależy od stanu rejestracyjnego i legalizacyjnego nieruchomości oraz obowiązującego prawa. Niektóre transakcje mogą zostać ograniczone. Przed uzgodnieniem warunków zalecamy sprawdzenie tytułu własności i zasięgnięcie porady prawnej."
+      },
+      "areas": {
+        "q": "Jakie części Czarnogóry obsługujesz?",
+        "a": "Agencja ma siedzibę w Budvie i działa na całym wybrzeżu, w tym na Riwierze Budva, Petrovac, Tivat, Kotor, Herceg Novi i Bar. Indywidualne możliwości inwestycyjne mogą być zlokalizowane w innym miejscu Czarnogóry."
+      }
+    },
+    "sub": "Krótkie odpowiedzi na pytania, które najpierw zadają kupujący i właściciele."
   }
 }

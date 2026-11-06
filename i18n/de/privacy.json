@@ -6,7 +6,7 @@
   "h1": "Datenschutzerklärung",
   "kicker": "Ihre Daten",
   "lead": "Welche Daten wir über diese Website erhalten, wozu wir sie benötigen, an wen sie weitergegeben werden und wie Sie darüber bestimmen können.",
-  "updated": "Zuletzt aktualisiert: Oktober 2026",
+  "updated": "2026-11-05",
   "toc_title": "Inhalt",
   "back_to_top": "Zurück zum Inhalt",
   "sections": {
@@ -95,14 +95,8 @@
       "p3_html": "Aufsichtsbehörde in Montenegro ist die <strong>Agentur für den Schutz personenbezogener Daten und den freien Zugang zu Informationen</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Wenn Sie sich in der Europäischen Union befinden, können Sie sich auch an die Aufsichtsbehörde Ihres Landes wenden."
     },
     "storage": {
-      "title": "Cookies und Browserspeicher",
-      "p1": "Diese Website verwendet keine Cookies für Analyse- oder Werbezwecke und bindet keine Besucherzähler ein.",
-      "p2": "Zur Erleichterung der Nutzung speichert die Website einige technische Einträge in Ihrem Browser. Sie werden nicht an uns übermittelt und nicht zur Nachverfolgung verwendet:",
-      "list": {
-        "local_html": "<strong>localStorage</strong> – die von Ihnen gewählte Sprache der Website (auch wenn Sie den Hinweis auf eine andere Sprache schließen). Der Eintrag bleibt bestehen, bis Sie ihn löschen.",
-        "session_html": "<strong>sessionStorage</strong> – ein Vermerk, dass das Intro der Startseite bereits gezeigt wurde, Kampagnenparameter (UTM) und der Entwurf eines nicht abgeschlossenen Formulars. Diese Einträge werden beim Schließen des Tabs gelöscht, der Entwurf außerdem nach erfolgreichem Senden."
-      },
-      "p3": "Sie können diese Einträge in den Einstellungen Ihres Browsers löschen; die Website funktioniert weiterhin. Dienste Dritter (die Google-Karte, nachdem Sie sie geladen haben, WhatsApp, Telegram) können nach ihren eigenen Bedingungen eigene Cookies verwenden."
+      "title": "Cookie-Einstellungen",
+      "p1": "Mit Ihrer Einwilligung verwenden wir Yandex Metrica für Besuchsstatistiken. Sitzungsaufzeichnungen und Formularaufzeichnungen sind deaktiviert. Eine Ablehnung beeinträchtigt die Website nicht."
     },
     "security": {
       "title": "Datensicherheit",

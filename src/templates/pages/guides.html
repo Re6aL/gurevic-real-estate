@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% import 'macros/ui.html' as ui %}
+{% import 'macros/forms.html' as forms %}
+{% block jsonld %}
+{{ super() }}
+{% if page.sub %}<script type="application/ld+json">{{ {'@context':'https://schema.org','@type':'Article','headline':page.h1,'description':page.description,'dateModified':'2026-11-05','inLanguage':lang,'author':{'@type':'Organization','name':site.legal_name},'mainEntityOfPage':page.canonical}|tojson }}</script>{% endif %}
+{% endblock %}
+{% block main %}
+<header class="info-hero"><div class="container">{{ ui.breadcrumbs(page.breadcrumbs, light=True) }}<h1>{{ page.h1 }}</h1><p class="info-lead">{{ page.description }}</p></div></header>
+<section class="info-section"><div class="container prose">
+{% if page.sub %}
+  <p class="info-muted">{{ t('guides.updated') }}: <time datetime="2026-11-05">05.11.2026</time></p>
+  {% for section in t(route.meta ~ '.sections') %}<h2>{{ section.title }}</h2><p>{{ section.text }}</p>{% endfor %}
+  <h2>{{ t('guides.sources') }}</h2><ul>{% for source in route.extra.sources %}<li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.title }}</a></li>{% endfor %}</ul>
+  <p>{{ t('guides.disclaimer') }}</p>
+{% endif %}
+<h2>{{ t('guides.more') }}</h2><ul>{% for code in ['buying','taxes','residency','documents','returns'] %}<li><a href="{{ url('guide.' ~ code) }}">{{ t('guides.categories.' ~ code ~ '.h1') }}</a></li>{% endfor %}</ul>
+</div></section>
+<section class="info-section info-section--soft"><div class="container"><h2>{{ t('guides.request') }}</h2>{{ forms.contact_form() }}</div></section>
+{% endblock %}

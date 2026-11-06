@@ -1,0 +1,9 @@
+<aside class="consent-panel" data-consent-panel hidden aria-labelledby="consent-title">
+  <h2 id="consent-title">{{ t('common.consent.title') }}</h2>
+  <p>{{ t('common.consent.text') }} <a href="{{ url('privacy') }}">{{ t('common.consent.policy') }}</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" data-consent-reject>{{ t('common.consent.reject') }}</button>
+    <button type="button" class="btn btn-outline" data-consent-accept>{{ t('common.consent.accept') }}</button>
+  </div>
+</aside>
+<div class="container consent-settings"><button type="button" data-consent-open>{{ t('common.consent.settings') }}</button></div>

@@ -6,7 +6,7 @@
   "h1": "Polityka prywatności",
   "kicker": "Państwa dane",
   "lead": "Jakie dane otrzymujemy za pośrednictwem tej strony, do czego są nam potrzebne, komu są przekazywane i jak mogą Państwo nimi zarządzać.",
-  "updated": "Data ostatniej aktualizacji: październik 2026",
+  "updated": "2026-11-05",
   "toc_title": "Spis treści",
   "back_to_top": "Powrót do spisu treści",
   "sections": {
@@ -95,14 +95,8 @@
       "p3_html": "Organem nadzorczym w Czarnogórze jest <strong>Agencja Ochrony Danych Osobowych i Swobodnego Dostępu do Informacji</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Jeśli przebywają Państwo w Unii Europejskiej, mogą Państwo również zwrócić się do organu nadzorczego swojego państwa."
     },
     "storage": {
-      "title": "Pliki cookie i pamięć przeglądarki",
-      "p1": "Ta strona nie używa plików cookie do analityki ani reklamy i nie zawiera liczników odwiedzin.",
-      "p2": "Dla wygody strona zapisuje w Państwa przeglądarce kilka wpisów technicznych. Nie są one przesyłane do nas ani wykorzystywane do śledzenia:",
-      "list": {
-        "local_html": "<strong>localStorage</strong> — wybrany język strony (także wtedy, gdy zamkną Państwo podpowiedź o zmianie języka). Wpis pozostaje do czasu jego usunięcia.",
-        "session_html": "<strong>sessionStorage</strong> — informacja, że ekran powitalny strony głównej został już wyświetlony, znaczniki kampanii (UTM) oraz wersja robocza niedokończonego formularza. Wpisy te są usuwane po zamknięciu karty; wersja robocza — również po pomyślnym wysłaniu."
-      },
-      "p3": "Wpisy te można usunąć w ustawieniach przeglądarki, a strona nadal będzie działać. Usługi stron trzecich (mapa Google po jej wczytaniu, WhatsApp, Telegram) mogą używać własnych plików cookie na własnych zasadach."
+      "title": "Ustawienia cookies",
+      "p1": "Za Twoją zgodą używamy Yandex Metrica do statystyk odwiedzin. Nagrywanie sesji i treści formularzy jest wyłączone. Odmowa nie wpływa na działanie strony."
     },
     "security": {
       "title": "Bezpieczeństwo danych",

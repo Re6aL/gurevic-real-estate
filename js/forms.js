@@ -735,7 +735,7 @@
       fields: data.fields,
     }).then((res) => {
       setBusy(form, false);
-      if (res.ok) showSuccess(form);
+      if (res.ok) { showSuccess(form); if (SITE.track) SITE.track('lead_sent'); }
       else showFallback(form, data.rows, res.reason);
     });
   }

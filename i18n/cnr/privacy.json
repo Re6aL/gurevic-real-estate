@@ -1,0 +1,118 @@
+{
+  "h1": "Politika privatnosti",
+  "kicker": "Vaši podaci",
+  "meta": {
+    "title": "Politika privatnosti | GUREVIĆ",
+    "description": "Kako DOO GUREVIĆ BUDVA postupa s podacima iz obrazaca i chata na ovoj web stranici: što prikupljamo, zašto, tko ih prima, koliko dugo ih čuvamo i koja su vaša prava."
+  },
+  "toc_title": "Sadržaj",
+  "updated": "2026-11-05",
+  "lead": "Koje podatke primamo putem ove web stranice, zašto su nam potrebni, s kim se dijele i kako ih možete kontrolirati.",
+  "sections": {
+    "controller": {
+      "title": "Tko je odgovoran za vaše podatke",
+      "p1_html": "Voditelj obrade Vaših osobnih podataka je <strong>{legal}</strong>, agencija za nekretnine {brand}, Budva, Crna Gora. Za sva pitanja o vašim podacima pišite na <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>.",
+      "p2": "Ova se politika odnosi na ovu web stranicu i sve njezine jezične verzije. Ako nas kontaktirate izravno — telefonom, u messengeru ili e-poštom — za te podatke vrijede ista pravila."
+    },
+    "data": {
+      "title": "Koje podatke primamo",
+      "list": {
+        "contact_html": "<strong>Obrazac za kontakt i upit za kupnju</strong> — ime; telefon, Telegram ili email (dovoljan je jedan); subjekt; željeni jezik; tvoja poruka.",
+        "property_html": "<strong>Upit o nekretnini</strong> — ime, podaci za kontakt, poruka, plus referentni broj i adresa stranice nekretnine o kojoj pitate.",
+        "rent_html": "<strong>Zahtjev za najam</strong> — rok najma, željeni datum useljenja, mjesečni proračun, broj spavaćih soba i stanara, kućni ljubimci, ime, kontakt podaci, komentar. Obrazac za obavijest o kratkoročnom najmu prikuplja ime, kontakt podatke, željeni datum i komentar.",
+        "investor_company_html": "<strong>Upit o ulaganju (predstavnik tvrtke)</strong> — isti podaci plus naziv tvrtke, položaj, poslovna e-pošta i, po izboru, web stranica i nadležnost tvrtke.",
+        "chat_html": "<strong>Chat pomoćnik</strong> — vaši odgovori na pitanja u chatu (svrha, vrsta nekretnine, proračun, područje), ime, detalji za kontakt i transkript chata. Chat slijedi fiksnu skriptu; transkript nam se šalje tek nakon što potvrdite slanje.",
+        "owner_html": "<strong>OZahtjev vlasnika</strong> — vrsta nekretnine i zadatak (prodaja, iznajmljivanje, upravljanje); za fizičku osobu - ime i prezime vlasnika, broj vlasničkog lista (list nepokretnosti), katastarsku općinu (KO), a za stan broj jedinice (PD); za tvrtku — naziv, matični broj i kontakt osoba; telefon, e-mail, željeni jezik, tražena cijena, opis nekretnine.",
+        "investor_html": "<strong>Upit o ulaganju (privatni investitor)</strong> — puno ime, e-pošta, vrsta ulaganja, raspon proračuna, željeni način kontakta, telefon ili Telegram (ako ste ih odabrali), komentar, NDA zahtjev."
+      },
+      "p1": "Primamo samo ono što unesete u obrasce ili nam kažete u chatu, plus tehničke informacije bez kojih web stranica ne može raditi. Podaci ovise o obliku:",
+      "p2": "Svaki zahtjev također automatski uključuje jezik i adresu stranice s koje je poslan, vrijeme slanja, vrijeme utrošeno na ispunjavanje obrasca (zaštita od neželjene pošte), verziju pristanka i oznake kampanje (UTM) ako ste stigli preko poveznice koja ih sadrži.",
+      "p3": "Putem ove web stranice ne tražimo podatke o putovnici, bankovne podatke ili financijske dokumente. Nemojte ih uključivati ​​u komentare.",
+      "p4": "Prilikom svakog otvaranja stranice pružatelj usluga hostinga automatski prima tehničke podatke: IP adresu, informacije o pregledniku i uređaju, traženu adresu i vrijeme zahtjeva. Svaki web poslužitelj radi na ovaj način; pogledajte \"Tko prima podatke\" za detalje."
+    },
+    "purposes": {
+      "list": {
+        "respond": "odgovoriti na vaš upit i kontaktirati vas na način koji ste odabrali;",
+        "select": "pronaći nekretnine, organizirati razgledavanje i pripremiti ponudu za vaš zahtjev;",
+        "contract": "za sklapanje i izvršavanje ugovora s vama;",
+        "security": "za zaštitu web stranice i obrazaca od spama i zlouporabe;",
+        "invest": "izvršiti početni pregled investicijskog upita i pripremiti NDA prema potrebi;",
+        "utm": "kako biste razumjeli koje reklamne veze donose upite (samo UTM oznake, bez praćenja vašeg ponašanja na web stranici).",
+        "owner": "procijeniti nekretninu vlasnika, pripremiti ugovor i započeti prodaju ili iznajmljivanje;"
+      },
+      "title": "Zašto koristimo podatke",
+      "p1": "Ne prodajemo podatke, ne koristimo ih za automatizirano donošenje odluka i ne šaljemo marketinške poruke bez vašeg posebnog pristanka."
+    },
+    "bases": {
+      "title": "Pravne osnove",
+      "list": {
+        "consent_html": "<strong>Pristanak.</strong> Dajete ga označavanjem kvadratića prilikom slanja obrasca ili potvrdom slanja u chatu. Privolu možete povući u bilo kojem trenutku; to ne utječe na zakonitost obrade prije povlačenja.",
+        "contract_html": "<strong>Koraci prije ugovora i njegove izvedbe.</strong> Kada od nas tražite da pronađemo ili procijenimo nekretninu, pripremimo ugovor ili podržimo transakciju.",
+        "interest_html": "<strong>Legitimni interes.</strong> Zaštita web stranice od spama i zlouporabe (skriveno polje zamke za botove, provjera vremena ispunjavanja obrasca) i vođenje evidencije upita.",
+        "law_html": "<strong>Zakonska obveza.</strong> Gdje je čuvanje određenih podataka ili dokumenata propisano zakonom, primjerice u vezi sa sklopljenim ugovorom."
+      },
+      "p1": "Podatke obrađujemo u skladu sa crnogorskim Zakonom o zaštiti osobnih podataka, a za posjetitelje iz Europske unije, u skladu s Općom uredbom EU o zaštiti podataka (GDPR). Pravne osnove su:"
+    },
+    "recipients": {
+      "title": "Tko prima podatke",
+      "list": {
+        "notion_html": "<strong>Notion Labs, Inc.</strong> (SAD) — CRM sustav u kojem se pohranjuju upiti s web stranice.",
+        "github_html": "<strong>GitHub, Inc.</strong> (SAD) — hosting web stranica (GitHub stranice). GitHub prima tehničke podatke o posjetima (IP adresa, preglednik, tražena stranica) i čuva ih u zapisnicima poslužitelja pod vlastitim uvjetima.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (SAD) — isporučuje podatke obrazaca u CRM (kada je ova usluga omogućena). Cloudflare prima podatke o upitu i IP adresu pošiljatelja isključivo za isporuku zahtjeva.",
+        "telegram_html": "<strong>Telegram</strong> — kratka interna obavijest agentu o novom upitu (ako su obavijesti uključene): tip upita, naziv i ključni parametri, bez telefona, e-maila, katastarskog i matičnog broja.",
+        "google_html": "<strong>Google</strong> — karta na stranici svojstva. Učitava se tek nakon što kliknete gumb za učitavanje karte; do tada se ništa ne šalje Googleu. Nakon učitavanja, Google prima vašu IP adresu i može koristiti vlastite kolačiće.",
+        "osm_html": "<strong>OpenStreetMap i unpkg.com</strong> — karta na stranici \"Property map\". Kada ga otvorite, vaš preglednik učitava biblioteku karata Leaflet s unpkg.com i pločice karte s poslužitelja OpenStreetMap; ovi poslužitelji primaju vašu IP adresu.",
+        "messengers_html": "<strong>WhatsApp, Telegram, e-pošta</strong> — ako nam pišete izravno ili pošaljete zahtjev putem ovih kanala (uključujući zamjenske gumbe obrasca), podatke obrađuje usluga koju ste odabrali prema vlastitim uvjetima."
+      },
+      "p1": "Pristup upitima ima samo agencija. Za rad web stranice koristimo usluge sljedećih tvrtki; obrađuju podatke u naše ime ili pod vlastitim uvjetima, kao što je opisano u nastavku.",
+      "p2": "Odvjetnici i drugi partneri agencije primaju podatke samo uz vaše znanje i samo u onoj mjeri u kojoj vaša stvar zahtijeva, primjerice za provjeru dokumenata nekretnine. Podatke otkrivamo tijelima javne vlasti samo kada to zakon zahtijeva."
+    },
+    "transfers": {
+      "title": "Transferi van Crne Gore",
+      "p1": "Neka od navedenih poduzeća nalaze se izvan Crne Gore, uključujući i SAD. Za takve prijenose oslanjamo se na ugovorne zaštitne mjere tih tvrtki, kao što su standardne ugovorne klauzule o zaštiti podataka. Detalji su dostupni na zahtjev putem e-pošte."
+    },
+    "retention": {
+      "title": "Koliko dugo čuvamo podatke",
+      "p3": "Unosi u pohrani vašeg preglednika ostaju na vašem uređaju (pogledajte \"Kolačići i pohrana preglednika\").",
+      "p2": "Tehnički dnevnici usluga hostinga i dostave čuvaju se za razdoblja koja određuju te tvrtke.",
+      "p1": "Kao opće pravilo, upite i korespondenciju čuvamo do 24 mjeseca nakon zadnjeg kontakta s vama, nakon čega ih brišemo ili anonimiziramo. Ako smo sklopili ugovor, povezani podaci se čuvaju onoliko dugo koliko ugovor i zakon zahtijevaju."
+    },
+    "rights": {
+      "title": "Vaša prava",
+      "list": {
+        "access": "znati koje vaše podatke obrađujemo i primiti kopiju istih;",
+        "restriction": "zatražiti ograničenje obrade;",
+        "erasure": "zatražite brisanje svojih podataka;",
+        "rectification": "ispraviti netočne ili nepotpune podatke;",
+        "portability": "primiti podatke koje ste dali u strojno čitljivom formatu;",
+        "objection": "prigovoriti obradi na temelju legitimnog interesa;",
+        "withdraw": "povući svoj pristanak u bilo kojem trenutku;",
+        "complaint": "podnijeti pritužbu nadzornom tijelu."
+      },
+      "p1": "Imate pravo na:",
+      "p2_html": "Za ostvarivanje svojih prava pišite na <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>. Možemo od vas tražiti da potvrdite da zahtjev dolazi od vas, a mi ćemo vam odgovoriti u roku određenom zakonom.",
+      "p3_html": "Nadzorno tijelo u Crnoj Gori je <strong>Agencija za zaštitu osobnih podataka i slobodan pristup informacijama</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Ako ste u Europskoj uniji, također se možete obratiti nadzornom tijelu svoje zemlje."
+    },
+    "storage": {
+      "title": "Postavke kolačića",
+      "p1": "Uz vaš pristanak koristimo Yandex Metrica za statistiku posjeta. Onemogućeni su ponavljanje sesije i snimanje sadržaja forme. Odbijanje ne utječe na web mjesto."
+    },
+    "security": {
+      "title": "Sigurnost podataka",
+      "p1": "Poduzimamo razumne organizacijske i tehničke mjere: podaci obrazaca prenose se putem sigurne veze (HTTPS), pristup CRM-u je ograničen, a ključevi za pristup usluzi nikada se ne objavljuju na web stranici."
+    },
+    "children": {
+      "title": "djeca",
+      "p1": "Ova web stranica nije namijenjena osobama mlađim od 18 godina te ne prikupljamo svjesno njihove podatke. Ako mislite da nam je dijete poslalo svoje podatke, pišite nam i mi ćemo ih izbrisati."
+    },
+    "changes": {
+      "p1": "Možemo ažurirati ovu politiku, na primjer, kada počnemo koristiti nove usluge. Trenutna verzija uvijek se objavljuje na ovoj stranici, s datumom posljednjeg ažuriranja na vrhu.",
+      "title": "Promjene ove politike"
+    },
+    "contacts": {
+      "p1_html": "<strong>{legal}</strong>, Budva, Crna Gora. E-pošta za pitanja o podacima: <a href=\"mailto:{email}\"><bdi>{email}</bdi></a>.",
+      "title": "Kako nas kontaktirati"
+    }
+  },
+  "back_to_top": "Povratak na sadržaj"
+}

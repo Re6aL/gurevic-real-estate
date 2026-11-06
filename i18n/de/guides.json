@@ -1,0 +1,99 @@
+{
+  "categories": {
+    "buying": {
+      "sections": [
+        {
+          "title": "Buying property in Montenegro",
+          "text": "Define your budget, intended use and preferred area. We shortlist properties and arrange in-person or live video viewings. Before paying a deposit, agree checks of ownership, encumbrances, permits and payment conditions."
+        },
+        {
+          "title": "Buying by power of attorney",
+          "text": "If you cannot attend, discuss a specific power of attorney with the notary: its scope, translation and legalisation. A representative can sign only within the authority granted. We coordinate specialist partners; the notary determines whether the transaction can proceed."
+        }
+      ],
+      "h1": "Immobilienkauf in Montenegro",
+      "meta": {
+        "description": "Von der Auswahl einer Immobilie bis zur Schlüsselübergabe, inklusive Besichtigungen aus dem Ausland.",
+        "title": "Immobilienkauf in Montenegro | GUREVIĆ"
+      }
+    },
+    "taxes": {
+      "sections": [
+        {
+          "title": "Property taxes in Montenegro",
+          "text": "Transfer tax is progressive: up to €150,000, 3%; between €150,000 and €500,000, €4,500 plus 5% of the excess; above €500,000, €22,000 plus 6% of the excess. The taxable value follows tax rules and may differ from an advertised price."
+        },
+        {
+          "title": "Budgeting for the transaction",
+          "text": "VAT-taxed transactions follow specific rules: do not automatically add both VAT and transfer tax. Annual property tax depends on the municipality and property characteristics. Obtain a transaction-specific estimate of taxes, notary, registration and banking costs before signing."
+        }
+      ],
+      "meta": {
+        "description": "Unterscheiden Sie zwischen Erwerbssteuer, VAT und jährlicher Eigentumssteuer.",
+        "title": "Grundsteuern in Montenegro | GUREVIĆ"
+      },
+      "h1": "Grundsteuern in Montenegro"
+    },
+    "residency": {
+      "sections": [
+        {
+          "title": "Property, residence and citizenship in Montenegro",
+          "text": "Property ownership may support temporary residence if the current Law on Foreigners requirements are met. Property type, ownership and valuation evidence, citizenship, insurance, means of support and other documents require review. A purchase does not automatically grant residence."
+        },
+        {
+          "title": "Preparing an application",
+          "text": "First applications and renewals may have different conditions and exceptions. Before buying for residence purposes, ask a specialist lawyer to check eligibility and the current document list. Property ownership alone does not grant citizenship. We can introduce residence advisers."
+        }
+      ],
+      "meta": {
+        "description": "Der Kauf einer Immobilie und die Erlangung einer Aufenthaltserlaubnis sind getrennte Verfahren.",
+        "title": "Eigentum, Wohnsitz und Staatsbürgerschaft in Montenegro | GUREVIĆ"
+      },
+      "h1": "Eigentum, Wohnsitz und Staatsbürgerschaft in Montenegro"
+    },
+    "documents": {
+      "sections": [
+        {
+          "title": "Documents and property legalisation",
+          "text": "Request a current list nepokretnosti and check ownership, encumbrances and the registered property. For buildings, check construction documents, use permission and legalisation status. For land, check permitted use, planning conditions, access and applicable UTU."
+        },
+        {
+          "title": "Why a title extract is not enough",
+          "text": "The legalisation law includes restrictions on transferring unauthorised buildings and specific exceptions. A missing permit needs a property-specific review. Plot subdivision and development potential must be verified with legal, cadastral and licensed planning professionals."
+        }
+      ],
+      "meta": {
+        "description": "Prüfungen für Wohnungen, Häuser und Grundstücke vor Anzahlung oder Kaufvertrag.",
+        "title": "Legalisierung von Dokumenten und Eigentum | GUREVIĆ"
+      },
+      "h1": "Legalisierung von Dokumenten und Eigentum"
+    },
+    "returns": {
+      "sections": [
+        {
+          "title": "Rental returns and seasonality",
+          "text": "Calculate net income after vacancies, management, cleaning, repairs, utilities, taxes and fees. Compare monthly occupancy and evidenced rental rates; a summer nightly rate is not an annual return. Model base, optimistic and downside scenarios."
+        },
+        {
+          "title": "Confidential opportunities",
+          "text": "Tell us the asset type, budget, investment horizon and strategy. For private sales, the agency agrees disclosure and an NDA where needed. Request documents and evidence of revenue; appropriate specialists carry out project valuation and legal due diligence."
+        }
+      ],
+      "meta": {
+        "description": "Vergleichen Sie Anlagemöglichkeiten, ohne von garantierten Renditen auszugehen.",
+        "title": "Mietrenditen und Saisonalität | GUREVIĆ"
+      },
+      "h1": "Mietrenditen und Saisonalität"
+    }
+  },
+  "updated": "Bewertet",
+  "h1": "Käufer- und Investorenleitfäden",
+  "meta": {
+    "title": "Käufer- und Investorenratgeber | GUREVIĆ",
+    "description": "Praktische Anleitung zu Kauf, Dokumenten und Immobilienbesitz in Montenegro."
+  },
+  "more": "Weitere Ratgeber",
+  "request": "Besprechen Sie Ihre Frage",
+  "sources": "Quellen",
+  "disclaimer": "Nur allgemeine Informationen. Ein Notar, Rechtsanwalt und Steuerberater muss prüfen, wie die Regeln auf Ihr Geschäft anwendbar sind."
+}

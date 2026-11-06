@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gurevic Real Estate — static site build (Jinja2 templates × 7 languages).
+"""Gurevic Real Estate — static site build (Jinja2 templates × 8 languages).
 
     python tools/build_site.py                      # full build into the repo root
     python tools/build_site.py --out ../site-test   # private folder (static dirs are copied)

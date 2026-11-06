@@ -39,7 +39,8 @@
     "menu_open": "Open menu",
     "menu_close": "Close menu",
     "submenu": "{label} submenu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "buy_new": "New developments in Budva and Montenegro"
   },
   "routes": {
     "home": "Home",
@@ -65,7 +66,26 @@
     "contact": "Contact",
     "privacy": "Privacy",
     "map": "Property map",
-    "property": "Property"
+    "property": "Property",
+    "area_budva-center": "Budva – centre",
+    "area_budva-rozino": "Budva – Rozino",
+    "area_becici": "Bečići",
+    "area_rafailovici": "Rafailovići",
+    "area_przno": "Pržno",
+    "area_sveti-stefan": "Sveti Stefan",
+    "area_petrovac": "Petrovac",
+    "area_lastva-grbaljska": "Lastva Grbaljska",
+    "area_tivat": "Tivat",
+    "area_kotor": "Kotor",
+    "area_bar": "Bar",
+    "area_herceg-novi": "Herceg Novi",
+    "buy_new": "New developments in Budva and Montenegro",
+    "guides": "Buyer and investor guides",
+    "guide_buying": "Buying property in Montenegro",
+    "guide_taxes": "Property taxes in Montenegro",
+    "guide_residency": "Property, residence and citizenship in Montenegro",
+    "guide_documents": "Documents and property legalisation",
+    "guide_returns": "Rental returns and seasonality"
   },
   "footer": {
     "nav_aria": "Footer menu",
@@ -280,5 +300,13 @@
     "price_on_request": "Price on request",
     "per_month": "/ month",
     "price_from": "from {price}"
+  },
+  "consent": {
+    "title": "Website analytics",
+    "text": "With your consent, we use Yandex Metrica for visit statistics. Session replay and form-content recording are disabled. Declining does not affect the website.",
+    "policy": "Privacy policy",
+    "reject": "Decline",
+    "accept": "Allow analytics",
+    "settings": "Cookie settings"
   }
 }

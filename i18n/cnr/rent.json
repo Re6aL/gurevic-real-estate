@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Dugoročni najam u Budvi | GUREVIĆ",
+    "description": "Stanovi, kuće i vile do početka sezone ili na cijelu godinu. Kratkoročni najam je u pripremi."
+  },
+  "h1": "Dugoročni najam u Budvi",
+  "hero": {
+    "kicker": "Izdavanje",
+    "lead": "Stanovi, kuće i vile do početka sezone ili na cijelu godinu. Kratkoročni najam je u pripremi.",
+    "image_alt": "Budva i crnogorska obala"
+  },
+  "results_title": "Dugoročni najam u Budvi",
+  "seo": {
+    "title": "Izbor nekretnine uz GUREVIĆ",
+    "p1": "Stanovi, kuće i vile do početka sezone ili na cijelu godinu. Kratkoročni najam je u pripremi.",
+    "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Stanovi za dugoročni najam | GUREVIĆ",
+        "description": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom."
+      },
+      "h1": "Stanovi za dugoročni najam",
+      "hero": {
+        "kicker": "Izdavanje",
+        "lead": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Stanovi za dugoročni najam",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Kuće za dugoročni najam | GUREVIĆ",
+        "description": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom."
+      },
+      "h1": "Kuće za dugoročni najam",
+      "hero": {
+        "kicker": "Izdavanje",
+        "lead": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Kuće za dugoročni najam",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Mjesečna cijena, depozit i datum useljenja. Uslove režija, ljubimaca i trajanja najma potvrđujemo s vlasnikom.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    }
+  }
+}

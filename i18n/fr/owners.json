@@ -11,9 +11,9 @@
     "cta_process": "Notre méthode",
     "facts_aria": "Conditions clés en bref",
     "facts": {
-      "commission": "Commission 5 % HT",
+      "commission": "5 % TTC — à la charge du vendeur de l’appartement",
       "contract": "Contrat écrit",
-      "languages": "Nous parlons russe, anglais et monténégrin"
+      "languages": "Nous proposons des consultations et des échanges dans toutes les langues du site. Ilia parle russe, anglais, ukrainien et monténégrin. Nos partenaires assurent les consultations en hébreu, français, allemand et polonais."
     }
   },
   "agency": {
@@ -424,5 +424,13 @@
   "js": {
     "contract_request_sale": "Merci de m’envoyer un modèle de mandat de vente immobilière.",
     "contract_request_business": "Merci de m’envoyer un modèle de mandat de vente d’entreprise."
+  },
+  "downloads": {
+    "title": "Modèles de contrats",
+    "sale": "Contrat de vente",
+    "exclusive": "Mandat exclusif",
+    "view": "Voir le PDF",
+    "download": "Télécharger le PDF",
+    "note": "Modèles en anglais et monténégrin. Convenez des conditions avec l’agence avant de signer. Les deux modèles contiennent des clauses d’exclusivité."
   }
 }

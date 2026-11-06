@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Agencija za nekretnine u Budvi | GUREVIĆ",
+    "description": "Kupovina, dugoročni najam i ulaganje u nekretnine u Budvi i na crnogorskom primorju. GUREVIĆ: individualni pristup i pisani dogovori."
+  },
+  "h1": "Agencija za nekretnine u Budvi. Život uz more — vaša nova priča",
+  "splash": {
+    "line1": "Ključ za život uz more",
+    "line2": "Nekretnine u Crnoj Gori — od prvog obilaska do ključeva"
+  },
+  "hero": {
+    "eyebrow": "Agencija za nekretnine u Budvi",
+    "title": "Život uz more —",
+    "accent": "vaša nova priča",
+    "sub": "Kupovina, dugoročni najam i investicije na crnogorskom primorju",
+    "cta_buy": "Kupovina",
+    "cta_rent": "Izdavanje",
+    "cta_invest": "Investicije",
+    "owners_link": "Za vlasnike nekretnina",
+    "carousel": "galerija",
+    "slides_aria": "Fotografije Budve",
+    "controls_aria": "Kontrole galerije",
+    "prev": "Prethodna fotografija",
+    "next": "Sljedeća fotografija",
+    "slide": "Fotografija {n} od {total}",
+    "alt": {
+      "1": "Stari grad Budva sa šljunkovite plaže",
+      "2": "Pogled iz vazduha na Budvu, luku i zaliv",
+      "3": "Statua plesačice pored Starog grada",
+      "4": "Zvonik Starog grada i zaliv iza bugenvilije",
+      "5": "Zidine Starog grada i planine iznad mora"
+    }
+  },
+  "directions": {
+    "kicker": "Naše usluge",
+    "title": "Izaberite ono što vam treba",
+    "sub": "Svaki pravac ima svoj odjeljak: ponude, uslove rada i obrazac za upit.",
+    "subs_aria": "Odjeljci: {name}",
+    "rent": {
+      "text": "Stanovi i kuće za dugoročni najam — do sezone ili na cijelu godinu.",
+      "alt": "Balkon s pogledom na zaliv — ilustracija"
+    },
+    "buy": {
+      "text": "Stanovi, kuće, vile i zemljište za privatnu gradnju.",
+      "alt": "Novi stambeni kompleks na obali — vizualizacija"
+    },
+    "invest": {
+      "text": "Hoteli, razvojno zemljište i poslovne nekretnine uz povjerljiv pristup.",
+      "alt": "Crnogorska obala iz vazduha — ilustracija"
+    },
+    "owners": {
+      "text": "Prodaja, izdavanje i upravljanje nekretninama uz pisani ugovor.",
+      "alt": "Svijetla dnevna soba s balkonom — ilustracija"
+    }
+  },
+  "about": {
+    "kicker": "O agenciji",
+    "title": "Ilija Gurević — osnivač i agent agencije GUREVIĆ",
+    "person": "Ilija Gurević",
+    "monogram": "IG",
+    "photo_alt": "Ilija Gurević, osnivač agencije GUREVIĆ",
+    "p1": "Treću godinu radimo na tržištu nekretnina u Crnoj Gori. Kupcima, zakupcima, investitorima i vlasnicima pružamo usluge prilagođene njihovim potrebama.",
+    "p2": "Dogovore s klijentima zaključujemo u pisanoj formi. Za pravna pitanja, projektovanje i gradnju sarađujemo sa stručnim partnerima.",
+    "link": "Više o agenciji"
+  },
+  "steps": {
+    "kicker": "Proces",
+    "title": "Kako radimo",
+    "sub": "Četiri koraka od prvog upita do zaključenja posla.",
+    "s1": {
+      "title": "Upit",
+      "text": "Opišite šta tražite ili nudite, vaš budžet i rokove."
+    },
+    "s2": {
+      "title": "Izbor ili procjena",
+      "text": "Izdvajamo odgovarajuće ponude ili procjenjujemo vašu nekretninu i dogovaramo uslove."
+    },
+    "s3": {
+      "title": "Obilasci i pregovori",
+      "text": "Organizujemo obilaske i pregovore o cijeni i uslovima."
+    },
+    "s4": {
+      "title": "Posao uz ugovor",
+      "text": "Uslove uređujemo pisanim ugovorom u skladu s pravom Crne Gore."
+    }
+  },
+  "cta": {
+    "kicker": "Kontakt",
+    "title": "Recite nam svoje planove",
+    "text": "Pišite na WhatsApp ili Telegram ili pošaljite upit putem sajta. Odgovorićemo na način koji vam odgovara.",
+    "languages": "Konsultacije na svim jezicima sajta.",
+    "call": "Ili pozovite:"
+  },
+  "js": {
+    "pause": "Zaustavi fotografije",
+    "play": "Nastavi prikaz fotografija"
+  }
+}

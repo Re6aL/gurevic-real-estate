@@ -1,0 +1,101 @@
+{
+  "js": {
+    "fab_open": "Otvorite chat: pronađite nekretninu",
+    "title": "GUREVIĆ asistent",
+    "fab_close": "Minimiziraj chat",
+    "close": "Zatvori chat",
+    "avatar": "GR",
+    "send": "Poslati",
+    "bot": "Pomoćnik",
+    "input_label": "Vaša poruka",
+    "you": "Vas",
+    "restart": "Kreni ispočetka",
+    "input_placeholder": "Upišite svoj odgovor…",
+    "q": {
+      "goal": "Pozdrav, mogu vam pomoći da sastavite zahtjev — agent će ga primiti i javiti vam se. Što vas zanima?",
+      "budget_buy": "Koliki je vaš okvirni proračun? Odaberite opciju ili upišite vlastitu.",
+      "budget_rent": "Koliki je vaš mjesečni budžet? Odaberite opciju ili upišite vlastitu.",
+      "price_sell": "Imate li na umu traženu cijenu? Upišite ili preskočite ovo pitanje.",
+      "type_sell": "Kakvu imovinu imate?",
+      "budget_invest": "Koju veličinu ulaganja razmatrate?",
+      "type": "O kakvoj nekretnini razmišljate?",
+      "district": "Neko željeno područje?",
+      "contact": "Hvala. Ostavite broj telefona, @telegram ili e-mail — agent će poslati odabir i odgovoriti na vaša pitanja.",
+      "district_sell": "Gdje se nalazi nekretnina?",
+      "contact_invalid": "Nisam mogao prepoznati kontakt. Unesite telefonski broj kao +382…, Telegram korisničko ime (@username) ili e-poštu.",
+      "name": "Kako da te oslovljavamo?",
+      "confirm": "Provjerite svoj zahtjev:",
+      "free_note": "Ovo je dodano vašem zahtjevu."
+    },
+    "subtitle": "Prikupljamo vaš zahtjev i prosljeđujemo ga agentu",
+    "o": {
+      "goal": {
+        "buy": "Kupiti",
+        "invest": "Ulagati",
+        "rent": "Iznajmljuje se dugoročno",
+        "browse": "Sada samo tražim",
+        "sell": "Prodaj ili iznajmi moju nekretninu"
+      },
+      "type": {
+        "apartment": "Apartman",
+        "hotel": "Hotel",
+        "land": "Zemljište",
+        "house": "Kuća ili vila",
+        "construction_project": "Nekretnina u izgradnji",
+        "undecided": "Još nije odlučeno",
+        "commercial": "Restoran ili komercijala",
+        "development": "Razvojni projekt",
+        "business": "Operativno poslovanje"
+      },
+      "budget": {
+        "b_lt150": "do 150.000 €",
+        "500k_2m": "500 tisuća eura – 2 milijuna eura",
+        "10m_50m": "10–50 milijuna eura",
+        "2m_10m": "2–10 milijuna eura",
+        "r_gt1500": "1500 € i više",
+        "b_300_700": "300–700 tisuća eura",
+        "b_gt700": "700 tisuća eura i više",
+        "lt_500k": "do 500 tisuća eura",
+        "r_800_1500": "800–1500 €",
+        "b_150_300": "150–300 tisuća eura",
+        "r_lt800": "do 800€",
+        "gt_50m": "preko 50 milijuna eura"
+      },
+      "district": {
+        "budva": "Budva",
+        "becici": "Bečići / Rafailovići",
+        "any": "Bez preferencija",
+        "petrovac": "Petrovac",
+        "boka": "Tivat / Kotor",
+        "sveti_stefan": "Pržno / Sveti Stefan"
+      },
+      "skip": "Preskočiti"
+    },
+    "summary": {
+      "budget": "Proračun",
+      "contact": "Kontakt",
+      "type": "Vlasništvo",
+      "goal": "Cilj",
+      "price": "Tražena cijena",
+      "name": "Ime",
+      "district": "Distrikt",
+      "notes": "Dodatne napomene"
+    },
+    "edit": "Kreni ispočetka",
+    "consent_link": "Politika privatnosti",
+    "sending": "Slanje...",
+    "submit": "Pošaljite agentu",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "copy": "Kopiraj tekst",
+    "whatsapp": "WhatsApp",
+    "after": "Za nastavak razgovora pišite izravno agentu:",
+    "sent": "Gotovo — vaš je zahtjev proslijeđen agentu koji će vas kontaktirati. Ako želite, pišite direktno:",
+    "consent_text": "Pritiskom na “Pošalji agentu” pristajete na obradu Vaših podataka kako bismo mogli odgovoriti na ovaj zahtjev.",
+    "copied": "Tekst zahtjeva je kopiran — zalijepite ga u chat.",
+    "fallback": "Online slanje trenutno nije dostupno, ali vaš je zahtjev spreman. Pošaljite ga jednim dodirom:",
+    "lead_title": "Zahtjev za chat s web stranice Gurevic Real Estate",
+    "email_subject": "Zahtjev za chat na web stranici",
+    "copy_failed": "Nije moguće kopirati tekst."
+  }
+}

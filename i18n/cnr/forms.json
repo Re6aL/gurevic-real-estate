@@ -1,0 +1,236 @@
+{
+  "common": {
+    "required_note": "Polja označena * su obavezna.",
+    "optional": "opciono",
+    "required_sr": "obavezno polje",
+    "select_placeholder": "Izaberite…",
+    "contact_legend": "Kako da vas kontaktiramo",
+    "contact_hint": "Dovoljan je telefon, Telegram ili e-mail.",
+    "consent_html": "Saglasan/saglasna sam s obradom podataka radi odgovora na ovaj upit — <a href=\"{url}\">politika privatnosti</a>.",
+    "nojs_html": "Za slanje obrasca potreban je JavaScript. Kontaktirajte nas direktno putem stranice <a href=\"{url}\">Kontakt</a>.",
+    "hp_label": "Ostavite ovo polje prazno",
+    "submit": "Pošalji"
+  },
+  "labels": {
+    "name": "Ime",
+    "name_full": "Ime i prezime",
+    "owner_name": "Ime i prezime vlasnika",
+    "contact_person": "Kontakt osoba",
+    "company": "Kompanija",
+    "company_legal": "Naziv pravnog lica",
+    "position": "Funkcija",
+    "email": "E-mail",
+    "email_corporate": "Poslovni e-mail",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "website": "Sajt kompanije",
+    "jurisdiction": "Država registracije",
+    "investment_type": "Vrsta investicije",
+    "budget": "Budžet",
+    "contact_method": "Željeni način komunikacije",
+    "preferred_language": "Jezik komunikacije",
+    "preferred_language_other": "Koji vam jezik odgovara",
+    "property_kind": "Vrsta nekretnine",
+    "owner_type": "Vlasnik nekretnine",
+    "owner_interest": "Šta želite da uradite",
+    "list_nepokretnosti": "Broj lista nepokretnosti",
+    "cadastral_municipality": "Katastarska opština (KO)",
+    "pd": "Broj posebnog dijela (PD)",
+    "company_reg_no": "Registracioni broj pravnog lica",
+    "asking_price": "Tražena cijena, €",
+    "interest": "Šta vas interesuje",
+    "rental_term": "Period najma",
+    "move_in": "Željeni datum useljenja",
+    "move_in_short": "Okvirni datum dolaska",
+    "budget_month": "Mjesečni budžet, €",
+    "bedrooms": "Spavaće sobe",
+    "occupants": "Broj osoba koje će stanovati",
+    "pets": "Kućni ljubimci",
+    "message": "Komentar",
+    "message_owner": "O nekretnini",
+    "message_property": "Poruka",
+    "message_short": "Datumi i želje",
+    "nda": "Želim NDA prije dostavljanja detalja — spreman/spremna sam da potpišem ugovor o povjerljivosti",
+    "object_id": "Nekretnina",
+    "listing_url": "Link oglasa"
+  },
+  "placeholders": {
+    "name": "Vaše ime",
+    "email": "ime@example.com",
+    "email_corporate": "ime@kompanija.com",
+    "phone": "+382 69 123 456",
+    "telegram": "@username",
+    "website": "kompanija.com",
+    "message_investor": "Ciljevi, rokovi, region i način učešća",
+    "message_owner": "Površina, lokacija, stanje i rokovi",
+    "message_contact": "Vaše pitanje",
+    "message_rent": "Naselje, sprat, namještaj, parking — vaše želje",
+    "message_short": "Kada dolazite i koliko ostajete",
+    "message_property": "Termini za obilazak ili pitanja o nekretnini"
+  },
+  "hints": {
+    "phone": "Međunarodni format, npr. +382 69 123 456.",
+    "phone_owner": "Međunarodni format s pozivnim brojem: +382…",
+    "phone_investor": "Obavezno za poziv, WhatsApp ili Telegram.",
+    "telegram": "Vaše korisničko ime, npr. @username.",
+    "email_corporate": "Adresa na domenu vaše kompanije.",
+    "cadastral": "Ako su dokumenti pri ruci, ubrzaće provjeru. Možete ih dostaviti i naknadno.",
+    "pd": "Za stanove.",
+    "asking_price": "Možete ostaviti prazno — razgovaraćemo nakon procjene.",
+    "budget_month": "Bez režija.",
+    "short_term": "Kratkoročni najam je u pripremi. Ostavite kontakt za obavještenje."
+  },
+  "options": {
+    "investment_type": {
+      "hotel": "Hotel",
+      "development_land": "Zemljište za razvoj",
+      "restaurant_commercial": "Restoran / poslovni prostor",
+      "warehouse_logistics": "Skladište / logistika",
+      "development_partnership": "Partnerstvo u izgradnji",
+      "other": "Drugo"
+    },
+    "budget": {
+      "lt_500k": "do 500.000 €",
+      "500k_2m": "500.000 € – 2 miliona €",
+      "2m_10m": "2–10 miliona €",
+      "10m_50m": "10–50 miliona €",
+      "gt_50m": "preko 50 miliona €",
+      "undisclosed": "Ne želim da navedem"
+    },
+    "contact_method": {
+      "email": "E-mail",
+      "phone": "Telefonski poziv",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "video_call": "Video-poziv"
+    },
+    "preferred_language": {
+      "ru": "Русский",
+      "en": "English",
+      "me": "Crnogorski",
+      "uk": "Українська",
+      "de": "Deutsch",
+      "fr": "Français",
+      "pl": "Polski",
+      "he": "עברית",
+      "other": "Drugi jezik (navedite)"
+    },
+    "property_kind": {
+      "apartment": "Stan",
+      "house": "Kuća",
+      "land": "Zemljište",
+      "construction_project": "Projekat izgradnje",
+      "business": "Aktivan biznis"
+    },
+    "property_kind_desc": {
+      "apartment": "u zgradi ili stambenom kompleksu",
+      "house": "kuća ili vila",
+      "land": "građevinsko zemljište",
+      "construction_project": "objekat u izgradnji ili projekat",
+      "business": "restoran, prodavnica, hotel"
+    },
+    "owner_type": {
+      "individual": "Fizičko lice",
+      "company": "Pravno lice"
+    },
+    "owner_interest": {
+      "sell": "Prodaja",
+      "rent_out": "Izdavanje",
+      "management": "Upravljanje nekretninom"
+    },
+    "interest": {
+      "buy": "Kupovina nekretnine",
+      "rent": "Dugoročni najam",
+      "invest": "Investiranje",
+      "sell": "Prodaja nekretnine",
+      "rent_out": "Izdavanje nekretnine",
+      "management": "Upravljanje nekretninom",
+      "other": "Drugo"
+    },
+    "rental_term": {
+      "off_season": "Do početka sezone",
+      "year": "Na godinu dana",
+      "short_term": "Kratkoročno"
+    },
+    "bedrooms": {
+      "0": "Garsonjera",
+      "1": "1 spavaća soba",
+      "2": "2 spavaće sobe",
+      "3": "3 spavaće sobe",
+      "4": "4 ili više"
+    },
+    "pets": {
+      "no": "Ne",
+      "cat": "Mačka",
+      "dog": "Pas",
+      "other": "Drugo"
+    }
+  },
+  "investor": {
+    "tabs_aria": "Ko šalje upit",
+    "tab_private": "Privatni investitor",
+    "tab_company": "Predstavnik kompanije",
+    "no_documents": "U ovoj fazi ne tražimo podatke iz pasoša ni finansijsku dokumentaciju.",
+    "submit": "Pošalji upit"
+  },
+  "owner": {
+    "submit": "Ponudite nekretninu"
+  },
+  "contact": {
+    "submit": "Pošalji poruku"
+  },
+  "rent": {
+    "submit": "Pronađite mi nekretninu za najam",
+    "submit_short": "Obavijestite me"
+  },
+  "property": {
+    "title": "Zatražite obilazak ili detalje",
+    "intro": "Nekretnina {id}. Ostavite kontakt — poslaćemo detalje i dogovoriti obilazak.",
+    "submit": "Zatražite obilazak"
+  },
+  "js": {
+    "required": "Popunite ovo polje.",
+    "required_choice": "Izaberite opciju.",
+    "email": "Provjerite e-mail, npr. ime@example.com.",
+    "phone": "Unesite broj u međunarodnom formatu, npr. +382 69 123 456.",
+    "telegram": "Unesite Telegram u obliku @username.",
+    "url": "Provjerite adresu sajta, npr. kompanija.com.",
+    "number": "Unesite broj.",
+    "number_min": "Vrijednost ne može biti manja od {min}.",
+    "date": "Unesite datum.",
+    "date_past": "Datum ne može biti u prošlosti.",
+    "contact_one": "Navedite telefon, Telegram ili e-mail — bar jedan kontakt.",
+    "consent": "Za obradu upita potrebna je vaša saglasnost za obradu podataka.",
+    "summary": "Još nije poslato — provjerite označena polja ({n}):",
+    "sending": "Slanje…",
+    "success_title": "Hvala — vaš upit je poslat",
+    "success_text": "Primili smo podatke i javićemo vam se uskoro.",
+    "success_again": "Pošalji novi upit",
+    "fallback_title": "Pošaljite upit direktno",
+    "fallback_offline": "Slanje sa sajta još nije povezano. Podaci su ostali u obrascu — pošaljite pripremljeni tekst:",
+    "fallback_error": "Slanje sa sajta nije uspjelo. Podaci su ostali u obrascu — pošaljite pripremljeni tekst:",
+    "summary_heading": "Tekst upita",
+    "channel_whatsapp": "Pošalji putem WhatsAppa",
+    "channel_telegram": "Otvori Telegram",
+    "telegram_note": "Tekst je kopiran — nalijepite ga u razgovor s agentom.",
+    "channel_email": "Pošalji e-mailom",
+    "channel_copy": "Kopiraj tekst",
+    "copied": "Tekst je kopiran.",
+    "copy_failed": "Kopiranje nije uspjelo — označite tekst ručno.",
+    "text_header": "Upit sa sajta Gurevic Real Estate — {form}",
+    "text_page": "Stranica",
+    "email_subject": "Upit sa sajta: {form}",
+    "yes": "da",
+    "no": "ne",
+    "form_names": {
+      "investor": "privatni investitor",
+      "investor_company": "investitor — kompanija",
+      "owner": "vlasnik nekretnine",
+      "contact": "kontakt obrazac",
+      "rent_request": "upit za najam",
+      "buy_request": "upit za kupovinu",
+      "property_request": "upit za nekretninu",
+      "chat": "razgovor na sajtu"
+    }
+  }
+}

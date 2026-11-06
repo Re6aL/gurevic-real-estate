@@ -5,12 +5,12 @@ NBSP = " "
 # lang → (разделитель тысяч, десятичный разделитель)
 _SEP = {
     "ru": (NBSP, ","), "uk": (NBSP, ","), "fr": (NBSP, ","), "pl": (NBSP, ","),
-    "de": (".", ","), "en": (",", "."), "he": (",", "."),
+    "de": (".", ","), "cnr": (".", ","), "en": (",", "."), "he": (",", "."),
 }
 # lang → шаблон цены: € перед числом или после
 _PRICE = {
     "ru": "€{n}", "en": "€{n}", "he": "€{n}",
-    "de": "{n}" + NBSP + "€", "fr": "{n}" + NBSP + "€", "pl": "{n}" + NBSP + "€", "uk": "{n}" + NBSP + "€",
+    "de": "{n}" + NBSP + "€", "fr": "{n}" + NBSP + "€", "pl": "{n}" + NBSP + "€", "uk": "{n}" + NBSP + "€", "cnr": "{n}" + NBSP + "€",
 }
 
 
@@ -52,7 +52,7 @@ def plural_category(n, lang):
         n = abs(int(n))
     except (TypeError, ValueError):
         return "other"
-    if lang in ("ru", "uk"):
+    if lang in ("ru", "uk", "cnr"):
         if n % 10 == 1 and n % 100 != 11:
             return "one"
         if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:

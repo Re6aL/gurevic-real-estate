@@ -88,9 +88,9 @@ node --test "api/lead-worker/test/*.test.mjs"
 
 ```bash
 curl -i -X POST "https://gurevic-lead-worker.<аккаунт>.workers.dev/" \
-  -H "Origin: https://re6al.github.io" \
+  -H "Origin: https://gurevic.estate" \
   -H "Content-Type: text/plain" \
-  --data '{"form":"contact","lang":"ru","page":"https://re6al.github.io/gurevic-real-estate/contact/","elapsed_ms":5000,"hp":"","consent":true,"consent_version":"2026-10","utm":{},"fields":{"name":"Тест","email":"test@example.com","message":"Проверка Worker"}}'
+  --data '{"form":"contact","lang":"ru","page":"https://gurevic.estate/contact/","elapsed_ms":5000,"hp":"","consent":true,"consent_version":"2026-11","utm":{},"fields":{"name":"Тест","email":"test@example.com","message":"Проверка Worker"}}'
 ```
 
 Ожидаемый ответ: `HTTP/1.1 200` и `{"ok":true}`. Проверка CORS:

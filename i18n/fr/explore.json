@@ -1,0 +1,147 @@
+{
+  "title_pattern": "Immobilier à {name}",
+  "description_pattern": "Appartements, maisons et terrains à {name}. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro.",
+  "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+  "listings": "Annonces disponibles",
+  "empty": "Aucune annonce publique dans cette sélection. Envoyez une demande pour connaître les possibilités.",
+  "check_title": "Points à vérifier avant l’achat",
+  "check_note": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite.",
+  "request": "Demander une sélection",
+  "areas": "Villes et quartiers",
+  "new_label": "Programmes neufs à Budva et au Monténégro",
+  "new_lead": "Appartements neufs et programmes résidentiels. Disponibilité, livraison et paiements échelonnés à confirmer pour chaque offre.",
+  "new_advice": "Vérifiez les permis, le contrat du promoteur, l’échéancier, la remise des clés et les clauses de retard. Les facilités de paiement dépendent du bien.",
+  "district_keys": [
+    "budva-center",
+    "budva-rozino",
+    "becici",
+    "rafailovici",
+    "przno",
+    "sveti-stefan",
+    "petrovac",
+    "lastva-grbaljska",
+    "tivat",
+    "kotor",
+    "bar",
+    "herceg-novi"
+  ],
+  "categories": {
+    "budva-center": {
+      "meta": {
+        "title": "Immobilier à Budva – centre | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Budva – centre. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Budva – centre",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "budva-rozino": {
+      "meta": {
+        "title": "Immobilier à Budva – Rozino | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Budva – Rozino. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Budva – Rozino",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "becici": {
+      "meta": {
+        "title": "Immobilier à Bečići | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Bečići. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Bečići",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "rafailovici": {
+      "meta": {
+        "title": "Immobilier à Rafailovići | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Rafailovići. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Rafailovići",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "przno": {
+      "meta": {
+        "title": "Immobilier à Pržno | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Pržno. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Pržno",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "sveti-stefan": {
+      "meta": {
+        "title": "Immobilier à Sveti Stefan | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Sveti Stefan. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Sveti Stefan",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "petrovac": {
+      "meta": {
+        "title": "Immobilier à Petrovac | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Petrovac. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Petrovac",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "lastva-grbaljska": {
+      "meta": {
+        "title": "Immobilier à Lastva Grbaljska | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Lastva Grbaljska. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Lastva Grbaljska",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "tivat": {
+      "meta": {
+        "title": "Immobilier à Tivat | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Tivat. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Tivat",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "kotor": {
+      "meta": {
+        "title": "Immobilier à Kotor | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Kotor. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Kotor",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "bar": {
+      "meta": {
+        "title": "Immobilier à Bar | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Bar. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Bar",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "herceg-novi": {
+      "meta": {
+        "title": "Immobilier à Herceg Novi | GUREVIĆ",
+        "description": "Appartements, maisons et terrains à Herceg Novi. Annonces, prix et recherche personnalisée avec GUREVIĆ au Monténégro."
+      },
+      "h1": "Immobilier à Herceg Novi",
+      "lead": "Choisissez selon votre budget et votre projet : résidence principale, vacances ou location.",
+      "advice": "Comparez les documents, charges, places de stationnement et accès. Les photos et cartes ne remplacent pas une visite."
+    },
+    "new": {
+      "meta": {
+        "title": "Programmes neufs à Budva et au Monténégro | GUREVIĆ",
+        "description": "Appartements neufs et programmes résidentiels. Disponibilité, livraison et paiements échelonnés à confirmer pour chaque offre."
+      },
+      "h1": "Programmes neufs à Budva et au Monténégro",
+      "lead": "Appartements neufs et programmes résidentiels. Disponibilité, livraison et paiements échelonnés à confirmer pour chaque offre.",
+      "advice": "Vérifiez les permis, le contrat du promoteur, l’échéancier, la remise des clés et les clauses de retard. Les facilités de paiement dépendent du bien."
+    }
+  }
+}

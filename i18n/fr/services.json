@@ -53,7 +53,7 @@
         "contract": "Vente ou location dans le cadre d’un contrat écrit",
         "management": "Gestion du bien sur demande"
       },
-      "note": "Commission d’agence : 5 % HT ; autres conditions à convenir.",
+      "note": "Pour la vente d’un appartement, les honoraires sont de 5 % du prix de vente, TVA comprise, à la charge exclusive du vendeur. Les conditions des autres biens et des locations sont convenues séparément.",
       "link": "Espace propriétaires"
     }
   },
@@ -92,5 +92,35 @@
     "text": "Décrivez ce que vous recherchez ou ce que vous souhaitez vendre : nous vous recontacterons par le moyen de votre choix. Vous pouvez aussi nous écrire directement.",
     "form_title": "Demande",
     "messengers": "Ou écrivez-nous directement"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "items": {
+      "commission": {
+        "q": "Combien facture l’agence ?",
+        "a": "Pour les ventes d'appartements, les frais s'élèvent à 5% du prix du compromis de vente, VAT compris, et sont payés uniquement par le vendeur. Les conditions pour les autres types de propriétés et de locations sont convenues séparément par écrit."
+      },
+      "documents": {
+        "q": "Quels documents faut-il vérifier avant d'acheter ?",
+        "a": "L'ensemble exact dépend de la propriété. Il comprend généralement le titre de propriété actuel, l'identité et l'autorité du vendeur, les charges et restrictions enregistrées, le statut de planification ou de légalisation et le projet d'accord. Les avocats partenaires et le notaire effectuent les vérifications juridiques nécessaires."
+      },
+      "foreigners": {
+        "q": "Un citoyen étranger peut-il acheter une propriété au Monténégro ?",
+        "a": "Dans de nombreux cas, oui. Des restrictions peuvent s'appliquer à certaines catégories de terrains et de propriétés, de sorte que la citoyenneté de l'acheteur et le titre de propriété spécifique doivent être vérifiés avant le paiement d'une caution."
+      },
+      "legalisation": {
+        "q": "Un bien non légalisé peut-il être vendu ?",
+        "a": "La réponse dépend du statut d'enregistrement et de légalisation de la propriété ainsi que de la loi en vigueur. Certaines transactions peuvent être restreintes. Nous vous recommandons de vérifier le titre de propriété et d'obtenir des conseils juridiques avant d'accepter les conditions."
+      },
+      "areas": {
+        "a": "L'agence est basée à Budva et travaille sur toute la côte, notamment sur la Riviera de Budva, Petrovac, Tivat, Kotor, Herceg Novi et Bar. Les opportunités d'investissement individuel peuvent être situées ailleurs au Monténégro.",
+        "q": "Quelles régions du Monténégro couvrez-vous ?"
+      },
+      "residency": {
+        "q": "L'achat d'un bien immobilier confère-t-il automatiquement le droit de résidence ?",
+        "a": "Non. La propriété peut justifier une demande de séjour temporaire lorsque les conditions légales en vigueur sont remplies, mais le séjour est une procédure distincte et n'est pas automatique."
+      }
+    },
+    "sub": "De brèves réponses aux questions que les acheteurs et les propriétaires se posent en premier."
   }
 }

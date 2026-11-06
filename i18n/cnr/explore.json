@@ -1,0 +1,147 @@
+{
+  "district_keys": [
+    "budva-center",
+    "budva-rozino",
+    "becici",
+    "rafailovici",
+    "przno",
+    "sveti-stefan",
+    "petrovac",
+    "lastva-grbaljska",
+    "tivat",
+    "kotor",
+    "bar",
+    "herceg-novi"
+  ],
+  "listings": "Trenutni oglasi",
+  "title_pattern": "Nekretnina u {name}",
+  "empty": "U ovom odabiru nema dostupnih javnih popisa. Pošaljite upit i mi ćemo provjeriti dostupne opcije.",
+  "description_pattern": "Stanovi, kuće i zemljišta u {name}. Trenutni popisi, cijene i pretraga osobnih nekretnina sa GUREVIĆ u Crnoj Gori.",
+  "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+  "categories": {
+    "budva-center": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "h1": "Nekretnina u Budvi – centar",
+      "meta": {
+        "title": "Nekretnina u Budvi – centar | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljište u Budvi – centar. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      },
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje."
+    },
+    "budva-rozino": {
+      "meta": {
+        "title": "Nekretnina u Budvi – Rozino | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljište u Budvi – Rozino. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      },
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Nekretnina u Budvi – Rozino"
+    },
+    "becici": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "meta": {
+        "description": "Apartmani, kuće i zemljišta u Bečićima. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori.",
+        "title": "Nekretnina u Bečićima | GUREVIĆ"
+      },
+      "h1": "Imanje u Bečićima"
+    },
+    "rafailovici": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "meta": {
+        "title": "Nekretnine Rafailovići | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljište u Rafailovićima. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      },
+      "h1": "Imanje u Rafailovićima"
+    },
+    "przno": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "meta": {
+        "description": "Stanovi, kuće i zemljišta u Pržnom. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori.",
+        "title": "Nekretnina u Pržnom | GUREVIĆ"
+      },
+      "h1": "Imanje u Pržnom"
+    },
+    "sveti-stefan": {
+      "meta": {
+        "title": "Nekretnina na Svetom Stefanu | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljišta na Svetom Stefanu. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      },
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Imanje na Svetom Stefanu"
+    },
+    "petrovac": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Imanje u Petrovcu",
+      "meta": {
+        "title": "Nekretnina u Petrovcu | GUREVIĆ",
+        "description": "Stanovi, kuće i zemljišta u Petrovcu. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      }
+    },
+    "lastva-grbaljska": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "meta": {
+        "title": "Nekretnine Lastva Grbaljska | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljišta u Lastvi Grbaljskoj. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      },
+      "h1": "Imanje u Lastvi Grbaljskoj"
+    },
+    "tivat": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Nekretnina u Tivtu",
+      "meta": {
+        "title": "Nekretnina u Tivtu | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljišta u Tivtu. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      }
+    },
+    "kotor": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Nekretnina u Kotoru",
+      "meta": {
+        "title": "Nekretnina u Kotoru | GUREVIĆ",
+        "description": "Apartmani, kuće i zemljište u Kotoru. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      }
+    },
+    "bar": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Nekretnina u Baru",
+      "meta": {
+        "title": "Nekretnina u Baru | GUREVIĆ",
+        "description": "Stanovi, kuće i zemljišta u Baru. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      }
+    },
+    "herceg-novi": {
+      "lead": "Odaberite nekretninu za svoj proračun i planove: život tijekom cijele godine, odmor ili iznajmljivanje.",
+      "advice": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+      "h1": "Imanje u Herceg Novom",
+      "meta": {
+        "title": "Nekretnine u Herceg Novom | GUREVIĆ",
+        "description": "Stanovi, kuće i zemljišta u Herceg Novom. Trenutni oglasi, cijene i pretraga osobne imovine sa GUREVIĆ u Crnoj Gori."
+      }
+    },
+    "new": {
+      "meta": {
+        "description": "Novogradnja stanova i stambenih projekata. Provjerite dostupnost jedinica, datume završetka i uvjete otplate za svaku ponudu.",
+        "title": "Novogradnja u Budvi i Crnoj Gori | GUREVIĆ"
+      },
+      "h1": "Novogradnja u Budvi i Crnoj Gori",
+      "lead": "Novogradnja stanova i stambenih projekata. Provjerite dostupnost jedinica, datume završetka i uvjete otplate za svaku ponudu.",
+      "advice": "Provjerite dozvole, ugovor za programere, raspored plaćanja, datum primopredaje i odredbe o odgodi. Obroci moraju biti potvrđeni za pojedinačnu nekretninu."
+    }
+  },
+  "areas": "Područja i gradovi",
+  "request": "Zatražite uži izbor",
+  "new_label": "Novogradnja u Budvi i Crnoj Gori",
+  "check_title": "Što provjeriti prije kupnje",
+  "new_advice": "Provjerite dozvole, ugovor za programere, raspored plaćanja, datum primopredaje i odredbe o odgodi. Obroci moraju biti potvrđeni za pojedinačnu nekretninu.",
+  "check_note": "Usporedite dokumente, tekuće troškove, parking i pristup. Fotografije i udaljenosti na karti ne zamjenjuju razgledavanje.",
+  "new_lead": "Novogradnja stanova i stambenih projekata. Provjerite dostupnost jedinica, datume završetka i uvjete otplate za svaku ponudu."
+}

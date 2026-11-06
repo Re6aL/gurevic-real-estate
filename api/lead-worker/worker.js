@@ -31,7 +31,7 @@ export const FORMS = {
 
 // Коды значений → человекочитаемые опции select в Notion
 export const LABELS = {
-  lang: { ru: 'Русский', en: 'English', de: 'Deutsch', fr: 'Français', pl: 'Polski', uk: 'Українська', he: 'עברית' },
+  lang: { ru: 'Русский', en: 'English', de: 'Deutsch', fr: 'Français', pl: 'Polski', uk: 'Українська', he: 'עברית', cnr: 'Crnogorski' },
   preferred_language: { ru: 'Русский', en: 'English', me: 'Crnogorski/Srpski', uk: 'Українська', other: 'Other' },
   contact_method: { email: 'E-mail', phone: 'Phone', whatsapp: 'WhatsApp', telegram: 'Telegram', video_call: 'Video call' },
   investment_type: {

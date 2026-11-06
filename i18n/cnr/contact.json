@@ -1,0 +1,56 @@
+{
+  "h1": "Kontakt",
+  "kicker": "Javite se",
+  "languages": {
+    "title": "jezici",
+    "text": "ruski, engleski, crnogorski."
+  },
+  "legal": {
+    "title": "Pravna osoba"
+  },
+  "meta": {
+    "title": "Kontaktirajte agenciju za nekretnine u Budvi | GUREVIĆ",
+    "description": "Telefon i WhatsApp +382 69 572 257, Telegram @hurewicz, email i Instagram agencije GUREVIĆ. Budva, Crna Gora; sastanci samo po dogovoru."
+  },
+  "form": {
+    "title": "Pošaljite poruku",
+    "intro": "Opišite svoje pitanje i mi ćemo odgovoriti onako kako želite."
+  },
+  "channels": {
+    "title": "Kako doći do nas"
+  },
+  "location": {
+    "title": "Gdje smo",
+    "note": "Mjesto i vrijeme sastanka dogovaramo unaprijed.",
+    "text": "Budva, Crna Gora — sastanci po dogovoru."
+  },
+  "lead": "Pošaljite nam poruku ili nas nazovite — osobno odgovara Ilia Gurevich. WhatsApp i Telegram su najbrži način da dođete do nas.",
+  "quick": {
+    "sub": "Ove upute imaju namjenske obrasce s pravim pitanjima.",
+    "title": "Ako imate konkretan zahtjev",
+    "items": {
+      "owners": {
+        "text": "Prodajte ili iznajmite stan, kuću, zemljište, građevinski projekt ili obrt.",
+        "link": "Ispunite zahtjev",
+        "title": "Zahtjev vlasnika"
+      },
+      "rent": {
+        "text": "Dugoročni najam apartmana ili kuće: do početka sezone ili godinu dana.",
+        "link": "Pošalji upit",
+        "title": "Zahtjev za najam"
+      },
+      "invest": {
+        "link": "Idi na upit",
+        "title": "Investicijski upit",
+        "text": "Hoteli, građevinsko zemljište, poslovni prostor. Povjerljivo; NDA gdje je potrebno."
+      }
+    }
+  },
+  "chat": {
+    "button": "Otvorite chat",
+    "text": "Niste sigurni odakle početi? Pomoćnik web stranice će postaviti nekoliko pitanja i proslijediti vaš zahtjev agentu."
+  },
+  "jsonld": {
+    "contact_type": "Prodaja i iznajmljivanje"
+  }
+}

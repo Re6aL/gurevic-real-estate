@@ -1,0 +1,315 @@
+{
+  "site_name": "Gurevic Real Estate",
+  "brand": "GUREVIĆ",
+  "legal_name": "D.O.O. GUREVIC — Budva",
+  "tagline": "Nekretnine u Budvi i Crnoj Gori",
+  "skip_link": "Pređi na sadržaj",
+  "home_aria": "Gurevic Real Estate — početna",
+  "logo_alt": "Gurevic Real Estate — Budva",
+  "nav": {
+    "main_aria": "Glavni meni",
+    "rent": "Izdavanje",
+    "rent_apartments": "Stanovi",
+    "rent_houses": "Kuće i vile",
+    "rent_short_term": "Kratkoročni najam",
+    "soon": "uskoro",
+    "all_rent": "Sve nekretnine za dugoročni najam",
+    "buy": "Kupovina",
+    "buy_apartments": "Stanovi",
+    "buy_houses": "Kuće",
+    "buy_villas": "Vile",
+    "buy_land": "Građevinsko zemljište",
+    "all_buy": "Sve nekretnine za prodaju",
+    "invest": "Investicije",
+    "invest_hotels": "Hoteli",
+    "invest_land": "Zemljište za razvoj",
+    "invest_commercial": "Poslovni prostori",
+    "invest_development": "Projekti u izgradnji",
+    "all_invest": "Investiranje u Crnoj Gori",
+    "owners": "Za vlasnike",
+    "owners_sell": "Prodajte nekretninu",
+    "owners_rent_out": "Izdajte nekretninu",
+    "owners_management": "Upravljanje nekretninama",
+    "all_owners": "Za vlasnike",
+    "services": "Usluge",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "map": "Mapa nekretnina",
+    "privacy": "Politika privatnosti",
+    "menu_open": "Otvori meni",
+    "menu_close": "Zatvori meni",
+    "submenu": "Podmeni: {label}",
+    "menu": "Meni",
+    "buy_new": "Novogradnja"
+  },
+  "routes": {
+    "home": "Početna",
+    "buy": "Kupovina",
+    "buy_apartments": "Stanovi",
+    "buy_houses": "Kuće",
+    "buy_villas": "Vile",
+    "buy_land": "Zemljište",
+    "rent": "Izdavanje",
+    "rent_apartments": "Stanovi",
+    "rent_houses": "Kuće i vile",
+    "invest": "Investicije",
+    "invest_hotels": "Hoteli",
+    "invest_land": "Zemljište za razvoj",
+    "invest_commercial": "Poslovni prostori",
+    "invest_development": "Projekti u izgradnji",
+    "owners": "Za vlasnike",
+    "owners_sell": "Prodaja",
+    "owners_rent_out": "Izdavanje",
+    "owners_management": "Upravljanje nekretninama",
+    "about": "O nama",
+    "services": "Usluge",
+    "contact": "Kontakt",
+    "privacy": "Privatnost",
+    "map": "Mapa nekretnina",
+    "property": "Nekretnina",
+    "buy_new": "Novogradnja",
+    "guides": "Vodiči za kupce",
+    "area_budva-center": "Budva — centar",
+    "area_budva-rozino": "Budva – Rozino",
+    "area_becici": "Bečići",
+    "area_rafailovici": "Rafailovići",
+    "area_przno": "Pržno",
+    "area_sveti-stefan": "Sveti Stefan",
+    "area_petrovac": "Petrovac",
+    "area_lastva-grbaljska": "Lastva Grbaljska",
+    "area_tivat": "Tivat",
+    "area_kotor": "Kotor",
+    "area_bar": "Bar",
+    "area_herceg-novi": "Herceg Novi",
+    "guide_buying": "Kupovina nekretnine u Crnoj Gori",
+    "guide_taxes": "Porez na imovinu u Crnoj Gori",
+    "guide_residency": "Imovina, prebivalište i državljanstvo Crne Gore",
+    "guide_documents": "Dokumentacija i legalizacija nekretnine",
+    "guide_returns": "Povrat najma i sezonalnost"
+  },
+  "footer": {
+    "nav_aria": "Meni u podnožju",
+    "columns": {
+      "rent": "Izdavanje",
+      "buy": "Kupovina",
+      "invest": "Investicije",
+      "owners": "Za vlasnike",
+      "agency": "Agencija"
+    },
+    "contacts": "Kontakt",
+    "languages": "Jezici",
+    "about_short": "Agencija za nekretnine u Budvi: kupovina, dugoročni najam, investicije i usluge za vlasnike.",
+    "meetings": "Sastanci uz prethodni dogovor.",
+    "legal_line": "D.O.O. GUREVIC — Budva · Crna Gora · © 2026"
+  },
+  "contacts": {
+    "menu_aria": "Kontaktirajte nas",
+    "phone": "Telefon",
+    "call": "Pozovite",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "instagram": "Instagram",
+    "location": "Budva, Crna Gora",
+    "write": "Pišite nam"
+  },
+  "languages": {
+    "label": "Jezik",
+    "switch_aria": "Izaberite jezik sajta",
+    "current": "Trenutni jezik"
+  },
+  "lang_suggest": {
+    "text": "Ova stranica je dostupna na crnogorskom jeziku",
+    "switch": "Promijeni jezik",
+    "dismiss": "Zatvori"
+  },
+  "buttons": {
+    "details": "Detalji",
+    "send": "Pošalji",
+    "call": "Pozovi",
+    "write_whatsapp": "Pišite na WhatsApp",
+    "back_home": "Na početnu",
+    "show_more": "Prikaži više",
+    "learn_more": "Saznajte više",
+    "contact_us": "Kontaktirajte nas",
+    "close": "Zatvori",
+    "show_on_map": "Prikaži na mapi",
+    "request": "Pošalji upit",
+    "all_objects": "Sve nekretnine",
+    "apply": "Prikaži",
+    "reset": "Poništi",
+    "prev": "Prethodno",
+    "next": "Sljedeće",
+    "show_all": "Prikaži sve",
+    "open_menu": "Meni",
+    "discuss": "Razgovarajmo",
+    "copy": "Kopiraj"
+  },
+  "breadcrumbs": {
+    "aria": "Putanja stranice",
+    "home": "Početna"
+  },
+  "units": {
+    "m2": "m²",
+    "per_month": "/ mjesečno",
+    "eur_per_m2": "€/m²",
+    "eur": "€",
+    "month": "mjesec",
+    "sqm_short": "m²"
+  },
+  "price": {
+    "on_request": "Cijena na upit",
+    "indicative": "Okvirno: {price}",
+    "preliminary": "okvirno, podložno provjeri",
+    "from": "od {price}"
+  },
+  "types": {
+    "apartment": "Stan",
+    "house": "Kuća",
+    "villa": "Vila",
+    "land": "Zemljište",
+    "hotel": "Hotel",
+    "commercial": "Poslovni prostor",
+    "business": "Biznis na prodaju",
+    "development": "Projekat u izgradnji"
+  },
+  "types_lc": {
+    "apartment": "stan",
+    "house": "kuća",
+    "villa": "vila",
+    "land": "zemljište",
+    "hotel": "hotel",
+    "commercial": "poslovni prostor",
+    "business": "biznis na prodaju",
+    "development": "projekat u izgradnji"
+  },
+  "categories": {
+    "apartments": "Stanovi",
+    "houses": "Kuće",
+    "villas": "Vile",
+    "land": "Zemljište",
+    "hotels": "Hoteli",
+    "commercial": "Poslovni prostori",
+    "development": "Projekti u izgradnji"
+  },
+  "sections": {
+    "buy": "Prodaja",
+    "rent": "Izdavanje",
+    "invest": "Investicija"
+  },
+  "badges": {
+    "project": "Projekat",
+    "confidential": "Povjerljivo",
+    "soon": "Uskoro",
+    "illustration": "Ilustracija",
+    "price_on_request": "Cijena na upit",
+    "new": "Novo"
+  },
+  "params": {
+    "area": "{n} m²",
+    "land_area": "plac {n} m²",
+    "floor": "sprat {n}"
+  },
+  "plural": {
+    "bedrooms": {
+      "one": "{n} spavaća soba",
+      "few": "{n} spavaće sobe",
+      "other": "{n} spavaćih soba"
+    },
+    "bathrooms": {
+      "one": "{n} kupatilo",
+      "few": "{n} kupatila",
+      "other": "{n} kupatila"
+    },
+    "objects": {
+      "one": "{n} nekretnina",
+      "few": "{n} nekretnine",
+      "other": "{n} nekretnina"
+    }
+  },
+  "alt": {
+    "listing_photo": "Fotografija: {name}",
+    "listing_photo_n": "{name} — fotografija {n}",
+    "illustration": "Ilustracija: {type}"
+  },
+  "districts": {
+    "budva-center": "Budva — centar",
+    "budva-rozino": "Budva – Rozino",
+    "budva-waterfront": "Budva — obala",
+    "budva-ivanica": "Budva – Ivanica",
+    "budva-veligrad": "Budva – Veligrad",
+    "becici": "Bečići",
+    "rafailovici": "Rafailovići",
+    "przno": "Pržno",
+    "sveti-stefan": "Sveti Stefan",
+    "lapcici": "Lapčići",
+    "tudorovici": "Tudorovići",
+    "lastva-grbaljska": "Lastva Grbaljska",
+    "petrovac": "Petrovac",
+    "buljarica": "Buljarica",
+    "tivat": "Tivat",
+    "kotor": "Kotor",
+    "herceg-novi": "Herceg Novi",
+    "bar": "Bar",
+    "dobra-voda": "Dobra Voda",
+    "ulcinj": "Ulcinj",
+    "rijeka-crnojevica": "Rijeka Crnojevića",
+    "cetinje": "Cetinje",
+    "podgorica": "Podgorica",
+    "other": "Crna Gora"
+  },
+  "regions": {
+    "budva_riviera": "Budvanska rivijera",
+    "petrovac_area": "Petrovac i okolina",
+    "boka": "Boka Kotorska",
+    "south_coast": "Južno primorje",
+    "central": "Centralna Crna Gora",
+    "montenegro": "Crna Gora"
+  },
+  "not_found": {
+    "meta": {
+      "title": "Stranica nije pronađena | GUREVIĆ",
+      "description": "Stranica nije dostupna. Posjetite početnu stranicu agencije Gurevic Real Estate."
+    },
+    "h1": "Stranica nije pronađena",
+    "text": "Stranica ne postoji ili je premještena.",
+    "home_link": "Na početnu stranicu"
+  },
+  "rental_terms": {
+    "off_season": "Do početka sezone",
+    "year": "Na godinu dana",
+    "short_term": "Kratkoročno"
+  },
+  "rent_values": {
+    "utilities": {
+      "included": "Režije uključene",
+      "not_included": "Režije se plaćaju posebno",
+      "partial": "Dio režija uključen"
+    },
+    "pets": {
+      "allowed": "Ljubimci dozvoljeni",
+      "not_allowed": "Bez ljubimaca",
+      "by_agreement": "Ljubimci po dogovoru"
+    }
+  },
+  "js": {
+    "menu_open": "Otvori meni",
+    "menu_close": "Zatvori meni",
+    "close": "Zatvori",
+    "copied": "Kopirano",
+    "copy_failed": "Kopiranje nije uspjelo",
+    "submenu_open": "Otvori podmeni",
+    "submenu_close": "Zatvori podmeni",
+    "price_on_request": "Cijena na upit",
+    "per_month": "/ mjesečno",
+    "price_from": "od {price}"
+  },
+  "consent": {
+    "title": "Analitika sajta",
+    "text": "Uz vašu saglasnost koristimo Yandex Metrica za statistiku posjeta. Snimanje sesija i sadržaja obrazaca je isključeno. Odbijanje ne utiče na rad sajta.",
+    "policy": "Politika privatnosti",
+    "reject": "Odbij",
+    "accept": "Dozvoli analitiku",
+    "settings": "Podešavanja kolačića"
+  }
+}

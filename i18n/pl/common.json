@@ -39,7 +39,8 @@
     "menu_open": "Otwórz menu",
     "menu_close": "Zamknij menu",
     "submenu": "Podmenu: {label}",
-    "menu": "Menu"
+    "menu": "Menu",
+    "buy_new": "Nowe inwestycje w Budvie i Czarnogórze"
   },
   "routes": {
     "home": "Strona główna",
@@ -65,7 +66,26 @@
     "contact": "Kontakt",
     "privacy": "Prywatność",
     "map": "Mapa ofert",
-    "property": "Oferta"
+    "property": "Oferta",
+    "area_budva-center": "Budva – centrum",
+    "area_budva-rozino": "Budva – Rozino",
+    "area_becici": "Bečići",
+    "area_rafailovici": "Rafailovići",
+    "area_przno": "Pržno",
+    "area_sveti-stefan": "Sveti Stefan",
+    "area_petrovac": "Petrovac",
+    "area_lastva-grbaljska": "Lastva Grbaljska",
+    "area_tivat": "Tivat",
+    "area_kotor": "Kotor",
+    "area_bar": "Bar",
+    "area_herceg-novi": "Herceg Novi",
+    "buy_new": "Nowe inwestycje w Budvie i Czarnogórze",
+    "guides": "Poradniki dla kupujących i inwestorów",
+    "guide_buying": "Kupno nieruchomości w Czarnogórze",
+    "guide_taxes": "Podatki od nieruchomości w Czarnogórze",
+    "guide_residency": "Majątek, miejsce zamieszkania i obywatelstwo w Czarnogórze",
+    "guide_documents": "Dokumenty i legalizacja nieruchomości",
+    "guide_returns": "Zwroty z wynajmu i sezonowość"
   },
   "footer": {
     "nav_aria": "Menu w stopce",
@@ -286,5 +306,13 @@
     "price_on_request": "Cena na zapytanie",
     "per_month": "/ mies.",
     "price_from": "od {price}"
+  },
+  "consent": {
+    "title": "Analityka strony",
+    "text": "Za Twoją zgodą używamy Yandex Metrica do statystyk odwiedzin. Nagrywanie sesji i treści formularzy jest wyłączone. Odmowa nie wpływa na działanie strony.",
+    "policy": "Polityka prywatności",
+    "reject": "Odrzuć",
+    "accept": "Zezwól na analitykę",
+    "settings": "Ustawienia cookies"
   }
 }

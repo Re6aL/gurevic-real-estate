@@ -19,7 +19,7 @@ from .text import truncate
 
 MANIFEST = ".generated-manifest.json"
 AGENT_JSONLD_ROUTES = {"home", "about", "contact"}
-GLOBAL_JS = ("js/chat.js",)      # подключаются на всех страницах после скриптов страницы
+GLOBAL_JS = ("js/consent.js", "js/chat.js",)      # подключаются на всех страницах после скриптов страницы
 GLOBAL_JS_NS = ("chat",)
 LAZY_ASSETS = ("css/forms.css", "js/forms.js")  # → SITE.assets
 LEGACY = {  # старые страницы в корне → новый маршрут
@@ -245,6 +245,7 @@ class Builder:
             "url": page.canonical,
             "leadEndpoint": self.site.get("lead_endpoint", ""),
             "consentVersion": self.site.get("consent_version", ""),
+            "analytics": self.site.get("analytics", {}),
             "contacts": self.site["contacts"],
             "alternates": {x["code"]: x["url"] for x in languages},
             "langNames": {x["code"]: x["name"] for x in languages},
