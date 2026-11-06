@@ -622,3 +622,15 @@
 @media print {
   .gchat-fab, .gchat-panel { display: none !important; }
 }
+
+/* Keep controls aligned when translated labels wrap. Fieldsets must not float legends. */
+.lead-form { container-type: inline-size; }
+.lf-grid > .lf-field > .lf-label { min-block-size: 3.3em; display: flex; flex-wrap: wrap; align-content: end; align-items: baseline; column-gap: .25em; }
+.lf-grid > .lf-field > .lf-label .lf-opt { margin-inline-start: 0; }
+.lf-group--contact > .lf-label { float: none; inline-size: auto; padding-inline: 4px; }
+.lf-group--contact > .lf-hint { margin-block: 6px 10px; }
+.lf-group--contact .lf-grid { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 420px) { .lf-group--contact .lf-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@container (max-width: 370px) { .lf-grid, .lf-grid--3 { grid-template-columns: minmax(0, 1fr); } .lf-grid > .lf-field > .lf-label { min-block-size: 0; } }
+[dir="rtl"] .lf-group--contact { text-align: right; }
+[dir="rtl"] .lf-input[dir="ltr"], [dir="rtl"] .lf-input[dir="ltr"]::placeholder { text-align: right; }

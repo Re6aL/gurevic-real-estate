@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Nekretnine za prodaju u Budvi i Crnoj Gori | GUREVIĆ",
+    "description": "Stanovi, kuće, vile i zemljište. Cijena, površina i naselje na svakoj kartici; dokumentacija i tačna adresa na upit."
+  },
+  "h1": "Nekretnine za prodaju u Budvi i Crnoj Gori",
+  "hero": {
+    "kicker": "Kupovina",
+    "lead": "Stanovi, kuće, vile i zemljište. Cijena, površina i naselje na svakoj kartici; dokumentacija i tačna adresa na upit.",
+    "image_alt": "Budva i crnogorska obala"
+  },
+  "results_title": "Nekretnine za prodaju u Budvi i Crnoj Gori",
+  "seo": {
+    "title": "Izbor nekretnine uz GUREVIĆ",
+    "p1": "Stanovi, kuće, vile i zemljište. Cijena, površina i naselje na svakoj kartici; dokumentacija i tačna adresa na upit.",
+    "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+  },
+  "categories": {
+    "apartments": {
+      "meta": {
+        "title": "Stanovi za prodaju u Crnoj Gori | GUREVIĆ",
+        "description": "Uporedite cijenu po kvadratu, broj spavaćih soba, sprat, troškove održavanja i dokumentaciju."
+      },
+      "h1": "Stanovi za prodaju u Crnoj Gori",
+      "hero": {
+        "kicker": "Kupovina",
+        "lead": "Uporedite cijenu po kvadratu, broj spavaćih soba, sprat, troškove održavanja i dokumentaciju.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Stanovi za prodaju u Crnoj Gori",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Uporedite cijenu po kvadratu, broj spavaćih soba, sprat, troškove održavanja i dokumentaciju.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    },
+    "houses": {
+      "meta": {
+        "title": "Kuće za prodaju u Crnoj Gori | GUREVIĆ",
+        "description": "Provjerite površinu kuće i placa, pristup, parking i usklađenost katastra sa stvarnim stanjem."
+      },
+      "h1": "Kuće za prodaju u Crnoj Gori",
+      "hero": {
+        "kicker": "Kupovina",
+        "lead": "Provjerite površinu kuće i placa, pristup, parking i usklađenost katastra sa stvarnim stanjem.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Kuće za prodaju u Crnoj Gori",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Provjerite površinu kuće i placa, pristup, parking i usklađenost katastra sa stvarnim stanjem.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    },
+    "villas": {
+      "meta": {
+        "title": "Vile za prodaju u Crnoj Gori | GUREVIĆ",
+        "description": "Provjerite pristup, parking, pogled, stanje imanja i troškove održavanja."
+      },
+      "h1": "Vile za prodaju u Crnoj Gori",
+      "hero": {
+        "kicker": "Kupovina",
+        "lead": "Provjerite pristup, parking, pogled, stanje imanja i troškove održavanja.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Vile za prodaju u Crnoj Gori",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Provjerite pristup, parking, pogled, stanje imanja i troškove održavanja.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    },
+    "land": {
+      "meta": {
+        "title": "Zemljište za prodaju u Crnoj Gori | GUREVIĆ",
+        "description": "Provjerite namjenu zemljišta, važeće planske uslove, pristup putu, priključke i terete."
+      },
+      "h1": "Zemljište za prodaju u Crnoj Gori",
+      "hero": {
+        "kicker": "Kupovina",
+        "lead": "Provjerite namjenu zemljišta, važeće planske uslove, pristup putu, priključke i terete.",
+        "image_alt": "Budva i crnogorska obala"
+      },
+      "results_title": "Zemljište za prodaju u Crnoj Gori",
+      "seo": {
+        "title": "Izbor nekretnine uz GUREVIĆ",
+        "p1": "Provjerite namjenu zemljišta, važeće planske uslove, pristup putu, priključke i terete.",
+        "p2": "Prije dogovora provjeravamo dostupnu dokumentaciju i uslove s vlasnikom. Preporučujemo pisani ugovor i stručnu provjeru."
+      }
+    }
+  }
+}

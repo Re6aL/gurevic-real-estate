@@ -6,7 +6,7 @@
   "h1": "Politique de confidentialité",
   "kicker": "Vos données",
   "lead": "Quelles données nous recevons via ce site, pourquoi nous en avons besoin, à qui elles sont communiquées et comment vous pouvez en garder la maîtrise.",
-  "updated": "Dernière mise à jour : octobre 2026",
+  "updated": "2026-11-05",
   "toc_title": "Sommaire",
   "back_to_top": "Retour au sommaire",
   "sections": {
@@ -95,14 +95,8 @@
       "p3_html": "L’autorité de contrôle au Monténégro est l’<strong>Agence pour la protection des données personnelles et le libre accès à l’information</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Si vous vous trouvez dans l’Union européenne, vous pouvez également vous adresser à l’autorité de contrôle de votre pays."
     },
     "storage": {
-      "title": "Cookies et stockage du navigateur",
-      "p1": "Ce site n’utilise pas de cookies d’analyse ou de publicité et ne comporte pas de compteur de visites.",
-      "p2": "Pour votre confort, le site enregistre quelques entrées techniques dans votre navigateur. Elles ne nous sont pas transmises et ne servent pas au suivi :",
-      "list": {
-        "local_html": "<strong>localStorage</strong> — la langue du site que vous avez choisie (y compris lorsque vous fermez la suggestion de changer de langue). L’entrée est conservée jusqu’à ce que vous la supprimiez.",
-        "session_html": "<strong>sessionStorage</strong> — l’indication que l’introduction de la page d’accueil a déjà été affichée, les balises de campagne (UTM) et le brouillon d’un formulaire non terminé. Ces entrées sont supprimées à la fermeture de l’onglet ; le brouillon est également supprimé après un envoi réussi."
-      },
-      "p3": "Vous pouvez supprimer ces entrées dans les paramètres de votre navigateur : le site continuera de fonctionner. Les services tiers (la carte Google une fois chargée, WhatsApp, Telegram) peuvent utiliser leurs propres cookies selon leurs propres conditions."
+      "title": "Paramètres des cookies",
+      "p1": "Avec votre accord, nous utilisons Yandex Metrica pour les statistiques de visites. L’enregistrement des sessions et des formulaires est désactivé. Le refus n’affecte pas le site."
     },
     "security": {
       "title": "Sécurité des données",

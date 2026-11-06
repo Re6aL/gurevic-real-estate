@@ -1,0 +1,147 @@
+{
+  "title_pattern": "Immobilien in {name}",
+  "description_pattern": "Wohnungen, Häuser und Grundstücke in {name}. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro.",
+  "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+  "listings": "Aktuelle Angebote",
+  "empty": "Derzeit gibt es keine öffentlichen Angebote in dieser Auswahl. Senden Sie uns Ihre Anfrage.",
+  "check_title": "Vor dem Kauf prüfen",
+  "check_note": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung.",
+  "request": "Immobiliensuche anfragen",
+  "areas": "Orte und Stadtteile",
+  "new_label": "Neubauten in Budva und Montenegro",
+  "new_lead": "Neubauwohnungen und Wohnprojekte. Verfügbarkeit, Fertigstellung und Ratenzahlung werden für jedes Angebot bestätigt.",
+  "new_advice": "Prüfen Sie Genehmigungen, Bauträgervertrag, Zahlungsplan, Übergabe und Regelungen bei Verzögerungen. Ratenzahlung ist objektbezogen zu bestätigen.",
+  "district_keys": [
+    "budva-center",
+    "budva-rozino",
+    "becici",
+    "rafailovici",
+    "przno",
+    "sveti-stefan",
+    "petrovac",
+    "lastva-grbaljska",
+    "tivat",
+    "kotor",
+    "bar",
+    "herceg-novi"
+  ],
+  "categories": {
+    "budva-center": {
+      "meta": {
+        "title": "Immobilien in Budva – Zentrum | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Budva – Zentrum. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Budva – Zentrum",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "budva-rozino": {
+      "meta": {
+        "title": "Immobilien in Budva – Rozino | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Budva – Rozino. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Budva – Rozino",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "becici": {
+      "meta": {
+        "title": "Immobilien in Bečići | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Bečići. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Bečići",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "rafailovici": {
+      "meta": {
+        "title": "Immobilien in Rafailovići | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Rafailovići. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Rafailovići",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "przno": {
+      "meta": {
+        "title": "Immobilien in Pržno | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Pržno. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Pržno",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "sveti-stefan": {
+      "meta": {
+        "title": "Immobilien in Sveti Stefan | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Sveti Stefan. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Sveti Stefan",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "petrovac": {
+      "meta": {
+        "title": "Immobilien in Petrovac | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Petrovac. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Petrovac",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "lastva-grbaljska": {
+      "meta": {
+        "title": "Immobilien in Lastva Grbaljska | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Lastva Grbaljska. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Lastva Grbaljska",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "tivat": {
+      "meta": {
+        "title": "Immobilien in Tivat | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Tivat. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Tivat",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "kotor": {
+      "meta": {
+        "title": "Immobilien in Kotor | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Kotor. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Kotor",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "bar": {
+      "meta": {
+        "title": "Immobilien in Bar | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Bar. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Bar",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "herceg-novi": {
+      "meta": {
+        "title": "Immobilien in Herceg Novi | GUREVIĆ",
+        "description": "Wohnungen, Häuser und Grundstücke in Herceg Novi. Aktuelle Angebote, Preise und persönliche Immobiliensuche mit GUREVIĆ in Montenegro."
+      },
+      "h1": "Immobilien in Herceg Novi",
+      "lead": "Finden Sie eine Immobilie passend zu Ihrem Budget: zum Wohnen, für den Urlaub oder zur Vermietung.",
+      "advice": "Vergleichen Sie Unterlagen, laufende Kosten, Parkplätze und Zufahrt. Fotos und Karten ersetzen keine Besichtigung."
+    },
+    "new": {
+      "meta": {
+        "title": "Neubauten in Budva und Montenegro | GUREVIĆ",
+        "description": "Neubauwohnungen und Wohnprojekte. Verfügbarkeit, Fertigstellung und Ratenzahlung werden für jedes Angebot bestätigt."
+      },
+      "h1": "Neubauten in Budva und Montenegro",
+      "lead": "Neubauwohnungen und Wohnprojekte. Verfügbarkeit, Fertigstellung und Ratenzahlung werden für jedes Angebot bestätigt.",
+      "advice": "Prüfen Sie Genehmigungen, Bauträgervertrag, Zahlungsplan, Übergabe und Regelungen bei Verzögerungen. Ratenzahlung ist objektbezogen zu bestätigen."
+    }
+  }
+}

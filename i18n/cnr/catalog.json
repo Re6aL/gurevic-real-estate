@@ -1,0 +1,122 @@
+{
+  "filters": {
+    "aria": "Pretraga nekretnina",
+    "categories_aria": "Kategorije",
+    "all": "Sve",
+    "toggle": "Filteri",
+    "type": "Vrsta nekretnine",
+    "type_any": "Sve vrste",
+    "district": "Naselje",
+    "district_any": "Sva naselja",
+    "price_buy": "Cijena, €",
+    "price_rent": "Mjesečna cijena, €",
+    "price_any": "bez ograničenja",
+    "price_min": "Cijena od, hiljada eura",
+    "price_max": "Cijena do, hiljada eura",
+    "price_min_rent": "Cijena od, eura mjesečno",
+    "price_max_rent": "Cijena do, eura mjesečno",
+    "price_max_placeholder": "maks.",
+    "slider_toggle": "Podesite raspon cijene klizačem",
+    "slider_min": "Donja granica cijene",
+    "slider_max": "Gornja granica cijene",
+    "slider_scale_min": "0 €",
+    "slider_scale_mid": "500.000 €",
+    "slider_scale_max": "1 milion €+",
+    "area": "Površina, m²",
+    "area_plot": "Površina placa, m²",
+    "from": "Od",
+    "to": "Do",
+    "area_min": "Površina od, m²",
+    "area_max": "Površina do, m²",
+    "bedrooms": "Spavaće sobe",
+    "bedrooms_any": "Sve",
+    "bedrooms_min": "{n}+",
+    "term": "Period najma",
+    "term_any": "Svi periodi",
+    "sort": "Sortiranje",
+    "sort_aria": "Redosljed prikaza",
+    "sort_price_asc": "Prvo najniža cijena",
+    "sort_price_desc": "Prvo najviša cijena",
+    "sort_area_desc": "Prvo najveća površina",
+    "reset": "Poništi filtere",
+    "id_search": "Pretraga po ID-u",
+    "id_label": "ID nekretnine",
+    "id_hint": "Npr. BD-26-003S — ID je naveden na kartici i u prepisci s agentom."
+  },
+  "results": {
+    "map_link": "Prikaži na mapi"
+  },
+  "empty": {
+    "title": "Nema rezultata za izabrane filtere",
+    "text": "Promijenite filtere ili pošaljite upit — potražićemo ponude izvan kataloga.",
+    "request": "Pošalji upit"
+  },
+  "empty_category": {
+    "title": "U ovoj kategoriji još nema objavljenih nekretnina",
+    "text": "Katalog se dopunjava novim ponudama. Recite nam šta tražite."
+  },
+  "request": {
+    "kicker": "Nijeste pronašli odgovarajuću nekretninu?",
+    "title_buy": "Pripremićemo izbor za vas",
+    "text_buy": "Navedite budžet, naselje i rokove — provjerićemo dostupne ponude.",
+    "title_rent": "Pronaći ćemo dugoročni najam za vas",
+    "text_rent": "Navedite mjesečni budžet, naselje, datum useljenja i broj stanara.",
+    "form_heading": "Zahtjev za izbor nekretnina",
+    "points": [
+      "Odgovaramo telefonom, putem WhatsAppa, Telegrama ili e-maila",
+      "Konsultacije na svim jezicima sajta"
+    ]
+  },
+  "residency": {
+    "title": "Privremeni boravak",
+    "text": "Vlasništvo nad nekretninom može biti osnov za privremeni boravak ako su ispunjeni zakonski uslovi. Za konkretan zahtjev provjeravaju se vrijednost, dokumentacija i mogući izuzeci. Kupovina ne daje automatsko pravo boravka.",
+    "link": "Važeće izmjene Zakona o strancima",
+    "url": "https://www.sluzbenilist.me/propisi/389913"
+  },
+  "rent_tabs": {
+    "aria": "Vrsta najma",
+    "long": "Dugoročni najam",
+    "short": "Kratkoročni najam",
+    "soon": "uskoro"
+  },
+  "short_term": {
+    "kicker": "Kratkoročni najam",
+    "title": "Ovaj odjeljak je u pripremi",
+    "text": "Trenutno se bavimo dugoročnim najmom — do sezone ili na cijelu godinu. Kratkoročni najam dodaćemo kasnije.",
+    "form_heading": "Obavijestite me o pokretanju",
+    "back": "Nazad na dugoročni najam"
+  },
+  "rent_empty": {
+    "kicker": "Katalog za najam",
+    "title": "Povezujemo katalog dugoročnog najma",
+    "text": "Dok ne objavimo katalog, radimo po upitu. Navedite budžet, naselje i datum useljenja — poslaćemo odgovarajuće ponude.",
+    "form_heading": "Upit za dugoročni najam",
+    "image_alt": "Balkon s pogledom na zaliv van sezone — ilustracija",
+    "points": [
+      "Do početka sezone ili na cijelu godinu",
+      "Stanovi, kuće i vile",
+      "Budžet u eurima mjesečno"
+    ]
+  },
+  "js": {
+    "count": {
+      "one": "{n} nekretnina",
+      "few": "{n} nekretnine",
+      "other": "{n} nekretnina"
+    },
+    "price_any": "bez ograničenja",
+    "price_range": "{min} – {max}",
+    "price_from": "od {min}",
+    "price_to": "do {max}",
+    "filters_active": "Filteri: {n}",
+    "id_empty": "Nema nekretnine s ovim ID-om",
+    "id_found": {
+      "one": "Pronađena {n} nekretnina",
+      "few": "Pronađene {n} nekretnine",
+      "other": "Pronađeno {n} nekretnina"
+    },
+    "district_option": "{name} · {n}",
+    "district_option_none": "{name} · nema ponuda",
+    "results_updated": "Prikazano: {count}"
+  }
+}

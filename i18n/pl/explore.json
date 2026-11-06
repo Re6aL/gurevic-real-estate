@@ -1,0 +1,147 @@
+{
+  "title_pattern": "Nieruchomości: {name}",
+  "description_pattern": "Mieszkania, domy i działki: {name}. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze.",
+  "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+  "listings": "Aktualne oferty",
+  "empty": "Brak publicznych ofert w tym zestawieniu. Wyślij zapytanie, a sprawdzimy dostępne możliwości.",
+  "check_title": "Co sprawdzić przed zakupem",
+  "check_note": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin.",
+  "request": "Zamów dobór ofert",
+  "areas": "Miasta i dzielnice",
+  "new_label": "Nowe inwestycje w Budvie i Czarnogórze",
+  "new_lead": "Nowe mieszkania i projekty mieszkaniowe. Dostępność lokali, terminy oddania i raty wymagają potwierdzenia dla konkretnej oferty.",
+  "new_advice": "Sprawdź pozwolenia, umowę dewelopera, harmonogram płatności, odbiór i odpowiedzialność za opóźnienia. Raty ustalamy dla konkretnego lokalu.",
+  "district_keys": [
+    "budva-center",
+    "budva-rozino",
+    "becici",
+    "rafailovici",
+    "przno",
+    "sveti-stefan",
+    "petrovac",
+    "lastva-grbaljska",
+    "tivat",
+    "kotor",
+    "bar",
+    "herceg-novi"
+  ],
+  "categories": {
+    "budva-center": {
+      "meta": {
+        "title": "Nieruchomości: Budva – centrum | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Budva – centrum. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Budva – centrum",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "budva-rozino": {
+      "meta": {
+        "title": "Nieruchomości: Budva – Rozino | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Budva – Rozino. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Budva – Rozino",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "becici": {
+      "meta": {
+        "title": "Nieruchomości: Bečići | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Bečići. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Bečići",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "rafailovici": {
+      "meta": {
+        "title": "Nieruchomości: Rafailovići | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Rafailovići. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Rafailovići",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "przno": {
+      "meta": {
+        "title": "Nieruchomości: Pržno | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Pržno. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Pržno",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "sveti-stefan": {
+      "meta": {
+        "title": "Nieruchomości: Sveti Stefan | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Sveti Stefan. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Sveti Stefan",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "petrovac": {
+      "meta": {
+        "title": "Nieruchomości: Petrovac | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Petrovac. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Petrovac",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "lastva-grbaljska": {
+      "meta": {
+        "title": "Nieruchomości: Lastva Grbaljska | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Lastva Grbaljska. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Lastva Grbaljska",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "tivat": {
+      "meta": {
+        "title": "Nieruchomości: Tivat | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Tivat. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Tivat",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "kotor": {
+      "meta": {
+        "title": "Nieruchomości: Kotor | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Kotor. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Kotor",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "bar": {
+      "meta": {
+        "title": "Nieruchomości: Bar | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Bar. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Bar",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "herceg-novi": {
+      "meta": {
+        "title": "Nieruchomości: Herceg Novi | GUREVIĆ",
+        "description": "Mieszkania, domy i działki: Herceg Novi. Aktualne oferty, ceny i indywidualny dobór nieruchomości z GUREVIĆ w Czarnogórze."
+      },
+      "h1": "Nieruchomości: Herceg Novi",
+      "lead": "Wybierz nieruchomość według budżetu i celu: do zamieszkania, na wakacje lub wynajem.",
+      "advice": "Porównaj dokumenty, koszty utrzymania, parking i dojazd. Zdjęcia i mapa nie zastąpią oględzin."
+    },
+    "new": {
+      "meta": {
+        "title": "Nowe inwestycje w Budvie i Czarnogórze | GUREVIĆ",
+        "description": "Nowe mieszkania i projekty mieszkaniowe. Dostępność lokali, terminy oddania i raty wymagają potwierdzenia dla konkretnej oferty."
+      },
+      "h1": "Nowe inwestycje w Budvie i Czarnogórze",
+      "lead": "Nowe mieszkania i projekty mieszkaniowe. Dostępność lokali, terminy oddania i raty wymagają potwierdzenia dla konkretnej oferty.",
+      "advice": "Sprawdź pozwolenia, umowę dewelopera, harmonogram płatności, odbiór i odpowiedzialność za opóźnienia. Raty ustalamy dla konkretnego lokalu."
+    }
+  }
+}

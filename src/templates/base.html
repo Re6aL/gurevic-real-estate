@@ -43,6 +43,9 @@
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:image" content="{{ _og_image }}">
+{% for name, value in site.verification.items() if value %}
+<meta name="{{ name }}" content="{{ value }}">
+{% endfor %}
 <meta name="theme-color" content="#14273b">
 {% if lang != 'he' %}
 <link rel="preload" href="{{ path('assets/fonts/futura-book.woff2') }}" as="font" type="font/woff2" crossorigin>
@@ -66,6 +69,7 @@
 {% block main %}{% endblock %}
 </main>
 {% include "partials/footer.html" %}
+{% include "partials/consent.html" %}
 <script>window.SITE={{ site_js | tojson }};</script>
 {% if asset_exists('js/site.js') %}
 <script src="{{ asset('js/site.js') }}" defer></script>

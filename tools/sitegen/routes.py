@@ -111,6 +111,19 @@ ROUTES = [
           css=("css/map.css",), js=("js/map.js",), js_ns=("common", "map"), body_class="page-map"),
 ]
 
+# Buyer-facing landing pages retain the canonical property URL (no duplicate listings).
+AREA_KEYS = ['budva-center', 'budva-rozino', 'becici', 'rafailovici', 'przno', 'sveti-stefan', 'petrovac', 'lastva-grbaljska', 'tivat', 'kotor', 'bar', 'herceg-novi']
+for area in AREA_KEYS:
+    ROUTES.append(Route('area.' + area, 'areas/' + area + '/', 'pages/explore.html', 'explore', sub=area, parent='buy', css=('css/info.css', 'css/catalog.css', 'css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'district':area}))
+ROUTES.append(Route('buy.new', 'buy/new-developments/', 'pages/explore.html', 'explore', sub='new', parent='buy', css=('css/info.css','css/catalog.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'new_developments':True}))
+
+ROUTES.append(_info('guides', 'guides/', 'pages/guides.html', 'guides', forms=True))
+ROUTES.append(Route('guide.buying', 'guides/buying/', 'pages/guides.html', 'guides', sub='buying', parent='guides', css=('css/info.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'sources':[{'title': 'Notarska komora Crne Gore', 'url': 'https://notarskakomora.me/'}]}))
+ROUTES.append(Route('guide.taxes', 'guides/taxes/', 'pages/guides.html', 'guides', sub='taxes', parent='guides', css=('css/info.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'sources':[{'title': 'Porez na promet nepokretnosti — 33/2026', 'url': 'https://www.sluzbenilist.me/propisi/391611'}, {'title': 'Univerzitet Crne Gore — oporezivanje imovine', 'url': 'https://www.ucg.ac.me/skladiste/blog_615925/objava_188229/fajlovi/Oporezivanje%20imovine.pdf'}]}))
+ROUTES.append(Route('guide.residency', 'guides/residency/', 'pages/guides.html', 'guides', sub='residency', parent='guides', css=('css/info.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'sources':[{'title': 'Zakon o strancima — 14.05.2026', 'url': 'https://www.gov.me/dokumenta/b123dbc2-dfce-4751-9086-322072f9d7f3'}]}))
+ROUTES.append(Route('guide.documents', 'guides/documents/', 'pages/guides.html', 'guides', sub='documents', parent='guides', css=('css/info.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'sources':[{'title': 'Zakon o legalizaciji bespravnih objekata — 20.07.2026', 'url': 'https://www.gov.me/en/documents/caf17aa2-2305-43b0-9cb2-9888974f20af'}]}))
+ROUTES.append(Route('guide.returns', 'guides/returns/', 'pages/guides.html', 'guides', sub='returns', parent='guides', css=('css/info.css','css/forms.css'), js=('js/forms.js',), js_ns=('common','forms'), extra={'sources':[{'title': 'MONSTAT — tourism statistics', 'url': 'https://www.monstat.org/eng/page.php?id=43&pageid=43'}]}))
+
 # Динамический маршрут страницы объекта: путь {section}/{slug}/
 PROPERTY = Route("property", "{section}/{slug}/", "pages/property.html", "property",
                  css=("css/property.css",) + _FORMS_CSS, js=("js/property.js",) + _FORMS_JS,

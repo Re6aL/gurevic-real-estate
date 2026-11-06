@@ -15,7 +15,7 @@
   'alternateName': ['Ilija Gurević'] + (['Ilia Gurevich'] if t('about.portrait.name') != 'Ilia Gurevich' else []),
   'jobTitle': t('about.jsonld.job_title'),
   'url': page.canonical,
-  'knowsLanguage': ['ru', 'en', 'cnr'],
+  'knowsLanguage': ['ru', 'en', 'uk', 'cnr'],
   'worksFor': {
     '@type': 'RealEstateAgent',
     '@id': site.site_url ~ '#agency',
@@ -92,8 +92,8 @@
       <h2 class="info-card__title">{{ ui.icon('globe') }}<span>{{ t('about.languages.title') }}</span></h2>
       <p>{{ t('about.languages.text') }}</p>
       <ul class="lang-chips">
-        {% for code in ['ru', 'en', 'me'] %}
-        <li lang="{{ 'sr-Latn-ME' if code == 'me' else code }}">{{ t('about.languages.list.' ~ code) }}</li>
+        {% for item in languages %}
+        <li lang="{{ item.code }}">{{ item.name }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -103,6 +103,11 @@
         <div><dt>{{ t('about.legal.company_label') }}</dt><dd><bdi>{{ site.legal_name }}</bdi></dd></div>
         <div><dt>{{ t('about.legal.founder_label') }}</dt><dd>{{ t('about.legal.founder') }} <span class="info-dl__note">{{ t('about.legal.founder_local_html', name='Ilija Gurević' | bdi) }}</span></dd></div>
         <div><dt>{{ t('about.legal.city_label') }}</dt><dd>{{ t('about.legal.city') }}</dd></div>
+        <div><dt>PIB / Matični broj</dt><dd><bdi>{{ site.company.pib }}</bdi></dd></div>
+        <div><dt>Adresa sjedišta</dt><dd>{{ site.company.address }}</dd></div>
+        <div><dt>Žiro račun · {{ site.company.bank }}</dt><dd><bdi>{{ site.company.account }}</bdi></dd></div>
+        <div><dt>SWIFT / IBAN</dt><dd>Dostupno na upit</dd></div>
+        <div><dt>CRPS</dt><dd><a href="{{ site.company.registry_url }}" target="_blank" rel="noopener noreferrer">D.O.O. GUREVIC · {{ site.company.pib }}</a></dd></div>
       </dl>
       <p class="info-muted">{{ ui.icon('calendar', size=18) }}<span>{{ t('about.legal.meetings') }}</span></p>
     </div>

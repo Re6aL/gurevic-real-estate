@@ -1,0 +1,76 @@
+{
+  "kicker": "O nama",
+  "who": {
+    "p1": "Ilia Gurevich je osnivač DOO GUREVIĆ BUDVA i agent za nekretnine. Telefon agencije, WhatsApp i Telegram su njegovi osobni kontakti, tako da u svakoj fazi kontaktirate direktno s njim.",
+    "p2": "Posao izvan uloge agenta — pravne provjere, projektiranje i izgradnja — obavljaju partneri: odvjetnici i licencirani arhitekti i građevinari. Upoznajemo vas s njima i predajemo materiju zajedno sa svime što smo prikupili.",
+    "title": "S kim ćete raditi"
+  },
+  "portrait": {
+    "alt": "Ilia Gurevich, osnivač agencije za nekretnine GUREVIĆ u Budvi",
+    "role": "Osnivač i zastupnik DOO GUREVIĆ BUDVA",
+    "pending": "Fotografija stiže uskoro",
+    "name": "Ilia Gurevich",
+    "monogram": "IG"
+  },
+  "lead": "Agencija za nekretnine u Budvi koju vodi njen osnivač. Radite s jednom osobom — od vašeg prvog pitanja do potpisivanja dokumenata.",
+  "h1": "Ilia Gurevich i agencija GUREVIĆ",
+  "meta": {
+    "description": "Ilia Gurevich je osnivač agencije za nekretnine DOO GUREVIĆ BUDVA i agent s kojim osobno surađujete. Naša treća godina na tržištu Crne Gore.",
+    "title": "Ilia Gurevich — agent za nekretnine u Budvi | GUREVIĆ"
+  },
+  "market": {
+    "p2": "Katalog na ovim stranicama ažurira se automatski iz radne baze podataka agencije. Povjerljive mogućnosti ulaganja objavljuju se u anonimiziranom obliku.",
+    "p1": "Agencija je već treću godinu na tržištu nekretnina u Crnoj Gori. Naš glavni fokus je Budva i Budvanska rivijera; katalog uključuje i nekretnine u drugim gradovima diljem zemlje.",
+    "title": "Naša treća godina u Crnoj Gori"
+  },
+  "format": {
+    "title": "Novi način rada",
+    "items": {
+      "directions": {
+        "title": "Četiri odvojena smjera",
+        "text": "Kupci, najmoprimci, investitori i vlasnici imaju različite ciljeve. Zato svaki od njih ima svoj odjeljak na web stranici, pitanja i obrazac za upit."
+      },
+      "agreements": {
+        "text": "Uvjeti rada utvrđuju se pisanim ugovorom prema crnogorskom pravu — prije početka radova, a ne usput.",
+        "title": "Pisani sporazumi"
+      },
+      "honest": {
+        "text": "Govorimo vam što se zna o nekretnini: dokumenti, stanje, uvjeti. Preliminarne brojke označene su kao preliminarne i podložne provjeri.",
+        "title": "Samo poznate činjenice"
+      },
+      "partners": {
+        "title": "Partneri za specijalistički rad",
+        "text": "Početnu pravnu podršku pružamo sami. Detaljne pravne provjere, projektiranje i izgradnju obavljaju odvjetnici i ovlašteni stručnjaci — poslovi izvan uloge agencije predaju im se."
+      }
+    },
+    "intro": "Agencija sada radi u novom formatu. U praksi to znači sljedeće."
+  },
+  "languages": {
+    "title": "jezici",
+    "list": {
+      "ru": "Russkij",
+      "en": "engleski",
+      "me": "crnogorski"
+    },
+    "text": "Konzultacije i dopisivanje dostupni su na svim jezicima web stranice. Ilia govori ruski, engleski, ukrajinski i crnogorski. Partneri agencije pomažu s hebrejskim, francuskim, njemačkim i poljskim jezikom."
+  },
+  "legal": {
+    "title": "Podaci o tvrtki",
+    "founder": "Ilia Gurevich",
+    "city_label": "Mjesto",
+    "founder_label": "Osnivač",
+    "founder_local_html": "registriran u Crnoj Gori kao {name}",
+    "company_label": "Pravna osoba",
+    "city": "Budva, Crna Gora",
+    "meetings": "Sastanci po dogovoru."
+  },
+  "cta": {
+    "title": "Recite nam što tražite",
+    "services": "Agencijske usluge",
+    "contact": "Svi kontakti",
+    "text": "Pošaljite poruku u željenom messengeru ili nas nazovite. Stranica usluga opisuje u čemu točno možemo pomoći."
+  },
+  "jsonld": {
+    "job_title": "Osnivač i agent za nekretnine"
+  }
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% import 'macros/ui.html' as ui %}
+{% import 'macros/cards.html' as cards %}
+{% import 'macros/forms.html' as forms %}
+{% set district = route.extra.get('district') %}
+{% set is_new = route.extra.get('new_developments', false) %}
+{% set chosen = namespace(items=[]) %}
+{% for l in listings.query() %}
+  {% if not l.confidential and ((district and l.district == district and l.section == 'buy') or (is_new and l.kind == 'development')) %}
+    {% set chosen.items = chosen.items + [l] %}
+  {% endif %}
+{% endfor %}
+{% block jsonld %}
+{{ super() }}
+{% set entries = namespace(items=[]) %}
+{% for l in chosen.items %}{% set entries.items = entries.items + [{'@type':'ListItem','position':loop.index,'url':abs_url('property', listing=l),'name':listing_name(l)}] %}{% endfor %}
+<script type="application/ld+json">{{ {'@context':'https://schema.org','@type':'ItemList','name':page.h1,'numberOfItems':chosen.items|length,'itemListElement':entries.items}|tojson }}</script>
+{% endblock %}
+{% block main %}
+<header class="info-hero"><div class="container">{{ ui.breadcrumbs(page.breadcrumbs, light=True) }}<h1>{{ page.h1 }}</h1><p class="info-lead">{{ t(route.meta ~ '.lead') }}</p></div></header>
+<section class="info-section"><div class="container">
+  <h2>{{ t('explore.listings') }}</h2>
+  {% if chosen.items %}<div class="cards-grid">{% for l in chosen.items %}{{ cards.card(l) }}{% endfor %}</div>
+  {% else %}<p>{{ t('explore.empty') }}</p>{% endif %}
+  <div class="prose"><h2>{{ t('explore.check_title') }}</h2><p>{{ t(route.meta ~ '.advice') }}</p><p>{{ t('explore.check_note') }}</p></div>
+</div></section>
+<section class="info-section info-section--soft"><div class="container">
+  <h2>{{ t('explore.request') }}</h2>{{ forms.contact_form(form='buy_request') }}
+</div></section>
+<section class="info-section"><div class="container"><h2>{{ t('explore.areas') }}</h2><ul class="area-links">
+{% for code in t('explore.district_keys') %}<li><a href="{{ url('area.' ~ code) }}">{{ t('common.districts.' ~ code) }}</a></li>{% endfor %}
+</ul><p><a href="{{ url('buy.new') }}">{{ t('explore.new_label') }}</a> · <a href="{{ url('guides') }}">{{ t('guides.h1') }}</a></p></div></section>
+{% endblock %}

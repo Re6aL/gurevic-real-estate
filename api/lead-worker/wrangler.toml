@@ -13,7 +13,7 @@ workers_dev = true
 [vars]
 # Сайты, с которых принимаются заявки (через запятую, без пути и без «/» в конце).
 # При подключении своего домена — добавить его сюда и передеплоить.
-ALLOWED_ORIGINS = "https://re6al.github.io,http://localhost:8768"
+ALLOWED_ORIGINS = "https://re6al.github.io,https://gurevic.estate,https://www.gurevic.estate,http://localhost:8768"
 
 [observability]
 # Хранимые логи выключены: журнал вызовов Cloudflare содержит IP и заголовки посетителей.

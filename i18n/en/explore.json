@@ -1,0 +1,147 @@
+{
+  "title_pattern": "Property in {name}",
+  "description_pattern": "Apartments, houses and land in {name}. Current listings, prices and a personal property search with GUREVIĆ in Montenegro.",
+  "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+  "listings": "Current listings",
+  "empty": "No public listings are available in this selection. Send an enquiry and we will check available options.",
+  "check_title": "What to check before buying",
+  "check_note": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing.",
+  "request": "Request a shortlist",
+  "areas": "Areas and towns",
+  "new_label": "New developments in Budva and Montenegro",
+  "new_lead": "New-build apartments and residential projects. Check unit availability, completion dates and instalment terms for each offer.",
+  "new_advice": "Check permits, the developer agreement, payment schedule, handover date and delay provisions. Instalments must be confirmed for the individual property.",
+  "district_keys": [
+    "budva-center",
+    "budva-rozino",
+    "becici",
+    "rafailovici",
+    "przno",
+    "sveti-stefan",
+    "petrovac",
+    "lastva-grbaljska",
+    "tivat",
+    "kotor",
+    "bar",
+    "herceg-novi"
+  ],
+  "categories": {
+    "budva-center": {
+      "meta": {
+        "title": "Property in Budva – centre | GUREVIĆ",
+        "description": "Apartments, houses and land in Budva – centre. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Budva – centre",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "budva-rozino": {
+      "meta": {
+        "title": "Property in Budva – Rozino | GUREVIĆ",
+        "description": "Apartments, houses and land in Budva – Rozino. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Budva – Rozino",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "becici": {
+      "meta": {
+        "title": "Property in Bečići | GUREVIĆ",
+        "description": "Apartments, houses and land in Bečići. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Bečići",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "rafailovici": {
+      "meta": {
+        "title": "Property in Rafailovići | GUREVIĆ",
+        "description": "Apartments, houses and land in Rafailovići. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Rafailovići",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "przno": {
+      "meta": {
+        "title": "Property in Pržno | GUREVIĆ",
+        "description": "Apartments, houses and land in Pržno. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Pržno",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "sveti-stefan": {
+      "meta": {
+        "title": "Property in Sveti Stefan | GUREVIĆ",
+        "description": "Apartments, houses and land in Sveti Stefan. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Sveti Stefan",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "petrovac": {
+      "meta": {
+        "title": "Property in Petrovac | GUREVIĆ",
+        "description": "Apartments, houses and land in Petrovac. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Petrovac",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "lastva-grbaljska": {
+      "meta": {
+        "title": "Property in Lastva Grbaljska | GUREVIĆ",
+        "description": "Apartments, houses and land in Lastva Grbaljska. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Lastva Grbaljska",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "tivat": {
+      "meta": {
+        "title": "Property in Tivat | GUREVIĆ",
+        "description": "Apartments, houses and land in Tivat. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Tivat",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "kotor": {
+      "meta": {
+        "title": "Property in Kotor | GUREVIĆ",
+        "description": "Apartments, houses and land in Kotor. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Kotor",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "bar": {
+      "meta": {
+        "title": "Property in Bar | GUREVIĆ",
+        "description": "Apartments, houses and land in Bar. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Bar",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "herceg-novi": {
+      "meta": {
+        "title": "Property in Herceg Novi | GUREVIĆ",
+        "description": "Apartments, houses and land in Herceg Novi. Current listings, prices and a personal property search with GUREVIĆ in Montenegro."
+      },
+      "h1": "Property in Herceg Novi",
+      "lead": "Choose a property for your budget and plans: year-round living, holidays or rental use.",
+      "advice": "Compare documents, running costs, parking and access. Photos and distances on a map do not replace a viewing."
+    },
+    "new": {
+      "meta": {
+        "title": "New developments in Budva and Montenegro | GUREVIĆ",
+        "description": "New-build apartments and residential projects. Check unit availability, completion dates and instalment terms for each offer."
+      },
+      "h1": "New developments in Budva and Montenegro",
+      "lead": "New-build apartments and residential projects. Check unit availability, completion dates and instalment terms for each offer.",
+      "advice": "Check permits, the developer agreement, payment schedule, handover date and delay provisions. Instalments must be confirmed for the individual property."
+    }
+  }
+}

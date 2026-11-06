@@ -1,0 +1,126 @@
+{
+  "h1": "Agencijske usluge",
+  "meta": {
+    "title": "Usluge agencije za nekretnine u Budvi | GUREVIĆ",
+    "description": "Kupnja, dugoročni najam, investicije i usluge za vlasnike u Crnoj Gori: traženje nekretnina, razgledavanje, provjera dokumenata s odvjetnicima i podrška transakcijama."
+  },
+  "kicker": "Što radimo",
+  "directions": {
+    "title": "Upute",
+    "buy": {
+      "title": "Kupnja",
+      "intro": "Apartmani, kuće, vile i parcele za privatne kuće u Budvi i na crnogorskom primorju.",
+      "items": {
+        "viewings": "Dogovaranje razgleda",
+        "documents": "Provjere dokumenata zajedno s odvjetnicima partnerima",
+        "deal": "Transakcijska podrška do potpisivanja ugovora",
+        "select": "Pretraživanje nekretnina usklađeno s vašim zahtjevima i proračunom"
+      },
+      "link": "Nekretnine na prodaju"
+    },
+    "sub": "Odaberite svoj — svaki odjeljak ima vlastita svojstva, pitanja i obrazac za upit.",
+    "rent": {
+      "items": {
+        "viewings": "Dogovaranje razgleda",
+        "select": "Pretraživanje po području, pojmu i budžetu",
+        "contract": "Pomoć oko ugovora o najmu",
+        "terms": "Dogovor s vlasnikom: depozit, režije, kućni ljubimci"
+      },
+      "title": "Dugoročni najam",
+      "intro": "Apartmani i kuće do početka sezone ili cijelu godinu.",
+      "note": "Kratkoročni najam je u razvoju.",
+      "link": "Nekretnine za iznajmljivanje"
+    },
+    "invest": {
+      "items": {
+        "legal": "Početna pravna podrška",
+        "select": "Pronalaženje prilika za vaše ulaganje",
+        "partners": "Partneri s licencom za projektiranje i građenje",
+        "handover": "Predaja predmeta stručnjacima u kasnijim fazama"
+      },
+      "title": "Ulaganje",
+      "note": "Povjerljivo; NDA gdje je potrebno.",
+      "link": "Ulaganje u Crnu Goru",
+      "intro": "Hoteli, građevinsko zemljište, komercijalne nekretnine i građevinski projekti."
+    },
+    "owners": {
+      "title": "Za vlasnike",
+      "items": {
+        "photo": "Fotografija",
+        "valuation": "Procjena imovine",
+        "management": "Upravljanje nekretninom po dogovoru",
+        "contract": "Prodaja ili najam prema pismenom dogovoru"
+      },
+      "note": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+      "link": "Za vlasnike",
+      "intro": "Prodaja i iznajmljivanje stanova, kuća, zemljišta, građevinskih projekata i poslovanja."
+    }
+  },
+  "lead": "Četiri pravca rada — za kupce, zakupce, investitore i vlasnike. Svaki slijedi jasan slijed koraka i pisanih sporazuma.",
+  "steps": {
+    "items": {
+      "request": {
+        "title": "Upit",
+        "text": "Pošaljite upit putem web stranice, pošaljite nam poruku ili nas nazovite."
+      },
+      "agreement": {
+        "title": "Sporazum",
+        "text": "Uvjeti rada sastavljaju se u pisanom obliku prije početka radova."
+      },
+      "talk": {
+        "title": "Razgovor",
+        "text": "Pojašnjavamo vaš brief, vrijeme i proračun i odgovaramo na prva pitanja."
+      },
+      "work": {
+        "title": "Radite u svom smjeru",
+        "text": "Pretraga, pregledi, provjere, transakcije — s partnerima gdje god je potrebno."
+      }
+    },
+    "title": "Kako počinjemo"
+  },
+  "residency": {
+    "kicker": "Dobro je znati",
+    "link_note": "na crnogorskom",
+    "title": "Imovina i privremeni boravak",
+    "link": "Aktualne izmjene i dopune Zakona o strancima",
+    "disclaimer": "Informacije na ovoj web stranici nisu pravni savjeti.",
+    "text": "Za državljane trećih zemalja koji nisu obuhvaćeni zakonskim izuzećima, imovina čija je službena porezna vrijednost {amount} ili više može poslužiti kao osnova za privremeni boravak, pod uvjetom da su ispunjeni drugi zakonski uvjeti. Provjeravamo uvjete od datuma podnošenja."
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "sub": "Kratki odgovori na pitanja koja kupci i vlasnici prvo postave.",
+    "items": {
+      "commission": {
+        "a": "Za prodaju stanova naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, a plaća je samo prodavatelj. Uvjeti za ostale vrste nekretnina i najam dogovaraju se posebno u pisanom obliku.",
+        "q": "Koliko agencija naplaćuje?"
+      },
+      "documents": {
+        "q": "Koje dokumente treba provjeriti prije kupnje?",
+        "a": "Točan set ovisi o svojstvu. Obično uključuje trenutni vlasnički list, identitet i ovlaštenje prodavatelja, registrirane terete i ograničenja, status planiranja ili legalizacije i nacrt ugovora. Odvjetnici partneri i javni bilježnik provode relevantne pravne provjere."
+      },
+      "foreigners": {
+        "q": "Može li strani državljanin kupiti nekretninu u Crnoj Gori?",
+        "a": "U mnogim slučajevima, da. Ograničenja se mogu primijeniti na određene kategorije zemljišta i imovine, tako da se državljanstvo kupca i određeni vlasnički list moraju provjeriti prije uplate pologa."
+      },
+      "residency": {
+        "q": "Daje li kupnja nekretnine automatski odobren boravak?",
+        "a": "Ne. Imovina može biti osnova za prijavu privremenog boravka kada su ispunjeni trenutni zakonski uvjeti, ali boravak je zaseban postupak i nije automatski."
+      },
+      "legalisation": {
+        "q": "Može li se nelegalizirana nekretnina prodati?",
+        "a": "Odgovor ovisi o statusu upisa i legalizacije nekretnine te o važećem zakonu. Neke se transakcije mogu ograničiti. Preporučamo provjeriti vlasnički list i dobiti pravni savjet prije dogovora o uvjetima."
+      },
+      "areas": {
+        "q": "Koje dijelove Crne Gore pokrivate?",
+        "a": "Agencija je sa sjedištem u Budvi, a radi širom primorja, uključujući Budvansku rivijeru, Petrovac, Tivat, Kotor, Herceg Novi i Bar. Mogućnosti pojedinačnog ulaganja mogu se nalaziti drugdje u Crnoj Gori."
+      }
+    }
+  },
+  "form": {
+    "kicker": "Javite se",
+    "form_title": "Upit",
+    "title": "Recite nam o svojim planovima",
+    "messengers": "Ili nam izravno pošaljite poruku",
+    "text": "Opišite što tražite ili što želite prodati, a mi ćemo vam se javiti onako kako želite. Također nam možete izravno poslati poruku."
+  }
+}

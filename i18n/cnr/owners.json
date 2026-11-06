@@ -1,0 +1,436 @@
+{
+  "h1": "Prodajte ili iznajmite svoju nekretninu uz GUREVIĆ",
+  "meta": {
+    "title": "Prodaja ili izdavanje nekretnine u Budvi | GUREVIĆ",
+    "description": "GUREVIĆ u Budvi: procjena, fotografiranje, prodaja i dugoročni najam stanova, kuća, zemljišta i poslovanja u Crnoj Gori."
+  },
+  "hero": {
+    "facts": {
+      "languages": "Konzultacije i dopisivanje dostupni su na svim jezicima web stranice. Ilia govori ruski, engleski, ukrajinski i crnogorski. Partneri agencije pomažu s hebrejskim, francuskim, njemačkim i poljskim jezikom.",
+      "contract": "Pisani sporazum",
+      "commission": "5% uklj. VAT — plaća prodavatelj stana"
+    },
+    "kicker": "Za vlasnike",
+    "cta_form": "Prijavite svoju nekretninu",
+    "facts_aria": "Ključni pojmovi na prvi pogled",
+    "cta_process": "Kako radimo",
+    "lead": "Preuzimamo stanove, kuće, zemljište, građevinske projekte i operativne poslove u Budvi i drugdje u Crnoj Gori. Procjenjujemo nekretninu, pripremamo je za prodaju ili najam i vodimo je do posla prema pisanom ugovoru."
+  },
+  "agency": {
+    "kicker": "O agenciji",
+    "title": "Agencija za nekretnine u Budvi",
+    "kinds": {
+      "apartment": {
+        "title": "Apartmani",
+        "text": "Novogradnja i preprodaja"
+      },
+      "land": {
+        "title": "Zemljište",
+        "text": "Parcele za privatni i poslovni razvoj"
+      },
+      "construction_project": {
+        "title": "Građevinski projekti",
+        "text": "U fazi projektiranja ili izgradnje"
+      },
+      "house": {
+        "title": "Kuće i vile",
+        "text": "Stalni domovi i kuće za odmor"
+      },
+      "business": {
+        "title": "Radna poduzeća",
+        "text": "Restorani, hoteli, poslovni prostori"
+      }
+    },
+    "p1": "GUREVIĆ (DOO GUREVIĆ BUDVA) je agencija za nekretnine u Budvi, koju vodi vlasnik i agent Ilia Gurevich. O cijeni, uvjetima i tijeku prodaje razgovarate izravno s osobom koja se bavi vašim poslom.",
+    "more": "Više o agenciji",
+    "kinds_title": "Što preuzimamo",
+    "p2": "Treću godinu smo na crnogorskom tržištu nekretnina i sada radimo u novom formatu: odvojene usluge za kupce, stanare, investitore i vlasnike, pisani ugovori i partneri za pravnu podršku, projektiranje i izgradnju.",
+    "p3": "Na strani prodavatelja također preuzimamo investicijsku imovinu — građevinsko zemljište, građevinske projekte, hotele, restorane i druge poslovne djelatnosti. Pojedinosti o takvoj imovini povjerljivo se dijele s kupcima."
+  },
+  "services": {
+    "kicker": "Usluge",
+    "more": "Saznajte više",
+    "title": "Kako možemo pomoći",
+    "items": {
+      "sell": {
+        "text": "Procjena, fotografiranje, popis, razgledavanje, pregovori i podrška do potpisivanja ugovora.",
+        "title": "Prodaja vaše imovine"
+      },
+      "rent_out": {
+        "text": "Dugoročni najam — do sezone ili godinu dana: cijena najma, traženje najmoprimca, ugovor o najmu.",
+        "title": "Iznajmljivanje"
+      },
+      "management": {
+        "text": "Ključevi, računi, provjere imovine i koordinacija izvođača — po dogovoru.",
+        "title": "Upravljanje imovinom"
+      }
+    },
+    "sub": "Odaberite uslugu — svaka stranica detaljno objašnjava što uključuje."
+  },
+  "process": {
+    "steps": {
+      "valuation": {
+        "title": "Vrijednost",
+        "text": "Pregledavamo nekretninu, pregledavamo dokumente i tržište te s Vama dogovaramo traženu cijenu."
+      },
+      "photo": {
+        "title": "Fotografija",
+        "text": "Fotografiramo nekretninu i pripremamo popisni opis."
+      },
+      "contract": {
+        "title": "Sporazum",
+        "terms": {
+          "price": "promjena cijene samo uz suglasnost vlasnika;",
+          "access": "vlasnik omogućava pristup nekretnini radi razgledavanja.",
+          "commission_html": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+          "exclusive": "poželjan je ekskluzivni ugovor;"
+        },
+        "text": "Uvjeti su navedeni u pisanom obliku:"
+      },
+      "deal": {
+        "title": "Dogovor",
+        "text": "Mi prosljeđujemo ponude, podržavamo vas u pregovorima i vodimo posao do potpisivanja."
+      },
+      "marketing": {
+        "title": "Marketing i gledanja",
+        "text": "Objavljujemo nekretninu, odgovaramo na upite, održavamo oglede prema dogovorenom rasporedu i izvještavamo vas o rezultatima."
+      }
+    },
+    "kicker": "Naš proces",
+    "title": "Kako radimo s vlasnicima",
+    "sub": "Pet koraka od prvog razgovora do dogovora.",
+    "legal": "Radimo po pismenom ugovoru u skladu sa zakonima Crne Gore.",
+    "exclusive": {
+      "points": {
+        "price": "Nekretnina je na tržištu s jednom cijenom i jednim opisom.",
+        "contact": "Jedna kontakt točka umjesto susreta sa svakim agentom i agencijom u Crnoj Gori.",
+        "viewings": "Gledanja se odvijaju prema jedinstvenom dogovorenom rasporedu."
+      },
+      "lead": "Nije obavezno, ali je prikladnije za vlasnika.",
+      "title": "Zašto ekskluzivni dogovor"
+    }
+  },
+  "contract": {
+    "kicker": "Dokumenti",
+    "files": {
+      "sale": "",
+      "business": ""
+    },
+    "sub": "Glavni dijelovi ugovora koje potpisujemo s vlasnicima.",
+    "request_hint": "Pošaljite nam zahtjev i podijelit ćemo uzorak ugovora na pregled.",
+    "note": "Uzorak samo za informaciju — konačni tekst dobivate prilikom potpisivanja.",
+    "request": "Zatražite uzorak ugovora",
+    "sale": {
+      "sections": {
+        "commission": {
+          "text": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+          "title": "Agencijska provizija"
+        },
+        "object": {
+          "title": "Imovina i njena identifikacija",
+          "text": "Vrsta i veličina nekretnine, broj vlasničkog lista (list nepokretnosti), katastarska općina (KO), a za stan broj jedinice (PD)."
+        },
+        "parties": {
+          "title": "Stranke",
+          "text": "Vlasnik — fizičko ili trgovačko društvo — i agencija DOO GUREVIĆ BUDVA; detaljima i predstavnicima stranaka."
+        },
+        "price": {
+          "title": "Cijena i promjene cijena",
+          "text": "Tražena cijena; može se mijenjati samo uz suglasnost vlasnika."
+        },
+        "confidentiality": {
+          "title": "Povjerljivost",
+          "text": "Postupanje s dokumentima i osobnim podacima vlasnika; koji su podaci o nekretnini objavljeni."
+        },
+        "law": {
+          "title": "Mjerodavno pravo",
+          "text": "Na ugovor se primjenjuju zakoni Crne Gore."
+        },
+        "exclusivity": {
+          "text": "Isključivi ili neisključivi mandat, trajanje ugovora i način produljenja.",
+          "title": "Ekskluzivnost i termin"
+        },
+        "owner_duties": {
+          "text": "Dostaviti dokumentaciju o nekretnini, omogućiti uvid za razgledavanje, navesti terete, stanare i druge okolnosti bitne za prodaju.",
+          "title": "Obveze vlasnika"
+        },
+        "agent_duties": {
+          "text": "Procjena, fotografiranje, marketing, ogledi, javljanje vlasniku, podrška u pregovorima i pomoć do potpisivanja ugovora.",
+          "title": "Obveze agencije"
+        },
+        "termination": {
+          "text": "Razlozi i postupak za prijevremeni raskid ugovora.",
+          "title": "Raskid"
+        }
+      },
+      "title": "Ugovor o prodaji nekretnine — glavni dijelovi"
+    },
+    "download": "Preuzmite PDF",
+    "title": "Uzorak sporazuma",
+    "business": {
+      "sections": {
+        "parties": {
+          "title": "Stranke",
+          "text": "Vlasnik obrta ili tvrtka za prodaju i zastupstvo DOO GUREVIĆ BUDVA; detaljima i predstavnicima stranaka."
+        },
+        "price": {
+          "title": "Cijena i promjene cijena",
+          "text": "Tražena cijena i što uključuje; može se mijenjati samo uz suglasnost vlasnika."
+        },
+        "commission": {
+          "text": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+          "title": "Agencijska provizija"
+        },
+        "exclusivity": {
+          "title": "Ekskluzivnost i termin",
+          "text": "Isključivi ili neisključivi mandat, trajanje ugovora i način produljenja."
+        },
+        "agent_duties": {
+          "title": "Obveze agencije",
+          "text": "Procjena vrijednosti, priprema opisa, pronalaženje kupaca, ogledi, javljanje vlasniku, podrška u pregovorima i pomoć do potpisivanja ugovora."
+        },
+        "confidentiality": {
+          "title": "Povjerljivost",
+          "text": "Poslovni detalji otkrivaju se samo kvalificiranim kupcima i, ako je potrebno, nakon potpisivanja NDA."
+        },
+        "termination": {
+          "title": "Raskid",
+          "text": "Razlozi i postupak za prijevremeni raskid ugovora."
+        },
+        "law": {
+          "title": "Mjerodavno pravo",
+          "text": "Na ugovor se primjenjuju zakoni Crne Gore."
+        },
+        "owner_duties": {
+          "title": "Obveze vlasnika",
+          "text": "Osigurajte dokumente i informacije o tvrtki za kupčeve provjere, omogućite pristup prostorijama za razgledavanje, otkrijte obveze i terete."
+        },
+        "object": {
+          "text": "Podaci o tvrtki (ime, matični broj) i što se točno prodaje — udio u tvrtki ili imovina i imovina tvrtke.",
+          "title": "Predmet prodaje"
+        }
+      },
+      "title": "Poslovni kupoprodajni ugovor — glavni dijelovi"
+    }
+  },
+  "form": {
+    "title": "Prijavite svoju nekretninu",
+    "kicker": "Zahtjev",
+    "intro": "Recite nam nešto o nekretnini — u ovoj fazi nisu potrebni nikakvi dokumenti. Katastarski podaci koriste se samo za provjeru imovine.",
+    "next": {
+      "visit": "Organiziramo ogled i procjenu nekretnine.",
+      "call": "Kontaktiramo Vas na navedeni broj telefona i razjašnjavamo detalje.",
+      "contract": "Predlažemo uvjete i pripremamo ugovor."
+    },
+    "next_title": "Što se dalje događa",
+    "direct": "Pošaljite nam izravnu poruku ili postavite pitanje u chatu na web stranici.",
+    "privacy": "Broj vlasničkog lista, KO i PD potrebni su samo za potvrdu vlasništva. Nikada ne objavljujemo imena vlasnika, katastarske brojeve ili točne adrese.",
+    "privacy_title": "Vaši podaci",
+    "direct_title": "Radije pišete?",
+    "chat": "Pitaj u chatu"
+  },
+  "faq_title": "Često postavljana pitanja",
+  "terms_title": "Uvjeti",
+  "related": {
+    "title": "Ostale usluge za vlasnike",
+    "all_text": "O agenciji, načinu rada i primjer ugovora.",
+    "all": "Sve usluge za vlasnike"
+  },
+  "alt": {
+    "management": "Budvanski stari grad gledan sa mora",
+    "sell": "Budvanski stari grad i zaljev iza cvjetanja bugenvilija",
+    "hero": "Svijetli dnevni boravak s balkonom i pogledom na more — ilustracija",
+    "rent_out": "Balkon s pogledom na zaljev sa šalicom kave i ključevima na stolu — ilustracija"
+  },
+  "categories": {
+    "sell": {
+      "meta": {
+        "description": "5% uklj. VAT — plaća prodavatelj stana",
+        "title": "Prodaja nekretnina u Crnoj Gori | GUREVIĆ"
+      },
+      "included": {
+        "valuation": {
+          "title": "Vrijednost",
+          "text": "Analiziramo nekretninu, površinu i tržište te s Vama dogovaramo traženu cijenu."
+        },
+        "photo": {
+          "text": "Fotografiramo nekretninu i pripremamo popisni opis.",
+          "title": "Fotografija i opis"
+        },
+        "negotiation": {
+          "title": "Pregovaranje",
+          "text": "Prenosimo Vam ponude kupaca i pomažemo dogovoriti cijenu i uvjete."
+        },
+        "listing": {
+          "text": "Nekretninu objavljujemo na web stranici agencije i našim kanalima te odgovaramo na upite kupaca.",
+          "title": "Popis"
+        },
+        "viewings": {
+          "title": "Gledanja",
+          "text": "Oglede održavamo prema dogovorenom rasporedu i javljamo rezultate."
+        },
+        "deal": {
+          "title": "Podrška za dogovor",
+          "text": "Pomažemo u pripremi dokumentacije i podržavamo Vas do potpisivanja kupoprodajnog ugovora."
+        }
+      },
+      "kicker": "Prodaja",
+      "lead": "Nekretninu procjenjujemo, pripremamo za prodaju i pregovaramo s kupcima. Radite s jednom osobom i dobivate izvješća o tome kako ide prodaja.",
+      "terms": {
+        "commission_html": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+        "contract": "Pisani ugovor u skladu sa zakonima Crne Gore.",
+        "exclusive": "Poželjan je ekskluzivni ugovor: jedna kontaktna točka umjesto svakog agenta i agencije u Crnoj Gori."
+      },
+      "terms_link": "Uzorak sporazuma",
+      "faq": {
+        "price": {
+          "a": "Za prodaju stanova, naknada iznosi 5% od cijene kupoprodajnog ugovora, uključujući VAT, koju plaća samo prodavatelj. Ostale vrste nekretnina i najam dogovaraju se posebno.",
+          "q": "Koliko koštaju vaše usluge?"
+        },
+        "price_change": {
+          "q": "Tko odlučuje o promjeni cijene?",
+          "a": "Samo vlasnik. Svaku promjenu cijene unaprijed dogovaramo s vama."
+        },
+        "exclusive": {
+          "q": "Moram li potpisati ekskluzivni ugovor?",
+          "a": "Ne, ali preporučujemo: poslujete s jednom agencijom umjesto sa svakim agentom u Crnoj Gori, nekretnina je na tržištu po jednoj cijeni, a gledanja se odvijaju prema dogovorenom rasporedu."
+        },
+        "documents": {
+          "q": "Koji dokumenti su mi potrebni za podnošenje zahtjeva?",
+          "a": "Nijedan. Broj vlasničkog lista, katastarska općina (KO) i za stan broj jedinice (PD) pomažu nam da brže provjerimo vlasništvo. Prilikom potpisivanja ugovora potreban je komplet dokumenata."
+        },
+        "business": {
+          "q": "Mogu li prodati aktivnu tvrtku ili građevinski projekt?",
+          "a": "Da. Također preuzimamo investicijska sredstva na strani prodavatelja. Podaci o poslovanju dijele se samo s kvalificiranim kupcima i, prema potrebi, nakon potpisivanja NDA."
+        }
+      },
+      "h1": "Prodajte svoju nekretninu u Crnoj Gori",
+      "included_title": "Što uključuje usluga prodaje",
+      "form_intro": "Recite nam nešto o nekretnini — u ovoj fazi nisu potrebni nikakvi dokumenti. Katastarski podaci koriste se samo za provjeru imovine.",
+      "form_title": "Predajte nekretninu na prodaju"
+    },
+    "rent_out": {
+      "kicker": "Iznajmljivanje",
+      "included": {
+        "photo": {
+          "title": "Fotografija i opis",
+          "text": "Fotografiramo nekretninu i pripremamo popisni opis."
+        },
+        "rate": {
+          "text": "Predlažemo dugoročnu cijenu - do sezone ili godinu dana - na temelju područja, stanja i ponude na tržištu.",
+          "title": "Procjena cijene najma"
+        },
+        "viewings": {
+          "title": "Gledanja",
+          "text": "Oglede održavamo prema dogovorenom rasporedu s Vama."
+        },
+        "search": {
+          "title": "Pretraga i pregled stanara",
+          "text": "Upoznajemo se s kandidatima i provjeravamo termin, stanare, ljubimce i budžet. Konačna odluka je vaša."
+        },
+        "lease": {
+          "title": "Ugovor o najmu",
+          "text": "Pomažemo u pripremi ugovora o najmu: termin, depozit, režije i primopredaja nekretnine."
+        }
+      },
+      "meta": {
+        "title": "Iznajmite svoju nekretninu u Budvi | GUREVIĆ",
+        "description": "Dugoročni najam stana ili kuće u Budvi i Crnoj Gori — do sezone ili godinu dana: cijena najma, slike, traženje najmoprimca i ugovor o najmu."
+      },
+      "included_title": "Što uključuje usluga najma",
+      "h1": "Iznajmite svoju nekretninu na duži rok",
+      "faq": {
+        "price": {
+          "q": "Koliko koštaju vaše usluge?",
+          "a": "Provizija i uvjeti se dogovaraju pojedinačno i dogovaraju pismenim putem."
+        },
+        "term": {
+          "a": "Radimo s dugoročnim najmom — do početka sezone ili godinu dana. Kratkoročni najam još je u razvoju.",
+          "q": "Na koliko dugo iznajmljujete nekretnine?"
+        },
+        "tenant": {
+          "q": "Kako birate najmoprimca?",
+          "a": "Upoznajemo se s kandidatima, provjeravamo termin, stanare, kućne ljubimce i budžet te Vama prenosimo te podatke. Odluka o iznajmljivanju je vaša."
+        },
+        "presence": {
+          "q": "Trebam li prisustvovati gledanjima?",
+          "a": "Nije nužno: razgledavanje je moguće uz ključeve ostavljene u agenciji. To se dogovara prilikom potpisivanja sporazuma."
+        }
+      },
+      "lead": "Pomažemo vam da iznajmite stan ili kuću na duži rok — do sezone ili godinu dana: procjenjujemo cijenu najma, pronalazimo najmoprimca i pripremamo ugovor o najmu.",
+      "terms": {
+        "term": "Iznajmljuje se samo na duži period: do sezone ili godinu dana.",
+        "commission_html": "Provizija i uvjeti <strong>po dogovoru</strong>.",
+        "contract": "Uvjeti se dogovaraju pisanim putem."
+      },
+      "form_title": "Predajte nekretninu za najam",
+      "form_intro": "Recite nam nešto o nekretnini i terminu najma koji imate na umu. U ovoj fazi nisu potrebni dokumenti."
+    },
+    "management": {
+      "h1": "Upravljanje imovinom",
+      "kicker": "Upravljanje",
+      "included": {
+        "keys": {
+          "text": "Agencija čuva ključeve — za oglede, obrtnike i hitne slučajeve.",
+          "title": "Držanje ključeva"
+        },
+        "checks": {
+          "text": "Pregledi prilikom prijave i odjave dugogodišnjeg najmoprimca i po dogovoru tijekom najma.",
+          "title": "Provjere imovine"
+        },
+        "maintenance": {
+          "title": "Održavanje i popravci",
+          "text": "Koordinacija izvođača radova; cijena radova se unaprijed dogovara s vlasnikom."
+        },
+        "bills": {
+          "title": "Komunalije i računi",
+          "text": "Provjera i plaćanje režija po dogovoru."
+        }
+      },
+      "lead": "Za vlasnike koji ne žive u Crnoj Gori stalno ili iznajmljuju svoju nekretninu na duži period. Zadaci i termini dogovaraju se pojedinačno.",
+      "terms": {
+        "commission_html": "Uvjeti se dogovaraju <strong>pojedinačno</strong>.",
+        "scope": "Zadaci i izvještavanje su unaprijed dogovoreni.",
+        "contract": "Dogovori se sklapaju u pisanom obliku."
+      },
+      "faq": {
+        "price": {
+          "q": "Koliko to košta?",
+          "a": "Termini se dogovaraju pojedinačno i ovise o nekretnini i zadacima."
+        },
+        "scope": {
+          "q": "Što uključuje menadžment?",
+          "a": "Zadaci se dogovaraju pojedinačno: na primjer, čuvanje ključeva, plaćanje komunalnih računa, provjera imovine tijekom dugoročnog najma i koordinacija popravaka preko izvođača."
+        },
+        "combine": {
+          "a": "Da, možemo razgovarati o tome: na primjer, pronaći dugoročnog stanara i ostati s njim u kontaktu nakon toga.",
+          "q": "Može li se upravljanje kombinirati s iznajmljivanjem?"
+        },
+        "repairs": {
+          "q": "Izvodite li sami popravke?",
+          "a": "Ne, mi koordiniramo izvođače. Cijena radova unaprijed se dogovara s vlasnikom."
+        }
+      },
+      "form_title": "Zatražite upravljanje imovinom",
+      "form_intro": "Recite nam nešto o nekretnini i koje zadatke želite predati. U ovoj fazi nisu potrebni dokumenti.",
+      "meta": {
+        "title": "Upravljanje nekretninama u Budvi | GUREVIĆ",
+        "description": "Upravljanje imovinom u Budvi za vlasnike: ključevi, računi za komunalije, provjere imovine i koordinacija izvođača. Termini se dogovaraju pojedinačno."
+      },
+      "included_note": "Nema fiksnog paketa: dogovorimo se oko zadataka koji su vam potrebni.",
+      "included_title": "Što se može dogovoriti"
+    }
+  },
+  "js": {
+    "contract_request_sale": "Pošaljite mi uzorak ugovora o prodaji nekretnine.",
+    "contract_request_business": "Pošaljite mi primjerak ugovora o prodaji poduzeća."
+  },
+  "downloads": {
+    "download": "Preuzmite PDF",
+    "title": "Uzorci ugovora",
+    "exclusive": "Ekskluzivni ugovor o posredovanju",
+    "note": "Primjeri na engleskom i crnogorskom jeziku. Prije potpisivanja dogovorite uvjete s agencijom. Oba isporučena uzorka sadrže odredbe o ekskluzivnosti.",
+    "sale": "Kupoprodajni ugovor",
+    "view": "Pogledajte PDF"
+  }
+}

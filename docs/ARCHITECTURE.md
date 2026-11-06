@@ -1,14 +1,14 @@
-# Gurevic Real Estate — architecture of the v3 site (static generator + 7 languages)
+# Gurevic Real Estate — architecture of the v3 site (static generator + 8 languages)
 
 This document is the **contract** shared by everybody who edits the site. Read it fully
 before changing anything. Russian is the primary content language; the site is
-translated into en, de, fr, pl, uk, he (Hebrew is RTL and mirrored).
+translated into en, de, fr, pl, uk, he and cnr (Hebrew is RTL and mirrored).
 
 ## 0. Ground rules
 
-- Hosting: GitHub Pages, legacy build, branch `main`, folder `/` →
-  `https://re6al.github.io/gurevic-real-estate/` (a **sub-path**!). A custom domain may be
-  added later. Therefore: **every internal link and asset reference is relative** and is
+- Hosting: GitHub Pages, legacy build, branch `main`, folder `/`, custom domain
+  `https://gurevic.estate/`. The GitHub Pages repository remains the deployment source.
+  Therefore: **every internal link and asset reference is relative** and is
   produced by the generator helpers `url()` / `asset()`. Never hard-code `/buy/` or
   `https://…` for internal links. Absolute URLs exist only in canonical / hreflang / OG /
   JSON-LD / sitemap and are built from `site.site_url`.

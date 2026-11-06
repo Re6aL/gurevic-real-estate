@@ -10,6 +10,16 @@
   ('invest', 'invest', 'building', ['select', 'legal', 'handover', 'partners']),
   ('owners', 'owners', 'document', ['valuation', 'photo', 'contract', 'management']),
 ] %}
+{% set FAQ_KEYS = ['commission', 'documents', 'foreigners', 'residency', 'legalisation', 'areas'] %}
+{% set faq_items = [] %}
+{% for key in FAQ_KEYS %}
+{% set _ = faq_items.append({'@type': 'Question', 'name': t('services.faq.items.' ~ key ~ '.q'),
+                             'acceptedAnswer': {'@type': 'Answer', 'text': t('services.faq.items.' ~ key ~ '.a')}}) %}
+{% endfor %}
+
+{% block head_extra %}
+<script type="application/ld+json">{{ {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': faq_items} | tojson }}</script>
+{% endblock %}
 
 {% block main %}
 <header class="info-hero">
@@ -74,6 +84,20 @@
         <span class="info-muted-inline">({{ t('services.residency.link_note') }})</span>
       </p>
       <p class="note-card__disclaimer">{{ ui.icon('info', size=18) }}<span>{{ t('services.residency.disclaimer') }}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section" aria-labelledby="services-faq">
+  <div class="container info-faq">
+    {{ ui.section_head(t('services.faq.title'), sub=t('services.faq.sub'), id='services-faq') }}
+    <div class="info-faq__list">
+      {% for key in FAQ_KEYS %}
+      <details class="info-faq__item">
+        <summary>{{ t('services.faq.items.' ~ key ~ '.q') }}</summary>
+        <p>{{ t('services.faq.items.' ~ key ~ '.a') }}</p>
+      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

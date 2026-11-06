@@ -1,0 +1,7 @@
+<section class="section" aria-labelledby="agreement-downloads"><div class="container">
+<h2 id="agreement-downloads">{{ t('owners.downloads.title') }}</h2><p>{{ t('owners.downloads.note') }}</p>
+<div class="feature-grid">{% for code,file in [('sale','sales-agreement-en-me.pdf'),('exclusive','exclusive-agreement-en-me.pdf')] %}
+<article class="info-card"><h3>{{ t('owners.downloads.' ~ code) }}</h3><p>
+<a class="btn btn-outline" href="{{ asset('assets/contracts/' ~ file) }}" target="_blank" rel="noopener">{{ t('owners.downloads.view') }}</a>
+<a class="btn btn-outline" href="{{ asset('assets/contracts/' ~ file) }}" download>{{ t('owners.downloads.download') }}</a></p></article>
+{% endfor %}</div></div></section>

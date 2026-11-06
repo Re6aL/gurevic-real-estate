@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "{title}, ID {id} | GUREVIĆ",
+    "description": "{card} {price_phrase}. ID {id}. Detalji, lokacija i zakazivanje obilaska — agencija GUREVIĆ, Budva.",
+    "price": "Cijena: {price}",
+    "title_confidential": "{title} | GUREVIĆ",
+    "description_confidential": "{title}. {price_phrase}. Povjerljiva investiciona ponuda: detalji nakon provjere upita i NDA. GUREVIĆ, Budva."
+  },
+  "labels": {
+    "description": "Opis",
+    "location": "Lokacija",
+    "price": "Cijena",
+    "id": "ID nekretnine",
+    "project": "Projekat",
+    "features": "Karakteristike",
+    "units": "Jedinice u projektu"
+  },
+  "head": {
+    "price_label": "Cijena",
+    "rent_label": "Mjesečni najam",
+    "per_m2": "{price} po m²",
+    "indicative_label": "Okvirna cijena",
+    "preliminary": "Okvirno, podložno provjeri",
+    "available_from": "Dostupno od {date}"
+  },
+  "gallery": {
+    "aria": "Fotografije nekretnine",
+    "prev": "Prethodna fotografija",
+    "next": "Sljedeća fotografija",
+    "thumbs_aria": "Pregled fotografija",
+    "thumb": "Fotografija {n} od {total}",
+    "open": "Otvori fotografiju preko cijelog ekrana",
+    "illustration_note": "Fotografije ove nekretnine još nijesu objavljene — prikazana je ilustracija kategorije."
+  },
+  "id": {
+    "label": "ID nekretnine",
+    "hint": "Navedite ID pri kontaktu kako bismo brzo pronašli nekretninu.",
+    "copy": "Kopiraj",
+    "copy_aria": "Kopiraj ID nekretnine {id}"
+  },
+  "sections": {
+    "about": "O nekretnini",
+    "location": "O lokaciji",
+    "facts": "Karakteristike",
+    "features": "Dodatna oprema",
+    "units": "Jedinice u projektu",
+    "map": "Lokacija na mapi",
+    "similar": "Slične nekretnine",
+    "request": "Upit za ovu nekretninu"
+  },
+  "groups": {
+    "main": "Osnovno",
+    "money": "Cijena",
+    "rent": "Uslovi najma",
+    "more": "Stanje i oprema"
+  },
+  "facts": {
+    "type": "Vrsta",
+    "district": "Naselje",
+    "region": "Region",
+    "area": "Površina",
+    "area_unit": "Površina jedinice",
+    "plot": "Plac",
+    "bedrooms": "Spavaće sobe",
+    "bathrooms": "Kupatila",
+    "floor": "Sprat",
+    "balconies": "Balkoni i terase",
+    "view": "Pogled",
+    "monthly": "Mjesečni najam",
+    "terms": "Period najma",
+    "min_term": "Minimalni period",
+    "deposit": "Depozit",
+    "available_from": "Dostupno od",
+    "utilities": "Režije",
+    "pets": "Kućni ljubimci",
+    "price": "Cijena",
+    "price_m2": "Cijena po m²",
+    "payment_plan": "Plan plaćanja",
+    "transfer_tax": "Porezi i naknade",
+    "furnishing": "Namještenost",
+    "condition": "Stanje",
+    "parking": "Parking",
+    "distance_to_sea": "Udaljenost od mora",
+    "completion": "Završetak gradnje"
+  },
+  "values": {
+    "no_deposit": "Bez depozita",
+    "utilities": {
+      "included": "Uključene",
+      "not_included": "Plaćaju se posebno",
+      "partial": "Djelimično uključene"
+    },
+    "pets": {
+      "allowed": "Dozvoljeni",
+      "not_allowed": "Nijesu dozvoljeni",
+      "by_agreement": "Po dogovoru"
+    }
+  },
+  "units": {
+    "intro": "Dostupno {available} od {total}. Provjerite cijenu i raspoloživost prema ID-u jedinice.",
+    "floor": "Sprat",
+    "bedrooms": "Spavaće sobe",
+    "area": "Površina",
+    "view": "Pogled",
+    "status": {
+      "available": "Dostupno",
+      "reserved": "Rezervisano",
+      "sold": "Prodato",
+      "unknown": "Na upit"
+    },
+    "request": "Pitajte u razgovoru"
+  },
+  "map": {
+    "button": "Prikaži mapu",
+    "note": "Google Maps se učitava tek nakon pritiska na dugme.",
+    "exact": "Oznaka je zasnovana na podacima nekretnine. Tačnu adresu dostavljamo na upit.",
+    "approx": "Oznaka prikazuje centar naselja, a ne adresu nekretnine.",
+    "iframe_title": "Mapa: {place}",
+    "open_external": "Otvori u Google Maps",
+    "confidential": "Mapa se ne objavljuje za povjerljive ponude: prikazujemo samo region — {region}."
+  },
+  "cta": {
+    "title": "Zainteresovani ste za ovu nekretninu?",
+    "text": "Odgovorićemo na pitanja i dogovoriti obilazak. Navedite ID nekretnine s ove stranice.",
+    "call": "Pozovite",
+    "whatsapp": "Pišite na WhatsApp",
+    "whatsapp_text": "Dobar dan, interesuje me nekretnina {id}: {url}",
+    "chat": "Pitajte u razgovoru",
+    "form_heading": "Zatražite detalje",
+    "agent_name": "GUREVIĆ",
+    "agent_role": "Agencija za nekretnine, Budva"
+  },
+  "confidential": {
+    "badge": "Povjerljivo",
+    "note_title": "Povjerljiva ponuda",
+    "note": "Naziv, tačna adresa i dokumentacija otkrivaju se nakon provjere upita i, po potrebi, potpisivanja NDA. Svi iznosi su okvirni i podložni provjeri.",
+    "cta_title": "Zatražite detalje",
+    "cta_text": "Opišite ciljeve i budžet — nakon provjere upita dostavićemo dostupne informacije.",
+    "cta_button": "Na obrazac za upit",
+    "enquiry_title": "Upit za ovu investicionu ponudu",
+    "enquiry_intro": "Navedite ID {id} u poruci. U ovoj fazi ne tražimo podatke iz pasoša ni finansijsku dokumentaciju.",
+    "invest_link": "Svi investicioni pravci"
+  },
+  "similar": {
+    "all": "Sve nekretnine u kategoriji"
+  },
+  "illustration": "Ilustracija",
+  "date": "{d}. {month} {y}.",
+  "months": {
+    "m1": "januar",
+    "m2": "februar",
+    "m3": "mart",
+    "m4": "april",
+    "m5": "maj",
+    "m6": "jun",
+    "m7": "jul",
+    "m8": "avgust",
+    "m9": "septembar",
+    "m10": "oktobar",
+    "m11": "novembar",
+    "m12": "decembar"
+  },
+  "plural": {
+    "months": {
+      "one": "{n} mjesec",
+      "few": "{n} mjeseca",
+      "other": "{n} mjeseci"
+    }
+  },
+  "gen": {
+    "where": "u naselju {district}",
+    "where_other": "u Crnoj Gori",
+    "title": "{type} {area} m² — {district_title}",
+    "title_no_area": "{type} — {district_title}",
+    "title_project": "{name} — {district_title}",
+    "card": "{type} {where}: {params}.",
+    "card_no_params": "{type} {where}.",
+    "lead": "{type} {where}.",
+    "lead_project": "{type} „{name}” {where}.",
+    "part_area": "površina {n} m²",
+    "part_area_house": "površina kuće {n} m²",
+    "part_area_unit": "površina jedinice {n} m²",
+    "part_land": "plac {n} m²",
+    "part_plot": "površina placa {n} m²",
+    "price": "Cijena: {price}.",
+    "price_per_m2": "Cijena: {price} ({per} po m²).",
+    "price_on_request": "Cijena na upit.",
+    "price_rent": "Najam: {price} mjesečno.",
+    "closing": "Odgovorićemo na pitanja i organizovati obilazak — navedite ID {id} pri kontaktu.",
+    "closing_no_params": "Karakteristike se provjeravaju. Za detalje i obilazak navedite ID {id}.",
+    "location": "Naselje: {district}.",
+    "location_coords": "Oznaka na mapi potiče iz podataka nekretnine; tačna adresa na upit.",
+    "location_approx": "Mapa prikazuje naselje; tačna adresa na upit.",
+    "location_confidential": "Region: {region}. Tačna lokacija nakon provjere upita.",
+    "confidential_title": "{type}, {region}",
+    "confidential_card": "{type}, {region}. Detalji nakon provjere upita, uz NDA po potrebi.",
+    "confidential_description": "Povjerljiva ponuda: {type_lc}, {region}. Naziv, tačna adresa i dokumentacija nakon provjere investitora i, po potrebi, NDA. Svi iznosi su okvirni i podložni provjeri.",
+    "where_in": {
+      "budva-center": "u Budvi",
+      "budva-rozino": "u Rozinu, Budva",
+      "budva-waterfront": "na budvanskoj obali",
+      "budva-ivanica": "u Ivanici, Budva",
+      "budva-veligrad": "u Veligradu, Budva",
+      "becici": "u Bečićima",
+      "rafailovici": "u Rafailovićima",
+      "przno": "u Pržnu",
+      "sveti-stefan": "na Svetom Stefanu",
+      "lapcici": "u Lapčićima",
+      "tudorovici": "u Tudorovićima",
+      "lastva-grbaljska": "u Lastvi Grbaljskoj",
+      "petrovac": "u Petrovcu",
+      "buljarica": "u Buljarici",
+      "tivat": "u Tivtu",
+      "kotor": "u Kotoru",
+      "herceg-novi": "u Herceg Novom",
+      "bar": "u Baru",
+      "dobra-voda": "u Dobroj Vodi",
+      "ulcinj": "u Ulcinju",
+      "rijeka-crnojevica": "u Rijeci Crnojevića",
+      "cetinje": "na Cetinju",
+      "podgorica": "u Podgorici",
+      "other": "u Crnoj Gori"
+    },
+    "district_title": {
+      "budva-center": "Budva — centar",
+      "budva-rozino": "Budva – Rozino",
+      "budva-waterfront": "Budva — obala",
+      "budva-ivanica": "Budva – Ivanica",
+      "budva-veligrad": "Budva – Veligrad"
+    },
+    "district_about": {
+      "budva-center": "Budva je primorski grad i središte Budvanske rivijere.",
+      "budva-rozino": "Rozino je stambeno naselje u Budvi.",
+      "budva-waterfront": "Dio Budve uz gradsku obalu i šetalište.",
+      "budva-ivanica": "Ivanica je naselje u Budvi.",
+      "budva-veligrad": "Veligrad je naselje u Budvi.",
+      "becici": "Bečići su primorsko naselje istočno od Budve.",
+      "rafailovici": "Rafailovići su primorsko naselje uz Bečiće.",
+      "przno": "Pržno je naselje između Budve i Svetog Stefana.",
+      "sveti-stefan": "Sveti Stefan je naselje jugoistočno od Budve.",
+      "lapcici": "Lapčići su selo u brdima iznad Budvanske rivijere.",
+      "tudorovici": "Tudorovići su selo iznad obale u okolini Pržna.",
+      "lastva-grbaljska": "Lastva Grbaljska je u Grblju, između Budve i Tivta.",
+      "petrovac": "Petrovac je primorsko mjesto južno od Budve.",
+      "buljarica": "Buljarica je uvala južno od Petrovca.",
+      "tivat": "Tivat se nalazi u Boki Kotorskoj i ima međunarodni aerodrom.",
+      "kotor": "Kotor je istorijski grad u Boki Kotorskoj.",
+      "herceg-novi": "Herceg Novi je grad na ulazu u Boku Kotorsku.",
+      "bar": "Bar je lučki grad na južnom primorju.",
+      "dobra-voda": "Dobra Voda je primorsko naselje u okolini Bara.",
+      "ulcinj": "Ulcinj je grad na jugu crnogorskog primorja.",
+      "rijeka-crnojevica": "Rijeka Crnojevića je naselje u području Skadarskog jezera.",
+      "cetinje": "Cetinje je istorijska prijestonica Crne Gore.",
+      "podgorica": "Podgorica je glavni grad Crne Gore."
+    }
+  },
+  "js": {
+    "copied": "Kopirano",
+    "copied_status": "ID {id} kopiran",
+    "copy_failed": "Kopiranje nije uspjelo — označite ID ručno",
+    "counter": "{n} / {total}",
+    "photo": "Fotografija {n} od {total}",
+    "lightbox": "Pregled fotografija",
+    "close": "Zatvori",
+    "prev": "Prethodna fotografija",
+    "next": "Sljedeća fotografija",
+    "map_loading": "Učitavanje mape…"
+  }
+}

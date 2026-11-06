@@ -39,7 +39,8 @@
     "menu_open": "פתיחת התפריט",
     "menu_close": "סגירת התפריט",
     "submenu": "תפריט משנה: {label}",
-    "menu": "תפריט"
+    "menu": "תפריט",
+    "buy_new": "פרויקטים חדשים בבודווה ובמונטנגרו"
   },
   "routes": {
     "home": "דף הבית",
@@ -65,7 +66,26 @@
     "contact": "צור קשר",
     "privacy": "פרטיות",
     "map": "מפת נכסים",
-    "property": "נכס"
+    "property": "נכס",
+    "area_budva-center": "בודווה – מרכז העיר",
+    "area_budva-rozino": "בודווה – רוזינו",
+    "area_becici": "בצ׳יצ׳י",
+    "area_rafailovici": "רפאילוביצ׳י",
+    "area_przno": "פרז׳נו",
+    "area_sveti-stefan": "סבטי סטפן",
+    "area_petrovac": "פטרובאץ",
+    "area_lastva-grbaljska": "לסטבה גרבליסקה",
+    "area_tivat": "טיבט",
+    "area_kotor": "קוטור",
+    "area_bar": "בר",
+    "area_herceg-novi": "הרצג נובי",
+    "buy_new": "פרויקטים חדשים בבודווה ובמונטנגרו",
+    "guides": "מדריכי קונים ומשקיעים",
+    "guide_buying": "קניית נכס במונטנגרו",
+    "guide_taxes": "מס רכוש במונטנגרו",
+    "guide_residency": "רכוש, מגורים ואזרחות במונטנגרו",
+    "guide_documents": "מסמכים ולגליזציה של רכוש",
+    "guide_returns": "החזרות שכר דירה ועונתיות"
   },
   "footer": {
     "nav_aria": "תפריט תחתון",
@@ -283,5 +303,13 @@
     "price_on_request": "המחיר יימסר לפי בקשה",
     "per_month": "לחודש",
     "price_from": "החל מ־{price}"
+  },
+  "consent": {
+    "title": "ניתוח שימוש באתר",
+    "text": "בהסכמתך אנו משתמשים ב-Yandex Metrica לסטטיסטיקת ביקורים. הקלטת מפגשים ותוכן טפסים מושבתת. סירוב אינו משפיע על פעילות האתר.",
+    "policy": "מדיניות פרטיות",
+    "reject": "דחייה",
+    "accept": "אישור ניתוח שימוש",
+    "settings": "הגדרות עוגיות"
   }
 }

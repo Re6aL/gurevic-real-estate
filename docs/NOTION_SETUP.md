@@ -85,7 +85,7 @@
 | `Name` | Title | — | имя; если нет — компания; иначе «Website lead» |
 | `Form` | Select | `Investor (private)`, `Investor (company)`, `Owner`, `Contact`, `Rent request`, `Buy request`, `Property request`, `Chat` | какая форма |
 | `Status` | Status | To-do: `New`; In progress: `In progress`, `Qualified`, `NDA sent`; Complete: `Closed`, `Spam` | новые заявки — `New` |
-| `Language` | Select | `Русский`, `English`, `Deutsch`, `Français`, `Polski`, `Українська`, `עברית` | язык страницы сайта |
+| `Language` | Select | `Русский`, `English`, `Deutsch`, `Français`, `Polski`, `Українська`, `עברית`, `Crnogorski` | язык страницы сайта |
 | `Preferred Language` | Select | `Русский`, `English`, `Crnogorski/Srpski`, `Українська`, `Other` | язык общения (при `Other` текст — в Message) |
 | `Contact Method` | Select | `E-mail`, `Phone`, `WhatsApp`, `Telegram`, `Video call` | как связаться |
 | `Email` | Email | — | |

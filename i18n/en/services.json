@@ -53,7 +53,7 @@
         "contract": "Sale or letting under a written agreement",
         "management": "Property management by arrangement"
       },
-      "note": "Agency commission: 5% (excluding VAT); other terms by agreement.",
+      "note": "For apartment sales, the fee is 5% of the sale agreement price, including VAT, payable only by the seller. Other property types and rentals are agreed separately.",
       "link": "For owners"
     }
   },
@@ -85,6 +85,36 @@
     "link": "Current amendments to the Law on Foreigners",
     "link_note": "in Montenegrin",
     "disclaimer": "The information on this website is not legal advice."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "sub": "Brief answers to the questions buyers and owners ask first.",
+    "items": {
+      "commission": {
+        "q": "How much does the agency charge?",
+        "a": "For apartment sales, the fee is 5% of the sale agreement price, including VAT, and is paid only by the seller. Terms for other property types and rentals are agreed separately in writing."
+      },
+      "documents": {
+        "q": "Which documents should be checked before buying?",
+        "a": "The exact set depends on the property. It commonly includes the current title deed, seller identity and authority, registered burdens and restrictions, planning or legalisation status, and the draft agreement. Partner lawyers and the notary carry out the relevant legal checks."
+      },
+      "foreigners": {
+        "q": "Can a foreign citizen buy property in Montenegro?",
+        "a": "In many cases, yes. Restrictions can apply to certain categories of land and property, so the buyer's citizenship and the specific title deed must be checked before a deposit is paid."
+      },
+      "residency": {
+        "q": "Does buying property automatically grant residence?",
+        "a": "No. Property may be a basis for a temporary residence application when the current statutory conditions are met, but residence is a separate procedure and is not automatic."
+      },
+      "legalisation": {
+        "q": "Can an unlegalised property be sold?",
+        "a": "The answer depends on the property's registration and legalisation status and on the current law. Some transactions can be restricted. We recommend checking the title deed and obtaining legal advice before agreeing terms."
+      },
+      "areas": {
+        "q": "Which parts of Montenegro do you cover?",
+        "a": "The agency is based in Budva and works across the coast, including the Budva Riviera, Petrovac, Tivat, Kotor, Herceg Novi and Bar. Individual investment opportunities may be located elsewhere in Montenegro."
+      }
+    }
   },
   "form": {
     "kicker": "Get in touch",

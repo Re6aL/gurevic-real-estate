@@ -1,0 +1,40 @@
+{
+  "filters": {
+    "all": "Sve",
+    "buy": "Kupiti",
+    "aria": "Odjeljak",
+    "invest": "Projekti",
+    "rent": "Najam"
+  },
+  "meta": {
+    "description": "GUREVIĆ nekretnine na mapi Budve i Crne Gore: stanovi, kuće, parcele i građevinski projekti po područjima. Odaberite pribadaču i otvorite stranicu svojstva.",
+    "title": "Mapa nekretnina: Budva i Crna Gora | GUREVIĆ"
+  },
+  "h1": "Karta posjeda",
+  "view": {
+    "aria": "Pogled",
+    "map": "Karta",
+    "list": "Popis"
+  },
+  "lead": "Nekretnine iz kataloga na karti obale. Povjerljive mogućnosti ulaganja nisu prikazane na karti.",
+  "js": {
+    "details": "Vidi detalje",
+    "zoom_in": "Povećaj",
+    "count": {
+      "other": "{n} svojstva",
+      "one": "{n} vlasništvo"
+    },
+    "load_error": "Kartu nije moguće učitati. Popis nekretnina dostupan je na stranici.",
+    "approx": "Približno — središte područja",
+    "show_on_map": "Prikaži na karti",
+    "zoom_out": "Smanji"
+  },
+  "map_aria": "Interaktivna karta nekretnina",
+  "list_title": "Nekretnine na karti",
+  "empty": "Na karti u ovom dijelu još nema nekretnina.",
+  "legend": {
+    "exact": "Pin na temelju podataka o vlasništvu",
+    "approx": "Približno: središte područja"
+  },
+  "noscript": "Karta treba JavaScript. Popis nekretnina dostupan je u nastavku."
+}
