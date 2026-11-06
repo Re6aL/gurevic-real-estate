@@ -6,7 +6,7 @@
     "description": "Kako DOO GUREVIĆ BUDVA postupa s podacima iz obrazaca i chata na ovoj web stranici: što prikupljamo, zašto, tko ih prima, koliko dugo ih čuvamo i koja su vaša prava."
   },
   "toc_title": "Sadržaj",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "lead": "Koje podatke primamo putem ove web stranice, zašto su nam potrebni, s kim se dijele i kako ih možete kontrolirati.",
   "sections": {
     "controller": {
@@ -73,9 +73,11 @@
     },
     "retention": {
       "title": "Koliko dugo čuvamo podatke",
-      "p3": "Unosi u pohrani vašeg preglednika ostaju na vašem uređaju (pogledajte \"Kolačići i pohrana preglednika\").",
-      "p2": "Tehnički dnevnici usluga hostinga i dostave čuvaju se za razdoblja koja određuju te tvrtke.",
-      "p1": "Kao opće pravilo, upite i korespondenciju čuvamo do 24 mjeseca nakon zadnjeg kontakta s vama, nakon čega ih brišemo ili anonimiziramo. Ako smo sklopili ugovor, povezani podaci se čuvaju onoliko dugo koliko ugovor i zakon zahtijevaju."
+      "p1": "Po pravilu, upite i prepisku koji ne dovedu do zaključenja ugovora čuvamo do 24 mjeseca od posljednjeg kontakta sa vama, nakon čega ih brišemo ili anonimizujemo.",
+      "p2": "Obavezni upis u evidenciji za svaki ugovor o posredovanju čuva se trajno. Ugovor o posredovanju i prateća dokumentacija čuvaju se deset godina od dana zaključenja ugovora.",
+      "p3": "Podaci, dokumentacija, poslovna korespondencija i izvještaji pribavljeni radi ispunjavanja obaveza sprečavanja pranja novca i finansiranja terorizma čuvaju se pet godina nakon prestanka poslovnog odnosa ili izvršene povremene transakcije. Nadležni organ može u pojedinačnom slučaju zakonito zahtijevati produženje za najviše još pet godina. Po isteku primjenjivog roka lični podaci se brišu ili uništavaju, osim ako drugi zakon zahtijeva duže čuvanje.",
+      "p4": "Tehnički dnevnici usluga hostinga i dostave čuvaju se u rokovima koje određuju te kompanije.",
+      "p5": "Unosi u memoriji vašeg pregledača ostaju na vašem uređaju (pogledajte \"Kolačići i memorija pregledača\")."
     },
     "rights": {
       "title": "Vaša prava",

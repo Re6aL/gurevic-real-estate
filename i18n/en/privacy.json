@@ -6,7 +6,7 @@
   "h1": "Privacy policy",
   "kicker": "Your data",
   "lead": "What data we receive through this website, why we need it, who it is shared with and how you can control it.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "toc_title": "Contents",
   "back_to_top": "Back to contents",
   "sections": {
@@ -74,9 +74,11 @@
     },
     "retention": {
       "title": "How long we keep data",
-      "p1": "As a general rule, we keep enquiries and correspondence for up to 24 months after our last contact with you, after which we delete or anonymise them. If we have concluded an agreement, the related data is kept for as long as the agreement and the law require.",
-      "p2": "Technical logs of the hosting and delivery services are kept for the periods set by those companies.",
-      "p3": "Entries in your browser's storage remain on your device (see \"Cookies and browser storage\")."
+      "p1": "As a general rule, we keep enquiries and correspondence that do not result in an agreement for up to 24 months after our last contact with you, after which we delete or anonymise them.",
+      "p2": "The mandatory register entry for each brokerage agreement is kept permanently. The brokerage agreement itself and its supporting documents are kept for ten years from the date the agreement is concluded.",
+      "p3": "Data, documents, business correspondence and reports collected to comply with anti-money laundering and counter-terrorist financing requirements are kept for five years after the end of the business relationship or completion of an occasional transaction. A competent authority may lawfully require an extension of up to a further five years in an individual case. At the end of the applicable period, personal data is deleted or destroyed unless another law requires longer retention.",
+      "p4": "Technical logs of the hosting and delivery services are kept for the periods set by those companies.",
+      "p5": "Entries in your browser's storage remain on your device (see \"Cookies and browser storage\")."
     },
     "rights": {
       "title": "Your rights",

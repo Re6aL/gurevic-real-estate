@@ -6,7 +6,7 @@
   "h1": "Politique de confidentialité",
   "kicker": "Vos données",
   "lead": "Quelles données nous recevons via ce site, pourquoi nous en avons besoin, à qui elles sont communiquées et comment vous pouvez en garder la maîtrise.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "toc_title": "Sommaire",
   "back_to_top": "Retour au sommaire",
   "sections": {
@@ -74,9 +74,11 @@
     },
     "retention": {
       "title": "Durée de conservation",
-      "p1": "En règle générale, nous conservons les demandes et la correspondance jusqu’à 24 mois après notre dernier contact avec vous, puis nous les supprimons ou les anonymisons. Si nous avons conclu un contrat, les données correspondantes sont conservées aussi longtemps que le contrat et la loi l’exigent.",
-      "p2": "Les journaux techniques des services d’hébergement et d’acheminement sont conservés pendant les durées fixées par ces sociétés.",
-      "p3": "Les entrées enregistrées dans le stockage de votre navigateur restent sur votre appareil (voir « Cookies et stockage du navigateur »)."
+      "p1": "En règle générale, nous conservons les demandes et la correspondance qui n’aboutissent pas à un contrat jusqu’à 24 mois après notre dernier contact avec vous, puis nous les supprimons ou les anonymisons.",
+      "p2": "L’inscription obligatoire au registre pour chaque contrat de courtage est conservée de façon permanente. Le contrat de courtage lui-même et ses pièces justificatives sont conservés pendant dix ans à compter de sa conclusion.",
+      "p3": "Les données, documents, correspondances professionnelles et rapports recueillis pour respecter les obligations de lutte contre le blanchiment de capitaux et le financement du terrorisme sont conservés pendant cinq ans après la fin de la relation d’affaires ou l’exécution d’une opération occasionnelle. Une autorité compétente peut légalement exiger, au cas par cas, une prolongation maximale de cinq années supplémentaires. À l’expiration du délai applicable, les données personnelles sont supprimées ou détruites, sauf si une autre loi impose une conservation plus longue.",
+      "p4": "Les journaux techniques des services d’hébergement et d’acheminement sont conservés pendant les durées fixées par ces sociétés.",
+      "p5": "Les entrées enregistrées dans le stockage de votre navigateur restent sur votre appareil (voir « Cookies et stockage du navigateur »)."
     },
     "rights": {
       "title": "Vos droits",

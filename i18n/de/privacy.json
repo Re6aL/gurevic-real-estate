@@ -6,7 +6,7 @@
   "h1": "Datenschutzerklärung",
   "kicker": "Ihre Daten",
   "lead": "Welche Daten wir über diese Website erhalten, wozu wir sie benötigen, an wen sie weitergegeben werden und wie Sie darüber bestimmen können.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "toc_title": "Inhalt",
   "back_to_top": "Zurück zum Inhalt",
   "sections": {
@@ -74,9 +74,11 @@
     },
     "retention": {
       "title": "Wie lange wir Daten speichern",
-      "p1": "In der Regel speichern wir Anfragen und Korrespondenz bis zu 24 Monate nach unserem letzten Kontakt mit Ihnen und löschen oder anonymisieren sie danach. Wenn wir einen Vertrag geschlossen haben, werden die zugehörigen Daten so lange aufbewahrt, wie Vertrag und Gesetz es verlangen.",
-      "p2": "Technische Protokolle des Hostings und der Zustelldienste werden für die von diesen Unternehmen festgelegten Fristen gespeichert.",
-      "p3": "Einträge im Speicher Ihres Browsers verbleiben auf Ihrem Gerät (siehe „Cookies und Browserspeicher“)."
+      "p1": "Anfragen und Korrespondenz, die nicht zum Abschluss eines Vertrags führen, speichern wir in der Regel bis zu 24 Monate nach unserem letzten Kontakt mit Ihnen und löschen oder anonymisieren sie anschließend.",
+      "p2": "Der gesetzlich vorgeschriebene Registereintrag zu jedem Maklervertrag wird dauerhaft aufbewahrt. Der Maklervertrag selbst und die dazugehörigen Unterlagen werden zehn Jahre ab Vertragsschluss aufbewahrt.",
+      "p3": "Daten, Unterlagen, Geschäftskorrespondenz und Berichte, die zur Erfüllung der Vorschriften zur Bekämpfung von Geldwäsche und Terrorismusfinanzierung erhoben werden, speichern wir fünf Jahre nach Beendigung der Geschäftsbeziehung oder Durchführung einer gelegentlichen Transaktion. Eine zuständige Behörde kann im Einzelfall rechtmäßig eine Verlängerung um höchstens weitere fünf Jahre verlangen. Nach Ablauf der geltenden Frist werden personenbezogene Daten gelöscht oder vernichtet, sofern kein anderes Gesetz eine längere Aufbewahrung verlangt.",
+      "p4": "Technische Protokolle des Hostings und der Zustelldienste werden für die von diesen Unternehmen festgelegten Fristen gespeichert.",
+      "p5": "Einträge im Speicher Ihres Browsers verbleiben auf Ihrem Gerät (siehe „Cookies und Browserspeicher“)."
     },
     "rights": {
       "title": "Ihre Rechte",
