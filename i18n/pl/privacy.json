@@ -6,7 +6,7 @@
   "h1": "Polityka prywatności",
   "kicker": "Państwa dane",
   "lead": "Jakie dane otrzymujemy za pośrednictwem tej strony, do czego są nam potrzebne, komu są przekazywane i jak mogą Państwo nimi zarządzać.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "toc_title": "Spis treści",
   "back_to_top": "Powrót do spisu treści",
   "sections": {
@@ -74,9 +74,11 @@
     },
     "retention": {
       "title": "Jak długo przechowujemy dane",
-      "p1": "Co do zasady zapytania i korespondencję przechowujemy do 24 miesięcy od ostatniego kontaktu z Państwem, a następnie je usuwamy lub anonimizujemy. Jeśli zawarliśmy umowę, związane z nią dane przechowujemy tak długo, jak wymagają tego umowa i przepisy prawa.",
-      "p2": "Logi techniczne usług hostingu i dostarczania są przechowywane przez okresy ustalone przez te firmy.",
-      "p3": "Wpisy w pamięci Państwa przeglądarki pozostają na Państwa urządzeniu (zob. sekcja „Pliki cookie i pamięć przeglądarki”)."
+      "p1": "Co do zasady zapytania i korespondencję, które nie prowadzą do zawarcia umowy, przechowujemy do 24 miesięcy od ostatniego kontaktu z Państwem, a następnie je usuwamy lub anonimizujemy.",
+      "p2": "Obowiązkowy wpis do ewidencji dotyczący każdej umowy pośrednictwa jest przechowywany bezterminowo. Sama umowa pośrednictwa i dokumenty towarzyszące są przechowywane przez dziesięć lat od dnia jej zawarcia.",
+      "p3": "Dane, dokumenty, korespondencja biznesowa i raporty gromadzone w celu wykonania obowiązków w zakresie przeciwdziałania praniu pieniędzy i finansowaniu terroryzmu są przechowywane przez pięć lat od zakończenia relacji biznesowej lub przeprowadzenia transakcji okazjonalnej. W indywidualnym przypadku właściwy organ może zgodnie z prawem zażądać przedłużenia tego okresu o maksymalnie kolejne pięć lat. Po upływie właściwego okresu dane osobowe są usuwane lub niszczone, chyba że inne przepisy wymagają dłuższego przechowywania.",
+      "p4": "Logi techniczne usług hostingu i dostarczania są przechowywane przez okresy ustalone przez te firmy.",
+      "p5": "Wpisy w pamięci Państwa przeglądarki pozostają na Państwa urządzeniu (zob. sekcja „Pliki cookie i pamięć przeglądarki”)."
     },
     "rights": {
       "title": "Państwa prawa",
