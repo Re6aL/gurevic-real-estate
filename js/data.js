@@ -338,8 +338,7 @@ const LISTINGS =
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
-    "price": 0,
-    "priceNote": "Цена по запросу",
+    "price": 215000,
     "area": 48,
     "rooms": "1 спальня",
     "bedrooms": 1,
@@ -370,8 +369,7 @@ const LISTINGS =
     "deal": "sale",
     "location": "Бечичи",
     "districtKey": "becici",
-    "price": 0,
-    "priceNote": "Цена по запросу",
+    "price": 220000,
     "area": 49,
     "rooms": "1 спальня",
     "bedrooms": 1,
@@ -387,9 +385,19 @@ const LISTINGS =
     "short": "Квартира в районе Бечичи: площадь 49 м², 1 спальня.",
     "desc": "Квартира в районе Бечичи: площадь 49 м², 1 спальня. Описание сформировано из проверенных полей CRM; дополнительные характеристики уточняются у риелтора.",
     "features": [],
-    "photos": 4,
+    "photos": 8,
     "hue": 314,
-    "disclosure": "public"
+    "disclosure": "public",
+    "images": [
+      "img/listings/bd-26-022s/01.jpg",
+      "img/listings/bd-26-022s/02.jpg",
+      "img/listings/bd-26-022s/03.jpg",
+      "img/listings/bd-26-022s/04.jpg",
+      "img/listings/bd-26-022s/05.jpg",
+      "img/listings/bd-26-022s/06.jpg",
+      "img/listings/bd-26-022s/07.jpg",
+      "img/listings/bd-26-022s/08.jpg"
+    ]
   },
   {
     "id": "bd-26-021h",
