@@ -309,7 +309,7 @@
   },
   "consent": {
     "title": "Analityka strony",
-    "text": "Za Twoją zgodą używamy Yandex Metrica do statystyk odwiedzin. Nagrywanie sesji i treści formularzy jest wyłączone. Odmowa nie wpływa na działanie strony.",
+    "text": "Za Twoją zgodą używamy Yandex Metrica i Google Analytics do statystyk odwiedzin. Nagrywanie sesji i treści formularzy jest wyłączone. Odmowa nie wpływa na działanie strony.",
     "policy": "Polityka prywatności",
     "reject": "Odrzuć",
     "accept": "Zezwól na analitykę",

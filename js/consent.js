@@ -4,7 +4,7 @@
   const S = window.SITE || {}, config = S.analytics || {};
   const panel = document.querySelector('[data-consent-panel]');
   if (!panel) return;
-  const key = 'gre_analytics_consent_v1';
+  const key = 'gre_analytics_consent_v2'; // v2: + Google Analytics
   let allowed = false, loaded = false;
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };

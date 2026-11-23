@@ -306,7 +306,7 @@
   },
   "consent": {
     "title": "Analitika sajta",
-    "text": "Uz vašu saglasnost koristimo Yandex Metrica za statistiku posjeta. Snimanje sesija i sadržaja obrazaca je isključeno. Odbijanje ne utiče na rad sajta.",
+    "text": "Uz vašu saglasnost koristimo Yandex Metrica i Google Analytics za statistiku posjeta. Snimanje sesija i sadržaja obrazaca je isključeno. Odbijanje ne utiče na rad sajta.",
     "policy": "Politika privatnosti",
     "reject": "Odbij",
     "accept": "Dozvoli analitiku",

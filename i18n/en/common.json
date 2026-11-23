@@ -303,7 +303,7 @@
   },
   "consent": {
     "title": "Website analytics",
-    "text": "With your consent, we use Yandex Metrica for visit statistics. Session replay and form-content recording are disabled. Declining does not affect the website.",
+    "text": "With your consent, we use Yandex Metrica and Google Analytics for visit statistics. Session replay and form-content recording are disabled. Declining does not affect the website.",
     "policy": "Privacy policy",
     "reject": "Decline",
     "accept": "Allow analytics",

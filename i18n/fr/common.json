@@ -303,7 +303,7 @@
   },
   "consent": {
     "title": "Statistiques du site",
-    "text": "Avec votre accord, nous utilisons Yandex Metrica pour les statistiques de visites. L’enregistrement des sessions et des formulaires est désactivé. Le refus n’affecte pas le site.",
+    "text": "Avec votre accord, nous utilisons Yandex Metrica et Google Analytics pour les statistiques de visites. L’enregistrement des sessions et des formulaires est désactivé. Le refus n’affecte pas le site.",
     "policy": "Confidentialité",
     "reject": "Refuser",
     "accept": "Autoriser les statistiques",

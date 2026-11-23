@@ -303,7 +303,7 @@
   },
   "consent": {
     "title": "Website-Analyse",
-    "text": "Mit Ihrer Einwilligung verwenden wir Yandex Metrica für Besuchsstatistiken. Sitzungsaufzeichnungen und Formularaufzeichnungen sind deaktiviert. Eine Ablehnung beeinträchtigt die Website nicht.",
+    "text": "Mit Ihrer Einwilligung verwenden wir Yandex Metrica und Google Analytics für Besuchsstatistiken. Sitzungsaufzeichnungen und Formularaufzeichnungen sind deaktiviert. Eine Ablehnung beeinträchtigt die Website nicht.",
     "policy": "Datenschutzerklärung",
     "reject": "Ablehnen",
     "accept": "Analyse erlauben",
