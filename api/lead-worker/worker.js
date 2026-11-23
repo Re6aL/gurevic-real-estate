@@ -4,7 +4,7 @@
 //   NOTION_TOKEN        токен интеграции «website-leads» (только Insert content)
 //   NOTION_LEADS_DB_ID  ID базы «Website Leads»
 //   TELEGRAM_BOT_TOKEN  (необязательно) бот для уведомлений
-//   TELEGRAM_CHAT_ID    (необязательно) чат, куда слать уведомления
+//   TELEGRAM_CHAT_ID    (необязательно) чат(ы) для уведомлений, несколько — через запятую
 // Переменная (wrangler.toml [vars]): ALLOWED_ORIGINS — через запятую.
 //
 // Формат запроса — docs/ARCHITECTURE.md §7, ключи полей — brief §E / docs/NOTION_SETUP.md.
@@ -427,20 +427,21 @@ export function telegramText(lead, notionUrl) {
 
 async function notifyTelegram(env, lead, notionUrl) {
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) return;
-  try {
-    const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: env.TELEGRAM_CHAT_ID,
-        text: telegramText(lead, notionUrl),
-        disable_web_page_preview: true,
-      }),
-    });
-    if (!res.ok) console.error(`telegram failed: HTTP ${res.status}`);
-  } catch {
-    console.error('telegram failed: network');
-  }
+  // TELEGRAM_CHAT_ID может содержать несколько получателей через запятую
+  const chatIds = String(env.TELEGRAM_CHAT_ID).split(',').map((c) => c.trim()).filter(Boolean);
+  const text = telegramText(lead, notionUrl);
+  await Promise.all(chatIds.map(async (chatId) => {
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text, disable_web_page_preview: true }),
+      });
+      if (!res.ok) console.error(`telegram failed: HTTP ${res.status}`);
+    } catch {
+      console.error('telegram failed: network');
+    }
+  }));
 }
 
 // ---------- обработчик ----------

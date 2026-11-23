@@ -406,6 +406,17 @@ test('Telegram summary is sent when configured and omits sensitive numbers', asy
   }
 });
 
+test('Telegram summary goes to every comma-separated chat id', async () => {
+  const env = { ...ENV, TELEGRAM_BOT_TOKEN: '1:x', TELEGRAM_CHAT_ID: '111, 222' };
+  const pending = [];
+  const ctx = { waitUntil: (p) => pending.push(p) };
+  const { res } = await send(payload(), {}, env, ctx);
+  assert.equal(res.status, 200);
+  await Promise.all(pending);
+  const ids = calls.filter((c) => c.url.includes('api.telegram.org')).map((c) => c.body.chat_id).sort();
+  assert.deepEqual(ids, ['111', '222']);
+});
+
 test('Telegram failure does not fail the request', async () => {
   const env = { ...ENV, TELEGRAM_BOT_TOKEN: '1:x', TELEGRAM_CHAT_ID: '1' };
   const base = defaultResponder();
