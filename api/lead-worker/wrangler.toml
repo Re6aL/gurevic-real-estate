@@ -17,6 +17,18 @@ preview_urls = false
 # При подключении своего домена — добавить его сюда и передеплоить.
 ALLOWED_ORIGINS = "https://re6al.github.io,https://gurevic.estate,https://www.gurevic.estate,http://localhost:8768"
 
+# Защита от спама: лимиты считаются на стороне Cloudflare (бесплатно, period — 10 или 60 с).
+# Заявки: не больше 5 в минуту с одного IP; уведомления в Telegram: не больше 20 в минуту всего.
+[[ratelimits]]
+name = "LEAD_LIMITER"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }
+
+[[ratelimits]]
+name = "TELEGRAM_LIMITER"
+namespace_id = "1002"
+simple = { limit = 20, period = 60 }
+
 [observability]
 # Хранимые логи выключены: журнал вызовов Cloudflare содержит IP и заголовки посетителей.
 # Для отладки — живой поток `npx wrangler tail` (код пишет только коды ошибок).

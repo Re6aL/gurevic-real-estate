@@ -203,7 +203,7 @@
     <span class="info-kicker">Vaši podaci</span>
     <h1>Politika privatnosti</h1>
     <p class="info-lead">Koje podatke primamo putem ove web stranice, zašto su nam potrebni, s kim se dijele i kako ih možete kontrolirati.</p>
-    <p class="info-updated"><svg class="icon icon-calendar" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg><span>2026-11-06</span></p>
+    <p class="info-updated"><svg class="icon icon-calendar" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg><span>2026-11-23</span></p>
   </div>
 </header>
 
@@ -219,7 +219,7 @@
       <li><a href="#pp-transfers">Transferi van Crne Gore</a></li>
       <li><a href="#pp-retention">Koliko dugo čuvamo podatke</a></li>
       <li><a href="#pp-rights">Vaša prava</a></li>
-      <li><a href="#pp-storage">Postavke kolačića</a></li>
+      <li><a href="#pp-storage">Kolačići i memorija pregledača</a></li>
       <li><a href="#pp-security">Sigurnost podataka</a></li>
       <li><a href="#pp-children">djeca</a></li>
       <li><a href="#pp-changes">Promjene ove politike</a></li>
@@ -249,6 +249,7 @@
       <p>Svaki zahtjev također automatski uključuje jezik i adresu stranice s koje je poslan, vrijeme slanja, vrijeme utrošeno na ispunjavanje obrasca (zaštita od neželjene pošte), verziju pristanka i oznake kampanje (UTM) ako ste stigli preko poveznice koja ih sadrži.</p>
       <p>Putem ove web stranice ne tražimo podatke o putovnici, bankovne podatke ili financijske dokumente. Nemojte ih uključivati ​​u komentare.</p>
       <p>Prilikom svakog otvaranja stranice pružatelj usluga hostinga automatski prima tehničke podatke: IP adresu, informacije o pregledniku i uređaju, traženu adresu i vrijeme zahtjeva. Svaki web poslužitelj radi na ovaj način; pogledajte &#34;Tko prima podatke&#34; za detalje.</p>
+      <p>Statistika posjeta prikuplja se samo uz vašu saglasnost — pogledajte &#34;Kolačići i memorija pregledača&#34;.</p>
       <p class="legal-top"><a href="#pp-toc"><svg class="icon icon-chevron-up" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg><span>Povratak na sadržaj</span></a></p>
     </section>
     <section class="legal-section" aria-labelledby="pp-purposes">
@@ -259,7 +260,7 @@
         <li>za sklapanje i izvršavanje ugovora s vama;</li>
         <li>za zaštitu web stranice i obrazaca od spama i zlouporabe;</li>
         <li>izvršiti početni pregled investicijskog upita i pripremiti NDA prema potrebi;</li>
-        <li>kako biste razumjeli koje reklamne veze donose upite (samo UTM oznake, bez praćenja vašeg ponašanja na web stranici).</li>
+        <li>uz vašu saglasnost — da bismo vodili statistiku posjeta (Yandex Metrica, Google Analytics) i razumjeli koje stranice i reklamni linkovi donose upite; bez saglasnosti bilježe se samo UTM oznake sadržane u samom upitu.</li>
         <li>procijeniti nekretninu vlasnika, pripremiti ugovor i započeti prodaju ili iznajmljivanje;</li>
       </ul>
       <p>Ne prodajemo podatke, ne koristimo ih za automatizirano donošenje odluka i ne šaljemo marketinške poruke bez vašeg posebnog pristanka.</p>
@@ -268,7 +269,7 @@
     <section class="legal-section" aria-labelledby="pp-bases">
       <h2 id="pp-bases"><span class="legal-num" aria-hidden="true">4.</span> Pravne osnove</h2>
       <ul class="legal-list">
-        <li><strong>Pristanak.</strong> Dajete ga označavanjem kvadratića prilikom slanja obrasca ili potvrdom slanja u chatu. Privolu možete povući u bilo kojem trenutku; to ne utječe na zakonitost obrade prije povlačenja.</li>
+        <li><strong>Saglasnost.</strong> Dajete je označavanjem polja prilikom slanja obrasca, potvrdom slanja u chatu ili dozvolom analitike u baneru o kolačićima. Saglasnost možete povući u bilo kojem trenutku; to ne utiče na zakonitost obrade prije povlačenja.</li>
         <li><strong>Koraci prije ugovora i njegove izvedbe.</strong> Kada od nas tražite da pronađemo ili procijenimo nekretninu, pripremimo ugovor ili podržimo transakciju.</li>
         <li><strong>Legitimni interes.</strong> Zaštita web stranice od spama i zlouporabe (skriveno polje zamke za botove, provjera vremena ispunjavanja obrasca) i vođenje evidencije upita.</li>
         <li><strong>Zakonska obveza.</strong> Gdje je čuvanje određenih podataka ili dokumenata propisano zakonom, primjerice u vezi sa sklopljenim ugovorom.</li>
@@ -281,9 +282,11 @@
       <ul class="legal-list">
         <li><strong>Notion Labs, Inc.</strong> (SAD) — CRM sustav u kojem se pohranjuju upiti s web stranice.</li>
         <li><strong>GitHub, Inc.</strong> (SAD) — hosting web stranica (GitHub stranice). GitHub prima tehničke podatke o posjetima (IP adresa, preglednik, tražena stranica) i čuva ih u zapisnicima poslužitelja pod vlastitim uvjetima.</li>
-        <li><strong>Cloudflare, Inc.</strong> (SAD) — isporučuje podatke obrazaca u CRM (kada je ova usluga omogućena). Cloudflare prima podatke o upitu i IP adresu pošiljatelja isključivo za isporuku zahtjeva.</li>
-        <li><strong>Telegram</strong> — kratka interna obavijest agentu o novom upitu (ako su obavijesti uključene): tip upita, naziv i ključni parametri, bez telefona, e-maila, katastarskog i matičnog broja.</li>
+        <li><strong>Cloudflare, Inc.</strong> (SAD) — isporučuje podatke obrazaca u CRM. Cloudflare prima podatke o upitu i IP adresu pošiljatelja isključivo za isporuku zahtjeva.</li>
+        <li><strong>Telegram</strong> — kratka interna obavijest agentu o novom upitu: tip upita, naziv i ključni parametri, bez telefona, e-maila, katastarskog i matičnog broja.</li>
         <li><strong>Google</strong> — karta na stranici svojstva. Učitava se tek nakon što kliknete gumb za učitavanje karte; do tada se ništa ne šalje Googleu. Nakon učitavanja, Google prima vašu IP adresu i može koristiti vlastite kolačiće.</li>
+        <li><strong>Yandex</strong> (Rusija) — servis za statistiku Yandex Metrica. Učitava se samo ako dozvolite analitiku u baneru o kolačićima.</li>
+        <li><strong>Google Analytics</strong> (Google, SAD) — statistika posjeta. Učitava se samo ako dozvolite analitiku u baneru o kolačićima; Google signali i personalizacija oglasa su isključeni.</li>
         <li><strong>OpenStreetMap i unpkg.com</strong> — karta na stranici "Property map". Kada ga otvorite, vaš preglednik učitava biblioteku karata Leaflet s unpkg.com i pločice karte s poslužitelja OpenStreetMap; ovi poslužitelji primaju vašu IP adresu.</li>
         <li><strong>WhatsApp, Telegram, e-pošta</strong> — ako nam pišete izravno ili pošaljete zahtjev putem ovih kanala (uključujući zamjenske gumbe obrasca), podatke obrađuje usluga koju ste odabrali prema vlastitim uvjetima.</li>
       </ul>
@@ -293,7 +296,7 @@
     </section>
     <section class="legal-section" aria-labelledby="pp-transfers">
       <h2 id="pp-transfers"><span class="legal-num" aria-hidden="true">6.</span> Transferi van Crne Gore</h2>
-      <p>Neka od navedenih poduzeća nalaze se izvan Crne Gore, uključujući i SAD. Za takve prijenose oslanjamo se na ugovorne zaštitne mjere tih tvrtki, kao što su standardne ugovorne klauzule o zaštiti podataka. Detalji su dostupni na zahtjev putem e-pošte.</p>
+      <p>Neka od navedenih poduzeća nalaze se izvan Crne Gore, uključujući i SAD. Za takve prijenose oslanjamo se na ugovorne zaštitne mjere tih tvrtki, kao što su standardne ugovorne klauzule o zaštiti podataka. Detalji su dostupni na zahtjev putem e-pošte. Statistički podaci servisa Yandex Metrica mogu se obrađivati u Rusiji; prenose se samo uz vašu saglasnost.</p>
       <p class="legal-top"><a href="#pp-toc"><svg class="icon icon-chevron-up" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg><span>Povratak na sadržaj</span></a></p>
     </section>
     <section class="legal-section" aria-labelledby="pp-retention">
@@ -323,8 +326,10 @@
       <p class="legal-top"><a href="#pp-toc"><svg class="icon icon-chevron-up" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg><span>Povratak na sadržaj</span></a></p>
     </section>
     <section class="legal-section" aria-labelledby="pp-storage">
-      <h2 id="pp-storage"><span class="legal-num" aria-hidden="true">9.</span> Postavke kolačića</h2>
-      <p>Uz vaš pristanak koristimo Yandex Metrica za statistiku posjeta. Onemogućeni su ponavljanje sesije i snimanje sadržaja forme. Odbijanje ne utječe na web mjesto.</p>
+      <h2 id="pp-storage"><span class="legal-num" aria-hidden="true">9.</span> Kolačići i memorija pregledača</h2>
+      <p>Bez vaše saglasnosti sajt ne postavlja kolačiće za statistiku ni oglašavanje. U memoriji pregledača (localStorage) čuva se samo vaš izbor u baneru o kolačićima, da vas ne bismo pitali pri svakoj posjeti.</p>
+      <p>Ako kliknete „Dozvoli analitiku“, učitavaju se Yandex Metrica i Google Analytics. Oni postavljaju svoje kolačiće (na primjer _ym_uid i _ga) i dobijaju vašu IP adresu, podatke o pregledaču i uređaju, adresu stranice bez parametara i sajt sa kojeg ste došli. Snimanje sesija (Webvisor), mape klikova, Google signali i personalizacija oglasa su isključeni; sadržaj obrazaca i kontakt podaci nikada se ne šalju ovim servisima.</p>
+      <p>Izbor važi 6 mjeseci, nakon čega se baner ponovo prikazuje. Možete ga promijeniti u bilo kojem trenutku dugmetom „Podešavanja kolačića“ na dnu stranice: ako odbijete, analitika se isključuje, a njeni kolačići se brišu.</p>
       <p class="legal-top"><a href="#pp-toc"><svg class="icon icon-chevron-up" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg><span>Povratak na sadržaj</span></a></p>
     </section>
     <section class="legal-section" aria-labelledby="pp-security">

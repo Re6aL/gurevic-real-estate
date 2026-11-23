@@ -412,12 +412,19 @@ export function buildMinimalProperties(lead, schema) {
 
 // ---------- Telegram ----------
 
+// Telegram сам делает ссылки кликабельными — поэтому текст от посетителя
+// обрезаем и убираем из него ссылки и домены, чтобы заявка не стала фишингом.
+const LINKISH = /(?:[a-z][a-z0-9+.-]*:\/\/|www\.)\S+|\b[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}\b(?:\/\S*)?|@[a-z0-9_]{4,}/gi;
+export function tgSafe(value, max = 80) {
+  return String(value).replace(LINKISH, '[ссылка]').replace(/\s+/g, ' ').trim().slice(0, max);
+}
+
 export function telegramText(lead, notionUrl) {
   const f = lead.fields;
   const lines = [`Новая заявка с сайта: ${FORMS[lead.form]}`];
-  if (f.name) lines.push(`Имя: ${f.name}`);
+  if (f.name) lines.push(`Имя: ${tgSafe(f.name, 60)}`);
   for (const key of TELEGRAM_FIELDS) {
-    if (f[key] !== undefined && f[key] !== '' && key !== 'nda') lines.push(`${key}: ${labelFor(key, f[key])}`);
+    if (f[key] !== undefined && f[key] !== '' && key !== 'nda') lines.push(`${key}: ${tgSafe(labelFor(key, f[key]))}`);
   }
   if (f.nda) lines.push('NDA: да');
   if (lead.lang) lines.push(`Язык сайта: ${lead.lang}`);
@@ -427,6 +434,11 @@ export function telegramText(lead, notionUrl) {
 
 async function notifyTelegram(env, lead, notionUrl) {
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) return;
+  // Общий потолок уведомлений: при наплыве спама заявки пишутся в Notion, но чат не заваливает
+  if (env.TELEGRAM_LIMITER) {
+    const { success } = await env.TELEGRAM_LIMITER.limit({ key: 'telegram' });
+    if (!success) { console.error('telegram skipped: rate limited'); return; }
+  }
   // TELEGRAM_CHAT_ID может содержать несколько получателей через запятую
   const chatIds = String(env.TELEGRAM_CHAT_ID).split(',').map((c) => c.trim()).filter(Boolean);
   const text = telegramText(lead, notionUrl);
@@ -471,6 +483,12 @@ async function handle(request, env, ctx) {
   const ctype = (request.headers.get('Content-Type') || '').split(';')[0].trim().toLowerCase();
   if (ctype !== 'text/plain' && ctype !== 'application/json') {
     return json(415, { ok: false, error: 'unsupported_media_type' }, cors);
+  }
+  // Не больше нескольких заявок в минуту с одного IP (привязка [[ratelimits]] в wrangler.toml)
+  if (env.LEAD_LIMITER) {
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+    const { success } = await env.LEAD_LIMITER.limit({ key: ip });
+    if (!success) return json(429, { ok: false, error: 'rate_limited' }, { ...cors, 'Retry-After': '60' });
   }
   if (!env.NOTION_TOKEN || !env.NOTION_LEADS_DB_ID) {
     console.error('config: NOTION_TOKEN / NOTION_LEADS_DB_ID not set');

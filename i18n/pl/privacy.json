@@ -6,7 +6,7 @@
   "h1": "Polityka prywatności",
   "kicker": "Państwa dane",
   "lead": "Jakie dane otrzymujemy za pośrednictwem tej strony, do czego są nam potrzebne, komu są przekazywane i jak mogą Państwo nimi zarządzać.",
-  "updated": "2026-11-06",
+  "updated": "2026-11-23",
   "toc_title": "Spis treści",
   "back_to_top": "Powrót do spisu treści",
   "sections": {
@@ -29,7 +29,8 @@
       },
       "p2": "Wraz z każdym zapytaniem automatycznie przekazywane są: język i adres strony, z której zostało wysłane, czas wysłania, czas wypełniania formularza (ochrona przed spamem), wersja zgody oraz znaczniki kampanii (UTM), jeśli trafili Państwo na stronę przez link, który je zawiera.",
       "p3": "Za pośrednictwem tej strony nie prosimy o dane paszportowe, dane bankowe ani dokumenty finansowe. Prosimy nie podawać ich w komentarzach.",
-      "p4": "Przy każdym otwarciu strony dostawca hostingu automatycznie otrzymuje dane techniczne: adres IP, informacje o przeglądarce i urządzeniu, adres żądanej strony i czas żądania. Tak działa każdy serwer WWW; szczegóły w sekcji „Komu przekazywane są dane”."
+      "p4": "Przy każdym otwarciu strony dostawca hostingu automatycznie otrzymuje dane techniczne: adres IP, informacje o przeglądarce i urządzeniu, adres żądanej strony i czas żądania. Tak działa każdy serwer WWW; szczegóły w sekcji „Komu przekazywane są dane”.",
+      "p5": "Statystyki odwiedzin są zbierane wyłącznie za Państwa zgodą — zob. sekcja „Pliki cookie i pamięć przeglądarki”."
     },
     "purposes": {
       "title": "W jakim celu wykorzystujemy dane",
@@ -40,7 +41,7 @@
         "invest": "aby przeprowadzić wstępną kwalifikację zapytania inwestycyjnego i w razie potrzeby przygotować NDA;",
         "contract": "aby zawrzeć i wykonać umowę z Państwem;",
         "security": "aby chronić stronę i formularze przed spamem i nadużyciami;",
-        "utm": "aby wiedzieć, które linki reklamowe przynoszą zapytania (wyłącznie znaczniki UTM, bez śledzenia Państwa zachowania na stronie)."
+        "utm": "za Państwa zgodą — aby prowadzić statystyki odwiedzin (Yandex Metrica, Google Analytics) i wiedzieć, które strony i linki reklamowe przynoszą zapytania; bez zgody rejestrowane są tylko znaczniki UTM zawarte w samym zapytaniu."
       },
       "p1": "Nie sprzedajemy danych, nie wykorzystujemy ich do zautomatyzowanego podejmowania decyzji i nie wysyłamy informacji marketingowych bez Państwa odrębnej zgody."
     },
@@ -48,7 +49,7 @@
       "title": "Podstawy prawne",
       "p1": "Przetwarzamy dane zgodnie z czarnogórskimi przepisami o ochronie danych osobowych, a w przypadku odwiedzających z Unii Europejskiej — z uwzględnieniem ogólnego rozporządzenia UE o ochronie danych (RODO, GDPR). Podstawy prawne przetwarzania to:",
       "list": {
-        "consent_html": "<strong>Zgoda.</strong> Wyrażają ją Państwo, zaznaczając pole przy wysyłaniu formularza lub potwierdzając wysłanie na czacie. Zgodę można wycofać w dowolnym momencie; nie wpływa to na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.",
+        "consent_html": "<strong>Zgoda.</strong> Wyrażają ją Państwo, zaznaczając pole przy wysyłaniu formularza, potwierdzając wysłanie na czacie lub zezwalając na analitykę w banerze cookies. Zgodę można wycofać w dowolnym momencie; nie wpływa to na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.",
         "contract_html": "<strong>Działania przed zawarciem umowy i jej wykonanie.</strong> Gdy proszą nas Państwo o znalezienie lub wycenę nieruchomości, przygotowanie umowy albo obsługę transakcji.",
         "interest_html": "<strong>Prawnie uzasadniony interes.</strong> Ochrona strony przed spamem i nadużyciami (ukryte pole-pułapka dla botów, sprawdzanie czasu wypełniania formularza) oraz ewidencja zapytań.",
         "law_html": "<strong>Obowiązek prawny.</strong> Gdy przechowywanie określonych danych lub dokumentów jest wymagane przez prawo, na przykład w związku z zawartą umową."
@@ -59,10 +60,12 @@
       "p1": "Dostęp do zapytań ma wyłącznie agencja. Do obsługi strony korzystamy z usług następujących firm; przetwarzają one dane w naszym imieniu lub na własnych zasadach, jak opisano poniżej.",
       "list": {
         "notion_html": "<strong>Notion Labs, Inc.</strong> (USA) — system CRM, w którym przechowywane są zapytania ze strony.",
-        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) — przekazuje dane z formularzy do CRM (po uruchomieniu tej usługi). Cloudflare otrzymuje dane zapytania i adres IP nadawcy wyłącznie w celu dostarczenia zapytania.",
-        "telegram_html": "<strong>Telegram</strong> — krótkie wewnętrzne powiadomienie dla agenta o nowym zapytaniu (jeśli powiadomienia są włączone): rodzaj zapytania, imię i główne parametry, bez telefonu, e-maila, numerów katastralnych i rejestrowych.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) — przekazuje dane z formularzy do CRM. Cloudflare otrzymuje dane zapytania i adres IP nadawcy wyłącznie w celu dostarczenia zapytania.",
+        "telegram_html": "<strong>Telegram</strong> — krótkie wewnętrzne powiadomienie dla agenta o nowym zapytaniu: rodzaj zapytania, imię i główne parametry, bez telefonu, e-maila, numerów katastralnych i rejestrowych.",
         "github_html": "<strong>GitHub, Inc.</strong> (USA) — hosting strony (GitHub Pages). GitHub otrzymuje dane techniczne o odwiedzinach (adres IP, przeglądarka, żądana strona) i przechowuje je w logach serwera na własnych zasadach.",
         "google_html": "<strong>Google</strong> — mapa na stronie oferty. Ładuje się dopiero po kliknięciu przycisku wczytania mapy; wcześniej do Google nic nie jest przesyłane. Po wczytaniu mapy Google otrzymuje Państwa adres IP i może używać własnych plików cookie.",
+        "yandex_html": "<strong>Yandex</strong> (Rosja) — usługa statystyk Yandex Metrica. Ładuje się tylko wtedy, gdy zezwolą Państwo na analitykę w banerze cookies.",
+        "ga_html": "<strong>Google Analytics</strong> (Google, USA) — statystyki odwiedzin. Usługa ładuje się tylko wtedy, gdy zezwolą Państwo na analitykę w banerze cookies; sygnały Google i personalizacja reklam są wyłączone.",
         "osm_html": "<strong>OpenStreetMap i unpkg.com</strong> — mapa na stronie „Mapa ofert”. Po jej otwarciu przeglądarka pobiera bibliotekę map Leaflet z serwisu unpkg.com i fragmenty mapy z serwerów OpenStreetMap; serwery te otrzymują Państwa adres IP.",
         "messengers_html": "<strong>WhatsApp, Telegram, e-mail</strong> — jeśli piszą Państwo do nas bezpośrednio lub wysyłają zapytanie tymi kanałami (w tym za pomocą zapasowych przycisków formularza), dane przetwarza wybrany przez Państwa serwis na własnych zasadach."
       },
@@ -70,7 +73,7 @@
     },
     "transfers": {
       "title": "Przekazywanie danych poza Czarnogórę",
-      "p1": "Niektóre z wymienionych firm mają siedzibę poza Czarnogórą, w tym w USA. Przy takim przekazywaniu opieramy się na umownych zabezpieczeniach stosowanych przez te firmy, takich jak standardowe klauzule umowne dotyczące ochrony danych. Szczegóły można uzyskać na zapytanie wysłane e-mailem."
+      "p1": "Niektóre z wymienionych firm mają siedzibę poza Czarnogórą, w tym w USA. Przy takim przekazywaniu opieramy się na umownych zabezpieczeniach stosowanych przez te firmy, takich jak standardowe klauzule umowne dotyczące ochrony danych. Szczegóły można uzyskać na zapytanie wysłane e-mailem. Dane statystyczne Yandex Metrica mogą być przetwarzane w Rosji; są one przekazywane wyłącznie za Państwa zgodą."
     },
     "retention": {
       "title": "Jak długo przechowujemy dane",
@@ -97,8 +100,10 @@
       "p3_html": "Organem nadzorczym w Czarnogórze jest <strong>Agencja Ochrony Danych Osobowych i Swobodnego Dostępu do Informacji</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Jeśli przebywają Państwo w Unii Europejskiej, mogą Państwo również zwrócić się do organu nadzorczego swojego państwa."
     },
     "storage": {
-      "title": "Ustawienia cookies",
-      "p1": "Za Twoją zgodą używamy Yandex Metrica do statystyk odwiedzin. Nagrywanie sesji i treści formularzy jest wyłączone. Odmowa nie wpływa na działanie strony."
+      "title": "Pliki cookie i pamięć przeglądarki",
+      "p1": "Bez Państwa zgody strona nie zapisuje plików cookie służących statystyce ani reklamie. W pamięci przeglądarki (localStorage) zapisywany jest jedynie Państwa wybór w banerze cookies, abyśmy nie pytali przy każdej wizycie.",
+      "p2": "Po kliknięciu „Zezwól na analitykę” ładowane są Yandex Metrica i Google Analytics. Zapisują one własne pliki cookie (np. _ym_uid i _ga) i otrzymują Państwa adres IP, informacje o przeglądarce i urządzeniu, adres strony bez parametrów oraz witrynę, z której Państwo przyszli. Nagrywanie sesji (Webvisor), mapy kliknięć, sygnały Google i personalizacja reklam są wyłączone; treść formularzy i dane kontaktowe nigdy nie są przekazywane tym usługom.",
+      "p3": "Wybór obowiązuje przez 6 miesięcy, potem baner pojawi się ponownie. Można go zmienić w dowolnym momencie przyciskiem „Ustawienia cookies” na dole strony: po odmowie analityka zostaje wyłączona, a jej pliki cookie usunięte."
     },
     "security": {
       "title": "Bezpieczeństwo danych",

@@ -19,6 +19,8 @@ be committed here.
   Municipality), documents, people, phone numbers and exact addresses are never
   read or published; only the district is derived from the address. E-mails and
   phone numbers found in description texts are stripped.
+- Published photos never carry EXIF/XMP/IPTC metadata (GPS, camera, capture
+  time): `dropbox_sync.py` strips it losslessly or re-encodes rotated photos.
 - Listings marked `Confidential` (default for hotels, commercial objects,
   businesses and investment land) are anonymized: no CRM title, no photos, no map
   coordinates. The workflow re-applies this after the Dropbox photo sync
@@ -43,8 +45,10 @@ be committed here.
   the body to 32 KB, validates fields, drops honeypot/too-fast submissions,
   requires consent, never echoes secrets and logs only error codes (persistent
   Cloudflare logs are disabled). Telegram notifications omit e-mail, phone,
-  cadastral and company registration numbers. Add a Cloudflare rate-limiting
-  rule for the Worker route.
+  cadastral and company registration numbers; visitor text in Telegram is
+  trimmed and stripped of links/domains (anti-phishing). Spam is throttled by
+  Workers rate-limit bindings (`wrangler.toml`): 5 leads/min per IP and 20
+  Telegram notifications/min in total.
 - Forms never ask for passport data or financial documents.
 
 ## Data retention

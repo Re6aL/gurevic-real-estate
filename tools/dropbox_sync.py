@@ -123,18 +123,58 @@ def is_supported_image(data):
     )
 
 
+def strip_jpeg_metadata(data):
+    """Losslessly drop EXIF/XMP (APP1), IPTC (APP13) and comments from a JPEG.
+
+    Phone photos carry GPS coordinates, camera model and capture time in EXIF;
+    publishing them would reveal exact addresses of anonymised objects. Image
+    data and the ICC colour profile (APP2) are kept byte-for-byte.
+    """
+    if not data.startswith(b"\xff\xd8"):
+        return data
+    out = bytearray(b"\xff\xd8")
+    i = 2
+    while i + 4 <= len(data):
+        if data[i] != 0xFF:
+            return data  # unexpected layout: leave the file untouched
+        marker = data[i + 1]
+        if marker == 0xFF:  # fill byte
+            i += 1
+            continue
+        if marker == 0xDA:  # start of scan: the rest is image data
+            out += data[i:]
+            return bytes(out)
+        if 0xD0 <= marker <= 0xD7 or marker == 0x01:
+            out += data[i:i + 2]
+            i += 2
+            continue
+        length = int.from_bytes(data[i + 2:i + 4], "big")
+        if marker not in (0xE1, 0xED, 0xFE):
+            out += data[i:i + 2 + length]
+        i += 2 + length
+    return data
+
+
+def jpeg_orientation(data):
+    with Image.open(io.BytesIO(data)) as source:
+        return source.getexif().get(0x0112, 1)
+
+
 def optimize_for_web(data, path, destination):
     if Image is None:
         fail("Pillow is required for public image optimization.")
     try:
         # A JPEG that already meets the public size limit is publication-ready.
-        # Validate it, but keep the realtor's original encoding byte-for-byte.
-        if data.startswith(b"\xff\xd8\xff") and len(data) <= MAX_PUBLIC_BYTES:
-            with Image.open(io.BytesIO(data)) as source:
+        # Keep the realtor's encoding, but strip metadata (GPS!). Rotated photos
+        # (EXIF orientation != 1) are re-encoded below so they stay upright.
+        if (data.startswith(b"\xff\xd8\xff") and len(data) <= MAX_PUBLIC_BYTES
+                and jpeg_orientation(data) == 1):
+            clean = strip_jpeg_metadata(data)
+            with Image.open(io.BytesIO(clean)) as source:
                 source.verify()
             with open(destination, "wb") as output:
-                output.write(data)
-            return len(data)
+                output.write(clean)
+            return len(clean)
 
         with Image.open(io.BytesIO(data)) as source:
             image = ImageOps.exif_transpose(source)

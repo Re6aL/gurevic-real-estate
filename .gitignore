@@ -16,3 +16,12 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# локальные рабочие папки — не для публичного репозитория
+.wrangler/
+api/lead-worker/.wrangler/
+node_modules/
+.qa/
+tmp/
+SITE_AUDIT_*.md
+debug.log

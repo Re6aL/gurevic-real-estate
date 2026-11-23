@@ -6,7 +6,7 @@
     "description": "Kako DOO GUREVIĆ BUDVA postupa s podacima iz obrazaca i chata na ovoj web stranici: što prikupljamo, zašto, tko ih prima, koliko dugo ih čuvamo i koja su vaša prava."
   },
   "toc_title": "Sadržaj",
-  "updated": "2026-11-06",
+  "updated": "2026-11-23",
   "lead": "Koje podatke primamo putem ove web stranice, zašto su nam potrebni, s kim se dijele i kako ih možete kontrolirati.",
   "sections": {
     "controller": {
@@ -28,7 +28,8 @@
       "p1": "Primamo samo ono što unesete u obrasce ili nam kažete u chatu, plus tehničke informacije bez kojih web stranica ne može raditi. Podaci ovise o obliku:",
       "p2": "Svaki zahtjev također automatski uključuje jezik i adresu stranice s koje je poslan, vrijeme slanja, vrijeme utrošeno na ispunjavanje obrasca (zaštita od neželjene pošte), verziju pristanka i oznake kampanje (UTM) ako ste stigli preko poveznice koja ih sadrži.",
       "p3": "Putem ove web stranice ne tražimo podatke o putovnici, bankovne podatke ili financijske dokumente. Nemojte ih uključivati ​​u komentare.",
-      "p4": "Prilikom svakog otvaranja stranice pružatelj usluga hostinga automatski prima tehničke podatke: IP adresu, informacije o pregledniku i uređaju, traženu adresu i vrijeme zahtjeva. Svaki web poslužitelj radi na ovaj način; pogledajte \"Tko prima podatke\" za detalje."
+      "p4": "Prilikom svakog otvaranja stranice pružatelj usluga hostinga automatski prima tehničke podatke: IP adresu, informacije o pregledniku i uređaju, traženu adresu i vrijeme zahtjeva. Svaki web poslužitelj radi na ovaj način; pogledajte \"Tko prima podatke\" za detalje.",
+      "p5": "Statistika posjeta prikuplja se samo uz vašu saglasnost — pogledajte \"Kolačići i memorija pregledača\"."
     },
     "purposes": {
       "list": {
@@ -37,7 +38,7 @@
         "contract": "za sklapanje i izvršavanje ugovora s vama;",
         "security": "za zaštitu web stranice i obrazaca od spama i zlouporabe;",
         "invest": "izvršiti početni pregled investicijskog upita i pripremiti NDA prema potrebi;",
-        "utm": "kako biste razumjeli koje reklamne veze donose upite (samo UTM oznake, bez praćenja vašeg ponašanja na web stranici).",
+        "utm": "uz vašu saglasnost — da bismo vodili statistiku posjeta (Yandex Metrica, Google Analytics) i razumjeli koje stranice i reklamni linkovi donose upite; bez saglasnosti bilježe se samo UTM oznake sadržane u samom upitu.",
         "owner": "procijeniti nekretninu vlasnika, pripremiti ugovor i započeti prodaju ili iznajmljivanje;"
       },
       "title": "Zašto koristimo podatke",
@@ -46,7 +47,7 @@
     "bases": {
       "title": "Pravne osnove",
       "list": {
-        "consent_html": "<strong>Pristanak.</strong> Dajete ga označavanjem kvadratića prilikom slanja obrasca ili potvrdom slanja u chatu. Privolu možete povući u bilo kojem trenutku; to ne utječe na zakonitost obrade prije povlačenja.",
+        "consent_html": "<strong>Saglasnost.</strong> Dajete je označavanjem polja prilikom slanja obrasca, potvrdom slanja u chatu ili dozvolom analitike u baneru o kolačićima. Saglasnost možete povući u bilo kojem trenutku; to ne utiče na zakonitost obrade prije povlačenja.",
         "contract_html": "<strong>Koraci prije ugovora i njegove izvedbe.</strong> Kada od nas tražite da pronađemo ili procijenimo nekretninu, pripremimo ugovor ili podržimo transakciju.",
         "interest_html": "<strong>Legitimni interes.</strong> Zaštita web stranice od spama i zlouporabe (skriveno polje zamke za botove, provjera vremena ispunjavanja obrasca) i vođenje evidencije upita.",
         "law_html": "<strong>Zakonska obveza.</strong> Gdje je čuvanje određenih podataka ili dokumenata propisano zakonom, primjerice u vezi sa sklopljenim ugovorom."
@@ -58,9 +59,11 @@
       "list": {
         "notion_html": "<strong>Notion Labs, Inc.</strong> (SAD) — CRM sustav u kojem se pohranjuju upiti s web stranice.",
         "github_html": "<strong>GitHub, Inc.</strong> (SAD) — hosting web stranica (GitHub stranice). GitHub prima tehničke podatke o posjetima (IP adresa, preglednik, tražena stranica) i čuva ih u zapisnicima poslužitelja pod vlastitim uvjetima.",
-        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (SAD) — isporučuje podatke obrazaca u CRM (kada je ova usluga omogućena). Cloudflare prima podatke o upitu i IP adresu pošiljatelja isključivo za isporuku zahtjeva.",
-        "telegram_html": "<strong>Telegram</strong> — kratka interna obavijest agentu o novom upitu (ako su obavijesti uključene): tip upita, naziv i ključni parametri, bez telefona, e-maila, katastarskog i matičnog broja.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (SAD) — isporučuje podatke obrazaca u CRM. Cloudflare prima podatke o upitu i IP adresu pošiljatelja isključivo za isporuku zahtjeva.",
+        "telegram_html": "<strong>Telegram</strong> — kratka interna obavijest agentu o novom upitu: tip upita, naziv i ključni parametri, bez telefona, e-maila, katastarskog i matičnog broja.",
         "google_html": "<strong>Google</strong> — karta na stranici svojstva. Učitava se tek nakon što kliknete gumb za učitavanje karte; do tada se ništa ne šalje Googleu. Nakon učitavanja, Google prima vašu IP adresu i može koristiti vlastite kolačiće.",
+        "yandex_html": "<strong>Yandex</strong> (Rusija) — servis za statistiku Yandex Metrica. Učitava se samo ako dozvolite analitiku u baneru o kolačićima.",
+        "ga_html": "<strong>Google Analytics</strong> (Google, SAD) — statistika posjeta. Učitava se samo ako dozvolite analitiku u baneru o kolačićima; Google signali i personalizacija oglasa su isključeni.",
         "osm_html": "<strong>OpenStreetMap i unpkg.com</strong> — karta na stranici \"Property map\". Kada ga otvorite, vaš preglednik učitava biblioteku karata Leaflet s unpkg.com i pločice karte s poslužitelja OpenStreetMap; ovi poslužitelji primaju vašu IP adresu.",
         "messengers_html": "<strong>WhatsApp, Telegram, e-pošta</strong> — ako nam pišete izravno ili pošaljete zahtjev putem ovih kanala (uključujući zamjenske gumbe obrasca), podatke obrađuje usluga koju ste odabrali prema vlastitim uvjetima."
       },
@@ -69,7 +72,7 @@
     },
     "transfers": {
       "title": "Transferi van Crne Gore",
-      "p1": "Neka od navedenih poduzeća nalaze se izvan Crne Gore, uključujući i SAD. Za takve prijenose oslanjamo se na ugovorne zaštitne mjere tih tvrtki, kao što su standardne ugovorne klauzule o zaštiti podataka. Detalji su dostupni na zahtjev putem e-pošte."
+      "p1": "Neka od navedenih poduzeća nalaze se izvan Crne Gore, uključujući i SAD. Za takve prijenose oslanjamo se na ugovorne zaštitne mjere tih tvrtki, kao što su standardne ugovorne klauzule o zaštiti podataka. Detalji su dostupni na zahtjev putem e-pošte. Statistički podaci servisa Yandex Metrica mogu se obrađivati u Rusiji; prenose se samo uz vašu saglasnost."
     },
     "retention": {
       "title": "Koliko dugo čuvamo podatke",
@@ -96,8 +99,10 @@
       "p3_html": "Nadzorno tijelo u Crnoj Gori je <strong>Agencija za zaštitu osobnih podataka i slobodan pristup informacijama</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Ako ste u Europskoj uniji, također se možete obratiti nadzornom tijelu svoje zemlje."
     },
     "storage": {
-      "title": "Postavke kolačića",
-      "p1": "Uz vaš pristanak koristimo Yandex Metrica za statistiku posjeta. Onemogućeni su ponavljanje sesije i snimanje sadržaja forme. Odbijanje ne utječe na web mjesto."
+      "title": "Kolačići i memorija pregledača",
+      "p1": "Bez vaše saglasnosti sajt ne postavlja kolačiće za statistiku ni oglašavanje. U memoriji pregledača (localStorage) čuva se samo vaš izbor u baneru o kolačićima, da vas ne bismo pitali pri svakoj posjeti.",
+      "p2": "Ako kliknete „Dozvoli analitiku“, učitavaju se Yandex Metrica i Google Analytics. Oni postavljaju svoje kolačiće (na primjer _ym_uid i _ga) i dobijaju vašu IP adresu, podatke o pregledaču i uređaju, adresu stranice bez parametara i sajt sa kojeg ste došli. Snimanje sesija (Webvisor), mape klikova, Google signali i personalizacija oglasa su isključeni; sadržaj obrazaca i kontakt podaci nikada se ne šalju ovim servisima.",
+      "p3": "Izbor važi 6 mjeseci, nakon čega se baner ponovo prikazuje. Možete ga promijeniti u bilo kojem trenutku dugmetom „Podešavanja kolačića“ na dnu stranice: ako odbijete, analitika se isključuje, a njeni kolačići se brišu."
     },
     "security": {
       "title": "Sigurnost podataka",

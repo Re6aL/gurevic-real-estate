@@ -441,3 +441,52 @@ test('telegramText helper is short', () => {
   assert.match(text, /NDA: да/);
   assert.ok(text.length < 3500);
 });
+
+// ---------- защита от спама ----------
+
+function fakeLimiter(allowed) {
+  const keys = [];
+  return { keys, limit: async ({ key }) => { keys.push(key); return { success: keys.length <= allowed }; } };
+}
+
+test('per-IP rate limit answers 429 and writes nothing', async () => {
+  const LEAD_LIMITER = fakeLimiter(1);
+  const env = { ...ENV, LEAD_LIMITER };
+  const first = await send(payload(), {}, env);
+  assert.equal(first.res.status, 200);
+  const before = notionPageCalls().length;
+  const second = await send(payload(), {}, env);
+  assert.equal(second.res.status, 429);
+  assert.equal(second.data.error, 'rate_limited');
+  assert.equal(second.res.headers.get('Access-Control-Allow-Origin'), ORIGIN);
+  assert.equal(notionPageCalls().length, before);
+});
+
+test('Telegram limiter drops notifications but the lead is still saved', async () => {
+  const env = { ...ENV, TELEGRAM_BOT_TOKEN: '1:x', TELEGRAM_CHAT_ID: '1', TELEGRAM_LIMITER: fakeLimiter(0) };
+  const pending = [];
+  const ctx = { waitUntil: (p) => pending.push(p) };
+  const origError = console.error;
+  console.error = () => {};
+  try {
+    const { res } = await send(payload(), {}, env, ctx);
+    assert.equal(res.status, 200);
+    await Promise.all(pending);
+  } finally {
+    console.error = origError;
+  }
+  assert.equal(calls.filter((c) => c.url.includes('api.telegram.org')).length, 0);
+  assert.ok(notionPageCalls().length > 0);
+});
+
+test('Telegram text strips links and trims long names', () => {
+  const name = 'URGENT pay here https://evil.example/pay and www.bad.io or bad-site.com @scammer_bot ' + 'x'.repeat(200);
+  const lead = { form: 'contact', lang: 'ru', fields: { name, budget: 'see evil.example/x' } };
+  const text = telegramText(lead, 'https://www.notion.so/p1');
+  for (const bad of ['https://evil', 'www.bad.io', 'bad-site.com', '@scammer_bot', 'evil.example']) {
+    assert.ok(!text.includes(bad), `telegram kept ${bad}`);
+  }
+  const nameLine = text.split('\n').find((l) => l.startsWith('Имя: '));
+  assert.ok(nameLine.length <= 'Имя: '.length + 60);
+  assert.match(text, /https:\/\/www\.notion\.so\/p1/);
+});

@@ -6,7 +6,7 @@
   "h1": "Datenschutzerklärung",
   "kicker": "Ihre Daten",
   "lead": "Welche Daten wir über diese Website erhalten, wozu wir sie benötigen, an wen sie weitergegeben werden und wie Sie darüber bestimmen können.",
-  "updated": "2026-11-06",
+  "updated": "2026-11-23",
   "toc_title": "Inhalt",
   "back_to_top": "Zurück zum Inhalt",
   "sections": {
@@ -29,7 +29,8 @@
       },
       "p2": "Mit jeder Anfrage werden außerdem automatisch Sprache und Adresse der Seite, von der sie gesendet wurde, der Zeitpunkt des Sendens, die Ausfülldauer des Formulars (zum Schutz vor Spam), die Version der Einwilligung und Kampagnenparameter (UTM) übermittelt, sofern Sie über einen Link mit solchen Parametern auf die Website gekommen sind.",
       "p3": "Über diese Website fragen wir weder Passdaten noch Bankverbindungen oder Finanzunterlagen ab. Bitte geben Sie solche Angaben auch nicht in Kommentaren an.",
-      "p4": "Beim Aufruf jeder Seite erhält der Hosting-Anbieter automatisch technische Daten: IP-Adresse, Angaben zu Browser und Gerät, die aufgerufene Adresse und den Zeitpunkt des Aufrufs. So funktioniert jeder Webserver; Einzelheiten finden Sie im Abschnitt „Wer die Daten erhält“."
+      "p4": "Beim Aufruf jeder Seite erhält der Hosting-Anbieter automatisch technische Daten: IP-Adresse, Angaben zu Browser und Gerät, die aufgerufene Adresse und den Zeitpunkt des Aufrufs. So funktioniert jeder Webserver; Einzelheiten finden Sie im Abschnitt „Wer die Daten erhält“.",
+      "p5": "Besuchsstatistiken werden nur mit Ihrer Einwilligung erhoben – siehe „Cookies und Browserspeicher“."
     },
     "purposes": {
       "title": "Wozu wir die Daten verwenden",
@@ -40,7 +41,7 @@
         "invest": "um eine Investitionsanfrage erstmals zu prüfen und bei Bedarf ein NDA vorzubereiten;",
         "contract": "um einen Vertrag mit Ihnen abzuschließen und zu erfüllen;",
         "security": "um die Website und die Formulare vor Spam und Missbrauch zu schützen;",
-        "utm": "um zu verstehen, über welche Werbelinks Anfragen eingehen (nur UTM-Parameter, keine Verfolgung Ihres Verhaltens auf der Website)."
+        "utm": "mit Ihrer Einwilligung, um Besuchsstatistiken zu führen (Yandex Metrica, Google Analytics) und zu verstehen, welche Seiten und Werbelinks Anfragen bringen; ohne Einwilligung werden nur die UTM-Parameter erfasst, die in der Anfrage selbst enthalten sind."
       },
       "p1": "Wir verkaufen keine Daten, nutzen sie nicht für automatisierte Entscheidungen und versenden ohne Ihre gesonderte Einwilligung keine Werbung."
     },
@@ -48,7 +49,7 @@
       "title": "Rechtsgrundlagen",
       "p1": "Wir verarbeiten Daten nach dem montenegrinischen Recht zum Schutz personenbezogener Daten und berücksichtigen für Besucher aus der Europäischen Union auch die Datenschutz-Grundverordnung der EU (DSGVO). Die Rechtsgrundlagen sind:",
       "list": {
-        "consent_html": "<strong>Einwilligung.</strong> Sie erteilen sie, indem Sie beim Senden eines Formulars das Kästchen ankreuzen oder im Chat das Senden bestätigen. Sie können Ihre Einwilligung jederzeit widerrufen; die Rechtmäßigkeit der Verarbeitung bis zum Widerruf bleibt davon unberührt.",
+        "consent_html": "<strong>Einwilligung.</strong> Sie erteilen sie, indem Sie beim Senden eines Formulars das Kästchen ankreuzen, im Chat das Senden bestätigen oder im Cookie-Banner die Analyse erlauben. Sie können Ihre Einwilligung jederzeit widerrufen; die Rechtmäßigkeit der Verarbeitung bis zum Widerruf bleibt davon unberührt.",
         "contract_html": "<strong>Vorvertragliche Maßnahmen und Vertragserfüllung.</strong> Wenn Sie uns bitten, eine Immobilie zu suchen oder zu bewerten, einen Vertrag vorzubereiten oder eine Transaktion zu begleiten.",
         "interest_html": "<strong>Berechtigtes Interesse.</strong> Schutz der Website vor Spam und Missbrauch (ein verstecktes Fallenfeld für Bots, eine Prüfung der Ausfülldauer des Formulars) und die Dokumentation von Anfragen.",
         "law_html": "<strong>Rechtliche Verpflichtung.</strong> Wenn die Aufbewahrung bestimmter Daten oder Unterlagen gesetzlich vorgeschrieben ist, etwa im Zusammenhang mit einem geschlossenen Vertrag."
@@ -59,10 +60,12 @@
       "p1": "Zugriff auf Anfragen hat nur die Agentur. Für den Betrieb der Website nutzen wir die Dienste der folgenden Unternehmen; sie verarbeiten Daten in unserem Auftrag oder nach ihren eigenen Bedingungen, wie unten beschrieben.",
       "list": {
         "notion_html": "<strong>Notion Labs, Inc.</strong> (USA) – das CRM-System, in dem Anfragen von der Website gespeichert werden.",
-        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) – übermittelt Formulardaten an das CRM (sobald dieser Dienst eingerichtet ist). Cloudflare erhält die Daten der Anfrage und die IP-Adresse des Absenders ausschließlich zur Zustellung der Anfrage.",
-        "telegram_html": "<strong>Telegram</strong> – eine kurze interne Benachrichtigung an den Makler über eine neue Anfrage (sofern Benachrichtigungen aktiviert sind): Art der Anfrage, Name und wichtigste Eckdaten, ohne Telefon, E-Mail, Kataster- oder Registernummern.",
+        "cloudflare_html": "<strong>Cloudflare, Inc.</strong> (USA) – übermittelt Formulardaten an das CRM. Cloudflare erhält die Daten der Anfrage und die IP-Adresse des Absenders ausschließlich zur Zustellung der Anfrage.",
+        "telegram_html": "<strong>Telegram</strong> – eine kurze interne Benachrichtigung an den Makler über eine neue Anfrage: Art der Anfrage, Name und wichtigste Eckdaten, ohne Telefon, E-Mail, Kataster- oder Registernummern.",
         "github_html": "<strong>GitHub, Inc.</strong> (USA) – Hosting der Website (GitHub Pages). GitHub erhält technische Daten über Besuche (IP-Adresse, Browser, aufgerufene Seite) und speichert sie nach eigenen Bedingungen in Serverprotokollen.",
         "google_html": "<strong>Google</strong> – die Karte auf einer Objektseite. Sie wird erst geladen, nachdem Sie auf die Schaltfläche zum Laden der Karte geklickt haben; bis dahin wird nichts an Google übermittelt. Nach dem Laden erhält Google Ihre IP-Adresse und kann eigene Cookies verwenden.",
+        "yandex_html": "<strong>Yandex</strong> (Russland) – der Statistikdienst Yandex Metrica. Er wird nur geladen, wenn Sie im Cookie-Banner die Analyse erlauben.",
+        "ga_html": "<strong>Google Analytics</strong> (Google, USA) – Besuchsstatistiken. Der Dienst wird nur geladen, wenn Sie im Cookie-Banner die Analyse erlauben; Google-Signale und personalisierte Werbung sind deaktiviert.",
         "osm_html": "<strong>OpenStreetMap und unpkg.com</strong> – die Karte auf der Seite „Immobilienkarte“. Beim Öffnen lädt Ihr Browser die Kartenbibliothek Leaflet von unpkg.com und Kartenkacheln von Servern von OpenStreetMap; diese Server erhalten Ihre IP-Adresse.",
         "messengers_html": "<strong>WhatsApp, Telegram, E-Mail</strong> – wenn Sie uns direkt schreiben oder eine Anfrage über diese Kanäle senden (auch über die Ersatz-Schaltflächen eines Formulars), verarbeitet der von Ihnen gewählte Dienst die Daten nach seinen eigenen Bedingungen."
       },
@@ -70,7 +73,7 @@
     },
     "transfers": {
       "title": "Übermittlung außerhalb Montenegros",
-      "p1": "Einige der genannten Unternehmen haben ihren Sitz außerhalb Montenegros, unter anderem in den USA. Bei solchen Übermittlungen stützen wir uns auf die vertraglichen Garantien dieser Unternehmen, etwa Standardvertragsklauseln zum Datenschutz. Einzelheiten erhalten Sie auf Anfrage per E-Mail."
+      "p1": "Einige der genannten Unternehmen haben ihren Sitz außerhalb Montenegros, unter anderem in den USA. Bei solchen Übermittlungen stützen wir uns auf die vertraglichen Garantien dieser Unternehmen, etwa Standardvertragsklauseln zum Datenschutz. Einzelheiten erhalten Sie auf Anfrage per E-Mail. Statistikdaten von Yandex Metrica können in Russland verarbeitet werden; diese Daten werden nur mit Ihrer Einwilligung übermittelt."
     },
     "retention": {
       "title": "Wie lange wir Daten speichern",
@@ -97,8 +100,10 @@
       "p3_html": "Aufsichtsbehörde in Montenegro ist die <strong>Agentur für den Schutz personenbezogener Daten und den freien Zugang zu Informationen</strong> (<span lang=\"sr-Latn-ME\">Agencija za zaštitu ličnih podataka i slobodan pristup informacijama</span>). Wenn Sie sich in der Europäischen Union befinden, können Sie sich auch an die Aufsichtsbehörde Ihres Landes wenden."
     },
     "storage": {
-      "title": "Cookie-Einstellungen",
-      "p1": "Mit Ihrer Einwilligung verwenden wir Yandex Metrica für Besuchsstatistiken. Sitzungsaufzeichnungen und Formularaufzeichnungen sind deaktiviert. Eine Ablehnung beeinträchtigt die Website nicht."
+      "title": "Cookies und Browserspeicher",
+      "p1": "Ohne Ihre Einwilligung setzt die Website keine Cookies für Statistik oder Werbung. Im Speicher Ihres Browsers (localStorage) wird nur Ihre Auswahl im Cookie-Banner abgelegt, damit wir nicht bei jedem Besuch erneut fragen.",
+      "p2": "Wenn Sie auf „Analyse erlauben“ klicken, werden Yandex Metrica und Google Analytics geladen. Sie setzen eigene Cookies (zum Beispiel _ym_uid und _ga) und erhalten Ihre IP-Adresse, Angaben zu Browser und Gerät, die Seitenadresse ohne Parameter und die Website, von der Sie gekommen sind. Sitzungsaufzeichnung (Webvisor), Klickkarten, Google-Signale und personalisierte Werbung sind deaktiviert; Formularinhalte und Kontaktdaten werden nie an diese Dienste übermittelt.",
+      "p3": "Ihre Auswahl gilt 6 Monate, danach erscheint das Banner erneut. Sie können sie jederzeit über die Schaltfläche „Cookie-Einstellungen“ unten auf der Seite ändern: Bei einer Ablehnung wird die Analyse abgeschaltet und ihre Cookies werden gelöscht."
     },
     "security": {
       "title": "Datensicherheit",
