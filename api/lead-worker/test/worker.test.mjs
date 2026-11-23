@@ -296,6 +296,16 @@ test('insert-only integration (schema GET → 403) falls back to the documented 
   assert.equal(calls.filter((c) => c.url.includes('/v1/databases/')).length, 1); // 403 тоже кэшируется
 });
 
+test('insert-only integration (schema GET → 200 without properties) falls back to the documented schema', async () => {
+  const base = defaultResponder();
+  responder = (call) => (call.url.includes('/v1/databases/') ? jsonResponse(200, { object: 'database', properties: {} }) : base(call));
+  const { res } = await send(payload());
+  assert.equal(res.status, 200);
+  const p = createdProps();
+  assert.equal(p.Budget.select.name, '€2–10M');
+  assert.ok(p.Name.title.length > 0);
+});
+
 test('schema GET 401 (bad token) → 502', async () => {
   responder = () => jsonResponse(401, {});
   const { res, data } = await send(payload());

@@ -275,6 +275,9 @@ export async function getSchema(env, now = Date.now()) {
       const options = p[p.type]?.options?.map((o) => o.name) || null;
       props[name] = { type: p.type, options };
     }
+    // Без Read content Notion может вернуть базу без колонок (вместо 403) —
+    // тогда тоже пишем по документированной схеме, иначе заявка придёт пустой
+    if (!Object.keys(props).length) props = DEFAULT_SCHEMA;
   } catch (err) {
     // 403: у интеграции нет права Read content (рекомендуемая настройка) — пишем по
     // документированной схеме; несовпадения ловит повтор «минимальной» записью
