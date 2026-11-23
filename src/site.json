@@ -84,7 +84,7 @@
     "locality": "Budva",
     "country": "ME"
   },
-  "lead_endpoint": "",
+  "lead_endpoint": "https://gurevic-lead-worker.ilja-gur.workers.dev",
   "consent_version": "2026-11",
   "favicon": "img/logo-mark.png",
   "logo": "img/logo-mark.png",

@@ -9,6 +9,8 @@ name = "gurevic-lead-worker"
 main = "worker.js"
 compatibility_date = "2025-09-01"
 workers_dev = true
+# Превью-адреса версий не нужны: заявки принимает только основной адрес.
+preview_urls = false
 
 [vars]
 # Сайты, с которых принимаются заявки (через запятую, без пути и без «/» в конце).
